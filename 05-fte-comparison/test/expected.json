@@ -1,0 +1,791 @@
+{
+ "hr_rows_in_file": 151,
+ "hr_duplicates_in_file": 2,
+ "hr_terminated": 3,
+ "hr_fte": 127.6,
+ "budget_rows": 149,
+ "budget_fte": 130.4,
+ "cases": [
+  {
+   "emp": 1005,
+   "fc": "410",
+   "status": "Matched"
+  },
+  {
+   "emp": 1013,
+   "fc": "410",
+   "status": "Matched"
+  },
+  {
+   "emp": 1022,
+   "fc": "110",
+   "status": "Matched"
+  },
+  {
+   "emp": 1028,
+   "fc": "120",
+   "status": "Matched"
+  },
+  {
+   "emp": 1031,
+   "fc": "310",
+   "status": "Matched"
+  },
+  {
+   "emp": 1040,
+   "fc": "210",
+   "status": "Matched"
+  },
+  {
+   "emp": 1046,
+   "fc": "120",
+   "status": "Matched"
+  },
+  {
+   "emp": 1048,
+   "fc": "220",
+   "status": "Matched"
+  },
+  {
+   "emp": 1052,
+   "fc": "210",
+   "status": "Matched"
+  },
+  {
+   "emp": 1053,
+   "fc": "120",
+   "status": "Matched"
+  },
+  {
+   "emp": 1056,
+   "fc": "120",
+   "status": "Matched"
+  },
+  {
+   "emp": 1062,
+   "fc": "220",
+   "status": "Matched"
+  },
+  {
+   "emp": 1071,
+   "fc": "410",
+   "status": "Matched"
+  },
+  {
+   "emp": 1072,
+   "fc": "120",
+   "status": "Matched"
+  },
+  {
+   "emp": 1081,
+   "fc": "220",
+   "status": "Matched"
+  },
+  {
+   "emp": 1086,
+   "fc": "220",
+   "status": "Matched"
+  },
+  {
+   "emp": 1088,
+   "fc": "310",
+   "status": "Matched"
+  },
+  {
+   "emp": 1093,
+   "fc": "220",
+   "status": "Matched"
+  },
+  {
+   "emp": 1096,
+   "fc": "220",
+   "status": "Matched"
+  },
+  {
+   "emp": 1098,
+   "fc": "110",
+   "status": "Matched"
+  },
+  {
+   "emp": 1102,
+   "fc": "310",
+   "status": "Matched"
+  },
+  {
+   "emp": 1106,
+   "fc": "110",
+   "status": "Matched"
+  },
+  {
+   "emp": 1108,
+   "fc": "410",
+   "status": "Matched"
+  },
+  {
+   "emp": 1112,
+   "fc": "410",
+   "status": "Matched"
+  },
+  {
+   "emp": 1118,
+   "fc": "120",
+   "status": "Matched"
+  },
+  {
+   "emp": 1123,
+   "fc": "120",
+   "status": "Matched"
+  },
+  {
+   "emp": 1131,
+   "fc": "220",
+   "status": "Matched"
+  },
+  {
+   "emp": 1137,
+   "fc": "210",
+   "status": "Matched"
+  },
+  {
+   "emp": 1143,
+   "fc": "210",
+   "status": "Matched"
+  },
+  {
+   "emp": 1145,
+   "fc": "310",
+   "status": "Matched"
+  },
+  {
+   "emp": 1151,
+   "fc": "410",
+   "status": "Matched"
+  },
+  {
+   "emp": 1154,
+   "fc": "410",
+   "status": "Matched"
+  },
+  {
+   "emp": 1158,
+   "fc": "110",
+   "status": "Matched"
+  },
+  {
+   "emp": 1164,
+   "fc": "120",
+   "status": "Matched"
+  },
+  {
+   "emp": 1172,
+   "fc": "120",
+   "status": "Matched"
+  },
+  {
+   "emp": 1174,
+   "fc": "220",
+   "status": "Matched"
+  },
+  {
+   "emp": 1180,
+   "fc": "310",
+   "status": "Matched"
+  },
+  {
+   "emp": 1184,
+   "fc": "310",
+   "status": "Matched"
+  },
+  {
+   "emp": 1186,
+   "fc": "210",
+   "status": "Matched"
+  },
+  {
+   "emp": 1194,
+   "fc": "120",
+   "status": "Matched"
+  },
+  {
+   "emp": 1195,
+   "fc": "220",
+   "status": "Matched"
+  },
+  {
+   "emp": 1201,
+   "fc": "210",
+   "status": "Matched"
+  },
+  {
+   "emp": 1207,
+   "fc": "410",
+   "status": "Matched"
+  },
+  {
+   "emp": 1208,
+   "fc": "410",
+   "status": "Matched"
+  },
+  {
+   "emp": 1217,
+   "fc": "120",
+   "status": "Matched"
+  },
+  {
+   "emp": 1224,
+   "fc": "410",
+   "status": "Matched"
+  },
+  {
+   "emp": 1225,
+   "fc": "120",
+   "status": "Matched"
+  },
+  {
+   "emp": 1231,
+   "fc": "220",
+   "status": "Matched"
+  },
+  {
+   "emp": 1234,
+   "fc": "110",
+   "status": "Matched"
+  },
+  {
+   "emp": 1242,
+   "fc": "120",
+   "status": "Matched"
+  },
+  {
+   "emp": 1245,
+   "fc": "210",
+   "status": "Matched"
+  },
+  {
+   "emp": 1253,
+   "fc": "210",
+   "status": "Matched"
+  },
+  {
+   "emp": 1255,
+   "fc": "310",
+   "status": "Matched"
+  },
+  {
+   "emp": 1258,
+   "fc": "110",
+   "status": "Matched"
+  },
+  {
+   "emp": 1267,
+   "fc": "210",
+   "status": "Matched"
+  },
+  {
+   "emp": 1276,
+   "fc": "220",
+   "status": "Matched"
+  },
+  {
+   "emp": 1280,
+   "fc": "120",
+   "status": "Matched"
+  },
+  {
+   "emp": 1284,
+   "fc": "110",
+   "status": "Matched"
+  },
+  {
+   "emp": 1287,
+   "fc": "310",
+   "status": "Matched"
+  },
+  {
+   "emp": 1289,
+   "fc": "220",
+   "status": "Matched"
+  },
+  {
+   "emp": 1297,
+   "fc": "110",
+   "status": "Matched"
+  },
+  {
+   "emp": 1304,
+   "fc": "410",
+   "status": "Matched"
+  },
+  {
+   "emp": 1308,
+   "fc": "310",
+   "status": "Matched"
+  },
+  {
+   "emp": 1315,
+   "fc": "210",
+   "status": "Matched"
+  },
+  {
+   "emp": 1318,
+   "fc": "120",
+   "status": "Matched"
+  },
+  {
+   "emp": 1326,
+   "fc": "410",
+   "status": "Matched"
+  },
+  {
+   "emp": 1332,
+   "fc": "410",
+   "status": "Matched"
+  },
+  {
+   "emp": 1334,
+   "fc": "220",
+   "status": "Matched"
+  },
+  {
+   "emp": 1336,
+   "fc": "120",
+   "status": "Matched"
+  },
+  {
+   "emp": 1338,
+   "fc": "410",
+   "status": "Matched"
+  },
+  {
+   "emp": 1346,
+   "fc": "120",
+   "status": "Matched"
+  },
+  {
+   "emp": 1351,
+   "fc": "310",
+   "status": "Matched"
+  },
+  {
+   "emp": 1359,
+   "fc": "220",
+   "status": "Matched"
+  },
+  {
+   "emp": 1364,
+   "fc": "220",
+   "status": "Matched"
+  },
+  {
+   "emp": 1372,
+   "fc": "410",
+   "status": "Matched"
+  },
+  {
+   "emp": 1378,
+   "fc": "120",
+   "status": "Matched"
+  },
+  {
+   "emp": 1380,
+   "fc": "210",
+   "status": "Matched"
+  },
+  {
+   "emp": 1384,
+   "fc": "310",
+   "status": "Matched"
+  },
+  {
+   "emp": 1385,
+   "fc": "410",
+   "status": "Matched"
+  },
+  {
+   "emp": 1391,
+   "fc": "310",
+   "status": "Matched"
+  },
+  {
+   "emp": 1400,
+   "fc": "210",
+   "status": "Matched"
+  },
+  {
+   "emp": 1406,
+   "fc": "220",
+   "status": "Matched"
+  },
+  {
+   "emp": 1409,
+   "fc": "410",
+   "status": "Matched"
+  },
+  {
+   "emp": 1417,
+   "fc": "120",
+   "status": "Matched"
+  },
+  {
+   "emp": 1426,
+   "fc": "110",
+   "status": "Matched"
+  },
+  {
+   "emp": 1433,
+   "fc": "310",
+   "status": "Matched"
+  },
+  {
+   "emp": 1439,
+   "fc": "210",
+   "status": "Matched"
+  },
+  {
+   "emp": 1448,
+   "fc": "210",
+   "status": "Matched"
+  },
+  {
+   "emp": 1452,
+   "fc": "310",
+   "status": "Matched"
+  },
+  {
+   "emp": 1458,
+   "fc": "110",
+   "status": "Matched"
+  },
+  {
+   "emp": 1460,
+   "fc": "220",
+   "status": "Matched"
+  },
+  {
+   "emp": 1466,
+   "fc": "310",
+   "status": "Matched"
+  },
+  {
+   "emp": 1472,
+   "fc": "210",
+   "status": "Matched"
+  },
+  {
+   "emp": 1480,
+   "fc": "410",
+   "status": "Matched"
+  },
+  {
+   "emp": 1486,
+   "fc": "410",
+   "status": "Matched"
+  },
+  {
+   "emp": 1487,
+   "fc": "410",
+   "status": "Matched"
+  },
+  {
+   "emp": 1488,
+   "fc": "410",
+   "status": "Matched"
+  },
+  {
+   "emp": 1493,
+   "fc": "220",
+   "status": "Matched"
+  },
+  {
+   "emp": 1499,
+   "fc": "220",
+   "status": "Matched"
+  },
+  {
+   "emp": 1500,
+   "fc": "110",
+   "status": "Matched"
+  },
+  {
+   "emp": 1507,
+   "fc": "110",
+   "status": "Matched"
+  },
+  {
+   "emp": 1516,
+   "fc": "410",
+   "status": "Matched"
+  },
+  {
+   "emp": 1518,
+   "fc": "210",
+   "status": "Matched"
+  },
+  {
+   "emp": 1527,
+   "fc": "410",
+   "status": "Matched"
+  },
+  {
+   "emp": 1536,
+   "fc": "120",
+   "status": "Matched"
+  },
+  {
+   "emp": 1537,
+   "fc": "410",
+   "status": "Matched"
+  },
+  {
+   "emp": 1540,
+   "fc": "210",
+   "status": "Matched"
+  },
+  {
+   "emp": 1543,
+   "fc": "310",
+   "status": "Matched"
+  },
+  {
+   "emp": 1551,
+   "fc": "110",
+   "status": "Matched"
+  },
+  {
+   "emp": 1558,
+   "fc": "310",
+   "status": "Matched"
+  },
+  {
+   "emp": 1562,
+   "fc": "310",
+   "status": "Matched"
+  },
+  {
+   "emp": 1569,
+   "fc": "210",
+   "status": "Matched"
+  },
+  {
+   "emp": 1576,
+   "fc": "120",
+   "status": "Matched"
+  },
+  {
+   "emp": 1585,
+   "fc": "120",
+   "status": "Matched"
+  },
+  {
+   "emp": 1590,
+   "fc": "120",
+   "status": "Matched"
+  },
+  {
+   "emp": 1591,
+   "fc": "310",
+   "status": "Matched"
+  },
+  {
+   "emp": 1596,
+   "fc": "210",
+   "status": "Matched"
+  },
+  {
+   "emp": 1605,
+   "fc": "110",
+   "status": "Matched"
+  },
+  {
+   "emp": 1607,
+   "fc": "110",
+   "status": "Matched"
+  },
+  {
+   "emp": 1607,
+   "fc": "410",
+   "status": "Matched"
+  },
+  {
+   "emp": 1615,
+   "fc": "310",
+   "status": "Matched"
+  },
+  {
+   "emp": 1615,
+   "fc": "220",
+   "status": "Matched"
+  },
+  {
+   "emp": 1617,
+   "fc": "220",
+   "status": "Matched"
+  },
+  {
+   "emp": 1617,
+   "fc": "110",
+   "status": "Matched"
+  },
+  {
+   "emp": 1625,
+   "fc": "410",
+   "status": "Matched"
+  },
+  {
+   "emp": 1625,
+   "fc": "210",
+   "status": "Matched"
+  },
+  {
+   "emp": 1630,
+   "fc": "220",
+   "status": "Matched"
+  },
+  {
+   "emp": 1630,
+   "fc": "410",
+   "status": "Matched"
+  },
+  {
+   "emp": 1636,
+   "fc": "210",
+   "status": "Matched"
+  },
+  {
+   "emp": 1636,
+   "fc": "220",
+   "status": "Matched"
+  },
+  {
+   "emp": 1642,
+   "fc": "110",
+   "status": "FTE differs",
+   "diff": -0.2
+  },
+  {
+   "emp": 1651,
+   "fc": "410",
+   "status": "FTE differs",
+   "diff": 0.2
+  },
+  {
+   "emp": 1654,
+   "fc": "410",
+   "status": "FTE differs",
+   "diff": 0.1
+  },
+  {
+   "emp": 1657,
+   "fc": "120",
+   "status": "FTE differs",
+   "diff": -0.5
+  },
+  {
+   "emp": 1660,
+   "fc": "410",
+   "status": "FTE differs",
+   "diff": 0.2
+  },
+  {
+   "emp": 1666,
+   "fc": "120",
+   "status": "Functional area differs"
+  },
+  {
+   "emp": 1674,
+   "fc": "220",
+   "status": "Functional area differs"
+  },
+  {
+   "emp": 1679,
+   "fc": "410",
+   "status": "Functional area differs"
+  },
+  {
+   "emp": 1682,
+   "fc": "210",
+   "fc_budget": "220",
+   "status": "Fund center differs"
+  },
+  {
+   "emp": 1689,
+   "fc": "110",
+   "fc_budget": "120",
+   "status": "Fund center differs"
+  },
+  {
+   "emp": 1693,
+   "fc": "310",
+   "fc_budget": "220",
+   "status": "Fund center differs"
+  },
+  {
+   "emp": 1696,
+   "fc": "410",
+   "fc_budget": "120",
+   "status": "Fund center differs"
+  },
+  {
+   "emp": 1701,
+   "fc": "120",
+   "status": "Only in HR roster"
+  },
+  {
+   "emp": 1710,
+   "fc": "120",
+   "status": "Only in HR roster"
+  },
+  {
+   "emp": 1712,
+   "fc": "310",
+   "status": "Only in HR roster"
+  },
+  {
+   "emp": 1721,
+   "fc": "410",
+   "status": "Only in HR roster"
+  },
+  {
+   "emp": 1722,
+   "fc": "220",
+   "status": "Only in budget",
+   "why": "terminated"
+  },
+  {
+   "emp": 1724,
+   "fc": "220",
+   "status": "Only in budget",
+   "why": "terminated"
+  },
+  {
+   "emp": 1725,
+   "fc": "410",
+   "status": "Only in budget",
+   "why": "terminated"
+  },
+  {
+   "emp": null,
+   "fc": "210",
+   "status": "Only in budget",
+   "why": "vacant"
+  },
+  {
+   "emp": null,
+   "fc": "310",
+   "status": "Only in budget",
+   "why": "vacant"
+  },
+  {
+   "emp": 1733,
+   "fc": "210",
+   "status": "Only in budget",
+   "why": "unknown"
+  },
+  {
+   "emp": 1741,
+   "fc": "410",
+   "status": "Only in budget",
+   "why": "unknown"
+  }
+ ]
+}
