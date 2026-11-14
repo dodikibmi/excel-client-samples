@@ -5,7 +5,7 @@ No macros. Next month: drop in the new files, press **Refresh All**.
 
 ![Summary: KPI cards, result by status, reconciliation statement, data checks](docs/summary.png)
 
-▶ **[Demo video (44 s, MP4)](docs/demo.mp4)**: raw CSV → Refresh All → matched, explained, balanced to 0.00. Real screen recording, captions added.
+▶ **[Demo video (49 s, MP4)](docs/demo.mp4)**: raw CSV → Refresh All → matched, explained, balanced to 0.00. Real screen recording, captions added.
 
 ## The problem this solves
 

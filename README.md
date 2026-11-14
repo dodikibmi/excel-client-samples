@@ -2,7 +2,7 @@
 
 Working Excel files built the way small businesses and finance teams ask for them on freelance boards:
 messy exports in, clean answers out, and **proof that the numbers are right**.
-Every sample ships with fictional data, screenshots, a 40–60 second demo video (`docs/demo.mp4`), a How-to-use sheet and an automated check.
+Every sample ships with fictional data, screenshots, a 50–60 second demo video (`docs/demo.mp4`), a How-to-use sheet and an automated check.
 
 | # | Sample | What it shows | Status |
 |---|---|---|---|

@@ -6,7 +6,7 @@ No macros, no pivot to refresh by hand. Next month: drop in the new export, pres
 
 ![Dashboard, October 2026, all regions](docs/dashboard-all.png)
 
-▶ **[Demo video (45 s, MP4)](docs/demo.mp4)**: pick a region and a month, watch every number follow. Real screen recording, captions added.
+▶ **[Demo video (49 s, MP4)](docs/demo.mp4)**: pick a region and a month, watch every number follow. Real screen recording, captions added.
 
 ## The problem this solves
 

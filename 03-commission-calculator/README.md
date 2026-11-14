@@ -6,7 +6,7 @@ Mistyped lines are caught and held back instead of being paid. No macros.
 
 ![Commission sheet, October 2026](docs/commission.png)
 
-▶ **[Demo video (48 s, MP4)](docs/demo.mp4)**: switch the commission method, type a bad order line and watch it get held back. Real screen recording, captions added.
+▶ **[Demo video (52 s, MP4)](docs/demo.mp4)**: switch the commission method, type a bad order line and watch it get held back. Real screen recording, captions added.
 
 ## The problem this solves
 

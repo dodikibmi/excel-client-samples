@@ -6,7 +6,7 @@ weekly summary.** Nothing is emailed until you switch it on; until then you get 
 
 ![Dashboard](docs/dashboard.png)
 
-▶ **[Demo video (57 s, MP4)](docs/demo.mp4)**: record a payment, the dashboard and the reminder preview update; nothing is emailed. Real screen recording, captions added.
+▶ **[Demo video (60 s, MP4)](docs/demo.mp4)**: record a payment, the dashboard and the reminder preview update; nothing is emailed. Real screen recording, captions added.
 
 ## The problem this solves
 
