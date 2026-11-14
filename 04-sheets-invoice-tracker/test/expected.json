@@ -1,0 +1,528 @@
+{
+ "states": {
+  "NB-1026": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1006": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1051": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1038": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1054": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1027": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1062": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1013": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1045": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1041": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1002": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1043": {
+   "balance": 6052.21,
+   "status": "Overdue",
+   "days": 88,
+   "aging": "61-90"
+  },
+  "NB-1019": {
+   "balance": 5460.19,
+   "status": "Overdue",
+   "days": 103,
+   "aging": "90+"
+  },
+  "NB-1021": {
+   "balance": 9744.65,
+   "status": "Overdue",
+   "days": 87,
+   "aging": "61-90"
+  },
+  "NB-1037": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1042": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1017": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1010": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1053": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1055": {
+   "balance": 1970.04,
+   "status": "Overdue",
+   "days": 90,
+   "aging": "61-90"
+  },
+  "NB-1048": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1030": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1011": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1064": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1063": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1023": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1029": {
+   "balance": 5302.78,
+   "status": "Overdue",
+   "days": 49,
+   "aging": "31-60"
+  },
+  "NB-1028": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1046": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1060": {
+   "balance": 1211.26,
+   "status": "Overdue",
+   "days": 47,
+   "aging": "31-60"
+  },
+  "NB-1024": {
+   "balance": 677.2,
+   "status": "Overdue",
+   "days": 62,
+   "aging": "61-90"
+  },
+  "NB-1004": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1035": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1059": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1049": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1025": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1069": {
+   "balance": 3900.0,
+   "status": "Overdue",
+   "days": 30,
+   "aging": "1-30"
+  },
+  "NB-1047": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1005": {
+   "balance": 2999.41,
+   "status": "Overdue",
+   "days": 21,
+   "aging": "1-30"
+  },
+  "NB-1056": {
+   "balance": 1150.07,
+   "status": "Overdue",
+   "days": 18,
+   "aging": "1-30"
+  },
+  "NB-1018": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1068": {
+   "balance": 2100.0,
+   "status": "Overdue",
+   "days": 14,
+   "aging": "1-30"
+  },
+  "NB-1015": {
+   "balance": 1212.64,
+   "status": "Overdue",
+   "days": 11,
+   "aging": "1-30"
+  },
+  "NB-1044": {
+   "balance": 1905.83,
+   "status": "Overdue",
+   "days": 11,
+   "aging": "1-30"
+  },
+  "NB-1067": {
+   "balance": -30.0,
+   "status": "Overpaid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1009": {
+   "balance": 651.19,
+   "status": "Overdue",
+   "days": 25,
+   "aging": "1-30"
+  },
+  "NB-1020": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1040": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1008": {
+   "balance": 1083.43,
+   "status": "Overdue",
+   "days": 7,
+   "aging": "1-30"
+  },
+  "NB-1052": {
+   "balance": 850.39,
+   "status": "Overdue",
+   "days": 23,
+   "aging": "1-30"
+  },
+  "NB-1012": {
+   "balance": 4942.73,
+   "status": "Overdue",
+   "days": 3,
+   "aging": "1-30"
+  },
+  "NB-1039": {
+   "balance": 445.34,
+   "status": "Overdue",
+   "days": 18,
+   "aging": "1-30"
+  },
+  "NB-1057": {
+   "balance": 843.85,
+   "status": "Overdue",
+   "days": 2,
+   "aging": "1-30"
+  },
+  "NB-1036": {
+   "balance": 2683.74,
+   "status": "Overdue",
+   "days": 16,
+   "aging": "1-30"
+  },
+  "NB-1058": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1061": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1031": {
+   "balance": 1028.22,
+   "status": "Overdue",
+   "days": 14,
+   "aging": "1-30"
+  },
+  "NB-1034": {
+   "balance": 438.91,
+   "status": "Not due",
+   "days": 0,
+   "aging": "Not due"
+  },
+  "NB-1065": {
+   "balance": 1500.0,
+   "status": "Not due",
+   "days": 0,
+   "aging": "Not due"
+  },
+  "NB-1022": {
+   "balance": 863.36,
+   "status": "Not due",
+   "days": 0,
+   "aging": "Not due"
+  },
+  "NB-1007": {
+   "balance": 662.89,
+   "status": "Overdue",
+   "days": 6,
+   "aging": "1-30"
+  },
+  "NB-1033": {
+   "balance": 1682.99,
+   "status": "Not due",
+   "days": 0,
+   "aging": "Not due"
+  },
+  "NB-1001": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1050": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1066": {
+   "balance": 640.0,
+   "status": "Not due",
+   "days": 0,
+   "aging": "Not due"
+  },
+  "NB-1014": {
+   "balance": 2274.72,
+   "status": "Not due",
+   "days": 0,
+   "aging": "Not due"
+  },
+  "NB-1003": {
+   "balance": 6694.8,
+   "status": "Not due",
+   "days": 0,
+   "aging": "Not due"
+  },
+  "NB-1016": {
+   "balance": 2738.55,
+   "status": "Not due",
+   "days": 0,
+   "aging": "Not due"
+  },
+  "NB-1032": {
+   "balance": 255.0,
+   "status": "Not due",
+   "days": 0,
+   "aging": "Not due"
+  }
+ },
+ "plan": [
+  {
+   "no": "NB-1055",
+   "stage": "Final",
+   "action": "skip",
+   "reason": "No email for this customer"
+  },
+  {
+   "no": "NB-1021",
+   "stage": "Final",
+   "action": "send",
+   "reason": ""
+  },
+  {
+   "no": "NB-1024",
+   "stage": "Final",
+   "action": "send",
+   "reason": ""
+  },
+  {
+   "no": "NB-1029",
+   "stage": "Final",
+   "action": "send",
+   "reason": ""
+  },
+  {
+   "no": "NB-1060",
+   "stage": "Final",
+   "action": "send",
+   "reason": ""
+  },
+  {
+   "no": "NB-1069",
+   "stage": "Final",
+   "action": "send",
+   "reason": ""
+  },
+  {
+   "no": "NB-1009",
+   "stage": "Second",
+   "action": "send",
+   "reason": ""
+  },
+  {
+   "no": "NB-1039",
+   "stage": "Second",
+   "action": "send",
+   "reason": ""
+  },
+  {
+   "no": "NB-1036",
+   "stage": "Second",
+   "action": "send",
+   "reason": ""
+  },
+  {
+   "no": "NB-1031",
+   "stage": "Second",
+   "action": "skip",
+   "reason": "No email for this customer"
+  },
+  {
+   "no": "NB-1068",
+   "stage": "Second",
+   "action": "send",
+   "reason": ""
+  },
+  {
+   "no": "NB-1008",
+   "stage": "Friendly",
+   "action": "send",
+   "reason": ""
+  },
+  {
+   "no": "NB-1012",
+   "stage": "Friendly",
+   "action": "send",
+   "reason": ""
+  },
+  {
+   "no": "NB-1057",
+   "stage": "Friendly",
+   "action": "send",
+   "reason": ""
+  },
+  {
+   "no": "NB-1066",
+   "stage": "Upcoming",
+   "action": "send",
+   "reason": ""
+  },
+  {
+   "no": "NB-1034",
+   "stage": "Upcoming",
+   "action": "send",
+   "reason": ""
+  }
+ ],
+ "summary": {
+  "outstanding": 73966.39,
+  "overdue": 56878.06,
+  "overdue_count": 22,
+  "aging": {
+   "Not due": 17088.33,
+   "1-30": 26459.73,
+   "31-60": 6514.04,
+   "61-90": 18444.1,
+   "90+": 5460.19
+  }
+ }
+}

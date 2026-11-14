@@ -1,0 +1,130 @@
+{
+ "company": "Harborview Office Supplies",
+ "tax_rate": 0.0825,
+ "target_bonus": 300,
+ "discount_cap": 0.3,
+ "products": [
+  [
+   "A4 Copy Paper (box)",
+   "Paper",
+   42.0,
+   0.1
+  ],
+  [
+   "Recycled Paper (box)",
+   "Paper",
+   46.5,
+   0.1
+  ],
+  [
+   "Gel Pens (pack 12)",
+   "Writing",
+   9.8,
+   0.15
+  ],
+  [
+   "Whiteboard Markers (pack 8)",
+   "Writing",
+   12.4,
+   0.15
+  ],
+  [
+   "Ergonomic Chair",
+   "Furniture",
+   289.0,
+   0.2
+  ],
+  [
+   "Standing Desk",
+   "Furniture",
+   549.0,
+   0.2
+  ],
+  [
+   "Filing Cabinet 3-Drawer",
+   "Furniture",
+   199.0,
+   0.2
+  ],
+  [
+   "Laser Printer",
+   "Tech",
+   379.0,
+   0.12
+  ],
+  [
+   "Toner Cartridge",
+   "Tech",
+   89.9,
+   0.12
+  ],
+  [
+   "Wireless Keyboard & Mouse",
+   "Tech",
+   64.5,
+   0.12
+  ],
+  [
+   "Desk Organizer Set",
+   "Accessories",
+   24.9,
+   0.25
+  ],
+  [
+   "Monitor Arm",
+   "Accessories",
+   119.0,
+   0.25
+  ]
+ ],
+ "reps": [
+  [
+   "Grace Holloway",
+   "North",
+   30000
+  ],
+  [
+   "Marcus Reid",
+   "North",
+   25000
+  ],
+  [
+   "Priya Nair",
+   "South",
+   35000
+  ],
+  [
+   "Tom Becker",
+   "South",
+   20000
+  ],
+  [
+   "Lena Fischer",
+   "East",
+   40000
+  ],
+  [
+   "Diego Santos",
+   "West",
+   28000
+  ]
+ ],
+ "bands": [
+  [
+   0,
+   0.02
+  ],
+  [
+   15000,
+   0.04
+  ],
+  [
+   30000,
+   0.06
+  ],
+  [
+   45000,
+   0.08
+  ]
+ ]
+}

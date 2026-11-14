@@ -1,0 +1,434 @@
+Date,Order no,Sales rep,Customer,Product,Qty,Discount %
+2026-09-01,SO-7004,Grace Holloway,Granite Peak Insurance,Filing Cabinet 3-Drawer,1,0.00
+2026-09-01,SO-7004,Grace Holloway,Granite Peak Insurance,Recycled Paper (box),40,0.05
+2026-09-01,SO-7005,Grace Holloway,Hollis & Grant Accounting,Gel Pens (pack 12),30,0.15
+2026-09-01,SO-7005,Grace Holloway,Hollis & Grant Accounting,Ergonomic Chair,10,0.05
+2026-09-01,SO-7005,Grace Holloway,Hollis & Grant Accounting,Whiteboard Markers (pack 8),15,0.05
+2026-09-01,SO-7028,Marcus Reid,Keystone Realty,Recycled Paper (box),25,0.10
+2026-09-01,SO-7028,Marcus Reid,Keystone Realty,Gel Pens (pack 12),20,0.00
+2026-09-01,SO-7028,Marcus Reid,Keystone Realty,Recycled Paper (box),40,0.00
+2026-09-01,SO-7035,Priya Nair,Bayside Dental Group,Ergonomic Chair,2,0.05
+2026-09-01,SO-7035,Priya Nair,Bayside Dental Group,Ergonomic Chair,3,0.20
+2026-09-01,SO-7035,Priya Nair,Bayside Dental Group,Filing Cabinet 3-Drawer,2,0.20
+2026-09-01,SO-7064,Lena Fischer,Quayside Marine,A4 Copy Paper (box),30,0.00
+2026-09-01,SO-7073,Lena Fischer,Bayside Dental Group,Recycled Paper (box),40,0.00
+2026-09-01,SO-7080,Lena Fischer,Quayside Marine,Wireless Keyboard & Mouse,2,0.00
+2026-09-01,SO-7080,Lena Fischer,Quayside Marine,Ergonomic Chair,10,0.05
+2026-09-01,SO-7080,Lena Fischer,Quayside Marine,Wireless Keyboard & Mouse,5,0.00
+2026-09-01,SO-7101,Diego Santos,Quayside Marine,Laser Printer,3,0.00
+2026-09-01,SO-7101,Diego Santos,Quayside Marine,Wireless Keyboard & Mouse,2,0.12
+2026-09-01,SO-7101,Diego Santos,Quayside Marine,Filing Cabinet 3-Drawer,2,0.20
+2026-09-01,SO-7106,Diego Santos,Copperline Logistics,Gel Pens (pack 12),10,0.00
+2026-09-02,SO-7039,Priya Nair,Keystone Realty,Whiteboard Markers (pack 8),10,0.00
+2026-09-02,SO-7039,Priya Nair,Keystone Realty,Laser Printer,2,0.00
+2026-09-02,SO-7058,Tom Becker,Evergreen Law LLP,Desk Organizer Set,4,0.00
+2026-09-02,SO-7058,Tom Becker,Evergreen Law LLP,Desk Organizer Set,4,0.00
+2026-09-02,SO-7066,Lena Fischer,Evergreen Law LLP,Wireless Keyboard & Mouse,5,0.00
+2026-09-02,SO-7066,Lena Fischer,Evergreen Law LLP,Whiteboard Markers (pack 8),50,0.05
+2026-09-02,SO-7066,Lena Fischer,Evergreen Law LLP,A4 Copy Paper (box),20,0.00
+2026-09-02,SO-7090,Lena Fischer,Hollis & Grant Accounting,Monitor Arm,4,0.00
+2026-09-02,SO-7090,Lena Fischer,Hollis & Grant Accounting,Wireless Keyboard & Mouse,6,0.00
+2026-09-03,SO-7038,Priya Nair,Keystone Realty,Ergonomic Chair,3,0.00
+2026-09-03,SO-7050,Tom Becker,Bayside Dental Group,Monitor Arm,3,0.00
+2026-09-03,SO-7050,Tom Becker,Bayside Dental Group,Ergonomic Chair,2,0.00
+2026-09-03,SO-7052,Tom Becker,Quayside Marine,A4 Copy Paper (box),15,0.00
+2026-09-03,SO-7052,Tom Becker,Quayside Marine,Toner Cartridge,5,0.12
+2026-09-03,SO-7052,Tom Becker,Quayside Marine,Monitor Arm,3,0.05
+2026-09-03,SO-7074,Lena Fischer,Meadowbrook Council,Monitor Arm,2,0.05
+2026-09-03,SO-7074,Lena Fischer,Meadowbrook Council,Laser Printer,3,0.12
+2026-09-03,SO-7099,Diego Santos,Foxglove Architects,Toner Cartridge,4,0.12
+2026-09-03,SO-7099,Diego Santos,Foxglove Architects,Desk Organizer Set,1,0.00
+2026-09-05,SO-7007,Grace Holloway,Copperline Logistics,Desk Organizer Set,2,0.25
+2026-09-05,SO-7007,Grace Holloway,Copperline Logistics,Standing Desk,2,0.05
+2026-09-05,SO-7007,Grace Holloway,Copperline Logistics,Desk Organizer Set,1,0.00
+2026-09-05,SO-7063,Lena Fischer,Northgate Engineering,Desk Organizer Set,2,0.05
+2026-09-05,SO-7076,Lena Fischer,Pinecrest Hotels,Desk Organizer Set,1,0.05
+2026-09-05,SO-7089,Lena Fischer,Foxglove Architects,Desk Organizer Set,5,0.05
+2026-09-05,SO-7120,Diego Santos,Evergreen Law LLP,Gel Pens (pack 12),15,0.00
+2026-09-05,SO-7120,Diego Santos,Evergreen Law LLP,Filing Cabinet 3-Drawer,8,0.00
+2026-09-06,SO-7042,Priya Nair,Copperline Logistics,Gel Pens (pack 12),30,0.15
+2026-09-06,SO-7042,Priya Nair,Copperline Logistics,Toner Cartridge,5,0.05
+2026-09-06,SO-7047,Tom Becker,Oakridge Veterinary,Recycled Paper (box),10,0.00
+2026-09-06,SO-7105,Diego Santos,Granite Peak Insurance,Filing Cabinet 3-Drawer,3,0.00
+2026-09-06,SO-7105,Diego Santos,Granite Peak Insurance,Gel Pens (pack 12),15,0.00
+2026-09-06,SO-7105,Diego Santos,Granite Peak Insurance,Gel Pens (pack 12),30,0.05
+2026-09-06,SO-7109,Diego Santos,Pinecrest Hotels,Laser Printer,8,0.00
+2026-09-06,SO-7110,Diego Santos,Granite Peak Insurance,Desk Organizer Set,2,0.05
+2026-09-07,SO-7011,Grace Holloway,Pinecrest Hotels,Recycled Paper (box),30,0.00
+2026-09-07,SO-7011,Grace Holloway,Pinecrest Hotels,Standing Desk,5,0.00
+2026-09-07,SO-7023,Marcus Reid,Ironwood Schools Trust,Toner Cartridge,1,0.12
+2026-09-07,SO-7103,Diego Santos,Ironwood Schools Trust,Standing Desk,6,0.00
+2026-09-07,SO-7103,Diego Santos,Ironwood Schools Trust,Toner Cartridge,2,0.12
+2026-09-08,SO-7018,Grace Holloway,Lighthouse Media,Toner Cartridge,2,0.00
+2026-09-08,SO-7032,Marcus Reid,Bayside Dental Group,Standing Desk,10,0.00
+2026-09-09,SO-7010,Grace Holloway,Pinecrest Hotels,Recycled Paper (box),10,0.10
+2026-09-09,SO-7017,Grace Holloway,Oakridge Veterinary,Recycled Paper (box),25,0.05
+2026-09-09,SO-7043,Priya Nair,Juniper Health Clinic,Laser Printer,10,0.00
+2026-09-09,SO-7043,Priya Nair,Juniper Health Clinic,Toner Cartridge,3,0.00
+2026-09-09,SO-7060,Tom Becker,Bayside Dental Group,A4 Copy Paper (box),15,0.05
+2026-09-09,SO-7060,Tom Becker,Bayside Dental Group,Laser Printer,3,0.05
+2026-09-09,SO-7060,Tom Becker,Bayside Dental Group,Monitor Arm,5,0.25
+2026-09-09,SO-7112,Diego Santos,Juniper Health Clinic,A4 Copy Paper (box),10,0.00
+2026-09-09,SO-7112,Diego Santos,Juniper Health Clinic,Ergonomic Chair,6,0.00
+2026-09-09,SO-7116,Diego Santos,Bayside Dental Group,Whiteboard Markers (pack 8),10,0.15
+2026-09-10,SO-7009,Grace Holloway,Meadowbrook Council,Filing Cabinet 3-Drawer,5,0.05
+2026-09-10,SO-7041,Priya Nair,Ironwood Schools Trust,Standing Desk,10,0.20
+2026-09-10,SO-7071,Lena Fischer,Granite Peak Insurance,Wireless Keyboard & Mouse,8,0.05
+2026-09-10,SO-7071,Lena Fischer,Granite Peak Insurance,Gel Pens (pack 12),10,0.05
+2026-09-10,SO-7092,Lena Fischer,Bayside Dental Group,Recycled Paper (box),50,0.00
+2026-09-10,SO-7092,Lena Fischer,Bayside Dental Group,Filing Cabinet 3-Drawer,2,0.00
+2026-09-10,SO-7118,Diego Santos,Juniper Health Clinic,A4 Copy Paper (box),15,0.05
+2026-09-10,SO-7118,Diego Santos,Juniper Health Clinic,Desk Organizer Set,2,0.00
+2026-09-10,SO-7118,Diego Santos,Juniper Health Clinic,Monitor Arm,1,0.05
+2026-09-11,SO-7031,Marcus Reid,Granite Peak Insurance,Desk Organizer Set,6,0.05
+2026-09-11,SO-7031,Marcus Reid,Granite Peak Insurance,Gel Pens (pack 12),10,0.00
+2026-09-11,SO-7048,Tom Becker,Oakridge Veterinary,Laser Printer,2,0.00
+2026-09-11,SO-7078,Lena Fischer,Evergreen Law LLP,Recycled Paper (box),50,0.00
+2026-09-11,SO-7078,Lena Fischer,Evergreen Law LLP,Gel Pens (pack 12),25,0.00
+2026-09-11,SO-7078,Lena Fischer,Evergreen Law LLP,Gel Pens (pack 12),10,0.15
+2026-09-11,SO-7094,Diego Santos,Hollis & Grant Accounting,Ergonomic Chair,3,0.05
+2026-09-11,SO-7095,Diego Santos,Keystone Realty,Wireless Keyboard & Mouse,10,0.00
+2026-09-13,SO-7070,Lena Fischer,Keystone Realty,Toner Cartridge,10,0.12
+2026-09-13,SO-7070,Lena Fischer,Keystone Realty,Desk Organizer Set,8,0.05
+2026-09-13,SO-7070,Lena Fischer,Keystone Realty,Laser Printer,2,0.00
+2026-09-14,SO-7012,Grace Holloway,Hollis & Grant Accounting,Gel Pens (pack 12),20,0.00
+2026-09-14,SO-7012,Grace Holloway,Hollis & Grant Accounting,Gel Pens (pack 12),20,0.05
+2026-09-14,SO-7012,Grace Holloway,Hollis & Grant Accounting,Wireless Keyboard & Mouse,3,0.00
+2026-09-14,SO-7034,Priya Nair,Bayside Dental Group,Filing Cabinet 3-Drawer,2,0.05
+2026-09-14,SO-7056,Tom Becker,Evergreen Law LLP,Wireless Keyboard & Mouse,5,0.12
+2026-09-15,SO-7001,Grace Holloway,Ironwood Schools Trust,Monitor Arm,2,0.05
+2026-09-15,SO-7001,Grace Holloway,Ironwood Schools Trust,Laser Printer,2,0.00
+2026-09-15,SO-7003,Grace Holloway,Evergreen Law LLP,Monitor Arm,8,0.00
+2026-09-15,SO-7003,Grace Holloway,Evergreen Law LLP,Filing Cabinet 3-Drawer,6,0.00
+2026-09-15,SO-7003,Grace Holloway,Evergreen Law LLP,Whiteboard Markers (pack 8),30,0.15
+2026-09-15,SO-7025,Marcus Reid,Ironwood Schools Trust,Wireless Keyboard & Mouse,3,0.00
+2026-09-15,SO-7025,Marcus Reid,Ironwood Schools Trust,Wireless Keyboard & Mouse,3,0.00
+2026-09-15,SO-7025,Marcus Reid,Ironwood Schools Trust,Laser Printer,4,0.00
+2026-09-15,SO-7081,Lena Fischer,Evergreen Law LLP,Wireless Keyboard & Mouse,10,0.00
+2026-09-16,SO-7057,Tom Becker,Northgate Engineering,Wireless Keyboard & Mouse,3,0.00
+2026-09-16,SO-7059,Tom Becker,Ironwood Schools Trust,Standing Desk,2,0.00
+2026-09-16,SO-7059,Tom Becker,Ironwood Schools Trust,Gel Pens (pack 12),25,0.05
+2026-09-16,SO-7059,Tom Becker,Ironwood Schools Trust,Filing Cabinet 3-Drawer,2,0.20
+2026-09-16,SO-7084,Lena Fischer,Meadowbrook Council,Whiteboard Markers (pack 8),5,0.00
+2026-09-16,SO-7085,Lena Fischer,Foxglove Architects,Filing Cabinet 3-Drawer,5,0.00
+2026-09-16,SO-7104,Diego Santos,Hollis & Grant Accounting,Desk Organizer Set,3,0.00
+2026-09-17,SO-7033,Priya Nair,Bayside Dental Group,Wireless Keyboard & Mouse,2,0.00
+2026-09-17,SO-7091,Lena Fischer,Granite Peak Insurance,Whiteboard Markers (pack 8),40,0.05
+2026-09-18,SO-7013,Grace Holloway,Keystone Realty,Whiteboard Markers (pack 8),50,0.00
+2026-09-18,SO-7024,Marcus Reid,Northgate Engineering,Ergonomic Chair,4,0.00
+2026-09-18,SO-7024,Marcus Reid,Northgate Engineering,Laser Printer,2,0.00
+2026-09-18,SO-7036,Priya Nair,Meadowbrook Council,Ergonomic Chair,8,0.00
+2026-09-18,SO-7036,Priya Nair,Meadowbrook Council,Standing Desk,8,0.05
+2026-09-18,SO-7072,Lena Fischer,Lighthouse Media,Standing Desk,1,0.00
+2026-09-18,SO-7088,Lena Fischer,Foxglove Architects,Wireless Keyboard & Mouse,2,0.05
+2026-09-18,SO-7107,Diego Santos,Granite Peak Insurance,Filing Cabinet 3-Drawer,2,0.20
+2026-09-18,SO-7252,Tom Baker,Bayside Dental Group,Ergonomic Chair,3,0.00
+2026-09-19,SO-7044,Priya Nair,Juniper Health Clinic,Monitor Arm,2,0.05
+2026-09-19,SO-7044,Priya Nair,Juniper Health Clinic,Monitor Arm,3,0.00
+2026-09-19,SO-7044,Priya Nair,Juniper Health Clinic,Toner Cartridge,4,0.00
+2026-09-19,SO-7046,Priya Nair,Pinecrest Hotels,Standing Desk,5,0.00
+2026-09-19,SO-7046,Priya Nair,Pinecrest Hotels,Ergonomic Chair,1,0.00
+2026-09-19,SO-7046,Priya Nair,Pinecrest Hotels,Whiteboard Markers (pack 8),40,0.05
+2026-09-19,SO-7077,Lena Fischer,Granite Peak Insurance,Monitor Arm,10,0.00
+2026-09-19,SO-7114,Diego Santos,Keystone Realty,Recycled Paper (box),10,0.00
+2026-09-19,SO-7114,Diego Santos,Keystone Realty,Recycled Paper (box),10,0.00
+2026-09-19,SO-7117,Diego Santos,Keystone Realty,Toner Cartridge,6,0.05
+2026-09-20,SO-7075,Lena Fischer,Hollis & Grant Accounting,Monitor Arm,8,0.05
+2026-09-20,SO-7075,Lena Fischer,Hollis & Grant Accounting,Gel Pens (pack 12),50,0.15
+2026-09-20,SO-7083,Lena Fischer,Ironwood Schools Trust,Gel Pens (pack 12),20,0.15
+2026-09-20,SO-7083,Lena Fischer,Ironwood Schools Trust,Ergonomic Chair,6,0.00
+2026-09-21,SO-7002,Grace Holloway,Juniper Health Clinic,Monitor Arm,3,0.05
+2026-09-21,SO-7002,Grace Holloway,Juniper Health Clinic,Laser Printer,4,0.12
+2026-09-21,SO-7065,Lena Fischer,Keystone Realty,Laser Printer,6,0.00
+2026-09-21,SO-7065,Lena Fischer,Keystone Realty,Gel Pens (pack 12),20,0.00
+2026-09-21,SO-7079,Lena Fischer,Ironwood Schools Trust,Standing Desk,6,0.05
+2026-09-21,SO-7079,Lena Fischer,Ironwood Schools Trust,Gel Pens (pack 12),30,0.05
+2026-09-21,SO-7082,Lena Fischer,Foxglove Architects,Filing Cabinet 3-Drawer,10,0.20
+2026-09-21,SO-7082,Lena Fischer,Foxglove Architects,Filing Cabinet 3-Drawer,5,0.00
+2026-09-21,SO-7082,Lena Fischer,Foxglove Architects,A4 Copy Paper (box),10,0.00
+2026-09-21,SO-7096,Diego Santos,Copperline Logistics,Wireless Keyboard & Mouse,2,0.00
+2026-09-22,SO-7014,Grace Holloway,Copperline Logistics,Recycled Paper (box),10,0.00
+2026-09-22,SO-7030,Marcus Reid,Copperline Logistics,Standing Desk,8,0.05
+2026-09-22,SO-7108,Diego Santos,Foxglove Architects,Ergonomic Chair,2,0.00
+2026-09-23,SO-7026,Marcus Reid,Northgate Engineering,Filing Cabinet 3-Drawer,8,0.05
+2026-09-23,SO-7026,Marcus Reid,Northgate Engineering,Recycled Paper (box),30,0.00
+2026-09-23,SO-7045,Priya Nair,Evergreen Law LLP,Filing Cabinet 3-Drawer,8,0.05
+2026-09-23,SO-7045,Priya Nair,Evergreen Law LLP,Desk Organizer Set,4,0.05
+2026-09-23,SO-7087,Lena Fischer,Juniper Health Clinic,Laser Printer,8,0.05
+2026-09-23,SO-7087,Lena Fischer,Juniper Health Clinic,Monitor Arm,1,0.00
+2026-09-23,SO-7119,Diego Santos,Foxglove Architects,Ergonomic Chair,2,0.20
+2026-09-23,SO-7119,Diego Santos,Foxglove Architects,Recycled Paper (box),10,0.10
+2026-09-24,SO-7008,Grace Holloway,Evergreen Law LLP,Desk Organizer Set,10,0.00
+2026-09-24,SO-7008,Grace Holloway,Evergreen Law LLP,A4 Copy Paper (box),25,0.00
+2026-09-24,SO-7016,Grace Holloway,Ironwood Schools Trust,Wireless Keyboard & Mouse,6,0.12
+2026-09-24,SO-7016,Grace Holloway,Ironwood Schools Trust,Wireless Keyboard & Mouse,10,0.00
+2026-09-24,SO-7037,Priya Nair,Granite Peak Insurance,Toner Cartridge,6,0.12
+2026-09-24,SO-7053,Tom Becker,Ironwood Schools Trust,Wireless Keyboard & Mouse,2,0.00
+2026-09-24,SO-7053,Tom Becker,Ironwood Schools Trust,A4 Copy Paper (box),15,0.00
+2026-09-25,SO-7029,Marcus Reid,Northgate Engineering,Toner Cartridge,8,0.00
+2026-09-25,SO-7067,Lena Fischer,Bayside Dental Group,Ergonomic Chair,2,0.05
+2026-09-25,SO-7067,Lena Fischer,Bayside Dental Group,Standing Desk,6,0.20
+2026-09-25,SO-7067,Lena Fischer,Bayside Dental Group,A4 Copy Paper (box),10,0.10
+2026-09-25,SO-7111,Diego Santos,Hollis & Grant Accounting,Wireless Keyboard & Mouse,8,0.00
+2026-09-25,SO-7111,Diego Santos,Hollis & Grant Accounting,Standing Desk,2,0.00
+2026-09-26,SO-7062,Lena Fischer,Meadowbrook Council,Desk Organizer Set,10,0.00
+2026-09-26,SO-7069,Lena Fischer,Hollis & Grant Accounting,Laser Printer,2,0.00
+2026-09-26,SO-7100,Diego Santos,Evergreen Law LLP,Recycled Paper (box),5,0.05
+2026-09-26,SO-7100,Diego Santos,Evergreen Law LLP,Desk Organizer Set,3,0.00
+2026-09-26,SO-7115,Diego Santos,Hollis & Grant Accounting,Recycled Paper (box),30,0.05
+2026-09-27,SO-7020,Grace Holloway,Oakridge Veterinary,Wireless Keyboard & Mouse,5,0.12
+2026-09-27,SO-7020,Grace Holloway,Oakridge Veterinary,Toner Cartridge,4,0.00
+2026-09-27,SO-7051,Tom Becker,Juniper Health Clinic,Wireless Keyboard & Mouse,10,0.05
+2026-09-27,SO-7051,Tom Becker,Juniper Health Clinic,Filing Cabinet 3-Drawer,2,0.05
+2026-09-27,SO-7054,Tom Becker,Northgate Engineering,A4 Copy Paper (box),10,0.10
+2026-09-27,SO-7055,Tom Becker,Lighthouse Media,Desk Organizer Set,5,0.05
+2026-09-27,SO-7055,Tom Becker,Lighthouse Media,Laser Printer,2,0.05
+2026-09-27,SO-7055,Tom Becker,Lighthouse Media,Wireless Keyboard & Mouse,3,0.05
+2026-09-27,SO-7097,Diego Santos,Oakridge Veterinary,A4 Copy Paper (box),40,0.00
+2026-09-27,SO-7113,Diego Santos,Oakridge Veterinary,Monitor Arm,5,0.00
+2026-09-27,SO-7113,Diego Santos,Oakridge Veterinary,Recycled Paper (box),20,0.00
+2026-09-28,SO-7021,Marcus Reid,Juniper Health Clinic,Laser Printer,8,0.05
+2026-09-28,SO-7040,Priya Nair,Foxglove Architects,Toner Cartridge,6,0.05
+2026-09-28,SO-7040,Priya Nair,Foxglove Architects,Laser Printer,3,0.12
+2026-09-28,SO-7040,Priya Nair,Foxglove Architects,Monitor Arm,8,0.00
+2026-09-29,SO-7006,Grace Holloway,Pinecrest Hotels,Toner Cartridge,4,0.05
+2026-09-29,SO-7006,Grace Holloway,Pinecrest Hotels,Standing Desk,3,0.00
+2026-09-29,SO-7006,Grace Holloway,Pinecrest Hotels,Desk Organizer Set,2,0.00
+2026-09-29,SO-7022,Marcus Reid,Pinecrest Hotels,Standing Desk,8,0.00
+2026-09-29,SO-7022,Marcus Reid,Pinecrest Hotels,Toner Cartridge,4,0.00
+2026-09-29,SO-7086,Lena Fischer,Hollis & Grant Accounting,Laser Printer,4,0.00
+2026-09-29,SO-7093,Lena Fischer,Northgate Engineering,Ergonomic Chair,10,0.05
+2026-09-29,SO-7102,Diego Santos,Foxglove Architects,Laser Printer,4,0.12
+2026-09-30,SO-7015,Grace Holloway,Granite Peak Insurance,Whiteboard Markers (pack 8),10,0.00
+2026-09-30,SO-7015,Grace Holloway,Granite Peak Insurance,Laser Printer,8,0.05
+2026-09-30,SO-7027,Marcus Reid,Lighthouse Media,A4 Copy Paper (box),5,0.00
+2026-09-30,SO-7027,Marcus Reid,Lighthouse Media,Filing Cabinet 3-Drawer,4,0.05
+2026-09-30,SO-7027,Marcus Reid,Lighthouse Media,Monitor Arm,2,0.05
+2026-09-30,SO-7049,Tom Becker,Copperline Logistics,Ergonomic Chair,4,0.05
+2026-09-30,SO-7061,Tom Becker,Granite Peak Insurance,Recycled Paper (box),40,0.00
+2026-09-30,SO-7068,Lena Fischer,Northgate Engineering,Recycled Paper (box),10,0.00
+2026-09-30,SO-7068,Lena Fischer,Northgate Engineering,Gel Pens (pack 12),10,0.00
+2026-09-30,SO-7098,Diego Santos,Bayside Dental Group,Filing Cabinet 3-Drawer,2,0.00
+2026-10-01,SO-7124,Grace Holloway,Quayside Marine,Standing Desk,6,0.00
+2026-10-01,SO-7132,Grace Holloway,Foxglove Architects,Whiteboard Markers (pack 8),20,0.05
+2026-10-01,SO-7132,Grace Holloway,Foxglove Architects,Laser Printer,3,0.12
+2026-10-01,SO-7147,Marcus Reid,Oakridge Veterinary,Desk Organizer Set,10,0.05
+2026-10-01,SO-7177,Tom Becker,Northgate Engineering,A4 Copy Paper (box),10,0.05
+2026-10-01,SO-7213,Lena Fischer,Quayside Marine,Monitor Arm,2,0.00
+2026-10-01,SO-7213,Lena Fischer,Quayside Marine,Desk Organizer Set,10,0.00
+2026-10-01,SO-7213,Lena Fischer,Quayside Marine,Recycled Paper (box),50,0.05
+2026-10-01,SO-7227,Diego Santos,Pinecrest Hotels,Gel Pens (pack 12),10,0.00
+2026-10-01,SO-7227,Diego Santos,Pinecrest Hotels,Laser Printer,4,0.00
+2026-10-01,SO-7239,Diego Santos,Copperline Logistics,Gel Pens (pack 12),5,0.00
+2026-10-01,SO-7239,Diego Santos,Copperline Logistics,Desk Organizer Set,3,0.05
+2026-10-02,SO-7123,Grace Holloway,Granite Peak Insurance,Monitor Arm,8,0.00
+2026-10-02,SO-7123,Grace Holloway,Granite Peak Insurance,Whiteboard Markers (pack 8),20,0.05
+2026-10-02,SO-7135,Grace Holloway,Meadowbrook Council,Laser Printer,2,0.12
+2026-10-02,SO-7135,Grace Holloway,Meadowbrook Council,A4 Copy Paper (box),10,0.00
+2026-10-02,SO-7149,Marcus Reid,Meadowbrook Council,Wireless Keyboard & Mouse,1,0.00
+2026-10-02,SO-7149,Marcus Reid,Meadowbrook Council,Standing Desk,1,0.00
+2026-10-02,SO-7187,Lena Fischer,Ironwood Schools Trust,Filing Cabinet 3-Drawer,10,0.00
+2026-10-02,SO-7206,Lena Fischer,Granite Peak Insurance,Wireless Keyboard & Mouse,4,0.05
+2026-10-02,SO-7208,Lena Fischer,Hollis & Grant Accounting,Monitor Arm,6,0.25
+2026-10-02,SO-7208,Lena Fischer,Hollis & Grant Accounting,A4 Copy Paper (box),25,0.00
+2026-10-02,SO-7208,Lena Fischer,Hollis & Grant Accounting,Ergonomic Chair,1,0.00
+2026-10-02,SO-7209,Lena Fischer,Bayside Dental Group,Filing Cabinet 3-Drawer,6,0.00
+2026-10-02,SO-7209,Lena Fischer,Bayside Dental Group,Standing Desk,2,0.00
+2026-10-02,SO-7220,Lena Fischer,Pinecrest Hotels,Recycled Paper (box),20,0.05
+2026-10-02,SO-7220,Lena Fischer,Pinecrest Hotels,Recycled Paper (box),40,0.10
+2026-10-02,SO-7220,Lena Fischer,Pinecrest Hotels,Laser Printer,6,0.00
+2026-10-02,SO-7242,Diego Santos,Copperline Logistics,Recycled Paper (box),15,0.05
+2026-10-02,SO-7242,Diego Santos,Copperline Logistics,Gel Pens (pack 12),10,0.00
+2026-10-03,SO-7127,Grace Holloway,Evergreen Law LLP,Monitor Arm,5,0.00
+2026-10-03,SO-7168,Priya Nair,Bayside Dental Group,Ergonomic Chair,6,0.05
+2026-10-03,SO-7168,Priya Nair,Bayside Dental Group,Whiteboard Markers (pack 8),40,0.15
+2026-10-03,SO-7232,Diego Santos,Pinecrest Hotels,Toner Cartridge,2,0.00
+2026-10-03,SO-7232,Diego Santos,Pinecrest Hotels,Gel Pens (pack 12),10,0.00
+2026-10-04,SO-7152,Marcus Reid,Northgate Engineering,Monitor Arm,8,0.00
+2026-10-04,SO-7152,Marcus Reid,Northgate Engineering,Desk Organizer Set,8,0.00
+2026-10-04,SO-7171,Tom Becker,Ironwood Schools Trust,Whiteboard Markers (pack 8),50,0.00
+2026-10-04,SO-7171,Tom Becker,Ironwood Schools Trust,Laser Printer,8,0.05
+2026-10-04,SO-7198,Lena Fischer,Ironwood Schools Trust,Monitor Arm,6,0.05
+2026-10-04,SO-7198,Lena Fischer,Ironwood Schools Trust,Monitor Arm,2,0.00
+2026-10-05,SO-7175,Tom Becker,Oakridge Veterinary,Monitor Arm,10,0.00
+2026-10-05,SO-7175,Tom Becker,Oakridge Veterinary,Whiteboard Markers (pack 8),15,0.00
+2026-10-05,SO-7203,Lena Fischer,Copperline Logistics,Filing Cabinet 3-Drawer,6,0.05
+2026-10-06,SO-7142,Marcus Reid,Oakridge Veterinary,A4 Copy Paper (box),25,0.00
+2026-10-06,SO-7142,Marcus Reid,Oakridge Veterinary,Monitor Arm,2,0.05
+2026-10-06,SO-7142,Marcus Reid,Oakridge Veterinary,A4 Copy Paper (box),30,0.05
+2026-10-06,SO-7153,Priya Nair,Copperline Logistics,Whiteboard Markers (pack 8),30,0.15
+2026-10-06,SO-7153,Priya Nair,Copperline Logistics,A4 Copy Paper (box),10,0.00
+2026-10-06,SO-7153,Priya Nair,Copperline Logistics,A4 Copy Paper (box),40,0.00
+2026-10-06,SO-7161,Priya Nair,Copperline Logistics,Ergonomic Chair,3,0.00
+2026-10-06,SO-7161,Priya Nair,Copperline Logistics,A4 Copy Paper (box),10,0.05
+2026-10-06,SO-7161,Priya Nair,Copperline Logistics,Desk Organizer Set,8,0.05
+2026-10-06,SO-7173,Tom Becker,Pinecrest Hotels,Filing Cabinet 3-Drawer,10,0.00
+2026-10-06,SO-7173,Tom Becker,Pinecrest Hotels,Gel Pens (pack 12),10,0.00
+2026-10-06,SO-7176,Tom Becker,Hollis & Grant Accounting,Whiteboard Markers (pack 8),50,0.00
+2026-10-06,SO-7183,Lena Fischer,Meadowbrook Council,Monitor Arm,1,0.00
+2026-10-06,SO-7196,Lena Fischer,Evergreen Law LLP,Recycled Paper (box),10,0.00
+2026-10-06,SO-7196,Lena Fischer,Evergreen Law LLP,Ergonomic Chair,2,0.05
+2026-10-06,SO-7210,Lena Fischer,Quayside Marine,Desk Organizer Set,2,0.00
+2026-10-07,SO-7143,Marcus Reid,Meadowbrook Council,A4 Copy Paper (box),20,0.00
+2026-10-07,SO-7146,Marcus Reid,Northgate Engineering,Wireless Keyboard & Mouse,10,0.00
+2026-10-07,SO-7148,Marcus Reid,Pinecrest Hotels,Whiteboard Markers (pack 8),40,0.05
+2026-10-07,SO-7148,Marcus Reid,Pinecrest Hotels,A4 Copy Paper (box),20,0.00
+2026-10-07,SO-7181,Lena Fischer,Copperline Logistics,Ergonomic Chair,4,0.20
+2026-10-07,SO-7231,Diego Santos,Granite Peak Insurance,A4 Copy Paper (box),30,0.00
+2026-10-08,SO-7133,Grace Holloway,Keystone Realty,Wireless Keyboard & Mouse,10,0.05
+2026-10-08,SO-7157,Priya Nair,Hollis & Grant Accounting,Monitor Arm,6,0.05
+2026-10-08,SO-7157,Priya Nair,Hollis & Grant Accounting,A4 Copy Paper (box),25,0.05
+2026-10-08,SO-7167,Priya Nair,Oakridge Veterinary,Whiteboard Markers (pack 8),5,0.00
+2026-10-08,SO-7167,Priya Nair,Oakridge Veterinary,Wireless Keyboard & Mouse,8,0.05
+2026-10-08,SO-7228,Diego Santos,Hollis & Grant Accounting,Recycled Paper (box),20,0.00
+2026-10-08,SO-7228,Diego Santos,Hollis & Grant Accounting,Filing Cabinet 3-Drawer,4,0.00
+2026-10-08,SO-7245,Diego Santos,Lighthouse Media,Desk Organizer Set,3,0.05
+2026-10-08,SO-7245,Diego Santos,Lighthouse Media,Gel Pens (pack 12),20,0.05
+2026-10-08,SO-7245,Diego Santos,Lighthouse Media,Laser Printer,4,0.00
+2026-10-09,SO-7163,Priya Nair,Copperline Logistics,Recycled Paper (box),40,0.10
+2026-10-09,SO-7163,Priya Nair,Copperline Logistics,Ergonomic Chair,8,0.00
+2026-10-09,SO-7163,Priya Nair,Copperline Logistics,Filing Cabinet 3-Drawer,2,0.00
+2026-10-09,SO-7172,Tom Becker,Lighthouse Media,Standing Desk,8,0.20
+2026-10-09,SO-7192,Lena Fischer,Pinecrest Hotels,A4 Copy Paper (box),5,0.00
+2026-10-09,SO-7192,Lena Fischer,Pinecrest Hotels,Recycled Paper (box),5,0.00
+2026-10-09,SO-7192,Lena Fischer,Pinecrest Hotels,Wireless Keyboard & Mouse,3,0.00
+2026-10-09,SO-7218,Lena Fischer,Northgate Engineering,Gel Pens (pack 12),50,0.05
+2026-10-09,SO-7234,Diego Santos,Pinecrest Hotels,Monitor Arm,3,0.05
+2026-10-09,SO-7234,Diego Santos,Pinecrest Hotels,A4 Copy Paper (box),5,0.05
+2026-10-09,SO-7234,Diego Santos,Pinecrest Hotels,A4 Copy Paper (box),50,0.00
+2026-10-10,SO-7184,Lena Fischer,Granite Peak Insurance,Gel Pens (pack 12),50,0.00
+2026-10-10,SO-7184,Lena Fischer,Granite Peak Insurance,Ergonomic Chair,4,0.00
+2026-10-10,SO-7190,Lena Fischer,Evergreen Law LLP,Recycled Paper (box),10,0.00
+2026-10-10,SO-7190,Lena Fischer,Evergreen Law LLP,Filing Cabinet 3-Drawer,3,0.00
+2026-10-10,SO-7205,Lena Fischer,Keystone Realty,Ergonomic Chair,3,0.05
+2026-10-10,SO-7205,Lena Fischer,Keystone Realty,Whiteboard Markers (pack 8),30,0.00
+2026-10-10,SO-7207,Lena Fischer,Bayside Dental Group,A4 Copy Paper (box),30,0.05
+2026-10-10,SO-7217,Lena Fischer,Juniper Health Clinic,Toner Cartridge,10,0.12
+2026-10-10,SO-7217,Lena Fischer,Juniper Health Clinic,Toner Cartridge,2,0.05
+2026-10-10,SO-7224,Diego Santos,Ironwood Schools Trust,Toner Cartridge,8,0.00
+2026-10-10,SO-7224,Diego Santos,Ironwood Schools Trust,Filing Cabinet 3-Drawer,3,0.00
+2026-10-10,SO-7243,Diego Santos,Evergreen Law LLP,Wireless Keyboard & Mouse,2,0.05
+2026-10-10,SO-7243,Diego Santos,Evergreen Law LLP,Toner Cartridge,3,0.00
+2026-10-11,SO-7134,Grace Holloway,Granite Peak Insurance,A4 Copy Paper (box),10,0.10
+2026-10-11,SO-7134,Grace Holloway,Granite Peak Insurance,Ergonomic Chair,4,0.00
+2026-10-11,SO-7134,Grace Holloway,Granite Peak Insurance,Toner Cartridge,5,0.05
+2026-10-11,SO-7140,Grace Holloway,Foxglove Architects,A4 Copy Paper (box),30,0.10
+2026-10-11,SO-7162,Priya Nair,Keystone Realty,Recycled Paper (box),10,0.05
+2026-10-11,SO-7162,Priya Nair,Keystone Realty,Recycled Paper (box),25,0.00
+2026-10-11,SO-7162,Priya Nair,Keystone Realty,Toner Cartridge,10,0.12
+2026-10-11,SO-7214,Lena Fischer,Ironwood Schools Trust,Filing Cabinet 3-Drawer,6,0.05
+2026-10-11,SO-7214,Lena Fischer,Ironwood Schools Trust,Whiteboard Markers (pack 8),25,0.05
+2026-10-11,SO-7214,Lena Fischer,Ironwood Schools Trust,Laser Printer,8,0.00
+2026-10-11,SO-7233,Diego Santos,Juniper Health Clinic,Desk Organizer Set,2,0.00
+2026-10-11,SO-7233,Diego Santos,Juniper Health Clinic,Toner Cartridge,10,0.05
+2026-10-12,SO-7159,Priya Nair,Quayside Marine,Recycled Paper (box),30,0.00
+2026-10-12,SO-7230,Diego Santos,Evergreen Law LLP,Filing Cabinet 3-Drawer,2,0.00
+2026-10-13,SO-7125,Grace Holloway,Pinecrest Hotels,Whiteboard Markers (pack 8),30,0.05
+2026-10-13,SO-7125,Grace Holloway,Pinecrest Hotels,Whiteboard Markers (pack 8),10,0.00
+2026-10-13,SO-7166,Priya Nair,Hollis & Grant Accounting,Standing Desk,3,0.00
+2026-10-13,SO-7166,Priya Nair,Hollis & Grant Accounting,Standing Desk,3,0.20
+2026-10-13,SO-7179,Tom Becker,Hollis & Grant Accounting,Gel Pens (pack 12),25,0.00
+2026-10-13,SO-7204,Lena Fischer,Lighthouse Media,Wireless Keyboard & Mouse,4,0.00
+2026-10-13,SO-7204,Lena Fischer,Lighthouse Media,Desk Organizer Set,10,0.00
+2026-10-13,SO-7216,Lena Fischer,Juniper Health Clinic,Recycled Paper (box),10,0.05
+2026-10-14,SO-7237,Diego Santos,Northgate Engineering,Gel Pens (pack 12),50,0.05
+2026-10-14,SO-7249,Diego Santos,Pinecrest Hotels,A4 Copy Paper (box),40,0.25
+2026-10-15,SO-7122,Grace Holloway,Keystone Realty,Monitor Arm,2,0.05
+2026-10-15,SO-7122,Grace Holloway,Keystone Realty,Toner Cartridge,8,0.00
+2026-10-15,SO-7188,Lena Fischer,Juniper Health Clinic,Filing Cabinet 3-Drawer,5,0.00
+2026-10-16,SO-7137,Grace Holloway,Northgate Engineering,Monitor Arm,8,0.00
+2026-10-16,SO-7154,Priya Nair,Ironwood Schools Trust,Toner Cartridge,10,0.00
+2026-10-16,SO-7154,Priya Nair,Ironwood Schools Trust,Monitor Arm,6,0.00
+2026-10-16,SO-7211,Lena Fischer,Lighthouse Media,Whiteboard Markers (pack 8),5,0.00
+2026-10-16,SO-7211,Lena Fischer,Lighthouse Media,Ergonomic Chair,6,0.00
+2026-10-16,SO-7225,Diego Santos,Keystone Realty,Gel Pens (pack 12),25,0.00
+2026-10-17,SO-7136,Grace Holloway,Foxglove Architects,Wireless Keyboard & Mouse,2,0.05
+2026-10-17,SO-7136,Grace Holloway,Foxglove Architects,Whiteboard Markers (pack 8),50,0.00
+2026-10-17,SO-7212,Lena Fischer,Lighthouse Media,Ergonomic Chair,1,0.00
+2026-10-17,SO-7247,Diego Santos,Quayside Marine,Gel Pens (pack 12),25,0.15
+2026-10-17,SO-7247,Diego Santos,Quayside Marine,Monitor Arm,4,0.25
+2026-10-17,SO-7247,Diego Santos,Quayside Marine,Wireless Keyboard & Mouse,3,0.05
+2026-10-18,SO-7121,Grace Holloway,Evergreen Law LLP,Monitor Arm,2,0.25
+2026-10-18,SO-7130,Grace Holloway,Foxglove Architects,Standing Desk,2,0.00
+2026-10-18,SO-7130,Grace Holloway,Foxglove Architects,Desk Organizer Set,1,0.00
+2026-10-18,SO-7130,Grace Holloway,Foxglove Architects,Monitor Arm,1,0.05
+2026-10-18,SO-7156,Priya Nair,Quayside Marine,Toner Cartridge,10,0.00
+2026-10-18,SO-7194,Lena Fischer,Evergreen Law LLP,Ergonomic Chair,5,0.00
+2026-10-18,SO-7194,Lena Fischer,Evergreen Law LLP,Whiteboard Markers (pack 8),15,0.05
+2026-10-18,SO-7219,Lena Fischer,Evergreen Law LLP,A4 Copy Paper (box),10,0.00
+2026-10-18,SO-7221,Diego Santos,Keystone Realty,Gel Pens (pack 12),10,0.00
+2026-10-18,SO-7238,Diego Santos,Copperline Logistics,Toner Cartridge,1,0.00
+2026-10-19,SO-7151,Marcus Reid,Keystone Realty,Standing Desk,2,0.20
+2026-10-19,SO-7151,Marcus Reid,Keystone Realty,Whiteboard Markers (pack 8),20,0.00
+2026-10-19,SO-7195,Lena Fischer,Pinecrest Hotels,Gel Pens (pack 12),40,0.05
+2026-10-20,SO-7139,Grace Holloway,Bayside Dental Group,Wireless Keyboard & Mouse,10,0.05
+2026-10-20,SO-7139,Grace Holloway,Bayside Dental Group,Ergonomic Chair,3,0.20
+2026-10-20,SO-7169,Priya Nair,Juniper Health Clinic,Laser Printer,4,0.05
+2026-10-20,SO-7202,Lena Fischer,Quayside Marine,Gel Pens (pack 12),40,0.15
+2026-10-20,SO-7241,Diego Santos,Lighthouse Media,Toner Cartridge,4,0.05
+2026-10-20,SO-7241,Diego Santos,Lighthouse Media,A4 Copy Paper (box),10,0.05
+2026-10-21,SO-7164,Priya Nair,Evergreen Law LLP,Monitor Arm,5,0.00
+2026-10-21,SO-7201,Lena Fischer,Hollis & Grant Accounting,Wireless Keyboard & Mouse,3,0.00
+2026-10-21,SO-7223,Diego Santos,Granite Peak Insurance,Gel Pens (pack 12),20,0.00
+2026-10-21,SO-7246,Diego Santos,Granite Peak Insurance,Filing Cabinet 3-Drawer,3,0.05
+2026-10-21,SO-7250,Priya Nair,Keystone Realty,Standing Desk,0,0.00
+2026-10-22,SO-7145,Marcus Reid,Pinecrest Hotels,Laser Printer,8,0.12
+2026-10-22,SO-7145,Marcus Reid,Pinecrest Hotels,Filing Cabinet 3-Drawer,4,0.05
+2026-10-22,SO-7145,Marcus Reid,Pinecrest Hotels,Ergonomic Chair,10,0.20
+2026-10-22,SO-7150,Marcus Reid,Keystone Realty,Filing Cabinet 3-Drawer,2,0.00
+2026-10-22,SO-7200,Lena Fischer,Oakridge Veterinary,Ergonomic Chair,10,0.00
+2026-10-22,SO-7215,Lena Fischer,Lighthouse Media,Filing Cabinet 3-Drawer,8,0.00
+2026-10-22,SO-7222,Diego Santos,Hollis & Grant Accounting,Standing Desk,1,0.05
+2026-10-22,SO-7229,Diego Santos,Northgate Engineering,Recycled Paper (box),40,0.00
+2026-10-23,SO-7180,Lena Fischer,Pinecrest Hotels,A4 Copy Paper (box),50,0.05
+2026-10-24,SO-7131,Grace Holloway,Bayside Dental Group,Wireless Keyboard & Mouse,10,0.05
+2026-10-24,SO-7131,Grace Holloway,Bayside Dental Group,A4 Copy Paper (box),25,0.00
+2026-10-24,SO-7131,Grace Holloway,Bayside Dental Group,Recycled Paper (box),15,0.00
+2026-10-24,SO-7141,Marcus Reid,Oakridge Veterinary,Standing Desk,6,0.00
+2026-10-24,SO-7141,Marcus Reid,Oakridge Veterinary,Filing Cabinet 3-Drawer,2,0.00
+2026-10-24,SO-7155,Priya Nair,Oakridge Veterinary,A4 Copy Paper (box),25,0.05
+2026-10-24,SO-7155,Priya Nair,Oakridge Veterinary,Recycled Paper (box),5,0.00
+2026-10-24,SO-7193,Lena Fischer,Bayside Dental Group,Monitor Arm,5,0.25
+2026-10-25,SO-7158,Priya Nair,Pinecrest Hotels,Wireless Keyboard & Mouse,10,0.05
+2026-10-25,SO-7158,Priya Nair,Pinecrest Hotels,Filing Cabinet 3-Drawer,10,0.00
+2026-10-26,SO-7128,Grace Holloway,Granite Peak Insurance,Standing Desk,8,0.05
+2026-10-26,SO-7128,Grace Holloway,Granite Peak Insurance,Laser Printer,5,0.00
+2026-10-26,SO-7248,Diego Santos,Lighthouse Media,Laser Printer,8,0.05
+2026-10-26,SO-7248,Diego Santos,Lighthouse Media,Toner Cartridge,2,0.00
+2026-10-27,SO-7126,Grace Holloway,Ironwood Schools Trust,Monitor Arm,3,0.05
+2026-10-27,SO-7126,Grace Holloway,Ironwood Schools Trust,Monitor Arm,6,0.00
+2026-10-27,SO-7129,Grace Holloway,Evergreen Law LLP,A4 Copy Paper (box),5,0.00
+2026-10-27,SO-7129,Grace Holloway,Evergreen Law LLP,Laser Printer,5,0.00
+2026-10-27,SO-7160,Priya Nair,Juniper Health Clinic,Ergonomic Chair,8,0.00
+2026-10-27,SO-7182,Lena Fischer,Keystone Realty,Ergonomic Chair,5,0.05
+2026-10-27,SO-7182,Lena Fischer,Keystone Realty,Ergonomic Chair,3,0.05
+2026-10-27,SO-7191,Lena Fischer,Lighthouse Media,Recycled Paper (box),5,0.00
+2026-10-27,SO-7199,Lena Fischer,Foxglove Architects,Whiteboard Markers (pack 8),30,0.00
+2026-10-27,SO-7244,Diego Santos,Foxglove Architects,Wireless Keyboard & Mouse,2,0.05
+2026-10-27,SO-7244,Diego Santos,Foxglove Architects,Filing Cabinet 3-Drawer,3,0.00
+2026-10-27,SO-7244,Diego Santos,Foxglove Architects,Filing Cabinet 3-Drawer,2,0.05
+2026-10-27,SO-7251,Lena Fischer,Lighthouse Media,Desk Lamp LED,6,0.00
+2026-10-28,SO-7170,Priya Nair,Northgate Engineering,Ergonomic Chair,3,0.20
+2026-10-28,SO-7174,Tom Becker,Hollis & Grant Accounting,Standing Desk,3,0.00
+2026-10-28,SO-7197,Lena Fischer,Juniper Health Clinic,A4 Copy Paper (box),10,0.05
+2026-10-29,SO-7186,Lena Fischer,Pinecrest Hotels,Gel Pens (pack 12),10,0.00
+2026-10-29,SO-7186,Lena Fischer,Pinecrest Hotels,Filing Cabinet 3-Drawer,6,0.00
+2026-10-29,SO-7189,Lena Fischer,Copperline Logistics,Wireless Keyboard & Mouse,2,0.12
+2026-10-29,SO-7189,Lena Fischer,Copperline Logistics,Gel Pens (pack 12),30,0.00
+2026-10-29,SO-7235,Diego Santos,Ironwood Schools Trust,Gel Pens (pack 12),50,0.00
+2026-10-29,SO-7235,Diego Santos,Ironwood Schools Trust,Filing Cabinet 3-Drawer,4,0.00
+2026-10-29,SO-7240,Diego Santos,Ironwood Schools Trust,Wireless Keyboard & Mouse,10,0.05
+2026-10-30,SO-7138,Grace Holloway,Hollis & Grant Accounting,Laser Printer,2,0.05
+2026-10-30,SO-7138,Grace Holloway,Hollis & Grant Accounting,Standing Desk,5,0.05
+2026-10-30,SO-7138,Grace Holloway,Hollis & Grant Accounting,Recycled Paper (box),5,0.10
+2026-10-30,SO-7165,Priya Nair,Quayside Marine,Gel Pens (pack 12),50,0.00
+2026-10-30,SO-7165,Priya Nair,Quayside Marine,Gel Pens (pack 12),5,0.05
+2026-10-30,SO-7185,Lena Fischer,Lighthouse Media,Monitor Arm,5,0.00
+2026-10-30,SO-7185,Lena Fischer,Lighthouse Media,Wireless Keyboard & Mouse,2,0.00
+2026-10-30,SO-7226,Diego Santos,Hollis & Grant Accounting,Wireless Keyboard & Mouse,4,0.12
+2026-10-30,SO-7226,Diego Santos,Hollis & Grant Accounting,Monitor Arm,8,0.05
+2026-10-30,SO-7236,Diego Santos,Pinecrest Hotels,Desk Organizer Set,10,0.00
+2026-10-30,SO-7236,Diego Santos,Pinecrest Hotels,Toner Cartridge,10,0.12
+2026-10-30,SO-7236,Diego Santos,Pinecrest Hotels,Recycled Paper (box),50,0.05
+2026-10-31,SO-7144,Marcus Reid,Oakridge Veterinary,A4 Copy Paper (box),50,0.00
+2026-10-31,SO-7144,Marcus Reid,Oakridge Veterinary,Recycled Paper (box),40,0.00

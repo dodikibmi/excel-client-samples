@@ -1,0 +1,11 @@
+{
+ "first_month": "2025-11",
+ "last_month": "2026-10",
+ "lines": 9899,
+ "invoices": 5546,
+ "miss": {
+  "month": "2026-10",
+  "region": "West",
+  "category": "Garden"
+ }
+}

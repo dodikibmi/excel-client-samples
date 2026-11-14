@@ -1,0 +1,832 @@
+{
+ "opening": 18450.0,
+ "bank_closing": 109241.24,
+ "bank_rows_in_file": 160,
+ "bank_duplicates_in_file": 2,
+ "ledger_rows": 158,
+ "cases": [
+  {
+   "key": "PO5001",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1001",
+   "status": "Matched",
+   "gap": 3
+  },
+  {
+   "key": "INV1002",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5002",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1003",
+   "status": "Matched",
+   "gap": 3
+  },
+  {
+   "key": "PO5003",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1004",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1005",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5004",
+   "status": "Matched",
+   "gap": 1
+  },
+  {
+   "key": "INV1006",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5005",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5006",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1007",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5007",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1008",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1009",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5008",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5009",
+   "status": "Matched",
+   "gap": 1
+  },
+  {
+   "key": "INV1010",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5010",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5011",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5012",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1011",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1012",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1013",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1014",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1015",
+   "status": "Matched",
+   "gap": 1
+  },
+  {
+   "key": "INV1016",
+   "status": "Matched",
+   "gap": 3
+  },
+  {
+   "key": "INV1017",
+   "status": "Matched",
+   "gap": 3
+  },
+  {
+   "key": "PO5013",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1018",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1019",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1020",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "CHQ004501",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1021",
+   "status": "Matched",
+   "gap": 2
+  },
+  {
+   "key": "INV1022",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1023",
+   "status": "Matched",
+   "gap": 3
+  },
+  {
+   "key": "INV1024",
+   "status": "Matched",
+   "gap": 2
+  },
+  {
+   "key": "PO5014",
+   "status": "Matched",
+   "gap": 3
+  },
+  {
+   "key": "INV1025",
+   "status": "Matched",
+   "gap": 2
+  },
+  {
+   "key": "CHQ004502",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1026",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1027",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1028",
+   "status": "Matched",
+   "gap": 2
+  },
+  {
+   "key": "INV1029",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1030",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "CHQ004503",
+   "status": "Matched",
+   "gap": 2
+  },
+  {
+   "key": "INV1031",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5015",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5016",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5017",
+   "status": "Matched",
+   "gap": 2
+  },
+  {
+   "key": "INV1032",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "CHQ004504",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1033",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1034",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5018",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "CHQ004505",
+   "status": "Matched",
+   "gap": 2
+  },
+  {
+   "key": "CHQ004506",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1035",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1036",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5019",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1037",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1038",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5020",
+   "status": "Matched",
+   "gap": 1
+  },
+  {
+   "key": "INV1039",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1040",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1041",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5021",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1042",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "CHQ004507",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1043",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1044",
+   "status": "Matched",
+   "gap": 2
+  },
+  {
+   "key": "INV1045",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1046",
+   "status": "Matched",
+   "gap": 1
+  },
+  {
+   "key": "PO5022",
+   "status": "Matched",
+   "gap": 3
+  },
+  {
+   "key": "PO5023",
+   "status": "Matched",
+   "gap": 3
+  },
+  {
+   "key": "INV1047",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5024",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5025",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5026",
+   "status": "Matched",
+   "gap": 3
+  },
+  {
+   "key": "CHQ004508",
+   "status": "Matched",
+   "gap": 3
+  },
+  {
+   "key": "INV1048",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5027",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1049",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1050",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1051",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5028",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "CHQ004509",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5029",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1052",
+   "status": "Matched",
+   "gap": 2
+  },
+  {
+   "key": "PO5030",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "CHQ004510",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1053",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5031",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1054",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1055",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5032",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5033",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1056",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1057",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "CHQ004511",
+   "status": "Matched",
+   "gap": 3
+  },
+  {
+   "key": "INV1058",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5034",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5035",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1059",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1060",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1061",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "CHQ004512",
+   "status": "Matched",
+   "gap": 2
+  },
+  {
+   "key": "PO5036",
+   "status": "Matched",
+   "gap": 2
+  },
+  {
+   "key": "PO5037",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5038",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5039",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1062",
+   "status": "Matched",
+   "gap": 2
+  },
+  {
+   "key": "PO5040",
+   "status": "Matched",
+   "gap": 1
+  },
+  {
+   "key": "PO5041",
+   "status": "Matched",
+   "gap": 1
+  },
+  {
+   "key": "INV1063",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "CHQ004513",
+   "status": "Matched",
+   "gap": 2
+  },
+  {
+   "key": "PO5042",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1064",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1065",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "CHQ004514",
+   "status": "Matched",
+   "gap": 3
+  },
+  {
+   "key": "INV1066",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1067",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5043",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5044",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1068",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1069",
+   "status": "Matched",
+   "gap": 2
+  },
+  {
+   "key": "INV1070",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1071",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "CHQ004515",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1072",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "CHQ004516",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1073",
+   "status": "Matched",
+   "gap": 3
+  },
+  {
+   "key": "INV1074",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "CHQ004517",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "CHQ004518",
+   "status": "Matched",
+   "gap": 3
+  },
+  {
+   "key": "CHQ004519",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5045",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1075",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1076",
+   "status": "Matched",
+   "gap": 3
+  },
+  {
+   "key": "INV1077",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1078",
+   "status": "Matched",
+   "gap": 1
+  },
+  {
+   "key": "INV1079",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5046",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1080",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1081",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1082",
+   "status": "Matched",
+   "gap": 2
+  },
+  {
+   "key": "INV1083",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "INV1084",
+   "status": "Matched",
+   "gap": 0
+  },
+  {
+   "key": "PO5047",
+   "status": "Matched",
+   "gap": 1
+  },
+  {
+   "key": "INV1085",
+   "status": "Amount differs",
+   "diff": -20.0,
+   "why": "customer deducted a 20.00 transfer fee"
+  },
+  {
+   "key": "PO5048",
+   "status": "Amount differs",
+   "diff": 27.0,
+   "why": "ledger typo: digits swapped"
+  },
+  {
+   "key": "INV1086",
+   "status": "Amount differs",
+   "diff": 18.0,
+   "why": "customer overpaid 18.00"
+  },
+  {
+   "key": null,
+   "status": "Only in bank",
+   "amount": -25.0,
+   "desc": "ACCOUNT MAINTENANCE FEE"
+  },
+  {
+   "key": null,
+   "status": "Only in bank",
+   "amount": -38.4,
+   "desc": "MERCHANT CARD FEE OCT"
+  },
+  {
+   "key": null,
+   "status": "Only in bank",
+   "amount": 4.12,
+   "desc": "CREDIT INTEREST"
+  },
+  {
+   "key": "DD7781",
+   "status": "Only in bank",
+   "amount": -189.0,
+   "desc": "DIRECT DEBIT SHIELD INSURANCE"
+  },
+  {
+   "key": null,
+   "status": "Only in bank",
+   "amount": 350.0,
+   "desc": "CASH DEPOSIT BRANCH 12"
+  },
+  {
+   "key": "INV1087",
+   "status": "Only in ledger",
+   "amount": 2140.0
+  },
+  {
+   "key": "CHQ004520",
+   "status": "Only in ledger",
+   "amount": -860.0
+  },
+  {
+   "key": "CHQ004521",
+   "status": "Only in ledger",
+   "amount": -1215.5
+  },
+  {
+   "key": "PO5049",
+   "status": "Only in ledger",
+   "amount": -400.0
+  },
+  {
+   "key": "INV1007",
+   "status": "Duplicate in ledger",
+   "amount": 428.05
+  }
+ ]
+}

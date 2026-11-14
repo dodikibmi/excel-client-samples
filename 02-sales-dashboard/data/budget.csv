@@ -1,0 +1,241 @@
+Month,Region,Category,Budget Revenue,Budget Margin %
+2025-11,North,Fasteners,21100,0.38
+2025-11,North,Power Tools,31700,0.24
+2025-11,North,Paint,11700,0.42
+2025-11,North,Garden,6300,0.35
+2025-11,North,Electrical,17700,0.31
+2025-11,South,Fasteners,17900,0.38
+2025-11,South,Power Tools,27700,0.24
+2025-11,South,Paint,10500,0.42
+2025-11,South,Garden,5100,0.35
+2025-11,South,Electrical,15000,0.31
+2025-11,East,Fasteners,23900,0.38
+2025-11,East,Power Tools,36300,0.24
+2025-11,East,Paint,14500,0.42
+2025-11,East,Garden,7200,0.35
+2025-11,East,Electrical,20000,0.31
+2025-11,West,Fasteners,19700,0.38
+2025-11,West,Power Tools,30600,0.24
+2025-11,West,Paint,11200,0.42
+2025-11,West,Garden,6000,0.35
+2025-11,West,Electrical,16900,0.31
+2025-12,North,Fasteners,18900,0.38
+2025-12,North,Power Tools,39000,0.24
+2025-12,North,Paint,10500,0.42
+2025-12,North,Garden,4900,0.35
+2025-12,North,Electrical,17500,0.31
+2025-12,South,Fasteners,16500,0.38
+2025-12,South,Power Tools,31100,0.24
+2025-12,South,Paint,9200,0.42
+2025-12,South,Garden,4300,0.35
+2025-12,South,Electrical,14700,0.31
+2025-12,East,Fasteners,22700,0.38
+2025-12,East,Power Tools,44500,0.24
+2025-12,East,Paint,12400,0.42
+2025-12,East,Garden,5800,0.35
+2025-12,East,Electrical,20900,0.31
+2025-12,West,Fasteners,17800,0.38
+2025-12,West,Power Tools,34000,0.24
+2025-12,West,Paint,10600,0.42
+2025-12,West,Garden,4800,0.35
+2025-12,West,Electrical,16300,0.31
+2026-01,North,Fasteners,21000,0.38
+2026-01,North,Power Tools,22500,0.24
+2026-01,North,Paint,10700,0.42
+2026-01,North,Garden,4800,0.35
+2026-01,North,Electrical,18100,0.31
+2026-01,South,Fasteners,18100,0.38
+2026-01,South,Power Tools,18400,0.24
+2026-01,South,Paint,9000,0.42
+2026-01,South,Garden,4200,0.35
+2026-01,South,Electrical,15100,0.31
+2026-01,East,Fasteners,26100,0.38
+2026-01,East,Power Tools,24100,0.24
+2026-01,East,Paint,12200,0.42
+2026-01,East,Garden,5800,0.35
+2026-01,East,Electrical,19800,0.31
+2026-01,West,Fasteners,20100,0.38
+2026-01,West,Power Tools,21100,0.24
+2026-01,West,Paint,10500,0.42
+2026-01,West,Garden,4700,0.35
+2026-01,West,Electrical,16900,0.31
+2026-02,North,Fasteners,21100,0.38
+2026-02,North,Power Tools,22400,0.24
+2026-02,North,Paint,11300,0.42
+2026-02,North,Garden,6300,0.35
+2026-02,North,Electrical,18600,0.31
+2026-02,South,Fasteners,19500,0.38
+2026-02,South,Power Tools,19400,0.24
+2026-02,South,Paint,10300,0.42
+2026-02,South,Garden,5200,0.35
+2026-02,South,Electrical,15600,0.31
+2026-02,East,Fasteners,25100,0.38
+2026-02,East,Power Tools,25900,0.24
+2026-02,East,Paint,13600,0.42
+2026-02,East,Garden,7300,0.35
+2026-02,East,Electrical,20400,0.31
+2026-02,West,Fasteners,20300,0.38
+2026-02,West,Power Tools,22900,0.24
+2026-02,West,Paint,11700,0.42
+2026-02,West,Garden,5900,0.35
+2026-02,West,Electrical,16400,0.31
+2026-03,North,Fasteners,23700,0.38
+2026-03,North,Power Tools,27300,0.24
+2026-03,North,Paint,14700,0.42
+2026-03,North,Garden,11400,0.35
+2026-03,North,Electrical,18200,0.31
+2026-03,South,Fasteners,20300,0.38
+2026-03,South,Power Tools,23000,0.24
+2026-03,South,Paint,12000,0.42
+2026-03,South,Garden,10100,0.35
+2026-03,South,Electrical,15100,0.31
+2026-03,East,Fasteners,26100,0.38
+2026-03,East,Power Tools,31300,0.24
+2026-03,East,Paint,16900,0.42
+2026-03,East,Garden,12700,0.35
+2026-03,East,Electrical,20400,0.31
+2026-03,West,Fasteners,22800,0.38
+2026-03,West,Power Tools,24500,0.24
+2026-03,West,Paint,13400,0.42
+2026-03,West,Garden,11200,0.35
+2026-03,West,Electrical,16400,0.31
+2026-04,North,Fasteners,24200,0.38
+2026-04,North,Power Tools,27400,0.24
+2026-04,North,Paint,17900,0.42
+2026-04,North,Garden,20000,0.35
+2026-04,North,Electrical,18900,0.31
+2026-04,South,Fasteners,19900,0.38
+2026-04,South,Power Tools,24500,0.24
+2026-04,South,Paint,15200,0.42
+2026-04,South,Garden,16800,0.35
+2026-04,South,Electrical,15600,0.31
+2026-04,East,Fasteners,26300,0.38
+2026-04,East,Power Tools,32800,0.24
+2026-04,East,Paint,20400,0.42
+2026-04,East,Garden,21800,0.35
+2026-04,East,Electrical,20300,0.31
+2026-04,West,Fasteners,22700,0.38
+2026-04,West,Power Tools,26000,0.24
+2026-04,West,Paint,17000,0.42
+2026-04,West,Garden,18300,0.35
+2026-04,West,Electrical,16700,0.31
+2026-05,North,Fasteners,23600,0.38
+2026-05,North,Power Tools,28300,0.24
+2026-05,North,Paint,19700,0.42
+2026-05,North,Garden,24100,0.35
+2026-05,North,Electrical,18100,0.31
+2026-05,South,Fasteners,21100,0.38
+2026-05,South,Power Tools,24000,0.24
+2026-05,South,Paint,17600,0.42
+2026-05,South,Garden,20100,0.35
+2026-05,South,Electrical,15800,0.31
+2026-05,East,Fasteners,27300,0.38
+2026-05,East,Power Tools,33100,0.24
+2026-05,East,Paint,22500,0.42
+2026-05,East,Garden,27500,0.35
+2026-05,East,Electrical,21200,0.31
+2026-05,West,Fasteners,21900,0.38
+2026-05,West,Power Tools,26200,0.24
+2026-05,West,Paint,19200,0.42
+2026-05,West,Garden,23100,0.35
+2026-05,West,Electrical,17700,0.31
+2026-06,North,Fasteners,23300,0.38
+2026-06,North,Power Tools,27900,0.24
+2026-06,North,Paint,20700,0.42
+2026-06,North,Garden,20700,0.35
+2026-06,North,Electrical,18400,0.31
+2026-06,South,Fasteners,18900,0.38
+2026-06,South,Power Tools,22400,0.24
+2026-06,South,Paint,17700,0.42
+2026-06,South,Garden,17200,0.35
+2026-06,South,Electrical,16500,0.31
+2026-06,East,Fasteners,27100,0.38
+2026-06,East,Power Tools,32400,0.24
+2026-06,East,Paint,24300,0.42
+2026-06,East,Garden,23400,0.35
+2026-06,East,Electrical,22100,0.31
+2026-06,West,Fasteners,21400,0.38
+2026-06,West,Power Tools,24800,0.24
+2026-06,West,Paint,20200,0.42
+2026-06,West,Garden,19300,0.35
+2026-06,West,Electrical,17100,0.31
+2026-07,North,Fasteners,21900,0.38
+2026-07,North,Power Tools,24900,0.24
+2026-07,North,Paint,21400,0.42
+2026-07,North,Garden,17800,0.35
+2026-07,North,Electrical,18800,0.31
+2026-07,South,Fasteners,19300,0.38
+2026-07,South,Power Tools,21600,0.24
+2026-07,South,Paint,18200,0.42
+2026-07,South,Garden,14200,0.35
+2026-07,South,Electrical,16600,0.31
+2026-07,East,Fasteners,25900,0.38
+2026-07,East,Power Tools,29800,0.24
+2026-07,East,Paint,25000,0.42
+2026-07,East,Garden,20100,0.35
+2026-07,East,Electrical,20900,0.31
+2026-07,West,Fasteners,20500,0.38
+2026-07,West,Power Tools,24300,0.24
+2026-07,West,Paint,19900,0.42
+2026-07,West,Garden,16100,0.35
+2026-07,West,Electrical,18200,0.31
+2026-08,North,Fasteners,21700,0.38
+2026-08,North,Power Tools,28900,0.24
+2026-08,North,Paint,20000,0.42
+2026-08,North,Garden,15100,0.35
+2026-08,North,Electrical,19800,0.31
+2026-08,South,Fasteners,19700,0.38
+2026-08,South,Power Tools,24200,0.24
+2026-08,South,Paint,16700,0.42
+2026-08,South,Garden,12200,0.35
+2026-08,South,Electrical,16400,0.31
+2026-08,East,Fasteners,25300,0.38
+2026-08,East,Power Tools,32600,0.24
+2026-08,East,Paint,22900,0.42
+2026-08,East,Garden,17300,0.35
+2026-08,East,Electrical,21300,0.31
+2026-08,West,Fasteners,21200,0.38
+2026-08,West,Power Tools,25700,0.24
+2026-08,West,Paint,19100,0.42
+2026-08,West,Garden,14200,0.35
+2026-08,West,Electrical,17700,0.31
+2026-09,North,Fasteners,24800,0.38
+2026-09,North,Power Tools,28700,0.24
+2026-09,North,Paint,18200,0.42
+2026-09,North,Garden,12500,0.35
+2026-09,North,Electrical,18800,0.31
+2026-09,South,Fasteners,20100,0.38
+2026-09,South,Power Tools,26100,0.24
+2026-09,South,Paint,15300,0.42
+2026-09,South,Garden,10000,0.35
+2026-09,South,Electrical,17000,0.31
+2026-09,East,Fasteners,28100,0.38
+2026-09,East,Power Tools,33800,0.24
+2026-09,East,Paint,19700,0.42
+2026-09,East,Garden,14200,0.35
+2026-09,East,Electrical,22600,0.31
+2026-09,West,Fasteners,23600,0.38
+2026-09,West,Power Tools,27500,0.24
+2026-09,West,Paint,17700,0.42
+2026-09,West,Garden,11300,0.35
+2026-09,West,Electrical,17900,0.31
+2026-10,North,Fasteners,25800,0.38
+2026-10,North,Power Tools,31000,0.24
+2026-10,North,Paint,15900,0.42
+2026-10,North,Garden,9900,0.35
+2026-10,North,Electrical,20700,0.31
+2026-10,South,Fasteners,22200,0.38
+2026-10,South,Power Tools,26200,0.24
+2026-10,South,Paint,13400,0.42
+2026-10,South,Garden,8500,0.35
+2026-10,South,Electrical,17600,0.31
+2026-10,East,Fasteners,28600,0.38
+2026-10,East,Power Tools,37000,0.24
+2026-10,East,Paint,17800,0.42
+2026-10,East,Garden,11500,0.35
+2026-10,East,Electrical,23600,0.31
+2026-10,West,Fasteners,24300,0.38
+2026-10,West,Power Tools,30600,0.24
+2026-10,West,Paint,14500,0.42
+2026-10,West,Garden,8900,0.35
+2026-10,West,Electrical,18700,0.31
