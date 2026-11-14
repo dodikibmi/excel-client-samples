@@ -1,0 +1,25 @@
+Account No,Account,Type,Opening Balance,Is Cash,Statement Name
+1000,Business checking,Asset,18420.55,Y,Business Checking ...1180
+1010,Business savings,Asset,25000.00,Y,Business Savings ...4821
+1090,Transfers in transit,Asset,0.00,N,
+1500,Kitchen equipment,Asset,48000.00,N,
+1510,Accumulated depreciation,Asset,-6000.00,N,
+2000,Visa business card,Liability,-2315.40,N,Visa Business ...7702
+3000,Owner's equity,Equity,-83105.15,N,
+3100,Owner's draws,Equity,0.00,N,
+4000,Counter sales (card and cash),Revenue,0.00,N,
+4100,Wholesale and catering sales,Revenue,0.00,N,
+4900,Interest income,Revenue,0.00,N,
+5000,Ingredients,COGS,0.00,N,
+5100,Packaging,COGS,0.00,N,
+6000,Payroll and payroll taxes,Expense,0.00,N,
+6100,Rent,Expense,0.00,N,
+6200,Utilities and internet,Expense,0.00,N,
+6400,Marketing,Expense,0.00,N,
+6500,Insurance,Expense,0.00,N,
+6600,Repairs and maintenance,Expense,0.00,N,
+6700,Software subscriptions,Expense,0.00,N,
+6800,Bank and card fees,Expense,0.00,N,
+6900,Depreciation,Expense,0.00,N,
+6950,Office and sundry,Expense,0.00,N,
+6990,Uncategorized (to review),Expense,0.00,N,

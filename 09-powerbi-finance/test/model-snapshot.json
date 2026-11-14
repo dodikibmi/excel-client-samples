@@ -1,0 +1,1851 @@
+{
+    "months":  [
+                   {
+                       "Month No":  202608,
+                       "Income":  33894.43,
+                       "CostOfSales":  11471.22,
+                       "OperatingExpenses":  20359.08,
+                       "Expense":  31830.3,
+                       "GrossProfit":  22423.21,
+                       "NetProfit":  2064.13,
+                       "Budget":  1655,
+                       "Variance":  409.13,
+                       "Cash":  42947.9,
+                       "InTransit":  0,
+                       "IncomeMoM":  null,
+                       "NetProfitPrevMonth":  null,
+                       "NetProfitYTD":  2064.13
+                   },
+                   {
+                       "Month No":  202609,
+                       "Income":  34908.55,
+                       "CostOfSales":  12656.89,
+                       "OperatingExpenses":  21238.26,
+                       "Expense":  33895.15,
+                       "GrossProfit":  22251.66,
+                       "NetProfit":  1013.4,
+                       "Budget":  3055,
+                       "Variance":  -2041.6,
+                       "Cash":  40135.66,
+                       "InTransit":  2000,
+                       "IncomeMoM":  0.029919960300261724,
+                       "NetProfitPrevMonth":  2064.13,
+                       "NetProfitYTD":  3077.53
+                   },
+                   {
+                       "Month No":  202610,
+                       "Income":  37854,
+                       "CostOfSales":  12642.6,
+                       "OperatingExpenses":  27170.22,
+                       "Expense":  39812.82,
+                       "GrossProfit":  25211.4,
+                       "NetProfit":  -1958.82,
+                       "Budget":  4405,
+                       "Variance":  -6363.82,
+                       "Cash":  35413.38,
+                       "InTransit":  1800,
+                       "IncomeMoM":  0.084376177182953746,
+                       "NetProfitPrevMonth":  1013.4,
+                       "NetProfitYTD":  1118.71
+                   }
+               ],
+    "total":  [
+                  {
+                      "Income":  106656.98,
+                      "Expense":  105538.27,
+                      "NetProfit":  1118.71,
+                      "Budget":  9115,
+                      "Variance":  -7996.29,
+                      "Cash":  35413.38,
+                      "IncomeMoM":  0.084376177182953746,
+                      "LedgerRows":  378,
+                      "Debits":  250089.25,
+                      "Credits":  250089.25,
+                      "ChecksPassed":  "8 of 8 PASS",
+                      "ChecksFailed":  0
+                  }
+              ],
+    "accounts":  [
+                     {
+                         "Account No":  4000,
+                         "Month No":  202608,
+                         "Actual":  29887.75,
+                         "Budget":  30500
+                     },
+                     {
+                         "Account No":  4100,
+                         "Month No":  202608,
+                         "Actual":  3988.52,
+                         "Budget":  3500
+                     },
+                     {
+                         "Account No":  4900,
+                         "Month No":  202608,
+                         "Actual":  18.16,
+                         "Budget":  15
+                     },
+                     {
+                         "Account No":  5000,
+                         "Month No":  202608,
+                         "Actual":  -10942.76,
+                         "Budget":  -10800
+                     },
+                     {
+                         "Account No":  5100,
+                         "Month No":  202608,
+                         "Actual":  -528.46,
+                         "Budget":  -900
+                     },
+                     {
+                         "Account No":  6000,
+                         "Month No":  202608,
+                         "Actual":  -12839.53,
+                         "Budget":  -13000
+                     },
+                     {
+                         "Account No":  6100,
+                         "Month No":  202608,
+                         "Actual":  -4200,
+                         "Budget":  -4200
+                     },
+                     {
+                         "Account No":  6200,
+                         "Month No":  202608,
+                         "Actual":  -888.45,
+                         "Budget":  -950
+                     },
+                     {
+                         "Account No":  6400,
+                         "Month No":  202608,
+                         "Actual":  -262.25,
+                         "Budget":  -250
+                     },
+                     {
+                         "Account No":  6500,
+                         "Month No":  202608,
+                         "Actual":  -385,
+                         "Budget":  -385
+                     },
+                     {
+                         "Account No":  6700,
+                         "Month No":  202608,
+                         "Actual":  -99,
+                         "Budget":  -100
+                     },
+                     {
+                         "Account No":  6800,
+                         "Month No":  202608,
+                         "Actual":  -996.71,
+                         "Budget":  -1050
+                     },
+                     {
+                         "Account No":  6900,
+                         "Month No":  202608,
+                         "Actual":  -500,
+                         "Budget":  -500
+                     },
+                     {
+                         "Account No":  6950,
+                         "Month No":  202608,
+                         "Actual":  -68.14,
+                         "Budget":  -75
+                     },
+                     {
+                         "Account No":  6990,
+                         "Month No":  202608,
+                         "Actual":  -120,
+                         "Budget":  0
+                     },
+                     {
+                         "Account No":  4000,
+                         "Month No":  202609,
+                         "Actual":  31480.44,
+                         "Budget":  31500
+                     },
+                     {
+                         "Account No":  4100,
+                         "Month No":  202609,
+                         "Actual":  3410.33,
+                         "Budget":  3500
+                     },
+                     {
+                         "Account No":  4900,
+                         "Month No":  202609,
+                         "Actual":  17.78,
+                         "Budget":  15
+                     },
+                     {
+                         "Account No":  5000,
+                         "Month No":  202609,
+                         "Actual":  -12171.73,
+                         "Budget":  -10500
+                     },
+                     {
+                         "Account No":  5100,
+                         "Month No":  202609,
+                         "Actual":  -485.16,
+                         "Budget":  -900
+                     },
+                     {
+                         "Account No":  6000,
+                         "Month No":  202609,
+                         "Actual":  -12967.99,
+                         "Budget":  -13000
+                     },
+                     {
+                         "Account No":  6100,
+                         "Month No":  202609,
+                         "Actual":  -4200,
+                         "Budget":  -4200
+                     },
+                     {
+                         "Account No":  6200,
+                         "Month No":  202609,
+                         "Actual":  -897.93,
+                         "Budget":  -900
+                     },
+                     {
+                         "Account No":  6400,
+                         "Month No":  202609,
+                         "Actual":  -274.22,
+                         "Budget":  -250
+                     },
+                     {
+                         "Account No":  6500,
+                         "Month No":  202609,
+                         "Actual":  -385,
+                         "Budget":  -385
+                     },
+                     {
+                         "Account No":  6600,
+                         "Month No":  202609,
+                         "Actual":  -486.5,
+                         "Budget":  -150
+                     },
+                     {
+                         "Account No":  6700,
+                         "Month No":  202609,
+                         "Actual":  -99,
+                         "Budget":  -100
+                     },
+                     {
+                         "Account No":  6800,
+                         "Month No":  202609,
+                         "Actual":  -995.59,
+                         "Budget":  -1000
+                     },
+                     {
+                         "Account No":  6900,
+                         "Month No":  202609,
+                         "Actual":  -500,
+                         "Budget":  -500
+                     },
+                     {
+                         "Account No":  6950,
+                         "Month No":  202609,
+                         "Actual":  -82.03,
+                         "Budget":  -75
+                     },
+                     {
+                         "Account No":  6990,
+                         "Month No":  202609,
+                         "Actual":  -350,
+                         "Budget":  0
+                     },
+                     {
+                         "Account No":  4000,
+                         "Month No":  202610,
+                         "Actual":  33442.17,
+                         "Budget":  33000
+                     },
+                     {
+                         "Account No":  4100,
+                         "Month No":  202610,
+                         "Actual":  4390.85,
+                         "Budget":  4000
+                     },
+                     {
+                         "Account No":  4900,
+                         "Month No":  202610,
+                         "Actual":  20.98,
+                         "Budget":  15
+                     },
+                     {
+                         "Account No":  5000,
+                         "Month No":  202610,
+                         "Actual":  -11900.88,
+                         "Budget":  -11000
+                     },
+                     {
+                         "Account No":  5100,
+                         "Month No":  202610,
+                         "Actual":  -741.72,
+                         "Budget":  -950
+                     },
+                     {
+                         "Account No":  6000,
+                         "Month No":  202610,
+                         "Actual":  -19698.97,
+                         "Budget":  -13000
+                     },
+                     {
+                         "Account No":  6100,
+                         "Month No":  202610,
+                         "Actual":  -4200,
+                         "Budget":  -4200
+                     },
+                     {
+                         "Account No":  6200,
+                         "Month No":  202610,
+                         "Actual":  -904.66,
+                         "Budget":  -900
+                     },
+                     {
+                         "Account No":  6400,
+                         "Month No":  202610,
+                         "Actual":  -263.2,
+                         "Budget":  -300
+                     },
+                     {
+                         "Account No":  6500,
+                         "Month No":  202610,
+                         "Actual":  -385,
+                         "Budget":  -385
+                     },
+                     {
+                         "Account No":  6700,
+                         "Month No":  202610,
+                         "Actual":  -99,
+                         "Budget":  -100
+                     },
+                     {
+                         "Account No":  6800,
+                         "Month No":  202610,
+                         "Actual":  -990.89,
+                         "Budget":  -1050
+                     },
+                     {
+                         "Account No":  6900,
+                         "Month No":  202610,
+                         "Actual":  -500,
+                         "Budget":  -500
+                     },
+                     {
+                         "Account No":  6950,
+                         "Month No":  202610,
+                         "Actual":  -64.32,
+                         "Budget":  -75
+                     },
+                     {
+                         "Account No":  6990,
+                         "Month No":  202610,
+                         "Actual":  -64.18,
+                         "Budget":  0
+                     },
+                     {
+                         "Account No":  6600,
+                         "Month No":  202608,
+                         "Actual":  null,
+                         "Budget":  -150
+                     },
+                     {
+                         "Account No":  6600,
+                         "Month No":  202610,
+                         "Actual":  null,
+                         "Budget":  -150
+                     }
+                 ],
+    "statements":  [
+                       {
+                           "Account No":  1000,
+                           "Month No":  202608,
+                           "Books":  15929.74,
+                           "Statement":  15929.74,
+                           "Difference":  0
+                       },
+                       {
+                           "Account No":  1000,
+                           "Month No":  202609,
+                           "Books":  13099.72,
+                           "Statement":  13099.72,
+                           "Difference":  0
+                       },
+                       {
+                           "Account No":  1000,
+                           "Month No":  202610,
+                           "Books":  4356.46,
+                           "Statement":  4356.46,
+                           "Difference":  0
+                       },
+                       {
+                           "Account No":  1010,
+                           "Month No":  202608,
+                           "Books":  27018.16,
+                           "Statement":  27018.16,
+                           "Difference":  0
+                       },
+                       {
+                           "Account No":  1010,
+                           "Month No":  202609,
+                           "Books":  27035.94,
+                           "Statement":  27035.94,
+                           "Difference":  0
+                       },
+                       {
+                           "Account No":  1010,
+                           "Month No":  202610,
+                           "Books":  31056.92,
+                           "Statement":  31056.92,
+                           "Difference":  0
+                       },
+                       {
+                           "Account No":  2000,
+                           "Month No":  202608,
+                           "Books":  -2278.62,
+                           "Statement":  -2278.62,
+                           "Difference":  0
+                       },
+                       {
+                           "Account No":  2000,
+                           "Month No":  202609,
+                           "Books":  -2952.98,
+                           "Statement":  -2952.98,
+                           "Difference":  0
+                       },
+                       {
+                           "Account No":  2000,
+                           "Month No":  202610,
+                           "Books":  -2489.52,
+                           "Statement":  -2489.52,
+                           "Difference":  0
+                       }
+                   ],
+    "cashflow":  [
+                     {
+                         "Cash Flow Line":  "Receipts from customers",
+                         "Month No":  202608,
+                         "Net":  33894.43
+                     },
+                     {
+                         "Cash Flow Line":  "Receipts from customers",
+                         "Month No":  202609,
+                         "Net":  34908.55
+                     },
+                     {
+                         "Cash Flow Line":  "Receipts from customers",
+                         "Month No":  202610,
+                         "Net":  37854
+                     },
+                     {
+                         "Cash Flow Line":  "Transfers between own accounts",
+                         "Month No":  202608,
+                         "Net":  0
+                     },
+                     {
+                         "Cash Flow Line":  "Transfers between own accounts",
+                         "Month No":  202610,
+                         "Net":  2000
+                     },
+                     {
+                         "Cash Flow Line":  "Payments to suppliers and staff",
+                         "Month No":  202608,
+                         "Net":  -29051.68
+                     },
+                     {
+                         "Cash Flow Line":  "Card payments",
+                         "Month No":  202608,
+                         "Net":  -2315.4
+                     },
+                     {
+                         "Cash Flow Line":  "Owner\u0027s draws",
+                         "Month No":  202608,
+                         "Net":  -3000
+                     },
+                     {
+                         "Cash Flow Line":  "Payments to suppliers and staff",
+                         "Month No":  202609,
+                         "Net":  -30442.17
+                     },
+                     {
+                         "Cash Flow Line":  "Card payments",
+                         "Month No":  202609,
+                         "Net":  -2278.62
+                     },
+                     {
+                         "Cash Flow Line":  "Owner\u0027s draws",
+                         "Month No":  202609,
+                         "Net":  -3000
+                     },
+                     {
+                         "Cash Flow Line":  "Transfers between own accounts",
+                         "Month No":  202609,
+                         "Net":  -2000
+                     },
+                     {
+                         "Cash Flow Line":  "Payments to suppliers and staff",
+                         "Month No":  202610,
+                         "Net":  -36823.3
+                     },
+                     {
+                         "Cash Flow Line":  "Card payments",
+                         "Month No":  202610,
+                         "Net":  -4752.98
+                     },
+                     {
+                         "Cash Flow Line":  "Owner\u0027s draws",
+                         "Month No":  202610,
+                         "Net":  -3000
+                     }
+                 ],
+    "checks":  [
+                   {
+                       "No":  1,
+                       "Status":  "PASS",
+                       "Detail":  "Difference 0.00"
+                   },
+                   {
+                       "No":  2,
+                       "Status":  "PASS",
+                       "Detail":  "Debits 250,089.25 = credits 250,089.25"
+                   },
+                   {
+                       "No":  3,
+                       "Status":  "PASS",
+                       "Detail":  "3 of 3 month ends balance to 0.00"
+                   },
+                   {
+                       "No":  4,
+                       "Status":  "PASS",
+                       "Detail":  "186 lines in 3 files, 0 files differ"
+                   },
+                   {
+                       "No":  5,
+                       "Status":  "PASS",
+                       "Detail":  "3 of 3 files: net amount = posted"
+                   },
+                   {
+                       "No":  6,
+                       "Status":  "PASS",
+                       "Detail":  "9 of 9 account-months agree to the cent"
+                   },
+                   {
+                       "No":  7,
+                       "Status":  "PASS",
+                       "Detail":  "Books 4,356.46, bank 4,356.46"
+                   },
+                   {
+                       "No":  8,
+                       "Status":  "PASS",
+                       "Detail":  "0 lines without an account"
+                   },
+                   {
+                       "No":  9,
+                       "Status":  "REVIEW",
+                       "Detail":  "3 lines, 534.18 on 6990 Uncategorized"
+                   }
+               ],
+    "lines":  [
+                  {
+                      "Line":  "CHK-001-R",
+                      "Date":  "2026-08-01",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1600.42
+                  },
+                  {
+                      "Line":  "CHK-006-R",
+                      "Date":  "2026-08-04",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1833.13
+                  },
+                  {
+                      "Line":  "CHK-007-R",
+                      "Date":  "2026-08-05",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1080.74
+                  },
+                  {
+                      "Line":  "CHK-009-R",
+                      "Date":  "2026-08-06",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1350.66
+                  },
+                  {
+                      "Line":  "CHK-010-R",
+                      "Date":  "2026-08-07",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1096.18
+                  },
+                  {
+                      "Line":  "CHK-013-R",
+                      "Date":  "2026-08-08",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1569.91
+                  },
+                  {
+                      "Line":  "CHK-017-R",
+                      "Date":  "2026-08-11",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1525.03
+                  },
+                  {
+                      "Line":  "CHK-018-R",
+                      "Date":  "2026-08-12",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1079.47
+                  },
+                  {
+                      "Line":  "CHK-020-R",
+                      "Date":  "2026-08-13",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1355.9
+                  },
+                  {
+                      "Line":  "CHK-021-R",
+                      "Date":  "2026-08-14",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1182.45
+                  },
+                  {
+                      "Line":  "CHK-023-R",
+                      "Date":  "2026-08-15",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1537.88
+                  },
+                  {
+                      "Line":  "CHK-026-R",
+                      "Date":  "2026-08-18",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1662.06
+                  },
+                  {
+                      "Line":  "CHK-028-R",
+                      "Date":  "2026-08-19",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1149.68
+                  },
+                  {
+                      "Line":  "CHK-030-R",
+                      "Date":  "2026-08-20",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1176.75
+                  },
+                  {
+                      "Line":  "CHK-032-R",
+                      "Date":  "2026-08-21",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1369.16
+                  },
+                  {
+                      "Line":  "CHK-036-R",
+                      "Date":  "2026-08-22",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1653.63
+                  },
+                  {
+                      "Line":  "CHK-039-R",
+                      "Date":  "2026-08-25",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1768.18
+                  },
+                  {
+                      "Line":  "CHK-040-R",
+                      "Date":  "2026-08-26",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1370.75
+                  },
+                  {
+                      "Line":  "CHK-041-R",
+                      "Date":  "2026-08-27",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1441.43
+                  },
+                  {
+                      "Line":  "CHK-042-R",
+                      "Date":  "2026-08-28",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1459.27
+                  },
+                  {
+                      "Line":  "CHK-045-R",
+                      "Date":  "2026-08-29",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1625.07
+                  },
+                  {
+                      "Line":  "CHK-046-R",
+                      "Date":  "2026-09-01",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1581.51
+                  },
+                  {
+                      "Line":  "CHK-048-R",
+                      "Date":  "2026-09-02",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1144.8
+                  },
+                  {
+                      "Line":  "CHK-050-R",
+                      "Date":  "2026-09-03",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1289.19
+                  },
+                  {
+                      "Line":  "CHK-053-R",
+                      "Date":  "2026-09-04",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1077.04
+                  },
+                  {
+                      "Line":  "CHK-056-R",
+                      "Date":  "2026-09-05",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1532.08
+                  },
+                  {
+                      "Line":  "CHK-058-R",
+                      "Date":  "2026-09-08",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1511.46
+                  },
+                  {
+                      "Line":  "CHK-059-R",
+                      "Date":  "2026-09-09",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1303.47
+                  },
+                  {
+                      "Line":  "CHK-063-R",
+                      "Date":  "2026-09-10",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1286.08
+                  },
+                  {
+                      "Line":  "CHK-064-R",
+                      "Date":  "2026-09-11",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1296.72
+                  },
+                  {
+                      "Line":  "CHK-065-R",
+                      "Date":  "2026-09-12",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1858.05
+                  },
+                  {
+                      "Line":  "CHK-068-R",
+                      "Date":  "2026-09-15",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1542.45
+                  },
+                  {
+                      "Line":  "CHK-070-R",
+                      "Date":  "2026-09-16",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1281.17
+                  },
+                  {
+                      "Line":  "CHK-072-R",
+                      "Date":  "2026-09-17",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1442.03
+                  },
+                  {
+                      "Line":  "CHK-073-R",
+                      "Date":  "2026-09-18",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1139.81
+                  },
+                  {
+                      "Line":  "CHK-077-R",
+                      "Date":  "2026-09-19",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1461.56
+                  },
+                  {
+                      "Line":  "CHK-080-R",
+                      "Date":  "2026-09-22",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1729.31
+                  },
+                  {
+                      "Line":  "CHK-081-R",
+                      "Date":  "2026-09-23",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1465.46
+                  },
+                  {
+                      "Line":  "CHK-084-R",
+                      "Date":  "2026-09-24",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1302.1
+                  },
+                  {
+                      "Line":  "CHK-086-R",
+                      "Date":  "2026-09-25",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1217.94
+                  },
+                  {
+                      "Line":  "CHK-087-R",
+                      "Date":  "2026-09-26",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1911.21
+                  },
+                  {
+                      "Line":  "CHK-089-R",
+                      "Date":  "2026-09-29",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1939.41
+                  },
+                  {
+                      "Line":  "CHK-090-R",
+                      "Date":  "2026-09-30",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1167.59
+                  },
+                  {
+                      "Line":  "CHK-092-R",
+                      "Date":  "2026-10-01",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1428.44
+                  },
+                  {
+                      "Line":  "CHK-094-R",
+                      "Date":  "2026-10-02",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1247.8
+                  },
+                  {
+                      "Line":  "CHK-098-R",
+                      "Date":  "2026-10-03",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1718.45
+                  },
+                  {
+                      "Line":  "CHK-102-R",
+                      "Date":  "2026-10-06",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1792.4
+                  },
+                  {
+                      "Line":  "CHK-103-R",
+                      "Date":  "2026-10-07",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1472.73
+                  },
+                  {
+                      "Line":  "CHK-104-R",
+                      "Date":  "2026-10-08",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1203.77
+                  },
+                  {
+                      "Line":  "CHK-105-R",
+                      "Date":  "2026-10-09",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1166.54
+                  },
+                  {
+                      "Line":  "CHK-109-R",
+                      "Date":  "2026-10-10",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1580.83
+                  },
+                  {
+                      "Line":  "CHK-111-R",
+                      "Date":  "2026-10-13",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1568.42
+                  },
+                  {
+                      "Line":  "CHK-112-R",
+                      "Date":  "2026-10-14",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1337.92
+                  },
+                  {
+                      "Line":  "CHK-114-R",
+                      "Date":  "2026-10-15",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1177.1
+                  },
+                  {
+                      "Line":  "CHK-116-R",
+                      "Date":  "2026-10-16",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1416.51
+                  },
+                  {
+                      "Line":  "CHK-120-R",
+                      "Date":  "2026-10-17",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1889.42
+                  },
+                  {
+                      "Line":  "CHK-122-R",
+                      "Date":  "2026-10-20",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1482.64
+                  },
+                  {
+                      "Line":  "CHK-124-R",
+                      "Date":  "2026-10-21",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1342.49
+                  },
+                  {
+                      "Line":  "CHK-126-R",
+                      "Date":  "2026-10-22",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1226.63
+                  },
+                  {
+                      "Line":  "CHK-127-R",
+                      "Date":  "2026-10-23",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1294.84
+                  },
+                  {
+                      "Line":  "CHK-130-R",
+                      "Date":  "2026-10-24",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1749.71
+                  },
+                  {
+                      "Line":  "CHK-131-R",
+                      "Date":  "2026-10-27",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1939.72
+                  },
+                  {
+                      "Line":  "CHK-133-R",
+                      "Date":  "2026-10-28",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1378.23
+                  },
+                  {
+                      "Line":  "CHK-135-R",
+                      "Date":  "2026-10-29",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1314.54
+                  },
+                  {
+                      "Line":  "CHK-137-R",
+                      "Date":  "2026-10-30",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1109.91
+                  },
+                  {
+                      "Line":  "CHK-141-R",
+                      "Date":  "2026-10-31",
+                      "Register":  1000,
+                      "Account":  4000,
+                      "Amount":  1603.13
+                  },
+                  {
+                      "Line":  "CHK-004-R",
+                      "Date":  "2026-08-03",
+                      "Register":  1000,
+                      "Account":  4100,
+                      "Amount":  1243.93
+                  },
+                  {
+                      "Line":  "CHK-014-R",
+                      "Date":  "2026-08-09",
+                      "Register":  1000,
+                      "Account":  4100,
+                      "Amount":  1092.18
+                  },
+                  {
+                      "Line":  "CHK-024-R",
+                      "Date":  "2026-08-15",
+                      "Register":  1000,
+                      "Account":  4100,
+                      "Amount":  771.05
+                  },
+                  {
+                      "Line":  "CHK-033-R",
+                      "Date":  "2026-08-21",
+                      "Register":  1000,
+                      "Account":  4100,
+                      "Amount":  881.36
+                  },
+                  {
+                      "Line":  "CHK-051-R",
+                      "Date":  "2026-09-03",
+                      "Register":  1000,
+                      "Account":  4100,
+                      "Amount":  1288.9
+                  },
+                  {
+                      "Line":  "CHK-060-R",
+                      "Date":  "2026-09-09",
+                      "Register":  1000,
+                      "Account":  4100,
+                      "Amount":  706.37
+                  },
+                  {
+                      "Line":  "CHK-069-R",
+                      "Date":  "2026-09-15",
+                      "Register":  1000,
+                      "Account":  4100,
+                      "Amount":  741.73
+                  },
+                  {
+                      "Line":  "CHK-079-R",
+                      "Date":  "2026-09-21",
+                      "Register":  1000,
+                      "Account":  4100,
+                      "Amount":  673.33
+                  },
+                  {
+                      "Line":  "CHK-099-R",
+                      "Date":  "2026-10-03",
+                      "Register":  1000,
+                      "Account":  4100,
+                      "Amount":  728.64
+                  },
+                  {
+                      "Line":  "CHK-106-R",
+                      "Date":  "2026-10-09",
+                      "Register":  1000,
+                      "Account":  4100,
+                      "Amount":  1039.69
+                  },
+                  {
+                      "Line":  "CHK-115-R",
+                      "Date":  "2026-10-15",
+                      "Register":  1000,
+                      "Account":  4100,
+                      "Amount":  1056.59
+                  },
+                  {
+                      "Line":  "CHK-125-R",
+                      "Date":  "2026-10-21",
+                      "Register":  1000,
+                      "Account":  4100,
+                      "Amount":  860.84
+                  },
+                  {
+                      "Line":  "CHK-132-R",
+                      "Date":  "2026-10-27",
+                      "Register":  1000,
+                      "Account":  4100,
+                      "Amount":  705.09
+                  },
+                  {
+                      "Line":  "SAV-001-R",
+                      "Date":  "2026-08-28",
+                      "Register":  1010,
+                      "Account":  1090,
+                      "Amount":  2000
+                  },
+                  {
+                      "Line":  "SAV-002-R",
+                      "Date":  "2026-08-31",
+                      "Register":  1010,
+                      "Account":  4900,
+                      "Amount":  18.16
+                  },
+                  {
+                      "Line":  "SAV-003-R",
+                      "Date":  "2026-09-30",
+                      "Register":  1010,
+                      "Account":  4900,
+                      "Amount":  17.78
+                  },
+                  {
+                      "Line":  "SAV-004-R",
+                      "Date":  "2026-10-01",
+                      "Register":  1010,
+                      "Account":  1090,
+                      "Amount":  2000
+                  },
+                  {
+                      "Line":  "SAV-005-R",
+                      "Date":  "2026-10-29",
+                      "Register":  1010,
+                      "Account":  1090,
+                      "Amount":  2000
+                  },
+                  {
+                      "Line":  "SAV-006-R",
+                      "Date":  "2026-10-31",
+                      "Register":  1010,
+                      "Account":  4900,
+                      "Amount":  20.98
+                  },
+                  {
+                      "Line":  "VISA-006-R",
+                      "Date":  "2026-08-12",
+                      "Register":  2000,
+                      "Account":  1090,
+                      "Amount":  2315.4
+                  },
+                  {
+                      "Line":  "VISA-019-R",
+                      "Date":  "2026-09-12",
+                      "Register":  2000,
+                      "Account":  1090,
+                      "Amount":  2278.62
+                  },
+                  {
+                      "Line":  "VISA-030-R",
+                      "Date":  "2026-10-12",
+                      "Register":  2000,
+                      "Account":  1090,
+                      "Amount":  2952.98
+                  },
+                  {
+                      "Line":  "CHK-002-R",
+                      "Date":  "2026-08-01",
+                      "Register":  1000,
+                      "Account":  6100,
+                      "Amount":  -4200
+                  },
+                  {
+                      "Line":  "CHK-003-R",
+                      "Date":  "2026-08-02",
+                      "Register":  1000,
+                      "Account":  5000,
+                      "Amount":  -1823.99
+                  },
+                  {
+                      "Line":  "CHK-005-R",
+                      "Date":  "2026-08-03",
+                      "Register":  1000,
+                      "Account":  6800,
+                      "Amount":  -981.71
+                  },
+                  {
+                      "Line":  "CHK-008-R",
+                      "Date":  "2026-08-05",
+                      "Register":  1000,
+                      "Account":  6500,
+                      "Amount":  -385
+                  },
+                  {
+                      "Line":  "CHK-011-R",
+                      "Date":  "2026-08-07",
+                      "Register":  1000,
+                      "Account":  6000,
+                      "Amount":  -1169.5
+                  },
+                  {
+                      "Line":  "CHK-012-R",
+                      "Date":  "2026-08-07",
+                      "Register":  1000,
+                      "Account":  6000,
+                      "Amount":  -5155.88
+                  },
+                  {
+                      "Line":  "CHK-015-R",
+                      "Date":  "2026-08-09",
+                      "Register":  1000,
+                      "Account":  5000,
+                      "Amount":  -920.81
+                  },
+                  {
+                      "Line":  "CHK-016-R",
+                      "Date":  "2026-08-09",
+                      "Register":  1000,
+                      "Account":  5000,
+                      "Amount":  -1898.69
+                  },
+                  {
+                      "Line":  "CHK-019-R",
+                      "Date":  "2026-08-12",
+                      "Register":  1000,
+                      "Account":  1090,
+                      "Amount":  -2315.4
+                  },
+                  {
+                      "Line":  "CHK-022-R",
+                      "Date":  "2026-08-14",
+                      "Register":  1000,
+                      "Account":  6200,
+                      "Amount":  -655.4
+                  },
+                  {
+                      "Line":  "CHK-025-R",
+                      "Date":  "2026-08-16",
+                      "Register":  1000,
+                      "Account":  5000,
+                      "Amount":  -1931.51
+                  },
+                  {
+                      "Line":  "CHK-027-R",
+                      "Date":  "2026-08-18",
+                      "Register":  1000,
+                      "Account":  6200,
+                      "Amount":  -143.06
+                  },
+                  {
+                      "Line":  "CHK-029-R",
+                      "Date":  "2026-08-19",
+                      "Register":  1000,
+                      "Account":  6990,
+                      "Amount":  -120
+                  },
+                  {
+                      "Line":  "CHK-031-R",
+                      "Date":  "2026-08-20",
+                      "Register":  1000,
+                      "Account":  3100,
+                      "Amount":  -3000
+                  },
+                  {
+                      "Line":  "CHK-034-R",
+                      "Date":  "2026-08-21",
+                      "Register":  1000,
+                      "Account":  6000,
+                      "Amount":  -1165.86
+                  },
+                  {
+                      "Line":  "CHK-035-R",
+                      "Date":  "2026-08-21",
+                      "Register":  1000,
+                      "Account":  6000,
+                      "Amount":  -5348.29
+                  },
+                  {
+                      "Line":  "CHK-037-R",
+                      "Date":  "2026-08-23",
+                      "Register":  1000,
+                      "Account":  5000,
+                      "Amount":  -891.44
+                  },
+                  {
+                      "Line":  "CHK-038-R",
+                      "Date":  "2026-08-23",
+                      "Register":  1000,
+                      "Account":  5000,
+                      "Amount":  -2245.54
+                  },
+                  {
+                      "Line":  "CHK-043-R",
+                      "Date":  "2026-08-28",
+                      "Register":  1000,
+                      "Account":  6800,
+                      "Amount":  -15
+                  },
+                  {
+                      "Line":  "CHK-044-R",
+                      "Date":  "2026-08-28",
+                      "Register":  1000,
+                      "Account":  1090,
+                      "Amount":  -2000
+                  },
+                  {
+                      "Line":  "CHK-047-R",
+                      "Date":  "2026-09-01",
+                      "Register":  1000,
+                      "Account":  6100,
+                      "Amount":  -4200
+                  },
+                  {
+                      "Line":  "CHK-049-R",
+                      "Date":  "2026-09-02",
+                      "Register":  1000,
+                      "Account":  5000,
+                      "Amount":  -2067.24
+                  },
+                  {
+                      "Line":  "CHK-052-R",
+                      "Date":  "2026-09-03",
+                      "Register":  1000,
+                      "Account":  6800,
+                      "Amount":  -980.59
+                  },
+                  {
+                      "Line":  "CHK-054-R",
+                      "Date":  "2026-09-04",
+                      "Register":  1000,
+                      "Account":  6000,
+                      "Amount":  -1176.01
+                  },
+                  {
+                      "Line":  "CHK-055-R",
+                      "Date":  "2026-09-04",
+                      "Register":  1000,
+                      "Account":  6000,
+                      "Amount":  -5385.03
+                  },
+                  {
+                      "Line":  "CHK-057-R",
+                      "Date":  "2026-09-05",
+                      "Register":  1000,
+                      "Account":  6500,
+                      "Amount":  -385
+                  },
+                  {
+                      "Line":  "CHK-061-R",
+                      "Date":  "2026-09-09",
+                      "Register":  1000,
+                      "Account":  5000,
+                      "Amount":  -827.82
+                  },
+                  {
+                      "Line":  "CHK-062-R",
+                      "Date":  "2026-09-09",
+                      "Register":  1000,
+                      "Account":  5000,
+                      "Amount":  -2348.23
+                  },
+                  {
+                      "Line":  "CHK-066-R",
+                      "Date":  "2026-09-12",
+                      "Register":  1000,
+                      "Account":  1090,
+                      "Amount":  -2278.62
+                  },
+                  {
+                      "Line":  "CHK-067-R",
+                      "Date":  "2026-09-14",
+                      "Register":  1000,
+                      "Account":  6200,
+                      "Amount":  -653.56
+                  },
+                  {
+                      "Line":  "CHK-071-R",
+                      "Date":  "2026-09-16",
+                      "Register":  1000,
+                      "Account":  5000,
+                      "Amount":  -2393.92
+                  },
+                  {
+                      "Line":  "CHK-074-R",
+                      "Date":  "2026-09-18",
+                      "Register":  1000,
+                      "Account":  6200,
+                      "Amount":  -154.38
+                  },
+                  {
+                      "Line":  "CHK-075-R",
+                      "Date":  "2026-09-18",
+                      "Register":  1000,
+                      "Account":  6000,
+                      "Amount":  -1275.48
+                  },
+                  {
+                      "Line":  "CHK-076-R",
+                      "Date":  "2026-09-18",
+                      "Register":  1000,
+                      "Account":  6000,
+                      "Amount":  -5131.47
+                  },
+                  {
+                      "Line":  "CHK-078-R",
+                      "Date":  "2026-09-20",
+                      "Register":  1000,
+                      "Account":  3100,
+                      "Amount":  -3000
+                  },
+                  {
+                      "Line":  "CHK-082-R",
+                      "Date":  "2026-09-23",
+                      "Register":  1000,
+                      "Account":  5000,
+                      "Amount":  -738.13
+                  },
+                  {
+                      "Line":  "CHK-083-R",
+                      "Date":  "2026-09-23",
+                      "Register":  1000,
+                      "Account":  5000,
+                      "Amount":  -2360.31
+                  },
+                  {
+                      "Line":  "CHK-085-R",
+                      "Date":  "2026-09-24",
+                      "Register":  1000,
+                      "Account":  6990,
+                      "Amount":  -350
+                  },
+                  {
+                      "Line":  "CHK-088-R",
+                      "Date":  "2026-09-28",
+                      "Register":  1000,
+                      "Account":  6800,
+                      "Amount":  -15
+                  },
+                  {
+                      "Line":  "CHK-091-R",
+                      "Date":  "2026-09-30",
+                      "Register":  1000,
+                      "Account":  1090,
+                      "Amount":  -2000
+                  },
+                  {
+                      "Line":  "CHK-093-R",
+                      "Date":  "2026-10-01",
+                      "Register":  1000,
+                      "Account":  6100,
+                      "Amount":  -4200
+                  },
+                  {
+                      "Line":  "CHK-095-R",
+                      "Date":  "2026-10-02",
+                      "Register":  1000,
+                      "Account":  6000,
+                      "Amount":  -1234.27
+                  },
+                  {
+                      "Line":  "CHK-096-R",
+                      "Date":  "2026-10-02",
+                      "Register":  1000,
+                      "Account":  5000,
+                      "Amount":  -2378.79
+                  },
+                  {
+                      "Line":  "CHK-097-R",
+                      "Date":  "2026-10-02",
+                      "Register":  1000,
+                      "Account":  6000,
+                      "Amount":  -5196.3
+                  },
+                  {
+                      "Line":  "CHK-100-R",
+                      "Date":  "2026-10-03",
+                      "Register":  1000,
+                      "Account":  6800,
+                      "Amount":  -975.89
+                  },
+                  {
+                      "Line":  "CHK-101-R",
+                      "Date":  "2026-10-05",
+                      "Register":  1000,
+                      "Account":  6500,
+                      "Amount":  -385
+                  },
+                  {
+                      "Line":  "CHK-107-R",
+                      "Date":  "2026-10-09",
+                      "Register":  1000,
+                      "Account":  5000,
+                      "Amount":  -920.27
+                  },
+                  {
+                      "Line":  "CHK-108-R",
+                      "Date":  "2026-10-09",
+                      "Register":  1000,
+                      "Account":  5000,
+                      "Amount":  -2316.3
+                  },
+                  {
+                      "Line":  "CHK-110-R",
+                      "Date":  "2026-10-12",
+                      "Register":  1000,
+                      "Account":  1090,
+                      "Amount":  -2952.98
+                  },
+                  {
+                      "Line":  "CHK-113-R",
+                      "Date":  "2026-10-14",
+                      "Register":  1000,
+                      "Account":  6200,
+                      "Amount":  -658.79
+                  },
+                  {
+                      "Line":  "CHK-117-R",
+                      "Date":  "2026-10-16",
+                      "Register":  1000,
+                      "Account":  6000,
+                      "Amount":  -1245.84
+                  },
+                  {
+                      "Line":  "CHK-118-R",
+                      "Date":  "2026-10-16",
+                      "Register":  1000,
+                      "Account":  5000,
+                      "Amount":  -2362.38
+                  },
+                  {
+                      "Line":  "CHK-119-R",
+                      "Date":  "2026-10-16",
+                      "Register":  1000,
+                      "Account":  6000,
+                      "Amount":  -5340.84
+                  },
+                  {
+                      "Line":  "CHK-121-R",
+                      "Date":  "2026-10-18",
+                      "Register":  1000,
+                      "Account":  6200,
+                      "Amount":  -155.88
+                  },
+                  {
+                      "Line":  "CHK-123-R",
+                      "Date":  "2026-10-20",
+                      "Register":  1000,
+                      "Account":  3100,
+                      "Amount":  -3000
+                  },
+                  {
+                      "Line":  "CHK-128-R",
+                      "Date":  "2026-10-23",
+                      "Register":  1000,
+                      "Account":  5000,
+                      "Amount":  -804.97
+                  },
+                  {
+                      "Line":  "CHK-129-R",
+                      "Date":  "2026-10-23",
+                      "Register":  1000,
+                      "Account":  5000,
+                      "Amount":  -1951.06
+                  },
+                  {
+                      "Line":  "CHK-134-R",
+                      "Date":  "2026-10-28",
+                      "Register":  1000,
+                      "Account":  6800,
+                      "Amount":  -15
+                  },
+                  {
+                      "Line":  "CHK-136-R",
+                      "Date":  "2026-10-29",
+                      "Register":  1000,
+                      "Account":  1090,
+                      "Amount":  -2000
+                  },
+                  {
+                      "Line":  "CHK-138-R",
+                      "Date":  "2026-10-30",
+                      "Register":  1000,
+                      "Account":  6000,
+                      "Amount":  -1279.7
+                  },
+                  {
+                      "Line":  "CHK-139-R",
+                      "Date":  "2026-10-30",
+                      "Register":  1000,
+                      "Account":  1090,
+                      "Amount":  -1800
+                  },
+                  {
+                      "Line":  "CHK-140-R",
+                      "Date":  "2026-10-30",
+                      "Register":  1000,
+                      "Account":  6000,
+                      "Amount":  -5402.02
+                  },
+                  {
+                      "Line":  "VISA-001-R",
+                      "Date":  "2026-08-01",
+                      "Register":  2000,
+                      "Account":  6400,
+                      "Amount":  -123.11
+                  },
+                  {
+                      "Line":  "VISA-002-R",
+                      "Date":  "2026-08-04",
+                      "Register":  2000,
+                      "Account":  6950,
+                      "Amount":  -68.14
+                  },
+                  {
+                      "Line":  "VISA-003-R",
+                      "Date":  "2026-08-04",
+                      "Register":  2000,
+                      "Account":  5000,
+                      "Amount":  -403.17
+                  },
+                  {
+                      "Line":  "VISA-004-R",
+                      "Date":  "2026-08-06",
+                      "Register":  2000,
+                      "Account":  6400,
+                      "Amount":  -139.14
+                  },
+                  {
+                      "Line":  "VISA-005-R",
+                      "Date":  "2026-08-10",
+                      "Register":  2000,
+                      "Account":  6200,
+                      "Amount":  -89.99
+                  },
+                  {
+                      "Line":  "VISA-007-R",
+                      "Date":  "2026-08-15",
+                      "Register":  2000,
+                      "Account":  6700,
+                      "Amount":  -69
+                  },
+                  {
+                      "Line":  "VISA-008-R",
+                      "Date":  "2026-08-16",
+                      "Register":  2000,
+                      "Account":  6700,
+                      "Amount":  -30
+                  },
+                  {
+                      "Line":  "VISA-009-R",
+                      "Date":  "2026-08-22",
+                      "Register":  2000,
+                      "Account":  5100,
+                      "Amount":  -317.82
+                  },
+                  {
+                      "Line":  "VISA-010-R",
+                      "Date":  "2026-08-24",
+                      "Register":  2000,
+                      "Account":  5000,
+                      "Amount":  -323.58
+                  },
+                  {
+                      "Line":  "VISA-011-R",
+                      "Date":  "2026-08-24",
+                      "Register":  2000,
+                      "Account":  5000,
+                      "Amount":  -504.03
+                  },
+                  {
+                      "Line":  "VISA-012-R",
+                      "Date":  "2026-08-26",
+                      "Register":  2000,
+                      "Account":  5100,
+                      "Amount":  -210.64
+                  },
+                  {
+                      "Line":  "VISA-013-R",
+                      "Date":  "2026-09-01",
+                      "Register":  2000,
+                      "Account":  5000,
+                      "Amount":  -312.44
+                  },
+                  {
+                      "Line":  "VISA-014-R",
+                      "Date":  "2026-09-05",
+                      "Register":  2000,
+                      "Account":  6950,
+                      "Amount":  -82.03
+                  },
+                  {
+                      "Line":  "VISA-015-R",
+                      "Date":  "2026-09-08",
+                      "Register":  2000,
+                      "Account":  6400,
+                      "Amount":  -134.59
+                  },
+                  {
+                      "Line":  "VISA-016-R",
+                      "Date":  "2026-09-08",
+                      "Register":  2000,
+                      "Account":  5100,
+                      "Amount":  -187.77
+                  },
+                  {
+                      "Line":  "VISA-017-R",
+                      "Date":  "2026-09-09",
+                      "Register":  2000,
+                      "Account":  5000,
+                      "Amount":  -295.19
+                  },
+                  {
+                      "Line":  "VISA-018-R",
+                      "Date":  "2026-09-10",
+                      "Register":  2000,
+                      "Account":  6200,
+                      "Amount":  -89.99
+                  },
+                  {
+                      "Line":  "VISA-020-R",
+                      "Date":  "2026-09-12",
+                      "Register":  2000,
+                      "Account":  6600,
+                      "Amount":  -486.5
+                  },
+                  {
+                      "Line":  "VISA-021-R",
+                      "Date":  "2026-09-13",
+                      "Register":  2000,
+                      "Account":  6400,
+                      "Amount":  -139.63
+                  },
+                  {
+                      "Line":  "VISA-022-R",
+                      "Date":  "2026-09-15",
+                      "Register":  2000,
+                      "Account":  6700,
+                      "Amount":  -69
+                  },
+                  {
+                      "Line":  "VISA-023-R",
+                      "Date":  "2026-09-16",
+                      "Register":  2000,
+                      "Account":  6700,
+                      "Amount":  -30
+                  },
+                  {
+                      "Line":  "VISA-024-R",
+                      "Date":  "2026-09-16",
+                      "Register":  2000,
+                      "Account":  5000,
+                      "Amount":  -466.93
+                  },
+                  {
+                      "Line":  "VISA-025-R",
+                      "Date":  "2026-09-20",
+                      "Register":  2000,
+                      "Account":  5000,
+                      "Amount":  -361.52
+                  },
+                  {
+                      "Line":  "VISA-026-R",
+                      "Date":  "2026-09-26",
+                      "Register":  2000,
+                      "Account":  5100,
+                      "Amount":  -297.39
+                  },
+                  {
+                      "Line":  "VISA-027-R",
+                      "Date":  "2026-10-07",
+                      "Register":  2000,
+                      "Account":  6400,
+                      "Amount":  -125.59
+                  },
+                  {
+                      "Line":  "VISA-028-R",
+                      "Date":  "2026-10-08",
+                      "Register":  2000,
+                      "Account":  5100,
+                      "Amount":  -409.81
+                  },
+                  {
+                      "Line":  "VISA-029-R",
+                      "Date":  "2026-10-10",
+                      "Register":  2000,
+                      "Account":  6200,
+                      "Amount":  -89.99
+                  },
+                  {
+                      "Line":  "VISA-031-R",
+                      "Date":  "2026-10-12",
+                      "Register":  2000,
+                      "Account":  5000,
+                      "Amount":  -268.07
+                  },
+                  {
+                      "Line":  "VISA-032-R",
+                      "Date":  "2026-10-13",
+                      "Register":  2000,
+                      "Account":  5100,
+                      "Amount":  -331.91
+                  },
+                  {
+                      "Line":  "VISA-033-R",
+                      "Date":  "2026-10-15",
+                      "Register":  2000,
+                      "Account":  6700,
+                      "Amount":  -69
+                  },
+                  {
+                      "Line":  "VISA-034-R",
+                      "Date":  "2026-10-16",
+                      "Register":  2000,
+                      "Account":  6700,
+                      "Amount":  -30
+                  },
+                  {
+                      "Line":  "VISA-035-R",
+                      "Date":  "2026-10-19",
+                      "Register":  2000,
+                      "Account":  6950,
+                      "Amount":  -64.32
+                  },
+                  {
+                      "Line":  "VISA-036-R",
+                      "Date":  "2026-10-22",
+                      "Register":  2000,
+                      "Account":  6990,
+                      "Amount":  -64.18
+                  },
+                  {
+                      "Line":  "VISA-037-R",
+                      "Date":  "2026-10-22",
+                      "Register":  2000,
+                      "Account":  5000,
+                      "Amount":  -527.19
+                  },
+                  {
+                      "Line":  "VISA-038-R",
+                      "Date":  "2026-10-24",
+                      "Register":  2000,
+                      "Account":  5000,
+                      "Amount":  -371.85
+                  },
+                  {
+                      "Line":  "VISA-039-R",
+                      "Date":  "2026-10-28",
+                      "Register":  2000,
+                      "Account":  6400,
+                      "Amount":  -137.61
+                  }
+              ]
+}

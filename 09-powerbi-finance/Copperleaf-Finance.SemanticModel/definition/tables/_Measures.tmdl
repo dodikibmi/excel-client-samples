@@ -1,0 +1,323 @@
+table _Measures
+	lineageTag: 8c252421-3209-5e0b-b923-f28acde6b916
+
+	measure 'Total Income' = CALCULATE ( -SUM ( Ledger[Amount] ), KEEPFILTERS ( Category[Group] = "Income" ) )
+		formatString: #,0
+		displayFolder: 1 Profit and loss
+		lineageTag: 02f01ed6-e202-55d8-97ea-309788604073
+
+	measure 'Cost of Sales' = CALCULATE ( SUM ( Ledger[Amount] ), KEEPFILTERS ( Category[Category Key] = "COGS" ) )
+		formatString: #,0
+		displayFolder: 1 Profit and loss
+		lineageTag: df5e511e-40af-5a0e-b00d-a55ccaec2d29
+
+	measure 'Operating Expenses' = CALCULATE ( SUM ( Ledger[Amount] ), KEEPFILTERS ( Category[Category Key] = "Expense" ) )
+		formatString: #,0
+		displayFolder: 1 Profit and loss
+		lineageTag: 6613dcf6-1f43-54ce-911d-14e6895cc403
+
+	measure 'Total Expense' = CALCULATE ( SUM ( Ledger[Amount] ), KEEPFILTERS ( Category[Group] = "Expense" ) )
+		formatString: #,0
+		displayFolder: 1 Profit and loss
+		lineageTag: f0fee1e4-ed1b-5f1b-9d2b-4cf1d6fc9edc
+
+	measure 'Gross Profit' = [Total Income] - [Cost of Sales]
+		formatString: #,0;(#,0);0
+		displayFolder: 1 Profit and loss
+		lineageTag: 89f060a7-472d-5202-9221-a7dd68fc7729
+
+	measure 'Net Profit' = [Total Income] - [Total Expense]
+		formatString: #,0;(#,0);0
+		displayFolder: 1 Profit and loss
+		lineageTag: e2c1ba18-9aa1-5dcf-94a8-7d14a1b9090b
+
+	measure 'Net Profit Color' = IF ( [Net Profit] < 0, "#C0392B", "#00968A" )
+		displayFolder: 1 Profit and loss
+		isHidden
+		lineageTag: c02cbdb1-26d1-596d-8b6b-c5b6d10bb4e1
+
+	measure 'Net Margin %' = DIVIDE ( [Net Profit], [Total Income] )
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 1 Profit and loss
+		lineageTag: c9fc585f-2a3c-5409-a97e-2e5279158929
+
+	measure Actual =
+			-- P&L sign: income +, costs -. The total of the P&L is the net profit
+			CALCULATE ( -SUM ( Ledger[Amount] ), KEEPFILTERS ( Category[Statement] = "P&L" ) )
+		formatString: #,0;(#,0);0
+		displayFolder: 2 Budget
+		lineageTag: f9ad33ce-a24b-5b50-b830-c61fed566469
+
+	measure Budget = SUM ( Budget[Budget Amount] )
+		formatString: #,0;(#,0);0
+		displayFolder: 2 Budget
+		lineageTag: 629f8a6c-d035-59d3-9972-5e20f1460e3c
+
+	measure Variance =
+			-- + = better than budget (more income or less cost)
+			[Actual] - [Budget]
+		formatString: +#,0;-#,0;0
+		displayFolder: 2 Budget
+		lineageTag: 6e232955-0ba2-5300-9b9c-e731d62faa8b
+
+	measure 'Variance %' = DIVIDE ( [Variance], ABS ( [Budget] ) )
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: 2 Budget
+		lineageTag: 52f9c5b1-7a89-5636-8b70-85ff51298d06
+
+	measure 'Variance Color' = SWITCH ( TRUE (), [Variance] < -0.5, "#C0392B", [Variance] > 0.5, "#1E8449", "#5F6B7A" )
+		displayFolder: 2 Budget
+		isHidden
+		lineageTag: 5034af8c-9222-5c86-8976-eda83d4ae6d6
+
+	measure 'Income Previous Month' = CALCULATE ( [Total Income], PREVIOUSMONTH ( LASTDATE ( 'Date'[Date] ) ) )
+		formatString: #,0
+		displayFolder: 3 Time intelligence
+		lineageTag: 205212dd-e61c-5134-b7a9-ad44684dcb42
+
+	measure 'Income Last Month' =
+			-- the last month in the selection, whole month
+			CALCULATE ( [Total Income], DATESMTD ( LASTDATE ( 'Date'[Date] ) ) )
+		formatString: #,0
+		displayFolder: 3 Time intelligence
+		lineageTag: f24227c0-d42c-5271-a138-dac2ba40976f
+
+	measure 'Income MoM %' =
+			VAR cur = [Income Last Month]
+			VAR prev = [Income Previous Month]
+			RETURN
+			    IF ( NOT ISBLANK ( prev ), DIVIDE ( cur - prev, prev ) )
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: 3 Time intelligence
+		lineageTag: 95ba33a6-1b97-5c00-9bf3-5014aba32793
+
+	measure 'Net Profit Previous Month' = CALCULATE ( [Net Profit], PREVIOUSMONTH ( LASTDATE ( 'Date'[Date] ) ) )
+		formatString: #,0;(#,0);0
+		displayFolder: 3 Time intelligence
+		lineageTag: be2765f2-2a72-5721-9ac9-2d0cf6790db1
+
+	measure 'Net Profit YTD' = TOTALYTD ( [Net Profit], 'Date'[Date] )
+		formatString: #,0;(#,0);0
+		displayFolder: 3 Time intelligence
+		lineageTag: 7a931018-824e-5377-8dd4-e521bacc97e6
+
+	measure 'Closing Balance' =
+			-- opening balance + every posting up to the last date in the selection (debit +, credit -)
+			VAR d = MAX ( 'Date'[Date] )
+			RETURN
+			    SUM ( Account[Opening Balance] )
+			        + CALCULATE ( SUM ( Ledger[Amount] ), REMOVEFILTERS ( 'Date' ), 'Date'[Date] <= d )
+		formatString: #,0.00;(#,0.00);0.00
+		displayFolder: 4 Cash and balances
+		lineageTag: cf7fb17d-6c3a-54ea-b325-d84b082b4560
+
+	measure 'Cash Balance' = CALCULATE ( [Closing Balance], KEEPFILTERS ( Account[Is Cash] = TRUE () ) )
+		formatString: #,0
+		displayFolder: 4 Cash and balances
+		lineageTag: 41a24829-6cdc-577b-8308-4d7424c2a4a2
+
+	measure 'Cash Movement' = CALCULATE ( SUM ( Ledger[Amount] ), KEEPFILTERS ( Account[Is Cash] = TRUE () ) )
+		formatString: #,0;(#,0);0
+		displayFolder: 4 Cash and balances
+		lineageTag: 678edcfa-51b5-50ae-8c72-9e546f6b0d78
+
+	measure 'In Transit' = CALCULATE ( [Closing Balance], KEEPFILTERS ( Account[Account No] = 1090 ) )
+		formatString: #,0.00
+		displayFolder: 4 Cash and balances
+		lineageTag: bf196a2e-f887-54b1-be50-43eae4735385
+
+	measure 'Statement Balance' = CALCULATE ( SUM ( Statements[Ending Balance] ), LASTDATE ( 'Date'[Date] ) )
+		formatString: #,0.00;(#,0.00);0.00
+		displayFolder: 4 Cash and balances
+		lineageTag: fbafc0ba-0b07-5bdb-af8e-caec61d507ac
+
+	measure 'Books Balance' = IF ( NOT ISBLANK ( [Statement Balance] ), [Closing Balance] )
+		formatString: #,0.00;(#,0.00);0.00
+		displayFolder: 4 Cash and balances
+		lineageTag: ebe1c134-05b6-51ca-8a06-087a9fed66fb
+
+	measure 'Difference vs Statement' = IF ( NOT ISBLANK ( [Statement Balance] ), [Closing Balance] - [Statement Balance] )
+		formatString: #,0.00;(#,0.00);0.00
+		displayFolder: 4 Cash and balances
+		lineageTag: 4c4abf1f-3ef0-5ccb-8989-61c5df94eb0f
+
+	measure 'Review Amount' = CALCULATE ( SUM ( Ledger[Amount] ), KEEPFILTERS ( Ledger[Account No] = 6990 ) )
+		formatString: #,0.00
+		displayFolder: 5 Checks
+		lineageTag: 3f0b716c-4959-5f2c-97de-5ae4b3171766
+
+	measure 'Chk Opening Diff' = CALCULATE ( SUM ( Account[Opening Balance] ), REMOVEFILTERS () )
+		formatString: #,0.00
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: 16eee611-dfcf-5c57-9ce2-05b1996f9a55
+
+	measure 'Chk Debits' = CALCULATE ( SUM ( Ledger[Debit] ), REMOVEFILTERS () )
+		formatString: #,0.00
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: d127a2d8-bdc7-5f9d-b315-da87c2bb0be3
+
+	measure 'Chk Credits' = CALCULATE ( SUM ( Ledger[Credit] ), REMOVEFILTERS () )
+		formatString: #,0.00
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: d2990339-08a8-54a2-9784-74751ddafaad
+
+	measure 'Chk TB Months Off' =
+			VAR ends = CALCULATETABLE ( VALUES ( 'Date'[Month End] ), REMOVEFILTERS () )
+			VAR opening = CALCULATE ( SUM ( Account[Opening Balance] ), REMOVEFILTERS () )
+			RETURN
+			    COUNTROWS ( FILTER ( ends, VAR d = 'Date'[Month End] RETURN
+			        ABS ( opening + CALCULATE ( SUM ( Ledger[Amount] ), REMOVEFILTERS (), Ledger[Date] <= d ) ) > 0.005 ) ) + 0
+		formatString: 0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: e4797ee3-ddb6-5efe-a59b-f2003726d550
+
+	measure 'Chk Month Ends' = CALCULATE ( DISTINCTCOUNT ( 'Date'[Month End] ), REMOVEFILTERS () )
+		formatString: 0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: 2c3f5278-d5b7-5549-abe6-34e57ddb8998
+
+	measure 'Chk Rows Off' =
+			COUNTROWS ( FILTER ( CALCULATETABLE ( 'Source Files', REMOVEFILTERS () ),
+			    VAR r = 'Source Files'[Register No]
+			    VAR n = 'Source Files'[Rows In File]
+			    RETURN
+			        CALCULATE ( COUNTROWS ( Ledger ), REMOVEFILTERS (), Ledger[Side] = "Register", Ledger[Register No] = r ) <> n ) ) + 0
+		formatString: 0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: f8fca037-d35e-5cdb-9fcd-511352d824bb
+
+	measure 'Chk Rows In Files' = CALCULATE ( SUM ( 'Source Files'[Rows In File] ), REMOVEFILTERS () )
+		formatString: 0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: 8bc9f7c5-26f4-5c72-a411-767f81188264
+
+	measure 'Chk Totals Off' =
+			COUNTROWS ( FILTER ( CALCULATETABLE ( 'Source Files', REMOVEFILTERS () ),
+			    VAR r = 'Source Files'[Register No]
+			    VAR t = 'Source Files'[Net Amount In File]
+			    RETURN
+			        ABS ( CALCULATE ( SUM ( Ledger[Amount] ), REMOVEFILTERS (), Ledger[Side] = "Register", Ledger[Register No] = r ) - t ) > 0.005 ) ) + 0
+		formatString: 0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: c795462a-8709-575f-b3c3-98fd89783d38
+
+	measure 'Chk Statements Off' =
+			COUNTROWS ( FILTER ( CALCULATETABLE ( Statements, REMOVEFILTERS () ),
+			    VAR a = Statements[Account No]
+			    VAR d = Statements[Statement Date]
+			    VAR books = CALCULATE ( SUM ( Account[Opening Balance] ), REMOVEFILTERS (), Account[Account No] = a )
+			        + CALCULATE ( SUM ( Ledger[Amount] ), REMOVEFILTERS (), Ledger[Account No] = a, Ledger[Date] <= d )
+			    RETURN ABS ( books - Statements[Ending Balance] ) > 0.005 ) ) + 0
+		formatString: 0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: 11520938-43da-5f0d-a8e8-d1940cb42b53
+
+	measure 'Chk Statements' = CALCULATE ( COUNTROWS ( Statements ), REMOVEFILTERS () )
+		formatString: 0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: 009b6843-cb6f-54c7-8686-3edf55a2baee
+
+	measure 'Chk Checking Books' =
+			CALCULATE ( SUM ( Account[Opening Balance] ), REMOVEFILTERS (), Account[Account No] = 1000 )
+			    + CALCULATE ( SUM ( Ledger[Amount] ), REMOVEFILTERS (), Ledger[Account No] = 1000 )
+		formatString: #,0.00
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: abc82007-8d51-5d88-9f2b-92a1d65a3e91
+
+	measure 'Chk Checking Bank' = CALCULATE ( SUM ( 'Source Files'[Bank Running Balance] ), REMOVEFILTERS (), 'Source Files'[Register No] = 1000 )
+		formatString: #,0.00
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: 8ac8979f-8e61-5c53-8a04-90a10cf49b7a
+
+	measure 'Chk Orphans' = COUNTROWS ( FILTER ( CALCULATETABLE ( Ledger, REMOVEFILTERS () ), ISBLANK ( RELATED ( Account[Account] ) ) ) ) + 0
+		formatString: 0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: 95c61075-d2e1-562c-bd9c-c583f231c8f1
+
+	measure 'Chk Review Lines' = CALCULATE ( COUNTROWS ( Ledger ), REMOVEFILTERS (), Ledger[Account No] = 6990 ) + 0
+		formatString: 0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: 0dda881e-097c-5ead-8d94-fe29bb9872e3
+
+	measure 'Check Status' =
+			VAR ok = SWITCH ( SELECTEDVALUE ( Checks[No] ),
+			    1, ABS ( [Chk Opening Diff] ) < 0.005,
+			    2, ABS ( [Chk Debits] - [Chk Credits] ) < 0.005,
+			    3, [Chk TB Months Off] = 0,
+			    4, [Chk Rows Off] = 0,
+			    5, [Chk Totals Off] = 0,
+			    6, [Chk Statements Off] = 0 && [Chk Statements] > 0,
+			    7, ABS ( [Chk Checking Books] - [Chk Checking Bank] ) < 0.005,
+			    8, [Chk Orphans] = 0,
+			    9, [Chk Review Lines] = 0
+			)
+			RETURN
+			    IF ( HASONEVALUE ( Checks[No] ), IF ( ok, "PASS", IF ( SELECTEDVALUE ( Checks[No] ) = 9, "REVIEW", "FAIL" ) ) )
+		displayFolder: 5 Checks
+		lineageTag: c4d0ce7c-ecf6-55f4-88ba-86241ed180f3
+
+	measure 'Check Detail' =
+			SWITCH ( SELECTEDVALUE ( Checks[No] ),
+			    1, "Difference " & FORMAT ( [Chk Opening Diff], "#,0.00" ),
+			    2, "Debits " & FORMAT ( [Chk Debits], "#,0.00" ) & " = credits " & FORMAT ( [Chk Credits], "#,0.00" ),
+			    3, FORMAT ( [Chk Month Ends] - [Chk TB Months Off], "0" ) & " of " & FORMAT ( [Chk Month Ends], "0" ) & " month ends balance to 0.00",
+			    4, FORMAT ( [Chk Rows In Files], "0" ) & " lines in 3 files, " & FORMAT ( [Chk Rows Off], "0" ) & " files differ",
+			    5, FORMAT ( 3 - [Chk Totals Off], "0" ) & " of 3 files: net amount = posted",
+			    6, FORMAT ( [Chk Statements] - [Chk Statements Off], "0" ) & " of " & FORMAT ( [Chk Statements], "0" ) & " account-months agree to the cent",
+			    7, "Books " & FORMAT ( [Chk Checking Books], "#,0.00" ) & ", bank " & FORMAT ( [Chk Checking Bank], "#,0.00" ),
+			    8, FORMAT ( [Chk Orphans], "0" ) & " lines without an account",
+			    9, FORMAT ( [Chk Review Lines], "0" ) & " lines, " & FORMAT ( CALCULATE ( [Review Amount], REMOVEFILTERS () ), "#,0.00" ) & " on 6990 Uncategorized"
+			)
+		displayFolder: 5 Checks
+		lineageTag: cea89b42-3961-5ad8-a17a-0a1f6ecab426
+
+	measure 'Check Color' = SWITCH ( [Check Status], "PASS", "#1E8449", "FAIL", "#C0392B", "REVIEW", "#B9770E" )
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: 70677863-d6fe-5610-90e9-29d754c9b652
+
+	measure 'Checks Passed' =
+			VAR t = ADDCOLUMNS ( ALL ( Checks[No] ), "@s", [Check Status] )
+			RETURN FORMAT ( COUNTROWS ( FILTER ( t, [@s] = "PASS" ) ), "0" ) & " of " & FORMAT ( COUNTROWS ( FILTER ( t, [@s] <> "REVIEW" ) ), "0" ) & " PASS"
+		displayFolder: 5 Checks
+		lineageTag: 05ab19be-4db6-585d-af88-7e2f996ab5a6
+
+	measure 'Checks Failed' =
+			VAR t = ADDCOLUMNS ( ALL ( Checks[No] ), "@s", [Check Status] )
+			RETURN COUNTROWS ( FILTER ( t, [@s] = "FAIL" ) ) + 0
+		formatString: 0
+		displayFolder: 5 Checks
+		lineageTag: 70a5c199-161a-59e3-a69d-2aa580c39d7f
+
+	column 'Measure Group'
+		dataType: string
+		isHidden
+		lineageTag: 97de35f8-b45a-5a71-9b77-39cb47f6a736
+		summarizeBy: none
+		sourceColumn: Measure Group
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Measures = m
+		mode: import
+		source =
+				let
+				    Source = #table(type table [#"Measure Group" = text], {})
+				in
+				    Source
+
+	annotation PBI_ResultType = Table

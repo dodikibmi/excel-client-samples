@@ -1,0 +1,57 @@
+/// Budget per account per month; Budget Amount carries the P&L sign (income +, costs -).
+table Budget
+	lineageTag: 2d40dca5-9707-5ca0-9af6-ff5451ae3906
+
+	column 'Account No'
+		dataType: int64
+		formatString: 0
+		lineageTag: dc13dd35-6d17-59fc-a465-688533f3aaf4
+		summarizeBy: none
+		sourceColumn: Account No
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: dateTime
+		formatString: mmm yyyy
+		lineageTag: adf75c0a-d51e-5039-956e-9cd09374cf71
+		summarizeBy: none
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Budget As Typed'
+		dataType: decimal
+		formatString: #,0.00
+		lineageTag: 409702cf-7511-5d39-a91a-5daa289fd36f
+		summarizeBy: sum
+		sourceColumn: Budget As Typed
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Budget Amount'
+		dataType: decimal
+		formatString: #,0.00
+		lineageTag: 7cd25c7f-6e5e-56cc-a8c9-d9e6d9767fff
+		summarizeBy: sum
+		sourceColumn: Budget Amount
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Budget = m
+		mode: import
+		source =
+				let
+				    // typed by the client as positive amounts; stored with the P&L sign (income +, costs -) so Actual - Budget = better (+) or worse (-)
+				    Source = Csv.Document(File.Contents(DataFolder & "budget.csv"), [Delimiter = ",", Columns = 3, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {{"Account No", Int64.Type}, {"Month", type date}, {"Budget", Currency.Type}}, "en-US"),
+				    Types = Table.SelectColumns(AccountsRaw, {"Account No", "Type"}),
+				    Joined = Table.NestedJoin(Typed, {"Account No"}, Types, {"Account No"}, "A", JoinKind.LeftOuter),
+				    Expanded = Table.ExpandTableColumn(Joined, "A", {"Type"}),
+				    Signed = Table.AddColumn(Expanded, "Budget Amount", each if [Type] = "Revenue" then [Budget] else -[Budget], Currency.Type),
+				    Out = Table.RenameColumns(Table.SelectColumns(Signed, {"Account No", "Month", "Budget", "Budget Amount"}), {{"Budget", "Budget As Typed"}})
+				in
+				    Out
+
+	annotation PBI_ResultType = Table

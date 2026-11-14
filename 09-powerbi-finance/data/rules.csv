@@ -1,0 +1,32 @@
+Priority,Keyword,Account No,Note
+1,TAPPAY MONTHLY FEE,6800,Processor fees: must sit above the TAPPAY deposit rule
+2,TAPPAY,4000,"Daily card takings, net of nothing (fees are charged monthly)"
+3,TAP PAY,4000,"Same processor, typed with a space"
+4,CAFE BLOOM,4100,Wholesale customer
+5,BLUE HERON,4100,Wholesale customer
+6,GREENLEAF,4100,Catering customer
+7,INTEREST,4900,Savings interest
+8,NORTHGATE,5000,Main food supplier
+9,VALLEY FLOUR,5000,Flour mill
+10,COSTWISE,5000,Cash-and-carry top-ups
+11,PACKRIGHT,5100,Boxes and cups
+12,PACK RIGHT,5100,"Same supplier, typed with a space"
+13,PAYPILOT,6000,Payroll provider: net pay and tax impounds
+14,MAPLE ST,6100,Landlord
+15,CITY POWER,6200,Electricity
+16,CITY PWR,6200,Electricity (autopay text)
+17,METRO WATER,6200,Water
+18,BRIGHTWAVE,6200,Internet
+19,PIXELREACH,6400,Social media ads
+20,SHIELD MUTUAL,6500,Business insurance
+21,OVEN DOCTOR,6600,Equipment repairs
+22,CLOUDPOS,6700,Point-of-sale software
+23,LEDGERLY,6700,Bookkeeping software
+24,SERVICE FEE,6800,Bank fee
+25,SERVICE CHARGE,6800,Bank fee (other wording)
+26,PAPERCLIP,6950,Office supplies
+27,TO PERSONAL,3100,"Owner pays themself: a draw, not an expense"
+28,TRANSFER TO SAV,1090,Checking to savings: paired with the savings side
+29,TRANSFER FROM CHK,1090,Savings side of the same transfer
+30,PAYMENT TO VISA,1090,Card payment from checking: paired with the card side
+31,PAYMENT THANK YOU,1090,Card side of the same payment

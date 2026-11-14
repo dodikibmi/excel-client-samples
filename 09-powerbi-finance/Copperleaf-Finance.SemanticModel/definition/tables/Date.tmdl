@@ -1,0 +1,98 @@
+/// Calendar: one row per day of the months in the exports.
+table Date
+	lineageTag: 3b2654b0-3177-5950-bf7d-8ba08058c69e
+	dataCategory: Time
+
+	column Date
+		dataType: dateTime
+		formatString: d mmm yyyy
+		isKey
+		lineageTag: ed650baa-c96a-51cb-9d43-b44681c8668c
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 6f288c2b-3a94-54d0-8565-0b907db03344
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month No'
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: cc49f2a5-c63d-5bad-bbcf-50a45a193f49
+		summarizeBy: none
+		sourceColumn: Month No
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: string
+		sortByColumn: 'Month No'
+		lineageTag: e66808e6-60b5-526e-94e0-e17a4a9143bb
+		summarizeBy: none
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Start'
+		dataType: dateTime
+		formatString: d mmm yyyy
+		lineageTag: 03614c22-83f8-53be-b76d-c6783d74ab43
+		summarizeBy: none
+		sourceColumn: Month Start
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month End'
+		dataType: dateTime
+		formatString: d mmm yyyy
+		lineageTag: d4f7c304-02a1-5c6c-aa6c-9d44a10e6599
+		summarizeBy: none
+		sourceColumn: Month End
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day
+		dataType: int64
+		formatString: 0
+		lineageTag: 997869db-b73d-56ae-9ea5-7380f9d1acf7
+		summarizeBy: none
+		sourceColumn: Day
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weekday
+		dataType: string
+		lineageTag: 4fa4a1eb-3b8c-5143-9c6d-7eba3034b2d1
+		summarizeBy: none
+		sourceColumn: Weekday
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Date = m
+		mode: import
+		source =
+				let
+				    // one row per day, whole months, from the first to the last month in the exports
+				    Start = Date.StartOfMonth(List.Min(BankLines[Post Date])),
+				    End = Date.EndOfMonth(List.Max(BankLines[Post Date])),
+				    Days = List.Dates(Start, Duration.Days(End - Start) + 1, #duration(1, 0, 0, 0)),
+				    Base = Table.FromList(Days, Splitter.SplitByNothing(), type table [Date = date]),
+				    Year = Table.AddColumn(Base, "Year", each Date.Year([Date]), Int64.Type),
+				    MonthNo = Table.AddColumn(Year, "Month No", each Date.Year([Date]) * 100 + Date.Month([Date]), Int64.Type),
+				    Month = Table.AddColumn(MonthNo, "Month", each Date.ToText([Date], [Format = "MMM yyyy", Culture = "en-US"]), type text),
+				    MStart = Table.AddColumn(Month, "Month Start", each Date.StartOfMonth([Date]), type date),
+				    MEnd = Table.AddColumn(MStart, "Month End", each Date.EndOfMonth([Date]), type date),
+				    Day = Table.AddColumn(MEnd, "Day", each Date.Day([Date]), Int64.Type),
+				    Weekday = Table.AddColumn(Day, "Weekday", each Date.ToText([Date], [Format = "ddd", Culture = "en-US"]), type text)
+				in
+				    Weekday
+
+	annotation PBI_ResultType = Table

@@ -1,0 +1,184 @@
+/// One row per ledger line: each bank or card line posts to its register and to the account its rule chose; plus journal entries.
+table Ledger
+	lineageTag: d41fd983-bf02-5d70-9023-b18778975cd6
+
+	column 'Line ID'
+		dataType: string
+		lineageTag: f820bef0-8707-54a9-a051-4483e07930cf
+		summarizeBy: none
+		sourceColumn: Line ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Side
+		dataType: string
+		lineageTag: c7d8d117-c85d-513a-b598-b9ab6e1f96ca
+		summarizeBy: none
+		sourceColumn: Side
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: d mmm yyyy
+		lineageTag: 22637d3e-9f37-5059-ab98-8afd32606fee
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Txn Date'
+		dataType: dateTime
+		formatString: d mmm yyyy
+		lineageTag: cae4b8cf-97ab-5c39-9af5-5bdf964e21bc
+		summarizeBy: none
+		sourceColumn: Txn Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Source
+		dataType: string
+		lineageTag: 2cdf1a22-29ad-5c67-91a3-5e47d5ec0a7b
+		summarizeBy: none
+		sourceColumn: Source
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Register No'
+		dataType: int64
+		formatString: 0
+		lineageTag: f9004e42-23aa-542c-94eb-bd910905f1f8
+		summarizeBy: none
+		sourceColumn: Register No
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		lineageTag: 9a0be56f-b2df-5dcb-883e-ddb0c8790bff
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Clean Description'
+		dataType: string
+		lineageTag: 9acba090-176f-55ca-88b4-2fddd4e98888
+		summarizeBy: none
+		sourceColumn: Clean Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Rule Keyword'
+		dataType: string
+		lineageTag: 3b3689b5-4be9-52ee-9102-c5612a152e7a
+		summarizeBy: none
+		sourceColumn: Rule Keyword
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Account No'
+		dataType: int64
+		formatString: 0
+		lineageTag: 05401368-cd4b-5d4e-8f55-c4703bc5faa7
+		summarizeBy: none
+		sourceColumn: Account No
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Offset Account No'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6c3f5738-9b75-59c1-8cd3-12dd520272dc
+		summarizeBy: none
+		sourceColumn: Offset Account No
+
+		annotation SummarizationSetBy = Automatic
+
+	column Amount
+		dataType: decimal
+		formatString: #,0.00
+		lineageTag: aca7116e-381a-5653-a9a8-01edb6f29a07
+		summarizeBy: sum
+		sourceColumn: Amount
+
+		annotation SummarizationSetBy = Automatic
+
+	column Debit
+		dataType: decimal
+		formatString: #,0.00
+		lineageTag: 60e42a26-ca2a-564b-bc9e-d82d43d6fbdf
+		summarizeBy: sum
+		sourceColumn: Debit
+
+		annotation SummarizationSetBy = Automatic
+
+	column Credit
+		dataType: decimal
+		formatString: #,0.00
+		lineageTag: 1616166e-324c-5290-b45a-642261eb8c1b
+		summarizeBy: sum
+		sourceColumn: Credit
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cash Flow Line'
+		dataType: string
+		sortByColumn: 'Cash Flow Order'
+		lineageTag: 09d9d493-9a29-528b-809b-8f4ea613e7c6
+		summarizeBy: none
+		sourceColumn: Cash Flow Line
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cash Flow Order'
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: a308b6e9-a0c6-5bc3-bbf3-f0316dd0660f
+		summarizeBy: none
+		sourceColumn: Cash Flow Order
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Ledger = m
+		mode: import
+		source =
+				let
+				    // double entry: every bank line posts twice (its register and the account the rule chose), plus the journal entries
+				    Bank = Table.ToRecords(BankLines),
+				    Posted = List.Combine(List.Transform(Bank, (r) => {
+				        [#"Line ID" = r[Line ID] & "-R", Side = "Register", Date = r[Post Date], #"Txn Date" = r[Txn Date], Source = r[Source],
+				         #"Register No" = r[Register No], Description = r[Description], #"Clean Description" = r[Clean Description],
+				         #"Rule Keyword" = r[Rule Keyword], #"Account No" = r[Register No], #"Offset Account No" = r[Offset Account No], Amount = r[Amount]],
+				        [#"Line ID" = r[Line ID] & "-A", Side = "Account", Date = r[Post Date], #"Txn Date" = r[Txn Date], Source = r[Source],
+				         #"Register No" = r[Register No], Description = r[Description], #"Clean Description" = r[Clean Description],
+				         #"Rule Keyword" = r[Rule Keyword], #"Account No" = r[Offset Account No], #"Offset Account No" = r[Register No], Amount = -r[Amount]]
+				    })),
+				    Journal = List.Transform(List.Positions(Table.ToRecords(Adjustments)), (i) =>
+				        let a = Table.ToRecords(Adjustments){i} in
+				        [#"Line ID" = a[Entry] & "-" & Text.From(i + 1), Side = "Journal", Date = a[Date], #"Txn Date" = a[Date], Source = "Journal",
+				         #"Register No" = null, Description = a[Description], #"Clean Description" = Norm(a[Description]),
+				         #"Rule Keyword" = null, #"Account No" = a[Account No], #"Offset Account No" = null, Amount = a[Debit] - a[Credit]]),
+				    All = Table.FromRecords(Posted & Journal),
+				    Rounded = Table.TransformColumns(All, {{"Amount", each Number.Round(_, 2), type number}}),
+				    WithDebit = Table.AddColumn(Rounded, "Debit", each if [Amount] > 0 then [Amount] else 0, Currency.Type),
+				    WithCredit = Table.AddColumn(WithDebit, "Credit", each if [Amount] < 0 then -[Amount] else 0, Currency.Type),
+				    // cash flow line for the register side of checking and savings (what kind of money moved)
+				    WithFlow = Table.AddColumn(WithCredit, "Cash Flow Line", each
+				        if [Side] <> "Register" then null
+				        else if [Offset Account No] >= 4000 and [Offset Account No] < 5000 then "Receipts from customers"
+				        else if [Offset Account No] >= 5000 and [Offset Account No] < 7000 then "Payments to suppliers and staff"
+				        else if [Offset Account No] = 3100 then "Owner's draws"
+				        else if Text.Contains([Clean Description], "VISA") or Text.Contains([Clean Description], "PAYMENT THANK YOU") then "Card payments"
+				        else "Transfers between own accounts", type text),
+				    WithOrder = Table.AddColumn(WithFlow, "Cash Flow Order", each
+				        List.PositionOf({"Receipts from customers", "Payments to suppliers and staff", "Owner's draws", "Card payments", "Transfers between own accounts"}, [Cash Flow Line]) + 1, Int64.Type),
+				    Typed = Table.TransformColumnTypes(WithOrder, {
+				        {"Line ID", type text}, {"Side", type text}, {"Date", type date}, {"Txn Date", type date}, {"Source", type text},
+				        {"Register No", Int64.Type}, {"Description", type text}, {"Clean Description", type text}, {"Rule Keyword", type text},
+				        {"Account No", Int64.Type}, {"Offset Account No", Int64.Type}, {"Amount", Currency.Type}})
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

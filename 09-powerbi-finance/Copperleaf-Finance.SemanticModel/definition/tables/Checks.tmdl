@@ -1,0 +1,51 @@
+/// The list of checks shown on the Checks page.
+table Checks
+	lineageTag: 039b9e1b-0aaf-5d86-91a9-58b82bc00f8d
+
+	column No
+		dataType: int64
+		formatString: 0
+		lineageTag: 1a42d917-aaec-5b68-8965-4ac36c16f2ea
+		summarizeBy: none
+		sourceColumn: No
+
+		annotation SummarizationSetBy = Automatic
+
+	column Check
+		dataType: string
+		sortByColumn: No
+		lineageTag: a382ba57-d4dd-51b7-96b5-19a6729d3fba
+		summarizeBy: none
+		sourceColumn: Check
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Why it matters'
+		dataType: string
+		lineageTag: 481ff88b-c757-5884-afc7-8a3c3d80de4e
+		summarizeBy: none
+		sourceColumn: Why it matters
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Checks = m
+		mode: import
+		source =
+				let
+				    Source = #table(
+				        type table [No = Int64.Type, Check = text, #"Why it matters" = text],
+				        {
+				            {1, "Opening balances balance", "Debits = credits in the chart of accounts before the first line is posted"},
+				            {2, "Ledger balances: debits = credits", "Every bank line is posted twice, so the ledger must net to zero"},
+				            {3, "Trial balance at every month end", "Balances of all accounts add to zero at each month end"},
+				            {4, "Every export line is in the model once", "Rows per file = register lines in the model (nothing lost, nothing doubled)"},
+				            {5, "Total per export = total in the model", "Net amount per file, read a second way, = what was posted"},
+				            {6, "Books = bank and card statements", "Closing balance per account and month = the printed statement"},
+				            {7, "Checking = the bank's own running balance", "Last Balance column in the checking export = books"},
+				            {8, "Every line has an account in the chart", "No ledger line points to an account that does not exist"},
+				            {9, "Lines waiting for a rule", "Uncategorized lines: add a keyword to rules.csv and refresh"}
+				        })
+				in
+				    Source
+
+	annotation PBI_ResultType = Table

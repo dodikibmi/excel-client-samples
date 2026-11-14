@@ -1,0 +1,32 @@
+{
+  "name": "Copperleaf",
+  "dataColors": [
+    "#1F4E79",
+    "#00968A",
+    "#E07B39",
+    "#7A5195",
+    "#5F6B7A",
+    "#C0392B",
+    "#1E8449",
+    "#B9770E"
+  ],
+  "foreground": "#1B2A3A",
+  "background": "#FFFFFF",
+  "tableAccent": "#00968A",
+  "visualStyles": {
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#F3F5F8"
+              }
+            },
+            "transparency": 0
+          }
+        ]
+      }
+    }
+  }
+}

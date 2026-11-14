@@ -1,0 +1,70 @@
+/// Control totals read straight from each export file.
+table 'Source Files'
+	lineageTag: 72140270-f17f-50f6-85d1-22830826fd0b
+
+	column 'Register No'
+		dataType: int64
+		formatString: 0
+		lineageTag: 81778c5b-8867-5fed-a92c-04aa1afd3e3d
+		summarizeBy: none
+		sourceColumn: Register No
+
+		annotation SummarizationSetBy = Automatic
+
+	column File
+		dataType: string
+		lineageTag: b05c3406-044d-5dc1-8fec-c2d2b679d201
+		summarizeBy: none
+		sourceColumn: File
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Rows In File'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3f91384d-35a2-55db-b5ad-d655d9db5b66
+		summarizeBy: sum
+		sourceColumn: Rows In File
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Net Amount In File'
+		dataType: decimal
+		formatString: #,0.00
+		lineageTag: 780353a3-1563-5882-8f6a-7e986517b1f3
+		summarizeBy: sum
+		sourceColumn: Net Amount In File
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Bank Running Balance'
+		dataType: decimal
+		formatString: #,0.00
+		lineageTag: b15a6c2e-0025-50e8-958c-b5c0cad400c7
+		summarizeBy: sum
+		sourceColumn: Bank Running Balance
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Source Files' = m
+		mode: import
+		source =
+				let
+				    // control totals read straight from each export (a second, independent parse) for the Checks page
+				    Num = (t as nullable text) as number => if t = null or Text.Trim(t) = "" then 0 else Number.FromText(Text.Select(t, {"0".."9", ".", "-"}), "en-US"),
+				    ChkAll = Csv.Document(File.Contents(DataFolder & "checking-2026-08-10.csv"), [Delimiter = ",", Columns = 5, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    ChkHeader = List.PositionOf(ChkAll[Column1], "Date"),
+				    Chk = Table.SelectRows(Table.Skip(ChkAll, ChkHeader + 1), each Text.Trim([Column1]) <> ""),
+				    Sav = Table.SelectRows(Table.Skip(Csv.Document(File.Contents(DataFolder & "savings-2026-08-10.csv"), [Delimiter = ",", Columns = 3, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]), 1), each Text.Trim([Column1]) <> ""),
+				    Card = Table.SelectRows(Table.Skip(Csv.Document(File.Contents(DataFolder & "visa-2026-08-10.csv"), [Delimiter = ",", Columns = 6, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]), 1), each Text.Trim([Column1]) <> ""),
+				    Rows = {
+				        {1000, "checking-2026-08-10.csv", Table.RowCount(Chk), List.Sum(List.Transform(Chk[Column4], Num)) - List.Sum(List.Transform(Chk[Column3], Num)), Num(List.Last(Chk[Column5]))},
+				        {1010, "savings-2026-08-10.csv", Table.RowCount(Sav), List.Sum(List.Transform(Sav[Column3], Num)), null},
+				        {2000, "visa-2026-08-10.csv", Table.RowCount(Card), List.Sum(List.Transform(Card[Column6], Num)), null}
+				    },
+				    T = #table(type table [#"Register No" = Int64.Type, File = text, #"Rows In File" = Int64.Type, #"Net Amount In File" = number, #"Bank Running Balance" = number], Rows),
+				    Typed = Table.TransformColumnTypes(T, {{"Net Amount In File", Currency.Type}, {"Bank Running Balance", Currency.Type}})
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

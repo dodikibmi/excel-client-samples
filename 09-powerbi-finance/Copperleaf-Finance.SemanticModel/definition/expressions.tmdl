@@ -1,0 +1,148 @@
+expression DataFolder = "C:\Copperleaf\data\" meta [IsParameterQuery = true, Type = "Text", IsParameterQueryRequired = true]
+	lineageTag: 7e68f46e-458f-5815-a6c1-aa3692a38e7a
+
+	annotation PBI_ResultType = Text
+
+expression Norm =
+		(t as nullable text) as text =>
+		let
+		    // upper case, punctuation to spaces, single spaces: "TapPay Inc. Deposit" -> "TAPPAY INC DEPOSIT"
+		    u = Text.Upper(if t = null then "" else t),
+		    spaced = Text.Combine(List.Transform(Text.ToList(u), each if List.Contains({"*", ".", "-", "#", "/", ",", "&", "'"}, _) then " " else _)),
+		    words = List.Select(Text.Split(spaced, " "), each _ <> "")
+		in
+		    Text.Combine(words, " ")
+	lineageTag: a056d3f6-8f14-5fe5-998b-d71afe54f10d
+
+	annotation PBI_ResultType = Function
+
+expression Money =
+		(t as nullable text) as number =>
+		let
+		    // "$1,250.00" / "1,250.00" / "-64.18" / "" -> number
+		    s = if t = null then "" else Text.Remove(t, {"$", ",", " "})
+		in
+		    if s = "" then 0 else Number.FromText(s, "en-US")
+	lineageTag: 4d8170dd-5dc0-5f9f-ae71-59a5ec1a743b
+
+	annotation PBI_ResultType = Function
+
+expression Checking_Clean =
+		let
+		    // bank export: 3 title lines above the header, MM/DD/YYYY, Debit and Credit as text "$1,250.00"
+		    Source = Csv.Document(File.Contents(DataFolder & "checking-2026-08-10.csv"), [Delimiter = ",", Columns = 5, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+		    FromHeader = Table.Skip(Source, each [Column1] <> "Date"),
+		    Promoted = Table.PromoteHeaders(FromHeader, [PromoteAllScalars = true]),
+		    Rows = Table.SelectRows(Promoted, each Text.Trim([Date]) <> ""),
+		    Indexed = Table.AddIndexColumn(Rows, "Row", 1, 1, Int64.Type),
+		    Out = Table.FromRecords(Table.TransformRows(Indexed, (r) => [
+		        #"Line ID" = "CHK-" & Text.PadStart(Text.From(r[Row]), 3, "0"),
+		        Source = "Checking",
+		        #"Register No" = 1000,
+		        #"Txn Date" = Date.FromText(Text.Trim(r[Date]), [Format = "MM/dd/yyyy", Culture = "en-US"]),
+		        #"Post Date" = Date.FromText(Text.Trim(r[Date]), [Format = "MM/dd/yyyy", Culture = "en-US"]),
+		        Description = Text.Trim(r[Description]),
+		        Amount = Money(r[Credit]) - Money(r[Debit])
+		    ]))
+		in
+		    Out
+	lineageTag: 32ea4a73-df19-5a3b-9ac0-523a95665951
+
+	annotation PBI_ResultType = Table
+
+expression Savings_Clean =
+		let
+		    // savings export: ISO dates, one signed Amount column with thousand separators
+		    Source = Csv.Document(File.Contents(DataFolder & "savings-2026-08-10.csv"), [Delimiter = ",", Columns = 3, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+		    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+		    Rows = Table.SelectRows(Promoted, each Text.Trim([Posted]) <> ""),
+		    Indexed = Table.AddIndexColumn(Rows, "Row", 1, 1, Int64.Type),
+		    Out = Table.FromRecords(Table.TransformRows(Indexed, (r) => [
+		        #"Line ID" = "SAV-" & Text.PadStart(Text.From(r[Row]), 3, "0"),
+		        Source = "Savings",
+		        #"Register No" = 1010,
+		        #"Txn Date" = Date.FromText(Text.Trim(r[Posted]), [Format = "yyyy-MM-dd", Culture = "en-US"]),
+		        #"Post Date" = Date.FromText(Text.Trim(r[Posted]), [Format = "yyyy-MM-dd", Culture = "en-US"]),
+		        Description = Text.Trim(r[Details]),
+		        Amount = Money(r[Amount])
+		    ]))
+		in
+		    Out
+	lineageTag: b2f51a76-5972-5adb-b50d-f39b7dd37ec0
+
+	annotation PBI_ResultType = Table
+
+expression Card_Clean =
+		let
+		    // card export: transaction and post date (M/D/YYYY), charges negative; booked by POST date like the statement
+		    Source = Csv.Document(File.Contents(DataFolder & "visa-2026-08-10.csv"), [Delimiter = ",", Columns = 6, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+		    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+		    Rows = Table.SelectRows(Promoted, each Text.Trim([Post Date]) <> ""),
+		    Indexed = Table.AddIndexColumn(Rows, "Row", 1, 1, Int64.Type),
+		    Out = Table.FromRecords(Table.TransformRows(Indexed, (r) => [
+		        #"Line ID" = "VISA-" & Text.PadStart(Text.From(r[Row]), 3, "0"),
+		        Source = "Card",
+		        #"Register No" = 2000,
+		        #"Txn Date" = Date.FromText(Text.Trim(r[Transaction Date]), [Format = "M/d/yyyy", Culture = "en-US"]),
+		        #"Post Date" = Date.FromText(Text.Trim(r[Post Date]), [Format = "M/d/yyyy", Culture = "en-US"]),
+		        Description = Text.Trim(r[Description]),
+		        Amount = Money(r[Amount])
+		    ]))
+		in
+		    Out
+	lineageTag: 9c848f2d-00ee-5c7b-b2ab-5af03ff383c4
+
+	annotation PBI_ResultType = Table
+
+expression Rules =
+		let
+		    // keyword -> account, first match wins (rules.csv is in priority order)
+		    Source = Csv.Document(File.Contents(DataFolder & "rules.csv"), [Delimiter = ",", Columns = 4, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+		    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+		    Typed = Table.TransformColumnTypes(Promoted, {{"Priority", Int64.Type}, {"Account No", Int64.Type}}, "en-US"),
+		    Sorted = Table.Sort(Typed, {{"Priority", Order.Ascending}}),
+		    Clean = Table.AddColumn(Sorted, "Clean Keyword", each Norm([Keyword]), type text)
+		in
+		    Clean
+	lineageTag: d9133b96-8248-578a-9682-5eba42b09a48
+
+	annotation PBI_ResultType = Table
+
+expression AccountsRaw =
+		let
+		    Source = Csv.Document(File.Contents(DataFolder & "accounts.csv"), [Delimiter = ",", Columns = 6, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+		    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+		    Typed = Table.TransformColumnTypes(Promoted, {{"Account No", Int64.Type}, {"Opening Balance", Currency.Type}}, "en-US")
+		in
+		    Typed
+	lineageTag: c3401600-0c56-5a9e-bc98-d7ad8b847837
+
+	annotation PBI_ResultType = Table
+
+expression Adjustments =
+		let
+		    // month-end journal entries typed by the bookkeeper (depreciation)
+		    Source = Csv.Document(File.Contents(DataFolder & "adjustments.csv"), [Delimiter = ",", Columns = 6, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+		    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+		    Typed = Table.TransformColumnTypes(Promoted, {{"Date", type date}, {"Account No", Int64.Type}, {"Debit", type number}, {"Credit", type number}}, "en-US")
+		in
+		    Typed
+	lineageTag: 9c056f4b-9027-56ae-8812-c408b59d1bb3
+
+	annotation PBI_ResultType = Table
+
+expression BankLines =
+		let
+		    // the three registers as one list; every line gets an account from the first rule whose keyword it contains
+		    Lines = Table.Combine({Checking_Clean, Savings_Clean, Card_Clean}),
+		    RuleList = Table.ToRecords(Table.SelectColumns(Rules, {"Clean Keyword", "Account No"})),
+		    WithClean = Table.AddColumn(Lines, "Clean Description", each Norm([Description]), type text),
+		    WithRule = Table.AddColumn(WithClean, "Rule", (r) => List.First(List.Select(RuleList, (k) => Text.Contains(r[Clean Description], k[Clean Keyword])), null)),
+		    WithAccount = Table.AddColumn(WithRule, "Offset Account No", each if [Rule] = null then 6990 else [Rule][Account No], Int64.Type),
+		    WithKeyword = Table.AddColumn(WithAccount, "Rule Keyword", each if [Rule] = null then "(no rule: to review)" else [Rule][Clean Keyword], type text)
+		in
+		    Table.RemoveColumns(WithKeyword, {"Rule"})
+	lineageTag: bd989826-d1b4-5a33-a026-c759af11836b
+
+	annotation PBI_ResultType = Table
+

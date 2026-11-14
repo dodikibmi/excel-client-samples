@@ -1,0 +1,86 @@
+/// Chart of accounts with opening balances at 31 Jul 2026 (debit +).
+table Account
+	lineageTag: 9c327b0c-41d9-576f-ad85-2ca6a40580c0
+
+	column 'Account No'
+		dataType: int64
+		formatString: 0
+		isKey
+		lineageTag: 6e152f6b-364c-5cfd-af2a-bcddace4acf8
+		summarizeBy: none
+		sourceColumn: Account No
+
+		annotation SummarizationSetBy = Automatic
+
+	column Account
+		dataType: string
+		lineageTag: 37a6309c-441b-5712-8871-59603f94589c
+		summarizeBy: none
+		sourceColumn: Account
+
+		annotation SummarizationSetBy = Automatic
+
+	column Type
+		dataType: string
+		lineageTag: f0dae40c-2ac6-5ffc-9515-2e153a5dfae2
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Opening Balance'
+		dataType: decimal
+		formatString: #,0.00
+		lineageTag: 16caaae0-023a-5273-aea5-b32238ba88b0
+		summarizeBy: sum
+		sourceColumn: Opening Balance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Statement Name'
+		dataType: string
+		isHidden
+		lineageTag: a4cfac77-d5b2-5a20-89dd-eb45a6edf6b6
+		summarizeBy: none
+		sourceColumn: Statement Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Account Label'
+		dataType: string
+		sortByColumn: 'Account No'
+		lineageTag: e8bd62a5-37ef-5b12-b8cd-c378e20e0c97
+		summarizeBy: none
+		sourceColumn: Account Label
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Is Cash'
+		dataType: boolean
+		lineageTag: 34e7b5d4-0d20-5edf-8099-bfaf93246f26
+		summarizeBy: none
+		sourceColumn: Is Cash
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Category Key'
+		dataType: string
+		lineageTag: dd79b8bc-4e29-522f-8d44-3813a3e988d3
+		summarizeBy: none
+		sourceColumn: Category Key
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Account = m
+		mode: import
+		source =
+				let
+				    Source = AccountsRaw,
+				    Label = Table.AddColumn(Source, "Account Label", each Text.From([Account No]) & " " & [Account], type text),
+				    Cash = Table.AddColumn(Label, "Is Cash Account", each [Is Cash] = "Y", type logical),
+				    Key = Table.AddColumn(Cash, "Category Key", each [Type], type text),
+				    Out = Table.RenameColumns(Table.RemoveColumns(Key, {"Is Cash"}), {{"Is Cash Account", "Is Cash"}})
+				in
+				    Out
+
+	annotation PBI_ResultType = Table

@@ -1,0 +1,66 @@
+/// Groups accounts into the lines of the P&L and balance sheet.
+table Category
+	lineageTag: affabfcb-1711-5eb2-93cd-025777c0f983
+
+	column 'Category Key'
+		dataType: string
+		isKey
+		lineageTag: 08fa3315-4d90-5702-a9a6-654436ec6a21
+		summarizeBy: none
+		sourceColumn: Category Key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		sortByColumn: Sort
+		lineageTag: 2f2b6973-ec96-5516-861a-e25984dfc7a6
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column Group
+		dataType: string
+		lineageTag: 6a3c819d-2df6-5298-9753-46f91188591b
+		summarizeBy: none
+		sourceColumn: Group
+
+		annotation SummarizationSetBy = Automatic
+
+	column Statement
+		dataType: string
+		lineageTag: 6f1da880-81d3-54e7-a449-7ac70b116c31
+		summarizeBy: none
+		sourceColumn: Statement
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sort
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: 12a472ef-78e8-594c-b936-478891ced80d
+		summarizeBy: none
+		sourceColumn: Sort
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Category = m
+		mode: import
+		source =
+				let
+				    Source = #table(
+				        type table [#"Category Key" = text, Category = text, Group = text, Statement = text, Sort = Int64.Type],
+				        {
+				            {"Revenue", "Revenue", "Income", "P&L", 1},
+				            {"COGS", "Cost of goods sold", "Expense", "P&L", 2},
+				            {"Expense", "Operating expenses", "Expense", "P&L", 3},
+				            {"Asset", "Assets", "Balance sheet", "Balance sheet", 4},
+				            {"Liability", "Liabilities", "Balance sheet", "Balance sheet", 5},
+				            {"Equity", "Equity", "Balance sheet", "Balance sheet", 6}
+				        })
+				in
+				    Source
+
+	annotation PBI_ResultType = Table

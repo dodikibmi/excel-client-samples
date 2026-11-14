@@ -1,0 +1,28 @@
+relationship a765285d-2076-5ed3-a4f6-4b985b23c9fe
+	fromColumn: Ledger.Date
+	toColumn: Date.Date
+
+relationship 6176e90b-2f6e-5d9e-927c-f5fceda9014f
+	fromColumn: Ledger.'Account No'
+	toColumn: Account.'Account No'
+
+relationship 3309e5ce-ee1c-5066-869a-d473362c2d8e
+	fromColumn: Account.'Category Key'
+	toColumn: Category.'Category Key'
+
+relationship fd7e7ad7-00d0-5b2a-b865-9e8a2a07f51c
+	fromColumn: Budget.Month
+	toColumn: Date.Date
+
+relationship df119c48-3b64-5bcf-baab-6b95885a5e50
+	fromColumn: Budget.'Account No'
+	toColumn: Account.'Account No'
+
+relationship 25c85cd0-e8ba-5a53-887a-11483a0b1db4
+	fromColumn: Statements.'Statement Date'
+	toColumn: Date.Date
+
+relationship 8e032b8d-9655-512c-8be2-a8361126cee5
+	fromColumn: Statements.'Account No'
+	toColumn: Account.'Account No'
+

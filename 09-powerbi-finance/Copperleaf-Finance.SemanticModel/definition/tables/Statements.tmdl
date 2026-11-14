@@ -1,0 +1,61 @@
+/// Month-end balance printed on each bank and card statement.
+table Statements
+	lineageTag: 3812d6ac-9413-558b-9162-84e82359ffad
+
+	column 'Account No'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9625014a-5e37-5120-9668-6452622f4349
+		summarizeBy: none
+		sourceColumn: Account No
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Statement Date'
+		dataType: dateTime
+		formatString: d mmm yyyy
+		lineageTag: b2b1a53a-d5c3-5766-8f09-2eb2a315059f
+		summarizeBy: none
+		sourceColumn: Statement Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Printed Balance'
+		dataType: decimal
+		formatString: #,0.00
+		lineageTag: 88f8a97f-2638-5846-9ae9-1377d104bc5a
+		summarizeBy: sum
+		sourceColumn: Printed Balance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ending Balance'
+		dataType: decimal
+		formatString: #,0.00
+		lineageTag: a775fa5c-6431-5d6e-85d2-77049f851f07
+		summarizeBy: sum
+		sourceColumn: Ending Balance
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Statements = m
+		mode: import
+		source =
+				let
+				    // month-end balance printed on each statement; the card prints what is owed as a positive number
+				    Source = Csv.Document(File.Contents(DataFolder & "statements-2026-08-10.csv"), [Delimiter = ",", Columns = 3, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Accts = Table.SelectColumns(Table.SelectRows(AccountsRaw, each [Statement Name] <> ""), {"Statement Name", "Account No", "Type"}),
+				    Joined = Table.NestedJoin(Promoted, {"Account"}, Accts, {"Statement Name"}, "A", JoinKind.LeftOuter),
+				    Expanded = Table.ExpandTableColumn(Joined, "A", {"Account No", "Type"}),
+				    Out = Table.FromRecords(Table.TransformRows(Expanded, (r) => [
+				        #"Account No" = r[Account No],
+				        #"Statement Date" = Date.FromText(Text.Trim(r[Statement date]), [Format = "MM/dd/yyyy", Culture = "en-US"]),
+				        #"Printed Balance" = Money(r[Ending balance]),
+				        #"Ending Balance" = (if r[Type] = "Liability" then -1 else 1) * Money(r[Ending balance])
+				    ])),
+				    Typed = Table.TransformColumnTypes(Out, {{"Account No", Int64.Type}, {"Statement Date", type date}, {"Printed Balance", Currency.Type}, {"Ending Balance", Currency.Type}})
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
