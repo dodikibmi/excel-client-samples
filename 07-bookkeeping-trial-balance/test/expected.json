@@ -1,0 +1,1434 @@
+{
+ "rows": {
+  "checking": 141,
+  "savings": 6,
+  "card": 39
+ },
+ "accounts_by_month": {
+  "1000-202608": -2490.81,
+  "1000-202609": -2830.02,
+  "1000-202610": -8743.26,
+  "1010-202608": 2018.16,
+  "1010-202609": 17.78,
+  "1010-202610": 4020.98,
+  "1090-202609": 2000.0,
+  "1090-202610": -200.0,
+  "1510-202608": -500.0,
+  "1510-202609": -500.0,
+  "1510-202610": -500.0,
+  "2000-202608": 36.78,
+  "2000-202609": -674.36,
+  "2000-202610": 463.46,
+  "3100-202608": 3000.0,
+  "3100-202609": 3000.0,
+  "3100-202610": 3000.0,
+  "4000-202608": -29887.75,
+  "4000-202609": -31480.44,
+  "4000-202610": -33442.17,
+  "4100-202608": -3988.52,
+  "4100-202609": -3410.33,
+  "4100-202610": -4390.85,
+  "4900-202608": -18.16,
+  "4900-202609": -17.78,
+  "4900-202610": -20.98,
+  "5000-202608": 10942.76,
+  "5000-202609": 12171.73,
+  "5000-202610": 11900.88,
+  "5100-202608": 528.46,
+  "5100-202609": 485.16,
+  "5100-202610": 741.72,
+  "6000-202608": 12839.53,
+  "6000-202609": 12967.99,
+  "6000-202610": 19698.97,
+  "6100-202608": 4200.0,
+  "6100-202609": 4200.0,
+  "6100-202610": 4200.0,
+  "6200-202608": 888.45,
+  "6200-202609": 897.93,
+  "6200-202610": 904.66,
+  "6400-202608": 262.25,
+  "6400-202609": 274.22,
+  "6400-202610": 263.2,
+  "6500-202608": 385.0,
+  "6500-202609": 385.0,
+  "6500-202610": 385.0,
+  "6600-202609": 486.5,
+  "6700-202608": 99.0,
+  "6700-202609": 99.0,
+  "6700-202610": 99.0,
+  "6800-202608": 996.71,
+  "6800-202609": 995.59,
+  "6800-202610": 990.89,
+  "6900-202608": 500.0,
+  "6900-202609": 500.0,
+  "6900-202610": 500.0,
+  "6950-202608": 68.14,
+  "6950-202609": 82.03,
+  "6950-202610": 64.32,
+  "6990-202608": 120.0,
+  "6990-202609": 350.0,
+  "6990-202610": 64.18
+ },
+ "pl": {
+  "202608": {
+   "revenue": 33894.43,
+   "cogs": 11471.22,
+   "gross_profit": 22423.21,
+   "expenses": 20359.08,
+   "net_profit": 2064.13
+  },
+  "202609": {
+   "revenue": 34908.55,
+   "cogs": 12656.89,
+   "gross_profit": 22251.66,
+   "expenses": 21238.26,
+   "net_profit": 1013.4
+  },
+  "202610": {
+   "revenue": 37854.0,
+   "cogs": 12642.6,
+   "gross_profit": 25211.4,
+   "expenses": 27170.22,
+   "net_profit": -1958.82
+  }
+ },
+ "cash": {
+  "202608": 42947.9,
+  "202609": 40135.66,
+  "202610": 35413.38
+ },
+ "statements": {
+  "1000-202608": 15929.74,
+  "1010-202608": 27018.16,
+  "2000-202608": 2278.62,
+  "1000-202609": 13099.72,
+  "1010-202609": 27035.94,
+  "2000-202609": 2952.98,
+  "1000-202610": 4356.46,
+  "1010-202610": 31056.92,
+  "2000-202610": 2489.52
+ },
+ "uncategorized": [
+  {
+   "desc": "VENMO *JKELLY",
+   "amount": -120.0
+  },
+  {
+   "desc": "CHECK #1043",
+   "amount": -350.0
+  },
+  {
+   "desc": "POS PURCHASE 4471 MAIN ST",
+   "amount": -64.18
+  }
+ ],
+ "in_transit_by_month": {
+  "202608": 0.0,
+  "202609": 2000.0,
+  "202610": 1800.0
+ },
+ "true_account": [
+  {
+   "reg": 1000,
+   "post": "2026-08-01",
+   "desc": "TAP PAY *DEPOSIT 72350",
+   "amount": 1600.42,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-01",
+   "desc": "MAPLE ST PROPERTIES RENT",
+   "amount": -4200.0,
+   "acct": 6100
+  },
+  {
+   "reg": 2000,
+   "post": "2026-08-01",
+   "desc": "PIXELREACH ADS",
+   "amount": -123.11,
+   "acct": 6400
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-02",
+   "desc": "Northgate Food Service",
+   "amount": -1823.99,
+   "acct": 5000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-03",
+   "desc": "CAFE BLOOM ACH CREDIT",
+   "amount": 1243.93,
+   "acct": 4100
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-03",
+   "desc": "TAPPAY MONTHLY FEES JUL",
+   "amount": -981.71,
+   "acct": 6800
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-04",
+   "desc": "TAP PAY *DEPOSIT 96650",
+   "amount": 1833.13,
+   "acct": 4000
+  },
+  {
+   "reg": 2000,
+   "post": "2026-08-04",
+   "desc": "PAPERCLIP OFFICE #88",
+   "amount": -68.14,
+   "acct": 6950
+  },
+  {
+   "reg": 2000,
+   "post": "2026-08-04",
+   "desc": "COSTWISE WHSE 212",
+   "amount": -403.17,
+   "acct": 5000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-05",
+   "desc": "TAP PAY *DEPOSIT 33249",
+   "amount": 1080.74,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-05",
+   "desc": "SHIELD MUTUAL INS PREM",
+   "amount": -385.0,
+   "acct": 6500
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-06",
+   "desc": "TAP PAY *DEPOSIT 69281",
+   "amount": 1350.66,
+   "acct": 4000
+  },
+  {
+   "reg": 2000,
+   "post": "2026-08-06",
+   "desc": "PIXELREACH ADS",
+   "amount": -139.14,
+   "acct": 6400
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-07",
+   "desc": "TAPPAY DEPOSIT 0807",
+   "amount": 1096.18,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-07",
+   "desc": "PayPilot Tax",
+   "amount": -1169.5,
+   "acct": 6000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-07",
+   "desc": "PAYPILOT PAYROLL NET PAY",
+   "amount": -5155.88,
+   "acct": 6000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-08",
+   "desc": "TAPPAY DEPOSIT 0808",
+   "amount": 1569.91,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-09",
+   "desc": "Blue Heron Mkt payment",
+   "amount": 1092.18,
+   "acct": 4100
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-09",
+   "desc": "Valley Flour Mill Co",
+   "amount": -920.81,
+   "acct": 5000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-09",
+   "desc": "NORTHGATE FOODSVC ACH",
+   "amount": -1898.69,
+   "acct": 5000
+  },
+  {
+   "reg": 2000,
+   "post": "2026-08-10",
+   "desc": "BRIGHTWAVE*INTERNET",
+   "amount": -89.99,
+   "acct": 6200
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-11",
+   "desc": "TapPay Inc. Deposit",
+   "amount": 1525.03,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-12",
+   "desc": "TAP PAY *DEPOSIT 77318",
+   "amount": 1079.47,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-12",
+   "desc": "ONLINE PAYMENT TO VISA ...7702",
+   "amount": -2315.4,
+   "acct": 1090
+  },
+  {
+   "reg": 2000,
+   "post": "2026-08-12",
+   "desc": "PAYMENT THANK YOU",
+   "amount": 2315.4,
+   "acct": 1090
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-13",
+   "desc": "TAPPAY DEPOSIT 0813",
+   "amount": 1355.9,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-14",
+   "desc": "TAP PAY *DEPOSIT 58045",
+   "amount": 1182.45,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-14",
+   "desc": "CITY PWR&LIGHT AUTOPAY",
+   "amount": -655.4,
+   "acct": 6200
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-15",
+   "desc": "TAP PAY *DEPOSIT 15725",
+   "amount": 1537.88,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-15",
+   "desc": "Greenleaf Grocers catering",
+   "amount": 771.05,
+   "acct": 4100
+  },
+  {
+   "reg": 2000,
+   "post": "2026-08-15",
+   "desc": "CLOUDPOS* SUBSCRIPTION",
+   "amount": -69.0,
+   "acct": 6700
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-16",
+   "desc": "NORTHGATE FOODSVC ACH",
+   "amount": -1931.51,
+   "acct": 5000
+  },
+  {
+   "reg": 2000,
+   "post": "2026-08-16",
+   "desc": "LEDGERLY SOFTWARE",
+   "amount": -30.0,
+   "acct": 6700
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-18",
+   "desc": "TAP PAY *DEPOSIT 57188",
+   "amount": 1662.06,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-18",
+   "desc": "METRO WATER DEPT",
+   "amount": -143.06,
+   "acct": 6200
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-19",
+   "desc": "TAP PAY *DEPOSIT 52600",
+   "amount": 1149.68,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-19",
+   "desc": "VENMO *JKELLY",
+   "amount": -120.0,
+   "acct": 6990
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-20",
+   "desc": "TAPPAY DEPOSIT 0820",
+   "amount": 1176.75,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-20",
+   "desc": "ONLINE TRANSFER TO PERSONAL ...5590",
+   "amount": -3000.0,
+   "acct": 3100
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-21",
+   "desc": "TAPPAY DEPOSIT 0821",
+   "amount": 1369.16,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-21",
+   "desc": "Mobile Deposit - Cafe Bloom",
+   "amount": 881.36,
+   "acct": 4100
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-21",
+   "desc": "PayPilot Tax",
+   "amount": -1165.86,
+   "acct": 6000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-21",
+   "desc": "PAYPILOT PAYROLL NET PAY",
+   "amount": -5348.29,
+   "acct": 6000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-22",
+   "desc": "TapPay Inc. Deposit",
+   "amount": 1653.63,
+   "acct": 4000
+  },
+  {
+   "reg": 2000,
+   "post": "2026-08-22",
+   "desc": "PACK RIGHT SUPPLY CO",
+   "amount": -317.82,
+   "acct": 5100
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-23",
+   "desc": "VALLEY FLOUR MILL ACH",
+   "amount": -891.44,
+   "acct": 5000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-23",
+   "desc": "NORTHGATE FOODSVC ACH",
+   "amount": -2245.54,
+   "acct": 5000
+  },
+  {
+   "reg": 2000,
+   "post": "2026-08-24",
+   "desc": "COSTWISE WHOLESALE #212",
+   "amount": -323.58,
+   "acct": 5000
+  },
+  {
+   "reg": 2000,
+   "post": "2026-08-24",
+   "desc": "COSTWISE WHSE 212",
+   "amount": -504.03,
+   "acct": 5000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-25",
+   "desc": "TapPay Inc. Deposit",
+   "amount": 1768.18,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-26",
+   "desc": "TAPPAY DEPOSIT 0826",
+   "amount": 1370.75,
+   "acct": 4000
+  },
+  {
+   "reg": 2000,
+   "post": "2026-08-26",
+   "desc": "PACK RIGHT SUPPLY CO",
+   "amount": -210.64,
+   "acct": 5100
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-27",
+   "desc": "TapPay Inc. Deposit",
+   "amount": 1441.43,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-28",
+   "desc": "TAP PAY *DEPOSIT 43151",
+   "amount": 1459.27,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-28",
+   "desc": "SERVICE CHARGE",
+   "amount": -15.0,
+   "acct": 6800
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-28",
+   "desc": "ONLINE TRANSFER TO SAV ...4821",
+   "amount": -2000.0,
+   "acct": 1090
+  },
+  {
+   "reg": 1010,
+   "post": "2026-08-28",
+   "desc": "TRANSFER FROM CHK ...1180",
+   "amount": 2000.0,
+   "acct": 1090
+  },
+  {
+   "reg": 1000,
+   "post": "2026-08-29",
+   "desc": "TAPPAY DEPOSIT 0829",
+   "amount": 1625.07,
+   "acct": 4000
+  },
+  {
+   "reg": 1010,
+   "post": "2026-08-31",
+   "desc": "INTEREST PAYMENT",
+   "amount": 18.16,
+   "acct": 4900
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-01",
+   "desc": "TAP PAY *DEPOSIT 50943",
+   "amount": 1581.51,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-01",
+   "desc": "Maple St Properties LLC",
+   "amount": -4200.0,
+   "acct": 6100
+  },
+  {
+   "reg": 2000,
+   "post": "2026-09-01",
+   "desc": "COSTWISE WHOLESALE #212",
+   "amount": -312.44,
+   "acct": 5000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-02",
+   "desc": "TAPPAY DEPOSIT 0902",
+   "amount": 1144.8,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-02",
+   "desc": "NORTHGATE FOODSVC ACH",
+   "amount": -2067.24,
+   "acct": 5000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-03",
+   "desc": "TapPay Inc. Deposit",
+   "amount": 1289.19,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-03",
+   "desc": "CAFE BLOOM ACH CREDIT",
+   "amount": 1288.9,
+   "acct": 4100
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-03",
+   "desc": "TAPPAY MONTHLY FEES AUG",
+   "amount": -980.59,
+   "acct": 6800
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-04",
+   "desc": "TAP PAY *DEPOSIT 80710",
+   "amount": 1077.04,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-04",
+   "desc": "PayPilot Tax",
+   "amount": -1176.01,
+   "acct": 6000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-04",
+   "desc": "PAYPILOT PAYROLL NET PAY",
+   "amount": -5385.03,
+   "acct": 6000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-05",
+   "desc": "TapPay Inc. Deposit",
+   "amount": 1532.08,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-05",
+   "desc": "SHIELD MUTUAL INS PREM",
+   "amount": -385.0,
+   "acct": 6500
+  },
+  {
+   "reg": 2000,
+   "post": "2026-09-05",
+   "desc": "PAPERCLIP OFFICE",
+   "amount": -82.03,
+   "acct": 6950
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-08",
+   "desc": "TapPay Inc. Deposit",
+   "amount": 1511.46,
+   "acct": 4000
+  },
+  {
+   "reg": 2000,
+   "post": "2026-09-08",
+   "desc": "PIXELREACH*ADS",
+   "amount": -134.59,
+   "acct": 6400
+  },
+  {
+   "reg": 2000,
+   "post": "2026-09-08",
+   "desc": "PACK RIGHT SUPPLY CO",
+   "amount": -187.77,
+   "acct": 5100
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-09",
+   "desc": "TAP PAY *DEPOSIT 48180",
+   "amount": 1303.47,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-09",
+   "desc": "Blue Heron Mkt payment",
+   "amount": 706.37,
+   "acct": 4100
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-09",
+   "desc": "VALLEY FLOUR MILL ACH",
+   "amount": -827.82,
+   "acct": 5000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-09",
+   "desc": "NORTHGATE FOODSERVICE INV",
+   "amount": -2348.23,
+   "acct": 5000
+  },
+  {
+   "reg": 2000,
+   "post": "2026-09-09",
+   "desc": "COSTWISE WHSE 212",
+   "amount": -295.19,
+   "acct": 5000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-10",
+   "desc": "TAP PAY *DEPOSIT 97313",
+   "amount": 1286.08,
+   "acct": 4000
+  },
+  {
+   "reg": 2000,
+   "post": "2026-09-10",
+   "desc": "BRIGHTWAVE*INTERNET",
+   "amount": -89.99,
+   "acct": 6200
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-11",
+   "desc": "TAPPAY DEPOSIT 0911",
+   "amount": 1296.72,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-12",
+   "desc": "TapPay Inc. Deposit",
+   "amount": 1858.05,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-12",
+   "desc": "ONLINE PAYMENT TO VISA ...7702",
+   "amount": -2278.62,
+   "acct": 1090
+  },
+  {
+   "reg": 2000,
+   "post": "2026-09-12",
+   "desc": "PAYMENT THANK YOU",
+   "amount": 2278.62,
+   "acct": 1090
+  },
+  {
+   "reg": 2000,
+   "post": "2026-09-12",
+   "desc": "OVEN DOCTOR REPAIRS",
+   "amount": -486.5,
+   "acct": 6600
+  },
+  {
+   "reg": 2000,
+   "post": "2026-09-13",
+   "desc": "PIXELREACH ADS",
+   "amount": -139.63,
+   "acct": 6400
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-14",
+   "desc": "CITY POWER & LIGHT AUTOPAY",
+   "amount": -653.56,
+   "acct": 6200
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-15",
+   "desc": "TAPPAY DEPOSIT 0915",
+   "amount": 1542.45,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-15",
+   "desc": "Blue Heron Mkt payment",
+   "amount": 741.73,
+   "acct": 4100
+  },
+  {
+   "reg": 2000,
+   "post": "2026-09-15",
+   "desc": "CLOUDPOS* SUBSCRIPTION",
+   "amount": -69.0,
+   "acct": 6700
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-16",
+   "desc": "TapPay Inc. Deposit",
+   "amount": 1281.17,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-16",
+   "desc": "NORTHGATE FOODSERVICE INV",
+   "amount": -2393.92,
+   "acct": 5000
+  },
+  {
+   "reg": 2000,
+   "post": "2026-09-16",
+   "desc": "LEDGERLY SOFTWARE",
+   "amount": -30.0,
+   "acct": 6700
+  },
+  {
+   "reg": 2000,
+   "post": "2026-09-16",
+   "desc": "COSTWISE WHSE 212",
+   "amount": -466.93,
+   "acct": 5000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-17",
+   "desc": "TAPPAY DEPOSIT 0917",
+   "amount": 1442.03,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-18",
+   "desc": "TapPay Inc. Deposit",
+   "amount": 1139.81,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-18",
+   "desc": "METRO WATER DEPT",
+   "amount": -154.38,
+   "acct": 6200
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-18",
+   "desc": "PAYPILOT TAX IMPOUND",
+   "amount": -1275.48,
+   "acct": 6000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-18",
+   "desc": "PAYPILOT PAYROLL NET PAY",
+   "amount": -5131.47,
+   "acct": 6000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-19",
+   "desc": "TAPPAY DEPOSIT 0919",
+   "amount": 1461.56,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-20",
+   "desc": "ONLINE TRANSFER TO PERSONAL ...5590",
+   "amount": -3000.0,
+   "acct": 3100
+  },
+  {
+   "reg": 2000,
+   "post": "2026-09-20",
+   "desc": "COSTWISE WHSE 212",
+   "amount": -361.52,
+   "acct": 5000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-21",
+   "desc": "Greenleaf Grocers catering",
+   "amount": 673.33,
+   "acct": 4100
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-22",
+   "desc": "TAPPAY DEPOSIT 0922",
+   "amount": 1729.31,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-23",
+   "desc": "TAPPAY DEPOSIT 0923",
+   "amount": 1465.46,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-23",
+   "desc": "VALLEY FLOUR MILL ACH",
+   "amount": -738.13,
+   "acct": 5000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-23",
+   "desc": "NORTHGATE FOODSERVICE INV",
+   "amount": -2360.31,
+   "acct": 5000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-24",
+   "desc": "TAPPAY DEPOSIT 0924",
+   "amount": 1302.1,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-24",
+   "desc": "CHECK #1043",
+   "amount": -350.0,
+   "acct": 6990
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-25",
+   "desc": "TapPay Inc. Deposit",
+   "amount": 1217.94,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-26",
+   "desc": "TapPay Inc. Deposit",
+   "amount": 1911.21,
+   "acct": 4000
+  },
+  {
+   "reg": 2000,
+   "post": "2026-09-26",
+   "desc": "PACK RIGHT SUPPLY CO",
+   "amount": -297.39,
+   "acct": 5100
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-28",
+   "desc": "MONTHLY SERVICE FEE",
+   "amount": -15.0,
+   "acct": 6800
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-29",
+   "desc": "TAPPAY DEPOSIT 0929",
+   "amount": 1939.41,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-30",
+   "desc": "TAP PAY *DEPOSIT 25600",
+   "amount": 1167.59,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-09-30",
+   "desc": "ONLINE TRANSFER TO SAV ...4821",
+   "amount": -2000.0,
+   "acct": 1090
+  },
+  {
+   "reg": 1010,
+   "post": "2026-09-30",
+   "desc": "INTEREST PAYMENT",
+   "amount": 17.78,
+   "acct": 4900
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-01",
+   "desc": "TAPPAY DEPOSIT 1001",
+   "amount": 1428.44,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-01",
+   "desc": "MAPLE ST PROPERTIES RENT",
+   "amount": -4200.0,
+   "acct": 6100
+  },
+  {
+   "reg": 1010,
+   "post": "2026-10-01",
+   "desc": "TRANSFER FROM CHK ...1180",
+   "amount": 2000.0,
+   "acct": 1090
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-02",
+   "desc": "TAPPAY DEPOSIT 1002",
+   "amount": 1247.8,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-02",
+   "desc": "PayPilot Tax",
+   "amount": -1234.27,
+   "acct": 6000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-02",
+   "desc": "Northgate Food Service",
+   "amount": -2378.79,
+   "acct": 5000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-02",
+   "desc": "PAYPILOT PAYROLL NET PAY",
+   "amount": -5196.3,
+   "acct": 6000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-03",
+   "desc": "TapPay Inc. Deposit",
+   "amount": 1718.45,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-03",
+   "desc": "ACH CREDIT BLUE HERON MARKET",
+   "amount": 728.64,
+   "acct": 4100
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-03",
+   "desc": "TAPPAY MONTHLY FEES SEP",
+   "amount": -975.89,
+   "acct": 6800
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-05",
+   "desc": "SHIELD MUTUAL INS PREM",
+   "amount": -385.0,
+   "acct": 6500
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-06",
+   "desc": "TAP PAY *DEPOSIT 10128",
+   "amount": 1792.4,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-07",
+   "desc": "TAPPAY DEPOSIT 1007",
+   "amount": 1472.73,
+   "acct": 4000
+  },
+  {
+   "reg": 2000,
+   "post": "2026-10-07",
+   "desc": "PIXELREACH ADS",
+   "amount": -125.59,
+   "acct": 6400
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-08",
+   "desc": "TapPay Inc. Deposit",
+   "amount": 1203.77,
+   "acct": 4000
+  },
+  {
+   "reg": 2000,
+   "post": "2026-10-08",
+   "desc": "PACKRIGHT SUPPLY",
+   "amount": -409.81,
+   "acct": 5100
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-09",
+   "desc": "TapPay Inc. Deposit",
+   "amount": 1166.54,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-09",
+   "desc": "CAFE BLOOM ACH CREDIT",
+   "amount": 1039.69,
+   "acct": 4100
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-09",
+   "desc": "VALLEY FLOUR MILL ACH",
+   "amount": -920.27,
+   "acct": 5000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-09",
+   "desc": "NORTHGATE FOODSVC ACH",
+   "amount": -2316.3,
+   "acct": 5000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-10",
+   "desc": "TAPPAY DEPOSIT 1010",
+   "amount": 1580.83,
+   "acct": 4000
+  },
+  {
+   "reg": 2000,
+   "post": "2026-10-10",
+   "desc": "BRIGHTWAVE*INTERNET",
+   "amount": -89.99,
+   "acct": 6200
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-12",
+   "desc": "ONLINE PAYMENT TO VISA ...7702",
+   "amount": -2952.98,
+   "acct": 1090
+  },
+  {
+   "reg": 2000,
+   "post": "2026-10-12",
+   "desc": "PAYMENT THANK YOU",
+   "amount": 2952.98,
+   "acct": 1090
+  },
+  {
+   "reg": 2000,
+   "post": "2026-10-12",
+   "desc": "COSTWISE WHSE 212",
+   "amount": -268.07,
+   "acct": 5000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-13",
+   "desc": "TAP PAY *DEPOSIT 45761",
+   "amount": 1568.42,
+   "acct": 4000
+  },
+  {
+   "reg": 2000,
+   "post": "2026-10-13",
+   "desc": "PACK RIGHT SUPPLY CO",
+   "amount": -331.91,
+   "acct": 5100
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-14",
+   "desc": "TAP PAY *DEPOSIT 46572",
+   "amount": 1337.92,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-14",
+   "desc": "CITY POWER & LIGHT AUTOPAY",
+   "amount": -658.79,
+   "acct": 6200
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-15",
+   "desc": "TAPPAY DEPOSIT 1015",
+   "amount": 1177.1,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-15",
+   "desc": "CAFE BLOOM ACH CREDIT",
+   "amount": 1056.59,
+   "acct": 4100
+  },
+  {
+   "reg": 2000,
+   "post": "2026-10-15",
+   "desc": "CLOUDPOS* SUBSCRIPTION",
+   "amount": -69.0,
+   "acct": 6700
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-16",
+   "desc": "TAPPAY DEPOSIT 1016",
+   "amount": 1416.51,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-16",
+   "desc": "PayPilot Tax",
+   "amount": -1245.84,
+   "acct": 6000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-16",
+   "desc": "Northgate Food Service",
+   "amount": -2362.38,
+   "acct": 5000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-16",
+   "desc": "PAYPILOT PAYROLL NET PAY",
+   "amount": -5340.84,
+   "acct": 6000
+  },
+  {
+   "reg": 2000,
+   "post": "2026-10-16",
+   "desc": "LEDGERLY SOFTWARE",
+   "amount": -30.0,
+   "acct": 6700
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-17",
+   "desc": "TapPay Inc. Deposit",
+   "amount": 1889.42,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-18",
+   "desc": "METRO WATER DEPT",
+   "amount": -155.88,
+   "acct": 6200
+  },
+  {
+   "reg": 2000,
+   "post": "2026-10-19",
+   "desc": "PAPERCLIP OFFICE",
+   "amount": -64.32,
+   "acct": 6950
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-20",
+   "desc": "TapPay Inc. Deposit",
+   "amount": 1482.64,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-20",
+   "desc": "ONLINE TRANSFER TO PERSONAL ...5590",
+   "amount": -3000.0,
+   "acct": 3100
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-21",
+   "desc": "TAP PAY *DEPOSIT 17455",
+   "amount": 1342.49,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-21",
+   "desc": "DEPOSIT CHECK GREENLEAF GROCERS",
+   "amount": 860.84,
+   "acct": 4100
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-22",
+   "desc": "TAP PAY *DEPOSIT 73121",
+   "amount": 1226.63,
+   "acct": 4000
+  },
+  {
+   "reg": 2000,
+   "post": "2026-10-22",
+   "desc": "POS PURCHASE 4471 MAIN ST",
+   "amount": -64.18,
+   "acct": 6990
+  },
+  {
+   "reg": 2000,
+   "post": "2026-10-22",
+   "desc": "COSTWISE WHSE 212",
+   "amount": -527.19,
+   "acct": 5000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-23",
+   "desc": "TAPPAY DEPOSIT 1023",
+   "amount": 1294.84,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-23",
+   "desc": "VALLEY FLOUR MILL ACH",
+   "amount": -804.97,
+   "acct": 5000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-23",
+   "desc": "NORTHGATE FOODSERVICE INV",
+   "amount": -1951.06,
+   "acct": 5000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-24",
+   "desc": "TAP PAY *DEPOSIT 68118",
+   "amount": 1749.71,
+   "acct": 4000
+  },
+  {
+   "reg": 2000,
+   "post": "2026-10-24",
+   "desc": "COSTWISE WHSE 212",
+   "amount": -371.85,
+   "acct": 5000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-27",
+   "desc": "TAP PAY *DEPOSIT 16867",
+   "amount": 1939.72,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-27",
+   "desc": "Greenleaf Grocers catering",
+   "amount": 705.09,
+   "acct": 4100
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-28",
+   "desc": "TAP PAY *DEPOSIT 17555",
+   "amount": 1378.23,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-28",
+   "desc": "MONTHLY SERVICE FEE",
+   "amount": -15.0,
+   "acct": 6800
+  },
+  {
+   "reg": 2000,
+   "post": "2026-10-28",
+   "desc": "PIXELREACH*ADS",
+   "amount": -137.61,
+   "acct": 6400
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-29",
+   "desc": "TAP PAY *DEPOSIT 53140",
+   "amount": 1314.54,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-29",
+   "desc": "ONLINE TRANSFER TO SAV ...4821",
+   "amount": -2000.0,
+   "acct": 1090
+  },
+  {
+   "reg": 1010,
+   "post": "2026-10-29",
+   "desc": "TRANSFER FROM CHK ...1180",
+   "amount": 2000.0,
+   "acct": 1090
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-30",
+   "desc": "TapPay Inc. Deposit",
+   "amount": 1109.91,
+   "acct": 4000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-30",
+   "desc": "PayPilot Tax",
+   "amount": -1279.7,
+   "acct": 6000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-30",
+   "desc": "ONLINE PAYMENT TO VISA ...7702",
+   "amount": -1800.0,
+   "acct": 1090
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-30",
+   "desc": "PAYPILOT PAYROLL NET PAY",
+   "amount": -5402.02,
+   "acct": 6000
+  },
+  {
+   "reg": 1000,
+   "post": "2026-10-31",
+   "desc": "TAPPAY DEPOSIT 1031",
+   "amount": 1603.13,
+   "acct": 4000
+  },
+  {
+   "reg": 1010,
+   "post": "2026-10-31",
+   "desc": "INTEREST PAYMENT",
+   "amount": 20.98,
+   "acct": 4900
+  }
+ ]
+}

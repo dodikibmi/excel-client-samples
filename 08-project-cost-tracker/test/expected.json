@@ -1,0 +1,65 @@
+{
+ "week_ending": "2026-11-13",
+ "projects": {
+  "P-2401": {
+   "week": "2026-11-13",
+   "sheet": "P-2401",
+   "project": "Riverside Medical Clinic fit-out",
+   "contract": 1250000,
+   "budget": 1050000,
+   "committed": 971600,
+   "actual": 812798,
+   "earned": 824520.0,
+   "field": 0.752689,
+   "shop": 0.980667,
+   "cpi": 1.014422,
+   "fac": 1037538.41,
+   "status": "On track"
+  },
+  "P-2402": {
+   "week": "2026-11-13",
+   "sheet": "P-2402",
+   "project": "Harbor Point logistics warehouse",
+   "contract": 2400000,
+   "budget": 2226000,
+   "committed": 1549620,
+   "actual": 1155661,
+   "earned": 1035120.0,
+   "field": 0.480612,
+   "shop": 0.349091,
+   "cpi": 0.895695,
+   "fac": 2431619.6,
+   "status": "At risk"
+  },
+  "P-2403": {
+   "week": "2026-11-13",
+   "sheet": "P-2403",
+   "project": "Oakmont Middle School modernization",
+   "contract": 1780000,
+   "budget": 1530000,
+   "committed": 1430237,
+   "actual": 1170412,
+   "earned": 1118540.0,
+   "field": 0.721854,
+   "shop": 0.81,
+   "cpi": 0.955681,
+   "fac": 1590453.22,
+   "status": "Watch"
+  }
+ },
+ "planted_status": {
+  "P-2401": "On track",
+  "P-2402": "At risk",
+  "P-2403": "Watch"
+ },
+ "portfolio": {
+  "contract": 5430000,
+  "budget": 4806000,
+  "committed": 3951457,
+  "actual": 3138871,
+  "earned": 2978180.0,
+  "fac": 5059611.23,
+  "cpi": 0.948806
+ },
+ "history_rows_seed": 21
+}

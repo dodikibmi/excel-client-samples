@@ -1,0 +1,11 @@
+Cost code,Description,Category
+26-100,Labor - rough-in,Labor
+26-110,Labor - trim and finish,Labor
+26-200,"Material - wire, conduit and fittings",Material
+26-210,Material - switchgear and panels,Material
+26-220,Material - lighting fixtures,Material
+26-300,Equipment - lifts and rentals,Equipment
+26-400,Subcontract - fire alarm and low voltage,Subcontract
+26-500,Shop fabrication - prefab assemblies,Shop fabrication
+26-510,Shop fabrication - panel and rack build,Shop fabrication
+26-900,General conditions and supervision,General

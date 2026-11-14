@@ -1,0 +1,1030 @@
+Customer No,Full Name,Email,Phone,Company,Street,City,State,ZIP,Created,Last Order,Orders,Total Spent,Marketing Opt-in
+WS-100008,edward price,edward.price@example.net,5035553057,,4775 elm blvd.,Portland,OR,97205,2022-05-21,2025-09-12,10,"$2,236.79",No
+WS-100017,Ravi Iqbal ,ravi_iqbal @example.org,312.555.1899,,4557  Juniper Street,Chicago,IL,60607,2024-08-25,2025-08-21,3,$394.89,Yes
+WS-100026,Mia Usman ,mia_usman@example.org,7195554469,,1832  Oak Lane,Colorado Springs,CO,80905,2026-04-27,2026-06-04,4,$425.69,Yes
+WS-100032,edward drake,EDRAKE@EXAMPLE.ORG,312-555-5240,,8773 GRANITE ROAD,CHICAGO,Illinois,60614,2024-05-15,2025-10-14,2,$488.62,No
+WS-100041,Yuki Evans,yevans@example.com,(312) 555-5552,,4930 park rd.,chicago,IL,60614-1843,2023-10-31,2024-10-13,8,"$1,692.30",Yes
+WS-100043,TARA RAMIREZ,TRAMIREZ@EXAMPLE.ORG,6195550942,,8125 Summit Ct.,San Diego,CA,92101-1922,2024-02-15,2026-07-25,14,"$2,295.75",No
+WS-100050,Anthony Jensen,anthony_jensen@example.net,,,737 SUMMIT DRIVE,FORT COLLINS,co,80525-1309,2024-11-21,2026-08-16,6,1187.30,No
+WS-100060,Mei  Moss,mmoss@example.com ,617-555-6545,,4909 ASPEN DRIVE,Boston,ma,02116,2026-04-11,2026-10-12,7,$729.92,No
+WS-100064,HECTOR BOOTH,hector_booth@example.net,720.555.5360,,2931 Juniper Road,Boulder,CO,80302,2023-05-15,2023-07-02,2,$278.48,Yes
+WS-100072,ruby pike,rpike@example.com,(510)555-5778,,4489 Canyon Road,oakland,California,94610,2024-04-15,2024-09-24,8,"$1,773.14",No
+WS-100077,Noah Iqbal,niqbal@example.org,312.555.9029,,6769 Lake Street,chicago,Illinois,60614-5997,2023-07-17,2023-11-22,12,2260.72,Yes
+WS-100090,Margaret Barnes,margaret_barnes@example.com,7195550188,,965 Willow Court,Colorado Springs,co,80909,2025-11-01,2026-06-13,3,$207.68,Yes
+WS-100095,Danny Kerr,daniel.kerr@example.net,(303)555-4695,,2713 Meadow Blvd.,denver,CO,80205-8609,2024-07-18,2025-10-21,4,$386.35,Yes
+WS-100099,ASTRID WALSH,astrid.walsh@example.com,1-312-555-2753,,3758 sage rd.,Chicago,Illinois,60607,2024-10-20,2025-09-08,4,469.65,Yes
+WS-100106,Pablo Yamada,pabloy@example.org,+1 720-555-1222,,5119 River Lane,Boulder,Colorado,80301,2023-06-05,2026-05-11,1,211.37,No
+WS-100117,Sofia Ingram,sofiai@example.net,,,9833 Valley Blvd.,portland,OR,97205,2023-12-02,2026-08-14,2,$233.82,Yes
+WS-100122,Gloria Mendez,gmendez@example.org,718-555-7857,,5881 Summit Drive,Brooklyn,NY,11201,2022-08-29,2024-02-28,3,$766.96,No
+WS-100128,Nora Kerr,nora.kerr@example.net,7205556597,,7958 Ridge Rd,Boulder,Colorado,80304,2022-08-20,2025-10-10,11,"$2,106.02",No
+WS-100137,PAOLO MORENO,pmoreno5 @example.org,(719) 555-6353,,9238 Meadow Ln.,colorado springs,Colorado,80905-6378,2022-07-06,2023-09-01,3,$421.93,Yes
+WS-100141,ABIGAIL TRAN ,atran@example.org,617.555.4423,,136 MESA LANE,Boston,ma,02108,2023-08-12,2024-12-31,11,"$2,265.41",No
+WS-100150,Abigail Ferris,abigail.ferris @example.org,203-555-6462,,7671 Juniper Ct.,New Haven,CT,06511,2024-11-08,2026-06-19,12,"$3,111.12",Yes
+WS-100160,OLIVIA NOBLE,olivia.noble@example.org,(312) 555-9205,,9758 Elm Ln,Chicago,IL,60614,2025-11-01,2026-09-17,8,$476.59,No
+WS-100165,logan usman,logan_usman @example.com,(719)555-2946,,3295  Lake Drive,COLORADO SPRINGS,co,80903,2026-02-19,2026-03-09,11,"$2,471.14",No
+WS-100169,Diego Shaw,diego.shaw@example.org,(719)555-5646,,1766 Mesa Dr,Colorado Springs,Colorado,80905,2026-05-11,2026-07-30,13,"$1,772.65",Yes
+WS-100177,Noah  Reyes,nreyes@example.org,(303) 555-1088,,5602 Canyon Road,Denver,CO,80202,2022-08-28,2025-01-24,2,$248.44,Yes
+WS-100182,Abigail Jensen,ajensen@example.org,970-555-8630,,9507 Birch Court,Fort Collins,CO,80521,2023-10-24,2024-03-07,1,$113.54,No
+WS-100194,Jimmy Nguyen,jamesn@example.com,+1 303-555-4339,,5943 Alpine Lane,Denver,CO,80205,2022-05-25,2026-02-01,11,$740.25,Yes
+WS-100201,Leah Reed ,Leah.reed@example.net,720-555-4853,,7817 lake rd.,Denver,CO,80205,2023-05-05,2023-10-05,10,$881.39,Yes
+WS-100203,lucas shaw ,lucas_shaw@example.com,617.555.2587,,6143 Meadow Boulevard,BOSTON,MA,02108,2023-04-05,2023-08-12,14,"$1,379.92",No
+WS-100210,LIAM MORGAN,lmorgan@example.org,719-555-6176,,609 ALPINE DRIVE,COLORADO SPRINGS,CO,80905,2022-10-11,2024-01-12,10,1166.23,Yes
+WS-100217,Holly  Gill,holly.gill@example.com,303.555.3988,,1857 Spruce St,Boulder,CO,80301,2023-05-12,2023-10-19,8,$730.02,No
+WS-100229,jennifer patel,jpatel@example.org,(970)555-4560,,809 Canyon Ln,FORT COLLINS,Colorado,80521,2025-10-02,2026-02-26,6,1022.01,Yes
+WS-100234,Jonah  Shaw,Jonahs@example.org,+1 602-555-2177,,2196 valley rd.,Phoenix,AZ,85004,2025-05-21,2026-08-23,1,$190.92,Yes
+WS-100243,Ethan Young,EYOUNG@EXAMPLE.NET,503-555-0774,,3943  Pine Avenue,Portland,Oregon,97201,2026-03-14,2026-09-28,6,1272.51,No
+WS-100247,Ethan Abbott,EABBOTT@EXAMPLE.ORG,+1 206-555-9914,,2206 juniper ct.,SEATTLE,Washington,98101,2022-03-20,2024-05-01,5,$509.18,Yes
+WS-100255,Benjamin Turner, bturner@example.com,5035550042,,7576  Aspen Lane,Portland,OR,97201,2026-04-02,2026-04-05,11,"$2,374.08",Yes
+WS-100265,Priya Gomez,priya_gomez@example.org,3035551914,,2528  Oak Lane,Boulder,CO,80305,2026-06-16,2026-09-08,7,$458.34,No
+WS-100271,Leo Vargas,leov@example.com ,303-555-1728,,1951 Alpine Ln,Boulder,co,80303,2022-02-05,2024-06-18,13,"$1,234.60",Yes
+WS-100277,Emma Ford,emma.ford@example.org,(719) 555-4214,,17 Spruce Avenue,Colorado Springs,CO,80903,2025-01-25,2025-03-12,5,$869.24,Yes
+WS-100284,Alexander Lane,alexanderl@example.com,3125550315,,6664 Mesa Blvd,Chicago,Illinois,60607,2024-07-12,2025-05-01,12,"$1,029.49",No
+WS-100289,Danielle Kerr,danielle.kerr@example.org,1-720-555-7486,,3379 CANYON DRIVE,Denver,CO,80205,2023-11-25,2026-07-26,9,"$1,390.02",No
+WS-100295,Christopher Sharp,christopher_sharp@example.net,720-555-7576,,6675 highland blvd.,boulder,CO,80303,2023-10-20,2024-04-16,2,$469.78,Yes
+WS-100302,Victor Torres,vtorres@example.org ,802-555-8312,,4076 Pine Road,burlington,VT,05401,2024-10-03,2025-05-08,1,84.88,No
+WS-100308,Paolo Mendez, pmendez@example.org,(718)555-4507,,2493 Valley Ave,Brooklyn,ny,11201-8218,2022-06-21,2025-01-02,4,$815.87,No
+WS-100316,Dylan Sato,dylan_sato@example.com ,+1 303-555-3523,,7444 Lake St.,Denver,CO,80202,2023-10-05,2026-07-27,7,"$1,004.41",Yes
+WS-100323,laura eriksen,laurae@example.org,(303) 555-3977,,535 WILLOW ROAD,Denver,CO,80205,2023-04-16,2025-12-21,4,$805.81,Yes
+WS-100333,Jennifer Nash,jennifernash76@example.net,+1 303-555-9030,,4592 park ln.,DENVER,CO,80205,2025-11-14,2026-07-05,14,"$2,372.15",No
+WS-100338,Ivan Reed,Ivan_reed@example.org,(303) 555-2857,,330  Spruce Avenue,Denver,CO,80202-3497,2025-07-03,2026-03-11,12,"$1,057.22",Yes
+WS-100348,Laura Duarte,lduarte@example.org,(720)555-8516,,109 River Boulevard,Denver,co,80210,2025-08-14,2026-07-17,13,"$1,437.42",Yes
+WS-100355,Pablo Drake,Pablo.drake@example.com,505.555.1674,,8573  Cedar Avenue,santa fe,New Mexico,87501,2025-03-31,2026-10-02,12,"$2,124.99",No
+WS-100362,Claire  Grant ,claire.grant @example.org,1-612-555-1678,,387 lake ct.,Minneapolis,MN,55401,2022-03-06,2023-08-15,3,$387.18,Yes
+WS-100366,Omar Mendez,omarm@example.net ,8015553572,,5340 Sage Boulevard,salt lake city,UT,84105,2023-08-23,2025-05-14,12,2746.07,No
+WS-100371,Wendy  Young,wyoung@example.org,+1 801-555-7278,,23 LAKE LANE,SALT LAKE CITY,Utah,84101,2024-03-11,2026-02-13,9,$647.40,Yes
+WS-100382,Megan  Irwin,mirwin@example.net,+1 970-555-0963,,8476 Birch Street,fort collins,CO,80521,2023-08-01,2026-04-03,6,$917.20,No
+WS-100386,LEAH CARTER,lcarter@example.org,505-555-1876,,3206  Pine Lane,Santa Fe,NM,87501,2022-03-20,2024-03-31,14,"$1,478.06",Yes
+WS-100393,Ben Chen, benjamin.chen@example.org,503.555.5424,,8187 Elm Dr.,Portland,OR,97209,2022-08-07,2023-05-09,8,$544.86,Yes
+WS-100401,Chloe Yates,cyates@example.com,,,8954 LAKE ROAD,Burlington,vt,05401,2024-08-19,2026-06-02,11,"$2,760.34",No
+WS-100411,Alexander Webb, alexander.webb@example.net,510.555.3114,,9469  Oak Boulevard,Oakland,California,94607,2026-05-08,2026-09-27,8,$845.31,No
+WS-100414,Omar Voss,omar_voss@example.com,3035559399,,6438  Granite Boulevard,boulder,CO,80304,2023-04-27,2024-11-11,7,"$1,797.42",No
+WS-100420,Emma Hart,emma.hart@example.org,6175553439,,6444 alpine ave.,CAMBRIDGE,ma,02139,2023-06-15,2023-11-27,10,"$1,905.14",Yes
+WS-100432,Zoe Patel,zoep@example.com,,,8132 Oak Street,Boulder,CO,80305,2023-01-06,2026-08-23,10,"$2,508.04",No
+WS-100437,Laura Rhodes, laura.rhodes@example.net,+1 303-555-2631,,2865 Meadow Ln.,Boulder,CO,80303-3752,2022-09-19,2023-11-23,10,"$2,179.05",Yes
+WS-100445,Noah  Hayes,noahh@example.net,+1 206-555-3088,,7885 Elm Road,Seattle,WA,98101,2023-02-21,2023-11-11,11,1596.29,Yes
+WS-100451,THEO KELLER,theo_keller@example.com,(617)555-4086,,4463 park st.,Boston,ma,02108,2022-03-26,2026-09-26,5,$540.16,No
+WS-100458,Zoe Ferris,zoe.ferris@example.org,206.555.7000,,7111 Cedar Avenue,Seattle,WA,98105,2023-04-10,2023-07-15,2,$295.87,Yes
+WS-100463,ERIN FOX,ERIN_FOX@EXAMPLE.COM,970.555.9456,,1359 Birch Road,fort collins,CO,80525-7379,2023-01-08,2026-03-08,3,$744.18,Yes
+WS-100470,Theo Bauer,theob@example.org,718-555-9351,,7453 ridge ave.,BROOKLYN,ny,11211,2022-02-19,2024-06-10,2,$156.46,Yes
+WS-100479,Theo Ramirez,theor@example.org,,,3312  Park Drive,seattle,WA,98105,2025-08-12,2026-06-12,11,2517.71,No
+WS-100487,Sofia Crane,Sofiac@example.net,(312)555-0473,Self-employed,200 Oak Court,Chicago,IL,60614,2023-04-24,2023-09-13,5,546.26,Yes
+WS-100494,Anna Jensen,ajensen@example.com,1-801-555-2185,,7073  Granite Boulevard,SALT LAKE CITY,ut,84102,2023-11-15,2026-06-29,10,"$1,714.67",No
+WS-100499,ELIZABETH WALSH,elizabeth.walsh@example.net,(206)555-7352,,5170 alpine ln.,Seattle,WA,98103,2025-12-28,2026-03-11,10,"$2,090.60",Yes
+WS-100509,ISAAC DRAKE,isaac_drake@example.net,+1 718-555-6515,,9098 ALPINE BOULEVARD,Brooklyn,NY,11211,2023-08-11,2024-11-18,2,$513.31,No
+WS-100515,Ivy Ueda,ivy.ueda@example.net,(303)555-4640,,6487 juniper rd.,Boulder,co,80302,2024-08-14,2026-05-10,10,"$1,754.62",No
+WS-100524,Diego Kim,DIEGO.KIM@EXAMPLE.NET,612-555-9779,,7653 River Rd.,Minneapolis,mn,55405,2026-06-13,2026-07-15,3,$698.22,Yes
+WS-100526,NICHOLAS ELLIS , nellis@example.org,(719) 555-1223,,7339 RIDGE LANE,colorado springs,Colorado,80903,2022-10-04,2022-12-10,11,"$1,770.96",Yes
+WS-100538,Kenji Hale,KENJIHALE62@EXAMPLE.ORG,(206) 555-9336,,4900 maple rd.,Seattle,WA,98101,2024-11-02,2026-08-26,14,"$2,812.10",Yes
+WS-100545,Danny Moreno,daniel.moreno@example.net,(720) 555-0450,,8034 Valley Avenue,Denver,CO,80203,2023-01-12,2025-05-21,13,"$1,826.63",No
+WS-100550,felix moreno,Fmoreno@example.com,(970)555-5554,,4804 meadow ct.,Fort Collins,Colorado,80525,2025-01-08,2026-01-04,7,$890.42,Yes
+WS-100554,Oscar Olsen,oscar.olsen@example.com,7205557563,,4408 Maple St.,Denver,Colorado,80203,2025-01-14,2025-06-25,12,$782.39,Yes
+WS-100560,Iris Eriksen,Ieriksen@example.com,(503) 555-7587,,3861 river ave.,Portland,Oregon,97209-6607,2023-07-25,2024-02-19,14,921.20,No
+WS-100571,CARMEN MENDEZ,CARMEN_MENDEZ@EXAMPLE.ORG,1-503-555-5308,,6324 MEADOW ROAD,Portland,OR,97201,2022-03-15,2026-01-08,1,$190.63,No
+WS-100575,Paolo Ferris,paolo.ferris@example.net,512.555.1510,,3396 MESA LANE,austin,TX,78701,2024-05-16,2026-03-24,6,$693.60,Yes
+WS-100586,Megan Abbott,megan.abbott@example.org,1-503-555-0018,,8820 BIRCH DRIVE,Portland,Oregon,97201,2023-10-12,2026-09-13,2,$232.89,Yes
+WS-100589,Erin Bishop,erinbishop33@example.net,+1 617-555-0474,,4663 Granite Lane,CAMBRIDGE,ma,02138-8270,2023-11-13,2026-04-07,3,$605.66,No
+WS-100601,Tom Jensen,tjensen@example.com,718-555-1756,,8178 Highland Street,Brooklyn,New York,11211,2022-03-26,2022-10-06,6,1546.55,No
+WS-100604,tara webb,tara.webb@example.net,+1 303-555-1674,,1079 OAK LANE,Boulder,CO,80304,2022-05-07,2025-05-16,10,"$1,168.01",Yes
+WS-100610,Logan  Abbott,labbott6@example.net,(720) 555-2367,,4594 mesa ct.,boulder,CO,80301,2023-12-10,2024-01-29,9,"$2,077.33",Yes
+WS-100620,Sven Gill ,Sven.gill@example.org,617-555-0828,,3861  Sage Lane,Cambridge,MA,02138,2024-03-16,2025-10-13,8,$399.74,Yes
+WS-100629,Leah Ueda , leahu@example.net,(619) 555-0005,,9412 Oak Ave,San Diego,California,92103,2024-04-11,2026-09-21,4,$435.54,No
+WS-100636,Rebecca Vance, rvance@example.com,(617)555-0413,Self-employed,1339 Highland Avenue,Boston,Massachusetts,02108,2026-06-13,2026-10-18,4,891.20,Yes
+WS-100639,Ruby Hughes,ruby_hughes@example.org,(312)555-1341,,772 Highland St,chicago,IL,60614,2025-06-04,2026-02-20,4,$250.68,Yes
+WS-100650,Andy Khan, akhan@example.org,(619) 555-6878,,4531 aspen ave.,san diego,CA,92101,2025-11-14,2026-01-05,12,$569.76,No
+WS-100655,Steven Webb ,STEVENW@EXAMPLE.ORG,(970) 555-6548,,1506 Elm Blvd,fort collins,co,80521,2023-06-09,2025-03-17,8,"$1,591.92",Yes
+WS-100661,Mei Gill,mei_gill@example.org,6175559148,,8057 Willow Blvd.,Cambridge,MA,02141,2025-10-14,2026-06-17,4,$694.74,Yes
+WS-100666,Leah Barnes,leah_barnes @example.net,1-719-555-0329,,3555 granite blvd.,colorado springs,CO,80903,2022-04-13,2025-01-19,2,$410.03,Yes
+WS-100677,ELENA GARCIA,elenag@example.org ,,,1813 WILLOW AVENUE,Oakland,California,94610,2026-05-30,2026-10-26,3,$306.77,Yes
+WS-100682,Oscar Ingram,oingram@example.net,(801)555-0656,,7974 juniper ave.,Salt Lake City,UT,84101,2026-01-14,2026-09-29,6,572.65,Yes
+WS-100686,SAMUEL  FOSTER,sfoster @example.org,602-555-6389,,7648  Willow Court,Phoenix,AZ,85006,2024-07-26,2025-02-03,9,"$1,702.24",No
+WS-100697,Lucas Johansson ,lucasj @example.com,303.555.9061,,7584  Sage Drive,Boulder,co,80303,2025-05-29,2025-08-30,4,$990.09,Yes
+WS-100700,Lars Dawson,ldawson@example.net,1-720-555-0913,,237 park ln.,Denver,CO,80203,2026-06-09,2026-06-21,12,"$2,931.70",No
+WS-100711,Claire Ito,cito@example.com,+1 718-555-8933,,7333 Cedar Ct,brooklyn,NY,11211,2024-02-18,2026-08-20,1,$175.95,Yes
+WS-100719,WILLIAM KHAN,wkhan@example.com,(801) 555-2489,,6877 Canyon Road,salt lake city,UT,84102,2022-05-09,2023-11-07,4,142.79,No
+WS-100721,Ella Zhou, ellaz@example.com,+1 512-555-8076,,6222  Cedar Lane,Austin,TX,78704-9230,2022-05-14,2026-04-02,1,215.03,Yes
+WS-100730,Matthew Yamada,matthew.yamada@example.net ,206.555.8498,,3229 VALLEY STREET,Seattle,WA,98103,2024-01-15,2025-02-06,5,952.90,Yes
+WS-100741,Daniel  Larsen,Daniell@example.org,617-555-3762,,5773 meadow st.,Cambridge,ma,02141,2024-11-29,2025-04-07,6,"$1,514.15",No
+WS-100742,Grace Wade, grace.wade@example.com,(718) 555-8985,,9706 Juniper Rd,brooklyn,ny,11201,2022-06-11,2024-10-10,14,"$3,168.31",No
+WS-100751,Margaret  Garcia,margaretg@example.com,719.555.3953,,8293 Granite Blvd,colorado springs,co,80903,2024-08-27,2026-06-23,7,$456.12,No
+WS-100756,Katherine  Shaw,katherine.shaw@example.org,+1 720-555-7251,,8534 summit rd.,BOULDER,CO,80301,2022-04-23,2022-09-15,14,"$1,658.02",Yes
+WS-100768,Noah Noble, noah.noble@example.net,+1 312-555-0280,,609 Pine Ln.,chicago,il,60607,2023-12-30,2025-11-24,9,"$1,764.79",No
+WS-100772,THOMAS DIAZ,tdiaz@example.net,(303)555-9279,,4113 Canyon Ln,Denver,co,80206,2025-05-18,2026-05-30,1,$131.67,No
+WS-100782,Maria Ramirez ,mariar@example.net,612-555-4304,,6193 aspen st.,Minneapolis,MN,55401,2022-09-12,2022-10-02,5,$450.99,Yes
+WS-100790,Elena Bauer ,elena_bauer@example.org,1-612-555-0543,,5354 River Boulevard,Minneapolis,mn,55401,2022-02-27,2022-09-19,13,"$2,130.77",No
+WS-100791,JONAH GRANT,jgrant@example.net ,(312)555-6755,,9513 GRANITE STREET,Chicago,IL,60607,2025-04-11,2026-06-29,3,$590.94,Yes
+WS-100801,Leo Okafor ,LOKAFOR@EXAMPLE.NET,(619)555-0159,,692 juniper dr.,san diego,ca,92101,2023-04-07,2024-06-18,10,"$1,372.05",Yes
+WS-100805,Ella Pruitt,epruitt@example.org,303-555-0732,,4084 Granite Rd,Denver,Colorado,80210,2024-01-08,2024-09-22,6,"$1,236.98",Yes
+WS-100817,marco evans,marco.evans@example.org,512-555-5955,,9197 Highland Court,austin,TX,78701,2026-01-09,2026-02-03,9,"$1,852.22",Yes
+WS-100822,Michael  Mendez, michael.mendez@example.com,(617)555-1107,,8996 meadow ct.,Boston,ma,02108,2022-05-15,2024-05-26,3,$246.12,Yes
+WS-100829,NORA RAMIREZ,nramirez@example.org,(303)555-6141,,949 Valley Ln.,Boulder,co,80303,2022-08-08,2023-01-13,7,785.05,No
+WS-100835,WYATT HOLT, wyatt_holt@example.net,(617) 555-8607,,2958 Lake Dr.,Boston,MA,02116,2026-02-18,2026-04-15,11,$928.73,Yes
+WS-100844,Gloria Ortiz, gloria.ortiz@example.net,619-555-8028,,1253 Elm Rd,San Diego,California,92101,2022-09-12,2024-09-03,9,"$2,144.59",Yes
+WS-100850,Wyatt Wade,WYATT_WADE@EXAMPLE.ORG,(303)555-8461,,7912  Birch Boulevard,Denver,CO,80203,2024-09-24,2025-09-17,7,$755.25,No
+WS-100854,LIZ DAWSON,elizabeth_dawson@example.org,303-555-6021,,4527 Ridge Boulevard,Boulder,CO,80302,2023-05-17,2025-07-06,6,$819.52,Yes
+WS-100867,Benjamin Ford,benjamin.ford@example.org,503-555-8454,,4459  Cedar Road,portland,OR,97201,2022-12-02,2025-07-18,11,"$1,939.70",No
+WS-100873,EMMA RUSSO,emmar@example.org,(303) 555-1405,,9192 Ridge Dr,Denver,CO,80202,2024-11-27,2026-10-18,13,"$1,223.94",No
+WS-100875,Megan Quinn, mquinn@example.net,801-555-6449,,6346  Willow Court,salt lake city,UT,84102,2022-12-22,2025-12-20,13,"$1,631.63",No
+WS-100886,IRIS NASH,irisn@example.net,(617) 555-2639,,3659 spruce blvd.,Cambridge,MA,02139,2022-05-14,2024-03-31,8,"$1,643.51",Yes
+WS-100895,Felix Garcia,felixg@example.com,(719)555-5587,n/a,9039 Aspen Dr,COLORADO SPRINGS,co,80905,2026-05-09,2026-07-20,5,"$1,009.06",Yes
+WS-100899,Elena Hale,ehale @example.com,1-207-555-5047,,1725 Mesa Boulevard,Portland,ME,04102,2023-08-13,2023-11-06,9,1470.95,Yes
+WS-100904,REBECCA LOPEZ,rlopez@example.net,(617) 555-9898,,8827 Pine Court,Cambridge,MA,02138,2024-08-02,2025-01-13,4,$532.29,Yes
+WS-100914,Pablo Carter,pablo.carter@example.org,+1 207-555-8628,,6356 Juniper Dr,Portland,ME,04101,2022-01-16,2023-10-28,4,$993.32,No
+WS-100921,Mei Udall,mei.udall@example.org,(720)555-0378,,6966 HIGHLAND AVENUE,Boulder,CO,80301,2026-05-24,2026-09-29,2,$345.94,No
+WS-100930,Elizabeth Weber,elizabethw@example.org ,(720) 555-0493,,794 Maple Ave.,BOULDER,co,80303,2022-09-01,2025-02-22,14,"$2,740.94",Yes
+WS-100934,leah zimmer,leahzimmer78@example.net,1-617-555-1777,,3646 Meadow Avenue,Cambridge,ma,02138,2024-12-26,2025-07-20,5,$543.35,No
+WS-100941,Maria Hale ,MARIA_HALE@EXAMPLE.COM,6025553674,,378 meadow blvd.,Phoenix,az,85006-6699,2022-10-09,2025-10-12,11,$451.36,Yes
+WS-100948,Zoe Jensen,zoej @example.org,+1 719-555-0360,,6826 Willow Avenue,colorado springs,CO,80903,2026-03-14,2026-10-27,7,$947.77,Yes
+WS-100954,Hugo Dunn,hugo.dunn@example.com,+1 720-555-6451,,2668 highland blvd.,DENVER,co,80203,2026-03-08,2026-04-22,4,"$1,028.33",Yes
+WS-100964,Leo Duarte,leo.duarte@example.com,(206) 555-3554,,641 ALPINE ROAD,Seattle,WA,98101,2022-03-22,2022-04-25,12,"$3,046.14",Yes
+WS-100967,Leo Crane,lcrane@example.net,+1 512-555-7098,,2264 Oak Drive,AUSTIN,TX,78704,2023-02-16,2025-08-19,10,$889.64,Yes
+WS-100974,Lars Yamada,lars.yamada@example.org,206.555.4239,,3494 Summit Ave.,seattle,WA,98103,2022-09-22,2023-05-30,4,518.79,No
+WS-100986,Emma Moreno,emoreno @example.net,5125550607,,3695  Valley Lane,AUSTIN,TX,78704,2023-07-01,2024-08-02,3,$694.61,Yes
+WS-100988,dylan ford,dford@example.org,(602)555-1816,,6186  Meadow Road,Phoenix,az,85004,2023-07-02,2025-03-25,13,"$1,965.65",No
+WS-101000,John Hayes,john_hayes@example.net,720.555.2692,,806 Oak Ct.,BOULDER,CO,80304,2023-06-15,2025-06-06,7,1243.45,Yes
+WS-101006,ELENA HART,elenah@example.com,9705554120,,7544  Highland Court,fort collins,Colorado,80525,2023-04-18,2023-10-23,3,$585.53,Yes
+WS-101009,Steven  Hart ,steven_hart@example.com ,+1 720-555-9853,,7385 JUNIPER BOULEVARD,Boulder,CO,80302-1171,2022-08-15,2025-07-14,2,$98.04,Yes
+WS-101017,Ingrid Brooks,ingrid.brooks@example.com,1-720-555-0518,,5808  Birch Drive,Denver,Colorado,80203,2025-08-25,2026-02-19,4,300.42,No
+WS-101028,carmen diaz,cdiaz@example.net,303-555-9777,,7280 Park Lane,Denver,CO,80203,2022-12-09,2025-11-21,6,"$1,164.79",Yes
+WS-101033,wendy yamada,wendy_yamada@example.com,720-555-4087,,8979 pine blvd.,Boulder,co,80304,2022-08-08,2022-10-17,9,"$2,332.74",Yes
+WS-101039,Mia Cole,miac @example.com,(720) 555-6394,,9719 Park Ave,Denver,CO,80202-5513,2022-03-07,2023-01-20,12,1400.60,No
+WS-101044,Susan  Foster,SUSANF@EXAMPLE.ORG,(505)555-1857,,3523 Highland Blvd,Santa Fe,NM,87505,2026-03-03,2026-04-26,7,$436.64,Yes
+WS-101055,Rosa Abbott,rabbott@example.com,(303)555-3154,,6490 River Ave,Denver,CO,80202,2024-03-07,2025-12-01,4,$611.03,No
+WS-101062,ASTRID WEBB, awebb@example.net,801-555-4488,,5049 lake rd.,Salt Lake City,Utah,84101,2022-07-26,2026-03-31,8,467.07,Yes
+WS-101068,Ivy Reed ,ivyr@example.org,(303)555-8648,,6235 Highland Avenue,boulder,co,80301,2024-09-26,2025-06-18,9,1753.15,Yes
+WS-101076,Lars Reyes,lars.reyes@example.org,(207) 555-1582,,4559 Oak Ave.,Portland,ME,04102,2022-02-09,2024-08-18,5,1095.39,No
+WS-101084,olivia reyes,olivia_reyes@example.org,3035554108,,3125 Elm Ct,Boulder,CO,80301,2025-05-05,2026-05-30,3,$472.78,No
+WS-101086,Theo Moreno,Theo.moreno@example.com,(503)555-2630,,9096  Canyon Road,Portland,OR,97201,2026-05-05,2026-08-31,10,"$1,519.31",No
+WS-101095,Owen Stone, owens@example.com,+1 619-555-8378,,2088 summit st.,San Diego,ca,92101-4076,2025-10-01,2026-07-12,11,"$1,122.79",No
+WS-101105,Ava Hale,ava_hale@example.org,720-555-5829,,4583 birch blvd.,Denver,CO,80210,2026-03-19,2026-08-26,4,$750.35,Yes
+WS-101112,jennifer  keller,jennifer.keller @example.org,1-510-555-7860,,7386 SUMMIT STREET,Oakland,CA,94607,2026-01-30,2026-07-14,11,"$1,571.25",No
+WS-101115,Katherine Ford,kford@example.net,(720) 555-1639,,1729  Lake Road,Boulder,CO,80301,2023-04-20,2025-01-14,11,"$2,220.31",Yes
+WS-101121,DIEGO VOSS, diegov@example.com,(602)555-3065,,239 JUNIPER AVENUE,Phoenix,AZ,85006,2022-10-04,2023-07-20,5,"$1,277.18",Yes
+WS-101127,Ingrid Dawson ,Ingrid.dawson@example.org,1-801-555-3274,,2844 oak dr.,Salt Lake City,UT,84105,2024-11-27,2025-08-27,14,"$1,529.10",No
+WS-101139,Steve Ramirez,sramirez@example.net,1-719-555-9867,,1762 SAGE DRIVE,colorado springs,CO,80909,2022-12-29,2024-02-03,12,"$2,314.60",Yes
+WS-101145,Isaac Usman,isaacu@example.com,9705555136,,5454 Spruce Blvd.,Fort Collins,co,80521,2023-03-14,2026-07-22,13,$635.98,No
+WS-101149,Samuel Bishop, samuel_bishop@example.com,(510) 555-8598,,5506 pine ave.,Oakland,California,94607-4585,2024-12-02,2026-07-04,2,$99.75,No
+WS-101157,OMAR  NOVAK,omarn@example.org ,(612)555-2094,,8793 Park Blvd,Minneapolis,MN,55405,2024-07-07,2026-07-16,13,"$1,770.83",Yes
+WS-101162,Paolo Ortiz,PAOLOO@EXAMPLE.ORG,,,955 Birch Ct,Chicago,IL,60614,2026-03-04,2026-07-18,1,$180.03,Yes
+WS-101170,OMAR REED,omarr@example.org,(510)555-3274,,3996 RIDGE LANE,Oakland,CA,94607-2400,2024-05-31,2025-05-28,5,$758.31,No
+WS-101178,KENJI LOWE ,klowe@example.org,6195556849,,1396 Spruce St.,San Diego,ca,92101,2025-05-22,2026-03-12,4,$328.28,Yes
+WS-101184,WENDY HOLT,wendy.holt@example.org,1-619-555-3454,,2119 Juniper Ln,San Diego,CA,92103-5876,2023-03-19,2024-04-25,13,"$2,311.59",Yes
+WS-101194,Aisha Cole, aisha_cole@example.org,1-303-555-9380,,7618 Elm Court,Boulder,Colorado,80302,2024-07-03,2026-08-23,4,$831.79,Yes
+WS-101200,caleb pike ,calebp@example.com,+1 503-555-1763,,5754 Park Ln.,portland,OR,97209,2024-09-10,2025-07-08,14,"$1,862.68",No
+WS-101210,Holly Park,hollyp@example.com,617-555-9646,,3116  Juniper Drive,Cambridge,Massachusetts,02139,2024-10-14,2026-10-27,7,$805.15,No
+WS-101213,maria moreno,maria.moreno @example.com,,,6357 River Ave,portland,OR,97205,2024-03-02,2024-10-20,4,$233.17,Yes
+WS-101222,Matt Vargas,Mvargas@example.com,510.555.8420,,8312 Cedar Ave,Oakland,CA,94610-9805,2022-05-01,2023-01-20,9,"$1,699.56",Yes
+WS-101225,Hugo Hart,hugoh@example.net ,6025559128,,1061 LAKE BOULEVARD,Phoenix,AZ,85006,2022-09-21,2026-02-11,1,$114.32,No
+WS-101238,Hector Gomez,hgomez@example.net,510-555-2611,,2912 valley st.,OAKLAND,California,94610,2025-10-14,2026-02-22,7,$835.06,Yes
+WS-101241,MEGAN VANCE,MVANCE@EXAMPLE.ORG,,,7846 Cedar Ct,Salt Lake City,ut,84105,2024-01-20,2025-07-14,9,"$2,000.50",No
+WS-101252,benjamin shaw, benjamin.shaw@example.net,720-555-1622,,7914 aspen blvd.,Boulder,CO,80302-1452,2024-02-20,2026-04-20,4,$590.16,No
+WS-101258,Theo Wong,theow@example.org ,5035559804,,9682 Canyon Street,Portland,OR,97209,2026-01-07,2026-03-04,6,$515.59,Yes
+WS-101265,LARS RAMIREZ,lramirez@example.org,503.555.4489,,3515 Valley Ave.,Portland,Oregon,97209,2025-07-06,2026-01-21,11,531.24,Yes
+WS-101267,LUCIA WALSH ,luciaw@example.net,3035556535,,2823 Summit Rd,denver,co,80205,2025-07-19,2026-07-15,8,1745.80,Yes
+WS-101277,Iris Young,iris.young@example.com ,+1 201-555-7704,,7868 Elm St,Hoboken,NJ,07030,2026-05-22,2026-10-22,2,198.18,Yes
+WS-101285,nora keller,nora.keller@example.org,1-719-555-8177,,3568 meadow st.,Colorado Springs,CO,80909,2022-08-13,2025-04-04,10,1352.25,No
+WS-101291,mei holt,meih5@example.com,312-555-7573,,8175 Pine Ct.,Chicago,IL,60614,2023-02-25,2024-09-21,4,$556.44,Yes
+WS-101295,ivy alvarez,Ivy_alvarez@example.com,503-555-0649,,250 Highland Rd.,portland,Oregon,97205,2022-07-15,2023-04-06,2,$337.87,No
+WS-101306,LARS OKAFOR,lokafor@example.com,,,9868 GRANITE COURT,Denver,CO,80203,2022-05-18,2025-04-30,6,354.62,Yes
+WS-101309,Wendy Tate,Wendytate8@example.com,970.555.8375,,8033 Mesa Ave.,fort collins,Colorado,80525,2023-09-22,2025-07-06,1,$190.04,Yes
+WS-101318,Ella Sato,Esato@example.net,(720) 555-7911,,9404 Summit Dr,Denver,CO,80206,2024-12-08,2025-07-18,5,$303.14,Yes
+WS-101327,Jennifer Gomez,jennifer.gomez@example.net ,512.555.9534,,6393 Park Ct,AUSTIN,TX,78704,2026-02-28,2026-05-11,2,$485.00,Yes
+WS-101336,Becky Hughes,rebecca.hughes@example.com,,,4688 canyon ln.,AUSTIN,TX,78701,2026-06-12,2026-10-26,8,$894.17,Yes
+WS-101341,Claire Irwin ,claire_irwin@example.com ,718.555.4856,,4700 Meadow Avenue,Brooklyn,NY,11201,2025-12-20,2026-07-06,7,$370.80,No
+WS-101347,Mei Pike,mei.pike@example.net,201-555-1997,,6719 ALPINE BOULEVARD,Hoboken,NJ,07030-9746,2023-11-21,2025-04-18,6,$898.81,Yes
+WS-101356,Joseph Vargas ,joseph.vargas@example.com ,1-303-555-6568,,541 Summit Court,Boulder,CO,80302,2025-12-11,2026-01-29,1,$80.80,No
+WS-101359,Pablo  Nguyen,PNGUYEN@EXAMPLE.NET,303-555-1235,,9124 Elm Dr,Denver,CO,80203,2025-01-21,2025-05-13,8,$348.96,Yes
+WS-101366,NICHOLAS OKAFOR,Nokafor@example.net,1-720-555-6107,,802 ELM STREET,Denver,CO,80202,2023-01-16,2026-05-08,10,"$2,246.41",Yes
+WS-101373,Kate  Novak,katherinen@example.org,1-201-555-4630,,164 Meadow Street,hoboken,NJ,07030,2026-03-15,2026-07-24,14,2938.05,Yes
+WS-101380,IRIS DUARTE,iduarte@example.org ,1-612-555-3596,,2418 Sage Boulevard,Minneapolis,Minnesota,55401-1803,2022-04-28,2025-09-12,9,"$2,230.09",Yes
+WS-101391,Matthew Bauer,matthew.bauer@example.net,(719) 555-2020,,3448  Pine Avenue,colorado springs,co,80903,2024-07-13,2026-07-15,7,$532.96,Yes
+WS-101396,Nathan Mendez, nathan.mendez@example.org,2075554886,,6718 MESA LANE,Portland,ME,04102,2022-05-11,2026-08-27,2,$277.95,Yes
+WS-101405,RUBY JORDAN ,ruby.jordan@example.com,206.555.1771,,9713 MAPLE LANE,Seattle,Washington,98103,2024-02-08,2024-05-17,9,"$2,041.14",Yes
+WS-101407,Noah Garcia,noahg @example.net,+1 312-555-1664,,6312 Highland Rd.,Chicago,IL,60607,2023-10-06,2026-01-27,2,$493.50,Yes
+WS-101415,Susan Nguyen,susann@example.com ,203-555-6286,,5865 Canyon Street,New Haven,CT,06510,2024-12-16,2025-10-07,4,$827.31,Yes
+WS-101423,Olivia Lane,olivia.lane@example.org,(303) 555-3696,,8505 SUMMIT STREET,Boulder,co,80305,2025-10-06,2025-11-09,14,$762.65,No
+WS-101434,Lucas  Lowe,lucas_lowe@example.net,(970) 555-0491,,7225 River Boulevard,Fort Collins,CO,80521,2024-10-05,2025-09-26,1,$75.72,No
+WS-101441,Caleb Torres, caleb_torres@example.org,,,833 River Road,cambridge,Massachusetts,02138,2022-10-29,2023-11-25,10,$903.92,Yes
+WS-101447,VERA OLSEN ,verao@example.org,303.555.7371,,2147 Maple Dr,Boulder,CO,80301,2026-01-24,2026-06-23,4,$468.27,Yes
+WS-101453,Victor Patel,victor.patel@example.org ,720-555-1957,,7141 Maple Blvd.,BOULDER,Colorado,80305,2026-01-14,2026-08-29,1,$89.25,Yes
+WS-101460,rebecca brooks,REBECCA.BROOKS@EXAMPLE.NET,206.555.4342,,8993 Mesa Rd,Seattle,WA,98101,2022-09-04,2022-10-03,10,$744.45,No
+WS-101463,Nicholas Silva,NSILVA@EXAMPLE.NET,+1 303-555-0307,,3194  Highland Drive,Boulder,CO,80303-6378,2025-09-03,2025-12-13,8,$600.56,No
+WS-101476,Gloria  Cole,gcole@example.com,512.555.3485,,6630 Valley Ln.,Austin,TX,78704,2022-02-11,2026-08-17,9,1577.43,No
+WS-101483,Daniel Lopez,daniellopez26@example.net,+1 718-555-5239,,5456 Meadow Ct,BROOKLYN,New York,11211,2022-05-22,2023-12-16,12,2949.43,Yes
+WS-101486,Zoe Sato,zsato@example.com,,,4695 Birch Drive,denver,CO,80203,2024-03-15,2025-06-06,1,$59.73,No
+WS-101492,JOHN FOX ,john.fox@example.org ,7205551291,,6297 LAKE BOULEVARD,Denver,Colorado,80202,2023-04-24,2024-04-26,6,"$1,131.06",Yes
+WS-101504,theo hayes,Thayes@example.com,(617) 555-7464,,9689 PINE AVENUE,cambridge,Massachusetts,02141,2024-05-01,2025-01-13,11,836.40,Yes
+WS-101508,Paula Dawson,paulad@example.net,619.555.1837,,5522 Birch Ct.,San Diego,California,92103-9340,2023-05-12,2024-09-25,11,"$2,594.65",No
+WS-101517,Jonah Patel,jonah_patel@example.com,1-206-555-3724,,560 ASPEN COURT,seattle,WA,98101,2024-09-04,2026-10-07,11,"$2,690.55",Yes
+WS-101525,Ingrid Mendez ,INGRID_MENDEZ@EXAMPLE.ORG,1-503-555-2138,,5057 Park Dr.,Portland,OR,97209,2025-04-23,2026-04-06,1,$115.74,Yes
+WS-101529,Anthony Ramirez,anthonyr@example.com,207-555-4040,,1026 Maple Boulevard,Portland,ME,04102,2023-10-13,2025-07-14,6,$643.24,No
+WS-101537,MEG INGRAM,mingram@example.net,1-201-555-8323,,6237  Lake Avenue,Hoboken,NJ,07030,2026-01-31,2026-10-17,4,$577.09,Yes
+WS-101546,Steven Turner,Steven_turner@example.com,(720)555-9519,,1866 Cedar St,denver,Colorado,80202,2025-10-15,2026-02-21,3,$499.46,No
+WS-101552,Ivy Zimmer,ivyz@example.org,1-719-555-3287,,4222  River Boulevard,Colorado Springs,CO,80903,2025-03-31,2025-05-25,6,$237.02,Yes
+WS-101558,Grace Noble,grace_noble@example.org,201-555-9370,,455 Maple Boulevard,Hoboken,NJ,07030,2023-04-28,2026-10-12,1,$105.29,No
+WS-101566,Owen Morgan,owenm@example.com,9705550956,,6631  Valley Street,Fort Collins,CO,80521,2022-07-26,2023-01-29,9,862.64,Yes
+WS-101569,HOLLY  MENDEZ,holly_mendez@example.com,510.555.1893,,6911 Spruce Blvd,Oakland,California,94610,2026-01-17,2026-05-25,13,$817.35,Yes
+WS-101577,felix fox,felixf @example.net,(718) 555-6543,,6994 Spruce Dr,Brooklyn,ny,11211-8670,2025-08-04,2025-08-09,13,"$1,200.10",Yes
+WS-101587,Abigail  Gill,abigailg @example.com,602.555.3865,,3498 JUNIPER AVENUE,PHOENIX,az,85004,2023-02-24,2026-08-07,13,"$2,536.28",Yes
+WS-101595,Sofia Yates,sofia_yates@example.net,1-510-555-0335,,7592 park dr.,Oakland,California,94607,2025-02-25,2026-09-25,12,"$2,258.56",Yes
+WS-101597,Matthew Gomez,mgomez @example.net,(719)555-2661,,8115 Highland Court,Colorado Springs,CO,80909,2025-04-28,2026-06-27,14,"$1,979.02",Yes
+WS-101609,Milo Usman,milou@example.net,303-555-2874,,6482 CEDAR AVENUE,Denver,CO,80205,2023-07-15,2026-09-06,4,$246.48,Yes
+WS-101615,Ivan Grant,ivan.grant@example.com,(720) 555-3876,,8919 Willow Dr.,Denver,Colorado,80205,2023-09-16,2024-07-14,3,$338.30,Yes
+WS-101622,Steven Ford,steven.ford @example.com,+1 720-555-1868,,4194 Valley Drive,Boulder,CO,80301,2022-10-18,2022-11-09,4,158.11,Yes
+WS-101627,DYLAN VARGAS,dylanv@example.com ,(617) 555-6581,,8525  Alpine Lane,Cambridge,MA,02139,2023-07-03,2025-10-07,10,"$2,273.66",No
+WS-101635,Mei Carter,mei.carter@example.net,(617)555-8539,,692 Cedar Blvd,Boston,ma,02108,2022-10-20,2025-11-28,1,$232.01,No
+WS-101641,claire novak,CNOVAK@EXAMPLE.ORG,2035556659,,3284 Birch Ln,NEW HAVEN,CT,06511,2022-09-12,2023-05-15,3,$431.31,Yes
+WS-101650,MEGAN HUGHES,mhughes@example.org,+1 505-555-6023,,9173 SPRUCE BOULEVARD,Santa Fe,NM,87505,2022-10-17,2023-08-03,13,$762.69,No
+WS-101652,ISAAC HAYES,ihayes@example.com,(970) 555-1560,,6151 Lake Boulevard,Fort Collins,Colorado,80521,2023-04-06,2024-07-21,12,2327.09,No
+WS-101661,laura jensen,laura.jensen @example.net,,,2896 Granite Ct,PHOENIX,AZ,85006,2024-06-25,2026-03-10,7,$963.79,Yes
+WS-101668,Nicholas  Drake,Nicholas.drake@example.com,9705553745,,458 park blvd.,Fort Collins,CO,80524,2024-06-22,2025-12-16,10,2585.02,Yes
+WS-101674,Marco  Cole,marco_cole @example.net,970-555-3704,,2204 Juniper Street,Fort Collins,CO,80524,2022-04-23,2025-12-21,12,"$1,342.54",No
+WS-101685,Lars Fox,lfox@example.com,(503) 555-4977,,6683 canyon st.,portland,Oregon,97209,2026-01-14,2026-08-06,5,$556.56,Yes
+WS-101693,daniel  lopez,Dlopez@example.net,718.555.5239,,5456  Meadow Court,BROOKLYN,NY,11211,2022-11-12,2024-03-06,11,"$2,728.59",Yes
+WS-101700,Priya Quinn,priya.quinn@example.com,9705555659,,5222 river ave.,Fort Collins,CO,80524,2025-01-07,2025-08-18,5,$499.91,Yes
+WS-101704,Pablo Marsh,pablo.marsh@example.net,3035557212,,5449 ridge dr.,Denver,CO,80210,2022-10-29,2026-03-31,12,$867.24,Yes
+WS-101710,dylan ortiz,Dylan_ortiz@example.com,6195551910,,5872 Pine Avenue,SAN DIEGO,CA,92101,2024-06-02,2024-07-19,14,"$1,421.03",Yes
+WS-101717,Omar Duarte ,omar_duarte@example.org,1-617-555-3509,,6004 SUMMIT ROAD,CAMBRIDGE,MA,02139,2026-04-17,2026-09-14,10,$809.50,Yes
+WS-101728,Victor Johansson,vjohansson@example.org,505-555-8175,,4926 Maple Blvd,Santa Fe,New Mexico,87501,2023-03-28,2024-09-11,5,$249.87,No
+WS-101733,Lucia Kerr ,LUCIAK@EXAMPLE.COM,303-555-1368,,5775  Lake Drive,Boulder,CO,80302,2025-07-10,2026-03-22,10,"$1,412.57",No
+WS-101737,Rebecca Voss, rebecca_voss@example.org,5125550722,,6600 Maple Ct.,Austin,TX,78704,2022-03-20,2025-09-27,7,"$1,270.20",No
+WS-101749,Elizabeth Zimmer,ezimmer@example.net,612-555-1400,,625 River Lane,Minneapolis,MN,55405,2022-05-22,2025-09-20,8,$517.54,Yes
+WS-101750,Sven Ferris,sven.ferris@example.com,512-555-9620,,1092 Park Street,AUSTIN,TX,78701,2023-02-24,2024-11-20,10,"$2,511.28",No
+WS-101762,Noah Reyes,noahreyes97@example.org,+1 303-555-1088,,5602 canyon rd.,Denver,Colorado,80202,2024-07-12,2026-08-06,12,"$2,503.52",Yes
+WS-101769,Owen Crane ,owenc@example.org ,1-512-555-2270,,1682  Pine Lane,austin,TX,78704,2025-03-01,2026-09-27,1,242.76,Yes
+WS-101773,Rebecca Webb,rebecca_webb@example.net,3035552011,,510 Mesa Blvd.,Denver,co,80202,2023-01-06,2024-08-19,11,"$2,584.32",No
+WS-101783,LIAM  INGRAM,lingram @example.org,(718) 555-1908,,5860  Spruce Boulevard,Brooklyn,NY,11211,2024-01-29,2024-04-27,9,2110.23,Yes
+WS-101791,Anthony Evans,anthonye@example.net,1-602-555-1009,,4921 Park Ave.,Phoenix,Arizona,85004,2023-11-09,2024-07-20,8,"$1,717.16",No
+WS-101797,OWEN LARSEN,owen_larsen@example.org,(970) 555-6574,,237 Aspen Ave,Fort Collins,co,80525,2022-11-28,2026-05-24,2,$287.09,Yes
+WS-101801,Emma Foster ,emmaf@example.org,1-503-555-2098,,123 spruce ave.,Portland,OR,97205,2025-10-09,2025-12-09,9,$856.56,Yes
+WS-101809,WENDY SHARP,wsharp@example.org,+1 720-555-0261,,8576  Canyon Boulevard,boulder,co,80304,2023-01-17,2025-04-08,9,"$1,386.56",No
+WS-101816,Jonah Gomez ,jonah_gomez@example.org ,,,927 Sage Avenue,OAKLAND,CA,94607,2022-11-08,2022-12-02,13,"$3,044.98",No
+WS-101824,Ivan Price,IVANP@EXAMPLE.ORG,5035558070,,6181 Canyon Ave,Portland,Oregon,97209,2025-04-23,2025-09-29,13,"$3,364.09",Yes
+WS-101830,susan lane,susan.lane@example.com,1-619-555-4942,,4653 Park Ave,San Diego,CA,92103,2024-08-19,2026-06-13,6,$865.62,No
+WS-101834,LUCAS  ERIKSEN,leriksen@example.com,203.555.4928,,6154 valley blvd.,new haven,CT,06510-1050,2025-10-12,2026-09-28,6,1351.00,No
+WS-101847,Kenji Price ,kenji_price@example.org,512-555-8709,,3105  Summit Lane,Austin,TX,78701,2022-11-14,2025-10-25,7,$717.15,No
+WS-101848,Ruby Hayes,Rubyh@example.org,720.555.3821,,3235  Cedar Lane,boulder,CO,80305,2025-11-05,2025-11-06,8,"$1,558.95",Yes
+WS-101861,Sven Alvarez,salvarez@example.org,612-555-2866,,2638 Alpine Rd.,Minneapolis,mn,55401,2022-02-15,2022-03-11,10,"$1,938.18",No
+WS-101865,JAMES GARCIA,jgarcia@example.net,1-206-555-0083,,275 Park Ct.,SEATTLE,WA,98105,2025-07-19,2025-10-12,10,$876.99,Yes
+WS-101870,steven young,Stevenyoung83@example.org,503-555-5091,,2298 Maple Boulevard,Portland,OR,97205,2026-01-06,2026-06-23,8,1175.73,Yes
+WS-101876,MEGAN JENSEN,mjensen@example.com,(505) 555-2795,,4417 Cedar Court,Santa Fe,NM,87501,2023-08-05,2024-12-11,10,916.75,No
+WS-101883,Marco Hale,MARCO_HALE@EXAMPLE.ORG,1-510-555-1687,,954 HIGHLAND LANE,Oakland,CA,94607-1948,2026-01-07,2026-04-05,11,989.66,No
+WS-101891,Alexander  Eriksen,aeriksen @example.net,,,4006 aspen st.,Denver,Colorado,80205,2025-06-29,2025-11-16,8,377.61,Yes
+WS-101897,Tara Park,tara_park@example.com ,+1 303-555-8233,,654 CEDAR LANE,Boulder,CO,80301,2025-01-18,2025-06-05,12,"$1,905.19",No
+WS-101910,rosa price,rosap@example.com,(303)555-6675,,3896 GRANITE STREET,denver,CO,80202,2023-02-12,2024-03-15,11,"$2,412.76",No
+WS-101917,RICHARD BARNES,RICHARD_BARNES@EXAMPLE.ORG,,,2695 River Court,Portland,OR,97205-4083,2023-09-25,2024-04-01,9,"$1,402.04",Yes
+WS-101924,margaret hayes,margareth @example.com,+1 510-555-5091,Self-employed,8206 Spruce Ct.,Oakland,CA,94607,2025-09-25,2026-08-17,8,"$1,392.65",No
+WS-101927,wyatt gomez,wgomez@example.net,1-303-555-9000,,1247 Cedar Avenue,Denver,CO,80203,2025-12-16,2026-03-04,4,$275.27,No
+WS-101938,Ella Lane, ellal@example.com,720.555.1565,,4892 SUMMIT COURT,denver,co,80210,2023-04-19,2024-01-26,13,"$1,720.38",Yes
+WS-101945,Pablo Shaw,pablo_shaw@example.com,612-555-5739,,3991 river blvd.,Minneapolis,MN,55405,2025-08-09,2026-10-25,9,"$1,814.74",No
+WS-101948,Hugo Ferris, hferris@example.org,801-555-3207,,3884 Highland Rd.,Salt Lake City,UT,84105,2025-02-21,2025-10-28,14,"$2,776.42",Yes
+WS-101957,SAMUEL CARTER,samuel_carter@example.com,(720)555-5279,,9244 CANYON COURT,Denver,CO,80202,2022-11-07,2025-04-01,9,1409.71,Yes
+WS-101960,Logan Lund,logan.lund@example.com,,,1162 Meadow Drive,Minneapolis,MN,55405-6333,2023-09-04,2023-10-19,7,"$1,274.81",Yes
+WS-101967,Lucia Cole,luciac @example.net,(612) 555-3795,,3388 willow dr.,Minneapolis,MN,55401,2023-11-03,2024-06-19,8,$934.61,Yes
+WS-101980,Zoe Yamada,Zoey@example.org,(201)555-8300,,7962 Lake Dr.,hoboken,NJ,07030,2026-05-15,2026-09-30,5,"$1,174.59",Yes
+WS-101983,Jennifer Weber,jennifer.weber @example.net,303.555.6736,,6468 Maple Blvd,Denver,Colorado,80205,2025-01-16,2026-02-22,13,"$2,259.54",Yes
+WS-101993,Lucia Reed,lreed@example.net,1-619-555-4837,,9116 SAGE ROAD,San Diego,CA,92101,2022-10-06,2024-07-30,7,$256.71,Yes
+WS-101998,Ava Vargas,avargas@example.com,,,4943 Pine Ln.,Boulder,CO,80303,2023-12-14,2024-08-28,10,"$1,024.87",Yes
+WS-102008,claire ingram,claire_ingram@example.net,206-555-4486,,6217 highland st.,Seattle,WA,98103,2022-09-07,2025-12-21,6,"$1,240.14",No
+WS-102010,Mia Udall ,Mia_udall@example.org,512-555-2055,Self-employed,9439 Sage Rd,Austin,Texas,78704,2023-04-20,2024-03-27,7,$499.44,No
+WS-102016,wendy  tate,wtate@example.org,970-555-8375,,8033  Mesa Avenue,FORT COLLINS,CO,80525,2023-11-22,2025-08-01,14,738.86,Yes
+WS-102025,Maria Chen, maria_chen@example.org,303-555-5848,,2529 PARK COURT,Denver,CO,80202,2023-12-22,2024-07-20,8,312.23,No
+WS-102036,Ivan  Nguyen,ivan_nguyen@example.org,801-555-8937,,4291 Ridge Boulevard,salt lake city,Utah,84102,2024-08-17,2024-12-04,5,$543.23,No
+WS-102038,EDWARD NASH,edward.nash@example.net,617.555.9985,,90 Granite Road,BOSTON,MA,02116,2024-07-21,2025-12-29,1,210.01,No
+WS-102049,Thomas Hughes,thomas_hughes@example.net,,,3924  Park Boulevard,BOULDER,CO,80304,2025-02-03,2026-10-25,7,$290.94,No
+WS-102051,REBECCA YOUNG,rebeccay@example.net,+1 970-555-2645,,7938 River Court,Fort Collins,CO,80521,2025-03-25,2025-08-02,5,483.26,No
+WS-102063,Emma Stone,emma_stone@example.org,2065558917,,865 Juniper Lane,Seattle,Washington,98105,2023-04-08,2024-02-21,1,233.64,Yes
+WS-102071,Tom Lowe,THOMAS.LOWE@EXAMPLE.NET,6125557613,,5823 Valley Dr,Minneapolis,MN,55401,2024-05-24,2025-04-22,11,"$2,562.54",Yes
+WS-102072,Paolo Bauer,pbauer@example.net,(503) 555-9250,,2770 Park Dr.,PORTLAND,OR,97209,2023-05-25,2024-04-10,7,"$1,151.62",Yes
+WS-102081,Milo Vance,milo_vance@example.org,,,6500 Meadow Ave,Boston,ma,02116,2022-09-27,2024-10-26,1,236.36,No
+WS-102091,Priya  Turner,priya.turner@example.org ,718-555-2787,,7169 Sage Ln,Brooklyn,New York,11211,2023-12-17,2025-10-03,11,1806.62,Yes
+WS-102098,leo khan, leok@example.net,312-555-6843,,9796 Meadow Rd,Chicago,IL,60614,2022-05-08,2024-09-07,2,$303.95,No
+WS-102106,Ingrid Brooks,ingridbrooks79@example.org,720-555-0518,,5808 BIRCH DRIVE,Denver,CO,80203,2023-10-10,2025-02-16,4,$500.16,No
+WS-102110,Logan Sharp ,LSHARP@EXAMPLE.ORG,,,9583 Oak Street,cambridge,MA,02138,2024-10-05,2026-10-17,7,$783.27,Yes
+WS-102116,Omar Bishop,omar_bishop@example.org,+1 510-555-8339,,5234  Park Avenue,oakland,CA,94610,2023-01-02,2024-11-24,1,$256.03,Yes
+WS-102123,Joseph Moss ,jmoss@example.com,612.555.1840,,984 cedar ct.,Minneapolis,MN,55405,2025-11-10,2026-09-20,12,$937.09,No
+WS-102134,Abby Foster,afoster @example.com,(303) 555-3816,,1781 River Avenue,Denver,Colorado,80210,2024-05-01,2026-05-01,8,1162.18,Yes
+WS-102140,Diego Ingram , diegoingram59@example.org,2075552259,,2716 Elm Avenue,Portland,me,04101,2026-05-22,2026-10-11,2,$94.19,Yes
+WS-102148,Ella Ellis,ella_ellis@example.com,303.555.8253,,7269 Summit Ln.,Denver,CO,80210-9972,2024-09-08,2024-10-04,9,"$1,888.51",Yes
+WS-102154,sven lopez,svenl@example.org ,(303) 555-1512,,3755 Alpine Rd,Denver,Colorado,80205,2024-05-18,2024-11-15,5,896.59,No
+WS-102159,MEI VANCE,mei_vance@example.com,+1 720-555-3046,,777  Granite Lane,Boulder,CO,80303,2025-07-14,2025-07-16,10,1028.65,Yes
+WS-102166,Ethan Dunn,ethand@example.net ,1-201-555-7872,,160 Maple Dr,Hoboken,nj,07030,2023-07-15,2024-03-14,8,$980.64,Yes
+WS-102176,ALEXANDER  VANCE,avance@example.org,720.555.5793,,5219 RIVER DRIVE,Boulder,CO,80305,2025-11-23,2026-01-21,14,669.96,Yes
+WS-102183,LARS GARCIA ,larsg@example.com,,,2184 Canyon Dr,Boston,ma,02108-2166,2024-07-02,2026-07-30,9,$530.66,No
+WS-102184,pablo turner,pturner@example.org,(201)555-5433,,842 PARK STREET,Hoboken,NJ,07030-8128,2022-08-14,2026-03-21,13,"$1,479.60",Yes
+WS-102194,WENDY DIAZ ,wdiaz@example.net,(720) 555-8698,,4117 Aspen Street,Boulder,CO,80302,2025-02-10,2025-10-26,5,$866.12,Yes
+WS-102201,Yuki Moreno,ymoreno@example.com,7185553156,,717 BIRCH DRIVE,BROOKLYN,NY,11201,2026-04-12,2026-06-02,5,$411.63,No
+WS-102207,Samuel Evans ,samuele@example.com,+1 619-555-1717,,1751 RIDGE AVENUE,San Diego,ca,92101,2025-03-10,2026-04-20,7,$810.50,Yes
+WS-102215,Ella Carter,ella.carter@example.com,1-303-555-4236,,5300  Alpine Drive,Denver,co,80205,2023-11-25,2024-07-16,3,$660.16,No
+WS-102221,EMMA LANE ,emma.lane@example.org,(970) 555-9912,,5618 aspen rd.,fort collins,co,80524,2025-07-11,2026-02-17,6,"$1,185.74",No
+WS-102230,Logan Dunn,Logan_dunn@example.org,(970)555-6158,,6507  Highland Court,Fort Collins,CO,80521,2024-08-22,2026-03-19,2,$187.57,Yes
+WS-102233,ROBERT VANCE ,robert.vance@example.com,303-555-2903,,4199 Sage Ln.,denver,CO,80205,2022-01-14,2024-11-14,6,$530.29,Yes
+WS-102244,Maria Foster,mariaf @example.org,+1 303-555-2424,,4025 Juniper Ave,DENVER,CO,80202,2024-02-27,2025-12-04,3,$317.05,No
+WS-102250,Ivy Okafor,iokafor@example.com,1-801-555-8016,,6585 park dr.,Salt Lake City,Utah,84102,2024-12-03,2026-07-04,8,"$1,382.64",Yes
+WS-102258,Paolo Evans,pevans @example.org,203-555-3514,,1361 Spruce Road,New Haven,CT,06510-3729,2025-04-09,2026-05-15,2,$232.36,Yes
+WS-102262,GRACE  NOVAK,gnovak@example.org,+1 303-555-1870,,7588 SAGE STREET,Boulder,co,80305,2022-01-20,2022-04-29,8,"$1,970.50",No
+WS-102274,Hector Nash,hnash@example.com,(207) 555-1353,,4763  Juniper Court,Portland,me,04102,2023-09-03,2026-06-25,4,$165.24,No
+WS-102278,Robert Marsh,robert.marsh@example.net,1-602-555-6896,,4287 WILLOW BOULEVARD,Phoenix,AZ,85006-1263,2022-12-20,2026-08-31,5,$561.30,Yes
+WS-102284,DIEGO GARCIA,dgarcia@example.org,(512)555-6354,,1036 Birch Ave,Austin,tx,78704,2024-05-30,2025-10-17,10,"$2,094.18",No
+WS-102289,emma bauer,emmabauer20@example.com,312.555.8142,,9038 SUMMIT STREET,chicago,il,60607,2024-11-18,2025-05-08,1,48.78,Yes
+WS-102299,Anna Noble,ANNAN@EXAMPLE.NET,,,9608 SAGE AVENUE,Portland,ME,04102-2422,2024-05-02,2025-10-05,13,2982.21,Yes
+WS-102306,Zoe  Hughes,ZOE_HUGHES@EXAMPLE.COM,718.555.1351,,4579 Oak Blvd,Brooklyn,NY,11201,2024-11-07,2025-09-01,10,$638.13,Yes
+WS-102314,Emma Zhou, emma.zhou@example.com,(612) 555-5577,,635 Canyon Dr.,Minneapolis,MN,55405,2024-12-30,2026-03-20,1,$81.31,Yes
+WS-102319,ABIGAIL MOSS,abigail_moss@example.com ,718.555.8445,,2228 SAGE STREET,Brooklyn,NY,11211,2025-11-12,2025-12-16,7,"$1,173.44",Yes
+WS-102324,katherine abbott,katherine.abbott@example.org,1-303-555-8565,,4704 Maple Dr.,BOULDER,Colorado,80301-7144,2023-05-12,2025-05-19,9,"$1,532.43",Yes
+WS-102337,Kenji Drake,kenji_drake@example.net,1-719-555-1638,,9326 Birch Street,Colorado Springs,CO,80905,2022-03-11,2026-06-30,7,"$1,175.73",No
+WS-102342,Holly Lund,hollyl@example.com,,,3001 Willow Rd,Oakland,CA,94610,2024-09-16,2026-03-13,5,$983.20,Yes
+WS-102345,Logan Fox,logan_fox @example.com,2065558610,,5117 Park Court,Seattle,wa,98103,2022-04-20,2023-05-09,11,497.43,Yes
+WS-102357,Steve Marsh, stevenm@example.net,,,4510 Cedar Ln,BOULDER,CO,80304,2025-08-12,2025-09-03,14,$611.85,Yes
+WS-102362,owen pruitt,Owenp@example.net,970.555.9102,,6184  Meadow Road,Fort Collins,Colorado,80525,2025-09-23,2026-01-15,5,"$1,239.99",Yes
+WS-102372,REBECCA  CASTILLO,rebeccac@example.com,206-555-1351,,4579 Alpine Ave.,seattle,WA,98105,2023-06-23,2024-11-14,4,493.37,Yes
+WS-102376,Lucia Nguyen,lucian@example.org,802.555.4761,,1864 CANYON LANE,burlington,vt,05401-6101,2025-08-09,2026-09-04,8,"$1,896.08",Yes
+WS-102382,Mei  Duarte, mduarte@example.net,718-555-8392,,9897 Pine Blvd.,Brooklyn,ny,11211,2022-07-30,2025-03-12,5,$821.48,Yes
+WS-102390,Ruby Torres,rubyt@example.com ,(719)555-7207,,2097 Sage Lane,COLORADO SPRINGS,co,80903,2022-07-05,2026-01-20,9,"$1,892.30",Yes
+WS-102400,johnny young,jyoung@example.com,5105558593,,1957  Canyon Boulevard,Oakland,CA,94610,2024-01-01,2025-02-12,2,$311.93,No
+WS-102407,LIAM ERIKSEN,liam.eriksen@example.net,+1 720-555-6063,,6463  Birch Boulevard,BOULDER,co,80301,2023-05-23,2023-11-06,8,"$1,229.00",No
+WS-102408,Steven Moreno,smoreno@example.com ,(303)555-5434,Self-employed,5479 LAKE COURT,BOULDER,CO,80305,2026-03-23,2026-10-14,8,$472.12,No
+WS-102417,Fatima Moreno,fatimam@example.org,1-203-555-0146,,6401 ELM COURT,New Haven,CT,06510,2022-06-24,2023-05-23,2,$305.82,Yes
+WS-102424,VERA WEBB,vera.webb@example.org,7205558390,,8146 WILLOW DRIVE,boulder,CO,80303,2022-07-03,2022-10-06,14,"$2,954.26",No
+WS-102430,Hannah Ford,hannahf@example.com,505.555.8229,,5002 Granite Ct.,Santa Fe,NM,87501-9340,2022-01-11,2026-02-16,2,$238.20,Yes
+WS-102436,HOLLY ORTIZ,holly.ortiz@example.org,802-555-7240,,7199 WILLOW STREET,Burlington,VT,05403,2024-08-16,2024-09-28,4,888.22,No
+WS-102448,Hugo Yamada,hugo_yamada@example.com,718.555.8999,,1252 Highland Ct.,brooklyn,ny,11201,2025-08-31,2026-02-27,4,743.36,Yes
+WS-102452,VERA JORDAN,VERAJ@EXAMPLE.ORG,619.555.8546,,6817  Spruce Lane,SAN DIEGO,CA,92101,2022-08-07,2023-03-31,13,"$1,475.29",Yes
+WS-102462,Tara Irwin,tara.irwin@example.net,(203)555-8298,,6774 Valley Dr.,new haven,ct,06511,2025-04-29,2026-01-14,8,$548.41,Yes
+WS-102464,Test Customer,test@summitridge.example,,,1 Test Street,Boulder,CO,80302,2026-10-02,2026-10-02,1,$0.00,No
+WS-102473,Megan Hart,megan.hart@example.com,(720) 555-8942,,2535 SPRUCE ROAD,Denver,CO,80202,2023-09-08,2024-10-26,12,1017.83,Yes
+WS-102480,test test,test@example.com,,,1 Test Street,Boulder,CO,80302,2026-10-02,2026-10-02,1,$0.00,No
+WS-102486,Andrew Ramirez,aramirez@example.com,(801) 555-5572,,2818 Maple Rd.,Salt Lake City,UT,84105,2023-08-16,2026-03-07,4,$391.58,No
+WS-102494,CLAIRE BAUER,Claire_bauer@example.org,+1 206-555-9979,,8186 Oak Blvd,seattle,WA,98103,2024-11-27,2025-06-25,7,1406.19,No
+WS-102502,Grace Crane, grace.crane@example.org,206.555.4795,,7982 Summit Dr,Seattle,wa,98101,2024-03-27,2026-10-20,10,"$1,585.96",Yes
+WS-102511,Leo Garcia,Leog@example.net,(206) 555-7731,,6264 cedar ave.,Seattle,Washington,98101,2024-02-07,2026-01-24,12,"$2,163.08",Yes
+WS-102513,nicholas larsen,nicholas.larsen@example.net,510-555-8106,,8402 Mesa Avenue,Oakland,CA,94610,2022-01-24,2025-03-12,14,"$2,614.93",Yes
+WS-102520,thomas voss, thomas_voss@example.com,1-970-555-0594,,4060 JUNIPER STREET,Fort Collins,CO,80521,2026-06-02,2026-08-19,5,824.04,Yes
+WS-102527,Caleb Okafor,caleb_okafor@example.org,(503) 555-3433,,1339 Oak Ln,PORTLAND,OR,97201,2022-04-28,2025-08-05,3,$358.70,Yes
+WS-102537,william lane ,william_lane@example.com,(510) 555-8893,,7530  Willow Street,Oakland,CA,94610,2024-01-29,2026-05-19,4,$991.98,Yes
+WS-102542,leah pike,leahp@example.net,(602)555-5860,,5851 sage ct.,phoenix,AZ,85004,2026-05-09,2026-10-31,13,$638.39,No
+WS-102552,CHRISTOPHER  IQBAL,christopher.iqbal@example.com,720.555.7949,,8741 oak ct.,Boulder,CO,80303,2025-05-04,2026-10-15,13,"$3,109.58",Yes
+WS-102561,andrew  crane,andrewc@example.net,+1 720-555-5633,,5750 mesa ln.,Boulder,Colorado,80305-7299,2022-06-07,2023-07-28,10,"$1,324.37",Yes
+WS-102568,Oscar Carter,ocarter@example.com,303-555-6011,,7134  Cedar Street,BOULDER,CO,80305-3887,2024-11-01,2025-06-15,7,"$1,454.51",No
+WS-102573,wyatt walsh,wyatt.walsh@example.com,,,9088 Maple Dr,Fort Collins,Colorado,80521,2025-11-15,2026-10-02,12,2845.70,Yes
+WS-102579,Kenji Hale,Kenji.hale@example.net,206-555-9336,n/a,4900 MAPLE ROAD,seattle,WA,98101,2024-02-14,2025-08-24,6,$717.49,Yes
+WS-102584,MATTHEW  KERR,Mkerr@example.org,(303) 555-1278,,9470 Park Blvd,Denver,Colorado,80210-7349,2023-06-14,2026-01-19,13,"$2,200.56",Yes
+WS-102593,Tara Mendez, taram@example.org,201.555.9778,,8078  Aspen Avenue,Hoboken,NJ,07030-2446,2022-02-18,2022-06-07,2,$233.94,Yes
+WS-102601,Nicholas  Ito ,Nicholas_ito@example.com,(720)555-3793,,2465  Sage Avenue,Boulder,CO,80304,2022-12-15,2023-02-16,4,$921.63,Yes
+WS-102606,Dylan Mendez,dylanm@example.net,,,7507  Lake Street,San Diego,ca,92101,2024-11-28,2025-06-03,12,1065.98,Yes
+WS-102617,Fatima  Cole,fatima_cole@example.net,,,3654 Granite Ln.,Colorado Springs,co,80905,2024-12-12,2026-09-19,7,$900.45,Yes
+WS-102621,CHLOE DRAKE,cdrake@example.org,6175556431,,5240 Park St.,BOSTON,MA,02116-1739,2024-07-21,2025-05-30,13,"$2,630.72",Yes
+WS-102625,Lars Bishop ,larsb@example.com,(970)555-3879,,8883 juniper ln.,Fort Collins,CO,80521,2022-04-13,2024-08-19,6,$333.93,No
+WS-102633,Vera Wade,vera.wade@example.com,1-720-555-7367,,428 Spruce Drive,Denver,Colorado,80205,2025-02-06,2026-03-04,13,"$2,469.97",Yes
+WS-102640,Emma Tran,emma.tran@example.com,7205555833,,9683 LAKE COURT,denver,CO,80206,2024-10-14,2026-02-09,3,$118.25,Yes
+WS-102651,Anthony Turner,anthony_turner@example.org,(203)555-1991,,1662 alpine st.,New Haven,CT,06510,2024-01-20,2024-03-08,9,$563.33,No
+WS-102654,Rebecca Rhodes,rebecca.rhodes@example.org,303.555.3577,,6186 PARK LANE,Boulder,CO,80303,2022-06-17,2023-12-18,13,"$2,351.47",No
+WS-102664,Aisha Price, aisha.price@example.com,,,8396 Lake Street,denver,co,80206,2022-07-31,2025-06-06,4,928.43,Yes
+WS-102671,ravi  gomez ,RGOMEZ@EXAMPLE.ORG,(206)555-7817,,1570 ELM DRIVE,seattle,wa,98101,2022-02-11,2026-05-09,1,$233.68,Yes
+WS-102674,Noah Wade,noah.wade @example.com,1-718-555-9176,,7252 ALPINE BOULEVARD,brooklyn,NY,11201,2025-01-04,2025-02-27,5,$367.73,No
+WS-102683,Jennifer Nash,jennifer.nash@example.net,303.555.9030,,4592 Park Ln.,DENVER,CO,80205,2022-02-20,2026-09-05,14,"$2,229.14",No
+WS-102692,abigail patel,apatel@example.com,,,7514 Park St,Colorado Springs,CO,80909,2024-10-17,2024-12-02,2,434.57,Yes
+WS-102698,ROBERT PIKE,ROBERTPIKE9@EXAMPLE.ORG,970-555-3794,,4705 SUMMIT STREET,Fort Collins,co,80525,2023-05-22,2026-06-29,6,1475.53,No
+WS-102704,Dan Rhodes,danielr@example.org ,1-303-555-3739,,911 CEDAR BOULEVARD,boulder,Colorado,80304,2026-02-11,2026-02-19,1,$142.97,No
+WS-102712,Mei Johansson,mei_johansson@example.com ,720.555.7831,,8783 meadow st.,Boulder,Colorado,80305,2025-01-24,2026-04-22,1,$164.01,Yes
+WS-102719,NOAH VANCE ,noahv@example.com,503.555.4109,,3940  Pine Street,Portland,OR,97205-2848,2023-06-22,2025-03-13,4,$554.12,No
+WS-102723,Yuki Olsen,yuki_olsen@example.org ,+1 801-555-1321,,859 Birch Lane,SALT LAKE CITY,ut,84101-1268,2024-10-07,2026-07-16,13,$683.58,No
+WS-102730,holly jordan,hollyj@example.net,+1 720-555-1392,,7020  Juniper Boulevard,denver,CO,80203,2023-04-12,2025-07-21,4,$634.27,Yes
+WS-102739,Liam Pike, liamp@example.com,720.555.2132,,900 Sage Rd.,Denver,CO,80205,2026-03-16,2026-07-06,5,$647.60,Yes
+WS-102745,Vera Ortiz ,VORTIZ@EXAMPLE.COM,720-555-2026,,5467 JUNIPER COURT,Boulder,Colorado,80302,2023-05-28,2026-02-12,10,"$1,991.93",No
+WS-102752,Becky Jordan ,rebeccaj @example.org,970.555.4500,,2735  Aspen Road,Fort Collins,CO,80524,2022-05-19,2026-04-17,1,$251.04,No
+WS-102764,ava foster,ava_foster@example.net,503.555.4718,,34 Valley Ave,Portland,OR,97209,2023-08-30,2025-10-25,14,"$3,053.92",Yes
+WS-102771,Benjamin  Rhodes,benjamin.rhodes@example.com,303.555.4799,Self-employed,1891 Highland Avenue,Denver,CO,80202,2026-04-30,2026-05-23,4,$255.66,Yes
+WS-102773,Thomas Noble,THOMAS.NOBLE@EXAMPLE.ORG,720.555.9415,,5536 meadow blvd.,Denver,CO,80206,2025-10-02,2026-09-13,6,$315.38,Yes
+WS-102781,Michael Tate,michaelt@example.org,510-555-4957,,1725 Summit Lane,Oakland,CA,94607,2025-07-26,2026-10-28,12,2324.81,Yes
+WS-102787,Benjamin Pruitt ,benjaminp@example.com,(719)555-0698,,7967 Elm Blvd,Colorado Springs,Colorado,80905-2141,2024-04-24,2024-12-17,3,$485.54,Yes
+WS-102793,laura quinn,laura_quinn@example.net,7205550682,,8674 RIDGE COURT,DENVER,co,80210,2022-10-08,2023-10-13,2,$439.01,Yes
+WS-102804,Lucia Pike,luciap@example.net,303.555.0552,,7126  Willow Court,Denver,Colorado,80203,2025-09-30,2026-01-29,3,$410.58,No
+WS-102813,Jennifer Mendez,jennifer_mendez@example.net,6125558293,,6972 cedar dr.,minneapolis,Minnesota,55401,2022-11-19,2025-07-07,12,"$1,136.61",No
+WS-102816,Paula Young, paulay@example.com,1-206-555-2601,,2864 WILLOW ROAD,Seattle,WA,98105,2023-11-08,2025-06-08,7,$753.68,No
+WS-102824,Chloe Brooks,chloe_brooks@example.org ,720-555-2408,,7190 WILLOW DRIVE,Boulder,CO,80302,2022-05-02,2025-06-23,13,"$2,964.66",Yes
+WS-102830,Kate Young,katherine_young@example.net,1-719-555-3998,,5198 Juniper Ln.,COLORADO SPRINGS,Colorado,80909,2023-08-08,2026-10-11,10,"$2,042.55",Yes
+WS-102835,Liam Shaw,liam.shaw@example.org,1-503-555-4808,,9666 Alpine Ct,portland,OR,97209,2024-08-23,2025-09-28,8,983.54,No
+WS-102845,Ravi Iqbal,ravi.iqbal@example.com,+1 970-555-5014,,6434  Oak Boulevard,Fort Collins,co,80521,2024-11-23,2026-04-23,6,$332.36,No
+WS-102852,EMMA NOBLE,Emma.noble@example.com,505.555.2678,,4296 Mesa Blvd.,Santa Fe,NM,87501,2024-10-19,2026-06-14,6,"$1,030.53",No
+WS-102859,Ravi Hughes,ravi.hughes@example.net,+1 303-555-0890,,3032 juniper ct.,BOULDER,Colorado,80304,2023-01-30,2026-05-22,12,"$3,058.91",No
+WS-102867,Erin Bishop, ebishop@example.org,(617)555-0474,,4663 Granite Ln.,Cambridge,MA,02138,2022-08-29,2026-08-29,6,"$1,280.47",No
+WS-102871,Felix Irwin,felix.irwin@example.com,8015555239,,1185 elm st.,Salt Lake City,UT,84101,2022-01-28,2024-09-26,7,"$1,697.35",No
+WS-102880,ISAAC WADE,Iwade@example.org,719.555.0812,,5176  Spruce Boulevard,Colorado Springs,CO,80909-2683,2026-06-11,2026-09-20,4,$198.95,Yes
+WS-102888,Matt Nguyen ,matthew_nguyen@example.net ,1-619-555-3856,,7731 Mesa Ave.,San Diego,CA,92103-2158,2026-03-31,2026-04-11,2,$75.27,No
+WS-102893,LUCIA KIM,lkim@example.com,+1 510-555-5744,,4992 Maple Boulevard,Oakland,California,94607,2025-04-15,2026-06-29,5,$662.21,Yes
+WS-102898,Erin Yamada,ERIN_YAMADA@EXAMPLE.NET,1-720-555-1968,,2365 Canyon Boulevard,Denver,Colorado,80206,2026-04-02,2026-09-24,8,1427.69,Yes
+WS-102910,lucas drake,ldrake @example.org,(619)555-0636,,6413 PINE DRIVE,San Diego,CA,92103,2022-02-16,2024-11-25,8,"$1,027.99",No
+WS-102917,Gabe Reed,GABRIELR@EXAMPLE.ORG,(303) 555-8621,,3254  Willow Street,BOULDER,CO,80301,2025-08-25,2026-10-19,6,$838.38,Yes
+WS-102919,rosa  cole ,rcole @example.com,,,4909 Sage Ct,Denver,CO,80205,2025-05-11,2025-06-17,14,$863.92,Yes
+WS-102928,Lucia Stone,lucias@example.org ,1-505-555-9197,,4023  Highland Lane,Santa Fe,New Mexico,87505-5617,2023-09-05,2026-07-26,14,"$1,147.63",Yes
+WS-102935,Iris Reyes,ireyes@example.net,(619) 555-6330,,4353 Granite Ln,San Diego,CA,92103,2024-04-06,2026-08-05,6,$852.24,Yes
+WS-102944,RUBY GOMEZ ,rubyg@example.org,(303)555-0537,,5036 Spruce Lane,Boulder,CO,80304,2022-09-12,2026-08-23,6,"$1,479.70",No
+WS-102952,Dylan Ueda,dueda@example.net,7205550359,,770 Ridge Ave,DENVER,Colorado,80205,2022-05-21,2025-08-07,2,$244.11,Yes
+WS-102960,Gloria Diaz,gdiaz@example.org,617-555-9537,Self-employed,1618 Ridge Ln,Cambridge,ma,02139-8841,2024-03-09,2026-03-07,9,$534.35,No
+WS-102964,ANNA PIKE,apike@example.com ,(718) 555-1029,,2395  Oak Lane,BROOKLYN,ny,11211,2023-01-21,2025-12-02,11,"$2,042.99",Yes
+WS-102970,HECTOR OKAFOR,hokafor@example.net ,1-970-555-3129,,2788 Summit Ct.,FORT COLLINS,CO,80521,2025-09-08,2026-06-17,7,1584.03,Yes
+WS-102977,FELIX FOSTER,ffoster1@example.com,,,6995 Spruce Ct.,Austin,tx,78704,2022-05-30,2024-03-26,10,$607.71,No
+WS-102983,Pablo Moreno,pmoreno@example.com,503-555-2422,,8239 MESA BOULEVARD,Portland,or,97205,2023-01-18,2025-12-23,14,1935.50,No
+WS-102993,Susan Yates,susany@example.net,(201)555-7364,,848  Ridge Court,HOBOKEN,NJ,07030,2026-02-09,2026-02-19,11,"$2,770.66",Yes
+WS-102998,Andy Lund ,andrewl@example.net,+1 206-555-6107,,400 Canyon Drive,seattle,WA,98101,2025-05-07,2026-09-13,1,$197.19,Yes
+WS-103006,Maria Wong,mwong@example.com,303.555.9054,,3328 Spruce Ave,Denver,CO,80206,2025-03-26,2025-12-20,6,"$1,461.43",Yes
+WS-103011,Nathan Quinn,nathan.quinn@example.net,1-206-555-9423,,9270 meadow st.,Seattle,WA,98101,2026-03-10,2026-07-23,1,$225.01,Yes
+WS-103021,David  Ito,david_ito@example.net,(802)555-0396,,2658 Lake Ct,Burlington,VT,05401,2023-08-03,2025-07-02,10,1694.32,No
+WS-103030,Chloe Gill ,chloe_gill@example.net,1-619-555-8123,,6179 Park Ct.,SAN DIEGO,CA,92103,2022-11-16,2023-07-31,1,$67.77,No
+WS-103032,Ravi Okafor,rokafor@example.net ,1-303-555-6131,,6871 Mesa Street,DENVER,co,80203,2022-03-15,2026-05-05,8,$459.22,Yes
+WS-103039,Noah Jensen,noahj@example.com,617-555-3823,,4469  Sage Boulevard,BOSTON,MA,02108,2023-11-09,2026-08-31,5,$178.62,No
+WS-103049,Margaret Reyes,MREYES@EXAMPLE.COM,1-512-555-5232,,7664  Ridge Street,Austin,TX,78704,2024-07-30,2024-12-17,3,341.88,Yes
+WS-103052,Samuel Duarte,samuel.duarte@example.org,201-555-0632,,5708 ridge dr.,Hoboken,NJ,07030,2025-07-30,2026-01-23,1,$258.79,Yes
+WS-103059,Claire Wong,cwong@example.com,1-720-555-0579,,7538 HIGHLAND ROAD,DENVER,Colorado,80205,2026-05-09,2026-08-09,6,$353.42,Yes
+WS-103072,Anthony Ferris ,ANTHONYF@EXAMPLE.NET,503-555-3996,,6385  Oak Court,PORTLAND,Oregon,97205,2025-11-24,2026-06-21,4,$588.42,No
+WS-103078,joseph chen,joseph.chen@example.net ,(801) 555-9548,,5971  Lake Lane,salt lake city,UT,84105,2026-03-27,2026-05-28,10,2149.50,Yes
+WS-103083,INGRID JENSEN,ingrid.jensen@example.org,303-555-6429,Self-employed,444 JUNIPER ROAD,Denver,CO,80203,2025-07-14,2026-02-19,7,500.77,No
+WS-103093,John Price,john_price@example.net,7205550434,,8473 LAKE ROAD,Boulder,co,80302,2025-08-26,2025-11-24,2,$318.22,Yes
+WS-103100,IVY BOOTH ,ivy.booth@example.net,(612)555-2328,,8439  Sage Court,Minneapolis,Minnesota,55401,2025-12-14,2026-09-27,2,$324.61,Yes
+WS-103103,paula  mendez,paula.mendez@example.com,1-802-555-8077,,5378 park dr.,burlington,VT,05403,2022-08-10,2023-07-04,1,$248.07,Yes
+WS-103109,Nicholas Lund,nicholas.lund@example.com,(801) 555-6321,,4137 Oak St,Salt Lake City,UT,84102,2022-06-30,2025-05-29,12,2851.60,Yes
+WS-103120,Olivia Foster,olivia.foster@example.net,(720) 555-1293,,5314  Juniper Boulevard,denver,CO,80205,2025-03-14,2026-06-30,9,"$1,846.90",No
+WS-103124,Christopher  Bishop,christopher.bishop@example.com,(720)555-0381,,2234  Birch Road,BOULDER,CO,80305,2023-12-11,2026-10-06,6,"$1,541.62",Yes
+WS-103134,tara holt,tholt@example.net,(801)555-0994,,2484 lake ln.,Salt Lake City,UT,84105,2023-05-20,2025-11-06,13,1211.38,No
+WS-103137,LEAH RUSSO ,leah_russo@example.com ,1-203-555-5880,,5766 Cedar St,NEW HAVEN,Connecticut,06510-8675,2024-04-18,2026-05-04,14,"$1,044.22",Yes
+WS-103146,Laura Marsh,lauram@example.net,3125553795,,3373 Oak Drive,Chicago,Illinois,60614-9526,2022-06-15,2025-06-21,10,"$1,914.03",No
+WS-103156,Erin  Booth,erin.booth@example.com,2065559274,,9050 Valley Ave.,SEATTLE,Washington,98105,2025-07-06,2026-09-17,11,"$2,774.70",No
+WS-103163,owen vance,Owen.vance@example.org,,,3500 Birch St,San Diego,CA,92101,2024-01-20,2024-12-13,6,"$1,118.50",Yes
+WS-103170,ed lowe,edwardl@example.org,1-720-555-3723,,3256 Alpine Street,Boulder,co,80302,2023-09-18,2026-08-17,13,"$1,866.21",Yes
+WS-103172,Tara  Olsen,tarao@example.net,,,6803 Granite Avenue,Boulder,Colorado,80302,2022-09-23,2023-10-15,11,"$1,092.41",No
+WS-103181,Milo Shaw, milo_shaw@example.org,510.555.3739,,8486 Lake Boulevard,oakland,CA,94607,2025-03-21,2025-06-14,9,"$1,790.11",Yes
+WS-103190,Hannah Brooks,HBROOKS@EXAMPLE.COM,(720) 555-4565,,5159 Meadow Court,Denver,co,80205,2025-02-21,2025-12-04,13,"$3,020.34",Yes
+WS-103195,Ivy Ellis,Iellis@example.org,(505)555-8333,,5706 ASPEN DRIVE,Santa Fe,NM,87501,2023-09-27,2025-01-27,11,$822.75,No
+WS-103204,JONAH NOBLE,jonahn@example.net,7205554764,,1786 Elm Ct.,denver,CO,80206,2022-10-19,2023-06-19,1,$130.84,No
+WS-103209,Joseph Hale,Jhale@example.net,720.555.8250,,2702 ALPINE DRIVE,Boulder,co,80303,2024-11-22,2024-11-26,2,$155.21,No
+WS-103219,Leo  Chen,leo.chen@example.net,(303)555-8859,,7364 VALLEY ROAD,Boulder,Colorado,80303,2025-10-23,2026-04-02,5,$414.77,Yes
+WS-103226,LEAH  YOUNG ,leahy@example.org,1-720-555-3131,,8642 willow blvd.,denver,Colorado,80203,2023-10-12,2023-10-24,3,$677.89,No
+WS-103231,Benjamin Kim,benjaminkim82@example.net,(619) 555-7694,,4493 Aspen Drive,San Diego,CA,92103,2024-09-14,2026-09-09,11,"$1,245.51",No
+WS-103234,Hector Irwin,Hectori@example.net,(612) 555-3734,,1146 summit ct.,Minneapolis,MN,55401,2022-01-03,2024-11-18,14,"$1,970.30",No
+WS-103246,Omar Chen,omar_chen@example.org ,(970)555-2356,,1437 BIRCH ROAD,FORT COLLINS,Colorado,80521,2023-02-27,2026-10-31,10,"$1,840.41",Yes
+WS-103253,Wyatt Ellis,WYATT_ELLIS@EXAMPLE.COM,+1 617-555-2008,,7132 ridge ln.,cambridge,MA,02138,2022-06-09,2022-12-01,2,$264.57,Yes
+WS-103260,Diego Usman,DIEGOU@EXAMPLE.ORG,(303)555-6282,,2905 Spruce Rd,Boulder,co,80304,2024-11-04,2026-10-01,4,$235.40,Yes
+WS-103264,daniel alvarez,dalvarez@example.org,,,598 oak rd.,FORT COLLINS,CO,80525,2025-09-06,2026-05-03,11,"$2,216.92",Yes
+WS-103271,David Kerr,David.kerr@example.org,+1 970-555-1048,,7656 Juniper Rd,Fort Collins,CO,80525,2022-08-21,2023-12-15,9,$955.66,No
+WS-103281,ruby patel,rpatel1@example.org ,(719)555-2262,,9846 Highland Lane,colorado springs,CO,80905,2023-04-21,2025-01-16,11,"$1,012.31",No
+WS-103287,Hannah Booth ,hbooth@example.org,(510)555-2772,,3660 MESA DRIVE,OAKLAND,CA,94610-6427,2025-07-30,2026-03-30,3,$531.18,Yes
+WS-103293,maria hughes, maria_hughes@example.org,+1 503-555-6724,,6949  Cedar Road,Portland,or,97205,2023-10-10,2025-06-05,3,$713.37,Yes
+WS-103301,jonah hayes ,jhayes@example.net,,,4709  Sage Boulevard,Denver,CO,80202,2026-01-13,2026-05-02,10,"$2,180.75",Yes
+WS-103306,Maria Yates,MARIA.YATES@EXAMPLE.COM,503-555-9636,,6063 granite ave.,PORTLAND,OR,97209,2023-08-23,2025-05-11,7,"$1,462.72",No
+WS-103311,Megan Weber, mweber@example.org,3035550532,,2660 Aspen Ln,boulder,CO,80303,2024-02-05,2025-07-10,2,$143.58,Yes
+WS-103318,paula iqbal,paula_iqbal@example.net,719.555.7647,,3113  Spruce Court,COLORADO SPRINGS,CO,80905,2024-08-30,2024-12-27,7,648.60,Yes
+WS-103325,Tom Vargas, thomas.vargas@example.org,(801)555-2526,,7329 OAK LANE,salt lake city,UT,84101,2022-07-21,2026-10-20,1,$83.99,Yes
+WS-103337,Andrew  Duarte,Aduarte@example.com,,,1418 Elm Rd.,Portland,OR,97205,2022-12-07,2024-03-10,4,$316.13,Yes
+WS-103339,Susan Okafor,sokafor@example.com,970.555.9901,Self-employed,8050  Lake Avenue,fort collins,co,80521-4100,2025-09-12,2025-11-14,7,$417.60,Yes
+WS-103349,Thomas Cole,tcole@example.net,619.555.9475,,5384 Elm Ave,San Diego,CA,92103,2023-06-18,2024-09-03,4,916.31,No
+WS-103358,Nicholas Wong,nicholas_wong@example.org ,3035552213,,7388 river st.,Denver,CO,80203,2022-11-22,2025-11-16,9,"$1,014.36",No
+WS-103360,Emma Ferris,emma_ferris@example.com,9705553372,,9535 Meadow Blvd,Fort Collins,CO,80521,2023-12-31,2024-12-21,4,465.40,Yes
+WS-103370,Alex Noble,ALEXANDERN@EXAMPLE.COM,,,2343 Juniper Court,Santa Fe,New Mexico,87505,2022-03-13,2023-06-03,1,$232.57,No
+WS-103374,Ivy Booth,ivybooth51@example.com,(612)555-2328,,8439 sage ct.,Minneapolis,Minnesota,55401,2024-10-27,2025-12-07,10,1896.19,Yes
+WS-103381,JOSEPH ZHOU,joseph.zhou@example.net ,(619)555-4940,,3307 highland blvd.,San Diego,ca,92103,2022-06-18,2024-07-29,7,"$1,067.72",Yes
+WS-103390,Laura Reyes,laurareyes47@example.org,1-801-555-8786,,1567  Birch Road,Salt Lake City,UT,84102,2024-03-22,2024-07-13,4,747.02,Yes
+WS-103397,Paolo Johansson,paolo.johansson @example.com,+1 719-555-2982,,5970 Lake Court,Colorado Springs,co,80909,2025-04-23,2026-03-19,8,"$1,773.79",No
+WS-103408,Paula Stone,Paula_stone@example.com,(602)555-2353,,8504 Meadow Ct,phoenix,Arizona,85004,2025-04-04,2026-09-03,14,"$3,620.53",No
+WS-103409,Tara  Dunn,tara.dunn@example.com,510.555.6039,,3066 JUNIPER ROAD,Oakland,California,94607,2026-05-10,2026-09-30,1,$58.03,No
+WS-103416,KATHERINE GRANT, kgrant@example.org,303-555-7538,,982 LAKE ROAD,boulder,Colorado,80301,2023-09-02,2025-07-18,1,$74.30,Yes
+WS-103427,claire yamada,cyamada@example.com,2035558547,,9496 Ridge Court,New Haven,ct,06511,2023-06-01,2025-12-05,9,433.16,No
+WS-103432,hector turner,hector.turner@example.org,2065554689,,4434 HIGHLAND DRIVE,Seattle,WA,98101,2025-08-16,2026-05-08,7,$260.61,No
+WS-103443,nora booth,nora.booth@example.org,3035553856,,8276 maple rd.,Boulder,Colorado,80303,2022-01-26,2022-09-13,9,$569.54,No
+WS-103449,Nathan  Brooks, nbrooks@example.com,(503)555-0894,,6608 GRANITE BOULEVARD,Portland,Oregon,97201,2023-02-28,2026-04-18,3,$742.37,No
+WS-103452,Edward Zimmer,edward_zimmer@example.org,(312) 555-4355,,6837  Highland Boulevard,Chicago,IL,60607,2025-10-31,2026-04-18,7,$349.44,Yes
+WS-103458,lucas reyes,lreyes@example.net,(206) 555-9431,,7058 Park St,Seattle,WA,98105,2023-03-04,2026-05-08,14,"$2,113.83",Yes
+WS-103471,Lucia Ueda,lucia_ueda@example.org,+1 970-555-7336,n/a,1844 Pine Ln.,Fort Collins,CO,80525,2025-09-03,2026-04-28,5,$730.84,No
+WS-103478,IRIS  RUSSO,irusso@example.net,201-555-8564,,4535 Lake Dr,HOBOKEN,NJ,07030-8279,2025-09-29,2026-10-24,2,$486.41,No
+WS-103484,Andrew Iqbal,andrewi@example.org,,,125  Summit Boulevard,CHICAGO,il,60614,2025-05-27,2026-07-24,8,1720.87,No
+WS-103492,LOGAN YOUNG,logan_young @example.org,(719) 555-2489,,9201 lake dr.,Colorado Springs,Colorado,80905,2023-10-10,2024-11-12,8,"$1,474.96",Yes
+WS-103494,Marco Iqbal,marco.iqbal@example.net,+1 505-555-7747,,6821 Meadow Court,Santa Fe,NM,87505,2024-08-21,2026-06-02,13,"$1,421.59",Yes
+WS-103500,Tony Barnes, anthonyb@example.com,(970) 555-3300,,7687 Spruce Boulevard,FORT COLLINS,co,80521,2026-02-09,2026-06-14,6,1020.22,No
+WS-103507,Laura Iqbal,laura_iqbal@example.org,+1 719-555-4758,Self-employed,3592 Aspen Drive,colorado springs,CO,80909-4139,2025-12-18,2026-04-01,7,"$1,247.97",No
+WS-103520,wendy zimmer,wendy.zimmer @example.org,,,9651 Summit Drive,Colorado Springs,CO,80905,2026-05-20,2026-09-16,8,1791.49,Yes
+WS-103523,Diego Silva,diego_silva@example.net ,1-206-555-7695,,270 Ridge Road,Seattle,WA,98101,2022-03-04,2022-07-31,5,1060.29,Yes
+WS-103533,Aisha Moreno, aisha.moreno@example.com,(801) 555-4720,,9651 sage ct.,SALT LAKE CITY,ut,84102,2022-02-09,2022-02-21,9,1657.77,Yes
+WS-103541,Paula Johansson ,paulaj@example.net,(720)555-1719,,6108  Sage Court,Denver,co,80205,2022-04-06,2025-08-14,9,"$2,236.66",Yes
+WS-103546,ELENA GOMEZ,elena.gomez@example.org,,,2034 aspen ln.,Boulder,co,80301,2022-07-25,2024-10-27,11,656.34,No
+WS-103551,paula vargas ,paula.vargas@example.org,201-555-3168,,140 MESA STREET,hoboken,NJ,07030,2024-07-05,2025-02-11,5,637.06,No
+WS-103551,paula vargas ,paula.vargas@example.org,201-555-3168,,140 MESA STREET,hoboken,NJ,07030,2024-07-05,2025-02-11,5,637.06,No
+WS-103562,Ivy Johansson,ijohansson@example.net ,(612)555-5349,,8504 birch blvd.,Minneapolis,MN,55401,2024-10-03,2024-11-29,13,2864.19,Yes
+WS-103568,Victor Nguyen,victor_nguyen@example.com,1-207-555-8333,,343 SPRUCE DRIVE,Portland,ME,04102,2026-05-02,2026-05-04,12,907.85,Yes
+WS-103571,priya wong,priya_wong@example.com,5035553815,,513 ASPEN AVENUE,Portland,OR,97209,2024-10-30,2026-06-09,14,"$2,065.23",Yes
+WS-103578,AVA DIAZ,ava.diaz@example.com,602.555.6738,,2537 Granite Dr.,Phoenix,AZ,85006,2025-01-21,2025-07-25,5,"$1,125.78",Yes
+WS-103585,CLAIRE YAMADA,claireyamada55@example.org,+1 203-555-8547,,9496 RIDGE COURT,New Haven,Connecticut,06511,2024-06-17,2024-07-12,14,$625.21,No
+WS-103594,PRIYA  YOUNG ,pyoung@example.net,+1 303-555-7701,,3535 Oak Rd.,Boulder,CO,80302,2024-08-03,2025-04-02,4,$662.54,No
+WS-103602,wyatt moreno,wyatt.moreno@example.org ,,,109 Mesa Drive,phoenix,Arizona,85006,2025-03-17,2026-02-04,11,"$1,622.93",No
+WS-103605,Elizabeth Nash ,elizabeth_nash@example.org,970.555.2385,,7767 Pine Blvd.,fort collins,co,80525,2022-02-03,2024-09-12,2,$414.04,Yes
+WS-103613,Thomas Patel,Thomas_patel@example.net,970.555.9033,,2016 Valley Road,FORT COLLINS,Colorado,80521,2022-12-01,2023-07-04,3,$721.58,No
+WS-103621,Theo Price,THEO.PRICE@EXAMPLE.COM,970-555-2037,,5167  Mesa Drive,Fort Collins,co,80521,2024-02-05,2026-08-12,10,537.33,No
+WS-103626,TEST ORDER do not ship,orders@summitridge.example,,,1 Test Street,Boulder,CO,80302,2026-10-02,2026-10-02,1,$0.00,No
+WS-103639,jennifer crane,jenniferc@example.com,(718) 555-2168,,9774 Juniper Dr.,Brooklyn,NY,11211,2023-11-28,2025-12-09,8,$481.76,Yes
+WS-103644,Marco Moreno ,marcom@example.com ,(970)555-8520,,5312 Willow Rd.,FORT COLLINS,CO,80525-9446,2023-09-30,2026-09-21,3,266.54,Yes
+WS-103652,Leo Dawson,leo_dawson@example.org,(503) 555-3936,,8294 Birch Rd,Portland,OR,97205,2025-01-29,2025-08-28,8,$741.42,No
+WS-103660,Carmen  Foster,cfoster@example.org,617-555-7976,,7844 GRANITE BOULEVARD,Cambridge,MA,02141,2026-05-11,2026-07-05,7,479.72,No
+WS-103666,Laura Alvarez,lauraa@example.com,1-510-555-1895,,6541 Oak Court,Oakland,ca,94610,2022-06-21,2024-10-06,14,"$2,733.59",No
+WS-103671,Marco Crane,mcrane@example.net,,,4989 spruce st.,Minneapolis,MN,55405,2022-03-22,2022-12-16,12,"$2,229.95",Yes
+WS-103678,LUCAS DUARTE,lucas.duarte@example.com,(720) 555-9396,,7530  Summit Avenue,BOULDER,CO,80302,2025-01-20,2025-04-15,12,927.40,Yes
+WS-103685,Gloria Tran,gloria.tran@example.com,1-303-555-0982,,3304 Mesa Lane,Boulder,Colorado,80304,2024-02-08,2024-11-12,7,$894.04,Yes
+WS-103695,diego dawson,ddawson@example.com,512.555.2828,,6182 Mesa Rd,Austin,TX,78701,2022-02-16,2025-09-18,8,"$1,882.74",Yes
+WS-103696,daniel fox,dfox@example.org,(719)555-0276,,2048 river blvd.,Colorado Springs,CO,80909,2022-10-02,2025-06-18,6,$265.88,No
+WS-103703,Fatima Marsh,fmarsh @example.org,(503)555-3196,,4784 valley ct.,portland,or,97205,2022-06-09,2024-05-14,8,$317.67,Yes
+WS-103711,Wendy Evans,wendye@example.org,1-206-555-1706,,3379 Oak Court,Seattle,WA,98105-2892,2026-05-13,2026-10-28,4,$166.58,No
+WS-103721,Laura Hughes,lhughes @example.net,(201)555-0782,,8099 BIRCH AVENUE,Hoboken,nj,07030-6839,2025-05-29,2025-12-10,13,$619.96,Yes
+WS-103730,David Carter ,david.carter@example.net ,6025551326,,6797 Oak Ct,PHOENIX,AZ,85006,2023-10-06,2024-09-21,1,$62.58,Yes
+WS-103735,Ivan Evans,ivane@example.com,(203)555-4879,,2165 Cedar Rd.,New Haven,Connecticut,06511,2024-04-22,2026-02-23,10,"$1,475.23",Yes
+WS-103740,Tara Abbott,tabbott@example.com ,+1 617-555-3557,,1483 MAPLE AVENUE,Boston,MA,02108-1940,2022-04-12,2023-04-25,10,"$1,383.66",No
+WS-103747,Sven Chen ,sven_chen@example.com ,617-555-8296,,7528 Granite Ct.,cambridge,Massachusetts,02138,2024-05-07,2025-05-30,4,$889.81,No
+WS-103753,Hector Sharp, hectors@example.net,1-312-555-3589,,9475 Ridge Blvd.,Chicago,IL,60614-4967,2026-06-28,2026-09-07,10,"$2,036.23",No
+WS-103761,Wyatt Hart,wyatt.hart@example.com,512.555.9960,,7615  Mesa Road,Austin,TX,78701,2022-09-08,2026-05-25,3,600.68,Yes
+WS-103768,Mei Chen,meichen80@example.org,(612) 555-0134,,228  Sage Lane,Minneapolis,mn,55405,2023-11-09,2025-01-31,2,$147.18,Yes
+WS-103776,Ava Wong,ava.wong@example.org,+1 303-555-8605,,1539  Willow Court,BOULDER,CO,80302,2022-06-05,2024-05-13,5,$950.55,Yes
+WS-103784,Anthony  Tran,Anthonyt@example.com,9705559800,,7101 river ave.,FORT COLLINS,co,80525,2022-12-30,2025-10-06,13,"$2,929.63",Yes
+WS-103788,Laura Cole,lcole@example.net,+1 602-555-0835,,5066 Valley Street,Phoenix,az,85004,2026-01-16,2026-09-01,6,$595.62,No
+WS-103799,ivy irwin,ivy.irwin@example.net,1-801-555-8995,,4357  Juniper Boulevard,Salt Lake City,Utah,84102,2024-06-17,2025-06-08,9,"$1,454.68",No
+WS-103801,maria lowe,Maria.lowe@example.org,312-555-2741,,3283 Juniper Drive,Chicago,IL,60607,2022-09-22,2023-11-16,10,"$2,176.96",No
+WS-103808,ivy  carter ,Ivyc@example.org,+1 206-555-0210,,1349 Cedar Ave.,seattle,wa,98101,2024-04-10,2025-10-21,4,$403.75,No
+WS-103819,Hugo Usman,husman@example.net,7195557582,,1349 ALPINE COURT,colorado springs,Colorado,80905,2022-04-07,2022-11-05,3,$217.24,No
+WS-103825,SAMUEL FOSTER,samuel_foster@example.org ,1-719-555-8832,,3153 Meadow Rd,Colorado Springs,CO,80903,2024-05-15,2024-05-15,3,537.67,Yes
+WS-103833,Theo Irwin,theoi@example.org,970-555-3216,,6665 PARK STREET,Fort Collins,co,80521-6651,2022-07-10,2024-11-20,10,$385.82,Yes
+WS-103840,Ingrid Hale,ingrid_hale @example.org,,,2728 Highland Ct,FORT COLLINS,CO,80525,2023-03-18,2023-04-22,9,1256.24,Yes
+WS-103844,Benjamin Kim,benjamin.kim@example.org,+1 619-555-7694,,4493 Aspen Dr.,San Diego,CA,92103-4221,2026-03-26,2026-08-19,13,"$1,489.60",No
+WS-103856,MEI HART,meihart7@example.org,1-801-555-0631,,4783 Lake St,salt lake city,UT,84101,2023-02-04,2024-04-13,5,$553.81,Yes
+WS-103863,Owen Ingram ,oingram8@example.com,312-555-1738,,2510 Elm Road,Chicago,IL,60614,2023-12-14,2025-09-18,13,$676.00,Yes
+WS-103868,Milo Larsen,milol@example.org,(617) 555-5211,,5213 Elm Rd,boston,MA,02108,2024-09-29,2025-02-16,11,"$2,101.04",Yes
+WS-103872,Mei Russo,mrusso@example.com,1-206-555-1015,,2456 GRANITE LANE,Seattle,WA,98105,2024-08-21,2025-11-13,10,"$1,876.11",No
+WS-103883,Carmen Booth,cbooth @example.com,(201) 555-8271,,7770 PARK DRIVE,Hoboken,New Jersey,07030,2023-10-02,2026-06-26,8,"$1,687.23",Yes
+WS-103885,Andrew Olsen,Andrew.olsen@example.org,(312) 555-8220,,5666  Valley Street,Chicago,Illinois,60607,2026-02-04,2026-04-06,2,$120.22,Yes
+WS-103893,iris  voss,ivoss@example.org ,+1 303-555-9423,,2343 PINE BOULEVARD,Boulder,CO,80302,2023-08-10,2025-06-22,9,$754.17,Yes
+WS-103901,Susan Diaz,SDIAZ@EXAMPLE.COM,+1 619-555-6036,,3266 Aspen St,san diego,ca,92103,2024-01-25,2024-03-06,5,$764.17,Yes
+WS-103910,Tara Dunn ,tara.dunn@example.org,602.555.5026,,178 Aspen St.,PHOENIX,AZ,85004,2023-09-21,2026-02-08,4,$946.67,Yes
+WS-103919,Thomas  Evans, thomas.evans@example.net,(510)555-4226,,1210 Maple Lane,Oakland,ca,94607,2024-09-01,2026-06-02,7,"$1,417.85",Yes
+WS-103923,DYLAN IRWIN,dylan_irwin@example.org ,(720) 555-9152,,2527 Elm Ct,Boulder,CO,80303-6623,2023-01-18,2025-11-16,4,$523.27,Yes
+WS-103928,william barnes , williamb@example.org,5035553416,,6297  Spruce Drive,PORTLAND,OR,97205,2024-02-24,2026-01-11,11,1895.13,No
+WS-103938,Lars Alvarez,LARSA@EXAMPLE.NET,+1 303-555-3728,,3930  River Avenue,Denver,co,80203-7451,2024-07-27,2024-12-19,13,"$2,917.53",No
+WS-103943,Jennifer Sato,jennifer_sato@example.org,(303)555-5560,,2287 Park St.,Denver,CO,80203,2026-03-25,2026-05-11,8,$553.39,No
+WS-103953,Maria Okafor,maria_okafor@example.net,+1 617-555-8265,,9161 Meadow Court,Boston,MA,02116-6086,2023-08-21,2024-06-07,14,"$1,856.76",Yes
+WS-103961,Astrid Udall, astrid.udall@example.com,1-720-555-3688,,5985 Cedar Ct.,Boulder,co,80305,2024-08-11,2026-02-02,11,"$1,281.79",No
+WS-103965,Olivia Gill,ogill@example.org,1-720-555-8623,,3953 birch ave.,Denver,CO,80205,2023-02-20,2023-08-04,1,$116.63,No
+WS-103970,Liam  Moreno, liam_moreno@example.net,(303)555-0230,,9742  Canyon Street,Boulder,CO,80304,2022-12-04,2024-10-28,5,"$1,045.52",Yes
+WS-103977,Margaret Ramirez ,margaret_ramirez@example.net,+1 720-555-2843,,792 spruce st.,Boulder,CO,80304,2025-01-06,2025-02-02,8,$761.21,Yes
+WS-103985,Samantha Bishop,samantha_bishop@example.net,510-555-7762,,9800 River Road,OAKLAND,ca,94607,2024-05-05,2026-07-15,10,"$1,846.97",No
+WS-103992,Ethan Evans, ethane@example.org,+1 505-555-2217,,459 CANYON ROAD,SANTA FE,NM,87501,2022-09-15,2026-02-27,10,842.00,Yes
+WS-104000,Noah Lane,noah_lane @example.org,1-303-555-3558,,7966 lake blvd.,Boulder,CO,80304,2023-09-05,2025-11-19,5,$516.35,Yes
+WS-104005,Marco Drake,MARCO_DRAKE@EXAMPLE.ORG,+1 970-555-1798,,2807 Summit Blvd,Fort Collins,Colorado,80524-1126,2025-09-29,2026-06-07,13,"$2,359.41",Yes
+WS-104015,JOHN JENSEN,JJENSEN@EXAMPLE.COM,970.555.8322,,3296 Cedar Street,Fort Collins,CO,80524,2022-06-27,2026-09-21,4,794.97,Yes
+WS-104019,joseph  pruitt,josephp@example.net,(619) 555-6873,,1459 Meadow Rd,San Diego,CA,92101,2024-12-27,2025-05-20,4,$306.52,No
+WS-104030,Mia Morgan,mia.morgan@example.org,802-555-9472,,1865 cedar ln.,Burlington,vt,05403,2024-04-20,2026-08-13,5,$517.77,No
+WS-104038,Ella Sharp,ellas@example.org,970.555.2505,,4051 MEADOW LANE,Fort Collins,CO,80524,2022-01-16,2025-12-05,1,$109.00,No
+WS-104045,Grace Crane,gcrane@example.org,(207)555-2139,,2190  Summit Road,Portland,ME,04101,2023-02-08,2025-12-23,5,1055.58,Yes
+WS-104047,Ella Diaz,ELLA.DIAZ@EXAMPLE.COM,718.555.6710,,2086 meadow rd.,Brooklyn,New York,11211,2024-07-14,2025-11-14,4,$332.95,Yes
+WS-104057,Hannah Vargas,hannah.vargas@example.net ,720-555-6480,,6368 Ridge Avenue,boulder,co,80304,2025-05-31,2026-06-08,10,"$1,585.41",No
+WS-104063,Isaac Eriksen,ieriksen4@example.com,503.555.4886,,7175 valley blvd.,Portland,Oregon,97205,2022-12-06,2024-10-30,12,$510.72,No
+WS-104071,Iris Chen,ichen @example.com,+1 617-555-5555,,2612 lake ave.,Cambridge,MA,02138,2024-08-11,2025-04-22,5,$234.66,Yes
+WS-104074,Emma  Bauer,EBAUER@EXAMPLE.ORG,312.555.8142,,9038  Summit Street,CHICAGO,IL,60607,2025-07-02,2026-07-26,5,$490.66,Yes
+WS-104086,oscar brooks, oscar_brooks@example.org,720.555.7154,,6703 highland rd.,BOULDER,co,80301,2025-04-10,2026-06-04,9,$934.44,No
+WS-104089,liam bishop,liamb@example.org,,,1956 Mesa Blvd.,COLORADO SPRINGS,Colorado,80903-8239,2023-11-03,2025-11-18,10,"$2,445.68",No
+WS-104097,Lucas Nguyen,lucas.nguyen@example.com,612-555-3773,,187 Willow Rd.,MINNEAPOLIS,MN,55401-2374,2025-01-12,2025-11-02,4,816.04,Yes
+WS-104106,Dylan Ingram,dingram@example.net ,7205552002,,4930 PINE ROAD,DENVER,CO,80202,2023-09-21,2025-10-07,9,"$1,485.45",Yes
+WS-104111,Josephine Zhou,jzhou@example.com,6195559540,,9548 Park Rd,san diego,ca,92103,2023-08-24,2026-02-26,9,2185.20,Yes
+WS-104121,jennifer  dunn,jdunn@example.net,(503)555-5561,,7353 Maple Boulevard,Portland,OR,97209,2023-12-09,2024-04-10,10,"$1,174.66",Yes
+WS-104125,Chloe Quinn,chloe.quinn@example.com,(720) 555-1887,,6381 Park Ave,denver,co,80205,2022-01-09,2022-05-04,3,$198.08,Yes
+WS-104136,TONY MARSH, amarsh@example.org,,,3857 Maple Rd,Chicago,IL,60614,2025-09-27,2025-12-19,12,"$1,775.42",Yes
+WS-104137,OWEN  LUND, owenl@example.com,1-303-555-7537,,6018 Park Drive,Boulder,CO,80305,2026-01-14,2026-06-13,13,"$1,734.49",Yes
+WS-104149,WILLIAM GARCIA,william_garcia@example.net,1-619-555-3114,,4485 oak rd.,san diego,California,92101,2022-03-06,2024-04-29,1,$107.77,Yes
+WS-104156,Oscar  Drake,oscard@example.net,(201) 555-1152,,3357 River Avenue,Hoboken,NJ,07030,2024-12-15,2025-02-25,3,$282.97,No
+WS-104159,Elena Ellis ,elena_ellis@example.com,+1 201-555-0467,,859  Ridge Drive,hoboken,NJ,07030,2024-01-18,2025-11-29,9,"$1,672.40",Yes
+WS-104167,Ingrid Voss ,ingridv@example.net,,,6768 cedar ave.,Chicago,IL,60614,2022-06-01,2025-06-09,3,$556.26,Yes
+WS-104177,VICTOR FERRIS, victor_ferris@example.org,1-503-555-9043,,3205 Alpine Drive,Portland,OR,97201,2023-04-13,2024-03-09,5,"$1,078.43",No
+WS-104179,CALEB TURNER,caleb_turner @example.org,1-719-555-0045,,6075 Park St,Colorado Springs,Colorado,80905-7629,2022-05-31,2022-12-21,9,"$1,971.30",No
+WS-104187,Erin Castillo,ecastillo@example.com,303-555-7907,,3222 River Ave,Boulder,co,80304,2024-03-06,2026-03-08,6,$463.24,Yes
+WS-104194,Yuki Walsh,yukiw@example.org,+1 201-555-1035,,5501 Highland Avenue,Hoboken,NJ,07030,2024-11-09,2025-12-10,1,60.72,No
+WS-104205,Zoe Alvarez,zalvarez@example.net,720.555.6717,,7520  Oak Road,Boulder,co,80305,2026-04-25,2026-07-20,13,"$1,042.24",No
+WS-104208,Holly Crane,holly_crane@example.com,1-503-555-8727,,5698 juniper ave.,PORTLAND,OR,97209,2024-08-01,2025-05-16,10,$816.20,Yes
+WS-104216,Mei Lane,mlane@example.net,+1 619-555-4688,,717 aspen blvd.,SAN DIEGO,California,92101,2026-01-23,2026-07-28,10,"$1,578.70",No
+WS-104224,Alexandra Lowe,alexandra.lowe@example.com,(303)555-4426,,7237 elm rd.,Denver,Colorado,80202,2024-06-07,2026-03-27,7,"$1,159.30",Yes
+WS-104234,Mia Noble,mia.noble @example.net,+1 612-555-7447,,1524 oak ave.,Minneapolis,Minnesota,55401-3385,2024-02-15,2024-08-13,11,$773.22,No
+WS-104238,Liam Young, lyoung@example.org,720-555-3423,,9311  Aspen Road,DENVER,co,80206,2025-12-15,2026-09-04,4,$627.16,Yes
+WS-104243,ABIGAIL VOSS,abigailv@example.com,3035550160,,6645 Willow Avenue,Denver,Colorado,80205-3967,2025-06-11,2026-02-24,9,607.49,Yes
+WS-104254,noah moreno,Noahm@example.com,,,8266 Lake Court,Chicago,IL,60607,2025-06-21,2026-02-26,13,"$2,829.03",No
+WS-104256,Tara Foster,tfoster@example.org,720-555-6804,,7484 VALLEY LANE,DENVER,co,80206,2023-08-06,2026-06-17,5,$299.15,Yes
+WS-104263,Jonah Castillo,JONAH.CASTILLO@EXAMPLE.NET,720-555-5052,,1713 canyon blvd.,DENVER,co,80206,2023-08-16,2026-04-27,5,1171.68,Yes
+WS-104274,HANNAH YAMADA,hannah_yamada@example.net,+1 617-555-7278,,7044 juniper ct.,Boston,MA,02108,2024-11-16,2026-02-19,10,"$1,420.52",Yes
+WS-104279,Diego Rhodes,diego_rhodes@example.net,303.555.0040,,9483 Willow Rd.,Boulder,CO,80302,2022-12-05,2023-10-18,4,$540.27,Yes
+WS-104286,Leo Ramirez,leo_ramirez@example.net,+1 206-555-4892,,8905 Willow Ln,SEATTLE,WA,98105,2023-04-30,2025-08-30,2,$246.82,No
+WS-104292,Ava  Evans,Ava_evans@example.org,(801)555-7963,,6422 Park Street,salt lake city,UT,84101,2025-11-02,2026-04-15,1,127.59,No
+WS-104302,Astrid  Barnes,abarnes @example.org,+1 719-555-1609,,3439 Park Ct,COLORADO SPRINGS,Colorado,80903,2025-07-18,2026-10-30,14,3088.97,Yes
+WS-104305,David Novak,davidn@example.org ,1-970-555-9061,,8082 Valley Dr.,Fort Collins,CO,80521,2026-06-13,2026-09-05,9,482.27,Yes
+WS-104316,Nicholas  Iqbal,nicholas_iqbal@example.com,(203) 555-1958,,237  Oak Drive,New Haven,Connecticut,06511,2024-06-27,2024-10-21,9,"$2,060.86",Yes
+WS-104325,Pablo Vargas,pablov@example.org,617-555-7295,,9769 SAGE BOULEVARD,Cambridge,MA,02139,2023-03-13,2023-09-23,8,"$1,972.18",No
+WS-104327,Ivy Brooks,ibrooks@example.com,+1 303-555-7277,,529 Highland Dr.,BOULDER,CO,80302,2023-04-09,2026-10-28,7,"$1,651.14",Yes
+WS-104333,laura usman,laura_usman@example.com,8025552120,,4649 CEDAR DRIVE,Burlington,VT,05401,2025-06-12,2026-01-27,10,$833.22,Yes
+WS-104346,Oscar Walsh,owalsh@example.net ,1-503-555-4156,,9460  Summit Road,Portland,OR,97201,2024-02-10,2025-01-06,12,"$1,250.93",No
+WS-104351,Edward Hart,edward_hart@example.org,512-555-8111,,6542 Aspen Lane,Austin,tx,78704-6679,2024-09-20,2025-02-27,7,728.73,No
+WS-104357,Leo Tran,leo_tran@example.net,1-303-555-5381,,7130 river st.,Denver,CO,80210,2023-04-09,2023-07-23,1,$204.89,No
+WS-104361,Sofia Eriksen,sofiae@example.net,+1 720-555-4312,,4446  Maple Avenue,DENVER,co,80203,2024-05-25,2025-11-15,13,"$2,277.54",Yes
+WS-104374,Jennifer Iqbal , jenniferi@example.net,6025555327,,83 elm ave.,PHOENIX,az,85004-4457,2024-03-02,2024-06-23,5,1052.17,No
+WS-104379,Felix Noble,felix.noble@example.com,,,138  Alpine Drive,DENVER,CO,80206,2022-02-14,2023-03-02,12,1114.18,No
+WS-104386,Priya Sato,psato@example.net,1-303-555-8002,,4751  Oak Street,Boulder,co,80304,2024-12-17,2026-01-14,13,"$3,024.96",Yes
+WS-104395,Abby Irwin , abigail_irwin@example.net,1-720-555-9236,,7086 Lake Dr.,Boulder,co,80304,2025-07-11,2026-07-04,11,1364.53,Yes
+WS-104400,Diego Crane,diegoc@example.net,(201) 555-0270,,6473 Aspen St,Hoboken,New Jersey,07030,2022-10-19,2026-09-22,6,$259.43,No
+WS-104403,Yuki  Crane,yuki_crane@example.net,1-718-555-9295,,4232 Highland Ct.,Brooklyn,New York,11211,2024-06-04,2024-11-08,7,"$1,695.59",Yes
+WS-104414,Wyatt  Diaz, wdiaz@example.org,(312)555-7643,,9452 Juniper Dr.,Chicago,il,60614,2024-10-17,2026-05-15,12,"$1,002.46",Yes
+WS-104420,Mia Silva,mias@example.net,1-206-555-8636,,3665 Alpine Rd.,SEATTLE,WA,98105,2025-03-26,2025-10-15,1,$92.64,No
+WS-104427,PRIYA HUGHES,priya.hughes@example.org,(720) 555-4530,,8127  Willow Street,Denver,CO,80203,2026-01-24,2026-02-16,2,$477.09,Yes
+WS-104431,DYLAN OKAFOR ,dokafor@example.org,617-555-6686,,189 Summit Blvd.,cambridge,MA,02138,2025-04-04,2025-11-12,1,$178.32,No
+WS-104444,Nora Sato,nsato@example.org,303.555.1792,,4771 lake ct.,Denver,co,80206,2023-07-18,2024-10-29,2,$99.17,Yes
+WS-104448,Milo  Foster,milof@example.org,,,407  Park Avenue,Boulder,co,80301,2024-01-20,2025-11-27,11,$941.68,Yes
+WS-104458,Edward Gill,EDWARD.GILL@EXAMPLE.ORG,3035550090,,8907 PARK STREET,Boulder,CO,80302,2023-06-21,2025-08-15,14,"$3,277.06",Yes
+WS-104462,Alexander Mendez,alexander_mendez@example.net,719.555.4101,,6360 WILLOW STREET,Colorado Springs,co,80909,2023-10-24,2025-12-18,2,$183.45,No
+WS-104472,leo nash,leo_nash@example.org,512.555.7434,,2589 Aspen Ave.,Austin,TX,78701,2025-01-23,2025-07-23,12,2755.77,Yes
+WS-104477,Caleb Foster ,cfoster2@example.net,9705554749,,1022 alpine blvd.,Fort Collins,CO,80524,2025-09-27,2026-06-20,13,"$3,366.40",Yes
+WS-104486,Chloe Young,Cyoung@example.org,,,6558  Pine Road,Boulder,co,80304,2023-03-09,2025-07-21,1,$225.04,No
+WS-104487,ROSA VANCE,rosav@example.net,201.555.2299,,8095 RIDGE ROAD,Hoboken,NJ,07030,2022-03-07,2026-08-12,14,2930.90,Yes
+WS-104500,Astrid Novak ,astridn@example.net,(303) 555-0783,,6289  Juniper Drive,denver,Colorado,80206,2025-06-20,2025-07-11,11,2002.18,Yes
+WS-104505,Lucas  Sharp,lucas.sharp@example.com,512-555-8862,,3419 Sage Ct.,Austin,TX,78701,2024-12-11,2026-09-27,5,$816.30,Yes
+WS-104508,Maria Holt,MARIA.HOLT@EXAMPLE.COM,303-555-7965,,8022 MESA ROAD,Denver,CO,80203,2023-03-04,2024-02-04,3,$378.78,Yes
+WS-104518,Paolo Quinn, paolo_quinn@example.net,+1 720-555-3073,,5716 Spruce Street,BOULDER,CO,80305-8119,2026-03-10,2026-07-19,9,"$2,057.54",Yes
+WS-104524,Sven Marsh,SVEN_MARSH@EXAMPLE.NET,6195552257,,7072 Ridge St,San Diego,ca,92103-4318,2022-04-20,2023-05-03,13,"$1,049.48",No
+WS-104529,Dylan Moss,Dylan.moss@example.com,(510) 555-0599,,6167  Valley Road,Oakland,CA,94610-3038,2023-05-29,2026-03-21,8,"$1,341.67",Yes
+WS-104536,leah  patel,leah.patel@example.org ,(303) 555-6319,,2927 Ridge Rd,DENVER,CO,80210,2024-08-07,2026-08-02,5,"$1,096.98",Yes
+WS-104536,leah  patel,leah.patel@example.org ,(303) 555-6319,,2927 Ridge Rd,DENVER,CO,80210,2024-08-07,2026-08-02,5,"$1,096.98",Yes
+WS-104544,Nicholas Khan ,nkhan @example.org,1-617-555-2904,,231 summit rd.,cambridge,MA,02139,2024-08-28,2024-09-13,11,"$1,605.03",No
+WS-104551,Lucia Ramirez,Lramirez@example.com,5125558951,,5122 Juniper Blvd.,Austin,tx,78704,2022-02-24,2025-11-01,2,208.87,No
+WS-104563,Abigail Kerr,abigailk@example.com,(718) 555-2482,,4917 MAPLE COURT,BROOKLYN,NY,11201,2023-11-19,2025-11-29,4,$998.67,No
+WS-104565,Benjamin Hayes,Benjamin_hayes@example.com,(512) 555-5209,,5200 Maple Road,Austin,TX,78704,2025-10-01,2026-07-04,4,$366.16,Yes
+WS-104573,INGRID HART,ingrid_hart@example.net,3035551102,,5551 Park Dr,DENVER,CO,80202,2025-10-29,2026-06-07,14,$646.09,Yes
+WS-104578,Anna Iqbal,anna.iqbal@example.net,802-555-0471,,3752 Alpine Rd.,BURLINGTON,VT,05403-3729,2022-04-24,2023-06-03,7,"$1,329.25",Yes
+WS-104588,James Webb,jamesw@example.org,718.555.7825,,3708 Valley Blvd,Brooklyn,ny,11201,2024-06-28,2026-03-18,4,$444.94,Yes
+WS-104595,Mia  Ramirez,mramirez@example.net,,,8514 MEADOW COURT,Cambridge,ma,02139,2022-08-01,2025-07-10,8,555.53,No
+WS-104604,rosa  castillo,rosa_castillo@example.com,(612) 555-9280,,2643  Summit Drive,MINNEAPOLIS,MN,55401,2022-06-17,2025-03-12,13,"$3,133.46",Yes
+WS-104608,WILLIAM PATEL ,william_patel@example.com,1-720-555-4666,,6320 Meadow Dr.,Boulder,CO,80302,2022-04-07,2025-01-15,13,"$2,953.29",No
+WS-104619,Sofia Vargas,sofia_vargas@example.org,(720) 555-9791,,6867 Valley Dr,Boulder,CO,80303,2025-08-09,2025-10-22,6,573.87,No
+WS-104624,ERIN STONE, erin_stone@example.net,801.555.9460,,8630 JUNIPER ROAD,SALT LAKE CITY,UT,84105,2024-02-01,2024-11-05,4,$959.44,No
+WS-104627,liam  moss,liam.moss@example.org,602-555-7676,,863 ridge blvd.,phoenix,az,85004,2024-02-09,2024-04-10,10,$916.15,No
+WS-104635,LUCIA VARGAS,luciav@example.org,(802) 555-6923,,74 alpine ave.,burlington,Vermont,05401,2025-06-08,2025-09-03,11,$730.48,Yes
+WS-104643,Lucas Lopez,LUCAS_LOPEZ@EXAMPLE.COM,510-555-4426,,1310 Meadow Rd,oakland,CA,94610,2023-08-29,2023-10-11,6,"$1,358.35",No
+WS-104652,ingrid drake ,ingrid_drake@example.org,1-512-555-2702,,4657 PINE COURT,Austin,TX,78701,2022-01-29,2022-03-27,5,1075.39,Yes
+WS-104661,SAMUEL DIAZ,samuel_diaz@example.com,1-720-555-9990,,8339 Cedar Blvd.,Boulder,CO,80304,2022-12-01,2023-10-16,6,"$1,165.54",No
+WS-104667,Noah Udall,NOAH.UDALL@EXAMPLE.NET,206-555-5081,,4019 Maple Ln,seattle,WA,98105,2024-05-30,2024-12-20,12,738.67,Yes
+WS-104670,John  Tate,john_tate @example.net,505-555-9749,,5585 Granite Dr,SANTA FE,New Mexico,87501,2024-06-24,2024-07-24,1,253.69,Yes
+WS-104676,daniel  jensen,djensen@example.com,(970) 555-9143,,5135 Oak Rd,Fort Collins,CO,80525,2023-02-06,2025-12-12,1,$250.44,No
+WS-104687,Leah Zimmer,leahz@example.com,617.555.1777,,3646 Meadow Ave.,CAMBRIDGE,MA,02138,2026-01-12,2026-06-19,3,430.33,No
+WS-104692,LARS BROOKS,lbrooks@example.org,1-617-555-6966,,8414 sage blvd.,Cambridge,Massachusetts,02139,2023-02-03,2025-09-18,2,$107.29,Yes
+WS-104697,SOFIA WEBER,Sofia.weber@example.org,303-555-3583,,6059  Meadow Drive,Boulder,Colorado,80301,2022-05-21,2024-11-25,13,"$1,387.24",No
+WS-104710,Rosa Ramirez, rosa_ramirez@example.com,(612) 555-2696,,6742 Mesa Blvd,minneapolis,mn,55405,2025-06-04,2026-04-28,6,"$1,233.37",No
+WS-104712,Yuki Fischer,yuki.fischer@example.net,970.555.2882,,9491 Park Ct.,Fort Collins,CO,80525,2024-10-09,2025-10-30,5,$976.90,No
+WS-104722,elizabeth yamada,elizabeth.yamada@example.net,(505) 555-6449,,2544 sage ln.,Santa Fe,NM,87501,2026-03-21,2026-09-15,10,$833.72,Yes
+WS-104728,Holly Barnes,hollyb@example.net ,+1 203-555-4063,,8438 Oak Avenue,New Haven,CT,06511,2025-05-16,2026-05-05,14,"$1,584.39",Yes
+WS-104732,chloe tate, chloet@example.net,303-555-2715,,9728 Pine Ave.,boulder,CO,80305,2024-02-15,2026-04-24,3,$579.92,Yes
+WS-104745,Emma  Price,emmap@example.com,7195554631,,7593  Maple Road,Colorado Springs,CO,80909,2025-01-15,2025-03-17,4,$792.62,Yes
+WS-104747,Claire Jensen,claire_jensen@example.com,(201) 555-0171,,3715 RIDGE STREET,HOBOKEN,NJ,07030,2022-02-11,2022-12-18,5,$952.20,No
+WS-104758,Nora Wade ,nora_wade@example.com,1-612-555-9667,,7858 ASPEN AVENUE,minneapolis,MN,55405,2023-12-09,2025-07-24,14,"$2,586.45",Yes
+WS-104761,Ivan Reed,ivanreed60@example.net,1-303-555-2857,,330  Spruce Avenue,DENVER,CO,80202,2025-08-10,2025-10-29,14,"$3,475.04",Yes
+WS-104768,ivy zhou,ivyz@example.net,619.555.7334,,6619 Birch Court,San Diego,CA,92101,2022-02-05,2025-03-24,9,"$1,016.74",Yes
+WS-104778,MIA KERR,mia.kerr@example.com,+1 602-555-3132,,1409 Birch Ln,PHOENIX,Arizona,85006,2025-02-27,2025-04-24,11,"$1,045.99",Yes
+WS-104785,ROSA PRUITT , rosap@example.org,(602)555-1322,,6017 MAPLE DRIVE,Phoenix,AZ,85004,2024-05-18,2025-06-09,7,$499.80,No
+WS-104792,Dylan Reyes, dreyes@example.net,6195558334,,9868 River Boulevard,San Diego,CA,92103-1875,2023-10-28,2024-11-26,13,"$1,070.19",Yes
+WS-104795,Lucas Novak,Lucas.novak@example.org,7205559845,,715 Meadow Ln,Denver,CO,80203,2026-02-03,2026-03-04,8,$789.82,Yes
+WS-104807,AISHA NOBLE,aisha_noble@example.com,719-555-0387,,5372 Park Boulevard,colorado springs,CO,80909,2023-06-27,2026-09-24,6,$357.21,Yes
+WS-104811,Iris Turner,Iris_turner@example.org,,,6034 Mesa Rd,BOULDER,co,80304,2023-06-14,2023-10-31,11,"$1,366.38",Yes
+WS-104821,Liz Price ,ELIZABETH.PRICE@EXAMPLE.ORG,1-720-555-9104,,9678 Elm Rd,boulder,co,80303,2024-08-04,2025-04-12,8,"$1,512.67",Yes
+WS-104828,MARCO ZHOU,MARCOZ@EXAMPLE.NET,7205555248,,9686 Granite St,denver,CO,80203,2025-04-30,2026-04-07,13,"$1,347.87",Yes
+WS-104833,Samuel Sato,samuel_sato@example.net,(719) 555-7342,,1978 mesa rd.,Colorado Springs,CO,80909,2024-05-01,2026-03-06,11,"$1,599.61",No
+WS-104841,Thomas Duarte,thomas.duarte@example.net,9705554766,,670 Lake Boulevard,fort collins,Colorado,80525,2024-07-24,2025-01-18,7,"$1,746.67",No
+WS-104847,Milo Dunn,milod@example.net,303-555-8512,,9740  Maple Avenue,Boulder,CO,80303,2022-09-21,2025-01-09,12,"$1,119.58",No
+WS-104854,Lucia Evans,lucia_evans@example.com ,1-970-555-4918,,9432 VALLEY LANE,Fort Collins,Colorado,80525,2026-04-22,2026-06-26,14,"$1,603.88",Yes
+WS-104858,Owen Hart,owen_hart@example.net ,1-720-555-7316,,5989 valley ln.,Denver,CO,80210,2025-07-08,2026-09-03,9,$706.45,Yes
+WS-104865,nora mendez,nmendez@example.com,7205552315,,7639 SPRUCE COURT,Boulder,co,80303-8564,2026-01-13,2026-08-17,11,1965.72,Yes
+WS-104872,Vera Park, verap@example.net,303-555-2473,,362 WILLOW DRIVE,Denver,CO,80206,2024-03-30,2026-08-23,9,$863.29,No
+WS-104884,Lucia Ito,lito@example.net,+1 612-555-7468,,9058 Elm Ct.,MINNEAPOLIS,MN,55401,2024-06-14,2026-01-10,3,$559.07,Yes
+WS-104889,Oscar Sharp, oscar_sharp@example.net,9705558328,,4441 BIRCH COURT,fort collins,Colorado,80524,2026-03-20,2026-06-29,10,1346.31,No
+WS-104899,BETH QUINN,equinn@example.net,3035552745,,9194 OAK COURT,Denver,CO,80203-6771,2025-07-26,2026-02-19,2,$334.91,No
+WS-104903,Hannah Kerr, hkerr@example.net,7205554943,,9516 Aspen Avenue,BOULDER,CO,80302,2023-10-11,2023-12-25,7,"$1,523.14",Yes
+WS-104909,matthew lowe, matthewl@example.com,5035553315,,1079 ELM COURT,Portland,OR,97201,2024-02-26,2026-01-08,10,"$2,562.97",Yes
+WS-104919,Christopher Ingram,christopher.ingram@example.org,2035557860,,4018  Maple Lane,NEW HAVEN,Connecticut,06511,2026-02-19,2026-04-14,1,$229.10,Yes
+WS-104921,Lars Walsh,lars_walsh@example.com,+1 201-555-3017,,2336 SPRUCE AVENUE,Hoboken,New Jersey,07030,2022-05-24,2022-09-02,1,$85.40,Yes
+WS-104929,Leah Moss,leah.moss@example.org,(503) 555-8007,,16 birch blvd.,portland,OR,97205,2025-04-17,2025-12-27,4,$411.41,Yes
+WS-104937,James Johansson,james_johansson@example.com ,1-206-555-4083,,5706  Ridge Court,seattle,WA,98103,2023-04-03,2025-12-19,4,$423.40,Yes
+WS-104946,Megan Bauer,MEGANB@EXAMPLE.NET,,,937 Summit St,Boulder,co,80304,2024-08-03,2025-05-16,3,$697.44,No
+WS-104955,Milo Rhodes,milo.rhodes@example.net,+1 203-555-7671,,2017 LAKE STREET,New Haven,CT,06510,2025-12-10,2026-05-15,3,$566.02,Yes
+WS-104959,IVY HOLT, ivy_holt@example.net,+1 619-555-9221,,3097 CEDAR LANE,san diego,ca,92101,2024-09-29,2025-06-26,8,"$1,229.79",Yes
+WS-104969,Robert Ito,Robert.ito@example.org,+1 720-555-1322,,9486  Ridge Court,boulder,CO,80301,2023-03-26,2024-12-01,4,$951.59,Yes
+WS-104971,Diego Kerr,dkerr@example.org ,6195558158,,1998  Summit Drive,San Diego,California,92103,2024-09-30,2026-04-22,8,$583.13,No
+WS-104981,Benjamin Ramirez,benjaminr@example.org,1-718-555-9352,,1212 OAK ROAD,Brooklyn,NY,11201,2022-09-15,2024-06-21,13,"$1,730.19",No
+WS-104989,OWEN SHAW,oshaw@example.net,7205559383,,3334 MEADOW LANE,Denver,CO,80206,2025-01-24,2026-04-24,1,$93.92,Yes
+WS-104996,Milo Jordan,miloj @example.org,,,8385 Highland St.,phoenix,AZ,85006,2023-12-10,2026-10-03,2,$144.62,Yes
+WS-105004,Hannah Dawson,hdawson@example.net ,7185550411,,2978 Spruce Ave.,BROOKLYN,New York,11201,2026-03-27,2026-05-27,1,$37.51,No
+WS-105007,Priya Marsh,priya_marsh@example.org,(510)555-9605,,6741 pine ln.,Oakland,CA,94607,2024-12-27,2026-05-10,12,"$2,057.01",Yes
+WS-105017,Logan  Lowe,logan_lowe@example.org,+1 719-555-5024,,6101 PINE ROAD,COLORADO SPRINGS,Colorado,80903,2022-03-05,2023-12-21,5,$361.02,Yes
+WS-105025,Oscar Grant,oscar_grant@example.com,7205558011,n/a,3433 RIDGE LANE,Denver,CO,80205-2940,2022-04-22,2024-09-26,4,$160.90,Yes
+WS-105028,Jennifer Gill,jgill@example.org,503-555-4618,,223 Granite St,portland,or,97205,2025-07-31,2025-08-02,1,$149.02,No
+WS-105036,Pablo Stone,pablo.stone@example.net,503.555.8008,,4851 Meadow Ct.,Portland,OR,97205,2022-06-06,2025-05-26,3,$744.66,Yes
+WS-105041,Milo Ito ,mito@example.net,512-555-2648,,4483 GRANITE LANE,Austin,TX,78704,2022-03-22,2022-06-26,12,1154.95,No
+WS-105052,Anthony Nguyen,ANGUYEN@EXAMPLE.NET,7195557141,Self-employed,5600 river ct.,Colorado Springs,CO,80905,2024-12-12,2026-07-11,4,$652.71,Yes
+WS-105060,Mia Alvarez,malvarez@example.net,1-206-555-3619,,2752 MESA LANE,Seattle,Washington,98103,2025-04-09,2025-12-16,1,$251.33,No
+WS-105067,David Shaw,david_shaw @example.net,617-555-2120,,584 ELM STREET,Boston,Massachusetts,02116,2022-01-18,2024-08-31,14,732.38,No
+WS-105072,Chloe Ingram,chloe_ingram@example.com,(510) 555-2636,,4798 Oak Lane,Oakland,CA,94610,2025-09-15,2025-09-24,8,$728.66,No
+WS-105078,gabe  drake,GABRIELD@EXAMPLE.NET,719-555-6991,,1428 Canyon Ct.,Colorado Springs,CO,80909,2025-10-20,2026-05-06,7,"$1,268.97",Yes
+WS-105086,Lucia Price,Luciap@example.com,1-512-555-8207,,8390  Willow Drive,Austin,TX,78701,2024-08-08,2026-02-22,1,$195.18,Yes
+WS-105094,William Tate,william.tate @example.org,+1 617-555-3887,,5848 Cedar Blvd,CAMBRIDGE,ma,02139,2025-01-03,2026-01-26,3,$309.23,No
+WS-105099,Victor Castillo,victor.castillo @example.org,,,3185 MESA ROAD,Boulder,CO,80301,2023-10-03,2024-11-11,8,$999.53,No
+WS-105104,Pablo Novak, pablon@example.org,1-719-555-0196,,9075 Valley St.,Colorado Springs,CO,80903,2022-08-13,2022-10-06,13,"$3,075.92",Yes
+WS-105113,Astrid Novak,astridnovak3 @example.org,(303)555-0783,,6289 Juniper Drive,Denver,CO,80206,2024-10-06,2026-07-16,9,"$1,290.16",Yes
+WS-105117,Andrew Moss,andrew_moss@example.net,303.555.6674,,7092 Park Ln.,Boulder,CO,80305-8607,2024-03-20,2024-10-28,1,$171.43,No
+WS-105128,PRIYA DRAKE,priyad@example.org,6025551514,,1735 summit blvd.,Phoenix,az,85006,2024-09-13,2025-11-25,6,1426.70,Yes
+WS-105131,Matt Garcia,mgarcia@example.net,1-303-555-9631,,251 Cedar Ave.,Boulder,CO,80303,2024-12-08,2025-05-25,10,"$1,210.01",Yes
+WS-105141,James Lund,jlund@example.com ,718-555-6853,,43 Mesa Drive,Brooklyn,New York,11201,2022-07-27,2025-05-22,2,$336.08,No
+WS-105148,Fatima Foster,ffoster@example.net,6195552987,,7523 Highland Drive,San Diego,CA,92103,2023-11-17,2024-11-21,13,"$2,259.10",No
+WS-105154,Ivan Fischer,IFISCHER@EXAMPLE.NET,303-555-0585,,1719 Juniper Blvd,DENVER,CO,80205,2026-05-23,2026-07-18,12,"$2,191.16",Yes
+WS-105162,isaac price,isaac.price@example.org,8025559368,,5627  Maple Street,Burlington,Vermont,05401,2025-11-24,2026-02-28,14,1501.60,No
+WS-105168,Tara Bauer,Tara_bauer@example.org,,,677 Pine Lane,Denver,CO,80206,2025-08-29,2026-07-15,11,"$1,527.89",No
+WS-105175,Sven Ortiz,sven.ortiz@example.com ,,,8997  Summit Street,OAKLAND,ca,94610,2026-01-23,2026-09-10,14,"$2,180.89",No
+WS-105182,Gloria Crane,gloriac@example.org,1-720-555-2947,,9705 Pine Ave,Denver,CO,80205,2022-09-10,2026-02-20,2,$220.83,Yes
+WS-105193,James Voss, jvoss@example.org,+1 720-555-4281,,2642 River St,Boulder,Colorado,80305,2026-04-06,2026-06-14,8,$701.25,No
+WS-105199,Hector Diaz,HECTOR.DIAZ@EXAMPLE.COM,+1 720-555-3794,,6990 Elm Rd,denver,CO,80206,2024-10-17,2025-02-28,2,$180.42,Yes
+WS-105206,Abigail  Carter,abigail.carter@example.com,+1 206-555-5789,,4598 ELM STREET,SEATTLE,wa,98103,2023-06-14,2026-09-23,2,$338.06,Yes
+WS-105212,Zoe Torres,ztorres @example.com,7195556363,,2120 Canyon St,Colorado Springs,CO,80903,2022-05-30,2022-06-07,1,232.33,Yes
+WS-105221,Oscar Moss ,oscar.moss @example.net,720.555.4726,,65  Birch Drive,Denver,Colorado,80205,2024-04-29,2025-01-01,7,$699.96,Yes
+WS-105221,Oscar Moss ,oscar.moss @example.net,720.555.4726,,65  Birch Drive,Denver,Colorado,80205,2024-04-29,2025-01-01,7,$699.96,Yes
+WS-105225,John Diaz,john_diaz@example.org ,(801)555-4141,,5654 Spruce Ln.,Salt Lake City,UT,84105,2022-10-17,2026-02-19,4,1024.27,Yes
+WS-105229,Margaret Pike,margaret.pike@example.com,(207) 555-5057,,7477 spruce ave.,Portland,me,04102,2026-02-07,2026-05-27,3,$252.91,No
+WS-105241,LARS MARSH, lmarsh@example.org,+1 201-555-8834,,2244 Elm Ct,Hoboken,NJ,07030,2026-05-25,2026-10-14,13,"$1,156.71",No
+WS-105246,Wendy Ito,wendyi@example.org,(203)555-5706,,6202  Valley Avenue,new haven,CT,06510,2025-05-23,2026-03-02,6,"$1,356.77",No
+WS-105251,DYLAN HUGHES ,dylanh@example.net,720-555-7089,,3179  Cedar Street,Boulder,CO,80302,2024-12-01,2026-07-11,14,"$2,497.15",Yes
+WS-105263,katherine hughes,katherineh@example.com,(303)555-6584,,3100 ALPINE LANE,BOULDER,co,80304,2025-06-06,2026-05-01,12,"$1,716.50",No
+WS-105265,Aisha Marsh,amarsh@example.com,1-970-555-2389,,1399 Cedar Avenue,Fort Collins,CO,80525,2025-09-27,2025-12-17,7,$997.32,Yes
+WS-105277,CLAIRE RHODES,clairer@example.org,1-602-555-9675,,6431 Pine Blvd.,Phoenix,AZ,85004,2024-05-29,2024-07-22,7,641.07,No
+WS-105284,alexander keller,alexanderk@example.net,1-303-555-0514,Self-employed,8918 mesa blvd.,Boulder,Colorado,80302,2024-01-08,2026-07-25,11,$615.22,No
+WS-105290,OSCAR OKAFOR,Oscaro@example.org,+1 303-555-3995,,64 Park Ave.,Denver,CO,80206,2023-12-11,2026-03-31,8,1768.88,Yes
+WS-105292,IRIS REYES,IRISR@EXAMPLE.ORG,1-720-555-2057,,9135 Pine Road,boulder,Colorado,80301,2024-06-17,2026-07-22,9,"$1,129.36",No
+WS-105305,Wendy Eriksen,weriksen@example.org,(617)555-9514,,8107 alpine blvd.,Cambridge,MA,02138,2024-09-09,2025-11-19,9,"$1,971.58",No
+WS-105311,matthew  fox ,MATTHEW.FOX@EXAMPLE.NET,(718) 555-0713,,8387 Birch Court,Brooklyn,NY,11211,2023-09-24,2023-12-18,3,$188.60,Yes
+WS-105313,Robert Pike,rpike@example.org,970-555-3794,,4705 summit st.,Fort Collins,CO,80525-4818,2025-05-03,2025-10-03,11,2713.39,No
+WS-105321,Iris Udall,Iris_udall@example.org,(612)555-4781,,7108 Mesa Ln.,Minneapolis,mn,55401,2023-02-07,2024-07-22,10,$561.38,No
+WS-105330,Anna Lowe,ANNA_LOWE@EXAMPLE.ORG,(206)555-2580,,3948 Aspen Ln.,Seattle,Washington,98105,2025-01-27,2025-03-22,14,"$3,279.53",No
+WS-105335,Gabriel Pike,gabriel_pike@example.net,8025550423,,3747 cedar ave.,Burlington,Vermont,05401,2023-04-01,2023-07-08,9,$953.71,Yes
+WS-105347,Abigail Zhou, abigail.zhou@example.net,+1 612-555-3754,,7603 Sage St.,Minneapolis,MN,55405,2024-08-01,2026-03-03,3,$767.34,No
+WS-105348,Steven Ito, steven.ito@example.net,510-555-5174,,8224 summit rd.,Oakland,ca,94610,2023-08-02,2025-07-10,13,"$1,392.71",No
+WS-105359,Rebecca  Russo,rebecca_russo@example.org,720-555-3815,,2415  Mesa Road,boulder,co,80302,2023-02-17,2025-09-20,4,$903.34,Yes
+WS-105365,yuki hart,yukih@example.com,1-720-555-3629,,9850 MAPLE AVENUE,DENVER,Colorado,80206-9537,2025-08-15,2026-03-01,5,$660.31,Yes
+WS-105375,CHLOE NASH,chloe_nash@example.org,+1 303-555-8176,,3864 Lake St,DENVER,CO,80202,2023-01-26,2024-03-31,11,$525.68,No
+WS-105379,Chloe  Fox,chloe.fox@example.com,(207)555-9737,,5228 Birch Dr.,portland,ME,04102,2022-11-19,2024-02-03,7,"$1,317.50",Yes
+WS-105385,Noah Gomez,noahg@example.com,(203) 555-2133,,2683 Valley Rd.,NEW HAVEN,CT,06511,2025-10-23,2026-10-15,7,$532.59,No
+WS-105396,leo walsh,leo_walsh @example.org,303.555.5939,,5868 Maple Blvd,Boulder,CO,80302,2024-03-24,2024-08-31,14,"$3,036.78",No
+WS-105400,Ivy Weber,iweber@example.net,2035556241,,6674  Cedar Drive,New Haven,CT,06511,2022-03-02,2026-05-04,10,1514.38,Yes
+WS-105404,Erin  Yates,ERINY@EXAMPLE.COM,1-617-555-7545,,9672 HIGHLAND LANE,Boston,MA,02108,2025-12-31,2026-07-13,8,"$1,023.69",No
+WS-105414,Steve Nguyen,snguyen@example.com,1-510-555-7094,,3215 River Court,Oakland,CA,94607,2024-05-25,2024-10-31,10,"$1,518.66",Yes
+WS-105420,Priya  Udall,priya.udall @example.com,7205556872,,3489 Birch St,Boulder,CO,80303,2022-06-24,2023-04-06,14,$794.71,Yes
+WS-105431,Emma Diaz,ediaz @example.com,1-303-555-2906,,5368 Mesa St.,Denver,co,80203,2024-08-30,2026-01-16,5,$287.49,Yes
+WS-105438,paula tran,paulat@example.net ,(512)555-0383,,8484 Cedar Avenue,AUSTIN,TX,78704-9775,2024-05-07,2024-07-10,12,"$2,716.71",Yes
+WS-105442,Emma  Rhodes,erhodes@example.net,(510)555-7521,,9304 ALPINE BOULEVARD,Oakland,CA,94607,2022-06-04,2026-07-18,9,$953.64,No
+WS-105451,Ava Gill,ava.gill@example.net ,+1 617-555-3421,,6710 Aspen Road,Cambridge,MA,02141,2024-01-03,2026-08-19,9,"$1,057.23",Yes
+WS-105454,Laura Wong,laura_wong@example.org,,,78  Granite Road,Minneapolis,MN,55405,2023-11-30,2024-01-20,13,$588.45,No
+WS-105466,Nathan Ellis,nathane@example.org,,,5003 SPRUCE DRIVE,Portland,ME,04101,2025-08-02,2025-10-19,10,"$1,681.01",Yes
+WS-105468,Leah Grant,leahg@example.net,+1 312-555-1354,,7952 Highland Ln,chicago,il,60607,2023-11-04,2025-11-01,9,$713.94,Yes
+WS-105477,Andy Marsh,amarsh@example.net,(612) 555-6587,,4939 ALPINE DRIVE,Minneapolis,MN,55401,2023-10-01,2026-10-05,6,$345.67,No
+WS-105481,NOAH HART,NHART@EXAMPLE.ORG,(801) 555-6977,n/a,558 park ct.,Salt Lake City,UT,84105,2025-06-17,2026-09-26,9,"$1,680.86",No
+WS-105491,lucas price ,lucas.price@example.org,(201) 555-9864,,2813 Valley Ave,Hoboken,NJ,07030,2024-11-21,2024-12-11,6,$309.18,Yes
+WS-105500,Claire Kim,claire.kim@example.net,303-555-1099,,5572 Canyon Ct,Denver,co,80202,2022-04-30,2025-10-05,2,$518.87,No
+WS-105505,CHRISTOPHER STONE,christopher.stone@example.org,201.555.9218,,3989  Sage Drive,Hoboken,NJ,07030,2022-05-16,2022-12-23,1,$181.80,No
+WS-105514,Megan  Jordan,meganj @example.org,(720) 555-3103,,8717 Juniper Rd,Denver,CO,80202,2023-04-16,2025-03-09,2,$455.90,Yes
+WS-105518,nicholas voss ,nicholas.voss@example.net,602-555-5535,,534 Juniper Rd.,PHOENIX,Arizona,85006,2025-03-28,2025-07-02,4,465.57,No
+WS-105529,Megan  Ellis,Megan_ellis@example.org,(602)555-9717,,2875  Valley Court,Phoenix,AZ,85006,2024-01-06,2024-04-17,2,$101.96,Yes
+WS-105535,Alexander Gill ,Alexander_gill@example.net,+1 719-555-3145,,3632  Maple Court,Colorado Springs,CO,80905,2023-03-14,2025-09-05,10,"$2,218.67",No
+WS-105541,Andy Reyes,andrew.reyes@example.com,(970)555-6949,,4322  Aspen Road,FORT COLLINS,CO,80525,2022-02-18,2022-07-18,3,$706.76,Yes
+WS-105547,jimmy iqbal,jamesi@example.net,(617)555-3000,,3377  Mesa Road,cambridge,MA,02141,2024-10-30,2025-03-19,9,"$1,950.85",No
+WS-105555,PEGGY VARGAS, mvargas@example.net,(719)555-7560,,731 elm rd.,Colorado Springs,CO,80903,2025-09-18,2026-07-12,14,"$1,343.89",No
+WS-105564,VERA BARNES,vera_barnes@example.com,(720)555-6678,,9257 Maple Road,Denver,CO,80205,2023-06-25,2026-04-23,2,140.86,No
+WS-105570,Carmen Alvarez, carmena@example.org,+1 303-555-0878,,3671  Lake Lane,Boulder,CO,80305,2024-04-20,2024-06-04,2,$281.90,No
+WS-105576,John Morgan,john_morgan@example.com,2035551197,,4480 Ridge Drive,New Haven,Connecticut,06510,2023-11-06,2025-05-27,6,$944.94,No
+WS-105579,lucia  duarte, lucia_duarte@example.org,(801)555-6337,,5251 Spruce Avenue,Salt Lake City,ut,84105,2023-03-14,2023-05-15,3,$193.66,No
+WS-105586,Tara Wong,twong@example.org,7195553932,,212 OAK STREET,colorado springs,CO,80903,2025-07-08,2026-08-26,3,$457.39,No
+WS-105598,Chloe Moreno,Cmoreno@example.net,6175556667,,2663 Mesa Ave.,BOSTON,Massachusetts,02116-2290,2026-02-09,2026-05-26,6,"$1,313.03",Yes
+WS-105602,Susan Zhou,susan.zhou@example.net,(720)555-7791,,1323 Sage Ln,denver,Colorado,80203-4109,2025-01-08,2026-08-14,12,"$2,693.15",No
+WS-105611,Omar Weber,omar.weber@example.net,720.555.6004,,4662 Birch Ct.,Denver,co,80210,2026-01-08,2026-02-25,10,"$2,039.05",Yes
+WS-105620,Andrew Barnes,abarnes9@example.com,1-303-555-7063,,1542  Summit Lane,boulder,CO,80305,2023-02-28,2025-02-27,6,$964.66,Yes
+WS-105625,Katie Wade,kwade@example.com,(303) 555-4310,,5683 Mesa Ct,Denver,CO,80203-8522,2026-01-19,2026-05-12,9,"$2,328.31",No
+WS-105630,Maria Price ,maria.price@example.net,(612) 555-4311,,723 Elm Court,Minneapolis,MN,55401,2026-06-24,2026-10-12,7,$350.25,Yes
+WS-105640,DIEGO GOMEZ,dgomez @example.org,1-312-555-0379,,3014 lake ave.,chicago,IL,60614,2024-09-23,2026-01-16,7,"$1,224.98",Yes
+WS-105642,Joseph Ingram, jingram@example.com,,,4133 Meadow Rd,Boulder,CO,80301,2025-11-27,2025-12-27,1,208.32,Yes
+WS-105649,Robert Novak,robert_novak@example.net ,303-555-5387,,770 ridge rd.,Denver,co,80205,2022-12-21,2024-04-27,1,$188.14,Yes
+WS-105657,Elena Patel,elena_patel@example.com ,312-555-1845,,8632 highland rd.,Chicago,IL,60614,2026-02-06,2026-08-03,8,"$1,079.73",No
+WS-105669,Carmen  Rhodes,carmenr@example.org ,970.555.2722,,74  Elm Court,Fort Collins,CO,80521,2023-11-07,2024-12-19,7,"$1,011.48",Yes
+WS-105672,Katherine Eriksen,katherine_eriksen@example.org,(720)555-5924,,2732 Meadow Ct.,Boulder,CO,80303,2022-10-14,2026-03-13,11,"$2,110.02",Yes
+WS-105683,Hannah Torres,Htorres@example.org,,,826 Aspen Drive,Boston,Massachusetts,02108,2025-06-03,2026-09-05,6,"$1,309.48",Yes
+WS-105688,BENJAMIN CASTILLO, bcastillo@example.com,612-555-7840,,1601 SUMMIT BOULEVARD,Minneapolis,Minnesota,55405,2022-01-08,2025-08-06,14,$884.22,No
+WS-105694,FATIMA TURNER,fatimat@example.com,(970)555-4168,,2753  Lake Boulevard,FORT COLLINS,CO,80525,2023-05-24,2025-07-08,4,$178.26,Yes
+WS-105702,Paolo Abbott ,paolo.abbott@example.org,1-802-555-5970,,7250 HIGHLAND COURT,Burlington,vt,05401-4451,2023-08-26,2023-10-22,2,$314.72,Yes
+WS-105709,Sofia Reed,sofia.reed@example.net,312.555.9942,,8632 Sage Blvd.,Chicago,Illinois,60614,2022-03-03,2026-03-08,2,$150.08,Yes
+WS-105712,Edward Marsh,emarsh@example.net,6195553714,,4157 Birch Ct.,San Diego,CA,92103,2023-07-22,2024-08-08,9,$479.05,No
+WS-105725,rob torres,robertt@example.net,+1 512-555-5697,,6153 Mesa Avenue,Austin,TX,78704,2023-08-28,2024-11-13,6,"$1,029.01",No
+WS-105731,Caleb Cole,caleb_cole@example.org,1-512-555-5216,Self-employed,5106 granite blvd.,Austin,tx,78701,2026-02-28,2026-06-16,2,$341.80,Yes
+WS-105737,Michael Turner ,michael_turner@example.com,5055553287,,3828 Highland St.,santa fe,New Mexico,87505,2024-12-31,2025-02-25,8,"$1,344.51",Yes
+WS-105742,ASTRID ABBOTT,astrida@example.org,510.555.3983,,6863 Granite Ln,Oakland,ca,94607,2024-11-08,2026-07-08,1,$186.00,Yes
+WS-105751,Isaac Diaz,isaac.diaz@example.com ,+1 312-555-7684,,7894  Park Street,Chicago,IL,60614,2025-11-21,2026-06-20,2,$411.59,No
+WS-105754,Erin Abbott ,ERIN.ABBOTT@EXAMPLE.COM,312-555-4729,,1580 Park Rd,Chicago,Illinois,60614,2022-05-31,2023-11-10,6,$849.29,No
+WS-105761,Alexander Lowe, alowe@example.org,303.555.8720,,750 Granite Drive,Denver,Colorado,80202,2026-01-06,2026-09-22,2,$326.86,Yes
+WS-105770,Abigail Larsen ,abigaill@example.org,612.555.7042,,2946 Juniper Boulevard,MINNEAPOLIS,MN,55405,2023-05-01,2024-07-11,7,"$1,591.36",Yes
+WS-105775,Chloe Novak,chloen@example.org ,(720) 555-3947,,9847 highland rd.,Denver,CO,80210-9883,2022-03-27,2026-10-01,8,"$1,709.98",Yes
+WS-105786,gloria novak,gloria_novak@example.org,+1 312-555-6850,,1803 Alpine Street,Chicago,IL,60614,2022-07-20,2025-03-16,7,$955.04,No
+WS-105793,MATTHEW OLSEN,matthew.olsen@example.org,720.555.9489,,6596 Ridge Dr.,Denver,co,80206,2025-06-16,2026-09-28,12,"$3,068.11",Yes
+WS-105800,Jonah Khan,JONAH_KHAN@EXAMPLE.ORG,+1 718-555-4367,,2427 Meadow St.,Brooklyn,NY,11211,2022-07-25,2023-12-03,4,423.64,Yes
+WS-105806,Test  Account,,,,1 Test Street,Boulder,CO,80302,2026-10-02,2026-10-02,1,$0.00,No
+WS-105814,Megan Sharp,Msharp@example.net,303.555.5473,,4884 Aspen St,Denver,CO,80205-1843,2024-07-14,2024-07-27,7,$814.37,Yes
+WS-105823,Steven Cole,Steven.cole@example.com,720.555.7137,,2576 Aspen Rd.,BOULDER,CO,80303,2026-04-18,2026-09-01,3,$597.01,No
+WS-105827,Ivy Russo,irusso1@example.net ,5055552309,,9141 Mesa Drive,Santa Fe,nm,87501,2023-04-18,2025-09-22,2,$270.28,Yes
+WS-105836,Rosa Wade,rwade @example.net,617-555-4646,,931 Granite Court,cambridge,MA,02138,2022-07-07,2023-02-06,5,"$1,179.39",Yes
+WS-105839,WYATT  FORD,wford@example.com,(720)555-5000,,4035 Park St.,Boulder,CO,80304,2025-11-30,2026-07-08,12,$696.65,No
+WS-105847,leah garcia, leah_garcia@example.com,510.555.5358,,7579 ridge ct.,OAKLAND,CA,94607,2026-04-03,2026-06-29,5,$693.52,Yes
+WS-105852,WENDY ABBOTT,WENDY_ABBOTT@EXAMPLE.COM,617.555.6490,,3308 SPRUCE DRIVE,BOSTON,MA,02108,2024-12-24,2025-04-22,1,$181.69,No
+WS-105859,Wendy Hart,wendyh @example.org,(510) 555-1436,,7330 CEDAR DRIVE,OAKLAND,CA,94610,2023-04-01,2024-11-28,10,"$1,252.47",Yes
+WS-105872,Claire Ramirez,CLAIRE_RAMIREZ@EXAMPLE.COM,(719)555-4530,,1614 ridge dr.,colorado springs,CO,80909,2024-08-09,2024-08-25,14,$897.03,Yes
+WS-105878,Erin Hart,erin_hart@example.com,(602) 555-5965,,470  Ridge Boulevard,phoenix,az,85004,2023-05-21,2026-10-06,9,"$1,339.51",Yes
+WS-105882,Ruby Johansson,rjohansson@example.com,5035552819,,41 Lake Dr.,Portland,or,97209-6260,2023-12-06,2026-02-09,11,"$1,696.68",Yes
+WS-105893,james torres,james_torres@example.net,6125552047,,544 Lake Ave,minneapolis,MN,55405,2026-01-31,2026-06-25,13,2868.66,Yes
+WS-105897,Caleb Fox,caleb.fox@example.org,303-555-5666,,1103 Aspen Ct,boulder,CO,80305,2026-03-10,2026-08-11,14,"$3,253.72",Yes
+WS-105907,john torres,JTORRES@EXAMPLE.NET,(510)555-7168,,584 Ridge Ave.,Oakland,CA,94607,2026-02-06,2026-03-05,12,2110.71,Yes
+WS-105912,Yuki Mendez,ymendez@example.com ,8025555354,,7824 maple blvd.,Burlington,vt,05403-1335,2023-10-07,2026-06-02,4,405.87,Yes
+WS-105921,Nathan  Jordan,njordan@example.com,6195553175,,7881  Birch Street,San Diego,CA,92101,2023-11-18,2025-08-08,5,$789.32,Yes
+WS-105923,Ivy Lane,ilane@example.org,1-303-555-3479,,5852  Mesa Avenue,Boulder,CO,80304,2022-07-29,2024-06-12,7,1612.34,Yes
+WS-105930,Ravi Reyes,rreyes@example.org,,,4046 meadow dr.,colorado springs,CO,80903,2024-03-06,2024-10-22,6,$730.26,Yes
+WS-105938,Wendy Patel ,wendy.patel @example.net,1-801-555-6358,,667 LAKE DRIVE,SALT LAKE CITY,Utah,84101,2024-03-07,2026-03-02,13,"$1,448.65",Yes
+WS-105948,Maria Wade,maria.wade@example.org,(602)555-0468,,1034 Birch Dr,Phoenix,Arizona,85004,2022-11-14,2023-12-24,2,360.34,No
+WS-105954,MEGAN VARGAS,megan_vargas@example.com,1-303-555-0025,,3254 Summit Drive,Denver,co,80203,2023-07-30,2026-03-26,8,366.82,Yes
+WS-105957,Omar Ferris,omar.ferris@example.org,(207) 555-6397,,4549  Willow Court,Portland,ME,04101-7437,2023-06-01,2025-05-03,2,$449.34,Yes
+WS-105970,Chris Bauer,christopher.bauer@example.net ,5035551307,,327 Spruce Dr.,Portland,or,97209,2024-07-20,2024-11-16,6,"$1,002.89",No
+WS-105973,gabriel larsen,gabriel_larsen@example.net,(303) 555-4104,,2106 Highland Ct,Boulder,CO,80303,2022-02-02,2024-11-26,12,859.17,No
+WS-105980,Yuki Kim,ykim@example.com,201.555.0756,,2245 Canyon Avenue,Hoboken,nj,07030,2023-11-27,2024-09-03,11,"$2,626.99",Yes
+WS-105989,Ruby Zimmer,rubyz@example.net,207-555-0364,,7072 Spruce Ave,Portland,Maine,04102,2026-02-10,2026-10-10,5,$662.62,Yes
+WS-105993,Ivy Nguyen,inguyen@example.com,206.555.3685,Self-employed,6188 Ridge Ln.,Seattle,WA,98101,2023-06-25,2024-03-03,13,"$3,350.85",No
+WS-106004,Carmen Wade,carmen.wade@example.com,(970) 555-2191,,3391 CEDAR COURT,Fort Collins,CO,80521,2025-03-04,2026-02-13,4,320.06,Yes
+WS-106008,Benjamin Gill,benjamin.gill@example.org ,720-555-3967,,7760 Aspen Rd.,BOULDER,co,80301,2025-12-17,2026-01-24,9,$734.31,Yes
+WS-106018,Victor  Ramirez,victor.ramirez@example.net,7205555605,,9497 ASPEN AVENUE,Boulder,CO,80303,2023-04-19,2025-06-18,4,845.08,Yes
+WS-106023,Anna Jordan,ajordan@example.com,(512)555-6891,,9534  Maple Avenue,Austin,TX,78701,2025-11-01,2025-11-28,13,"$3,020.19",No
+WS-106032,Matthew Rhodes,matthew_rhodes@example.net ,7205557564,,5837 Granite Boulevard,Boulder,Colorado,80304,2025-06-21,2025-08-12,10,"$1,157.20",No
+WS-106040,Jonah Iqbal,jonah_iqbal@example.com,206-555-9420,,8011  Elm Avenue,Seattle,WA,98101,2022-05-29,2022-11-07,14,$635.69,Yes
+WS-106046,Liam Abbott,labbott@example.net,+1 505-555-3075,,9226  Cedar Drive,Santa Fe,NM,87501,2025-09-13,2026-01-21,12,1047.24,No
+WS-106053,LUCIA WEBB,lucia_webb@example.com,+1 612-555-3816,,2333 Granite Ct.,MINNEAPOLIS,mn,55405,2022-11-11,2023-06-22,4,$174.80,Yes
+WS-106059,Wyatt Keller,wyatt_keller@example.org,(203) 555-1440,,7151 Maple Ct.,new haven,CT,06510,2022-04-19,2025-09-23,1,$109.39,Yes
+WS-106065,Daniel  Patel,DPATEL@EXAMPLE.NET,503-555-6620,,5155 Maple Avenue,PORTLAND,OR,97201-5273,2024-10-07,2025-07-08,4,$930.56,Yes
+WS-106075,Mei Chen, mei_chen@example.com,(612) 555-0134,,228 sage ln.,Minneapolis,Minnesota,55405,2025-07-01,2026-01-13,4,$206.16,Yes
+WS-106080,Rebecca  Ingram ,rebecca_ingram@example.org,,,530 Juniper Dr.,Phoenix,AZ,85004-1584,2024-01-09,2026-08-17,14,"$1,196.09",Yes
+WS-106085,ben zhou,benjamin_zhou@example.org,2065558548,,9648 Spruce Avenue,SEATTLE,WA,98103,2023-12-20,2026-09-27,4,$721.61,Yes
+WS-106090,THOMAS TRAN,thomas.tran@example.net,,,7223 River St,Denver,CO,80206,2024-01-01,2024-10-17,11,1282.43,Yes
+WS-106099,CHRISTOPHER  TORRES,CTORRES@EXAMPLE.ORG,5035559331,n/a,9132 Pine Ave,Portland,OR,97205,2025-07-07,2025-08-07,8,"$1,912.92",Yes
+WS-106107,Nora Nash,Nora.nash@example.org,+1 720-555-0984,,1545 Granite Rd,Denver,CO,80202,2026-05-12,2026-07-18,5,"$1,138.11",No
+WS-106115,Christopher Hale,christopher_hale@example.org ,7205550050,,4330  Oak Court,Boulder,CO,80303,2024-02-08,2024-03-01,3,$699.03,No
+WS-106123,Dylan Keller,dylank@example.org ,1-720-555-5494,,2359  Canyon Boulevard,Denver,CO,80202,2025-05-21,2025-11-24,6,"$1,312.72",Yes
+WS-106128,Nora Foster,nora.foster@example.org,(303) 555-0360,,5803 Alpine Blvd,Boulder,Colorado,80303-2930,2022-12-04,2025-07-25,6,$215.07,No
+WS-106132,Felix  Lopez,felix_lopez @example.com,503-555-5399,,684 Highland Court,Portland,OR,97205,2022-09-25,2026-03-04,8,1529.12,Yes
+WS-106143,Paula Moreno,Pmoreno@example.org,1-619-555-2231,,4780  Canyon Road,San Diego,CA,92101-6987,2022-06-15,2023-03-28,5,1275.52,Yes
+WS-106150,megan yates,megany@example.com,802.555.3608,,4417 Juniper Ave,Burlington,VT,05401,2022-03-12,2023-04-11,5,$503.58,Yes
+WS-106157,Theo Carter,theoc@example.com,3035551634,,4923 Meadow Ct,denver,co,80210,2026-06-20,2026-10-20,11,"$2,426.60",No
+WS-106160,LAURA BISHOP ,laura.bishop@example.com ,5125551256,,6255 ridge ave.,Austin,TX,78701-2533,2025-08-12,2025-09-08,12,"$2,569.05",No
+WS-106169,Katie  Novak,katherinenovak22@example.org ,201-555-4630,,164 meadow st.,Hoboken,nj,07030,2025-12-17,2026-03-17,5,1224.19,Yes
+WS-106180,Chloe Ellis,chloe_ellis@example.com,3035554983,,9618 OAK COURT,Boulder,CO,80305,2025-02-15,2025-04-20,1,112.86,Yes
+WS-106182,paolo turner,paolo.turner @example.com,(720)555-5203,,8912 WILLOW BOULEVARD,Denver,CO,80205-8591,2023-10-15,2024-11-16,12,"$1,266.85",No
+WS-106194,Gabriel Moss ,gabriel_moss@example.org,719-555-2512,,716 Highland Lane,colorado springs,CO,80905,2023-02-12,2024-12-26,10,"$1,137.86",No
+WS-106200,Gabe Yates,Gabriely@example.net,(303)555-2886,,2338 Highland Rd,DENVER,co,80210,2025-08-27,2026-08-16,12,"$1,683.94",Yes
+WS-106203,HUGO SHAW,hugo.shaw@example.net,(619) 555-0696,n/a,4604 Summit Rd.,San Diego,CA,92103,2025-09-26,2025-10-29,12,"$2,084.54",Yes
+WS-106209,Paula  Ellis,pellis @example.net,(512)555-0751,,4970 Alpine Rd,Austin,TX,78704,2023-08-19,2026-10-17,6,"$1,169.20",Yes
+WS-106220,Susan Evans,susane@example.com,(312) 555-8886,,3972 Maple Blvd.,Chicago,IL,60614,2025-05-26,2025-11-28,1,$156.74,Yes
+WS-106224,Christopher Wade,christopher.wade@example.org,3125551019,,684 Ridge Ave.,Chicago,IL,60614-7766,2022-03-28,2022-07-13,2,194.40,No
+WS-106235,Theo Yamada,theo_yamada @example.org,2015552987,,2517 JUNIPER STREET,Hoboken,NJ,07030,2024-10-05,2026-04-17,14,$725.39,No
+WS-106238,Oscar Drake, oscardrake13@example.com,1-201-555-1152,,3357 river ave.,Hoboken,NJ,07030,2026-01-03,2026-05-03,4,$722.76,No
+WS-106249,robert jensen,robertj@example.com,1-802-555-5545,,1074 spruce ct.,Burlington,Vermont,05401,2022-12-13,2023-11-10,13,"$1,544.89",No
+WS-106254,NORA  GRANT,nora.grant@example.com,1-718-555-3683,,1162 CANYON DRIVE,Brooklyn,New York,11201,2024-03-30,2025-08-14,5,$979.46,Yes
+WS-106264,gloria crane,gloriacrane96@example.org ,7205552947,,9705 pine ave.,DENVER,CO,80205,2026-04-16,2026-08-07,12,"$2,460.14",Yes
+WS-106271,Megan Pruitt,megan.pruitt@example.net,+1 719-555-1232,,5050  Ridge Street,Colorado Springs,CO,80905,2022-09-14,2024-04-26,13,"$2,538.93",Yes
+WS-106275,Joe Webb,josephw@example.net,303-555-4610,,3853 ASPEN STREET,denver,co,80210,2025-10-16,2025-12-20,11,"$2,578.00",Yes
+WS-106282,sven vance,svenv@example.com,6025554224,,5437 park rd.,Phoenix,az,85006,2026-03-05,2026-05-12,14,2798.92,No
+WS-106292,REBECCA  UDALL,rebecca.udall@example.com,1-303-555-9428,,5384 Park Ln.,Denver,CO,80203,2025-05-14,2025-08-21,2,$493.64,No
+WS-106297,Elizabeth Yates,eyates@example.org ,1-303-555-8568,,3761 Spruce Street,Boulder,CO,80303,2025-08-18,2026-03-31,6,1458.79,Yes
+WS-106305,paolo hughes,phughes@example.com,201-555-6623,,1867 river ave.,Hoboken,NJ,07030,2023-11-28,2024-02-02,1,49.43,No
+WS-106310,INGRID FOX,ingrid_fox@example.org,+1 720-555-6705,,2998 Maple Road,Boulder,CO,80301-8391,2024-12-03,2026-03-29,10,"$1,668.72",No
+WS-106315,Hugo Hughes ,Hugoh@example.org,(510)555-0281,,2873 ALPINE LANE,Oakland,California,94607-8429,2022-11-20,2023-02-18,5,$603.30,Yes
+WS-106323,Lucia Irwin,lucia.irwin@example.org,(510)555-5421,,3746  Mesa Street,OAKLAND,CA,94607,2025-07-11,2025-10-10,12,"$1,872.91",Yes
+WS-106331,GRACE HAYES,graceh@example.com,(303)555-0190,,1132 cedar ave.,Boulder,CO,80302-7163,2024-10-15,2025-07-09,11,1542.66,No
+WS-106341,Nicholas Ramirez,nramirez @example.com,1-206-555-1329,,860  Maple Drive,SEATTLE,WA,98105,2024-08-01,2024-08-24,10,904.69,Yes
+WS-106348,LAURA REYES,lreyes@example.org,801-555-8786,,1567 Birch Rd,Salt Lake City,UT,84102,2023-09-26,2025-09-30,10,"$1,244.41",Yes
+WS-106352,Astrid Russo,astridr@example.net,970-555-1147,,388 Canyon Ln,Fort Collins,CO,80524,2023-05-01,2024-03-06,13,1464.71,No
+WS-106357,Emma  Alvarez,ealvarez@example.com,5035558407,,438 GRANITE STREET,Portland,OR,97201,2022-07-14,2025-04-03,13,"$1,192.59",Yes
+WS-106364,CARMEN MORGAN,carmen.morgan@example.org,(303) 555-3899,,6291 WILLOW STREET,Denver,CO,80205,2022-02-12,2025-03-25,3,329.88,No
+WS-106375,Theo  Kim,theo_kim@example.com,(970)555-5047,,539 Aspen Boulevard,FORT COLLINS,Colorado,80525,2022-07-03,2023-01-11,3,$536.53,Yes
+WS-106381,ELIZABETH LANE,elizabethl@example.org,(719) 555-3059,,1647 Granite Dr,Colorado Springs,co,80903,2025-10-26,2025-10-26,12,"$2,795.77",Yes
+WS-106389,Nicole Ellis,nicolee@example.org,719.555.8647,,8248 PINE BOULEVARD,Colorado Springs,CO,80903-6404,2025-04-06,2025-07-06,11,"$1,992.06",No
+WS-106391,VERA  LUND ,vlund@example.net,1-719-555-3821,,1424  Sage Boulevard,Colorado Springs,CO,80909-3787,2022-07-27,2023-11-12,3,$325.18,Yes
+WS-106403,Megan Torres,mtorres@example.net,1-719-555-5109,,4601 ALPINE DRIVE,Colorado Springs,CO,80905,2022-03-05,2024-01-16,2,228.89,Yes
+WS-106410,Susan Chen,schen@example.org,(503)555-1445,,4855 oak ct.,PORTLAND,or,97209-4040,2023-12-07,2026-03-23,12,"$1,949.81",No
+WS-106416,Anthony Kim,anthony.kim@example.com,+1 510-555-1770,,6859 Valley Street,Oakland,California,94610,2025-03-19,2025-08-23,12,2791.24,Yes
+WS-106423,Erin Eriksen,erine@example.net,(312) 555-1403,,4007 juniper dr.,Chicago,IL,60614,2022-06-13,2024-04-21,5,$749.12,No
+WS-106429,Michael Johansson,mjohansson@example.com ,6195558455,,3946 Spruce Drive,SAN DIEGO,CA,92101,2025-07-08,2026-01-12,9,$537.77,Yes
+WS-106439,Andrew Stone,astone @example.org,(510) 555-7958,,2669 Lake Blvd,OAKLAND,CA,94607,2025-10-13,2026-07-20,11,"$1,037.71",Yes
+WS-106445,astrid vance,avance6@example.net,(720) 555-1687,,9823 Willow Blvd,Denver,co,80203,2024-08-02,2026-02-22,9,1778.56,Yes
+WS-106448,SOFIA MARSH,SOFIA_MARSH@EXAMPLE.NET,503.555.4685,,4736 Maple Ln.,portland,OR,97201,2025-06-04,2026-01-15,1,$53.26,Yes
+WS-106454,Anna Walsh,anna_walsh@example.com,617.555.0424,,9844  Ridge Drive,Cambridge,ma,02141,2024-03-23,2025-02-16,9,$394.87,Yes
+WS-106463,William Tran,William_tran@example.org,(503) 555-6839,,5077 MAPLE COURT,Portland,Oregon,97209,2025-02-08,2026-10-10,13,1448.49,Yes
+WS-106471,CLAIRE CRANE,claire.crane@example.net,+1 503-555-9175,,2934 Sage Dr,Portland,OR,97201,2023-04-12,2023-06-19,10,"$2,044.80",No
+WS-106480,MEGAN YOUNG, megan_young@example.net,+1 207-555-5100,,1518  Highland Road,Portland,ME,04102,2025-06-10,2026-09-04,1,90.17,Yes
+WS-106485,Leo  Cole,lcole@example.com,3125558147,,5566 Highland Court,Chicago,Illinois,60607,2025-05-14,2026-04-29,3,$170.80,Yes
+WS-106491,ABIGAIL SHARP,asharp@example.com,5055550616,,5553 SAGE ROAD,Santa Fe,nm,87501,2025-12-19,2026-03-31,11,2431.50,No
+WS-106497,Milo Ortiz,milo.ortiz@example.org,6025557923,,77 Sage St,Phoenix,AZ,85006,2025-04-24,2026-08-07,3,$388.56,No
+WS-106504,Laura Morgan,laura_morgan@example.com,5105557428,,7828 Meadow Court,Oakland,CA,94607,2024-08-04,2025-07-05,11,456.05,Yes
+WS-106514,Theo Kerr,THEO.KERR@EXAMPLE.COM,7205552092,,7664 Sage Court,DENVER,CO,80210,2024-07-20,2024-11-24,4,"$1,017.63",Yes
+WS-106521,TED  CARTER ,edward_carter@example.net,(303) 555-9579,,3965 Birch St.,Boulder,co,80303,2025-04-22,2026-09-06,14,2508.38,Yes
+WS-106530,Yuki Keller ,yukik@example.net,(512) 555-3139,,4820 RIDGE DRIVE,austin,TX,78701,2022-06-07,2026-04-21,3,$764.00,Yes
+WS-106537,laura weber,Laura.weber@example.org,1-617-555-2573,,1521 ELM AVENUE,Cambridge,MA,02138,2026-03-12,2026-04-05,12,"$1,897.04",No
+WS-106543,Kenji Ford,KENJIF@EXAMPLE.ORG,612.555.5234,,8567 elm dr.,minneapolis,Minnesota,55405,2025-08-11,2025-11-07,8,$282.62,No
+WS-106548,Marco Yamada, marco.yamada@example.com,,,9242 Highland St.,BOULDER,co,80301,2024-10-16,2025-03-31,9,1295.68,Yes
+WS-106558,Benjamin Reed,Breed@example.org,(617) 555-2321,,8390 valley rd.,CAMBRIDGE,ma,02138,2024-11-05,2025-06-09,7,854.76,Yes
+WS-106564,Milo Park,milop@example.net ,720.555.0868,,5706  Summit Lane,Denver,CO,80203,2025-07-26,2025-11-27,12,"$2,509.75",Yes
+WS-106571,Emma Fischer,emma.fischer@example.com,,,8253 CANYON AVENUE,Boulder,CO,80304,2024-08-27,2025-03-30,6,$516.09,Yes
+WS-106578,Ethan Gomez ,EGOMEZ@EXAMPLE.COM,+1 801-555-7775,,9226 canyon blvd.,Salt Lake City,UT,84102,2024-07-02,2024-10-02,6,$410.98,Yes
+WS-106586,Ravi Ito,ravii @example.com,(801)555-6773,,4249 GRANITE STREET,Salt Lake City,UT,84105,2023-09-23,2025-10-27,2,$230.05,Yes
+WS-106587,Alexander  Turner,aturner@example.org,,,9088 Park St.,Colorado Springs,CO,80905,2026-03-07,2026-07-23,11,"$1,037.77",No
+WS-106596,Paula Barnes,paula_barnes@example.org,1-801-555-9768,,6738 River Dr.,salt lake city,UT,84102,2022-10-23,2026-08-08,1,$35.99,Yes
+WS-106605,Christine Wade,christine_wade @example.com,312-555-3043,,570  Granite Drive,chicago,IL,60614,2023-12-16,2024-04-23,12,"$2,545.98",Yes
+WS-106612,Ava Ortiz,ava_ortiz@example.net,1-303-555-0151,,7438 River Street,DENVER,CO,80206,2022-09-10,2022-10-25,13,$853.80,No
+WS-106619,david  brooks, david.brooks@example.net,720-555-0988,,7264  Valley Lane,boulder,CO,80301,2025-08-17,2025-10-28,13,"$1,708.09",No
+WS-106627,Richard Reed,rreed @example.org,303-555-4922,,5780 birch ct.,Boulder,Colorado,80301,2025-12-28,2026-04-06,5,$440.23,Yes
+WS-106633,sven evans,sven.evans@example.com,(201)555-9079,,3933 MESA ROAD,Hoboken,NJ,07030,2023-02-27,2023-08-18,12,"$2,764.73",Yes
+WS-106638,ROSA ELLIS ,rosae @example.com,(801)555-3869,,1935 Summit Street,Salt Lake City,ut,84102,2026-06-06,2026-09-22,11,$870.86,Yes
+WS-106643,STEVEN PARK ,steven.park@example.net,505-555-2794,,1959 park ct.,santa fe,nm,87501,2024-12-05,2025-12-13,10,$446.30,Yes
+WS-106652,katherine olsen,KATHERINE_OLSEN@EXAMPLE.NET,3125558555,,8440 Willow St,Chicago,Illinois,60607,2023-05-21,2025-03-25,14,"$3,304.46",Yes
+WS-106663,Oscar Nguyen,OSCAR.NGUYEN@EXAMPLE.ORG,719.555.0828,,1642 Meadow Dr.,Colorado Springs,CO,80903,2022-04-23,2024-01-11,12,"$1,534.69",Yes
+WS-106665,Mei Fox,Meif@example.org,612-555-7866,,2105 GRANITE STREET,Minneapolis,Minnesota,55405,2026-01-27,2026-02-07,7,$487.78,Yes
+WS-106671,steven tate,state@example.net,(970)555-7305,,2731 Summit Ln,FORT COLLINS,Colorado,80525-2985,2022-10-24,2026-02-24,2,$83.93,Yes
+WS-106683,Jonah Hughes, jonah_hughes@example.com,801-555-4632,,6975 RIVER ROAD,Salt Lake City,UT,84102,2026-02-20,2026-06-24,3,$134.23,Yes
+WS-106685,Mei Alvarez,MALVAREZ@EXAMPLE.COM,1-303-555-9122,,2480 Lake Dr.,BOULDER,CO,80302,2025-07-26,2025-10-09,10,1224.99,No
+WS-106696,Susan Irwin,susan.irwin@example.org,(720)555-8158,,6396 Birch Blvd.,Boulder,CO,80301,2026-05-09,2026-08-04,11,"$1,213.41",No
+WS-106699,Nora Larsen,nora_larsen @example.com,201-555-1326,,4998 alpine dr.,Hoboken,NJ,07030,2023-11-30,2024-05-09,4,$310.08,Yes
+WS-106710,Rosa Dunn,rdunn@example.net,617.555.3133,,7589 Birch Ave,Boston,MA,02116,2022-01-18,2026-10-28,13,"$1,873.62",No
+WS-106715,Omar Gill,omar.gill@example.org ,+1 312-555-5344,,1714 Mesa Dr.,Chicago,Illinois,60614,2023-06-28,2024-08-31,12,"$1,653.18",Yes
+WS-106724,Ethan Sharp, ethans@example.com,+1 503-555-5556,,5389 Maple Boulevard,Portland,Oregon,97201,2024-04-23,2024-08-02,2,$291.46,Yes
+WS-106729,Mia Usman,miausman1@example.net,(719) 555-4469,,1832 oak ln.,colorado springs,CO,80905,2024-06-12,2026-05-21,3,$253.00,Yes
+WS-106739,IRIS SHAW,iris_shaw@example.net,503-555-5381,,6344 Valley Boulevard,portland,OR,97205,2025-01-09,2026-06-09,2,$414.24,Yes
+WS-106741,Diego Holt ,dholt@example.org,970-555-3459,,2259 Mesa Avenue,FORT COLLINS,co,80524,2025-03-28,2026-09-17,13,"$1,265.18",No
+WS-106752,nathan  lund,nathan.lund@example.org,1-512-555-7572,,5781 Cedar Street,AUSTIN,TX,78704,2023-04-28,2023-05-25,12,"$1,908.24",Yes
+WS-106758,chloe garcia, chloe_garcia@example.org,(612)555-9761,,283 Meadow St.,Minneapolis,MN,55405,2022-03-07,2026-10-28,2,274.69,Yes
+WS-106767,emma castillo,ecastillo@example.org,303.555.6443,,5662 Birch Rd.,Denver,CO,80206,2024-03-02,2024-03-28,1,$49.57,No
+WS-106769,CALEB  NGUYEN,caleb_nguyen@example.net,720.555.7344,,749 lake st.,Denver,Colorado,80203,2023-11-06,2025-01-24,8,"$2,073.19",No
+WS-106778,Paolo Diaz,pdiaz@example.net,720.555.7291,,8377  Mesa Boulevard,Boulder,CO,80302-9658,2024-08-19,2025-06-16,5,$703.31,No
+WS-106789,Holly Ito,HOLLY.ITO@EXAMPLE.COM,1-720-555-1655,,3184 Lake Drive,DENVER,CO,80206-8588,2024-01-17,2025-02-21,1,$139.15,No
+WS-106793,Hector Jensen,hjensen@example.net,+1 718-555-1362,,2945  Spruce Avenue,brooklyn,ny,11201,2024-07-06,2026-09-15,6,$510.79,No
+WS-106802,Jimmy Wong,jamesw@example.net,303.555.9811,,6158 Lake Drive,boulder,Colorado,80304,2023-04-19,2023-07-26,8,$504.98,Yes
+WS-106810,Katherine Silva,KATHERINE.SILVA@EXAMPLE.COM,7195559401,,7355 Alpine Ave.,COLORADO SPRINGS,CO,80909,2022-10-14,2025-12-03,3,$612.04,No
+WS-106811,Mei Okafor,Mei_okafor@example.net,(802)555-4341,,8093 park ct.,Burlington,vt,05403,2023-11-26,2024-11-22,5,"$1,197.79",Yes
+WS-106821,Chloe Usman,cusman @example.org,+1 303-555-5876,Self-employed,319  Ridge Avenue,Boulder,CO,80304,2023-08-05,2024-01-16,4,$975.79,No
+WS-106831,Edward  Vargas ,edward.vargas@example.org,970-555-8348,,2280 SAGE COURT,FORT COLLINS,co,80521,2025-06-08,2026-05-22,6,$397.27,Yes
+WS-106836,Matthew Tran,matthew_tran@example.net,1-612-555-4416,,1755 elm ct.,MINNEAPOLIS,mn,55405,2026-03-25,2026-05-22,5,582.81,Yes
+WS-106839,Elizabeth  Usman,eusman@example.net,3125554481,,531 Aspen Ave.,chicago,il,60607,2024-01-12,2025-10-11,14,"$3,243.37",Yes
+WS-106846,Zoe  Duarte,Zoed@example.org,(720) 555-8893,,7610 Valley St.,Boulder,CO,80301,2024-02-03,2025-10-05,8,"$1,433.53",Yes
+WS-106853,MATTHEW DAWSON,mdawson@example.org,1-801-555-9613,,1209 MESA DRIVE,Salt Lake City,UT,84105,2022-02-16,2025-03-29,6,"$1,395.09",No
+WS-106866,Zoe  Ito,zoei@example.com,1-207-555-3402,,3964 Oak Road,PORTLAND,ME,04101,2023-10-07,2024-03-06,13,"$3,018.00",Yes
+WS-106868,Vera Dawson,vera_dawson@example.org,201-555-5846,,3985 RIVER DRIVE,Hoboken,nj,07030,2023-03-04,2023-03-19,11,$551.41,Yes
+WS-106874,Maria  Udall,mudall @example.net,612-555-3314,,4618 ASPEN COURT,Minneapolis,MN,55405,2025-03-19,2025-09-23,10,"$2,134.11",No
+WS-106883,Tara Rhodes ,tarar@example.com,206-555-0007,,1559 Park Blvd,Seattle,wa,98103,2024-08-06,2025-06-15,1,$198.82,Yes
+WS-106894,vera pruitt,verap1@example.org,612-555-7906,,4309 Park Lane,minneapolis,MN,55405,2022-10-20,2022-12-11,4,$605.11,Yes
+WS-106898,samuel zhou ,Samuel.zhou@example.org,1-970-555-7480,,5839 Elm Ln,fort collins,CO,80524,2022-05-10,2023-09-07,8,"$1,189.79",No
+WS-106905,Olivia Wong ,olivia_wong@example.net,6175556767,,3853 Spruce Ct,boston,Massachusetts,02116,2023-04-19,2024-03-02,8,"$1,409.47",Yes
+WS-106913,olivia hughes,olivia.hughes@example.com,719-555-4209,,4621 ASPEN COURT,Colorado Springs,co,80905,2024-02-18,2026-05-25,11,"$1,230.63",Yes
+WS-106917,Ingrid Rhodes,irhodes@example.org,(718) 555-0506,,3443 Pine Ct,Brooklyn,NY,11201,2024-05-08,2024-06-20,11,2843.29,Yes
+WS-106926,Rebecca Patel,rpatel @example.org,+1 612-555-8132,,1276 HIGHLAND STREET,Minneapolis,MN,55405,2022-08-27,2024-07-20,9,$420.50,Yes
+WS-106934,robert price,rprice@example.net ,1-503-555-1953,,8253 ASPEN LANE,Portland,OR,97209,2023-08-14,2026-03-07,6,$444.46,Yes
+WS-106939,Diego Ingram,DIEGO.INGRAM@EXAMPLE.COM,207-555-2259,,2716 Elm Ave.,Portland,ME,04101,2025-04-11,2026-03-02,1,$243.18,Yes
+WS-106947,Megan Ingram,megan.ingram@example.net,206-555-0046,,36 River Rd,SEATTLE,WA,98103,2023-07-27,2023-10-17,5,"$1,225.05",Yes
+WS-106957,Yuki Chen,yuki_chen@example.org,(512) 555-4804,,3407 Canyon Ave,Austin,Texas,78701,2025-04-05,2025-07-25,10,"$1,767.20",No
+WS-106962,ravi rhodes,ravir@example.net,719.555.7747,,6916 Aspen St,Colorado Springs,CO,80903,2023-07-11,2026-09-18,1,$71.91,Yes
+WS-106969,Samuel Olsen,solsen@example.org,+1 510-555-0910,,8336 Willow Ln.,Oakland,California,94607-7793,2026-01-08,2026-07-04,12,"$1,345.57",No
+WS-106978,Zoe Iqbal ,ZOE_IQBAL@EXAMPLE.COM,(303) 555-0540,,4335  Pine Court,Boulder,CO,80303,2024-04-22,2024-06-23,14,$811.25,Yes
+WS-106984,Ethan  Hughes,ehughes@example.org,+1 720-555-3895,,57 Cedar Drive,Boulder,CO,80305-4525,2023-11-19,2024-05-20,13,470.20,Yes
+WS-106992,Chloe Turner ,chloet@example.org ,303.555.9126,,317 ALPINE BOULEVARD,Boulder,CO,80305-8385,2023-09-11,2025-05-18,13,"$3,211.28",Yes
+WS-106998,Aisha Zimmer ,azimmer@example.org,,,9739 mesa ct.,san diego,CA,92101,2023-05-09,2025-12-19,10,$487.61,No
+WS-107005,Lars Shaw,larss @example.com,9705554577,,4948  Sage Street,Fort Collins,CO,80521-6238,2024-07-11,2025-05-17,14,"$1,298.49",Yes
+WS-107010,Sven Drake,svend@example.com,1-203-555-6154,,2522 ALPINE COURT,New Haven,CT,06511-8660,2022-09-02,2024-05-08,14,"$3,143.20",Yes
+WS-107014,Margaret Keller,margaretk@example.org,720.555.4871,,2405 Meadow Ct.,Boulder,CO,80305,2022-12-26,2025-03-10,4,$287.24,No
+WS-107022,Caleb Walsh,cwalsh@example.org,,,5781 Ridge Ave.,Denver,Colorado,80203-6945,2022-01-09,2025-06-13,6,"$1,186.45",Yes
+WS-107030,Carmen Lund,carmen.lund@example.org,303.555.4211,,6282  Aspen Drive,denver,co,80203,2022-06-16,2023-08-22,2,$501.51,Yes
+WS-107041,Ella Ueda,ella.ueda@example.org,+1 720-555-7823,,3801 Park Lane,BOULDER,CO,80302,2026-03-07,2026-05-05,8,"$2,030.01",Yes
+WS-107045,Marco Udall,marco_udall @example.org,612.555.5964,,6073 Elm Dr.,minneapolis,mn,55401,2023-03-21,2024-07-26,14,"$1,558.74",Yes
+WS-107054,Victor Ueda,vueda@example.com,1-720-555-7324,,6728 Maple Ave.,Denver,CO,80210,2022-09-28,2023-01-04,10,"$1,662.32",Yes
+WS-107061,caleb zimmer, caleb_zimmer@example.com,(207) 555-5365,,7342 cedar rd.,Portland,ME,04101,2025-02-17,2025-04-24,3,$222.36,Yes
+WS-107069,Andrew Dawson,adawson@example.net,1-602-555-4973,,8429 lake st.,Phoenix,Arizona,85004,2022-05-25,2026-02-25,5,"$1,206.86",No
+WS-107074,James Dawson ,james_dawson@example.com,5125556376,,8489 Birch Drive,austin,TX,78701-8772,2022-03-11,2023-11-26,11,$513.89,No
+WS-107079,YUKI CHEN ,yukichen55@example.net,5125554804,,3407 Canyon Avenue,Austin,TX,78701-4765,2022-08-16,2025-08-30,3,$173.99,No
+WS-107084,Ethan Udall,Ethan_udall@example.net,1-720-555-7320,,3176 OAK AVENUE,Denver,CO,80202,2025-11-02,2026-03-24,3,$162.09,No
+WS-107097,Jennifer Johansson,jjohansson @example.com,602.555.0021,,351  Valley Street,Phoenix,az,85004,2022-10-04,2024-12-19,14,"$1,643.77",No
+WS-107100,oscar crane , oscar.crane@example.com,(720) 555-8054,,2613 willow ln.,Boulder,co,80302,2022-04-03,2023-03-03,12,"$1,203.72",No
+WS-107106,john reyes,jreyes @example.org,8015551650,,9575 Sage Street,SALT LAKE CITY,ut,84102,2026-04-30,2026-09-05,2,135.36,No
+WS-107113,Nora Zimmer,noraz @example.net,602.555.3828,,4799  Mesa Drive,Phoenix,AZ,85004,2023-10-30,2024-07-13,2,$387.83,Yes
+WS-107125,HOLLY LANE ,holly.lane@example.net,(619)555-7401,,123 ELM BOULEVARD,San Diego,CA,92101,2022-09-25,2026-04-26,8,1382.44,Yes
+WS-107129,Steve Young,syoung @example.com,1-503-555-5091,,2298 Maple Blvd,Portland,or,97205,2024-04-13,2024-11-27,1,$115.17,Yes
+WS-107137,Emma Grant,egrant@example.org,+1 303-555-7916,Self-employed,6474 Meadow Ave.,denver,CO,80206,2025-03-22,2026-10-18,3,727.08,Yes
+WS-107144,Margaret Tran,margaret.tran@example.net,1-201-555-5553,,997 River Avenue,Hoboken,NJ,07030,2023-01-18,2025-07-08,6,$408.89,No
+WS-107149,Rosa  Irwin,rosa_irwin@example.org,303.555.4113,,5608 Elm Ln.,DENVER,Colorado,80202,2022-10-11,2026-04-11,6,$320.93,Yes
+WS-107156,Paolo  Voss,paolo.voss@example.org,(719)555-4566,,8768 Meadow Avenue,Colorado Springs,CO,80905,2024-10-01,2026-08-20,11,943.11,No
+WS-107164,Thomas Barnes,Tbarnes@example.org,(801) 555-0426,,9233 OAK LANE,Salt Lake City,UT,84102,2023-11-22,2026-07-27,10,"$1,472.69",No
+WS-107168,Mei Hart,meih@example.org,801-555-0631,,4783 Lake St,SALT LAKE CITY,Utah,84101,2023-07-27,2023-10-09,1,$57.64,Yes
+WS-107175,SAM  SHARP, samuel_sharp@example.org,(719) 555-8179,,1729 Oak Avenue,Colorado Springs,Colorado,80905,2025-11-05,2025-12-23,3,$682.63,No
+WS-107182,wendy nash,wnash@example.org,3035550276,Self-employed,5528 Meadow Lane,Denver,Colorado,80203-4141,2022-10-17,2023-11-14,14,$776.72,No
