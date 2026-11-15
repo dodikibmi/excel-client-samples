@@ -1,41 +1,56 @@
 """docs/thumbnail.png (1200x627) for the Upwork portfolio card, and docs/before-raw-csv.png (the exports as they arrive)."""
 from pathlib import Path
+import openpyxl
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 ROOT = Path(__file__).resolve().parent.parent
 W, H = 1200, 627
-NAVY, TEAL, WHITE, MUTED = (24, 45, 72), (0, 150, 136), (255, 255, 255), (184, 200, 218)
+BG, GOLD, GOLD_LT, IVORY, MUTED = (11, 15, 19), (201, 163, 91), (230, 207, 154), (236, 230, 218), (142, 152, 163)  # E9 palette
 F = "C:/Windows/Fonts/"
 font = lambda name, size: ImageFont.truetype(F + name, size)
+CHECKS = "74/74"  # automated checks in test/verify.py (update after a test run)
 
-img = Image.new("RGB", (W, H), NAVY)
+# every number on the card comes from the saved workbook (cached values of the cockpit)
+s = openpyxl.load_workbook(ROOT / "Customer-Cleanup.xlsx", data_only=True)["Summary"]
+rows_in, aside, merged, unique, review = (int(s[c].value) for c in ("D8", "I8", "N8", "S8", "X8"))
+q = {s[f"AD{r}"].value: (s[f"AE{r}"].value, s[f"AG{r}"].value) for r in range(21, 25)}
+
+img = Image.new("RGB", (W, H), BG)
 d = ImageDraw.Draw(img)
-
-# Screenshot card on the right: the Merge log (which record went into which customer, and why)
-shot = Image.open(ROOT / "docs" / "merge-log.png").convert("RGB")
-crop = shot.crop((int(shot.width * 0.105), 0, int(shot.width * 0.80), int(shot.height * 0.80)))
+shot = Image.open(ROOT / "docs" / "summary.png").convert("RGB")
 cw = 700
-crop = crop.resize((cw, int(crop.height * cw / crop.width)), Image.LANCZOS)
-x, y = W - cw - 30, 175
-shadow = Image.new("RGBA", (cw + 40, crop.height + 40), (0, 0, 0, 0))
-ImageDraw.Draw(shadow).rectangle((20, 20, cw + 20, crop.height + 20), fill=(0, 0, 0, 120))
-img.paste(shadow.filter(ImageFilter.GaussianBlur(12)), (x - 14, y - 8), shadow.filter(ImageFilter.GaussianBlur(12)))
+crop = shot.resize((cw, int(shot.height * cw / shot.width)), Image.LANCZOS)
+x, y = W - cw - 30, 168
+glow = Image.new("RGBA", (cw + 60, crop.height + 60), (0, 0, 0, 0))
+ImageDraw.Draw(glow).rectangle((30, 30, cw + 30, crop.height + 30), fill=(201, 163, 91, 70))
+glow = glow.filter(ImageFilter.GaussianBlur(14))
+img.paste(glow, (x - 30, y - 30), glow)
 img.paste(crop, (x, y))
+d.rectangle((x - 1, y - 1, x + cw, y + crop.height), outline=GOLD, width=1)
 
-d.rectangle((48, 52, 56, 128), fill=TEAL)
-d.text((72, 46), "Customer list cleanup", font=font("segoeuib.ttf", 38), fill=WHITE)
-d.text((72, 92), "3 sources, duplicates merged, CRM-ready file", font=font("segoeui.ttf", 28), fill=MUTED)
-
-points = [("1,962 → 1,387", "rows in, unique customers out"),
-          ("561", "duplicates merged, each with its rule"),
-          ("11", "look-alikes left for a person to decide"),
-          ("33/33", "automated checks pass")]
-yy = 180
+d.text((60, 40), "S U M M I T   R I D G E", font=font("segoeuib.ttf", 15), fill=GOLD)
+d.text((58, 62), "Customer list cleanup in Excel", font=font("georgia.ttf", 40), fill=IVORY)
+d.text((60, 116), "Webshop + POS + sales sheet in: duplicates merged, data quality cockpit, CRM-ready file out",
+       font=font("segoeui.ttf", 19), fill=MUTED)
+d.line((60, 150, W - 30, 150), fill=GOLD, width=2)
+e0, e1 = q["Valid email"]
+points = [(f"{rows_in:,} → {unique:,}", "rows in, unique customers out"),
+          (f"{merged}", "duplicates merged, each with its rule"),
+          (f"{e0:.0%} → {e1:.0%}", "valid emails, before → after"),
+          (f"{review}", "look-alikes: you decide Merge / Keep separate"),
+          (CHECKS, "automated checks pass")]
+yy = 172
 for big, small in points:
-    d.text((72, yy), big, font=font("segoeuib.ttf", 34), fill=(120, 220, 205))
-    d.text((72, yy + 44), small, font=font("segoeui.ttf", 19), fill=WHITE)
-    yy += 92
-d.text((72, H - 52), "No macros  ·  one-click Refresh  ·  email, phone, name + ZIP, nicknames", font=font("segoeui.ttf", 17), fill=MUTED)
+    x0, big_f, arrow_f = 60, font("georgia.ttf", 32), font("segoeui.ttf", 28)  # Georgia has no arrow glyph
+    for i, part in enumerate(big.split("→")):
+        if i:
+            d.text((x0 + 4, yy + 2), "→", font=arrow_f, fill=GOLD)
+            x0 += int(d.textlength("→", font=arrow_f)) + 10
+        d.text((x0, yy), part.strip(), font=big_f, fill=GOLD_LT)
+        x0 += int(d.textlength(part.strip(), font=big_f))
+    d.text((62, yy + 40), small, font=font("segoeui.ttf", 16), fill=IVORY)
+    yy += 82
+d.text((60, H - 40), "Power Query  ·  FILTER + XLOOKUP  ·  no macros", font=font("segoeui.ttf", 16), fill=MUTED)
 img.save(ROOT / "docs" / "thumbnail.png")
 print("docs/thumbnail.png")
 

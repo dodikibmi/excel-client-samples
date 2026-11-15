@@ -1,241 +1,721 @@
-Month,Region,Category,Budget Revenue,Budget Margin %
-2025-11,North,Fasteners,21100,0.38
-2025-11,North,Power Tools,31700,0.24
-2025-11,North,Paint,11700,0.42
-2025-11,North,Garden,6300,0.35
-2025-11,North,Electrical,17700,0.31
-2025-11,South,Fasteners,17900,0.38
-2025-11,South,Power Tools,27700,0.24
-2025-11,South,Paint,10500,0.42
-2025-11,South,Garden,5100,0.35
-2025-11,South,Electrical,15000,0.31
-2025-11,East,Fasteners,23900,0.38
-2025-11,East,Power Tools,36300,0.24
-2025-11,East,Paint,14500,0.42
-2025-11,East,Garden,7200,0.35
-2025-11,East,Electrical,20000,0.31
-2025-11,West,Fasteners,19700,0.38
-2025-11,West,Power Tools,30600,0.24
-2025-11,West,Paint,11200,0.42
-2025-11,West,Garden,6000,0.35
-2025-11,West,Electrical,16900,0.31
-2025-12,North,Fasteners,18900,0.38
-2025-12,North,Power Tools,39000,0.24
-2025-12,North,Paint,10500,0.42
-2025-12,North,Garden,4900,0.35
-2025-12,North,Electrical,17500,0.31
-2025-12,South,Fasteners,16500,0.38
-2025-12,South,Power Tools,31100,0.24
-2025-12,South,Paint,9200,0.42
-2025-12,South,Garden,4300,0.35
-2025-12,South,Electrical,14700,0.31
-2025-12,East,Fasteners,22700,0.38
-2025-12,East,Power Tools,44500,0.24
-2025-12,East,Paint,12400,0.42
-2025-12,East,Garden,5800,0.35
-2025-12,East,Electrical,20900,0.31
-2025-12,West,Fasteners,17800,0.38
-2025-12,West,Power Tools,34000,0.24
-2025-12,West,Paint,10600,0.42
-2025-12,West,Garden,4800,0.35
-2025-12,West,Electrical,16300,0.31
-2026-01,North,Fasteners,21000,0.38
-2026-01,North,Power Tools,22500,0.24
-2026-01,North,Paint,10700,0.42
-2026-01,North,Garden,4800,0.35
-2026-01,North,Electrical,18100,0.31
-2026-01,South,Fasteners,18100,0.38
-2026-01,South,Power Tools,18400,0.24
-2026-01,South,Paint,9000,0.42
-2026-01,South,Garden,4200,0.35
-2026-01,South,Electrical,15100,0.31
-2026-01,East,Fasteners,26100,0.38
-2026-01,East,Power Tools,24100,0.24
-2026-01,East,Paint,12200,0.42
-2026-01,East,Garden,5800,0.35
-2026-01,East,Electrical,19800,0.31
-2026-01,West,Fasteners,20100,0.38
-2026-01,West,Power Tools,21100,0.24
-2026-01,West,Paint,10500,0.42
-2026-01,West,Garden,4700,0.35
-2026-01,West,Electrical,16900,0.31
-2026-02,North,Fasteners,21100,0.38
-2026-02,North,Power Tools,22400,0.24
-2026-02,North,Paint,11300,0.42
-2026-02,North,Garden,6300,0.35
-2026-02,North,Electrical,18600,0.31
-2026-02,South,Fasteners,19500,0.38
-2026-02,South,Power Tools,19400,0.24
-2026-02,South,Paint,10300,0.42
-2026-02,South,Garden,5200,0.35
-2026-02,South,Electrical,15600,0.31
-2026-02,East,Fasteners,25100,0.38
-2026-02,East,Power Tools,25900,0.24
-2026-02,East,Paint,13600,0.42
-2026-02,East,Garden,7300,0.35
-2026-02,East,Electrical,20400,0.31
-2026-02,West,Fasteners,20300,0.38
-2026-02,West,Power Tools,22900,0.24
-2026-02,West,Paint,11700,0.42
-2026-02,West,Garden,5900,0.35
-2026-02,West,Electrical,16400,0.31
-2026-03,North,Fasteners,23700,0.38
-2026-03,North,Power Tools,27300,0.24
-2026-03,North,Paint,14700,0.42
-2026-03,North,Garden,11400,0.35
-2026-03,North,Electrical,18200,0.31
-2026-03,South,Fasteners,20300,0.38
-2026-03,South,Power Tools,23000,0.24
-2026-03,South,Paint,12000,0.42
-2026-03,South,Garden,10100,0.35
-2026-03,South,Electrical,15100,0.31
-2026-03,East,Fasteners,26100,0.38
-2026-03,East,Power Tools,31300,0.24
-2026-03,East,Paint,16900,0.42
-2026-03,East,Garden,12700,0.35
-2026-03,East,Electrical,20400,0.31
-2026-03,West,Fasteners,22800,0.38
-2026-03,West,Power Tools,24500,0.24
-2026-03,West,Paint,13400,0.42
-2026-03,West,Garden,11200,0.35
-2026-03,West,Electrical,16400,0.31
-2026-04,North,Fasteners,24200,0.38
-2026-04,North,Power Tools,27400,0.24
-2026-04,North,Paint,17900,0.42
-2026-04,North,Garden,20000,0.35
-2026-04,North,Electrical,18900,0.31
-2026-04,South,Fasteners,19900,0.38
-2026-04,South,Power Tools,24500,0.24
-2026-04,South,Paint,15200,0.42
-2026-04,South,Garden,16800,0.35
-2026-04,South,Electrical,15600,0.31
-2026-04,East,Fasteners,26300,0.38
-2026-04,East,Power Tools,32800,0.24
-2026-04,East,Paint,20400,0.42
-2026-04,East,Garden,21800,0.35
-2026-04,East,Electrical,20300,0.31
-2026-04,West,Fasteners,22700,0.38
-2026-04,West,Power Tools,26000,0.24
-2026-04,West,Paint,17000,0.42
-2026-04,West,Garden,18300,0.35
-2026-04,West,Electrical,16700,0.31
-2026-05,North,Fasteners,23600,0.38
-2026-05,North,Power Tools,28300,0.24
-2026-05,North,Paint,19700,0.42
-2026-05,North,Garden,24100,0.35
-2026-05,North,Electrical,18100,0.31
-2026-05,South,Fasteners,21100,0.38
-2026-05,South,Power Tools,24000,0.24
-2026-05,South,Paint,17600,0.42
-2026-05,South,Garden,20100,0.35
-2026-05,South,Electrical,15800,0.31
-2026-05,East,Fasteners,27300,0.38
-2026-05,East,Power Tools,33100,0.24
-2026-05,East,Paint,22500,0.42
-2026-05,East,Garden,27500,0.35
-2026-05,East,Electrical,21200,0.31
-2026-05,West,Fasteners,21900,0.38
-2026-05,West,Power Tools,26200,0.24
-2026-05,West,Paint,19200,0.42
-2026-05,West,Garden,23100,0.35
-2026-05,West,Electrical,17700,0.31
-2026-06,North,Fasteners,23300,0.38
-2026-06,North,Power Tools,27900,0.24
-2026-06,North,Paint,20700,0.42
-2026-06,North,Garden,20700,0.35
-2026-06,North,Electrical,18400,0.31
-2026-06,South,Fasteners,18900,0.38
-2026-06,South,Power Tools,22400,0.24
-2026-06,South,Paint,17700,0.42
-2026-06,South,Garden,17200,0.35
-2026-06,South,Electrical,16500,0.31
-2026-06,East,Fasteners,27100,0.38
-2026-06,East,Power Tools,32400,0.24
-2026-06,East,Paint,24300,0.42
-2026-06,East,Garden,23400,0.35
-2026-06,East,Electrical,22100,0.31
-2026-06,West,Fasteners,21400,0.38
-2026-06,West,Power Tools,24800,0.24
-2026-06,West,Paint,20200,0.42
-2026-06,West,Garden,19300,0.35
-2026-06,West,Electrical,17100,0.31
-2026-07,North,Fasteners,21900,0.38
-2026-07,North,Power Tools,24900,0.24
-2026-07,North,Paint,21400,0.42
-2026-07,North,Garden,17800,0.35
-2026-07,North,Electrical,18800,0.31
-2026-07,South,Fasteners,19300,0.38
-2026-07,South,Power Tools,21600,0.24
-2026-07,South,Paint,18200,0.42
-2026-07,South,Garden,14200,0.35
-2026-07,South,Electrical,16600,0.31
-2026-07,East,Fasteners,25900,0.38
-2026-07,East,Power Tools,29800,0.24
-2026-07,East,Paint,25000,0.42
-2026-07,East,Garden,20100,0.35
-2026-07,East,Electrical,20900,0.31
-2026-07,West,Fasteners,20500,0.38
-2026-07,West,Power Tools,24300,0.24
-2026-07,West,Paint,19900,0.42
-2026-07,West,Garden,16100,0.35
-2026-07,West,Electrical,18200,0.31
-2026-08,North,Fasteners,21700,0.38
-2026-08,North,Power Tools,28900,0.24
-2026-08,North,Paint,20000,0.42
-2026-08,North,Garden,15100,0.35
-2026-08,North,Electrical,19800,0.31
-2026-08,South,Fasteners,19700,0.38
-2026-08,South,Power Tools,24200,0.24
-2026-08,South,Paint,16700,0.42
-2026-08,South,Garden,12200,0.35
-2026-08,South,Electrical,16400,0.31
-2026-08,East,Fasteners,25300,0.38
-2026-08,East,Power Tools,32600,0.24
-2026-08,East,Paint,22900,0.42
-2026-08,East,Garden,17300,0.35
-2026-08,East,Electrical,21300,0.31
-2026-08,West,Fasteners,21200,0.38
-2026-08,West,Power Tools,25700,0.24
-2026-08,West,Paint,19100,0.42
-2026-08,West,Garden,14200,0.35
-2026-08,West,Electrical,17700,0.31
-2026-09,North,Fasteners,24800,0.38
-2026-09,North,Power Tools,28700,0.24
-2026-09,North,Paint,18200,0.42
-2026-09,North,Garden,12500,0.35
-2026-09,North,Electrical,18800,0.31
-2026-09,South,Fasteners,20100,0.38
-2026-09,South,Power Tools,26100,0.24
-2026-09,South,Paint,15300,0.42
-2026-09,South,Garden,10000,0.35
-2026-09,South,Electrical,17000,0.31
-2026-09,East,Fasteners,28100,0.38
-2026-09,East,Power Tools,33800,0.24
-2026-09,East,Paint,19700,0.42
-2026-09,East,Garden,14200,0.35
-2026-09,East,Electrical,22600,0.31
-2026-09,West,Fasteners,23600,0.38
-2026-09,West,Power Tools,27500,0.24
-2026-09,West,Paint,17700,0.42
-2026-09,West,Garden,11300,0.35
-2026-09,West,Electrical,17900,0.31
-2026-10,North,Fasteners,25800,0.38
-2026-10,North,Power Tools,31000,0.24
-2026-10,North,Paint,15900,0.42
-2026-10,North,Garden,9900,0.35
-2026-10,North,Electrical,20700,0.31
-2026-10,South,Fasteners,22200,0.38
-2026-10,South,Power Tools,26200,0.24
-2026-10,South,Paint,13400,0.42
-2026-10,South,Garden,8500,0.35
-2026-10,South,Electrical,17600,0.31
-2026-10,East,Fasteners,28600,0.38
-2026-10,East,Power Tools,37000,0.24
-2026-10,East,Paint,17800,0.42
-2026-10,East,Garden,11500,0.35
-2026-10,East,Electrical,23600,0.31
-2026-10,West,Fasteners,24300,0.38
-2026-10,West,Power Tools,30600,0.24
-2026-10,West,Paint,14500,0.42
-2026-10,West,Garden,8900,0.35
-2026-10,West,Electrical,18700,0.31
+Month,Region,Sales Rep,Category,Budget Revenue,Budget Margin %
+2025-01,North,Amara Cole,Fasteners,11400,0.38
+2025-01,North,Ben Ortiz,Fasteners,10500,0.38
+2025-01,North,Amara Cole,Power Tools,11200,0.24
+2025-01,North,Ben Ortiz,Power Tools,10300,0.24
+2025-01,North,Amara Cole,Paint,5600,0.42
+2025-01,North,Ben Ortiz,Paint,5200,0.42
+2025-01,North,Amara Cole,Garden,2600,0.35
+2025-01,North,Ben Ortiz,Garden,2400,0.35
+2025-01,North,Amara Cole,Electrical,9100,0.31
+2025-01,North,Ben Ortiz,Electrical,8400,0.31
+2025-01,South,Chloe Park,Fasteners,18200,0.38
+2025-01,South,Chloe Park,Power Tools,18100,0.24
+2025-01,South,Chloe Park,Paint,9400,0.42
+2025-01,South,Chloe Park,Garden,4100,0.35
+2025-01,South,Chloe Park,Electrical,15300,0.31
+2025-01,East,Dev Patel,Fasteners,12200,0.38
+2025-01,East,Elena Rossi,Fasteners,12200,0.38
+2025-01,East,Dev Patel,Power Tools,12200,0.24
+2025-01,East,Elena Rossi,Power Tools,12200,0.24
+2025-01,East,Dev Patel,Paint,6100,0.42
+2025-01,East,Elena Rossi,Paint,6100,0.42
+2025-01,East,Dev Patel,Garden,2800,0.35
+2025-01,East,Elena Rossi,Garden,2800,0.35
+2025-01,East,Dev Patel,Electrical,9700,0.31
+2025-01,East,Elena Rossi,Electrical,9700,0.31
+2025-01,West,Finn Walsh,Fasteners,21100,0.38
+2025-01,West,Finn Walsh,Power Tools,19300,0.24
+2025-01,West,Finn Walsh,Paint,10100,0.42
+2025-01,West,Finn Walsh,Garden,4800,0.35
+2025-01,West,Finn Walsh,Electrical,15700,0.31
+2025-02,North,Amara Cole,Fasteners,11400,0.38
+2025-02,North,Ben Ortiz,Fasteners,10600,0.38
+2025-02,North,Amara Cole,Power Tools,11300,0.24
+2025-02,North,Ben Ortiz,Power Tools,10400,0.24
+2025-02,North,Amara Cole,Paint,6200,0.42
+2025-02,North,Ben Ortiz,Paint,5800,0.42
+2025-02,North,Amara Cole,Garden,3200,0.35
+2025-02,North,Ben Ortiz,Garden,3000,0.35
+2025-02,North,Amara Cole,Electrical,8700,0.31
+2025-02,North,Ben Ortiz,Electrical,8100,0.31
+2025-02,South,Chloe Park,Fasteners,18000,0.38
+2025-02,South,Chloe Park,Power Tools,19400,0.24
+2025-02,South,Chloe Park,Paint,9500,0.42
+2025-02,South,Chloe Park,Garden,5000,0.35
+2025-02,South,Chloe Park,Electrical,15200,0.31
+2025-02,East,Dev Patel,Fasteners,12300,0.38
+2025-02,East,Elena Rossi,Fasteners,12300,0.38
+2025-02,East,Dev Patel,Power Tools,13200,0.24
+2025-02,East,Elena Rossi,Power Tools,13200,0.24
+2025-02,East,Dev Patel,Paint,6500,0.42
+2025-02,East,Elena Rossi,Paint,6500,0.42
+2025-02,East,Dev Patel,Garden,3600,0.35
+2025-02,East,Elena Rossi,Garden,3600,0.35
+2025-02,East,Dev Patel,Electrical,9800,0.31
+2025-02,East,Elena Rossi,Electrical,9800,0.31
+2025-02,West,Finn Walsh,Fasteners,19900,0.38
+2025-02,West,Finn Walsh,Power Tools,20800,0.24
+2025-02,West,Finn Walsh,Paint,10900,0.42
+2025-02,West,Finn Walsh,Garden,5700,0.35
+2025-02,West,Finn Walsh,Electrical,16600,0.31
+2025-03,North,Amara Cole,Fasteners,11500,0.38
+2025-03,North,Ben Ortiz,Fasteners,10600,0.38
+2025-03,North,Amara Cole,Power Tools,13600,0.24
+2025-03,North,Ben Ortiz,Power Tools,12600,0.24
+2025-03,North,Amara Cole,Paint,7400,0.42
+2025-03,North,Ben Ortiz,Paint,6800,0.42
+2025-03,North,Amara Cole,Garden,5700,0.35
+2025-03,North,Ben Ortiz,Garden,5300,0.35
+2025-03,North,Amara Cole,Electrical,9200,0.31
+2025-03,North,Ben Ortiz,Electrical,8500,0.31
+2025-03,South,Chloe Park,Fasteners,19000,0.38
+2025-03,South,Chloe Park,Power Tools,21400,0.24
+2025-03,South,Chloe Park,Paint,11400,0.42
+2025-03,South,Chloe Park,Garden,9500,0.35
+2025-03,South,Chloe Park,Electrical,15400,0.31
+2025-03,East,Dev Patel,Fasteners,13000,0.38
+2025-03,East,Elena Rossi,Fasteners,13000,0.38
+2025-03,East,Dev Patel,Power Tools,15300,0.24
+2025-03,East,Elena Rossi,Power Tools,15300,0.24
+2025-03,East,Dev Patel,Paint,7700,0.42
+2025-03,East,Elena Rossi,Paint,7700,0.42
+2025-03,East,Dev Patel,Garden,6200,0.35
+2025-03,East,Elena Rossi,Garden,6200,0.35
+2025-03,East,Dev Patel,Electrical,10200,0.31
+2025-03,East,Elena Rossi,Electrical,10200,0.31
+2025-03,West,Finn Walsh,Fasteners,20700,0.38
+2025-03,West,Finn Walsh,Power Tools,24800,0.24
+2025-03,West,Finn Walsh,Paint,13700,0.42
+2025-03,West,Finn Walsh,Garden,10300,0.35
+2025-03,West,Finn Walsh,Electrical,16200,0.31
+2025-04,North,Amara Cole,Fasteners,12100,0.38
+2025-04,North,Ben Ortiz,Fasteners,11200,0.38
+2025-04,North,Amara Cole,Power Tools,14500,0.24
+2025-04,North,Ben Ortiz,Power Tools,13400,0.24
+2025-04,North,Amara Cole,Paint,8900,0.42
+2025-04,North,Ben Ortiz,Paint,8200,0.42
+2025-04,North,Amara Cole,Garden,9800,0.35
+2025-04,North,Ben Ortiz,Garden,9000,0.35
+2025-04,North,Amara Cole,Electrical,9400,0.31
+2025-04,North,Ben Ortiz,Electrical,8700,0.31
+2025-04,South,Chloe Park,Fasteners,19600,0.38
+2025-04,South,Chloe Park,Power Tools,23300,0.24
+2025-04,South,Chloe Park,Paint,14900,0.42
+2025-04,South,Chloe Park,Garden,16300,0.35
+2025-04,South,Chloe Park,Electrical,14500,0.31
+2025-04,East,Dev Patel,Fasteners,13800,0.38
+2025-04,East,Elena Rossi,Fasteners,13800,0.38
+2025-04,East,Dev Patel,Power Tools,15700,0.24
+2025-04,East,Elena Rossi,Power Tools,15700,0.24
+2025-04,East,Dev Patel,Paint,9800,0.42
+2025-04,East,Elena Rossi,Paint,9800,0.42
+2025-04,East,Dev Patel,Garden,10500,0.35
+2025-04,East,Elena Rossi,Garden,10500,0.35
+2025-04,East,Dev Patel,Electrical,9900,0.31
+2025-04,East,Elena Rossi,Electrical,9900,0.31
+2025-04,West,Finn Walsh,Fasteners,22600,0.38
+2025-04,West,Finn Walsh,Power Tools,25000,0.24
+2025-04,West,Finn Walsh,Paint,16900,0.42
+2025-04,West,Finn Walsh,Garden,17300,0.35
+2025-04,West,Finn Walsh,Electrical,17000,0.31
+2025-05,North,Amara Cole,Fasteners,12400,0.38
+2025-05,North,Ben Ortiz,Fasteners,11400,0.38
+2025-05,North,Amara Cole,Power Tools,13900,0.24
+2025-05,North,Ben Ortiz,Power Tools,12800,0.24
+2025-05,North,Amara Cole,Paint,10400,0.42
+2025-05,North,Ben Ortiz,Paint,9600,0.42
+2025-05,North,Amara Cole,Garden,11400,0.35
+2025-05,North,Ben Ortiz,Garden,10500,0.35
+2025-05,North,Amara Cole,Electrical,9600,0.31
+2025-05,North,Ben Ortiz,Electrical,8800,0.31
+2025-05,South,Chloe Park,Fasteners,19700,0.38
+2025-05,South,Chloe Park,Power Tools,23700,0.24
+2025-05,South,Chloe Park,Paint,16100,0.42
+2025-05,South,Chloe Park,Garden,18500,0.35
+2025-05,South,Chloe Park,Electrical,14800,0.31
+2025-05,East,Dev Patel,Fasteners,13100,0.38
+2025-05,East,Elena Rossi,Fasteners,13100,0.38
+2025-05,East,Dev Patel,Power Tools,15300,0.24
+2025-05,East,Elena Rossi,Power Tools,15300,0.24
+2025-05,East,Dev Patel,Paint,11700,0.42
+2025-05,East,Elena Rossi,Paint,11700,0.42
+2025-05,East,Dev Patel,Garden,13100,0.35
+2025-05,East,Elena Rossi,Garden,13100,0.35
+2025-05,East,Dev Patel,Electrical,10500,0.31
+2025-05,East,Elena Rossi,Electrical,10500,0.31
+2025-05,West,Finn Walsh,Fasteners,22000,0.38
+2025-05,West,Finn Walsh,Power Tools,25900,0.24
+2025-05,West,Finn Walsh,Paint,18300,0.42
+2025-05,West,Finn Walsh,Garden,21900,0.35
+2025-05,West,Finn Walsh,Electrical,17000,0.31
+2025-06,North,Amara Cole,Fasteners,11700,0.38
+2025-06,North,Ben Ortiz,Fasteners,10800,0.38
+2025-06,North,Amara Cole,Power Tools,14100,0.24
+2025-06,North,Ben Ortiz,Power Tools,13000,0.24
+2025-06,North,Amara Cole,Paint,10900,0.42
+2025-06,North,Ben Ortiz,Paint,10000,0.42
+2025-06,North,Amara Cole,Garden,10900,0.35
+2025-06,North,Ben Ortiz,Garden,10100,0.35
+2025-06,North,Amara Cole,Electrical,9000,0.31
+2025-06,North,Ben Ortiz,Electrical,8300,0.31
+2025-06,South,Chloe Park,Fasteners,18400,0.38
+2025-06,South,Chloe Park,Power Tools,22200,0.24
+2025-06,South,Chloe Park,Paint,17100,0.42
+2025-06,South,Chloe Park,Garden,17600,0.35
+2025-06,South,Chloe Park,Electrical,14800,0.31
+2025-06,East,Dev Patel,Fasteners,13000,0.38
+2025-06,East,Elena Rossi,Fasteners,13000,0.38
+2025-06,East,Dev Patel,Power Tools,14900,0.24
+2025-06,East,Elena Rossi,Power Tools,14900,0.24
+2025-06,East,Dev Patel,Paint,11600,0.42
+2025-06,East,Elena Rossi,Paint,11600,0.42
+2025-06,East,Dev Patel,Garden,12200,0.35
+2025-06,East,Elena Rossi,Garden,12200,0.35
+2025-06,East,Dev Patel,Electrical,10400,0.31
+2025-06,East,Elena Rossi,Electrical,10400,0.31
+2025-06,West,Finn Walsh,Fasteners,21300,0.38
+2025-06,West,Finn Walsh,Power Tools,25000,0.24
+2025-06,West,Finn Walsh,Paint,19000,0.42
+2025-06,West,Finn Walsh,Garden,18900,0.35
+2025-06,West,Finn Walsh,Electrical,17700,0.31
+2025-07,North,Amara Cole,Fasteners,11300,0.38
+2025-07,North,Ben Ortiz,Fasteners,10400,0.38
+2025-07,North,Amara Cole,Power Tools,13100,0.24
+2025-07,North,Ben Ortiz,Power Tools,12100,0.24
+2025-07,North,Amara Cole,Paint,11200,0.42
+2025-07,North,Ben Ortiz,Paint,10300,0.42
+2025-07,North,Amara Cole,Garden,8700,0.35
+2025-07,North,Ben Ortiz,Garden,8100,0.35
+2025-07,North,Amara Cole,Electrical,9300,0.31
+2025-07,North,Ben Ortiz,Electrical,8500,0.31
+2025-07,South,Chloe Park,Fasteners,17800,0.38
+2025-07,South,Chloe Park,Power Tools,21900,0.24
+2025-07,South,Chloe Park,Paint,17600,0.42
+2025-07,South,Chloe Park,Garden,13600,0.35
+2025-07,South,Chloe Park,Electrical,15800,0.31
+2025-07,East,Dev Patel,Fasteners,12500,0.38
+2025-07,East,Elena Rossi,Fasteners,12500,0.38
+2025-07,East,Dev Patel,Power Tools,13900,0.24
+2025-07,East,Elena Rossi,Power Tools,13900,0.24
+2025-07,East,Dev Patel,Paint,11600,0.42
+2025-07,East,Elena Rossi,Paint,11600,0.42
+2025-07,East,Dev Patel,Garden,9400,0.35
+2025-07,East,Elena Rossi,Garden,9400,0.35
+2025-07,East,Dev Patel,Electrical,10400,0.31
+2025-07,East,Elena Rossi,Electrical,10400,0.31
+2025-07,West,Finn Walsh,Fasteners,21000,0.38
+2025-07,West,Finn Walsh,Power Tools,23700,0.24
+2025-07,West,Finn Walsh,Paint,19000,0.42
+2025-07,West,Finn Walsh,Garden,16100,0.35
+2025-07,West,Finn Walsh,Electrical,16900,0.31
+2025-08,North,Amara Cole,Fasteners,11000,0.38
+2025-08,North,Ben Ortiz,Fasteners,10100,0.38
+2025-08,North,Amara Cole,Power Tools,13400,0.24
+2025-08,North,Ben Ortiz,Power Tools,12300,0.24
+2025-08,North,Amara Cole,Paint,9800,0.42
+2025-08,North,Ben Ortiz,Paint,9100,0.42
+2025-08,North,Amara Cole,Garden,7200,0.35
+2025-08,North,Ben Ortiz,Garden,6700,0.35
+2025-08,North,Amara Cole,Electrical,9400,0.31
+2025-08,North,Ben Ortiz,Electrical,8600,0.31
+2025-08,South,Chloe Park,Fasteners,18100,0.38
+2025-08,South,Chloe Park,Power Tools,22600,0.24
+2025-08,South,Chloe Park,Paint,16400,0.42
+2025-08,South,Chloe Park,Garden,11600,0.35
+2025-08,South,Chloe Park,Electrical,16000,0.31
+2025-08,East,Dev Patel,Fasteners,12800,0.38
+2025-08,East,Elena Rossi,Fasteners,12800,0.38
+2025-08,East,Dev Patel,Power Tools,15900,0.24
+2025-08,East,Elena Rossi,Power Tools,15900,0.24
+2025-08,East,Dev Patel,Paint,11100,0.42
+2025-08,East,Elena Rossi,Paint,11100,0.42
+2025-08,East,Dev Patel,Garden,7900,0.35
+2025-08,East,Elena Rossi,Garden,7900,0.35
+2025-08,East,Dev Patel,Electrical,10400,0.31
+2025-08,East,Elena Rossi,Electrical,10400,0.31
+2025-08,West,Finn Walsh,Fasteners,21000,0.38
+2025-08,West,Finn Walsh,Power Tools,25900,0.24
+2025-08,West,Finn Walsh,Paint,17600,0.42
+2025-08,West,Finn Walsh,Garden,13400,0.35
+2025-08,West,Finn Walsh,Electrical,18200,0.31
+2025-09,North,Amara Cole,Fasteners,11400,0.38
+2025-09,North,Ben Ortiz,Fasteners,10500,0.38
+2025-09,North,Amara Cole,Power Tools,15000,0.24
+2025-09,North,Ben Ortiz,Power Tools,13800,0.24
+2025-09,North,Amara Cole,Paint,8500,0.42
+2025-09,North,Ben Ortiz,Paint,7900,0.42
+2025-09,North,Amara Cole,Garden,6200,0.35
+2025-09,North,Ben Ortiz,Garden,5700,0.35
+2025-09,North,Amara Cole,Electrical,9800,0.31
+2025-09,North,Ben Ortiz,Electrical,9100,0.31
+2025-09,South,Chloe Park,Fasteners,20300,0.38
+2025-09,South,Chloe Park,Power Tools,23800,0.24
+2025-09,South,Chloe Park,Paint,14800,0.42
+2025-09,South,Chloe Park,Garden,9900,0.35
+2025-09,South,Chloe Park,Electrical,15100,0.31
+2025-09,East,Dev Patel,Fasteners,12900,0.38
+2025-09,East,Elena Rossi,Fasteners,12900,0.38
+2025-09,East,Dev Patel,Power Tools,16300,0.24
+2025-09,East,Elena Rossi,Power Tools,16300,0.24
+2025-09,East,Dev Patel,Paint,10000,0.42
+2025-09,East,Elena Rossi,Paint,10000,0.42
+2025-09,East,Dev Patel,Garden,6800,0.35
+2025-09,East,Elena Rossi,Garden,6800,0.35
+2025-09,East,Dev Patel,Electrical,10300,0.31
+2025-09,East,Elena Rossi,Electrical,10300,0.31
+2025-09,West,Finn Walsh,Fasteners,22400,0.38
+2025-09,West,Finn Walsh,Power Tools,26800,0.24
+2025-09,West,Finn Walsh,Paint,16200,0.42
+2025-09,West,Finn Walsh,Garden,11500,0.35
+2025-09,West,Finn Walsh,Electrical,18000,0.31
+2025-10,North,Amara Cole,Fasteners,12800,0.38
+2025-10,North,Ben Ortiz,Fasteners,11900,0.38
+2025-10,North,Amara Cole,Power Tools,15000,0.24
+2025-10,North,Ben Ortiz,Power Tools,13900,0.24
+2025-10,North,Amara Cole,Paint,7900,0.42
+2025-10,North,Ben Ortiz,Paint,7300,0.42
+2025-10,North,Amara Cole,Garden,4600,0.35
+2025-10,North,Ben Ortiz,Garden,4300,0.35
+2025-10,North,Amara Cole,Electrical,9900,0.31
+2025-10,North,Ben Ortiz,Electrical,9100,0.31
+2025-10,South,Chloe Park,Fasteners,21000,0.38
+2025-10,South,Chloe Park,Power Tools,25200,0.24
+2025-10,South,Chloe Park,Paint,12100,0.42
+2025-10,South,Chloe Park,Garden,8000,0.35
+2025-10,South,Chloe Park,Electrical,17300,0.31
+2025-10,East,Dev Patel,Fasteners,13400,0.38
+2025-10,East,Elena Rossi,Fasteners,13400,0.38
+2025-10,East,Dev Patel,Power Tools,17100,0.24
+2025-10,East,Elena Rossi,Power Tools,17100,0.24
+2025-10,East,Dev Patel,Paint,8500,0.42
+2025-10,East,Elena Rossi,Paint,8500,0.42
+2025-10,East,Dev Patel,Garden,5200,0.35
+2025-10,East,Elena Rossi,Garden,5200,0.35
+2025-10,East,Dev Patel,Electrical,11500,0.31
+2025-10,East,Elena Rossi,Electrical,11500,0.31
+2025-10,West,Finn Walsh,Fasteners,22100,0.38
+2025-10,West,Finn Walsh,Power Tools,28700,0.24
+2025-10,West,Finn Walsh,Paint,13500,0.42
+2025-10,West,Finn Walsh,Garden,9100,0.35
+2025-10,West,Finn Walsh,Electrical,18500,0.31
+2025-11,North,Amara Cole,Fasteners,11600,0.38
+2025-11,North,Ben Ortiz,Fasteners,10700,0.38
+2025-11,North,Amara Cole,Power Tools,18500,0.24
+2025-11,North,Ben Ortiz,Power Tools,17100,0.24
+2025-11,North,Amara Cole,Paint,6800,0.42
+2025-11,North,Ben Ortiz,Paint,6300,0.42
+2025-11,North,Amara Cole,Garden,3400,0.35
+2025-11,North,Ben Ortiz,Garden,3200,0.35
+2025-11,North,Amara Cole,Electrical,10000,0.31
+2025-11,North,Ben Ortiz,Electrical,9200,0.31
+2025-11,South,Chloe Park,Fasteners,19100,0.38
+2025-11,South,Chloe Park,Power Tools,29500,0.24
+2025-11,South,Chloe Park,Paint,11700,0.42
+2025-11,South,Chloe Park,Garden,5500,0.35
+2025-11,South,Chloe Park,Electrical,16200,0.31
+2025-11,East,Dev Patel,Fasteners,13400,0.38
+2025-11,East,Elena Rossi,Fasteners,13400,0.38
+2025-11,East,Dev Patel,Power Tools,19400,0.24
+2025-11,East,Elena Rossi,Power Tools,19400,0.24
+2025-11,East,Dev Patel,Paint,7400,0.42
+2025-11,East,Elena Rossi,Paint,7400,0.42
+2025-11,East,Dev Patel,Garden,3800,0.35
+2025-11,East,Elena Rossi,Garden,3800,0.35
+2025-11,East,Dev Patel,Electrical,11200,0.31
+2025-11,East,Elena Rossi,Electrical,11200,0.31
+2025-11,West,Finn Walsh,Fasteners,22400,0.38
+2025-11,West,Finn Walsh,Power Tools,32400,0.24
+2025-11,West,Finn Walsh,Paint,12900,0.42
+2025-11,West,Finn Walsh,Garden,6400,0.35
+2025-11,West,Finn Walsh,Electrical,19100,0.31
+2025-12,North,Amara Cole,Fasteners,11100,0.38
+2025-12,North,Ben Ortiz,Fasteners,10300,0.38
+2025-12,North,Amara Cole,Power Tools,20300,0.24
+2025-12,North,Ben Ortiz,Power Tools,18700,0.24
+2025-12,North,Amara Cole,Paint,5800,0.42
+2025-12,North,Ben Ortiz,Paint,5400,0.42
+2025-12,North,Amara Cole,Garden,2900,0.35
+2025-12,North,Ben Ortiz,Garden,2600,0.35
+2025-12,North,Amara Cole,Electrical,9500,0.31
+2025-12,North,Ben Ortiz,Electrical,8800,0.31
+2025-12,South,Chloe Park,Fasteners,18300,0.38
+2025-12,South,Chloe Park,Power Tools,34700,0.24
+2025-12,South,Chloe Park,Paint,9700,0.42
+2025-12,South,Chloe Park,Garden,4500,0.35
+2025-12,South,Chloe Park,Electrical,15500,0.31
+2025-12,East,Dev Patel,Fasteners,11900,0.38
+2025-12,East,Elena Rossi,Fasteners,11900,0.38
+2025-12,East,Dev Patel,Power Tools,23000,0.24
+2025-12,East,Elena Rossi,Power Tools,23000,0.24
+2025-12,East,Dev Patel,Paint,6400,0.42
+2025-12,East,Elena Rossi,Paint,6400,0.42
+2025-12,East,Dev Patel,Garden,3000,0.35
+2025-12,East,Elena Rossi,Garden,3000,0.35
+2025-12,East,Dev Patel,Electrical,10400,0.31
+2025-12,East,Elena Rossi,Electrical,10400,0.31
+2025-12,West,Finn Walsh,Fasteners,20200,0.38
+2025-12,West,Finn Walsh,Power Tools,38700,0.24
+2025-12,West,Finn Walsh,Paint,10900,0.42
+2025-12,West,Finn Walsh,Garden,4900,0.35
+2025-12,West,Finn Walsh,Electrical,18200,0.31
+2026-01,North,Amara Cole,Fasteners,12800,0.38
+2026-01,North,Ben Ortiz,Fasteners,11800,0.38
+2026-01,North,Amara Cole,Power Tools,11800,0.24
+2026-01,North,Ben Ortiz,Power Tools,10900,0.24
+2026-01,North,Amara Cole,Paint,6300,0.42
+2026-01,North,Ben Ortiz,Paint,5900,0.42
+2026-01,North,Amara Cole,Garden,2700,0.35
+2026-01,North,Ben Ortiz,Garden,2500,0.35
+2026-01,North,Amara Cole,Electrical,9900,0.31
+2026-01,North,Ben Ortiz,Electrical,9100,0.31
+2026-01,South,Chloe Park,Fasteners,19700,0.38
+2026-01,South,Chloe Park,Power Tools,19100,0.24
+2026-01,South,Chloe Park,Paint,9700,0.42
+2026-01,South,Chloe Park,Garden,4600,0.35
+2026-01,South,Chloe Park,Electrical,15600,0.31
+2026-01,East,Dev Patel,Fasteners,13800,0.38
+2026-01,East,Elena Rossi,Fasteners,13800,0.38
+2026-01,East,Dev Patel,Power Tools,13000,0.24
+2026-01,East,Elena Rossi,Power Tools,13000,0.24
+2026-01,East,Dev Patel,Paint,7000,0.42
+2026-01,East,Elena Rossi,Paint,7000,0.42
+2026-01,East,Dev Patel,Garden,3100,0.35
+2026-01,East,Elena Rossi,Garden,3100,0.35
+2026-01,East,Dev Patel,Electrical,11000,0.31
+2026-01,East,Elena Rossi,Electrical,11000,0.31
+2026-01,West,Finn Walsh,Fasteners,23400,0.38
+2026-01,West,Finn Walsh,Power Tools,22000,0.24
+2026-01,West,Finn Walsh,Paint,11100,0.42
+2026-01,West,Finn Walsh,Garden,5100,0.35
+2026-01,West,Finn Walsh,Electrical,18500,0.31
+2026-02,North,Amara Cole,Fasteners,12100,0.38
+2026-02,North,Ben Ortiz,Fasteners,11200,0.38
+2026-02,North,Amara Cole,Power Tools,13400,0.24
+2026-02,North,Ben Ortiz,Power Tools,12300,0.24
+2026-02,North,Amara Cole,Paint,6400,0.42
+2026-02,North,Ben Ortiz,Paint,5900,0.42
+2026-02,North,Amara Cole,Garden,3600,0.35
+2026-02,North,Ben Ortiz,Garden,3400,0.35
+2026-02,North,Amara Cole,Electrical,9700,0.31
+2026-02,North,Ben Ortiz,Electrical,9000,0.31
+2026-02,South,Chloe Park,Fasteners,20200,0.38
+2026-02,South,Chloe Park,Power Tools,21500,0.24
+2026-02,South,Chloe Park,Paint,10600,0.42
+2026-02,South,Chloe Park,Garden,5600,0.35
+2026-02,South,Chloe Park,Electrical,16200,0.31
+2026-02,East,Dev Patel,Fasteners,13900,0.38
+2026-02,East,Elena Rossi,Fasteners,13900,0.38
+2026-02,East,Dev Patel,Power Tools,14200,0.24
+2026-02,East,Elena Rossi,Power Tools,14200,0.24
+2026-02,East,Dev Patel,Paint,7300,0.42
+2026-02,East,Elena Rossi,Paint,7300,0.42
+2026-02,East,Dev Patel,Garden,4000,0.35
+2026-02,East,Elena Rossi,Garden,4000,0.35
+2026-02,East,Dev Patel,Electrical,11600,0.31
+2026-02,East,Elena Rossi,Electrical,11600,0.31
+2026-02,West,Finn Walsh,Fasteners,22800,0.38
+2026-02,West,Finn Walsh,Power Tools,24100,0.24
+2026-02,West,Finn Walsh,Paint,11700,0.42
+2026-02,West,Finn Walsh,Garden,6600,0.35
+2026-02,West,Finn Walsh,Electrical,19100,0.31
+2026-03,North,Amara Cole,Fasteners,13300,0.38
+2026-03,North,Ben Ortiz,Fasteners,12300,0.38
+2026-03,North,Amara Cole,Power Tools,14900,0.24
+2026-03,North,Ben Ortiz,Power Tools,13800,0.24
+2026-03,North,Amara Cole,Paint,8100,0.42
+2026-03,North,Ben Ortiz,Paint,7500,0.42
+2026-03,North,Amara Cole,Garden,6100,0.35
+2026-03,North,Ben Ortiz,Garden,5700,0.35
+2026-03,North,Amara Cole,Electrical,10400,0.31
+2026-03,North,Ben Ortiz,Electrical,9600,0.31
+2026-03,South,Chloe Park,Fasteners,21300,0.38
+2026-03,South,Chloe Park,Power Tools,23300,0.24
+2026-03,South,Chloe Park,Paint,13200,0.42
+2026-03,South,Chloe Park,Garden,10500,0.35
+2026-03,South,Chloe Park,Electrical,17200,0.31
+2026-03,East,Dev Patel,Fasteners,14000,0.38
+2026-03,East,Elena Rossi,Fasteners,14000,0.38
+2026-03,East,Dev Patel,Power Tools,16700,0.24
+2026-03,East,Elena Rossi,Power Tools,16700,0.24
+2026-03,East,Dev Patel,Paint,9100,0.42
+2026-03,East,Elena Rossi,Paint,9100,0.42
+2026-03,East,Dev Patel,Garden,6800,0.35
+2026-03,East,Elena Rossi,Garden,6800,0.35
+2026-03,East,Dev Patel,Electrical,10700,0.31
+2026-03,East,Elena Rossi,Electrical,10700,0.31
+2026-03,West,Finn Walsh,Fasteners,24000,0.38
+2026-03,West,Finn Walsh,Power Tools,27900,0.24
+2026-03,West,Finn Walsh,Paint,15100,0.42
+2026-03,West,Finn Walsh,Garden,11700,0.35
+2026-03,West,Finn Walsh,Electrical,18200,0.31
+2026-04,North,Amara Cole,Fasteners,13800,0.38
+2026-04,North,Ben Ortiz,Fasteners,12700,0.38
+2026-04,North,Amara Cole,Power Tools,15100,0.24
+2026-04,North,Ben Ortiz,Power Tools,13900,0.24
+2026-04,North,Amara Cole,Paint,9800,0.42
+2026-04,North,Ben Ortiz,Paint,9000,0.42
+2026-04,North,Amara Cole,Garden,11000,0.35
+2026-04,North,Ben Ortiz,Garden,10200,0.35
+2026-04,North,Amara Cole,Electrical,10300,0.31
+2026-04,North,Ben Ortiz,Electrical,9500,0.31
+2026-04,South,Chloe Park,Fasteners,22500,0.38
+2026-04,South,Chloe Park,Power Tools,25400,0.24
+2026-04,South,Chloe Park,Paint,15500,0.42
+2026-04,South,Chloe Park,Garden,16900,0.35
+2026-04,South,Chloe Park,Electrical,16500,0.31
+2026-04,East,Dev Patel,Fasteners,14200,0.38
+2026-04,East,Elena Rossi,Fasteners,14200,0.38
+2026-04,East,Dev Patel,Power Tools,16800,0.24
+2026-04,East,Elena Rossi,Power Tools,16800,0.24
+2026-04,East,Dev Patel,Paint,11100,0.42
+2026-04,East,Elena Rossi,Paint,11100,0.42
+2026-04,East,Dev Patel,Garden,11500,0.35
+2026-04,East,Elena Rossi,Garden,11500,0.35
+2026-04,East,Dev Patel,Electrical,11500,0.31
+2026-04,East,Elena Rossi,Electrical,11500,0.31
+2026-04,West,Finn Walsh,Fasteners,24600,0.38
+2026-04,West,Finn Walsh,Power Tools,29200,0.24
+2026-04,West,Finn Walsh,Paint,18000,0.42
+2026-04,West,Finn Walsh,Garden,19200,0.35
+2026-04,West,Finn Walsh,Electrical,19300,0.31
+2026-05,North,Amara Cole,Fasteners,13000,0.38
+2026-05,North,Ben Ortiz,Fasteners,12000,0.38
+2026-05,North,Amara Cole,Power Tools,15400,0.24
+2026-05,North,Ben Ortiz,Power Tools,14200,0.24
+2026-05,North,Amara Cole,Paint,11700,0.42
+2026-05,North,Ben Ortiz,Paint,10800,0.42
+2026-05,North,Amara Cole,Garden,12500,0.35
+2026-05,North,Ben Ortiz,Garden,11600,0.35
+2026-05,North,Amara Cole,Electrical,10300,0.31
+2026-05,North,Ben Ortiz,Electrical,9500,0.31
+2026-05,South,Chloe Park,Fasteners,22600,0.38
+2026-05,South,Chloe Park,Power Tools,24600,0.24
+2026-05,South,Chloe Park,Paint,18200,0.42
+2026-05,South,Chloe Park,Garden,21300,0.35
+2026-05,South,Chloe Park,Electrical,16200,0.31
+2026-05,East,Dev Patel,Fasteners,14200,0.38
+2026-05,East,Elena Rossi,Fasteners,14200,0.38
+2026-05,East,Dev Patel,Power Tools,17700,0.24
+2026-05,East,Elena Rossi,Power Tools,17700,0.24
+2026-05,East,Dev Patel,Paint,12700,0.42
+2026-05,East,Elena Rossi,Paint,12700,0.42
+2026-05,East,Dev Patel,Garden,14600,0.35
+2026-05,East,Elena Rossi,Garden,14600,0.35
+2026-05,East,Dev Patel,Electrical,11300,0.31
+2026-05,East,Elena Rossi,Electrical,11300,0.31
+2026-05,West,Finn Walsh,Fasteners,25300,0.38
+2026-05,West,Finn Walsh,Power Tools,29700,0.24
+2026-05,West,Finn Walsh,Paint,21500,0.42
+2026-05,West,Finn Walsh,Garden,23200,0.35
+2026-05,West,Finn Walsh,Electrical,19600,0.31
+2026-06,North,Amara Cole,Fasteners,12800,0.38
+2026-06,North,Ben Ortiz,Fasteners,11900,0.38
+2026-06,North,Amara Cole,Power Tools,15100,0.24
+2026-06,North,Ben Ortiz,Power Tools,13900,0.24
+2026-06,North,Amara Cole,Paint,11700,0.42
+2026-06,North,Ben Ortiz,Paint,10800,0.42
+2026-06,North,Amara Cole,Garden,11600,0.35
+2026-06,North,Ben Ortiz,Garden,10700,0.35
+2026-06,North,Amara Cole,Electrical,10500,0.31
+2026-06,North,Ben Ortiz,Electrical,9700,0.31
+2026-06,South,Chloe Park,Fasteners,21600,0.38
+2026-06,South,Chloe Park,Power Tools,24400,0.24
+2026-06,South,Chloe Park,Paint,19400,0.42
+2026-06,South,Chloe Park,Garden,19900,0.35
+2026-06,South,Chloe Park,Electrical,16200,0.31
+2026-06,East,Dev Patel,Fasteners,13900,0.38
+2026-06,East,Elena Rossi,Fasteners,13900,0.38
+2026-06,East,Dev Patel,Power Tools,16500,0.24
+2026-06,East,Elena Rossi,Power Tools,16500,0.24
+2026-06,East,Dev Patel,Paint,13300,0.42
+2026-06,East,Elena Rossi,Paint,13300,0.42
+2026-06,East,Dev Patel,Garden,13400,0.35
+2026-06,East,Elena Rossi,Garden,13400,0.35
+2026-06,East,Dev Patel,Electrical,10900,0.31
+2026-06,East,Elena Rossi,Electrical,10900,0.31
+2026-06,West,Finn Walsh,Fasteners,23000,0.38
+2026-06,West,Finn Walsh,Power Tools,27900,0.24
+2026-06,West,Finn Walsh,Paint,22400,0.42
+2026-06,West,Finn Walsh,Garden,21000,0.35
+2026-06,West,Finn Walsh,Electrical,18400,0.31
+2026-07,North,Amara Cole,Fasteners,11800,0.38
+2026-07,North,Ben Ortiz,Fasteners,10900,0.38
+2026-07,North,Amara Cole,Power Tools,14100,0.24
+2026-07,North,Ben Ortiz,Power Tools,13000,0.24
+2026-07,North,Amara Cole,Paint,12400,0.42
+2026-07,North,Ben Ortiz,Paint,11400,0.42
+2026-07,North,Amara Cole,Garden,9300,0.35
+2026-07,North,Ben Ortiz,Garden,8600,0.35
+2026-07,North,Amara Cole,Electrical,10600,0.31
+2026-07,North,Ben Ortiz,Electrical,9800,0.31
+2026-07,South,Chloe Park,Fasteners,19900,0.38
+2026-07,South,Chloe Park,Power Tools,23700,0.24
+2026-07,South,Chloe Park,Paint,20300,0.42
+2026-07,South,Chloe Park,Garden,15600,0.35
+2026-07,South,Chloe Park,Electrical,17400,0.31
+2026-07,East,Dev Patel,Fasteners,13200,0.38
+2026-07,East,Elena Rossi,Fasteners,13200,0.38
+2026-07,East,Dev Patel,Power Tools,15300,0.24
+2026-07,East,Elena Rossi,Power Tools,15300,0.24
+2026-07,East,Dev Patel,Paint,12700,0.42
+2026-07,East,Elena Rossi,Paint,12700,0.42
+2026-07,East,Dev Patel,Garden,11000,0.35
+2026-07,East,Elena Rossi,Garden,11000,0.35
+2026-07,East,Dev Patel,Electrical,11100,0.31
+2026-07,East,Elena Rossi,Electrical,11100,0.31
+2026-07,West,Finn Walsh,Fasteners,22000,0.38
+2026-07,West,Finn Walsh,Power Tools,26800,0.24
+2026-07,West,Finn Walsh,Paint,21300,0.42
+2026-07,West,Finn Walsh,Garden,18000,0.35
+2026-07,West,Finn Walsh,Electrical,19500,0.31
+2026-08,North,Amara Cole,Fasteners,11800,0.38
+2026-08,North,Ben Ortiz,Fasteners,10900,0.38
+2026-08,North,Amara Cole,Power Tools,14700,0.24
+2026-08,North,Ben Ortiz,Power Tools,13500,0.24
+2026-08,North,Amara Cole,Paint,11500,0.42
+2026-08,North,Ben Ortiz,Paint,10600,0.42
+2026-08,North,Amara Cole,Garden,8300,0.35
+2026-08,North,Ben Ortiz,Garden,7700,0.35
+2026-08,North,Amara Cole,Electrical,10600,0.31
+2026-08,North,Ben Ortiz,Electrical,9800,0.31
+2026-08,South,Chloe Park,Fasteners,19700,0.38
+2026-08,South,Chloe Park,Power Tools,25700,0.24
+2026-08,South,Chloe Park,Paint,18400,0.42
+2026-08,South,Chloe Park,Garden,13400,0.35
+2026-08,South,Chloe Park,Electrical,17600,0.31
+2026-08,East,Dev Patel,Fasteners,13500,0.38
+2026-08,East,Elena Rossi,Fasteners,13500,0.38
+2026-08,East,Dev Patel,Power Tools,17100,0.24
+2026-08,East,Elena Rossi,Power Tools,17100,0.24
+2026-08,East,Dev Patel,Paint,12400,0.42
+2026-08,East,Elena Rossi,Paint,12400,0.42
+2026-08,East,Dev Patel,Garden,8800,0.35
+2026-08,East,Elena Rossi,Garden,8800,0.35
+2026-08,East,Dev Patel,Electrical,11800,0.31
+2026-08,East,Elena Rossi,Electrical,11800,0.31
+2026-08,West,Finn Walsh,Fasteners,23100,0.38
+2026-08,West,Finn Walsh,Power Tools,28400,0.24
+2026-08,West,Finn Walsh,Paint,21100,0.42
+2026-08,West,Finn Walsh,Garden,14800,0.35
+2026-08,West,Finn Walsh,Electrical,19200,0.31
+2026-09,North,Amara Cole,Fasteners,13500,0.38
+2026-09,North,Ben Ortiz,Fasteners,12400,0.38
+2026-09,North,Amara Cole,Power Tools,16800,0.24
+2026-09,North,Ben Ortiz,Power Tools,15500,0.24
+2026-09,North,Amara Cole,Paint,10200,0.42
+2026-09,North,Ben Ortiz,Paint,9400,0.42
+2026-09,North,Amara Cole,Garden,6900,0.35
+2026-09,North,Ben Ortiz,Garden,6400,0.35
+2026-09,North,Amara Cole,Electrical,10700,0.31
+2026-09,North,Ben Ortiz,Electrical,9900,0.31
+2026-09,South,Chloe Park,Fasteners,21400,0.38
+2026-09,South,Chloe Park,Power Tools,26600,0.24
+2026-09,South,Chloe Park,Paint,16400,0.42
+2026-09,South,Chloe Park,Garden,11500,0.35
+2026-09,South,Chloe Park,Electrical,17200,0.31
+2026-09,East,Dev Patel,Fasteners,14600,0.38
+2026-09,East,Elena Rossi,Fasteners,14600,0.38
+2026-09,East,Dev Patel,Power Tools,17800,0.24
+2026-09,East,Elena Rossi,Power Tools,17800,0.24
+2026-09,East,Dev Patel,Paint,10400,0.42
+2026-09,East,Elena Rossi,Paint,10400,0.42
+2026-09,East,Dev Patel,Garden,7500,0.35
+2026-09,East,Elena Rossi,Garden,7500,0.35
+2026-09,East,Dev Patel,Electrical,12000,0.31
+2026-09,East,Elena Rossi,Electrical,12000,0.31
+2026-09,West,Finn Walsh,Fasteners,24300,0.38
+2026-09,West,Finn Walsh,Power Tools,28500,0.24
+2026-09,West,Finn Walsh,Paint,17200,0.42
+2026-09,West,Finn Walsh,Garden,12500,0.35
+2026-09,West,Finn Walsh,Electrical,19700,0.31
+2026-10,North,Amara Cole,Fasteners,13600,0.38
+2026-10,North,Ben Ortiz,Fasteners,12500,0.38
+2026-10,North,Amara Cole,Power Tools,16700,0.24
+2026-10,North,Ben Ortiz,Power Tools,15400,0.24
+2026-10,North,Amara Cole,Paint,8800,0.42
+2026-10,North,Ben Ortiz,Paint,8200,0.42
+2026-10,North,Amara Cole,Garden,5000,0.35
+2026-10,North,Ben Ortiz,Garden,4700,0.35
+2026-10,North,Amara Cole,Electrical,11200,0.31
+2026-10,North,Ben Ortiz,Electrical,10300,0.31
+2026-10,South,Chloe Park,Fasteners,21700,0.38
+2026-10,South,Chloe Park,Power Tools,27900,0.24
+2026-10,South,Chloe Park,Paint,14300,0.42
+2026-10,South,Chloe Park,Garden,8300,0.35
+2026-10,South,Chloe Park,Electrical,18300,0.31
+2026-10,East,Dev Patel,Fasteners,15600,0.38
+2026-10,East,Elena Rossi,Fasteners,15600,0.38
+2026-10,East,Dev Patel,Power Tools,18300,0.24
+2026-10,East,Elena Rossi,Power Tools,18300,0.24
+2026-10,East,Dev Patel,Paint,9400,0.42
+2026-10,East,Elena Rossi,Paint,9400,0.42
+2026-10,East,Dev Patel,Garden,5900,0.35
+2026-10,East,Elena Rossi,Garden,5900,0.35
+2026-10,East,Dev Patel,Electrical,12100,0.31
+2026-10,East,Elena Rossi,Electrical,12100,0.31
+2026-10,West,Finn Walsh,Fasteners,26300,0.38
+2026-10,West,Finn Walsh,Power Tools,31200,0.24
+2026-10,West,Finn Walsh,Paint,15500,0.42
+2026-10,West,Finn Walsh,Garden,9400,0.35
+2026-10,West,Finn Walsh,Electrical,20400,0.31
+2026-11,North,Amara Cole,Fasteners,13400,0.38
+2026-11,North,Ben Ortiz,Fasteners,12400,0.38
+2026-11,North,Amara Cole,Power Tools,19600,0.24
+2026-11,North,Ben Ortiz,Power Tools,18100,0.24
+2026-11,North,Amara Cole,Paint,7800,0.42
+2026-11,North,Ben Ortiz,Paint,7200,0.42
+2026-11,North,Amara Cole,Garden,3900,0.35
+2026-11,North,Ben Ortiz,Garden,3600,0.35
+2026-11,North,Amara Cole,Electrical,11400,0.31
+2026-11,North,Ben Ortiz,Electrical,10500,0.31
+2026-11,South,Chloe Park,Fasteners,21500,0.38
+2026-11,South,Chloe Park,Power Tools,32000,0.24
+2026-11,South,Chloe Park,Paint,12000,0.42
+2026-11,South,Chloe Park,Garden,6200,0.35
+2026-11,South,Chloe Park,Electrical,18400,0.31
+2026-11,East,Dev Patel,Fasteners,15300,0.38
+2026-11,East,Elena Rossi,Fasteners,15300,0.38
+2026-11,East,Dev Patel,Power Tools,21100,0.24
+2026-11,East,Elena Rossi,Power Tools,21100,0.24
+2026-11,East,Dev Patel,Paint,8700,0.42
+2026-11,East,Elena Rossi,Paint,8700,0.42
+2026-11,East,Dev Patel,Garden,4300,0.35
+2026-11,East,Elena Rossi,Garden,4300,0.35
+2026-11,East,Dev Patel,Electrical,12400,0.31
+2026-11,East,Elena Rossi,Electrical,12400,0.31
+2026-11,West,Finn Walsh,Fasteners,24300,0.38
+2026-11,West,Finn Walsh,Power Tools,36700,0.24
+2026-11,West,Finn Walsh,Paint,13300,0.42
+2026-11,West,Finn Walsh,Garden,6800,0.35
+2026-11,West,Finn Walsh,Electrical,19800,0.31
+2026-12,North,Amara Cole,Fasteners,11500,0.38
+2026-12,North,Ben Ortiz,Fasteners,10600,0.38
+2026-12,North,Amara Cole,Power Tools,22700,0.24
+2026-12,North,Ben Ortiz,Power Tools,21000,0.24
+2026-12,North,Amara Cole,Paint,6500,0.42
+2026-12,North,Ben Ortiz,Paint,6000,0.42
+2026-12,North,Amara Cole,Garden,3100,0.35
+2026-12,North,Ben Ortiz,Garden,2900,0.35
+2026-12,North,Amara Cole,Electrical,11000,0.31
+2026-12,North,Ben Ortiz,Electrical,10200,0.31
+2026-12,South,Chloe Park,Fasteners,19700,0.38
+2026-12,South,Chloe Park,Power Tools,37300,0.24
+2026-12,South,Chloe Park,Paint,10700,0.42
+2026-12,South,Chloe Park,Garden,5200,0.35
+2026-12,South,Chloe Park,Electrical,17100,0.31
+2026-12,East,Dev Patel,Fasteners,13000,0.38
+2026-12,East,Elena Rossi,Fasteners,13000,0.38
+2026-12,East,Dev Patel,Power Tools,24600,0.24
+2026-12,East,Elena Rossi,Power Tools,24600,0.24
+2026-12,East,Dev Patel,Paint,7100,0.42
+2026-12,East,Elena Rossi,Paint,7100,0.42
+2026-12,East,Dev Patel,Garden,3400,0.35
+2026-12,East,Elena Rossi,Garden,3400,0.35
+2026-12,East,Dev Patel,Electrical,11900,0.31
+2026-12,East,Elena Rossi,Electrical,11900,0.31
+2026-12,West,Finn Walsh,Fasteners,22200,0.38
+2026-12,West,Finn Walsh,Power Tools,41300,0.24
+2026-12,West,Finn Walsh,Paint,11900,0.42
+2026-12,West,Finn Walsh,Garden,5700,0.35
+2026-12,West,Finn Walsh,Electrical,20600,0.31

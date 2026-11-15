@@ -8,7 +8,7 @@ $xl = New-Object -ComObject Excel.Application
 try {
     $xl.Visible = $false; $xl.DisplayAlerts = $false
     $wb = $xl.Workbooks.Open((Join-Path $root 'Customer-Cleanup.xlsx'), 0, $true)
-    $areas = @{ 'Summary' = 'A1:M29'; 'Customers' = 'A1:P20'; 'Needs review' = 'A1:N12'; 'Merge log' = 'A1:L20'; 'CRM import' = 'A1:L18'; 'Cleaning log' = 'A1:D32' }
+    $areas = @{ 'Summary' = 'A1:AB53'; 'Match explorer' = 'A1:N30'; 'Customers' = 'A1:P24'; 'Needs review' = 'A1:L16'; 'Merge log' = 'A1:L24'; 'CRM import' = 'A1:M22'; 'Cleaning log' = 'A1:D36' }
     foreach ($s in $areas.Keys) {
         $ws = $wb.Worksheets.Item($s)
         $ws.PageSetup.Orientation = 2; $ws.PageSetup.Zoom = $false

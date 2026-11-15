@@ -1,0 +1,42 @@
+{
+ "OPE-B-202607-079": {
+  "owner": "Maya",
+  "comment": "Asked branch 07 for the deposit slip (2nd reminder sent)",
+  "resolved": null
+ },
+ "OPE-B-202609-064": {
+  "owner": "Sam",
+  "comment": "Customer claims a 2.5% early-payment discount; waiting for approval",
+  "resolved": null
+ },
+ "PAY-L-202608-003": {
+  "owner": "Maya",
+  "comment": "Cheque not presented after 60+ days; contact the worker, then write back",
+  "resolved": null
+ },
+ "OPE-B-202610-161": {
+  "owner": "Sam",
+  "comment": "Typo fixed: cash book corrected to 1,425.00",
+  "resolved": "2026-11-03"
+ },
+ "OPE-L-202610-108": {
+  "owner": "Maya",
+  "comment": "Second posting reversed",
+  "resolved": "2026-11-02"
+ },
+ "OPE-B-202610-101": {
+  "owner": "Sam",
+  "comment": "Post 20.00 to bank charges",
+  "resolved": null
+ },
+ "OPE-B-202610-165": {
+  "owner": "Sam",
+  "comment": "Posted with the October bank charges",
+  "resolved": "2026-11-04"
+ },
+ "PAY-B-202610-015": {
+  "owner": "Maya",
+  "comment": "Salary paid twice: recall requested from the bank",
+  "resolved": null
+ }
+}

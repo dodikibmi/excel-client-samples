@@ -1,5 +1,125 @@
 {
  "states": {
+  "NB-0983": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-1000": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-0998": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-0988": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-0991": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-0993": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-0990": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-0987": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-0989": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-0994": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-0985": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-0996": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-0981": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-0995": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-0984": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-0992": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-0999": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-0986": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-0982": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
+  "NB-0997": {
+   "balance": 0.0,
+   "status": "Paid",
+   "days": 0,
+   "aging": "Paid"
+  },
   "NB-1026": {
    "balance": 0.0,
    "status": "Paid",
@@ -455,8 +575,8 @@
   {
    "no": "NB-1009",
    "stage": "Second",
-   "action": "send",
-   "reason": ""
+   "action": "pause",
+   "reason": "Promised to pay by 19 Nov 2026"
   },
   {
    "no": "NB-1039",
@@ -485,8 +605,8 @@
   {
    "no": "NB-1008",
    "stage": "Friendly",
-   "action": "send",
-   "reason": ""
+   "action": "pause",
+   "reason": "Customer replied on 12 Nov 2026"
   },
   {
    "no": "NB-1012",
@@ -524,5 +644,340 @@
    "61-90": 18444.1,
    "90+": 5460.19
   }
- }
+ },
+ "pauses": {
+  "NB-1024": {
+   "paused": false,
+   "broken": false,
+   "type": "Reply",
+   "promised": null,
+   "reason": ""
+  },
+  "NB-1005": {
+   "paused": false,
+   "broken": true,
+   "type": "Promise to pay",
+   "promised": -4,
+   "reason": "Promise to pay by 10 Nov 2026 not kept"
+  },
+  "NB-1008": {
+   "paused": true,
+   "broken": false,
+   "type": "Reply",
+   "promised": null,
+   "reason": "Customer replied on 12 Nov 2026"
+  },
+  "NB-1009": {
+   "paused": true,
+   "broken": false,
+   "type": "Promise to pay",
+   "promised": 5,
+   "reason": "Promised to pay by 19 Nov 2026"
+  }
+ },
+ "points": [
+  {
+   "label": "Jun",
+   "end": -137,
+   "collected": 6772.2,
+   "billed": 29853.09,
+   "outstanding": 42993.25,
+   "overdue": 12698.26,
+   "dso": 72.9311,
+   "rate": 0.528478
+  },
+  {
+   "label": "Jul",
+   "end": -106,
+   "collected": 39167.14,
+   "billed": 46431.55,
+   "outstanding": 50257.66,
+   "overdue": 7298.04,
+   "dso": 48.5873,
+   "rate": 0.861185
+  },
+  {
+   "label": "Aug",
+   "end": -75,
+   "collected": 16412.71,
+   "billed": 44610.61,
+   "outstanding": 78455.56,
+   "overdue": 47416.52,
+   "dso": 58.4059,
+   "rate": 0.54559
+  },
+  {
+   "label": "Sep",
+   "end": -45,
+   "collected": 15354.75,
+   "billed": 21071.93,
+   "outstanding": 84172.74,
+   "overdue": 63988.68,
+   "dso": 67.57,
+   "rate": 0.469545
+  },
+  {
+   "label": "Oct",
+   "end": -14,
+   "collected": 44307.52,
+   "billed": 42039.59,
+   "outstanding": 81904.81,
+   "overdue": 57535.85,
+   "dso": 69.7048,
+   "rate": 0.541828
+  },
+  {
+   "label": "Nov",
+   "end": 0,
+   "collected": 20846.29,
+   "billed": 12877.87,
+   "outstanding": 73966.39,
+   "overdue": 56878.06,
+   "dso": 65.8822,
+   "rate": 0.595587
+  }
+ ],
+ "kpis": {
+  "collected_mtd": 20846.29,
+  "collected_prev_mtd": 14691.96,
+  "dso": 65.8822,
+  "rate": 0.595587,
+  "dso_prev": 69.7048,
+  "rate_prev": 0.541828,
+  "outstanding_prev": 81904.81,
+  "overdue_prev": 57535.85,
+  "cash_collected": 151629.07
+ },
+ "risk": {
+  "Alder & Finch Bakery": {
+   "avg_late": 0.875,
+   "max_days": 0,
+   "overdue": 0.0,
+   "score": 0,
+   "level": "Low"
+  },
+  "Brightwater Yoga": {
+   "avg_late": 0.0,
+   "max_days": 0,
+   "overdue": 0.0,
+   "score": 0,
+   "level": "Low"
+  },
+  "Cedar Lane Dental": {
+   "avg_late": 22.25,
+   "max_days": 18,
+   "overdue": 3757.98,
+   "score": 24,
+   "level": "Low"
+  },
+  "Driftwood Coffee Co.": {
+   "avg_late": 21.5,
+   "max_days": 23,
+   "overdue": 850.39,
+   "score": 19,
+   "level": "Low"
+  },
+  "Elmstead Property Group": {
+   "avg_late": 60.25,
+   "max_days": 49,
+   "overdue": 12202.19,
+   "score": 65,
+   "level": "High"
+  },
+  "Fernhill Organics": {
+   "avg_late": 0.8571,
+   "max_days": 0,
+   "overdue": 0.0,
+   "score": 0,
+   "level": "Low"
+  },
+  "Glasshouse Events": {
+   "avg_late": 53.0,
+   "max_days": 103,
+   "overdue": 15173.55,
+   "score": 87,
+   "level": "High"
+  },
+  "Harbor & Pine Law": {
+   "avg_late": 21.5,
+   "max_days": 18,
+   "overdue": 4139.33,
+   "score": 24,
+   "level": "Low"
+  },
+  "Inkwell Bookshop": {
+   "avg_late": 68.6667,
+   "max_days": 87,
+   "overdue": 11239.69,
+   "score": 80,
+   "level": "High"
+  },
+  "Juniper Fitness": {
+   "avg_late": 0.4,
+   "max_days": 0,
+   "overdue": 0.0,
+   "score": 0,
+   "level": "Low"
+  },
+  "Kestrel Outdoor Gear": {
+   "avg_late": 21.2857,
+   "max_days": 0,
+   "overdue": 0.0,
+   "score": 11,
+   "level": "Low"
+  },
+  "Lumen Architecture": {
+   "avg_late": 61.0,
+   "max_days": 62,
+   "overdue": 9514.93,
+   "score": 68,
+   "level": "High"
+  }
+ },
+ "queue": [
+  {
+   "priority": "Urgent",
+   "action": "Call: over 60 days late",
+   "no": "NB-1021",
+   "customer": "Inkwell Bookshop",
+   "balance": 9744.65,
+   "days": 87
+  },
+  {
+   "priority": "Urgent",
+   "action": "Call: over 60 days late",
+   "no": "NB-1043",
+   "customer": "Glasshouse Events",
+   "balance": 6052.21,
+   "days": 88
+  },
+  {
+   "priority": "Urgent",
+   "action": "Call: over 60 days late",
+   "no": "NB-1019",
+   "customer": "Glasshouse Events",
+   "balance": 5460.19,
+   "days": 103
+  },
+  {
+   "priority": "Urgent",
+   "action": "Call: promise not kept",
+   "no": "NB-1005",
+   "customer": "Elmstead Property Group",
+   "balance": 2999.41,
+   "days": 21
+  },
+  {
+   "priority": "Urgent",
+   "action": "Call: over 60 days late",
+   "no": "NB-1055",
+   "customer": "Glasshouse Events",
+   "balance": 1970.04,
+   "days": 90
+  },
+  {
+   "priority": "Urgent",
+   "action": "Call: over 60 days late",
+   "no": "NB-1024",
+   "customer": "Lumen Architecture",
+   "balance": 677.2,
+   "days": 62
+  },
+  {
+   "priority": "High",
+   "action": "Send Final reminder",
+   "no": "NB-1029",
+   "customer": "Elmstead Property Group",
+   "balance": 5302.78,
+   "days": 49
+  },
+  {
+   "priority": "High",
+   "action": "Send Final reminder",
+   "no": "NB-1069",
+   "customer": "Elmstead Property Group",
+   "balance": 3900.0,
+   "days": 30
+  },
+  {
+   "priority": "High",
+   "action": "Send Second reminder",
+   "no": "NB-1036",
+   "customer": "Lumen Architecture",
+   "balance": 2683.74,
+   "days": 16
+  },
+  {
+   "priority": "High",
+   "action": "Send Second reminder",
+   "no": "NB-1068",
+   "customer": "Cedar Lane Dental",
+   "balance": 2100.0,
+   "days": 14
+  },
+  {
+   "priority": "High",
+   "action": "Send Final reminder",
+   "no": "NB-1060",
+   "customer": "Lumen Architecture",
+   "balance": 1211.26,
+   "days": 47
+  },
+  {
+   "priority": "High",
+   "action": "Call: no email on file",
+   "no": "NB-1031",
+   "customer": "Glasshouse Events",
+   "balance": 1028.22,
+   "days": 14
+  },
+  {
+   "priority": "High",
+   "action": "Send Second reminder",
+   "no": "NB-1039",
+   "customer": "Cedar Lane Dental",
+   "balance": 445.34,
+   "days": 18
+  },
+  {
+   "priority": "Medium",
+   "action": "Send Friendly reminder",
+   "no": "NB-1012",
+   "customer": "Lumen Architecture",
+   "balance": 4942.73,
+   "days": 3
+  },
+  {
+   "priority": "Medium",
+   "action": "Record a promise to pay",
+   "no": "NB-1008",
+   "customer": "Harbor & Pine Law",
+   "balance": 1083.43,
+   "days": 7
+  },
+  {
+   "priority": "Medium",
+   "action": "Send Friendly reminder",
+   "no": "NB-1057",
+   "customer": "Inkwell Bookshop",
+   "balance": 843.85,
+   "days": 2
+  },
+  {
+   "priority": "Low",
+   "action": "Send Upcoming reminder",
+   "no": "NB-1066",
+   "customer": "Brightwater Yoga",
+   "balance": 640.0,
+   "days": 0
+  },
+  {
+   "priority": "Low",
+   "action": "Send Upcoming reminder",
+   "no": "NB-1034",
+   "customer": "Juniper Fitness",
+   "balance": 438.91,
+   "days": 0
+  }
+ ]
 }

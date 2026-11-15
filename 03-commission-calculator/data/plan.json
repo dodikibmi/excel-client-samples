@@ -3,6 +3,11 @@
  "tax_rate": 0.0825,
  "target_bonus": 300,
  "discount_cap": 0.3,
+ "override_rate": 0.01,
+ "accel_at": 1.2,
+ "accel_rate": 0.02,
+ "first_month": "2025-11-01",
+ "months": 12,
  "products": [
   [
    "A4 Copy Paper (box)",
@@ -81,32 +86,38 @@
   [
    "Grace Holloway",
    "North",
-   30000
+   30000,
+   ""
   ],
   [
    "Marcus Reid",
    "North",
-   25000
+   25000,
+   "Grace Holloway"
   ],
   [
    "Priya Nair",
    "South",
-   35000
+   35000,
+   ""
   ],
   [
    "Tom Becker",
    "South",
-   20000
+   20000,
+   "Priya Nair"
   ],
   [
    "Lena Fischer",
    "East",
-   40000
+   40000,
+   ""
   ],
   [
    "Diego Santos",
    "West",
-   28000
+   28000,
+   ""
   ]
  ],
  "bands": [
@@ -126,5 +137,29 @@
    45000,
    0.08
   ]
- ]
+ ],
+ "scenario": {
+  "bands": [
+   [
+    0,
+    0.025
+   ],
+   [
+    15000,
+    0.045
+   ],
+   [
+    30000,
+    0.06
+   ],
+   [
+    45000,
+    0.07
+   ]
+  ],
+  "target_change": 0.05,
+  "accel_at": 1.2,
+  "accel_rate": 0.03,
+  "target_bonus": 250
+ }
 }

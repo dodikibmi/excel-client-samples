@@ -1,0 +1,11 @@
+ID,Sheet,Risk,Owner,Probability,Impact,Cost if it happens
+R-01,P-2402,Prefab racks slip further (welder availability),Shop lead,4,4,60000
+R-02,P-2402,Owner rejects CO-07 dock door rework,M. Oyelaran,3,4,38500
+R-03,P-2402,Switchgear lead time beyond 14 weeks,Purchasing,3,5,85000
+R-04,P-2402,Rough-in productivity stays at CPI 0.80,M. Oyelaran,4,5,120000
+R-05,P-2403,Copper rises again before the last wire buy,Purchasing,2,3,15000
+R-06,P-2403,Winter break shutdown window missed,P. Nandakumar,2,5,70000
+R-07,P-2403,Asbestos found above the classroom ceilings,P. Nandakumar,2,4,40000
+R-08,P-2401,Final inspection needs a re-test,D. Whitfield,2,2,6000
+R-09,P-2401,Fixture substitution approval delay,D. Whitfield,1,2,4000
+R-10,P-2401,Trim crew availability next month,Field ops,3,2,8000

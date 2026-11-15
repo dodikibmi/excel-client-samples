@@ -4,65 +4,277 @@ const DEMO = {
   {
    "name": "Alder & Finch Bakery",
    "contact": "Maya Alder",
-   "email": "accounts@alderfinch.example.com"
+   "email": "accounts@alderfinch.example.com",
+   "status": "Active"
   },
   {
    "name": "Brightwater Yoga",
    "contact": "Sam Ortega",
-   "email": "sam@brightwater.example.com"
+   "email": "sam@brightwater.example.com",
+   "status": "Active"
   },
   {
    "name": "Cedar Lane Dental",
    "contact": "Dr. Ruth Kim",
-   "email": "billing@cedarlane.example.com"
+   "email": "billing@cedarlane.example.com",
+   "status": "Active"
   },
   {
    "name": "Driftwood Coffee Co.",
    "contact": "Leo Marsh",
-   "email": "leo@driftwood.example.com"
+   "email": "leo@driftwood.example.com",
+   "status": "Active"
   },
   {
    "name": "Elmstead Property Group",
    "contact": "Hannah Price",
-   "email": "ap@elmstead.example.com"
+   "email": "ap@elmstead.example.com",
+   "status": "Active"
   },
   {
    "name": "Fernhill Organics",
    "contact": "Omar Haddad",
-   "email": "omar@fernhill.example.com"
+   "email": "omar@fernhill.example.com",
+   "status": "Active"
   },
   {
    "name": "Glasshouse Events",
    "contact": "Ivy Chen",
-   "email": ""
+   "email": "",
+   "status": "Active"
   },
   {
    "name": "Harbor & Pine Law",
    "contact": "Daniel Brooks",
-   "email": "finance@harborpine.example.com"
+   "email": "finance@harborpine.example.com",
+   "status": "Active"
   },
   {
    "name": "Inkwell Bookshop",
    "contact": "Rosa Delgado",
-   "email": "rosa@inkwell.example.com"
+   "email": "rosa@inkwell.example.com",
+   "status": "Active"
   },
   {
    "name": "Juniper Fitness",
    "contact": "Kofi Mensah",
-   "email": "accounts@juniperfit.example.com"
+   "email": "accounts@juniperfit.example.com",
+   "status": "Active"
   },
   {
    "name": "Kestrel Outdoor Gear",
    "contact": "Nora Lind",
-   "email": "ap@kestrelgear.example.com"
+   "email": "ap@kestrelgear.example.com",
+   "status": "Active"
   },
   {
    "name": "Lumen Architecture",
    "contact": "Victor Ames",
-   "email": "billing@lumenarch.example.com"
+   "email": "billing@lumenarch.example.com",
+   "status": "Active"
   }
  ],
  "invoices": [
+  {
+   "no": "NB-0983",
+   "customer": "Kestrel Outdoor Gear",
+   "issue": -240,
+   "due": -210,
+   "amount": 449.2,
+   "paid": 449.2,
+   "paid_on": -200,
+   "notes": ""
+  },
+  {
+   "no": "NB-1000",
+   "customer": "Lumen Architecture",
+   "issue": -238,
+   "due": -224,
+   "amount": 2320.09,
+   "paid": 2320.09,
+   "paid_on": -148,
+   "notes": ""
+  },
+  {
+   "no": "NB-0998",
+   "customer": "Brightwater Yoga",
+   "issue": -233,
+   "due": -203,
+   "amount": 1926.27,
+   "paid": 1926.27,
+   "paid_on": -204,
+   "notes": ""
+  },
+  {
+   "no": "NB-0988",
+   "customer": "Lumen Architecture",
+   "issue": -229,
+   "due": -199,
+   "amount": 782.9,
+   "paid": 782.9,
+   "paid_on": -142,
+   "notes": ""
+  },
+  {
+   "no": "NB-0991",
+   "customer": "Cedar Lane Dental",
+   "issue": -226,
+   "due": -196,
+   "amount": 3439.42,
+   "paid": 3439.42,
+   "paid_on": -183,
+   "notes": ""
+  },
+  {
+   "no": "NB-0993",
+   "customer": "Alder & Finch Bakery",
+   "issue": -224,
+   "due": -210,
+   "amount": 514.27,
+   "paid": 514.27,
+   "paid_on": -214,
+   "notes": ""
+  },
+  {
+   "no": "NB-0990",
+   "customer": "Juniper Fitness",
+   "issue": -197,
+   "due": -167,
+   "amount": 2439.3,
+   "paid": 2439.3,
+   "paid_on": -169,
+   "notes": ""
+  },
+  {
+   "no": "NB-0987",
+   "customer": "Glasshouse Events",
+   "issue": -192,
+   "due": -178,
+   "amount": 1108.67,
+   "paid": 1108.67,
+   "paid_on": -119,
+   "notes": ""
+  },
+  {
+   "no": "NB-0989",
+   "customer": "Elmstead Property Group",
+   "issue": -191,
+   "due": -161,
+   "amount": 4732.65,
+   "paid": 4732.65,
+   "paid_on": -115,
+   "notes": ""
+  },
+  {
+   "no": "NB-0994",
+   "customer": "Fernhill Organics",
+   "issue": -191,
+   "due": -161,
+   "amount": 2026.39,
+   "paid": 2026.39,
+   "paid_on": -159,
+   "notes": ""
+  },
+  {
+   "no": "NB-0985",
+   "customer": "Inkwell Bookshop",
+   "issue": -188,
+   "due": -158,
+   "amount": 4687.06,
+   "paid": 4687.06,
+   "paid_on": -96,
+   "notes": ""
+  },
+  {
+   "no": "NB-0996",
+   "customer": "Driftwood Coffee Co.",
+   "issue": -186,
+   "due": -172,
+   "amount": 1209.53,
+   "paid": 1209.53,
+   "paid_on": -154,
+   "notes": ""
+  },
+  {
+   "no": "NB-0981",
+   "customer": "Alder & Finch Bakery",
+   "issue": -179,
+   "due": -149,
+   "amount": 433.29,
+   "paid": 433.29,
+   "paid_on": -150,
+   "notes": ""
+  },
+  {
+   "no": "NB-0995",
+   "customer": "Kestrel Outdoor Gear",
+   "issue": -176,
+   "due": -146,
+   "amount": 439.24,
+   "paid": 439.24,
+   "paid_on": -133,
+   "notes": ""
+  },
+  {
+   "no": "NB-0984",
+   "customer": "Driftwood Coffee Co.",
+   "issue": -175,
+   "due": -145,
+   "amount": 1238.56,
+   "paid": 1238.56,
+   "paid_on": -124,
+   "notes": ""
+  },
+  {
+   "no": "NB-0992",
+   "customer": "Harbor & Pine Law",
+   "issue": -172,
+   "due": -142,
+   "amount": 492.08,
+   "paid": 492.08,
+   "paid_on": -110,
+   "notes": ""
+  },
+  {
+   "no": "NB-0999",
+   "customer": "Glasshouse Events",
+   "issue": -167,
+   "due": -137,
+   "amount": 441.9,
+   "paid": 441.9,
+   "paid_on": -90,
+   "notes": ""
+  },
+  {
+   "no": "NB-0986",
+   "customer": "Brightwater Yoga",
+   "issue": -155,
+   "due": -125,
+   "amount": 3049.89,
+   "paid": 3049.89,
+   "paid_on": -125,
+   "notes": ""
+  },
+  {
+   "no": "NB-0982",
+   "customer": "Fernhill Organics",
+   "issue": -152,
+   "due": -122,
+   "amount": 4351.5,
+   "paid": 4351.5,
+   "paid_on": -121,
+   "notes": ""
+  },
+  {
+   "no": "NB-0997",
+   "customer": "Inkwell Bookshop",
+   "issue": -151,
+   "due": -137,
+   "amount": 725.64,
+   "paid": 725.64,
+   "paid_on": -96,
+   "notes": ""
+  },
   {
    "no": "NB-1026",
    "customer": "Brightwater Yoga",
@@ -826,6 +1038,40 @@ const DEMO = {
    "email": "finance@harborpine.example.com"
   }
  ],
+ "replies": [
+  {
+   "day": -20,
+   "no": "NB-1024",
+   "type": "Reply",
+   "promised": null,
+   "note": "Asked for a copy of the invoice (sent the same day)",
+   "customer": "Lumen Architecture"
+  },
+  {
+   "day": -12,
+   "no": "NB-1005",
+   "type": "Promise to pay",
+   "promised": -4,
+   "note": "Promised to pay in full by bank transfer",
+   "customer": "Elmstead Property Group"
+  },
+  {
+   "day": -2,
+   "no": "NB-1008",
+   "type": "Reply",
+   "promised": null,
+   "note": "Checking with their accounts team, will confirm a date",
+   "customer": "Harbor & Pine Law"
+  },
+  {
+   "day": -1,
+   "no": "NB-1009",
+   "type": "Promise to pay",
+   "promised": 5,
+   "note": "Will pay on their next payment run",
+   "customer": "Inkwell Bookshop"
+  }
+ ],
  "stages": [
   {
    "name": "Upcoming",
@@ -844,5 +1090,6 @@ const DEMO = {
    "day": 30
   }
  ],
- "maxPerRun": 25
+ "maxPerRun": 25,
+ "pauseDays": 7
 };

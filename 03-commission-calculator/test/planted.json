@@ -1,18 +1,38 @@
-[
- {
-  "order": "SO-7249",
-  "why": "Discount above 10% max"
- },
- {
-  "order": "SO-7250",
-  "why": "Qty must be 1 or more"
- },
- {
-  "order": "SO-7251",
-  "why": "Unknown product"
- },
- {
-  "order": "SO-7252",
-  "why": "Unknown sales rep"
- }
-]
+{
+ "orders": [
+  {
+   "order": "SO-7642",
+   "why": "Discount above 10% max"
+  },
+  {
+   "order": "SO-7643",
+   "why": "Qty must be 1 or more"
+  },
+  {
+   "order": "SO-7644",
+   "why": "Unknown product"
+  },
+  {
+   "order": "SO-7645",
+   "why": "Split rep same as sales rep"
+  },
+  {
+   "order": "SO-7646",
+   "why": "Unknown sales rep"
+  },
+  {
+   "order": "SO-7647",
+   "why": "Split % must be 1% to 99%"
+  }
+ ],
+ "returns": [
+  {
+   "order": "SO-7400",
+   "why": "Qty above qty sold"
+  },
+  {
+   "order": "SO-5999",
+   "why": "Order line not found"
+  }
+ ]
+}

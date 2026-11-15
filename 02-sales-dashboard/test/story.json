@@ -1,8 +1,9 @@
 {
- "first_month": "2025-11",
+ "first_month": "2025-01",
  "last_month": "2026-10",
- "lines": 9899,
- "invoices": 5546,
+ "budget_last_month": "2026-12",
+ "lines": 19126,
+ "invoices": 10669,
  "miss": {
   "month": "2026-10",
   "region": "West",

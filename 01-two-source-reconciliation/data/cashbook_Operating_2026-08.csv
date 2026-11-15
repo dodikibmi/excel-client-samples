@@ -1,0 +1,135 @@
+Date,Doc No,Party,Reference,Amount,Memo
+2026-08-01,CB-2608-001,Bank,,-25.00,Bank charges Jul
+2026-08-01,CB-2608-002,Bank,,-44.46,Bank charges Jul
+2026-08-01,CB-2608-003,BlueLine Timber,PO-5121,-2484.42,Supplier payment
+2026-08-01,CB-2608-004,Henley Joinery,INV-1255,3923.39,Customer receipt
+2026-08-01,CB-2608-005,Evergreen Garden Supply,PO-5147,-2193.85,Supplier payment
+2026-08-02,CB-2608-006,Bank,,3.30,Bank interest Jul
+2026-08-02,CB-2608-007,Oakridge Property Mgmt,INV-1226,3311.91,Customer receipt
+2026-08-02,CB-2608-008,Henley Joinery,INV-1227,1384.07,Customer receipt
+2026-08-02,CB-2608-009,Oakridge Property Mgmt,INV-1231,4220.91,Customer receipt
+2026-08-02,CB-2608-010,Harbour Rentals,INV-1245,4404.22,Customer receipt
+2026-08-02,CB-2608-011,City Council Rates,PO-5131,-177.64,Supplier payment
+2026-08-02,CB-2608-012,Northgate Schools Trust,INV-1259,3068.37,Customer receipt
+2026-08-02,CB-2608-013,Marsh & Co Plumbing,INV-1267,4152.99,Customer receipt
+2026-08-02,CB-2608-014,Marsh & Co Plumbing,INV-1269,3253.65,Customer receipt
+2026-08-03,CB-2608-015,Summit Electrical,INV-1212,746.70,Customer receipt
+2026-08-03,CB-2608-016,Crown Paints,PO-5119,-749.52,Supplier payment
+2026-08-03,CB-2608-017,Coastal Roofing,INV-1228,923.08,Customer receipt
+2026-08-03,CB-2608-018,BlueLine Timber,PO-5124,-1763.73,Supplier payment
+2026-08-03,CB-2608-019,Summit Electrical,INV-1239,4176.98,Customer receipt
+2026-08-03,CB-2608-020,Delta Tools Wholesale,CHQ-004552,-779.93,Cheque payment
+2026-08-04,CB-2608-021,Granite Kitchens,INV-1216,932.13,Customer receipt
+2026-08-04,CB-2608-022,Atlas Fasteners,CHQ-004547,-2775.77,Cheque payment
+2026-08-04,CB-2608-023,Northgate Schools Trust,INV-1220,743.94,Customer receipt
+2026-08-04,CB-2608-024,Delta Tools Wholesale,PO-5141,-358.26,Supplier payment
+2026-08-04,CB-2608-025,Oakridge Property Mgmt,INV-1261,3445.76,Customer receipt
+2026-08-04,CB-2608-026,Atlas Fasteners,PO-5143,-356.38,Supplier payment
+2026-08-05,CB-2608-027,Delta Tools Wholesale,PO-5110,-996.48,Supplier payment
+2026-08-05,CB-2608-028,Brightwater Builders,INV-1214,2508.06,Customer receipt
+2026-08-05,CB-2608-029,Metro Utilities,PO-5118,-2311.74,Supplier payment
+2026-08-05,CB-2608-030,Oakridge Property Mgmt,INV-1236,3790.25,Customer receipt
+2026-08-05,CB-2608-031,Willow Landscapes,INV-1244,638.49,Customer receipt
+2026-08-05,CB-2608-032,City Council Rates,PO-5133,-3028.91,Supplier payment
+2026-08-05,CB-2608-033,Riverside Homes,INV-1262,2084.56,Customer receipt
+2026-08-06,CB-2608-034,Marsh & Co Plumbing,INV-1224,781.28,Customer receipt
+2026-08-06,CB-2608-035,Oakridge Property Mgmt,INV-1242,1154.16,Customer receipt
+2026-08-06,CB-2608-036,Pine Street Cafe,INV-1252,962.97,Customer receipt
+2026-08-07,CB-2608-037,Granite Kitchens,INV-1223,3098.99,Customer receipt
+2026-08-07,CB-2608-038,Coastal Roofing,INV-1235,4640.23,Customer receipt
+2026-08-07,CB-2608-039,Riverside Homes,INV-1253,2484.45,Customer receipt
+2026-08-08,CB-2608-040,Granite Kitchens,INV-1221,944.26,Customer receipt
+2026-08-08,CB-2608-041,Granite Kitchens,INV-1229,3772.19,Customer receipt
+2026-08-08,CB-2608-042,Henley Joinery,INV-1256,2405.06,Customer receipt
+2026-08-08,CB-2608-043,Crown Paints,PO-5149,-255.42,Supplier payment
+2026-08-08,CB-2608-044,Summit Electrical,INV-1275,821.29,Customer receipt
+2026-08-09,CB-2608-045,Pine Street Cafe,INV-1234,4750.74,Customer receipt
+2026-08-10,CB-2608-046,Granite Kitchens,INV-1265,721.63,Customer receipt
+2026-08-11,CB-2608-047,Crown Paints,CHQ-004550,-2135.82,Cheque payment
+2026-08-11,CB-2608-048,Oakridge Property Mgmt,INV-1238,3594.49,Customer receipt
+2026-08-11,CB-2608-049,Crown Paints,PO-5126,-798.20,Supplier payment
+2026-08-11,CB-2608-050,Fortis Steel,CHQ-004559,-1527.63,Cheque payment
+2026-08-12,CB-2608-051,Coastal Roofing,INV-1217,1690.06,Customer receipt
+2026-08-12,CB-2608-052,Fortis Steel,PO-5123,-2980.32,Supplier payment
+2026-08-12,CB-2608-053,BlueLine Timber,CHQ-004554,-3668.20,Cheque payment
+2026-08-12,CB-2608-054,Coastal Roofing,INV-1249,1224.78,Customer receipt
+2026-08-12,CB-2608-055,Atlas Fasteners,PO-5140,-381.03,Supplier payment
+2026-08-12,CB-2608-056,Evergreen Garden Supply,PO-5142,-2765.44,Supplier payment
+2026-08-13,CB-2608-057,City Council Rates,CHQ-004546,-3220.08,Cheque payment
+2026-08-13,CB-2608-058,City Council Rates,PO-5113,-491.05,Supplier payment
+2026-08-13,CB-2608-059,Coastal Roofing,INV-1213,3186.95,Customer receipt
+2026-08-13,CB-2608-060,Fortis Steel,PO-5122,-3616.07,Supplier payment
+2026-08-13,CB-2608-061,Summit Electrical,INV-1248,1619.07,Customer receipt
+2026-08-13,CB-2608-062,Coastal Roofing,INV-1254,2485.79,Customer receipt
+2026-08-13,CB-2608-063,Atlas Fasteners,PO-5139,-1413.12,Supplier payment
+2026-08-13,CB-2608-064,City Council Rates,PO-5145,-916.72,Supplier payment
+2026-08-13,CB-2608-065,Harbour Rentals,INV-1277,1013.87,Customer receipt
+2026-08-14,CB-2608-066,Oakridge Property Mgmt,INV-1215,1864.63,Customer receipt
+2026-08-14,CB-2608-067,Fortis Steel,PO-5117,-2348.04,Supplier payment
+2026-08-14,CB-2608-068,Marsh & Co Plumbing,INV-1219,3446.72,Customer receipt
+2026-08-14,CB-2608-069,Coastal Roofing,INV-1225,2316.27,Customer receipt
+2026-08-14,CB-2608-070,Crown Paints,PO-5130,-523.51,Supplier payment
+2026-08-14,CB-2608-071,Delta Tools Wholesale,CHQ-004557,-286.85,Cheque payment
+2026-08-15,CB-2608-072,Delta Tools Wholesale,PO-5112,-1214.16,Supplier payment
+2026-08-15,CB-2608-073,Coastal Roofing,INV-1208,368.45,Customer receipt
+2026-08-15,CB-2608-074,Evergreen Garden Supply,CHQ-004553,-815.24,Cheque payment
+2026-08-15,CB-2608-075,BlueLine Timber,PO-5134,-3081.66,Supplier payment
+2026-08-15,CB-2608-076,Delta Tools Wholesale,PO-5135,-481.51,Supplier payment
+2026-08-15,CB-2608-077,Delta Tools Wholesale,CHQ-004558,-2372.31,Cheque payment
+2026-08-15,CB-2608-078,Shield Insurance,,-189.00,Insurance direct debit
+2026-08-16,CB-2608-079,Northgate Schools Trust,INV-1222,1129.01,Customer receipt
+2026-08-17,CB-2608-080,Brightwater Builders,INV-1209,3329.30,Customer receipt
+2026-08-17,CB-2608-081,Atlas Fasteners,CHQ-004549,-627.79,Cheque payment
+2026-08-17,CB-2608-082,Crown Paints,PO-5120,-3119.39,Supplier payment
+2026-08-17,CB-2608-083,Evergreen Garden Supply,PO-5129,-2659.63,Supplier payment
+2026-08-17,CB-2608-084,Riverside Homes,INV-1247,790.38,Customer receipt
+2026-08-18,CB-2608-085,Summit Electrical,INV-1210,3370.96,Customer receipt
+2026-08-18,CB-2608-086,City Council Rates,PO-5114,-899.05,Supplier payment
+2026-08-18,CB-2608-087,Evergreen Garden Supply,PO-5116,-381.73,Supplier payment
+2026-08-18,CB-2608-088,Northgate Schools Trust,INV-1230,136.70,Customer receipt
+2026-08-18,CB-2608-089,Riverside Homes,INV-1237,1439.92,Customer receipt
+2026-08-18,CB-2608-090,City Council Rates,PO-5138,-3059.99,Supplier payment
+2026-08-19,CB-2608-091,Atlas Fasteners,PO-5111,-3139.97,Supplier payment
+2026-08-19,CB-2608-092,Brightwater Builders,INV-1263,4447.22,Customer receipt
+2026-08-20,CB-2608-093,Coastal Roofing,INV-1260,3208.15,Customer receipt
+2026-08-20,CB-2608-094,Harbour Rentals,INV-1273,4713.67,Customer receipt
+2026-08-20,CB-2608-095,Harbour Rentals,INV-1276,1113.16,Customer receipt
+2026-08-21,CB-2608-096,Oakridge Property Mgmt,INV-1218,853.19,Customer receipt
+2026-08-21,CB-2608-097,Brightwater Builders,INV-1246,1015.60,Customer receipt
+2026-08-21,CB-2608-098,Harbour Rentals,INV-1270,4372.76,Customer receipt
+2026-08-22,CB-2608-099,BlueLine Timber,CHQ-004551,-3366.81,Cheque payment
+2026-08-22,CB-2608-100,Evergreen Garden Supply,PO-5125,-2436.40,Supplier payment
+2026-08-22,CB-2608-101,Granite Kitchens,INV-1240,4239.89,Customer receipt
+2026-08-22,CB-2608-102,Oakridge Property Mgmt,INV-1268,3540.86,Customer receipt
+2026-08-23,CB-2608-103,Brightwater Builders,INV-1243,3561.36,Customer receipt
+2026-08-23,CB-2608-104,Brightwater Builders,INV-1251,1837.16,Customer receipt
+2026-08-23,CB-2608-105,Payroll account,TRF-202608,-48089.85,Transfer to payroll
+2026-08-24,CB-2608-106,Summit Electrical,INV-1211,2358.25,Customer receipt
+2026-08-24,CB-2608-107,Fortis Steel,PO-5115,-1210.25,Supplier payment
+2026-08-24,CB-2608-108,Atlas Fasteners,CHQ-004548,-2202.81,Cheque payment
+2026-08-24,CB-2608-109,Brightwater Builders,INV-1233,3971.97,Customer receipt
+2026-08-24,CB-2608-110,Delta Tools Wholesale,PO-5127,-1632.88,Supplier payment
+2026-08-24,CB-2608-111,Willow Landscapes,INV-1250,3157.95,Customer receipt
+2026-08-24,CB-2608-112,Metro Utilities,PO-5137,-2214.61,Supplier payment
+2026-08-24,CB-2608-113,Evergreen Garden Supply,PO-5148,-2921.58,Supplier payment
+2026-08-24,CB-2608-114,Northgate Schools Trust,INV-1274,4038.53,Customer receipt
+2026-08-25,CB-2608-115,City Council Rates,PO-5128,-3552.18,Supplier payment
+2026-08-25,CB-2608-116,Evergreen Garden Supply,PO-5144,-2699.85,Supplier payment
+2026-08-26,CB-2608-117,Henley Joinery,INV-1232,2113.00,Customer receipt
+2026-08-26,CB-2608-118,Marsh & Co Plumbing,INV-1241,1070.54,Customer receipt
+2026-08-26,CB-2608-119,BlueLine Timber,PO-5136,-2067.56,Supplier payment
+2026-08-26,CB-2608-120,Crown Paints,CHQ-004555,-3342.66,Cheque payment
+2026-08-26,CB-2608-121,Evergreen Garden Supply,CHQ-004556,-2718.64,Cheque payment
+2026-08-26,CB-2608-122,Summit Electrical,INV-1257,4029.35,Customer receipt
+2026-08-26,CB-2608-123,Fortis Steel,PO-5146,-1362.14,Supplier payment
+2026-08-26,CB-2608-124,BlueLine Timber,CHQ-004560,-299.66,Cheque payment
+2026-08-26,CB-2608-125,Atlas Fasteners,CHQ-004561,-2981.82,Cheque payment
+2026-08-26,CB-2608-126,Harbour Rentals,INV-1271,2716.77,Customer receipt
+2026-08-26,CB-2608-127,Willow Landscapes,INV-1272,4799.04,Customer receipt
+2026-08-27,CB-2608-128,Atlas Fasteners,PO-5132,-3403.80,Supplier payment
+2026-08-27,CB-2608-129,Pine Street Cafe,INV-1258,4601.77,Customer receipt
+2026-08-27,CB-2608-130,Coastal Roofing,INV-1264,2379.85,Customer receipt
+2026-08-27,CB-2608-131,Marsh & Co Plumbing,INV-1266,3242.71,Customer receipt
+2026-08-30,CB-2608-132,Pine Street Cafe,INV-1278,2937.42,Customer receipt
+2026-08-30,CB-2608-133,Evergreen Garden Supply,CHQ-004563,-1138.58,Cheque payment
+2026-08-31,CB-2608-134,BlueLine Timber,CHQ-004562,-323.41,Cheque payment

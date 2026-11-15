@@ -68,5 +68,63 @@ function runAllTests() {
   t('Summary totals ignore paid and overpaid lines', [sum.outstanding, sum.overdue, sum.overdueCount, sum.aging['1-30'], sum.aging['Not due']],
     [150, 100, 1, 100, 50]);
   t('Summary top customers', sum.top, [{ customer: 'A', owes: 100 }, { customer: 'B', owes: 50 }]);
+
+  // pause rule: replies and promises to pay
+  const R = function (date, no, type, promised) { return { date: date, no: no, type: type, promised: promised || null }; };
+  const pz = pauseState([R(d(2026, 11, 13), 'X4', 'Reply'), R(d(2026, 11, 1), 'X1', 'Reply'),
+    R(d(2026, 11, 10), 'X5', 'Promise to pay', d(2026, 11, 20)), R(d(2026, 11, 2), 'X6', 'Promise to pay', d(2026, 11, 9)),
+    R(d(2026, 11, 7), 'X7', 'Reply')], asOf, 7);
+  t('Pause: a reply yesterday pauses reminders', [pz.X4.paused, pz.X4.reason], [true, 'Customer replied on 13 Nov 2026']);
+  t('Pause: a reply 13 days ago no longer pauses', pz.X1.paused, false);
+  t('Pause: a reply exactly 7 days ago still pauses', pz.X7.paused, true);
+  t('Pause: promise for a future date pauses until then', [pz.X5.paused, pz.X5.broken], [true, false]);
+  t('Pause: a promise whose date passed is broken, not paused', [pz.X6.paused, pz.X6.broken, pz.X6.reason],
+    [false, true, 'Promise to pay by 9 Nov 2026 not kept']);
+  t('Pause: only the latest entry counts', pauseState([R(d(2026, 11, 1), 'Y', 'Promise to pay', d(2026, 11, 5)),
+    R(d(2026, 11, 12), 'Y', 'Reply')], asOf, 7).Y, { paused: true, broken: false, type: 'Reply', promised: null, reason: 'Customer replied on 12 Nov 2026' });
+  const plan2 = planReminders(inv, cust, { X6: ['Friendly'] }, { stages: S, maxPerRun: 2 }, asOf, { X1: { paused: true, reason: 'held' } });
+  t('Pause: a paused invoice is not emailed and does not use the run limit', plan2.map(function (p) { return [p.no, p.action]; }),
+    [['X1', 'pause'], ['X2', 'skip'], ['X4', 'send'], ['X5', 'send'], ['X7', 'skip']]);
+  const cust2 = { A: { email: 'a@example.com', contact: 'Ann', status: 'On hold' } };
+  t('Pause: customer status On hold stops reminders', planReminders([inv[0]], cust2, {}, settings, asOf)[0].reason, 'Customer status: On hold');
+
+  // DSO, collection rate, trends
+  const I = function (no, issue, due, amount, paid, paidOn) { return { no: no, customer: 'A', issue: issue, due: due, amount: amount, paid: paid, paidOn: paidOn || null }; };
+  const book = [I('D1', d(2026, 9, 1), d(2026, 10, 1), 1000, 1000, d(2026, 10, 5)), I('D2', d(2026, 10, 1), d(2026, 10, 31), 2000, 500, d(2026, 11, 2)),
+                I('D3', d(2026, 11, 1), d(2026, 12, 1), 3000, 0), I('D4', d(2026, 5, 1), d(2026, 5, 31), 900, 900, d(2026, 6, 10))];
+  const m = metricsAt(book, asOf, asOf);
+  t('DSO = outstanding / sales of the last 90 days x 90', [m.outstanding, Math.round(m.dso * 100) / 100], [4500, 67.5]);
+  t('Collection rate = paid share of what fell due in the last 90 days', Math.round(m.rate * 10000) / 10000, 0.5);
+  t('Outstanding as it stood on an earlier day', metricsAt(book, d(2026, 10, 31), asOf).outstanding, 2000);
+  t('Overdue as on an earlier day counts only invoices past due then', metricsAt(book, d(2026, 11, 1), asOf).overdue, 2000);
+  const tp = trendPoints(book, asOf);
+  t('Trend: 6 months ending this month, cash collected per month', tp.map(function (p) { return [p.label, p.collected]; }),
+    [['Jun', 900], ['Jul', 0], ['Aug', 0], ['Sep', 0], ['Oct', 1000], ['Nov', 500]]);
+  t('KPI: collected month to date vs the same days last month', [kpiCards(book, asOf).collectedMtd, kpiCards(book, asOf).collectedPrevMtd], [500, 1000]);
+  t('KPI: a payment typed without a date counts today', collectedBetween([I('E', d(2026, 11, 1), d(2026, 11, 2), 50, 50)], d(2026, 11, 14), d(2026, 11, 14), asOf), 50);
+
+  // risk score
+  const rk = riskScores([I('R1', d(2026, 8, 1), d(2026, 8, 31), 1000, 1000, d(2026, 10, 10)),     // paid 40 days late
+                         I('R2', d(2026, 9, 1), d(2026, 10, 1), 5000, 0)], { A: { email: '' } }, asOf); // 44 days overdue
+  t('Risk: habit 40x0.5 + late 44x0.3 + overdue 5000/500 + no email 10', [rk.A.score, rk.A.level], [Math.round(20 + 13.2 + 10 + 10), 'Medium']);
+  const rk2 = riskScores([I('R3', d(2026, 1, 1), d(2026, 1, 31), 99999, 0)], { A: { email: 'a@x' } }, asOf);
+  t('Risk: each part is capped (max 40 + 30 + 20)', [rk2.A.score, rk2.A.level], [50, 'Medium']);
+  t('Risk: a customer who always pays on time scores 0', riskScores([I('R4', d(2026, 10, 1), d(2026, 10, 31), 100, 100, d(2026, 10, 20))],
+    { A: { email: 'a@x' } }, asOf).A, { avgLate: 0, maxDays: 0, overdue: 0, score: 0, level: 'Low' });
+
+  // action queue
+  const qInv = [I('Q1', d(2026, 7, 1), d(2026, 8, 1), 500, 0), I('Q2', d(2026, 10, 1), d(2026, 10, 10), 900, 0),
+                I('Q3', d(2026, 10, 1), d(2026, 11, 10), 300, 0), I('Q4', d(2026, 10, 1), d(2026, 10, 20), 800, 0),
+                I('Q5', d(2026, 10, 1), d(2026, 11, 16), 200, 0)];
+  const qPlan = planReminders(qInv, { A: { email: 'a@x', contact: 'Ann' } }, {}, { stages: S, maxPerRun: 25 }, asOf,
+    { Q4: { paused: false, broken: true, reason: 'not kept' }, Q3: { paused: true, type: 'Reply', reason: 'replied' } });
+  const qq = actionQueue(qInv, { A: { email: 'a@x' } }, qPlan, { Q4: { paused: false, broken: true, reason: 'not kept' },
+    Q3: { paused: true, type: 'Reply', reason: 'replied' } }, asOf);
+  t('Queue: ranked Urgent > High > Medium > Low, bigger balance first', qq.map(function (x) { return [x.no, x.priority, x.action]; }),
+    [['Q4', 'Urgent', 'Call: promise not kept'], ['Q1', 'Urgent', 'Call: over 60 days late'], ['Q2', 'High', 'Send Final reminder'],
+     ['Q3', 'Medium', 'Record a promise to pay'], ['Q5', 'Low', 'Send Upcoming reminder']]);
+  t('Queue: a promise due in 2 days becomes a Low check, later ones need nothing',
+    [actionQueue([qInv[1]], { A: {} }, [], { Q2: { paused: true, type: 'Promise to pay', promised: d(2026, 11, 16) } }, asOf).length,
+     actionQueue([qInv[1]], { A: {} }, [], { Q2: { paused: true, type: 'Promise to pay', promised: d(2026, 11, 17) } }, asOf).length], [1, 0]);
   return out;
 }

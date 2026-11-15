@@ -1,49 +1,59 @@
-"""docs/thumbnail.png (1200x627) for the Upwork portfolio card: claim on the left, real Summary screenshot on the right.
-Also docs/before-raw-csv.png: the checking export as the bank delivers it (the "before" picture)."""
+"""docs/thumbnail.png (1200x627) for the Upwork portfolio card: claim on the left, the real Summary screenshot on the right
+(dark-gold, same palette as the workbook). Also docs/before-raw-csv.png: the checking export as the bank delivers it.
+
+    python scripts/make_thumb.py [checks passed, e.g. 120/120]
+"""
+import sys
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 ROOT = Path(__file__).resolve().parent.parent
 W, H = 1200, 627
-NAVY, TEAL, WHITE, MUTED = (24, 45, 72), (0, 150, 136), (255, 255, 255), (184, 200, 218)
+BG, GOLD, GOLD_LT, IVORY, MUTED = (11, 15, 19), (201, 163, 91), (230, 207, 154), (236, 230, 218), (142, 152, 163)
 F = "C:/Windows/Fonts/"
 font = lambda name, size: ImageFont.truetype(F + name, size)
+checks = sys.argv[1] if len(sys.argv) > 1 else "all"
 
-img = Image.new("RGB", (W, H), NAVY)
+img = Image.new("RGB", (W, H), BG)
 d = ImageDraw.Draw(img)
 
-shot = Image.open(ROOT / "docs" / "trial-balance.png").convert("RGB")
-crop = shot.crop((0, int(shot.height * 0.13), shot.width, shot.height * 0.94))  # the trial balance itself, totals and PASS row
-cw = 680
-crop = crop.resize((cw, int(crop.height * cw / crop.width)), Image.LANCZOS)
-x, y = W - cw - 36, 150
-shadow = Image.new("RGBA", (cw + 40, crop.height + 40), (0, 0, 0, 0))
-ImageDraw.Draw(shadow).rectangle((20, 20, cw + 20, crop.height + 20), fill=(0, 0, 0, 120))
-img.paste(shadow.filter(ImageFilter.GaussianBlur(12)), (x - 14, y - 8), shadow.filter(ImageFilter.GaussianBlur(12)))
+shot = Image.open(ROOT / "docs" / "summary.png").convert("RGB")
+cw = 700
+crop = shot.resize((cw, int(shot.height * cw / shot.width)), Image.LANCZOS)
+if crop.height > H - 168 - 30:
+    crop = crop.crop((0, 0, cw, H - 168 - 30))
+x, y = W - cw - 30, 168
+glow = Image.new("RGBA", (cw + 60, crop.height + 60), (0, 0, 0, 0))
+ImageDraw.Draw(glow).rectangle((30, 30, cw + 30, crop.height + 30), fill=(201, 163, 91, 70))
+glow = glow.filter(ImageFilter.GaussianBlur(14))
+img.paste(glow, (x - 30, y - 30), glow)
 img.paste(crop, (x, y))
+d.rectangle((x - 1, y - 1, x + cw, y + crop.height), outline=GOLD, width=1)
 
-d.rectangle((48, 52, 56, 128), fill=TEAL)
-d.text((72, 46), "Small business bookkeeping", font=font("segoeuib.ttf", 36), fill=WHITE)
-d.text((72, 92), "bank + card exports to a balanced trial balance", font=font("segoeui.ttf", 24), fill=MUTED)
+d.text((60, 40), "C O P P E R L E A F", font=font("segoeuib.ttf", 15), fill=GOLD)
+d.text((58, 62), "Small business bookkeeping in Excel", font=font("georgia.ttf", 38), fill=IVORY)
+d.text((60, 114), "Bank + card exports in: ledger, trial balance, P&L, cash flow, 13-week forecast and month-end close out",
+       font=font("segoeui.ttf", 18), fill=MUTED)
+d.line((60, 150, W - 30, 150), fill=GOLD, width=2)
 
 points = [("186", "bank & card lines, categorised by rules"),
-          ("0.00", "trial balance and bank rec difference"),
-          ("P&L", "monthly vs budget, with variance"),
-          ("65/65", "automated checks pass")]
+          ("0.00", "trial balance + 9 statements, every month"),
+          ("13 wks", "cash forecast, 4.3 weeks of cash"),
+          ("10 steps", "month-end close, ticked by formulas"),
+          (checks, "automated checks pass")]
 yy = 170
 for big, small in points:
-    d.text((72, yy), big, font=font("segoeuib.ttf", 34), fill=(120, 220, 205))
-    d.text((72, yy + 44), small, font=font("segoeui.ttf", 18), fill=WHITE)
-    yy += 92
-d.text((72, H - 52), "No macros  ·  one-click Refresh  ·  Excel + Power Query", font=font("segoeui.ttf", 17), fill=MUTED)
+    d.text((60, yy), big, font=font("georgia.ttf", 30), fill=GOLD_LT)
+    d.text((62, yy + 38), small, font=font("segoeui.ttf", 15), fill=IVORY)
+    yy += 80
+d.text((60, H - 40), "Excel + Power Query  \u00B7  slicers  \u00B7  no macros", font=font("segoeui.ttf", 16), fill=MUTED)
 img.save(ROOT / "docs" / "thumbnail.png")
 print("docs/thumbnail.png")
 
 lines = (ROOT / "data" / "checking-2026-08-10.csv").read_text(encoding="utf-8").splitlines()[:11]
 mono = font("consola.ttf", 20)
 pad, lh = 28, 30
-bw = max(int(d.textlength(l, font=mono)) for l in lines) + 2 * pad
-bw = max(bw, 1080)
+bw = max(max(int(d.textlength(l, font=mono)) for l in lines) + 2 * pad, 1080)
 before = Image.new("RGB", (bw, len(lines) * lh + 2 * pad + 36), (250, 250, 250))
 bd = ImageDraw.Draw(before)
 bd.text((pad, 14), "checking-2026-08-10.csv  (as exported: title lines above the header, $ amounts stored as text, stray spaces)",

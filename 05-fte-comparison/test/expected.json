@@ -787,5 +787,25 @@
    "status": "Only in budget",
    "why": "unknown"
   }
- ]
+ ],
+ "history": {
+  "2026-08": {
+   "hr_fte": 120.6,
+   "budget_fte": 128.4,
+   "hr_lines": 139,
+   "budget_lines": 147
+  },
+  "2026-09": {
+   "hr_fte": 124.6,
+   "budget_fte": 130.4,
+   "hr_lines": 143,
+   "budget_lines": 149
+  },
+  "2026-10": {
+   "hr_fte": 127.6,
+   "budget_fte": 130.4,
+   "hr_lines": 146,
+   "budget_lines": 149
+  }
+ }
 }

@@ -8,7 +8,7 @@ $xl = New-Object -ComObject Excel.Application
 try {
     $xl.Visible = $false; $xl.DisplayAlerts = $false
     $wb = $xl.Workbooks.Open((Join-Path $root 'FTE-Comparison.xlsx'), 0, $true)
-    $areas = @{ 'Summary' = 'A1:M29'; 'Pivot comparison' = 'A1:W18'; 'Discrepancies' = 'A1:N24'; 'Comparison' = 'A1:N22'; 'Cleaning log' = 'A1:D12'; 'Settings' = 'A1:C7' }
+    $areas = @{ 'Dashboard' = 'A1:BU42'; 'Checks' = 'A1:O27'; 'Pivot comparison' = 'A1:X29'; 'Discrepancies' = 'A1:P31'; 'Comparison' = 'A1:P24'; 'Cleaning log' = 'A1:F19'; 'Settings' = 'A1:E12' }
     foreach ($s in $areas.Keys) {
         $ws = $wb.Worksheets.Item($s)
         $ws.PageSetup.Orientation = 2; $ws.PageSetup.Zoom = $false
@@ -29,7 +29,7 @@ for pdf in tmp.glob('*.pdf'):
     for b in page.get_drawings(): bb = b['rect'] if bb is None else bb | b['rect']
     for b in page.get_text('blocks'): bb = fitz.Rect(b[:4]) if bb is None else bb | fitz.Rect(b[:4])
     for img in page.get_image_info(): bb = fitz.Rect(img['bbox']) if bb is None else bb | fitz.Rect(img['bbox'])
-    bb = (bb or r) + (-8, -8, 8, 8)
+    bb = (bb or r)
     page.get_pixmap(dpi=170, clip=bb & r).save(docs / (pdf.stem.lower() + '.png'))
     print('docs/' + pdf.stem.lower() + '.png')
 "@

@@ -1,0 +1,148 @@
+Position,Emp No,Employee,Cost Center,Function,Budgeted FTE
+P-3001,1558,Brandon Gomez,310,Community Health ,1.0
+P-3002,,VACANT,210,Clinical Care ,1
+P-3003,1164,Daniel Young,120,Administration,1.00
+P-3004,1636,Gloria Diaz,210,Clinical Care ,0.5
+P-3005,1096,Zane Turner,220, Clinical Care,1.00
+P-3006,1400,Priya Okafor,210,Clinical Care ,0.80
+P-3007,1466,Ben Walsh,310,Community Health,1.0
+P-3008,1318,Lena Okafor,120,Facilities & IT,1
+P-3009,1527,Wendy Castillo,410,Administration ,1
+P-3010,1380,Grace Reyes,210,Clinical Care,1.00
+P-3011,1172,Jonah Dawson,120,Facilities & IT,1.00
+P-3012,1106,Alicia Iqbal,110, Administration,1
+P-3013,1338,Jonah Hayes,410,Facilities & IT,1.00
+P-3014,1028,Victor Diaz,120,Facilities & IT,0.8
+P-3015,1569,Yara Evans,210,CLINICAL CARE,1
+P-3016,1617,Carmen Turner,110,Administration,0.5
+P-3017,1062,Hiro Quinn,220,Community Health,0.5
+P-3018,,VACANT,110,Administration,1.0
+P-3019,1048,Chloe Usman,220,Community Health,0.6
+P-3020,1590,Xavier Nguyen,120,ADMINISTRATION,1.00
+P-3021,1642,James Dawson,110,ADMINISTRATION,0.80
+P-3022,1689,Esther Silva,120,Administration,0.5
+P-3023,1304,Wendy Vance,410,ADMINISTRATION,1.00
+P-3024,1605,Derek Abbott,110,administration,1
+P-3025,1131,Alicia Foster,220, Clinical Care,0.6
+P-3026,1625,Nadia Usman,410,facilities & it,0.5
+P-3027,1072,Alicia Okafor,120,administration,1.00
+P-3028,1145,Carmen Hayes,310,community health,1.00
+P-3029,1551,Hiro Khan,110,Administration,0.8
+P-3030,1255,Priya Fischer,310,community health,0.8
+P-3031,1258,Carmen Reyes,110,ADMINISTRATION,1.0
+P-3032,1488,Victor Foster,410,Administration ,1.0
+P-3033,1372,Xavier Dawson,410,Facilities & IT,1.0
+P-3034,1056,James Khan,120,Administration ,1.0
+P-3035,1242,Chloe Dawson,120,FACILITIES & IT,1.00
+P-3036,1154,Farid Morgan,410,Administration,1.00
+P-3037,1406,Ivy Dawson,220,clinical care,0.6
+P-3038,1636,Gloria Diaz,220,clinical care,0.5
+P-3039,1384,Lena Carter,310,Community Health,1.0
+P-3040,,VACANT,310,Community Health,1.0
+P-3041,1332,Tara Morgan,410,FACILITIES & IT,1.00
+P-3042,1516,Jonah Carter,410,FACILITIES & IT,1.00
+P-3043,1201,Hector Fischer,210,Clinical Care ,1.00
+P-3044,1208,Hector Ellis,410,Facilities & IT,0.8
+P-3045,1607,Zane Diaz,410,Facilities & IT ,0.50
+P-3046,1493,Uma Patel,220,community health,1.00
+P-3047,1308,Kofi Ellis,310,Community Health,0.80
+P-3048,1433,Zane Jensen,310,COMMUNITY HEALTH,1
+P-3049,1158,Kofi Lopez,110,ADMINISTRATION,1.00
+P-3050,1118,Tara Fischer,120, Administration,1
+P-3051,1460,Grace Quinn,220,clinical care,1
+P-3052,1378,Hector Castillo,120,Administration,0.5
+P-3053,1722,Hiro Morgan,220,Community Health ,1
+P-3054,1143,Omar Ellis,210,Clinical Care,1.0
+P-3055,1487,Daniel Barnes,410,administration,1.00
+P-3056,1540,Alicia Walsh,210,clinical care,1.0
+P-3057,1486,Samuel Vance,410,administration,1
+P-3058,1207,Esther Foster,410,ADMINISTRATION,1.00
+P-3059,,VACANT,410, Facilities & IT,1.0
+P-3060,1245,Nadia Vance,210,Clinical Care,1
+P-3061,1651,Derek Gomez,410,Facilities & IT,1.0
+P-3062,1507,Lena Lopez,110, Administration,0.8
+P-3063,1615,Omar Usman,220,CLINICAL CARE,0.5
+P-3064,1724,Esther Barnes,220,community health,1.00
+P-3065,1409,Daniel Ellis,410,Facilities & IT,1
+P-3066,1359,James Foster,220,clinical care,0.50
+P-3067,1284,Victor Brooks,110,Administration ,1
+P-3068,1276,Chloe Ellis,220, Clinical Care,1
+P-3069,1537,Zane Evans,410,Facilities & IT ,1.00
+P-3070,1696,Gloria Lopez,120,FACILITIES & IT,1
+P-3071,1500,Lena Brooks,110,ADMINISTRATION,1.00
+P-3072,1351,Farid Brooks,310,Community Health ,0.8
+P-3073,1536,Hiro Turner,120, Facilities & IT,1
+P-3074,1674,Hector Quinn,220,Clinical Care,0.8
+P-3075,1108,Chloe Iqbal,410,Facilities & IT ,1.0
+P-3076,1591,Isabel Young,310,Community Health ,1.00
+P-3077,1123,Elena Patel,120, Facilities & IT,1
+P-3078,1334,Yara Usman,220,Community Health,1
+P-3079,1625,Nadia Usman,210,Clinical Care,0.5
+P-3080,1596,Marco Morgan,210,Clinical Care,1.00
+P-3081,1053,Ben Iqbal,120,Facilities & IT,1
+P-3082,1682,Zane Reyes,220, Clinical Care,1.0
+P-3083,1472,Samuel Foster,210, Clinical Care,1
+P-3084,1071,Hiro Vance,410,administration,0.5
+P-3085,1184,Chloe Nguyen,310,COMMUNITY HEALTH,0.5
+P-3086,1098,Ben Quinn,110, Administration,1.00
+P-3087,,VACANT,120,Administration ,1.0
+P-3088,1585,Omar Lopez,120,administration,1
+P-3089,1315,Derek Silva,210,CLINICAL CARE,1.00
+P-3090,1234,Hector Vance,110,Administration ,0.5
+P-3091,1458,Farid Vance,110,ADMINISTRATION,0.60
+P-3092,1112,Rosa Vance,410,facilities & it,1
+P-3093,1448,Carmen Iqbal,210, Clinical Care,0.5
+P-3094,1336,Xavier Okafor,120,administration,1
+P-3095,1499,Hiro Barnes,220, Community Health,1.00
+P-3096,1364,Daniel Khan,220, Clinical Care,1.00
+P-3097,1657,Carmen Quinn,120,Administration,0.5
+P-3098,1297,Ivy Foster,110,ADMINISTRATION,1.0
+P-3099,1052,Hiro Dawson,210,Clinical Care,0.5
+P-3100,,VACANT,210,Clinical Care,1.00
+P-3101,1417,Victor Walsh,120,Administration ,1.0
+P-3102,1518,Lena Evans,210,Clinical Care,1.00
+P-3103,1086,Marco Zimmer,220,Clinical Care,1.0
+P-3104,1081,Quinn Zimmer,220,clinical care,1
+P-3105,1326,Isabel Lopez,410,FACILITIES & IT,1.00
+P-3106,1093,Isabel Nguyen,220,Community Health,1
+P-3107,1194,Xavier Hayes,120, Facilities & IT,1.0
+P-3108,1174,Hector Iqbal,220,Community Health,1.00
+P-3109,1725,Victor Lopez,410,FACILITIES & IT,1.0
+P-3110,1280,Felix Barnes,120,ADMINISTRATION,1.0
+P-3111,1679,Uma Iqbal,410,administration,0.50
+P-3112,1666,Omar Quinn,120,Facilities & IT,1.00
+P-3113,1151,Elena Brooks,410,Administration ,1.00
+P-3114,1654,Priya Silva,410,Administration ,0.6
+P-3115,1426,Yara Okafor,110,ADMINISTRATION,1
+P-3116,,VACANT,410,Facilities & IT,1.0
+P-3117,1267,Derek Quinn,210, Clinical Care,1.00
+P-3118,1607,Zane Diaz,110,Administration ,0.5
+P-3119,1630,Nadia Castillo,410,FACILITIES & IT,0.5
+P-3120,1562,Elena Reyes,310,COMMUNITY HEALTH,0.8
+P-3121,1289,Wendy Young,220,Clinical Care ,0.8
+P-3122,1102,Ivy Usman,310, Community Health,0.8
+P-3123,1217,Daniel Hayes,120,Facilities & IT,1.0
+P-3124,1137,Chloe Silva,210,Clinical Care,1.0
+P-3125,1195,Grace Foster,220,Community Health,1
+P-3126,1231,Victor Vance,220,community health,1
+P-3127,1480,Ivy Walsh,410,ADMINISTRATION,1.0
+P-3128,1660,Felix Silva,410,FACILITIES & IT,0.8
+P-3129,1385,Tara Jensen,410,administration,0.8
+P-3130,1630,Nadia Castillo,220, Community Health,0.5
+P-3131,1180,Felix Gomez,310,COMMUNITY HEALTH,1.0
+P-3132,1224,Isabel Jensen,410,Facilities & IT,0.8
+P-3133,1452,Hiro Nguyen,310,Community Health,1.0
+P-3134,1287,Rosa Carter,310,Community Health,1.0
+P-3135,1346,Farid Reyes,120, Facilities & IT,1
+P-3136,1253,Wendy Silva,210, Clinical Care,0.6
+P-3137,1088,Jonah Gomez,310,Community Health ,0.5
+P-3138,1186,Samuel Castillo,210,Clinical Care,0.80
+P-3139,1615,Omar Usman,310,community health,0.5
+P-3140,1576,Derek Walsh,120,facilities & it,0.80
+P-3141,1391,Aaliyah Usman,310,COMMUNITY HEALTH,1
+P-3142,1225,Felix Castillo,120,FACILITIES & IT,0.6
+P-3143,1543,Marco Usman,310,community health,0.80
+P-3144,1617,Carmen Turner,220,clinical care,0.50
+P-3145,1439,Zane Vance,210,CLINICAL CARE,1.0
+P-3146,1693,Farid Silva,220, Community Health,1.00
+P-3147,,VACANT,310,COMMUNITY HEALTH,1.0

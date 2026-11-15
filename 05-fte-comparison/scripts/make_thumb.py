@@ -1,43 +1,51 @@
-"""docs/thumbnail.png (1200x627) for the Upwork portfolio card: claim on the left, real PivotTable screenshot on the right."""
+"""docs/thumbnail.png (1200x627) for the Upwork portfolio card: claim on the left, the real Dashboard screenshot on the
+right, dark-gold like the workbook. Also docs/before-raw-csv.png: the HR export as delivered (the "before" picture).
+
+    python scripts/make_thumb.py 80/80        (the check count printed by test/verify.py)
+"""
+import sys
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 ROOT = Path(__file__).resolve().parent.parent
+CHECKS = sys.argv[1] if len(sys.argv) > 1 else "?/?"
 W, H = 1200, 627
-NAVY, TEAL, WHITE, MUTED = (24, 45, 72), (0, 150, 136), (255, 255, 255), (184, 200, 218)
+BG, GOLD, GOLD_LT, IVORY, MUTED = (11, 15, 19), (201, 163, 91), (230, 207, 154), (236, 230, 218), (142, 152, 163)
 F = "C:/Windows/Fonts/"
 font = lambda name, size: ImageFont.truetype(F + name, size)
 
-img = Image.new("RGB", (W, H), NAVY)
+img = Image.new("RGB", (W, H), BG)
 d = ImageDraw.Draw(img)
 
-# Screenshot card on the right, slightly overflowing the bottom edge
-shot = Image.open(ROOT / "docs" / "pivot-comparison.png").convert("RGB")
-crop = shot.crop((int(shot.width * 0.672), int(shot.height * 0.26), shot.width, int(shot.height * 0.89)))  # the "budget minus HR" PivotTable
-cw = 660
-crop = crop.resize((cw, int(crop.height * cw / crop.width)), Image.LANCZOS)
-x, y = W - cw - 40, 170
-shadow = Image.new("RGBA", (cw + 40, crop.height + 40), (0, 0, 0, 0))
-ImageDraw.Draw(shadow).rectangle((20, 20, cw + 20, crop.height + 20), fill=(0, 0, 0, 120))
-img.paste(shadow.filter(ImageFilter.GaussianBlur(12)), (x - 14, y - 8), shadow.filter(ImageFilter.GaussianBlur(12)))
+shot = Image.open(ROOT / "docs" / "dashboard.png").convert("RGB")
+cw = 700
+crop = shot.resize((cw, int(shot.height * cw / shot.width)), Image.LANCZOS)
+x, y = W - cw - 30, 172
+glow = Image.new("RGBA", (cw + 60, crop.height + 60), (0, 0, 0, 0))
+ImageDraw.Draw(glow).rectangle((30, 30, cw + 30, crop.height + 30), fill=(201, 163, 91, 70))
+glow = glow.filter(ImageFilter.GaussianBlur(14))
+img.paste(glow, (x - 30, y - 30), glow)
 img.paste(crop, (x, y))
+d.rectangle((x - 1, y - 1, x + cw, y + crop.height), outline=GOLD, width=1)
 
-# Left column
-d.rectangle((48, 52, 56, 128), fill=TEAL)
-d.text((72, 46), "FTE comparison", font=font("segoeuib.ttf", 38), fill=WHITE)
-d.text((72, 92), "two sources, pivots + discrepancies", font=font("segoeui.ttf", 28), fill=MUTED)
+d.text((60, 40), "R I V E R S I D E   C O M M U N I T Y   H E A L T H", font=font("segoeuib.ttf", 14), fill=GOLD)
+d.text((58, 62), "FTE dashboard in Excel", font=font("georgia.ttf", 40), fill=IVORY)
+d.text((60, 116), "HR roster vs Finance budget, reconciled person by person: pivots, slicers, a bridge and every gap explained",
+       font=font("segoeui.ttf", 18), fill=MUTED)
+d.line((60, 150, W - 30, 150), fill=GOLD, width=2)
 
-points = [("3 pivots", "HR, budget, and budget minus HR"),
-          ("23", "discrepancies, each with a next step"),
-          ("+2.80", "net FTE gap, explained line by line"),
-          ("51/51", "automated checks pass")]
-yy = 180
+points = [("+2.80 FTE", "budget vs HR gap, bridged by type"),
+          ("23 lines", "each with both sides + what to do"),
+          ("4 slicers", "drive 3 PivotTables + the dashboard"),
+          ("3 months", "trend: gap +7.80 → +2.80"),
+          (CHECKS, "automated checks pass")]
+yy = 172
 for big, small in points:
-    d.text((72, yy), big, font=font("segoeuib.ttf", 34), fill=(120, 220, 205))
-    d.text((72, yy + 44), small, font=font("segoeui.ttf", 19), fill=WHITE)
-    yy += 92
-
-d.text((72, H - 52), "No macros  ·  one-click Refresh  ·  fund center x functional area", font=font("segoeui.ttf", 17), fill=MUTED)
+    d.text((60, yy), big, font=font("georgia.ttf", 30), fill=GOLD_LT)
+    d.text((62, yy + 38), small, font=font("segoeui.ttf", 15), fill=IVORY)
+    yy += 80
+d.text((60, H - 40), "Power Query  ·  PivotTables + slicers  ·  no macros",
+       font=font("segoeui.ttf", 16), fill=MUTED)
 img.save(ROOT / "docs" / "thumbnail.png")
 print("docs/thumbnail.png")
 
@@ -46,6 +54,7 @@ lines = (ROOT / "data" / "hr-roster-2026-10.csv").read_text(encoding="utf-8").sp
 mono = font("consola.ttf", 20)
 pad, lh = 28, 30
 bw = max(int(d.textlength(l, font=mono)) for l in lines) + 2 * pad
+bw = max(bw, 1060)
 before = Image.new("RGB", (bw, len(lines) * lh + 2 * pad + 36), (250, 250, 250))
 bd = ImageDraw.Draw(before)
 bd.text((pad, 14), "hr-roster-2026-10.csv  (as exported: FTE as %, fund centers typed 4 ways, terminated still listed)",
