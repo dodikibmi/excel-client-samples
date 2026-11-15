@@ -1,0 +1,73 @@
+/// Every expected receipt and payment in the next 13 weeks (money in +, out -).
+table Forecast
+	lineageTag: 427f77b3-c777-5485-9768-7f6c9907af46
+
+	column Order
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: 1b29f7e5-e872-59da-9ca2-e24004df23f7
+		summarizeBy: none
+		sourceColumn: Order
+
+		annotation SummarizationSetBy = Automatic
+
+	column Item
+		dataType: string
+		sortByColumn: Order
+		lineageTag: fd15d2d9-8405-551f-acaf-ce2dd7e3ddd1
+		summarizeBy: none
+		sourceColumn: Item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cash Flow Line'
+		dataType: string
+		lineageTag: 9130fc69-803e-5e45-abff-e44bb5d1d558
+		summarizeBy: none
+		sourceColumn: Cash Flow Line
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: d mmm yyyy
+		lineageTag: 20a34375-1ea9-58ee-977d-68f8f0cf09a5
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Amount
+		dataType: decimal
+		formatString: #,0;(#,0);0
+		lineageTag: 0a25ede0-3505-5b84-a376-ab7d39cf8d0a
+		summarizeBy: sum
+		sourceColumn: Amount
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Week No'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6e1483ee-2a13-5b1c-a4d1-ac032bd3982c
+		summarizeBy: none
+		sourceColumn: Week No
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Forecast = m
+		mode: import
+		source =
+				let
+				    // one row per expected receipt or payment in the next 13 weeks
+				    Start = Date.AddDays(List.Max(BankLines[Post Date]), 1),
+				    Rows = Table.SelectColumns(CashPlanCalc, {"Order", "Item", "Cash Flow Line", "Per Time", "Dates"}),
+				    Expanded = Table.ExpandListColumn(Rows, "Dates"),
+				    Renamed = Table.RenameColumns(Expanded, {{"Dates", "Date"}, {"Per Time", "Amount"}}),
+				    Week = Table.AddColumn(Renamed, "Week No", each Number.IntegerDivide(Duration.Days([Date] - Start), 7) + 1, Int64.Type),
+				    Typed = Table.TransformColumnTypes(Week, {{"Date", type date}, {"Amount", Currency.Type}})
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

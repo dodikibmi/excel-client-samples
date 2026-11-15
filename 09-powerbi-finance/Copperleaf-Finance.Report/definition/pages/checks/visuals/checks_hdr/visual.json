@@ -6,7 +6,7 @@
     "y": 0,
     "z": 0,
     "width": 1280,
-    "height": 72,
+    "height": 60,
     "tabOrder": 0
   },
   "visual": {
@@ -19,11 +19,27 @@
               {
                 "textRuns": [
                   {
-                    "value": "Checks: can these numbers be trusted?",
+                    "value": "C O P P E R L E A F",
                     "textStyle": {
                       "fontFamily": "Segoe UI Semibold",
-                      "fontSize": "20pt",
-                      "color": "#FFFFFF"
+                      "fontSize": "8pt",
+                      "color": "#C9A35B"
+                    }
+                  },
+                  {
+                    "value": "     ",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "8pt",
+                      "color": "#8E98A3"
+                    }
+                  },
+                  {
+                    "value": "Can the numbers be trusted?",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "18pt",
+                      "color": "#ECE6DA"
                     }
                   }
                 ]
@@ -31,11 +47,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "Recalculated on every refresh, independent of the slicers  ·  the same checks as the Excel version, plus a second read of every export file",
+                    "value": "Recalculated on every refresh, independent of the slicers  ·  a second read of every export file",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "11pt",
-                      "color": "#B8C8DA"
+                      "fontSize": "8pt",
+                      "color": "#8E98A3"
                     }
                   }
                 ]
@@ -61,7 +77,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#18324D'"
+                      "Value": "'#0B0F13'"
                     }
                   }
                 }
@@ -92,7 +108,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#DCE1E7'"
+                      "Value": "'#2A333D'"
                     }
                   }
                 }
@@ -101,7 +117,14 @@
             "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "0D"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
                 }
               }
             }
@@ -140,7 +163,7 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "4D"
                 }
               }
             },
@@ -148,6 +171,20 @@
               "expr": {
                 "Literal": {
                   "Value": "22D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }

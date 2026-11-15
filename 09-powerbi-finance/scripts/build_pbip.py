@@ -122,7 +122,7 @@ in
 RULES = f'''
 let
     // keyword -> account, first match wins (rules.csv is in priority order)
-    Source = {csv_src("rules.csv", 4)},
+    Source = {csv_src("rules.csv", 5)},
     Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
     Typed = Table.TransformColumnTypes(Promoted, {{{{"Priority", Int64.Type}}, {{"Account No", Int64.Type}}}}, "en-US"),
     Sorted = Table.Sort(Typed, {{{{"Priority", Order.Ascending}}}}),
@@ -135,13 +135,14 @@ BANKLINES = r'''
 let
     // the three registers as one list; every line gets an account from the first rule whose keyword it contains
     Lines = Table.Combine({Checking_Clean, Savings_Clean, Card_Clean}),
-    RuleList = Table.ToRecords(Table.SelectColumns(Rules, {"Clean Keyword", "Account No"})),
+    RuleList = Table.ToRecords(Table.SelectColumns(Rules, {"Clean Keyword", "Account No", "Payee"})),
     WithClean = Table.AddColumn(Lines, "Clean Description", each Norm([Description]), type text),
     WithRule = Table.AddColumn(WithClean, "Rule", (r) => List.First(List.Select(RuleList, (k) => Text.Contains(r[Clean Description], k[Clean Keyword])), null)),
     WithAccount = Table.AddColumn(WithRule, "Offset Account No", each if [Rule] = null then 6990 else [Rule][Account No], Int64.Type),
-    WithKeyword = Table.AddColumn(WithAccount, "Rule Keyword", each if [Rule] = null then "(no rule: to review)" else [Rule][Clean Keyword], type text)
+    WithKeyword = Table.AddColumn(WithAccount, "Rule Keyword", each if [Rule] = null then "(no rule: to review)" else [Rule][Clean Keyword], type text),
+    WithPayee = Table.AddColumn(WithKeyword, "Payee", each if [Rule] = null then [Description] else [Rule][Payee], type text)
 in
-    Table.RemoveColumns(WithKeyword, {"Rule"})
+    Table.RemoveColumns(WithPayee, {"Rule"})
 '''
 
 ACCOUNTS_RAW = f'''
@@ -170,16 +171,16 @@ let
     Posted = List.Combine(List.Transform(Bank, (r) => {
         [#"Line ID" = r[Line ID] & "-R", Side = "Register", Date = r[Post Date], #"Txn Date" = r[Txn Date], Source = r[Source],
          #"Register No" = r[Register No], Description = r[Description], #"Clean Description" = r[Clean Description],
-         #"Rule Keyword" = r[Rule Keyword], #"Account No" = r[Register No], #"Offset Account No" = r[Offset Account No], Amount = r[Amount]],
+         #"Rule Keyword" = r[Rule Keyword], Payee = r[Payee], #"Account No" = r[Register No], #"Offset Account No" = r[Offset Account No], Amount = r[Amount]],
         [#"Line ID" = r[Line ID] & "-A", Side = "Account", Date = r[Post Date], #"Txn Date" = r[Txn Date], Source = r[Source],
          #"Register No" = r[Register No], Description = r[Description], #"Clean Description" = r[Clean Description],
-         #"Rule Keyword" = r[Rule Keyword], #"Account No" = r[Offset Account No], #"Offset Account No" = r[Register No], Amount = -r[Amount]]
+         #"Rule Keyword" = r[Rule Keyword], Payee = r[Payee], #"Account No" = r[Offset Account No], #"Offset Account No" = r[Register No], Amount = -r[Amount]]
     })),
     Journal = List.Transform(List.Positions(Table.ToRecords(Adjustments)), (i) =>
         let a = Table.ToRecords(Adjustments){i} in
         [#"Line ID" = a[Entry] & "-" & Text.From(i + 1), Side = "Journal", Date = a[Date], #"Txn Date" = a[Date], Source = "Journal",
          #"Register No" = null, Description = a[Description], #"Clean Description" = Norm(a[Description]),
-         #"Rule Keyword" = null, #"Account No" = a[Account No], #"Offset Account No" = null, Amount = a[Debit] - a[Credit]]),
+         #"Rule Keyword" = null, Payee = "Journal entry", #"Account No" = a[Account No], #"Offset Account No" = null, Amount = a[Debit] - a[Credit]]),
     All = Table.FromRecords(Posted & Journal),
     Rounded = Table.TransformColumns(All, {{"Amount", each Number.Round(_, 2), type number}}),
     WithDebit = Table.AddColumn(Rounded, "Debit", each if [Amount] > 0 then [Amount] else 0, Currency.Type),
@@ -196,7 +197,7 @@ let
         List.PositionOf({"Receipts from customers", "Payments to suppliers and staff", "Owner's draws", "Card payments", "Transfers between own accounts"}, [Cash Flow Line]) + 1, Int64.Type),
     Typed = Table.TransformColumnTypes(WithOrder, {
         {"Line ID", type text}, {"Side", type text}, {"Date", type date}, {"Txn Date", type date}, {"Source", type text},
-        {"Register No", Int64.Type}, {"Description", type text}, {"Clean Description", type text}, {"Rule Keyword", type text},
+        {"Register No", Int64.Type}, {"Description", type text}, {"Clean Description", type text}, {"Rule Keyword", type text}, {"Payee", type text},
         {"Account No", Int64.Type}, {"Offset Account No", Int64.Type}, {"Amount", Currency.Type}})
 in
     Typed
@@ -208,7 +209,14 @@ let
     Label = Table.AddColumn(Source, "Account Label", each Text.From([Account No]) & " " & [Account], type text),
     Cash = Table.AddColumn(Label, "Is Cash Account", each [Is Cash] = "Y", type logical),
     Key = Table.AddColumn(Cash, "Category Key", each [Type], type text),
-    Out = Table.RenameColumns(Table.RemoveColumns(Key, {"Is Cash"}), {{"Is Cash Account", "Is Cash"}})
+    // the slices of the cost mix chart
+    Group = Table.AddColumn(Key, "Cost Group", each
+        if [Type] = "COGS" then "Ingredients and packaging"
+        else if [Account No] = 6000 then "Payroll"
+        else if [Account No] = 6100 then "Rent"
+        else if [Account No] = 6200 then "Utilities"
+        else if [Type] = "Expense" then "Other overheads" else null, type text),
+    Out = Table.RenameColumns(Table.RemoveColumns(Group, {"Is Cash"}), {{"Is Cash Account", "Is Cash"}})
 in
     Out
 '''
@@ -276,9 +284,10 @@ let
     MStart = Table.AddColumn(Month, "Month Start", each Date.StartOfMonth([Date]), type date),
     MEnd = Table.AddColumn(MStart, "Month End", each Date.EndOfMonth([Date]), type date),
     Day = Table.AddColumn(MEnd, "Day", each Date.Day([Date]), Int64.Type),
-    Weekday = Table.AddColumn(Day, "Weekday", each Date.ToText([Date], [Format = "ddd", Culture = "en-US"]), type text)
+    Weekday = Table.AddColumn(Day, "Weekday", each Date.ToText([Date], [Format = "ddd", Culture = "en-US"]), type text),
+    WeekdayNo = Table.AddColumn(Weekday, "Weekday No", each Date.DayOfWeek([Date], Day.Monday) + 1, Int64.Type)
 in
-    Weekday
+    WeekdayNo
 '''
 
 SOURCE_FILES = f'''
@@ -320,6 +329,103 @@ in
     Source
 '''
 
+INSIGHTS = r'''
+let
+    Source = #table(
+        type table [No = Int64.Type, Topic = text],
+        {{1, "Profit"}, {2, "Income and costs"}, {3, "Biggest overrun"}, {4, "Biggest saving"}, {5, "Cash"}, {6, "Next 13 weeks"}})
+in
+    Source
+'''
+
+CASHPLAN = r"""
+let
+    // the owner's plan for the next 13 weeks: one row per regular receipt or payment (cash-plan.csv);
+    // the amount comes from the history unless the plan types it (fixed)
+    Source = SRC_PLAN,
+    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+    Typed = Table.TransformColumnTypes(Promoted, {{"Order", Int64.Type}, {"Register No", Int64.Type}, {"Lookback", Int64.Type},
+        {"First Date", type date}, {"Amount", type number}}, "en-US"),
+    LastDate = List.Max(BankLines[Post Date]),
+    Start = Date.AddDays(LastDate, 1),
+    End = Date.AddDays(Start, 13 * 7 - 1),
+    Hist = Table.SelectColumns(BankLines, {"Register No", "Offset Account No", "Post Date", "Amount"}),
+    Lines = (r) => let accts = List.Transform(Text.Split(r[Accounts], ";"), Number.From) in
+        Table.SelectRows(Hist, each [Register No] = r[Register No] and List.Contains(accts, [Offset Account No])),
+    PerTime = (r) =>
+        if r[Basis] = "fixed" then r[Amount]
+        else if r[Basis] = "avg_week" then
+            List.Sum(Table.SelectRows(Lines(r), each [Post Date] > Date.AddDays(LastDate, -7 * r[Lookback]))[Amount]) / r[Lookback]
+        else if r[Basis] = "avg_month" then
+            List.Sum(Table.SelectRows(Lines(r), each [Post Date] > Date.EndOfMonth(Date.AddMonths(LastDate, -r[Lookback])))[Amount]) / r[Lookback]
+        else
+            // avg_event: the last N dates with a posting (pay runs), averaged
+            let g = Table.Group(Lines(r), {"Post Date"}, {{"S", each List.Sum([Amount]), type number}}),
+                top = Table.FirstN(Table.Sort(g, {{"Post Date", Order.Descending}}), r[Lookback])
+            in List.Average(top[S]),
+    Dates = (r) =>
+        if r[Frequency] = "weekly" then List.Dates(Start, 13, #duration(7, 0, 0, 0))
+        else if r[Frequency] = "biweekly" then List.Select(List.Dates(r[First Date], 8, #duration(14, 0, 0, 0)), each _ >= Start and _ <= End)
+        else List.Select(List.Transform({0..3}, (k) => Date.AddMonths(r[First Date], k)), each _ >= Start and _ <= End),
+    WithPer = Table.AddColumn(Typed, "Per Time", each Number.Round(PerTime(_), 2), type number),
+    WithDates = Table.AddColumn(WithPer, "Dates", each Dates(_)),
+    WithBasis = Table.AddColumn(WithDates, "How It Is Estimated", each
+        if [Basis] = "fixed" then "Fixed amount"
+        else if [Basis] = "avg_week" then "Average week, last " & Text.From([Lookback]) & " weeks"
+        else if [Basis] = "avg_month" then "Average month, last " & Text.From([Lookback]) & " months"
+        else "Average of the last " & Text.From([Lookback]) & " runs", type text),
+    WithWhen = Table.AddColumn(WithBasis, "When", each
+        if [Frequency] = "weekly" then "Every week"
+        else if [Frequency] = "biweekly" then "Every 2nd week from " & Date.ToText([First Date], [Format = "d MMM", Culture = "en-US"])
+        else "Monthly on day " & Text.From(Date.Day([First Date])), type text)
+in
+    WithWhen
+""".replace("SRC_PLAN", csv_src("cash-plan.csv", 11))
+
+CASH_PLAN_TABLE = r"""
+let
+    Source = CashPlanCalc,
+    Times = Table.AddColumn(Source, "Times", each List.Count([Dates]), Int64.Type),
+    Total = Table.AddColumn(Times, "Total 13 Weeks", each [Per Time] * [Times], Currency.Type),
+    Out = Table.SelectColumns(Total, {"Order", "Item", "Cash Flow Line", "How It Is Estimated", "When", "Per Time", "Times", "Total 13 Weeks", "Note"}),
+    Typed = Table.TransformColumnTypes(Out, {{"Per Time", Currency.Type}})
+in
+    Typed
+"""
+
+FORECAST = r"""
+let
+    // one row per expected receipt or payment in the next 13 weeks
+    Start = Date.AddDays(List.Max(BankLines[Post Date]), 1),
+    Rows = Table.SelectColumns(CashPlanCalc, {"Order", "Item", "Cash Flow Line", "Per Time", "Dates"}),
+    Expanded = Table.ExpandListColumn(Rows, "Dates"),
+    Renamed = Table.RenameColumns(Expanded, {{"Dates", "Date"}, {"Per Time", "Amount"}}),
+    Week = Table.AddColumn(Renamed, "Week No", each Number.IntegerDivide(Duration.Days([Date] - Start), 7) + 1, Int64.Type),
+    Typed = Table.TransformColumnTypes(Week, {{"Date", type date}, {"Amount", Currency.Type}})
+in
+    Typed
+"""
+
+FORECAST_WEEK = r"""
+let
+    Start = Date.AddDays(List.Max(BankLines[Post Date]), 1),
+    Starts = List.Dates(Start, 13, #duration(7, 0, 0, 0)),
+    T = Table.FromRecords(List.Transform(List.Positions(Starts), (i) => [
+        #"Week No" = i + 1, #"Week Start" = Starts{i}, #"Week End" = Date.AddDays(Starts{i}, 6),
+        Week = "W" & Text.From(i + 1) & " · " & Date.ToText(Date.AddDays(Starts{i}, 6), [Format = "d MMM", Culture = "en-US"])])),
+    Typed = Table.TransformColumnTypes(T, {{"Week No", Int64.Type}, {"Week Start", type date}, {"Week End", type date}, {"Week", type text}})
+in
+    Typed
+"""
+
+CASH_BUFFER = r"""
+let
+    // what-if: the minimum cash the owner wants to keep (picked in a slicer, 10,000 when nothing is picked)
+    Source = Table.FromList(List.Numbers(0, 13, 2500), Splitter.SplitByNothing(), type table [#"Cash Buffer" = Int64.Type])
+in
+    Source
+"""
+
 MEASURES_SRC = r'''
 let
     Source = #table(type table [#"Measure Group" = text], {})
@@ -335,7 +441,7 @@ MEASURES = [  # name, folder, format, expression, hidden
     ("Total Expense", "1 Profit and loss", "#,0", 'CALCULATE ( SUM ( Ledger[Amount] ), KEEPFILTERS ( Category[Group] = "Expense" ) )', False),
     ("Gross Profit", "1 Profit and loss", "#,0;(#,0);0", "[Total Income] - [Cost of Sales]", False),
     ("Net Profit", "1 Profit and loss", "#,0;(#,0);0", "[Total Income] - [Total Expense]", False),
-    ("Net Profit Color", "1 Profit and loss", None, 'IF ( [Net Profit] < 0, "#C0392B", "#00968A" )', True),
+    ("Net Profit Color", "1 Profit and loss", None, 'IF ( [Net Profit] < 0, "#E5735F", "#5BBF8A" )', True),
     ("Net Margin %", "1 Profit and loss", "0.0%;-0.0%;0.0%", "DIVIDE ( [Net Profit], [Total Income] )", False),
     ("Actual", "2 Budget", "#,0;(#,0);0",
      '-- P&L sign: income +, costs -. The total of the P&L is the net profit\nCALCULATE ( -SUM ( Ledger[Amount] ), KEEPFILTERS ( Category[Statement] = "P&L" ) )', False),
@@ -343,7 +449,7 @@ MEASURES = [  # name, folder, format, expression, hidden
     ("Variance", "2 Budget", "+#,0;-#,0;0", "-- + = better than budget (more income or less cost)\n[Actual] - [Budget]", False),
     ("Variance %", "2 Budget", "+0.0%;-0.0%;0.0%", "DIVIDE ( [Variance], ABS ( [Budget] ) )", False),
     ("Variance Color", "2 Budget", None,
-     'SWITCH ( TRUE (), [Variance] < -0.5, "#C0392B", [Variance] > 0.5, "#1E8449", "#5F6B7A" )', True),
+     'SWITCH ( TRUE (), [Variance] < -0.5, "#E5735F", [Variance] > 0.5, "#5BBF8A", "#8E98A3" )', True),
     ("Income Previous Month", "3 Time intelligence", "#,0",
      "CALCULATE ( [Total Income], PREVIOUSMONTH ( LASTDATE ( 'Date'[Date] ) ) )", False),
     ("Income Last Month", "3 Time intelligence", "#,0",
@@ -427,12 +533,122 @@ MEASURES = [  # name, folder, format, expression, hidden
      "    8, FORMAT ( [Chk Orphans], \"0\" ) & \" lines without an account\",\n"
      "    9, FORMAT ( [Chk Review Lines], \"0\" ) & \" lines, \" & FORMAT ( CALCULATE ( [Review Amount], REMOVEFILTERS () ), \"#,0.00\" ) & \" on 6990 Uncategorized\"\n)", False),
     ("Check Color", "5 Checks", None,
-     'SWITCH ( [Check Status], "PASS", "#1E8449", "FAIL", "#C0392B", "REVIEW", "#B9770E" )', True),
+     'SWITCH ( [Check Status], "PASS", "#5BBF8A", "FAIL", "#E5735F", "REVIEW", "#D9A441" )', True),
     ("Checks Passed", "5 Checks", None,
      'VAR t = ADDCOLUMNS ( ALL ( Checks[No] ), "@s", [Check Status] )\n'
      'RETURN FORMAT ( COUNTROWS ( FILTER ( t, [@s] = "PASS" ) ), "0" ) & " of " & FORMAT ( COUNTROWS ( FILTER ( t, [@s] <> "REVIEW" ) ), "0" ) & " PASS"', False),
     ("Checks Failed", "5 Checks", "0",
      'VAR t = ADDCOLUMNS ( ALL ( Checks[No] ), "@s", [Check Status] )\nRETURN COUNTROWS ( FILTER ( t, [@s] = "FAIL" ) ) + 0', False),
+    # ---- the small line under each KPI and the Key insights panel
+    ("Income Budget", "6 Report text", "#,0", 'CALCULATE ( [Budget], KEEPFILTERS ( Category[Group] = "Income" ) )', False),
+    ("Expense Budget", "6 Report text", "#,0", '-CALCULATE ( [Budget], KEEPFILTERS ( Category[Group] = "Expense" ) )', False),
+    ("Income vs Budget %", "6 Report text", "+0.0%;-0.0%;0.0%", "DIVIDE ( [Total Income] - [Income Budget], [Income Budget] )", False),
+    ("Expense vs Budget %", "6 Report text", "+0.0%;-0.0%;0.0%", "DIVIDE ( [Total Expense] - [Expense Budget], [Expense Budget] )", False),
+    ("Budget Margin %", "6 Report text", "0.0%", "DIVIDE ( [Budget], [Income Budget] )", False),
+    ("Cash Start", "6 Report text", "#,0",
+     "-- cash (checking + savings) the day before the first date in the selection\n"
+     "VAR d0 = MIN ( 'Date'[Date] )\nRETURN\n    CALCULATE (\n        SUM ( Account[Opening Balance] )\n"
+     "            + CALCULATE ( SUM ( Ledger[Amount] ), 'Date'[Date] < d0 ),\n"
+     "        KEEPFILTERS ( Account[Is Cash] = TRUE () ),\n        REMOVEFILTERS ( 'Date' )\n    )", False),
+    ("Cash Change", "6 Report text", "+#,0;-#,0;0", "[Cash Balance] - [Cash Start]", False),
+    ("Income Note", "6 Report text", None,
+     'VAR p = [Income vs Budget %]\nRETURN IF ( ISBLANK ( p ), "no budget", IF ( p >= 0, "▲ ", "▼ " ) & FORMAT ( ABS ( p ), "0.0%" ) & " vs budget" )', True),
+    ("Income Note Color", "6 Report text", None, 'IF ( [Income vs Budget %] < 0, "#E5735F", "#5BBF8A" )', True),
+    ("Expense Note", "6 Report text", None,
+     'VAR p = [Expense vs Budget %]\nRETURN IF ( ISBLANK ( p ), "no budget", IF ( p > 0, "▲ " & FORMAT ( p, "0.0%" ) & " over budget", "▼ " & FORMAT ( -p, "0.0%" ) & " under budget" ) )', True),
+    ("Expense Note Color", "6 Report text", None, 'IF ( [Expense vs Budget %] > 0, "#E5735F", "#5BBF8A" )', True),
+    ("Profit Note", "6 Report text", None,
+     '"budget " & FORMAT ( [Budget], "#,0;(#,0);0" ) & "  ·  " & FORMAT ( [Variance], "+#,0;-#,0;0" )', True),
+    ("Margin Note", "6 Report text", None, '"budget " & FORMAT ( [Budget Margin %], "0.0%;-0.0%;0.0%" )', True),
+    ("Margin Note Color", "6 Report text", None, 'IF ( [Net Margin %] < [Budget Margin %], "#E5735F", "#5BBF8A" )', True),
+    ("MoM Note", "6 Report text", None,
+     "VAR m = MAX ( 'Date'[Month Start] )\nRETURN\n    IF ( ISBLANK ( [Income Previous Month] ), \"first month: nothing to compare\",\n"
+     "        FORMAT ( m, \"mmm\" ) & \" \" & FORMAT ( [Income Last Month], \"#,0\" ) & \" vs \" & FORMAT ( EDATE ( m, -1 ), \"mmm\" ) & \" \" & FORMAT ( [Income Previous Month], \"#,0\" ) )", True),
+    ("Cash Note", "6 Report text", None,
+     'VAR c = [Cash Change]\nRETURN IF ( c >= 0, "▲ ", "▼ " ) & FORMAT ( ABS ( c ), "#,0" ) & " in the period"', True),
+    ("Cash Note Color", "6 Report text", None, 'IF ( [Cash Change] < 0, "#E5735F", "#5BBF8A" )', True),
+    ("Insight", "6 Report text", None,
+     "-- one sentence per row of the Insights table, recalculated for the month and account picked in the slicers\n"
+     "VAR byAccount = FILTER ( ADDCOLUMNS ( VALUES ( Account[Account Label] ), \"@v\", [Variance] ), NOT ISBLANK ( [@v] ) )\n"
+     "VAR worst = TOPN ( 1, byAccount, [@v], ASC )\nVAR best = TOPN ( 1, byAccount, [@v], DESC )\n"
+     "RETURN\n    SWITCH ( SELECTEDVALUE ( Insights[No] ),\n"
+     "        1, \"Net profit \" & FORMAT ( [Net Profit], \"#,0;(#,0);0\" ) & \" against a budget of \" & FORMAT ( [Budget], \"#,0;(#,0);0\" )\n"
+     "            & \" (\" & FORMAT ( [Variance], \"+#,0;-#,0;0\" ) & \")\",\n"
+     "        2, \"Income \" & FORMAT ( [Income vs Budget %], \"+0.0%;-0.0%;0.0%\" ) & \" vs budget, costs \" & FORMAT ( [Expense vs Budget %], \"+0.0%;-0.0%;0.0%\" ),\n"
+     "        3, MAXX ( worst, Account[Account Label] & \": \" & FORMAT ( [@v], \"+#,0;-#,0;0\" ) & \" vs budget\" ),\n"
+     "        4, MAXX ( best, Account[Account Label] & \": \" & FORMAT ( [@v], \"+#,0;-#,0;0\" ) & \" vs budget\" ),\n"
+     "        5, \"Cash \" & IF ( [Cash Change] >= 0, \"up \", \"down \" ) & FORMAT ( ABS ( [Cash Change] ), \"#,0\" ) & \" to \" & FORMAT ( [Cash Balance], \"#,0\" ),\n"
+     "        6, \"Lowest cash \" & FORMAT ( [Lowest Forecast Cash], \"#,0\" ) & \" in \" & [Lowest Forecast Week] & \", \"\n"
+     "            & FORMAT ( ABS ( [Headroom] ), \"#,0\" ) & IF ( [Headroom] >= 0, \" above\", \" below\" ) & \" a buffer of \" & FORMAT ( [Cash Buffer Value], \"#,0\" )\n    )", False),
+    ("Insight Color", "6 Report text", None,
+     'SWITCH ( SELECTEDVALUE ( Insights[No] ), 1, [Variance Color], 3, "#E5735F", 4, "#5BBF8A", 5, [Cash Note Color], 6, [Headroom Color], "#ECE6DA" )', True),
+    # ---- revenue and costs
+    ("Gross Margin %", "7 Revenue and costs", "0.0%;-0.0%;0.0%", "DIVIDE ( [Gross Profit], [Total Income] )", False),
+    ("Budget Gross Margin %", "7 Revenue and costs", "0.0%",
+     'DIVIDE ( [Income Budget] + CALCULATE ( [Budget], KEEPFILTERS ( Category[Category Key] = "COGS" ) ), [Income Budget] )', False),
+    ("Gross Margin Note", "7 Revenue and costs", None, '"budget " & FORMAT ( [Budget Gross Margin %], "0.0%" )', True),
+    ("Gross Margin Note Color", "7 Revenue and costs", None, 'IF ( [Gross Margin %] < [Budget Gross Margin %], "#E5735F", "#5BBF8A" )', True),
+    ("Counter Sales", "7 Revenue and costs", "#,0", "CALCULATE ( [Total Income], KEEPFILTERS ( Account[Account No] = 4000 ) )", False),
+    ("Wholesale Sales", "7 Revenue and costs", "#,0", "CALCULATE ( [Total Income], KEEPFILTERS ( Account[Account No] = 4100 ) )", False),
+    ("Wholesale Share %", "7 Revenue and costs", "0.0%", "DIVIDE ( [Wholesale Sales], [Total Income] )", False),
+    ("Wholesale Note", "7 Revenue and costs", None, '"wholesale " & FORMAT ( [Wholesale Sales], "#,0" ) & " of " & FORMAT ( [Total Income], "#,0" )', True),
+    ("Counter Sales per Day", "7 Revenue and costs", "#,0",
+     "-- calendar days, days without a deposit count as 0\nAVERAGEX ( VALUES ( 'Date'[Date] ), [Counter Sales] + 0 )", False),
+    ("Counter Day Note", "7 Revenue and costs", None,
+     '"best day " & FORMAT ( MAXX ( VALUES ( \'Date\'[Date] ), [Counter Sales] ), "#,0" )', True),
+    ("Payroll % of Income", "7 Revenue and costs", "0.0%",
+     "DIVIDE ( CALCULATE ( [Total Expense], KEEPFILTERS ( Account[Account No] = 6000 ) ), [Total Income] )", False),
+    ("Payroll Budget %", "7 Revenue and costs", "0.0%",
+     "DIVIDE ( -CALCULATE ( [Budget], KEEPFILTERS ( Account[Account No] = 6000 ) ), [Income Budget] )", False),
+    ("Payroll Note", "7 Revenue and costs", None, '"budget " & FORMAT ( [Payroll Budget %], "0.0%" )', True),
+    ("Payroll Note Color", "7 Revenue and costs", None, 'IF ( [Payroll % of Income] > [Payroll Budget %], "#E5735F", "#5BBF8A" )', True),
+    ("Spend", "7 Revenue and costs", "#,0",
+     '-- paid to suppliers and staff (bank and card lines on cost accounts; depreciation is not paid)\n'
+     'CALCULATE ( SUM ( Ledger[Amount] ), KEEPFILTERS ( Ledger[Side] = "Account" ), KEEPFILTERS ( Category[Group] = "Expense" ) )', False),
+    ("Payments", "7 Revenue and costs", "0",
+     'CALCULATE ( COUNTROWS ( Ledger ), KEEPFILTERS ( Ledger[Side] = "Account" ), KEEPFILTERS ( Category[Group] = "Expense" ) )', False),
+    ("Average Payment", "7 Revenue and costs", "#,0", "DIVIDE ( [Spend], [Payments] )", False),
+    ("Share of Spend %", "7 Revenue and costs", "0.0%", "DIVIDE ( [Spend], CALCULATE ( [Spend], REMOVEFILTERS ( Ledger[Payee] ) ) )", False),
+    # ---- 13-week cash forecast
+    ("Cash Today", "8 Cash forecast", "#,0", "-- cash after the last bank line, whatever the slicers say\nCALCULATE ( [Cash Balance], REMOVEFILTERS ( 'Date' ) )", False),
+    ("Forecast Amount", "8 Cash forecast", "#,0;(#,0);0", "SUM ( Forecast[Amount] )", False),
+    ("Forecast In", "8 Cash forecast", "#,0", "CALCULATE ( SUM ( Forecast[Amount] ), KEEPFILTERS ( Forecast[Amount] > 0 ) )", False),
+    ("Forecast Out", "8 Cash forecast", "#,0;(#,0);0", "CALCULATE ( SUM ( Forecast[Amount] ), KEEPFILTERS ( Forecast[Amount] < 0 ) )", False),
+    ("Forecast Balance", "8 Cash forecast", "#,0",
+     "-- cash today + every expected receipt and payment up to the end of the week\nVAR w = MAX ( 'Forecast Week'[Week No] )\nRETURN\n"
+     "    [Cash Today] + CALCULATE ( SUM ( Forecast[Amount] ), REMOVEFILTERS ( 'Forecast Week' ), 'Forecast Week'[Week No] <= w )", False),
+    ("Forecast Closing", "8 Cash forecast", "#,0", "CALCULATE ( [Forecast Balance], REMOVEFILTERS ( 'Forecast Week' ) )", False),
+    ("Lowest Forecast Cash", "8 Cash forecast", "#,0", "MINX ( ALL ( 'Forecast Week'[Week No] ), [Forecast Balance] )", False),
+    ("Lowest Forecast Week", "8 Cash forecast", None,
+     "VAR t = ADDCOLUMNS ( ALL ( 'Forecast Week'[Week No] ), \"@b\", [Forecast Balance] )\nVAR m = MINX ( t, [@b] )\n"
+     "VAR w = MAXX ( FILTER ( t, [@b] = m ), 'Forecast Week'[Week No] )\n"
+     "RETURN LOOKUPVALUE ( 'Forecast Week'[Week], 'Forecast Week'[Week No], w )", False),
+    ("Lowest Note", "8 Cash forecast", None, '"in " & [Lowest Forecast Week]', True),
+    ("Cash Buffer Value", "8 Cash forecast", "#,0", "SELECTEDVALUE ( 'Cash Buffer'[Cash Buffer], 10000 )", False),
+    ("Buffer Line", "8 Cash forecast", "#,0", "IF ( HASONEVALUE ( 'Forecast Week'[Week No] ), [Cash Buffer Value] )", False),
+    ("Headroom", "8 Cash forecast", "+#,0;-#,0;0", "[Lowest Forecast Cash] - [Cash Buffer Value]", False),
+    ("Headroom Color", "8 Cash forecast", None, 'IF ( [Headroom] < 0, "#E5735F", "#5BBF8A" )', True),
+    ("Headroom Note", "8 Cash forecast", None, '"over a buffer of " & FORMAT ( [Cash Buffer Value], "#,0" )', True),
+    ("Weeks Below Buffer", "8 Cash forecast", "0",
+     "COUNTROWS ( FILTER ( ALL ( 'Forecast Week'[Week No] ), [Forecast Balance] < [Cash Buffer Value] ) ) + 0", False),
+    ("Weeks Below Color", "8 Cash forecast", None, 'IF ( [Weeks Below Buffer] > 0, "#E5735F", "#5BBF8A" )', True),
+    ("Weeks Below Note", "8 Cash forecast", None, '"of 13 weeks end under the buffer"', True),
+    ("Today Note", "8 Cash forecast", None, '"checking + savings at " & FORMAT ( CALCULATE ( MAX ( Ledger[Date] ), REMOVEFILTERS () ), "d mmm yyyy" )', True),
+    # ---- ledger page
+    ("Balance Start", "9 Ledger", "#,0.00;(#,0.00);0.00",
+     "VAR d0 = MIN ( 'Date'[Date] )\nRETURN\n    CALCULATE ( SUM ( Account[Opening Balance] ) + CALCULATE ( SUM ( Ledger[Amount] ), 'Date'[Date] < d0 ), REMOVEFILTERS ( 'Date' ) )", False),
+    ("Balance Movement", "9 Ledger", "+#,0.00;-#,0.00;0.00", "[Closing Balance] - [Balance Start]", False),
+    ("Ledger Debit", "9 Ledger", "#,0.00;(#,0.00);\"\"", "SUM ( Ledger[Debit] )", False),
+    ("Ledger Credit", "9 Ledger", "#,0.00;(#,0.00);\"\"", "SUM ( Ledger[Credit] )", False),
+    ("Running Balance", "9 Ledger", "#,0.00;(#,0.00);0.00",
+     "-- balance of the picked account after this line (debit +): opening + every line up to this date and line\n"
+     "VAR lineDate = MAX ( Ledger[Date] )\nVAR lineId = SELECTEDVALUE ( Ledger[Line ID] )\nRETURN\n"
+     "    IF ( HASONEVALUE ( Account[Account No] ) && NOT ISBLANK ( lineId ),\n"
+     "        SUM ( Account[Opening Balance] )\n"
+     "            -- ALLEXCEPT keeps the account (picked by number or by label) and drops every other filter (month, payee, line)\n"
+     "            + CALCULATE ( SUM ( Ledger[Amount] ), ALLEXCEPT ( Ledger, Account[Account No], Account[Account Label] ),\n"
+     "                FILTER ( ALL ( Ledger[Date], Ledger[Line ID] ),\n"
+     "                    Ledger[Date] < lineDate || ( Ledger[Date] = lineDate && Ledger[Line ID] <= lineId ) ) ) )", False),
 ]
 
 # ====================================================================================== tables (TMDL)
@@ -444,7 +660,7 @@ TABLES = {
         ("Date", "dateTime", "d mmm yyyy", "none", []), ("Txn Date", "dateTime", "d mmm yyyy", "none", []),
         ("Source", "string", None, "none", []), ("Register No", "int64", "0", "none", []),
         ("Description", "string", None, "none", []), ("Clean Description", "string", None, "none", []),
-        ("Rule Keyword", "string", None, "none", []), ("Account No", "int64", "0", "none", []),
+        ("Rule Keyword", "string", None, "none", []), ("Payee", "string", None, "none", []), ("Account No", "int64", "0", "none", []),
         ("Offset Account No", "int64", "0", "none", []), ("Amount", "decimal", "#,0.00", "sum", []),
         ("Debit", "decimal", "#,0.00", "sum", []), ("Credit", "decimal", "#,0.00", "sum", []),
         ("Cash Flow Line", "string", None, "none", ["sortByColumn: 'Cash Flow Order'"]),
@@ -454,7 +670,7 @@ TABLES = {
         ("Type", "string", None, "none", []), ("Opening Balance", "decimal", "#,0.00", "sum", []),
         ("Statement Name", "string", None, "none", ["isHidden"]),
         ("Account Label", "string", None, "none", ["sortByColumn: 'Account No'"]),
-        ("Is Cash", "boolean", None, "none", []), ("Category Key", "string", None, "none", [])]),
+        ("Is Cash", "boolean", None, "none", []), ("Category Key", "string", None, "none", []), ("Cost Group", "string", None, "none", [])]),
     "Category": dict(src=CATEGORY, desc="Groups accounts into the lines of the P&L and balance sheet.", cols=[
         ("Category Key", "string", None, "none", ["isKey"]), ("Category", "string", None, "none", ["sortByColumn: Sort"]),
         ("Group", "string", None, "none", []), ("Statement", "string", None, "none", []), ("Sort", "int64", "0", "none", ["isHidden"])]),
@@ -462,7 +678,8 @@ TABLES = {
         ("Date", "dateTime", "d mmm yyyy", "none", ["isKey"]), ("Year", "int64", "0", "none", []),
         ("Month No", "int64", "0", "none", ["isHidden"]), ("Month", "string", None, "none", ["sortByColumn: 'Month No'"]),
         ("Month Start", "dateTime", "d mmm yyyy", "none", []), ("Month End", "dateTime", "d mmm yyyy", "none", []),
-        ("Day", "int64", "0", "none", []), ("Weekday", "string", None, "none", [])]),
+        ("Day", "int64", "0", "none", []), ("Weekday", "string", None, "none", ["sortByColumn: 'Weekday No'"]),
+        ("Weekday No", "int64", "0", "none", ["isHidden"])]),
     "Budget": dict(src=BUDGET, desc="Budget per account per month; Budget Amount carries the P&L sign (income +, costs -).", cols=[
         ("Account No", "int64", "0", "none", []), ("Month", "dateTime", "mmm yyyy", "none", []),
         ("Budget As Typed", "decimal", "#,0.00", "sum", []), ("Budget Amount", "decimal", "#,0.00", "sum", [])]),
@@ -476,18 +693,35 @@ TABLES = {
     "Checks": dict(src=CHECKS, desc="The list of checks shown on the Checks page.", cols=[
         ("No", "int64", "0", "none", []), ("Check", "string", None, "none", ["sortByColumn: No"]),
         ("Why it matters", "string", None, "none", [])]),
+    "Cash Plan": dict(src=CASH_PLAN_TABLE, desc="The owner's assumptions for the 13-week cash forecast (cash-plan.csv) and the amount each one gives.", cols=[
+        ("Order", "int64", "0", "none", []), ("Item", "string", None, "none", ["sortByColumn: Order"]),
+        ("Cash Flow Line", "string", None, "none", []), ("How It Is Estimated", "string", None, "none", []),
+        ("When", "string", None, "none", []), ("Per Time", "decimal", "#,0;(#,0);0", "none", []),
+        ("Times", "int64", "0", "sum", []), ("Total 13 Weeks", "decimal", "#,0;(#,0);0", "sum", []), ("Note", "string", None, "none", [])]),
+    "Forecast": dict(src=FORECAST, desc="Every expected receipt and payment in the next 13 weeks (money in +, out -).", cols=[
+        ("Order", "int64", "0", "none", ["isHidden"]), ("Item", "string", None, "none", ["sortByColumn: Order"]),
+        ("Cash Flow Line", "string", None, "none", []), ("Date", "dateTime", "d mmm yyyy", "none", []),
+        ("Amount", "decimal", "#,0;(#,0);0", "sum", []), ("Week No", "int64", "0", "none", [])]),
+    "Forecast Week": dict(src=FORECAST_WEEK, desc="The 13 weeks after the last bank line.", cols=[
+        ("Week No", "int64", "0", "none", ["isKey"]), ("Week Start", "dateTime", "d mmm yyyy", "none", []),
+        ("Week End", "dateTime", "d mmm yyyy", "none", []), ("Week", "string", None, "none", ["sortByColumn: 'Week No'"])]),
+    "Cash Buffer": dict(src=CASH_BUFFER, desc="What-if values for the minimum cash buffer.", cols=[
+        ("Cash Buffer", "int64", "#,0", "none", [])]),
+    "Insights": dict(src=INSIGHTS, desc="The rows of the Key insights panel; the sentence itself is the Insight measure.", cols=[
+        ("No", "int64", "0", "none", []), ("Topic", "string", None, "none", ["sortByColumn: No"])]),
 }
 RELATIONSHIPS = [  # many side -> one side
     ("Ledger", "Date", "Date", "Date"), ("Ledger", "Account No", "Account", "Account No"),
     ("Account", "Category Key", "Category", "Category Key"),
     ("Budget", "Month", "Date", "Date"), ("Budget", "Account No", "Account", "Account No"),
     ("Statements", "Statement Date", "Date", "Date"), ("Statements", "Account No", "Account", "Account No"),
+    ("Forecast", "Week No", "Forecast Week", "Week No"),
 ]
 EXPRESSIONS = [  # shared queries, not loaded: name, M, result type
     ("Norm", NORM, "Function"), ("Money", MONEY, "Function"),
     ("Checking_Clean", CHECKING, "Table"), ("Savings_Clean", SAVINGS, "Table"), ("Card_Clean", CARD, "Table"),
     ("Rules", RULES, "Table"), ("AccountsRaw", ACCOUNTS_RAW, "Table"), ("Adjustments", ADJ, "Table"),
-    ("BankLines", BANKLINES, "Table"),
+    ("BankLines", BANKLINES, "Table"), ("CashPlanCalc", CASHPLAN, "Table"),
 ]
 
 
@@ -565,7 +799,8 @@ def build_model(data_folder):
     # model diagram: the fact table in the middle, dimensions around it (star schema), helper tables below
     spots = {"Date": (40, 300), "Ledger": (400, 180), "Account": (780, 300), "Category": (1120, 330),
              "Budget": (780, -40), "Statements": (400, 700), "_Measures": (40, 700), "Checks": (1120, 640),
-             "Source Files": (780, 700)}
+             "Source Files": (780, 700), "Insights": (1120, 900), "Forecast": (40, 1060), "Forecast Week": (400, 1060),
+             "Cash Plan": (780, 1060), "Cash Buffer": (1120, 1060)}
     nodes = [{"location": {"x": x, "y": y}, "nodeIndex": n, "nodeLineageTag": tag("t", n),
               "size": {"height": min(64 + 34 * len(TABLES[n]["cols"]), 420), "width": 260}, "zIndex": 0}
              for n, (x, y) in spots.items()]
@@ -580,7 +815,15 @@ def build_model(data_folder):
 
 # ====================================================================================== report (PBIR)
 S = "https://developer.microsoft.com/json-schemas/fabric/item/report/definition"
-NAVY, TEAL, INK, MUTED, PAGE_BG = "#18324D", "#00968A", "#1B2A3A", "#5F6B7A", "#F3F5F8"
+# "Copperleaf" dark edition: midnight background, gold hairlines, serif headings and numbers
+HDR, PAGE_BG, CARD, CARD_ALT, LINE = "#0B0F13", "#12171D", "#1A2129", "#202832", "#2A333D"
+GOLD, GOLD_LT, GOLD_DIM = "#C9A35B", "#E6CF9A", "#3A3020"
+IVORY, MUTED, GRID = "#ECE6DA", "#8E98A3", "#262F39"
+JADE, COPPER, SKY, BUDGET_GREY = "#4FA38C", "#B5754A", "#7FA7C9", "#4A5560"
+GOOD, BAD, AMBER = "#5BBF8A", "#E5735F", "#D9A441"
+INK = IVORY
+SERIF, SANS, SANS_SB = "Georgia", "Segoe UI", "Segoe UI Semibold"
+NAV_X, NAV_W = 470, 790
 
 
 def lit(v):
@@ -595,6 +838,10 @@ def lit(v):
 
 def color(c):
     return {"solid": {"color": lit(c)}}
+
+
+def mcolor(measure):  # colour returned by a measure
+    return {"solid": {"color": {"expr": mea(measure)}}}
 
 
 def col(entity, prop):
@@ -618,12 +865,13 @@ def props(**kw):
     return [{"properties": kw}]
 
 
-def container(title=None, bg="#FFFFFF", border=True):
-    o = {"background": props(show=lit(True), color=color(bg), transparency=lit(0)),
-         "border": props(show=lit(border), color=color("#DCE1E7"), radius=lit(8)),
+def container(title=None, bg=CARD, border=True, transparent=False, radius=12, border_color=LINE):
+    o = {"background": props(show=lit(not transparent), color=color(bg), transparency=lit(100 if transparent else 0)),
+         "border": props(show=lit(border), color=color(border_color), radius=lit(radius), width=lit(1)),
          "dropShadow": props(show=lit(False))}
     if title:
-        o["title"] = props(show=lit(True), text=lit(title), fontColor=color(INK), fontSize=lit(12), bold=lit(True))
+        o["title"] = props(show=lit(True), text=lit(title), fontColor=color(IVORY), fontSize=lit(12), bold=lit(False),
+                           fontFamily=lit(SERIF))
     else:
         o["title"] = props(show=lit(False))
     return o
@@ -639,35 +887,90 @@ class Page:
                                           "tabOrder": len(self.visuals) * 1000}, "visual": visual})
 
 
+def textbox(page, vid, x, y, w, h, paras, bg=CARD, border=False, transparent=False, radius=12, pad=None, border_color=LINE):
+    vco = container(bg=bg, border=border, transparent=transparent, radius=radius, border_color=border_color)
+    if pad is not None:
+        vco["padding"] = props(top=lit(pad[0]), left=lit(pad[1]), bottom=lit(0), right=lit(0))
+    page.add(vid, x, y, w, h, {"visualType": "textbox", "objects": {"general": [{"properties": {"paragraphs": paras}}]},
+                               "visualContainerObjects": vco})
+
+
+def run(value, size, colour, font=SANS, bold=False):
+    st = {"fontFamily": font, "fontSize": f"{size}pt", "color": colour}
+    if bold:
+        st["fontWeight"] = "bold"
+    return {"value": value, "textStyle": st}
+
+
 def header(page, title, sub):
-    paras = [{"textRuns": [{"value": title, "textStyle": {"fontFamily": "Segoe UI Semibold", "fontSize": "20pt", "color": "#FFFFFF"}}]},
-             {"textRuns": [{"value": sub, "textStyle": {"fontFamily": "Segoe UI", "fontSize": "11pt", "color": "#B8C8DA"}}]}]
-    page.add(f"{page.name}_hdr", 0, 0, 1280, 72, {
-        "visualType": "textbox", "objects": {"general": [{"properties": {"paragraphs": paras}}]},
-        "visualContainerObjects": container(bg=NAVY, border=False) | {"padding": props(top=lit(8), left=lit(22))}})
+    """Brand and page title on the left, page buttons on the right, a gold hairline underneath."""
+    textbox(page, f"{page.name}_hdr", 0, 0, 1280, 60, [
+        {"textRuns": [run("C O P P E R L E A F", 8, GOLD, SANS_SB), run("     ", 8, MUTED), run(title, 18, IVORY, SERIF)]},
+        {"textRuns": [run(sub, 8, MUTED)]}], bg=HDR, radius=0, pad=(4, 22))
+    textbox(page, f"{page.name}_rule", 0, 60, 1280, 2, [{"textRuns": [run(" ", 1, GOLD)]}], bg=GOLD, radius=0, pad=(0, 0))
+    page.add(f"{page.name}_nav", NAV_X, 15, NAV_W, 30, {
+        "visualType": "pageNavigator",
+        "objects": {
+            "fill": [{"properties": {"show": lit(True), "fillColor": color(HDR), "transparency": lit(0)}, "selector": {"id": "default"}},
+                     {"properties": {"show": lit(True), "fillColor": color("#1B222A"), "transparency": lit(0)}, "selector": {"id": "hover"}},
+                     {"properties": {"show": lit(True), "fillColor": color(GOLD_DIM), "transparency": lit(0)}, "selector": {"id": "selected"}}],
+            "text": [{"properties": {"show": lit(True), "fontColor": color("#AEB6BF"), "fontSize": lit(9), "fontFamily": lit(SANS)}, "selector": {"id": "default"}},
+                     {"properties": {"fontColor": color(GOLD_LT)}, "selector": {"id": "selected"}}],
+            "outline": [{"properties": {"show": lit(True), "lineColor": color("#2A333D"), "weight": lit(1)}, "selector": {"id": "default"}},
+                        {"properties": {"show": lit(True), "lineColor": color(GOLD), "weight": lit(1)}, "selector": {"id": "selected"}}],
+            "shape": props(tileShape=lit("rectangleRounded"), roundEdge=lit(15))},
+        "visualContainerObjects": container(bg=HDR, border=False, transparent=True)})
 
 
-def slicer(page, vid, x, y, w, field, title, sync=None, h=76):
+def slicer(page, vid, x, y, w, field, title, sync=None, h=64, default=None):
     v = {"visualType": "slicer",
          "query": {"queryState": {"Values": {"projections": [proj(field)]}}},
          "objects": {"data": props(mode=lit("Dropdown")),
-                     "header": props(show=lit(True), text=lit(title), fontColor=color(MUTED), textSize=lit(10)),
-                     "items": props(textSize=lit(11))},
+                     "header": props(show=lit(True), text=lit(title), fontColor=color(GOLD), textSize=lit(8), fontFamily=lit(SANS_SB)),
+                     "items": props(textSize=lit(10), fontColor=color(IVORY), background=color(CARD_ALT), outlineColor=color(LINE))},
          "visualContainerObjects": container()}
+    if default is not None:  # a pre-selected value (single select)
+        kind = "Column"
+        ent, prop = field[kind]["Expression"]["SourceRef"]["Entity"], field[kind]["Property"]
+        v["objects"]["selection"] = props(singleSelect=lit(True))
+        v["objects"]["general"] = [{"properties": {"filter": {"filter": {
+            "Version": 2, "From": [{"Name": "s", "Entity": ent, "Type": 0}],
+            "Where": [{"Condition": {"In": {"Expressions": [{"Column": {"Expression": {"SourceRef": {"Source": "s"}}, "Property": prop}}],
+                                            "Values": [[{"Literal": {"Value": f"{default}L" if isinstance(default, int) else "'" + default + "'"}}]]}}}]}}}}]
     if sync:
         v["syncGroup"] = {"groupName": sync, "fieldChanges": True, "filterChanges": True}
     page.add(vid, x, y, w, h, v)
 
 
-def card(page, vid, x, y, w, h, measure, label, value_color=INK, size=24):
-    # value_color: a hex colour, or the name of a measure that returns one (red when negative)
-    fill = color(value_color) if value_color.startswith("#") else {"solid": {"color": {"expr": mea(value_color)}}}
+def value_card(page, vid, x, y, w, h, measure, fill, size, label=None, font=SERIF):
     page.add(vid, x, y, w, h, {
         "visualType": "card",
         "query": {"queryState": {"Values": {"projections": [proj(mea(measure), label)]}}},
-        "objects": {"labels": props(fontSize=lit(size), color=fill, labelDisplayUnits=lit(1)),
-                    "categoryLabels": props(show=lit(True), fontSize=lit(10), color=color(MUTED))},
-        "visualContainerObjects": container()})
+        "objects": {"labels": props(fontSize=lit(size), color=fill, labelDisplayUnits=lit(1), fontFamily=lit(font)),
+                    "categoryLabels": props(show=lit(False))},
+        "visualContainerObjects": container(transparent=True, border=False)})
+
+
+def kpi(page, vid, x, y, w, h, measure, label, icon, note=None, note_color=None, value_color=IVORY, size=22):
+    """One KPI tile: dark card, gold bar on the left, gold ring icon, small-caps label, serif value, coloured verdict line."""
+    textbox(page, f"{vid}_bg", x, y, w, h, [{"textRuns": [run(" ", 6, IVORY)]}], border=True)
+    textbox(page, f"{vid}_bar", x + 1, y + 16, 3, h - 32, [{"textRuns": [run(" ", 4, GOLD)]}], bg=GOLD, radius=2, pad=(0, 0))
+    textbox(page, f"{vid}_ic", x + w - 40, y + 10, 28, 28,
+            [{"textRuns": [run(icon, 10, GOLD, SANS_SB)], "horizontalTextAlignment": "center"}],
+            bg=GOLD_DIM, radius=14, pad=(3, 0), border=True, border_color=GOLD)
+    textbox(page, f"{vid}_lb", x + 14, y + 10, w - 58, 24, [{"textRuns": [run(label.upper(), 7, MUTED, SANS_SB)]}],
+            transparent=True, pad=(2, 0))
+    fill = color(value_color) if value_color.startswith("#") else mcolor(value_color)
+    compact = h < 100
+    if note:
+        vy, vh = (y + 24, 34) if compact else (y + 30, 40)
+    else:
+        vy, vh = y + 30, h - 40
+    value_card(page, f"{vid}_v", x + 8, vy, w - 16, vh, measure, fill, size - (2 if compact and note else 0), label)
+    if note:
+        nfill = mcolor(note_color) if note_color and not note_color.startswith("#") else color(note_color or MUTED)
+        ny = y + h - (25 if compact else 30)
+        value_card(page, f"{vid}_n", x + 8, ny, w - 16, 22 if compact else 26, note, nfill, 8, font=SANS_SB)
 
 
 def sort(field, direction="Ascending"):
@@ -680,14 +983,37 @@ def chart(page, vid, x, y, w, h, vtype, title, roles, sort_def=None, objects=Non
          "visualContainerObjects": container(title)}
     if sort_def:
         v["query"]["sortDefinition"] = sort_def
-    if objects:
-        v["objects"] = objects
-    if vtype in AXIS_CHARTS:  # the title says what the axes are
-        v.setdefault("objects", {})
-        v["objects"]["categoryAxis"] = [{"properties": {"showAxisTitle": lit(False)} | v["objects"].get("categoryAxis", [{}])[0].get("properties", {})}]
-        v["objects"]["valueAxis"] = props(showAxisTitle=lit(False), secShowAxisTitle=lit(False))
+    v["objects"] = objects or {}
+    if vtype in AXIS_CHARTS:  # the title says what the axes are; faint gridlines, muted axis text
+        v["objects"]["categoryAxis"] = [{"properties": {"showAxisTitle": lit(False), "labelColor": color(MUTED), "fontSize": lit(8)}
+                                         | v["objects"].get("categoryAxis", [{}])[0].get("properties", {})}]
+        v["objects"]["valueAxis"] = [{"properties": {"showAxisTitle": lit(False), "secShowAxisTitle": lit(False), "labelColor": color(MUTED),
+                                                     "fontSize": lit(8), "gridlineColor": color(GRID), "gridlineStyle": lit("solid")}
+                                      | v["objects"].get("valueAxis", [{}])[0].get("properties", {})}]
+    if "legend" in v["objects"]:
+        v["objects"]["legend"] = [{"properties": {"labelColor": color(IVORY)} | v["objects"]["legend"][0]["properties"]}]
+    if "labels" in v["objects"]:
+        first = v["objects"]["labels"][0]
+        v["objects"]["labels"] = [first | {"properties": {"color": color(IVORY)} | first["properties"]}] + v["objects"]["labels"][1:]
+    if not v["objects"]:
+        del v["objects"]
     page.add(vid, x, y, w, h, v)
     return v
+
+
+def labels(size=8, units=1, precision=None, **kw):
+    p = dict(show=lit(True), labelDisplayUnits=lit(units), fontSize=lit(size))
+    if precision is not None:
+        p["labelPrecision"] = lit(precision)
+    return props(**p, **kw)
+
+
+def legend(pos="TopRight"):
+    return props(show=lit(True), position=lit(pos), fontSize=lit(8))
+
+
+def fills(*pairs):  # (measure name, colour) per series
+    return [{"properties": {"fill": color(c)}, "selector": {"metadata": f"_Measures.{m}"}} for m, c in pairs]
 
 
 def cond_color(measure_queryref, color_measure):
@@ -695,106 +1021,195 @@ def cond_color(measure_queryref, color_measure):
             "selector": {"data": [{"dataViewWildcard": {"matchingOption": 1}}], "metadata": measure_queryref}}
 
 
-def grid_objects(font=11, extra_values=None, pad=4):
-    o = {"values": [{"properties": {"fontSize": lit(font)}}] + (extra_values or []),
-         "columnHeaders": props(fontSize=lit(font), bold=lit(True), fontColor=color(INK), backColor=color("#E8EDF2")),
-         "grid": props(rowPadding=lit(pad))}
-    return o
+def grid_objects(font=10, extra_values=None, pad=3):
+    return {"values": [{"properties": {"fontSize": lit(font), "fontColorPrimary": color(IVORY), "fontColorSecondary": color(IVORY),
+                                       "backColorPrimary": color(CARD), "backColorSecondary": color(CARD_ALT)}}] + (extra_values or []),
+            "columnHeaders": props(fontSize=lit(font - 1), bold=lit(False), fontColor=color(GOLD), backColor=color(HDR), fontFamily=lit(SANS_SB)),
+            "rowHeaders": props(fontSize=lit(font), fontColor=color(IVORY), backColor=color(CARD)),
+            "grid": props(rowPadding=lit(pad), gridHorizontal=lit(True), gridHorizontalColor=color(GRID), gridVertical=lit(False),
+                          outlineColor=color(LINE)),
+            "total": props(fontColor=color(GOLD_LT), backColor=color(HDR)),
+            "subTotals": props(fontColor=color(GOLD_LT), backColor=color("#1F1B14"))}
 
 
-AXIS_CHARTS = {"lineClusteredColumnComboChart", "clusteredBarChart", "clusteredColumnChart", "lineChart"}
+AXIS_CHARTS = {"lineClusteredColumnComboChart", "clusteredBarChart", "clusteredColumnChart", "lineChart", "areaChart", "waterfallChart",
+               "columnChart", "stackedColumnChart"}
 NO_TOTALS = {"total": props(totals=lit(False))}
 MONTH, ACCT, CATG = col("Date", "Month"), col("Account", "Account Label"), col("Category", "Category")
+SUB = "Copperleaf Bakery & Cafe (fictional)  ·  Aug–Oct 2026  ·  USD"
+
+
+def kpi_row(page, prefix, y, h, items, x0=274, x1=1258, gap=12, size=20):
+    w = (x1 - x0 - gap * (len(items) - 1)) / len(items)
+    for i, it in enumerate(items):
+        m, lbl, ic = it[:3]
+        note, ncol, vcol = (list(it[3:]) + [None, None, IVORY])[:3]
+        kpi(page, f"{prefix}{i}", round(x0 + i * (w + gap)), y, round(w), h, m, lbl, ic, note, ncol, vcol or IVORY, size)
 
 
 def build_pages():
-    sub = "Copperleaf Bakery & Cafe (fictional)  ·  Aug–Oct 2026  ·  built from the bank and card exports"
     # ---------------------------------------------------------------- 1 Overview
     p1 = Page("overview", "Overview")
-    header(p1, "Finance overview", sub)
-    slicer(p1, "ov_month", 22, 84, 300, MONTH, "Month", "Month")
-    slicer(p1, "ov_acct", 334, 84, 380, ACCT, "Account", "Account")
-    kpis = [("Total Income", "Income"), ("Total Expense", "Expenses"), ("Net Profit", "Net profit"),
-            ("Net Margin %", "Net margin"), ("Income MoM %", "Income vs prior month"), ("Cash Balance", "Cash, checking + savings")]
-    for i, (m, lbl) in enumerate(kpis):
-        card(p1, f"ov_k{i}", 22 + i * 208, 172, 196, 100, m, lbl, "Net Profit Color" if m == "Net Profit" else INK)
-    chart(p1, "ov_trend", 22, 284, 764, 416, "lineClusteredColumnComboChart", "Income, expenses and net profit by month",
-          {"Category": [MONTH], "Y": [(mea("Total Income"), "Income"), (mea("Total Expense"), "Expenses")], "Y2": [(mea("Net Profit"), "Net profit")]}, sort(MONTH),
-          {"labels": props(show=lit(True), labelDisplayUnits=lit(1000), labelPrecision=lit(1), fontSize=lit(9)),
-           "legend": props(show=lit(True), position=lit("Top")),
-           "dataPoint": [{"properties": {"fill": color("#1F4E79")}, "selector": {"metadata": "_Measures.Total Income"}},
-                         {"properties": {"fill": color("#E07B39")}, "selector": {"metadata": "_Measures.Total Expense"}},
-                         {"properties": {"fill": color(TEAL)}, "selector": {"metadata": "_Measures.Net Profit"}}]})
-    chart(p1, "ov_exp", 798, 284, 460, 416, "clusteredBarChart", "Where the money goes (expenses by account)",
-          {"Category": [ACCT], "Y": [mea("Total Expense")]}, sort(mea("Total Expense"), "Descending"),
-          {"labels": props(show=lit(True), labelDisplayUnits=lit(1), fontSize=lit(9)),
-           "dataPoint": props(fill=color("#E07B39"))})
+    header(p1, "Finance overview", SUB)
+    slicer(p1, "ov_month", 22, 74, 240, MONTH, "MONTH", "Month", h=60)
+    slicer(p1, "ov_acct", 274, 74, 320, ACCT, "ACCOUNT", "Account", h=60)
+    textbox(p1, "ov_hint", 606, 74, 652, 60, [
+        {"textRuns": [run("Every figure on this page follows the month and account you pick.  ", 9, MUTED),
+                      run("Green", 9, GOOD, bold=True), run(" = better than budget,  ", 9, MUTED),
+                      run("red", 9, BAD, bold=True), run(" = worse.", 9, MUTED)]}], transparent=True, pad=(20, 6))
+    kpis = [("Total Income", "Income", "$", "Income Note", "Income Note Color", IVORY),
+            ("Total Expense", "Expenses", "−", "Expense Note", "Expense Note Color", IVORY),
+            ("Net Profit", "Net profit", "=", "Profit Note", "Variance Color", "Net Profit Color"),
+            ("Net Margin %", "Net margin", "%", "Margin Note", "Margin Note Color", IVORY),
+            ("Income MoM %", "Income vs prior month", "↗", "MoM Note", MUTED, IVORY),
+            ("Cash Balance", "Cash at end", "◈", "Cash Note", "Cash Note Color", IVORY)]
+    kpi_row(p1, "ov_k", 146, 100, kpis, x0=22, size=22)
+    chart(p1, "ov_trend", 22, 258, 410, 236, "clusteredColumnChart", "Income vs expenses by month",
+          {"Category": [MONTH], "Y": [(mea("Total Income"), "Income"), (mea("Total Expense"), "Expenses")]}, sort(MONTH),
+          {"labels": labels(8, 1000, 1), "legend": legend(),
+           "dataPoint": fills(("Total Income", JADE), ("Total Expense", COPPER))})
+    chart(p1, "ov_bridge", 444, 258, 400, 236, "waterfallChart", "Profit bridge: income to net profit",
+          {"Category": [CATG], "Y": [(mea("Actual"), "Amount")]}, sort(CATG),
+          {"labels": labels(8, 1000, 1),
+           "sentimentColors": props(increaseFill=color(JADE), decreaseFill=color(COPPER), totalFill=color(GOLD)),
+           "legend": props(show=lit(False))})
+    chart(p1, "ov_exp", 856, 258, 402, 236, "clusteredBarChart", "Where the money goes",
+          {"Category": [ACCT], "Y": [(mea("Total Expense"), "Expenses")]}, sort(mea("Total Expense"), "Descending"),
+          {"labels": labels(8), "dataPoint": props(fill=color(GOLD)), "categoryAxis": props(maxMarginFactor=lit(45))})
+    chart(p1, "ov_np", 22, 506, 560, 194, "clusteredColumnChart", "Net profit by month: actual vs budget",
+          {"Category": [MONTH], "Y": [(mea("Actual"), "Actual"), (mea("Budget"), "Budget")]}, sort(MONTH),
+          {"labels": labels(8), "legend": legend(), "dataPoint": fills(("Actual", GOLD), ("Budget", BUDGET_GREY))})
+    chart(p1, "ov_ins", 594, 506, 664, 194, "tableEx", "Key insights, written by DAX",
+          {"Values": [(col("Insights", "Topic"), "Topic"), (mea("Insight"), "What the numbers say")]},
+          sort(col("Insights", "Topic")),
+          objects=grid_objects(9, [cond_color("_Measures.Insight", "Insight Color")], pad=1) | NO_TOTALS)
     # ---------------------------------------------------------------- 2 P&L vs budget
     p2 = Page("pnl", "P&L vs Budget")
-    header(p2, "Profit and loss vs budget", sub + "  ·  + = better than budget")
-    slicer(p2, "pl_month", 22, 84, 300, MONTH, "Month", "Month")
-    card(p2, "pl_k1", 334, 84, 200, 76, "Actual", "Net profit", "Net Profit Color", size=20)
-    card(p2, "pl_k2", 546, 84, 200, 76, "Budget", "Budgeted net profit", size=20)
-    card(p2, "pl_k3", 758, 84, 200, 76, "Variance", "Variance vs budget", size=20)
-    mx = chart(p2, "pl_matrix", 22, 172, 652, 528, "pivotTable", "P&L by account: actual, budget, variance",
+    header(p2, "Profit and loss vs budget", SUB + "  ·  + = better than budget")
+    slicer(p2, "pl_month", 22, 74, 240, MONTH, "MONTH", "Month", h=84)
+    kpi_row(p2, "pl_k", 74, 84, [("Actual", "Net profit", "=", None, None, "Net Profit Color"),
+                                 ("Budget", "Budgeted net profit", "◎"),
+                                 ("Variance", "Variance vs budget", "±", None, None, "Variance Color"),
+                                 ("Income vs Budget %", "Income vs budget", "$", None, None, "Income Note Color")])
+    mx = chart(p2, "pl_matrix", 22, 170, 652, 530, "pivotTable", "P&L by account: actual, budget, variance",
                {"Rows": [CATG, ACCT], "Values": [mea("Actual"), mea("Budget"), mea("Variance"), mea("Variance %")]},
-               objects=grid_objects(10, [cond_color("_Measures.Variance", "Variance Color"), cond_color("_Measures.Variance %", "Variance Color")], pad=1)
-               | {"rowHeaders": props(fontSize=lit(10))})
+               objects=grid_objects(9, [cond_color("_Measures.Variance", "Variance Color"), cond_color("_Measures.Variance %", "Variance Color")], pad=1))
     mx["expansionStates"] = [{"roles": ["Rows"], "levels": [{"queryRefs": ["Category.Category"], "identityKeys": [CATG], "isPinned": True},
                                                             {"queryRefs": ["Account.Account Label"], "isPinned": True}],
                               "root": {"isToggled": True}}]
-    chart(p2, "pl_trend", 686, 172, 572, 256, "clusteredColumnChart", "Net profit by month: actual vs budget",
+    chart(p2, "pl_trend", 686, 170, 572, 256, "clusteredColumnChart", "Net profit by month: actual vs budget",
           {"Category": [MONTH], "Y": [(mea("Actual"), "Actual"), (mea("Budget"), "Budget")]}, sort(MONTH),
-          {"labels": props(show=lit(True), labelDisplayUnits=lit(1), fontSize=lit(9)), "legend": props(show=lit(True), position=lit("Top")),
-           "dataPoint": [{"properties": {"fill": color(TEAL)}, "selector": {"metadata": "_Measures.Actual"}},
-                         {"properties": {"fill": color("#B8C2CC")}, "selector": {"metadata": "_Measures.Budget"}}]})
-    chart(p2, "pl_var", 686, 440, 572, 260, "clusteredBarChart", "Variance by account (worst first)",
+          {"labels": labels(8), "legend": legend(), "dataPoint": fills(("Actual", GOLD), ("Budget", BUDGET_GREY))})
+    chart(p2, "pl_var", 686, 438, 572, 262, "clusteredBarChart", "Variance by account, worst first",
           {"Category": [ACCT], "Y": [mea("Variance")]}, sort(mea("Variance"), "Ascending"),
-          {"labels": props(show=lit(True), labelDisplayUnits=lit(1), fontSize=lit(9)),
-           "dataPoint": [{"properties": {"fill": {"solid": {"color": {"expr": mea("Variance Color")}}}},
-                          "selector": {"data": [{"dataViewWildcard": {"matchingOption": 1}}]}}]})
-    # ---------------------------------------------------------------- 3 Cash
-    p3 = Page("cash", "Cash & Statements")
-    header(p3, "Cash and bank statements", sub)
-    slicer(p3, "ca_month", 22, 84, 300, MONTH, "Month", "Month")
-    card(p3, "ca_k1", 334, 84, 240, 76, "Cash Balance", "Cash at end (checking + savings)", size=20)
-    card(p3, "ca_k2", 586, 84, 240, 76, "In Transit", "Transfers still in transit", size=20)
-    chart(p3, "ca_line", 22, 172, 690, 272, "lineChart", "Cash balance day by day (checking + savings)",
+          {"labels": labels(8), "categoryAxis": props(maxMarginFactor=lit(40)),
+           "dataPoint": [{"properties": {"fill": mcolor("Variance Color")}, "selector": {"data": [{"dataViewWildcard": {"matchingOption": 1}}]}}]})
+    # ---------------------------------------------------------------- 3 Revenue and costs
+    p3 = Page("revenue", "Revenue & Costs")
+    header(p3, "Revenue and costs", SUB)
+    slicer(p3, "rc_month", 22, 74, 240, MONTH, "MONTH", "Month", h=84)
+    kpi_row(p3, "rc_k", 74, 84, [("Gross Margin %", "Gross margin", "%", "Gross Margin Note", "Gross Margin Note Color"),
+                                 ("Wholesale Share %", "Wholesale share of income", "◧", "Wholesale Note", MUTED),
+                                 ("Counter Sales per Day", "Counter sales per day", "☕", "Counter Day Note", MUTED),
+                                 ("Payroll % of Income", "Payroll as % of income", "♟", "Payroll Note", "Payroll Note Color")])
+    chart(p3, "rc_stream", 22, 170, 410, 262, "columnChart", "Income by stream and month",
+          {"Category": [MONTH], "Series": [ACCT], "Y": [(mea("Total Income"), "Income")]}, sort(MONTH),
+          {"labels": labels(8, 1000, 1), "legend": props(show=lit(True), position=lit("Bottom"), fontSize=lit(8), showTitle=lit(False))})
+    chart(p3, "rc_mix", 444, 170, 400, 262, "donutChart", "Cost mix: where each dollar of cost goes",
+          {"Category": [col("Account", "Cost Group")], "Y": [(mea("Total Expense"), "Costs")]}, sort(mea("Total Expense"), "Descending"),
+          {"labels": props(show=lit(True), labelStyle=lit("Category, percent of total"), color=color(IVORY), fontSize=lit(8)),
+           "legend": props(show=lit(False)), "slices": props(innerRadiusRatio=lit(62))})
+    chart(p3, "rc_margin", 856, 170, 402, 262, "lineChart", "Margins by month",
+          {"Category": [MONTH], "Y": [(mea("Gross Margin %"), "Gross margin"), (mea("Net Margin %"), "Net margin")]}, sort(MONTH),
+          {"labels": labels(8), "legend": legend(), "dataPoint": fills(("Gross Margin %", GOLD), ("Net Margin %", JADE)),
+           "lineStyles": props(strokeWidth=lit(3), showMarker=lit(True), markerSize=lit(6))})
+    chart(p3, "rc_wday", 22, 444, 410, 256, "clusteredColumnChart", "Card takings by deposit weekday (average day)",
+          {"Category": [col("Date", "Weekday")], "Y": [(mea("Counter Sales per Day"), "Average day")]}, sort(col("Date", "Weekday")),
+          {"labels": labels(8, 1), "dataPoint": props(fill=color(JADE))})
+    chart(p3, "rc_payees", 444, 444, 814, 256, "tableEx", "Who gets paid: suppliers and staff, largest first",
+          {"Values": [(col("Ledger", "Payee"), "Payee"), (mea("Spend"), "Paid"), (mea("Share of Spend %"), "Share"),
+                      (mea("Payments"), "Payments"), (mea("Average Payment"), "Average payment")]},
+          sort(mea("Spend"), "Descending"), objects=grid_objects(9, pad=2))
+    # ---------------------------------------------------------------- 4 Cash and statements
+    p4 = Page("cash", "Cash & Banks")
+    header(p4, "Cash and bank statements", SUB)
+    slicer(p4, "ca_month", 22, 74, 240, MONTH, "MONTH", "Month", h=84)
+    kpi_row(p4, "ca_k", 74, 84, [("Cash Balance", "Cash at end: checking + savings", "◈"),
+                                 ("Cash Change", "Change in the period", "↕", None, None, "Cash Note Color"),
+                                 ("In Transit", "Transfers still in transit", "⇄")])
+    chart(p4, "ca_line", 22, 170, 690, 270, "areaChart", "Cash balance day by day (checking + savings)",
           {"Category": [col("Date", "Date")], "Y": [mea("Cash Balance")]}, sort(col("Date", "Date")),
-          {"dataPoint": props(fill=color("#1F4E79")), "categoryAxis": props(axisType=lit("Scalar"))})
-    chart(p3, "ca_flow", 22, 456, 690, 244, "pivotTable", "Cash flow by month (checking + savings)",
+          {"dataPoint": props(fill=color(GOLD)), "categoryAxis": props(axisType=lit("Scalar")),
+           "lineStyles": props(strokeWidth=lit(2))})
+    chart(p4, "ca_flow", 22, 452, 690, 248, "pivotTable", "Cash flow by month (checking + savings)",
           {"Rows": [col("Ledger", "Cash Flow Line")], "Columns": [MONTH], "Values": [(mea("Cash Movement"), "Net cash")]},
-          objects=grid_objects(10) | {"rowHeaders": props(fontSize=lit(10))})
-    chart(p3, "ca_rec", 724, 172, 534, 346, "tableEx", "Books vs statements (card owed shown negative)",
+          objects=grid_objects(9, pad=2))
+    chart(p4, "ca_rec", 724, 170, 534, 330, "tableEx", "Books vs statements (card owed shown negative)",
           {"Values": [(ACCT, "Account"), (MONTH, "Month"), (mea("Books Balance"), "Books"), (mea("Statement Balance"), "Statement"),
                       (mea("Difference vs Statement"), "Difference")]},
-          objects=grid_objects(10) | NO_TOTALS)
-    p3.add("ca_note", 724, 530, 534, 170, {
-        "visualType": "textbox", "objects": {"general": [{"properties": {"paragraphs": [
-            {"textRuns": [{"value": "How to read it", "textStyle": {"fontWeight": "bold", "fontSize": "11pt", "color": INK}}]},
-            {"textRuns": [{"value": "Books = opening balance + every posting up to the statement date. A difference of 0.00 for every "
-                                    "account and month proves nothing was lost, doubled or booked in the wrong month. "
-                                    "Money moved between own accounts (checking to savings, card payments) waits on "
-                                    "1090 Transfers in transit until the other side arrives.",
-                           "textStyle": {"fontSize": "10pt", "color": MUTED}}]}]}}]},
-        "visualContainerObjects": container()})
-    # ---------------------------------------------------------------- 4 Checks
-    p4 = Page("checks", "Checks")
-    header(p4, "Checks: can these numbers be trusted?", "Recalculated on every refresh, independent of the slicers  ·  "
-           "the same checks as the Excel version, plus a second read of every export file")
-    card(p4, "ck_k1", 22, 84, 300, 80, "Checks Passed", "Checks")
-    card(p4, "ck_k2", 334, 84, 200, 80, "Checks Failed", "Failed")
-    card(p4, "ck_k3", 546, 84, 240, 80, "Chk Review Lines", "Lines waiting for a rule")
-    chart(p4, "ck_table", 22, 176, 1236, 336, "tableEx", "Data checks",
+          objects=grid_objects(9, pad=2) | NO_TOTALS)
+    chart(p4, "ca_bridge", 724, 512, 534, 188, "waterfallChart", "Cash bridge: what moved cash",
+          {"Category": [col("Ledger", "Cash Flow Line")], "Y": [(mea("Cash Movement"), "Net cash")]}, sort(col("Ledger", "Cash Flow Line")),
+          {"labels": labels(8, 1000, 1),
+           "sentimentColors": props(increaseFill=color(JADE), decreaseFill=color(COPPER), totalFill=color(GOLD)),
+           "legend": props(show=lit(False))})
+    # ---------------------------------------------------------------- 5 Cash forecast
+    p5 = Page("forecast", "Cash Forecast")
+    header(p5, "13-week cash forecast", "Cash today + the owner's plan (cash-plan.csv), amounts taken from the bank history  ·  USD")
+    slicer(p5, "fc_buffer", 22, 74, 240, col("Cash Buffer", "Cash Buffer"), "MINIMUM CASH BUFFER", h=84, default=10000)
+    kpi_row(p5, "fc_k", 74, 84, [("Cash Today", "Cash today", "◈", "Today Note", MUTED),
+                                 ("Lowest Forecast Cash", "Lowest in 13 weeks", "▼", "Lowest Note", MUTED),
+                                 ("Headroom", "Headroom over buffer", "⛨", "Headroom Note", MUTED, "Headroom Color"),
+                                 ("Weeks Below Buffer", "Weeks below buffer", "!", "Weeks Below Note", MUTED, "Weeks Below Color")])
+    chart(p5, "fc_line", 22, 170, 760, 284, "lineChart", "Forecast cash at the end of each week vs your buffer",
+          {"Category": [col("Forecast Week", "Week")], "Y": [(mea("Forecast Balance"), "Forecast cash"), (mea("Buffer Line"), "Buffer")]},
+          sort(col("Forecast Week", "Week")),
+          {"labels": [{"properties": {"show": lit(True), "labelDisplayUnits": lit(1000), "labelPrecision": lit(1), "fontSize": lit(8)}},
+                      {"properties": {"show": lit(False)}, "selector": {"metadata": "_Measures.Buffer Line"}}],
+           "legend": legend(), "dataPoint": fills(("Forecast Balance", GOLD), ("Buffer Line", BAD)),
+           "lineStyles": props(strokeWidth=lit(3), showMarker=lit(True), markerSize=lit(5))})
+    chart(p5, "fc_bridge", 794, 170, 464, 284, "waterfallChart", "Next 13 weeks: where the cash goes",
+          {"Category": [col("Forecast", "Cash Flow Line")], "Y": [(mea("Forecast Amount"), "Net cash")]}, sort(col("Forecast", "Cash Flow Line")),
+          {"labels": labels(8, 1000, 1),
+           "sentimentColors": props(increaseFill=color(JADE), decreaseFill=color(COPPER), totalFill=color(GOLD)),
+           "legend": props(show=lit(False))})
+    chart(p5, "fc_weeks", 22, 466, 560, 234, "tableEx", "Week by week",
+          {"Values": [(col("Forecast Week", "Week"), "Week"), (mea("Forecast In"), "Money in"), (mea("Forecast Out"), "Money out"),
+                      (mea("Forecast Amount"), "Net"), (mea("Forecast Balance"), "Cash at week end")]},
+          sort(col("Forecast Week", "Week")), objects=grid_objects(9, pad=1) | NO_TOTALS)
+    chart(p5, "fc_plan", 594, 466, 664, 234, "tableEx", "The plan behind it (edit cash-plan.csv, then Refresh)",
+          {"Values": [(col("Cash Plan", "Item"), "Item"), (col("Cash Plan", "How It Is Estimated"), "Estimated from"),
+                      (col("Cash Plan", "When"), "When"), (col("Cash Plan", "Per Time"), "Each time")]},
+          sort(col("Cash Plan", "Item")), objects=grid_objects(9, pad=1) | NO_TOTALS)
+    # ---------------------------------------------------------------- 6 Ledger
+    p6 = Page("ledger", "Ledger")
+    header(p6, "Ledger", SUB + "  ·  debit +, credit −")
+    slicer(p6, "lg_acct", 22, 74, 330, ACCT, "ACCOUNT", "Account", h=84, default="1000 Business checking")
+    slicer(p6, "lg_month", 364, 74, 220, MONTH, "MONTH", "Month", h=84)
+    kpi_row(p6, "lg_k", 74, 84, [("Balance Start", "Balance at start", "◁"), ("Balance Movement", "Movement", "↕"),
+                                 ("Closing Balance", "Balance at end", "▷")], x0=596, size=18)
+    chart(p6, "lg_table", 22, 170, 1236, 530, "tableEx", "Ledger lines for the account (running balance after each line)",
+          {"Values": [(col("Ledger", "Date"), "Date"), (col("Ledger", "Payee"), "Payee"), (col("Ledger", "Description"), "As on the export"),
+                      (col("Ledger", "Source"), "Source"), (col("Ledger", "Line ID"), "Line"), (mea("Ledger Debit"), "Debit"),
+                      (mea("Ledger Credit"), "Credit"), (mea("Running Balance"), "Balance")]},
+          {"sort": [{"field": col("Ledger", "Date"), "direction": "Ascending"}, {"field": col("Ledger", "Line ID"), "direction": "Ascending"}],
+           "isDefaultSort": False}, objects=grid_objects(9, pad=1) | NO_TOTALS)
+    # ---------------------------------------------------------------- 7 Checks
+    p7 = Page("checks", "Checks")
+    header(p7, "Can the numbers be trusted?", "Recalculated on every refresh, independent of the slicers  ·  "
+           "a second read of every export file")
+    kpi_row(p7, "ck_k", 74, 88, [("Checks Passed", "Checks", "✓", None, None, GOOD), ("Checks Failed", "Failed", "✕"),
+                                 ("Chk Review Lines", "Lines waiting for a rule", "?", None, None, AMBER)], x0=22, x1=846, size=22)
+    chart(p7, "ck_table", 22, 174, 1236, 338, "tableEx", "Data checks",
           {"Values": [(col("Checks", "No"), "#"), (col("Checks", "Check"), "Check"), (col("Checks", "Why it matters"), "Why it matters"),
                       (mea("Check Detail"), "Result"), (mea("Check Status"), "Status")]},
           sort(col("Checks", "No")),
-          objects=grid_objects(11, [cond_color("_Measures.Check Status", "Check Color")]) | NO_TOTALS)
-    chart(p4, "ck_review", 22, 524, 1236, 176, "tableEx", "Lines waiting for a rule (add a keyword to rules.csv, then refresh)",
+          objects=grid_objects(10, [cond_color("_Measures.Check Status", "Check Color")]) | NO_TOTALS)
+    chart(p7, "ck_review", 22, 524, 1236, 176, "tableEx", "Lines waiting for a rule (add a keyword to rules.csv, then refresh)",
           {"Values": [(col("Ledger", "Date"), "Date"), (col("Ledger", "Source"), "Source"), (col("Ledger", "Description"), "Description"),
                       (col("Ledger", "Line ID"), "Line"), (mea("Review Amount"), "Amount")]},
-          sort(col("Ledger", "Date")), objects=grid_objects(10))
-    return [p1, p2, p3, p4]
+          sort(col("Ledger", "Date")), objects=grid_objects(9))
+    return [p1, p2, p3, p4, p5, p6, p7]
 
 
 def build_report():
@@ -812,9 +1227,14 @@ def build_report():
     (RP / "StaticResources" / "SharedResources" / "BaseThemes").mkdir(parents=True)
     shutil.copyfile(theme_src, RP / "StaticResources" / "SharedResources" / "BaseThemes" / f"{base}.json")
     (RP / "StaticResources" / "RegisteredResources").mkdir(parents=True)
-    custom = {"name": "Copperleaf", "dataColors": ["#1F4E79", TEAL, "#E07B39", "#7A5195", MUTED, "#C0392B", "#1E8449", "#B9770E"],
-              "foreground": INK, "background": "#FFFFFF", "tableAccent": TEAL,
-              "visualStyles": {"page": {"*": {"background": [{"color": {"solid": {"color": PAGE_BG}}, "transparency": 0}]}}}}
+    custom = {"name": "Copperleaf Dark", "dataColors": [JADE, GOLD, COPPER, SKY, "#9C8AC0", "#5F7A8A", "#D9B97A", "#6FB3A0"],
+              "foreground": IVORY, "foregroundNeutralSecondary": MUTED, "foregroundNeutralTertiary": "#5F6B77",
+              "background": CARD, "backgroundLight": CARD_ALT, "backgroundNeutral": LINE, "tableAccent": GOLD,
+              "good": GOOD, "bad": BAD, "neutral": AMBER, "maximum": GOLD, "center": CARD_ALT, "minimum": CARD,
+              "textClasses": {"callout": {"fontFace": SERIF, "color": IVORY}, "title": {"fontFace": SERIF, "color": IVORY},
+                              "header": {"fontFace": SANS_SB, "color": GOLD}, "label": {"fontFace": SANS, "color": IVORY}},
+              "visualStyles": {"page": {"*": {"background": [{"color": {"solid": {"color": PAGE_BG}}, "transparency": 0}]}},
+                               "*": {"*": {"visualTooltip": [{"titleFontColor": GOLD, "valueFontColor": IVORY, "background": {"solid": {"color": HDR}}}]}}}}
     (RP / "StaticResources" / "RegisteredResources" / "Copperleaf.json").write_text(json.dumps(custom, indent=2), encoding="utf-8")
     ver = {"visual": "2.14.0", "report": "3.3.0", "page": "2.1.0"}
     report = {"$schema": f"{S}/report/3.3.0/schema.json",

@@ -63,6 +63,27 @@ EVALUATE SELECTCOLUMNS ( FILTER ( Ledger, Ledger[Side] = "Register" ),
     "Line", Ledger[Line ID], "Date", Ledger[Date], "Register", Ledger[Register No], "Account", Ledger[Offset Account No],
     "Amount", Ledger[Amount] )
 "@
+$snap.kpi = Run @"
+EVALUATE ROW ( "IncomeVsBudget", [Income vs Budget %], "ExpenseVsBudget", [Expense vs Budget %], "CashChange", [Cash Change] )
+"@
+$snap.insights = Run @"
+EVALUATE ADDCOLUMNS ( VALUES ( Insights[No] ), "Text", [Insight] )
+"@
+$snap.forecast = Run @"
+EVALUATE SUMMARIZECOLUMNS ( 'Forecast Week'[Week No], "Net", [Forecast Amount], "Balance", [Forecast Balance] )
+"@
+$snap.forecastKpi = Run @"
+EVALUATE ROW ( "Today", [Cash Today], "Lowest", [Lowest Forecast Cash], "Headroom", [Headroom], "Below", [Weeks Below Buffer], "Closing", [Forecast Closing] )
+"@
+$snap.revenue = Run @"
+EVALUATE ROW ( "GM", [Gross Margin %], "WS", [Wholesale Share %], "Payroll", [Payroll % of Income], "Spend", [Spend], "CounterDay", [Counter Sales per Day] )
+"@
+$snap.payees = Run @"
+EVALUATE SUMMARIZECOLUMNS ( Ledger[Payee], "Spend", [Spend] )
+"@
+$snap.running = Run @"
+EVALUATE CALCULATETABLE ( SUMMARIZECOLUMNS ( Ledger[Line ID], Ledger[Date], "Balance", [Running Balance] ), Account[Account Label] = "1000 Business checking" )
+"@
 $conn.Close()
 $out = Join-Path $root 'test\model-snapshot.json'
 [IO.File]::WriteAllText($out, ($snap | ConvertTo-Json -Depth 5), (New-Object Text.UTF8Encoding $false))

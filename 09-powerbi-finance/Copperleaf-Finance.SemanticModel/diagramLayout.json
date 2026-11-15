@@ -16,7 +16,7 @@
           "nodeIndex": "Date",
           "nodeLineageTag": "3b2654b0-3177-5950-bf7d-8ba08058c69e",
           "size": {
-            "height": 336,
+            "height": 370,
             "width": 260
           },
           "zIndex": 0
@@ -42,7 +42,7 @@
           "nodeIndex": "Account",
           "nodeLineageTag": "9c327b0c-41d9-576f-ad85-2ca6a40580c0",
           "size": {
-            "height": 336,
+            "height": 370,
             "width": 260
           },
           "zIndex": 0
@@ -121,6 +121,71 @@
           "nodeLineageTag": "72140270-f17f-50f6-85d1-22830826fd0b",
           "size": {
             "height": 234,
+            "width": 260
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1120,
+            "y": 900
+          },
+          "nodeIndex": "Insights",
+          "nodeLineageTag": "f46a8022-7bf0-5f15-8104-019b74a234a5",
+          "size": {
+            "height": 132,
+            "width": 260
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 40,
+            "y": 1060
+          },
+          "nodeIndex": "Forecast",
+          "nodeLineageTag": "427f77b3-c777-5485-9768-7f6c9907af46",
+          "size": {
+            "height": 268,
+            "width": 260
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 400,
+            "y": 1060
+          },
+          "nodeIndex": "Forecast Week",
+          "nodeLineageTag": "911b1644-b9f0-54d1-b832-6f33c2ef71c7",
+          "size": {
+            "height": 200,
+            "width": 260
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 780,
+            "y": 1060
+          },
+          "nodeIndex": "Cash Plan",
+          "nodeLineageTag": "27839cb2-45e4-57f8-aa1c-6464a79bbe3b",
+          "size": {
+            "height": 370,
+            "width": 260
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1120,
+            "y": 1060
+          },
+          "nodeIndex": "Cash Buffer",
+          "nodeLineageTag": "f1b57574-300c-53c8-8fe3-6863a7f14a81",
+          "size": {
+            "height": 98,
             "width": 260
           },
           "zIndex": 0

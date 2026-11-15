@@ -71,6 +71,14 @@ table Account
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Cost Group'
+		dataType: string
+		lineageTag: 66ebbdc6-f4a2-59eb-b5a2-4d435f548416
+		summarizeBy: none
+		sourceColumn: Cost Group
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Account = m
 		mode: import
 		source =
@@ -79,7 +87,14 @@ table Account
 				    Label = Table.AddColumn(Source, "Account Label", each Text.From([Account No]) & " " & [Account], type text),
 				    Cash = Table.AddColumn(Label, "Is Cash Account", each [Is Cash] = "Y", type logical),
 				    Key = Table.AddColumn(Cash, "Category Key", each [Type], type text),
-				    Out = Table.RenameColumns(Table.RemoveColumns(Key, {"Is Cash"}), {{"Is Cash Account", "Is Cash"}})
+				    // the slices of the cost mix chart
+				    Group = Table.AddColumn(Key, "Cost Group", each
+				        if [Type] = "COGS" then "Ingredients and packaging"
+				        else if [Account No] = 6000 then "Payroll"
+				        else if [Account No] = 6100 then "Rent"
+				        else if [Account No] = 6200 then "Utilities"
+				        else if [Type] = "Expense" then "Other overheads" else null, type text),
+				    Out = Table.RenameColumns(Table.RemoveColumns(Group, {"Is Cash"}), {{"Is Cash Account", "Is Cash"}})
 				in
 				    Out
 

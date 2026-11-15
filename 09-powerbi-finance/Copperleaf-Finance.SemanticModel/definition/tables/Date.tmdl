@@ -70,9 +70,20 @@ table Date
 
 	column Weekday
 		dataType: string
+		sortByColumn: 'Weekday No'
 		lineageTag: 4fa4a1eb-3b8c-5143-9c6d-7eba3034b2d1
 		summarizeBy: none
 		sourceColumn: Weekday
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Weekday No'
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: 072e2b0e-1818-5bb2-97e4-4988fcb95961
+		summarizeBy: none
+		sourceColumn: Weekday No
 
 		annotation SummarizationSetBy = Automatic
 
@@ -91,8 +102,9 @@ table Date
 				    MStart = Table.AddColumn(Month, "Month Start", each Date.StartOfMonth([Date]), type date),
 				    MEnd = Table.AddColumn(MStart, "Month End", each Date.EndOfMonth([Date]), type date),
 				    Day = Table.AddColumn(MEnd, "Day", each Date.Day([Date]), Int64.Type),
-				    Weekday = Table.AddColumn(Day, "Weekday", each Date.ToText([Date], [Format = "ddd", Culture = "en-US"]), type text)
+				    Weekday = Table.AddColumn(Day, "Weekday", each Date.ToText([Date], [Format = "ddd", Culture = "en-US"]), type text),
+				    WeekdayNo = Table.AddColumn(Weekday, "Weekday No", each Date.DayOfWeek([Date], Day.Monday) + 1, Int64.Type)
 				in
-				    Weekday
+				    WeekdayNo
 
 	annotation PBI_ResultType = Table

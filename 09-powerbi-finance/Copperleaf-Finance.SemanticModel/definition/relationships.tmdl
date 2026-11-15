@@ -26,3 +26,7 @@ relationship 8e032b8d-9655-512c-8be2-a8361126cee5
 	fromColumn: Statements.'Account No'
 	toColumn: Account.'Account No'
 
+relationship 52e4a6be-f299-5635-81a1-3e849cd67e51
+	fromColumn: Forecast.'Week No'
+	toColumn: 'Forecast Week'.'Week No'
+

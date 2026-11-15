@@ -1,18 +1,46 @@
 {
-  "name": "Copperleaf",
+  "name": "Copperleaf Dark",
   "dataColors": [
-    "#1F4E79",
-    "#00968A",
-    "#E07B39",
-    "#7A5195",
-    "#5F6B7A",
-    "#C0392B",
-    "#1E8449",
-    "#B9770E"
+    "#4FA38C",
+    "#C9A35B",
+    "#B5754A",
+    "#7FA7C9",
+    "#9C8AC0",
+    "#5F7A8A",
+    "#D9B97A",
+    "#6FB3A0"
   ],
-  "foreground": "#1B2A3A",
-  "background": "#FFFFFF",
-  "tableAccent": "#00968A",
+  "foreground": "#ECE6DA",
+  "foregroundNeutralSecondary": "#8E98A3",
+  "foregroundNeutralTertiary": "#5F6B77",
+  "background": "#1A2129",
+  "backgroundLight": "#202832",
+  "backgroundNeutral": "#2A333D",
+  "tableAccent": "#C9A35B",
+  "good": "#5BBF8A",
+  "bad": "#E5735F",
+  "neutral": "#D9A441",
+  "maximum": "#C9A35B",
+  "center": "#202832",
+  "minimum": "#1A2129",
+  "textClasses": {
+    "callout": {
+      "fontFace": "Georgia",
+      "color": "#ECE6DA"
+    },
+    "title": {
+      "fontFace": "Georgia",
+      "color": "#ECE6DA"
+    },
+    "header": {
+      "fontFace": "Segoe UI Semibold",
+      "color": "#C9A35B"
+    },
+    "label": {
+      "fontFace": "Segoe UI",
+      "color": "#ECE6DA"
+    }
+  },
   "visualStyles": {
     "page": {
       "*": {
@@ -20,10 +48,25 @@
           {
             "color": {
               "solid": {
-                "color": "#F3F5F8"
+                "color": "#12171D"
               }
             },
             "transparency": 0
+          }
+        ]
+      }
+    },
+    "*": {
+      "*": {
+        "visualTooltip": [
+          {
+            "titleFontColor": "#C9A35B",
+            "valueFontColor": "#ECE6DA",
+            "background": {
+              "solid": {
+                "color": "#0B0F13"
+              }
+            }
           }
         ]
       }

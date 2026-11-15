@@ -1,0 +1,94 @@
+/// The owner's assumptions for the 13-week cash forecast (cash-plan.csv) and the amount each one gives.
+table 'Cash Plan'
+	lineageTag: 27839cb2-45e4-57f8-aa1c-6464a79bbe3b
+
+	column Order
+		dataType: int64
+		formatString: 0
+		lineageTag: d93f5a8b-1404-5ffe-9cbd-daee48ff2f7a
+		summarizeBy: none
+		sourceColumn: Order
+
+		annotation SummarizationSetBy = Automatic
+
+	column Item
+		dataType: string
+		sortByColumn: Order
+		lineageTag: 8aeb9430-ecc0-5ed5-9b53-81a4b5226828
+		summarizeBy: none
+		sourceColumn: Item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cash Flow Line'
+		dataType: string
+		lineageTag: 3009e6db-eb2a-544d-a7bb-eabe631766e8
+		summarizeBy: none
+		sourceColumn: Cash Flow Line
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'How It Is Estimated'
+		dataType: string
+		lineageTag: 2b2b0571-ac40-5e9b-b823-def363c38698
+		summarizeBy: none
+		sourceColumn: How It Is Estimated
+
+		annotation SummarizationSetBy = Automatic
+
+	column When
+		dataType: string
+		lineageTag: eba9c08b-217f-5b29-9e42-9b9f6f6629de
+		summarizeBy: none
+		sourceColumn: When
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Per Time'
+		dataType: decimal
+		formatString: #,0;(#,0);0
+		lineageTag: 68bd82d1-9d7c-506e-955b-3cc0ac2d9b42
+		summarizeBy: none
+		sourceColumn: Per Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column Times
+		dataType: int64
+		formatString: 0
+		lineageTag: 9ca5111a-e760-54fb-adfe-a3fa530b2b3d
+		summarizeBy: sum
+		sourceColumn: Times
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total 13 Weeks'
+		dataType: decimal
+		formatString: #,0;(#,0);0
+		lineageTag: 3618280c-e91a-59ba-b346-14bc13966998
+		summarizeBy: sum
+		sourceColumn: Total 13 Weeks
+
+		annotation SummarizationSetBy = Automatic
+
+	column Note
+		dataType: string
+		lineageTag: 9d258578-f26c-59f7-b290-983e9930d075
+		summarizeBy: none
+		sourceColumn: Note
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Cash Plan' = m
+		mode: import
+		source =
+				let
+				    Source = CashPlanCalc,
+				    Times = Table.AddColumn(Source, "Times", each List.Count([Dates]), Int64.Type),
+				    Total = Table.AddColumn(Times, "Total 13 Weeks", each [Per Time] * [Times], Currency.Type),
+				    Out = Table.SelectColumns(Total, {"Order", "Item", "Cash Flow Line", "How It Is Estimated", "When", "Per Time", "Times", "Total 13 Weeks", "Note"}),
+				    Typed = Table.TransformColumnTypes(Out, {{"Per Time", Currency.Type}})
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

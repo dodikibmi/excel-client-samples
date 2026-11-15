@@ -31,7 +31,7 @@ table _Measures
 		displayFolder: 1 Profit and loss
 		lineageTag: e2c1ba18-9aa1-5dcf-94a8-7d14a1b9090b
 
-	measure 'Net Profit Color' = IF ( [Net Profit] < 0, "#C0392B", "#00968A" )
+	measure 'Net Profit Color' = IF ( [Net Profit] < 0, "#E5735F", "#5BBF8A" )
 		displayFolder: 1 Profit and loss
 		isHidden
 		lineageTag: c02cbdb1-26d1-596d-8b6b-c5b6d10bb4e1
@@ -65,7 +65,7 @@ table _Measures
 		displayFolder: 2 Budget
 		lineageTag: 52f9c5b1-7a89-5636-8b70-85ff51298d06
 
-	measure 'Variance Color' = SWITCH ( TRUE (), [Variance] < -0.5, "#C0392B", [Variance] > 0.5, "#1E8449", "#5F6B7A" )
+	measure 'Variance Color' = SWITCH ( TRUE (), [Variance] < -0.5, "#E5735F", [Variance] > 0.5, "#5BBF8A", "#8E98A3" )
 		displayFolder: 2 Budget
 		isHidden
 		lineageTag: 5034af8c-9222-5c86-8976-eda83d4ae6d6
@@ -285,7 +285,7 @@ table _Measures
 		displayFolder: 5 Checks
 		lineageTag: cea89b42-3961-5ad8-a17a-0a1f6ecab426
 
-	measure 'Check Color' = SWITCH ( [Check Status], "PASS", "#1E8449", "FAIL", "#C0392B", "REVIEW", "#B9770E" )
+	measure 'Check Color' = SWITCH ( [Check Status], "PASS", "#5BBF8A", "FAIL", "#E5735F", "REVIEW", "#D9A441" )
 		displayFolder: 5 Checks
 		isHidden
 		lineageTag: 70677863-d6fe-5610-90e9-29d754c9b652
@@ -302,6 +302,365 @@ table _Measures
 		formatString: 0
 		displayFolder: 5 Checks
 		lineageTag: 70a5c199-161a-59e3-a69d-2aa580c39d7f
+
+	measure 'Income Budget' = CALCULATE ( [Budget], KEEPFILTERS ( Category[Group] = "Income" ) )
+		formatString: #,0
+		displayFolder: 6 Report text
+		lineageTag: 43bd7dbd-30a4-52b5-a2d3-88ab512f60f5
+
+	measure 'Expense Budget' = -CALCULATE ( [Budget], KEEPFILTERS ( Category[Group] = "Expense" ) )
+		formatString: #,0
+		displayFolder: 6 Report text
+		lineageTag: 1b63e2ca-f5a6-5e13-a0f4-b755f83f73f8
+
+	measure 'Income vs Budget %' = DIVIDE ( [Total Income] - [Income Budget], [Income Budget] )
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: 6 Report text
+		lineageTag: 701ac72b-c78e-5053-924b-a7757983e474
+
+	measure 'Expense vs Budget %' = DIVIDE ( [Total Expense] - [Expense Budget], [Expense Budget] )
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: 6 Report text
+		lineageTag: 0cf7438e-cfca-5bf9-92e6-f618e189ab6e
+
+	measure 'Budget Margin %' = DIVIDE ( [Budget], [Income Budget] )
+		formatString: 0.0%
+		displayFolder: 6 Report text
+		lineageTag: aa91664f-5db0-5d0f-90f2-ae375d45c201
+
+	measure 'Cash Start' =
+			-- cash (checking + savings) the day before the first date in the selection
+			VAR d0 = MIN ( 'Date'[Date] )
+			RETURN
+			    CALCULATE (
+			        SUM ( Account[Opening Balance] )
+			            + CALCULATE ( SUM ( Ledger[Amount] ), 'Date'[Date] < d0 ),
+			        KEEPFILTERS ( Account[Is Cash] = TRUE () ),
+			        REMOVEFILTERS ( 'Date' )
+			    )
+		formatString: #,0
+		displayFolder: 6 Report text
+		lineageTag: ab963a47-3596-5ad8-97ac-c42fe08a9214
+
+	measure 'Cash Change' = [Cash Balance] - [Cash Start]
+		formatString: +#,0;-#,0;0
+		displayFolder: 6 Report text
+		lineageTag: f60df14f-4415-560e-aa2e-08a7311bc009
+
+	measure 'Income Note' =
+			VAR p = [Income vs Budget %]
+			RETURN IF ( ISBLANK ( p ), "no budget", IF ( p >= 0, "▲ ", "▼ " ) & FORMAT ( ABS ( p ), "0.0%" ) & " vs budget" )
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: e96f79b5-3c93-512b-951d-fd3734d4fe3b
+
+	measure 'Income Note Color' = IF ( [Income vs Budget %] < 0, "#E5735F", "#5BBF8A" )
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: f60af5ea-f128-5292-b1a6-37e722593a93
+
+	measure 'Expense Note' =
+			VAR p = [Expense vs Budget %]
+			RETURN IF ( ISBLANK ( p ), "no budget", IF ( p > 0, "▲ " & FORMAT ( p, "0.0%" ) & " over budget", "▼ " & FORMAT ( -p, "0.0%" ) & " under budget" ) )
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: daef78d5-9cc4-5395-af71-167ecee79a1e
+
+	measure 'Expense Note Color' = IF ( [Expense vs Budget %] > 0, "#E5735F", "#5BBF8A" )
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: c2e67a70-51c8-56de-88c9-d8d39417f581
+
+	measure 'Profit Note' = "budget " & FORMAT ( [Budget], "#,0;(#,0);0" ) & "  ·  " & FORMAT ( [Variance], "+#,0;-#,0;0" )
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: 0a03a908-d70b-5360-a7f7-963258852ae2
+
+	measure 'Margin Note' = "budget " & FORMAT ( [Budget Margin %], "0.0%;-0.0%;0.0%" )
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: 6b9fc97c-6321-5791-af42-78832ffd19e3
+
+	measure 'Margin Note Color' = IF ( [Net Margin %] < [Budget Margin %], "#E5735F", "#5BBF8A" )
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: 2977a39c-13e7-58fc-b09a-12f6610c1e4b
+
+	measure 'MoM Note' =
+			VAR m = MAX ( 'Date'[Month Start] )
+			RETURN
+			    IF ( ISBLANK ( [Income Previous Month] ), "first month: nothing to compare",
+			        FORMAT ( m, "mmm" ) & " " & FORMAT ( [Income Last Month], "#,0" ) & " vs " & FORMAT ( EDATE ( m, -1 ), "mmm" ) & " " & FORMAT ( [Income Previous Month], "#,0" ) )
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: 18b977ea-b513-586d-84db-277ed9073812
+
+	measure 'Cash Note' =
+			VAR c = [Cash Change]
+			RETURN IF ( c >= 0, "▲ ", "▼ " ) & FORMAT ( ABS ( c ), "#,0" ) & " in the period"
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: f847ad4f-c341-5dcb-902e-53e1874ffe38
+
+	measure 'Cash Note Color' = IF ( [Cash Change] < 0, "#E5735F", "#5BBF8A" )
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: 81c09311-096f-5390-bc06-588ea6eb43ae
+
+	measure Insight =
+			-- one sentence per row of the Insights table, recalculated for the month and account picked in the slicers
+			VAR byAccount = FILTER ( ADDCOLUMNS ( VALUES ( Account[Account Label] ), "@v", [Variance] ), NOT ISBLANK ( [@v] ) )
+			VAR worst = TOPN ( 1, byAccount, [@v], ASC )
+			VAR best = TOPN ( 1, byAccount, [@v], DESC )
+			RETURN
+			    SWITCH ( SELECTEDVALUE ( Insights[No] ),
+			        1, "Net profit " & FORMAT ( [Net Profit], "#,0;(#,0);0" ) & " against a budget of " & FORMAT ( [Budget], "#,0;(#,0);0" )
+			            & " (" & FORMAT ( [Variance], "+#,0;-#,0;0" ) & ")",
+			        2, "Income " & FORMAT ( [Income vs Budget %], "+0.0%;-0.0%;0.0%" ) & " vs budget, costs " & FORMAT ( [Expense vs Budget %], "+0.0%;-0.0%;0.0%" ),
+			        3, MAXX ( worst, Account[Account Label] & ": " & FORMAT ( [@v], "+#,0;-#,0;0" ) & " vs budget" ),
+			        4, MAXX ( best, Account[Account Label] & ": " & FORMAT ( [@v], "+#,0;-#,0;0" ) & " vs budget" ),
+			        5, "Cash " & IF ( [Cash Change] >= 0, "up ", "down " ) & FORMAT ( ABS ( [Cash Change] ), "#,0" ) & " to " & FORMAT ( [Cash Balance], "#,0" ),
+			        6, "Lowest cash " & FORMAT ( [Lowest Forecast Cash], "#,0" ) & " in " & [Lowest Forecast Week] & ", "
+			            & FORMAT ( ABS ( [Headroom] ), "#,0" ) & IF ( [Headroom] >= 0, " above", " below" ) & " a buffer of " & FORMAT ( [Cash Buffer Value], "#,0" )
+			    )
+		displayFolder: 6 Report text
+		lineageTag: 448206b5-d7e0-536b-a037-723010c84cf7
+
+	measure 'Insight Color' = SWITCH ( SELECTEDVALUE ( Insights[No] ), 1, [Variance Color], 3, "#E5735F", 4, "#5BBF8A", 5, [Cash Note Color], 6, [Headroom Color], "#ECE6DA" )
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: 8dc9619e-26e0-5803-bd31-b767b791c48c
+
+	measure 'Gross Margin %' = DIVIDE ( [Gross Profit], [Total Income] )
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 7 Revenue and costs
+		lineageTag: 5ac5a8b1-3155-5a7d-9afc-d4a5fff65be6
+
+	measure 'Budget Gross Margin %' = DIVIDE ( [Income Budget] + CALCULATE ( [Budget], KEEPFILTERS ( Category[Category Key] = "COGS" ) ), [Income Budget] )
+		formatString: 0.0%
+		displayFolder: 7 Revenue and costs
+		lineageTag: 6e9f7f1a-64ac-5f37-8fa7-607d96bdfac9
+
+	measure 'Gross Margin Note' = "budget " & FORMAT ( [Budget Gross Margin %], "0.0%" )
+		displayFolder: 7 Revenue and costs
+		isHidden
+		lineageTag: 5c449d31-f34b-5e5a-90a2-b7aa9d328106
+
+	measure 'Gross Margin Note Color' = IF ( [Gross Margin %] < [Budget Gross Margin %], "#E5735F", "#5BBF8A" )
+		displayFolder: 7 Revenue and costs
+		isHidden
+		lineageTag: 41e36b05-d5ef-5c6c-8658-b0df6fde7aaa
+
+	measure 'Counter Sales' = CALCULATE ( [Total Income], KEEPFILTERS ( Account[Account No] = 4000 ) )
+		formatString: #,0
+		displayFolder: 7 Revenue and costs
+		lineageTag: d45151aa-a756-55b0-9571-c0ecc014a2d3
+
+	measure 'Wholesale Sales' = CALCULATE ( [Total Income], KEEPFILTERS ( Account[Account No] = 4100 ) )
+		formatString: #,0
+		displayFolder: 7 Revenue and costs
+		lineageTag: 9845b90a-4d3c-53cd-b949-61040603d6fc
+
+	measure 'Wholesale Share %' = DIVIDE ( [Wholesale Sales], [Total Income] )
+		formatString: 0.0%
+		displayFolder: 7 Revenue and costs
+		lineageTag: 0f44412e-4b08-5e06-8dec-f17634a9db05
+
+	measure 'Wholesale Note' = "wholesale " & FORMAT ( [Wholesale Sales], "#,0" ) & " of " & FORMAT ( [Total Income], "#,0" )
+		displayFolder: 7 Revenue and costs
+		isHidden
+		lineageTag: f6390db9-0f72-5ed2-8686-5ab9fcb51fe1
+
+	measure 'Counter Sales per Day' =
+			-- calendar days, days without a deposit count as 0
+			AVERAGEX ( VALUES ( 'Date'[Date] ), [Counter Sales] + 0 )
+		formatString: #,0
+		displayFolder: 7 Revenue and costs
+		lineageTag: e87252d1-f3a0-5abd-b1db-f40e66f93937
+
+	measure 'Counter Day Note' = "best day " & FORMAT ( MAXX ( VALUES ( 'Date'[Date] ), [Counter Sales] ), "#,0" )
+		displayFolder: 7 Revenue and costs
+		isHidden
+		lineageTag: 9b42323e-ef94-5d4d-8f45-31ca276e99c9
+
+	measure 'Payroll % of Income' = DIVIDE ( CALCULATE ( [Total Expense], KEEPFILTERS ( Account[Account No] = 6000 ) ), [Total Income] )
+		formatString: 0.0%
+		displayFolder: 7 Revenue and costs
+		lineageTag: 6e0ef702-44e4-54e1-bf5a-8f0dcda16b00
+
+	measure 'Payroll Budget %' = DIVIDE ( -CALCULATE ( [Budget], KEEPFILTERS ( Account[Account No] = 6000 ) ), [Income Budget] )
+		formatString: 0.0%
+		displayFolder: 7 Revenue and costs
+		lineageTag: d2e96e86-8b96-547f-a9fe-84432a47d764
+
+	measure 'Payroll Note' = "budget " & FORMAT ( [Payroll Budget %], "0.0%" )
+		displayFolder: 7 Revenue and costs
+		isHidden
+		lineageTag: a0c17855-3d9c-5857-906b-ceb336378e3e
+
+	measure 'Payroll Note Color' = IF ( [Payroll % of Income] > [Payroll Budget %], "#E5735F", "#5BBF8A" )
+		displayFolder: 7 Revenue and costs
+		isHidden
+		lineageTag: 8662794e-c5ad-5e5e-aad8-9686f87d29ca
+
+	measure Spend =
+			-- paid to suppliers and staff (bank and card lines on cost accounts; depreciation is not paid)
+			CALCULATE ( SUM ( Ledger[Amount] ), KEEPFILTERS ( Ledger[Side] = "Account" ), KEEPFILTERS ( Category[Group] = "Expense" ) )
+		formatString: #,0
+		displayFolder: 7 Revenue and costs
+		lineageTag: 2d250581-e4fc-569d-86b4-a95819cfb198
+
+	measure Payments = CALCULATE ( COUNTROWS ( Ledger ), KEEPFILTERS ( Ledger[Side] = "Account" ), KEEPFILTERS ( Category[Group] = "Expense" ) )
+		formatString: 0
+		displayFolder: 7 Revenue and costs
+		lineageTag: 6060ffbd-b3fd-5a1c-a296-47250913fd7e
+
+	measure 'Average Payment' = DIVIDE ( [Spend], [Payments] )
+		formatString: #,0
+		displayFolder: 7 Revenue and costs
+		lineageTag: a40f50d8-dc52-5fa8-84e0-4e37f981d129
+
+	measure 'Share of Spend %' = DIVIDE ( [Spend], CALCULATE ( [Spend], REMOVEFILTERS ( Ledger[Payee] ) ) )
+		formatString: 0.0%
+		displayFolder: 7 Revenue and costs
+		lineageTag: 9edb2e22-059d-5354-8b58-3e1d0d4d63d1
+
+	measure 'Cash Today' =
+			-- cash after the last bank line, whatever the slicers say
+			CALCULATE ( [Cash Balance], REMOVEFILTERS ( 'Date' ) )
+		formatString: #,0
+		displayFolder: 8 Cash forecast
+		lineageTag: 3a85efa7-5a25-580e-9efe-dc565668008e
+
+	measure 'Forecast Amount' = SUM ( Forecast[Amount] )
+		formatString: #,0;(#,0);0
+		displayFolder: 8 Cash forecast
+		lineageTag: ad281423-0ddc-5834-8f40-1dafc2fa3fbe
+
+	measure 'Forecast In' = CALCULATE ( SUM ( Forecast[Amount] ), KEEPFILTERS ( Forecast[Amount] > 0 ) )
+		formatString: #,0
+		displayFolder: 8 Cash forecast
+		lineageTag: 1a22e523-5337-5ccc-af5c-644bf673522d
+
+	measure 'Forecast Out' = CALCULATE ( SUM ( Forecast[Amount] ), KEEPFILTERS ( Forecast[Amount] < 0 ) )
+		formatString: #,0;(#,0);0
+		displayFolder: 8 Cash forecast
+		lineageTag: 8cabc649-7165-5c30-8f8b-2c730d65156c
+
+	measure 'Forecast Balance' =
+			-- cash today + every expected receipt and payment up to the end of the week
+			VAR w = MAX ( 'Forecast Week'[Week No] )
+			RETURN
+			    [Cash Today] + CALCULATE ( SUM ( Forecast[Amount] ), REMOVEFILTERS ( 'Forecast Week' ), 'Forecast Week'[Week No] <= w )
+		formatString: #,0
+		displayFolder: 8 Cash forecast
+		lineageTag: dd7d9878-b461-5ea8-8a59-9419d383fea4
+
+	measure 'Forecast Closing' = CALCULATE ( [Forecast Balance], REMOVEFILTERS ( 'Forecast Week' ) )
+		formatString: #,0
+		displayFolder: 8 Cash forecast
+		lineageTag: ec1ca3e1-68ef-534a-b82f-3bb97950da09
+
+	measure 'Lowest Forecast Cash' = MINX ( ALL ( 'Forecast Week'[Week No] ), [Forecast Balance] )
+		formatString: #,0
+		displayFolder: 8 Cash forecast
+		lineageTag: 19631a8f-6ccb-540a-af17-c819cc511225
+
+	measure 'Lowest Forecast Week' =
+			VAR t = ADDCOLUMNS ( ALL ( 'Forecast Week'[Week No] ), "@b", [Forecast Balance] )
+			VAR m = MINX ( t, [@b] )
+			VAR w = MAXX ( FILTER ( t, [@b] = m ), 'Forecast Week'[Week No] )
+			RETURN LOOKUPVALUE ( 'Forecast Week'[Week], 'Forecast Week'[Week No], w )
+		displayFolder: 8 Cash forecast
+		lineageTag: a6043ef2-f3a2-5ce3-a47b-48fe8fd39e0a
+
+	measure 'Lowest Note' = "in " & [Lowest Forecast Week]
+		displayFolder: 8 Cash forecast
+		isHidden
+		lineageTag: 92dc8a49-9b88-56dc-82e0-be8a4c3c4c1d
+
+	measure 'Cash Buffer Value' = SELECTEDVALUE ( 'Cash Buffer'[Cash Buffer], 10000 )
+		formatString: #,0
+		displayFolder: 8 Cash forecast
+		lineageTag: b86fdbd3-1ce9-5a47-9363-b76e9a043382
+
+	measure 'Buffer Line' = IF ( HASONEVALUE ( 'Forecast Week'[Week No] ), [Cash Buffer Value] )
+		formatString: #,0
+		displayFolder: 8 Cash forecast
+		lineageTag: 192d4299-4dff-5957-8c06-431d9b7ff9cc
+
+	measure Headroom = [Lowest Forecast Cash] - [Cash Buffer Value]
+		formatString: +#,0;-#,0;0
+		displayFolder: 8 Cash forecast
+		lineageTag: 51877dc6-846c-55f5-8be5-0ef93057cf6a
+
+	measure 'Headroom Color' = IF ( [Headroom] < 0, "#E5735F", "#5BBF8A" )
+		displayFolder: 8 Cash forecast
+		isHidden
+		lineageTag: 88c6fac3-82f4-5f60-bdf2-a0c9018382e7
+
+	measure 'Headroom Note' = "over a buffer of " & FORMAT ( [Cash Buffer Value], "#,0" )
+		displayFolder: 8 Cash forecast
+		isHidden
+		lineageTag: 53427c8b-dad6-51ae-b3c6-3d58f782597a
+
+	measure 'Weeks Below Buffer' = COUNTROWS ( FILTER ( ALL ( 'Forecast Week'[Week No] ), [Forecast Balance] < [Cash Buffer Value] ) ) + 0
+		formatString: 0
+		displayFolder: 8 Cash forecast
+		lineageTag: c8e18554-9cf4-5b4c-ab76-3bc0f8b90738
+
+	measure 'Weeks Below Color' = IF ( [Weeks Below Buffer] > 0, "#E5735F", "#5BBF8A" )
+		displayFolder: 8 Cash forecast
+		isHidden
+		lineageTag: 614a0126-dc2d-50bc-9f62-97086aa32303
+
+	measure 'Weeks Below Note' = "of 13 weeks end under the buffer"
+		displayFolder: 8 Cash forecast
+		isHidden
+		lineageTag: 7c3c0aa8-2a0e-5e12-b86e-68b6acb86d06
+
+	measure 'Today Note' = "checking + savings at " & FORMAT ( CALCULATE ( MAX ( Ledger[Date] ), REMOVEFILTERS () ), "d mmm yyyy" )
+		displayFolder: 8 Cash forecast
+		isHidden
+		lineageTag: fdd7337d-d0ee-516e-9a67-32b375de17e4
+
+	measure 'Balance Start' =
+			VAR d0 = MIN ( 'Date'[Date] )
+			RETURN
+			    CALCULATE ( SUM ( Account[Opening Balance] ) + CALCULATE ( SUM ( Ledger[Amount] ), 'Date'[Date] < d0 ), REMOVEFILTERS ( 'Date' ) )
+		formatString: #,0.00;(#,0.00);0.00
+		displayFolder: 9 Ledger
+		lineageTag: 25d4df23-7f52-5dd2-8d7d-d7513fa71297
+
+	measure 'Balance Movement' = [Closing Balance] - [Balance Start]
+		formatString: +#,0.00;-#,0.00;0.00
+		displayFolder: 9 Ledger
+		lineageTag: 898a8ade-a7b3-5bdf-aef2-d50bdfd10122
+
+	measure 'Ledger Debit' = SUM ( Ledger[Debit] )
+		formatString: #,0.00;(#,0.00);""
+		displayFolder: 9 Ledger
+		lineageTag: d4556543-95b8-53d0-9014-dfdf9d58ad9f
+
+	measure 'Ledger Credit' = SUM ( Ledger[Credit] )
+		formatString: #,0.00;(#,0.00);""
+		displayFolder: 9 Ledger
+		lineageTag: 5c0146e1-b081-5731-afad-89ce7df6a68b
+
+	measure 'Running Balance' =
+			-- balance of the picked account after this line (debit +): opening + every line up to this date and line
+			VAR lineDate = MAX ( Ledger[Date] )
+			VAR lineId = SELECTEDVALUE ( Ledger[Line ID] )
+			RETURN
+			    IF ( HASONEVALUE ( Account[Account No] ) && NOT ISBLANK ( lineId ),
+			        SUM ( Account[Opening Balance] )
+			            -- ALLEXCEPT keeps the account (picked by number or by label) and drops every other filter (month, payee, line)
+			            + CALCULATE ( SUM ( Ledger[Amount] ), ALLEXCEPT ( Ledger, Account[Account No], Account[Account Label] ),
+			                FILTER ( ALL ( Ledger[Date], Ledger[Line ID] ),
+			                    Ledger[Date] < lineDate || ( Ledger[Date] = lineDate && Ledger[Line ID] <= lineId ) ) ) )
+		formatString: #,0.00;(#,0.00);0.00
+		displayFolder: 9 Ledger
+		lineageTag: 4d309762-ce2b-5b57-b7cc-38b0c9f13cca
 
 	column 'Measure Group'
 		dataType: string

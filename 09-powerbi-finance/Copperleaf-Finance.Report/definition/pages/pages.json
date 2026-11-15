@@ -3,7 +3,10 @@
   "pageOrder": [
     "overview",
     "pnl",
+    "revenue",
     "cash",
+    "forecast",
+    "ledger",
     "checks"
   ],
   "activePageName": "overview"

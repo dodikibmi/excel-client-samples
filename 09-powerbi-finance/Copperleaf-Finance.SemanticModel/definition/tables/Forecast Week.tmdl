@@ -1,0 +1,55 @@
+/// The 13 weeks after the last bank line.
+table 'Forecast Week'
+	lineageTag: 911b1644-b9f0-54d1-b832-6f33c2ef71c7
+
+	column 'Week No'
+		dataType: int64
+		formatString: 0
+		isKey
+		lineageTag: 82095591-f149-5e67-8a5c-a831a357de4f
+		summarizeBy: none
+		sourceColumn: Week No
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Week Start'
+		dataType: dateTime
+		formatString: d mmm yyyy
+		lineageTag: f7fb76c2-dab3-5a54-8677-cfc55c41bb33
+		summarizeBy: none
+		sourceColumn: Week Start
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Week End'
+		dataType: dateTime
+		formatString: d mmm yyyy
+		lineageTag: 98e639c9-487f-5291-946c-c40762fde53f
+		summarizeBy: none
+		sourceColumn: Week End
+
+		annotation SummarizationSetBy = Automatic
+
+	column Week
+		dataType: string
+		sortByColumn: 'Week No'
+		lineageTag: 73933529-6afa-58e1-b24f-011c953d651a
+		summarizeBy: none
+		sourceColumn: Week
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Forecast Week' = m
+		mode: import
+		source =
+				let
+				    Start = Date.AddDays(List.Max(BankLines[Post Date]), 1),
+				    Starts = List.Dates(Start, 13, #duration(7, 0, 0, 0)),
+				    T = Table.FromRecords(List.Transform(List.Positions(Starts), (i) => [
+				        #"Week No" = i + 1, #"Week Start" = Starts{i}, #"Week End" = Date.AddDays(Starts{i}, 6),
+				        Week = "W" & Text.From(i + 1) & " · " & Date.ToText(Date.AddDays(Starts{i}, 6), [Format = "d MMM", Culture = "en-US"])])),
+				    Typed = Table.TransformColumnTypes(T, {{"Week No", Int64.Type}, {"Week Start", type date}, {"Week End", type date}, {"Week", type text}})
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

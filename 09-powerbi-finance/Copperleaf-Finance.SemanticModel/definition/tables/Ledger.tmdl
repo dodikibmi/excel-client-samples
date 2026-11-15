@@ -77,6 +77,14 @@ table Ledger
 
 		annotation SummarizationSetBy = Automatic
 
+	column Payee
+		dataType: string
+		lineageTag: 8b3ba6c2-da6a-5265-9171-e01dabef3e9d
+		summarizeBy: none
+		sourceColumn: Payee
+
+		annotation SummarizationSetBy = Automatic
+
 	column 'Account No'
 		dataType: int64
 		formatString: 0
@@ -150,16 +158,16 @@ table Ledger
 				    Posted = List.Combine(List.Transform(Bank, (r) => {
 				        [#"Line ID" = r[Line ID] & "-R", Side = "Register", Date = r[Post Date], #"Txn Date" = r[Txn Date], Source = r[Source],
 				         #"Register No" = r[Register No], Description = r[Description], #"Clean Description" = r[Clean Description],
-				         #"Rule Keyword" = r[Rule Keyword], #"Account No" = r[Register No], #"Offset Account No" = r[Offset Account No], Amount = r[Amount]],
+				         #"Rule Keyword" = r[Rule Keyword], Payee = r[Payee], #"Account No" = r[Register No], #"Offset Account No" = r[Offset Account No], Amount = r[Amount]],
 				        [#"Line ID" = r[Line ID] & "-A", Side = "Account", Date = r[Post Date], #"Txn Date" = r[Txn Date], Source = r[Source],
 				         #"Register No" = r[Register No], Description = r[Description], #"Clean Description" = r[Clean Description],
-				         #"Rule Keyword" = r[Rule Keyword], #"Account No" = r[Offset Account No], #"Offset Account No" = r[Register No], Amount = -r[Amount]]
+				         #"Rule Keyword" = r[Rule Keyword], Payee = r[Payee], #"Account No" = r[Offset Account No], #"Offset Account No" = r[Register No], Amount = -r[Amount]]
 				    })),
 				    Journal = List.Transform(List.Positions(Table.ToRecords(Adjustments)), (i) =>
 				        let a = Table.ToRecords(Adjustments){i} in
 				        [#"Line ID" = a[Entry] & "-" & Text.From(i + 1), Side = "Journal", Date = a[Date], #"Txn Date" = a[Date], Source = "Journal",
 				         #"Register No" = null, Description = a[Description], #"Clean Description" = Norm(a[Description]),
-				         #"Rule Keyword" = null, #"Account No" = a[Account No], #"Offset Account No" = null, Amount = a[Debit] - a[Credit]]),
+				         #"Rule Keyword" = null, Payee = "Journal entry", #"Account No" = a[Account No], #"Offset Account No" = null, Amount = a[Debit] - a[Credit]]),
 				    All = Table.FromRecords(Posted & Journal),
 				    Rounded = Table.TransformColumns(All, {{"Amount", each Number.Round(_, 2), type number}}),
 				    WithDebit = Table.AddColumn(Rounded, "Debit", each if [Amount] > 0 then [Amount] else 0, Currency.Type),
@@ -176,7 +184,7 @@ table Ledger
 				        List.PositionOf({"Receipts from customers", "Payments to suppliers and staff", "Owner's draws", "Card payments", "Transfers between own accounts"}, [Cash Flow Line]) + 1, Int64.Type),
 				    Typed = Table.TransformColumnTypes(WithOrder, {
 				        {"Line ID", type text}, {"Side", type text}, {"Date", type date}, {"Txn Date", type date}, {"Source", type text},
-				        {"Register No", Int64.Type}, {"Description", type text}, {"Clean Description", type text}, {"Rule Keyword", type text},
+				        {"Register No", Int64.Type}, {"Description", type text}, {"Clean Description", type text}, {"Rule Keyword", type text}, {"Payee", type text},
 				        {"Account No", Int64.Type}, {"Offset Account No", Int64.Type}, {"Amount", Currency.Type}})
 				in
 				    Typed

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "ov_exp",
   "position": {
-    "x": 798,
-    "y": 284,
-    "z": 10000,
-    "width": 460,
-    "height": 416,
-    "tabOrder": 10000
+    "x": 856,
+    "y": 258,
+    "z": 44000,
+    "width": 402,
+    "height": 236,
+    "tabOrder": 44000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -45,7 +45,8 @@
                 }
               },
               "queryRef": "_Measures.Total Expense",
-              "nativeQueryRef": "Total Expense"
+              "nativeQueryRef": "Total Expense",
+              "displayName": "Expenses"
             }
           ]
         }
@@ -85,7 +86,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FFFFFF'"
+                      "Value": "'#1A2129'"
                     }
                   }
                 }
@@ -116,7 +117,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#DCE1E7'"
+                      "Value": "'#2A333D'"
                     }
                   }
                 }
@@ -125,7 +126,14 @@
             "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "12D"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
                 }
               }
             }
@@ -158,7 +166,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Where the money goes (expenses by account)'"
+                  "Value": "'Where the money goes'"
                 }
               }
             },
@@ -167,7 +175,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1B2A3A'"
+                      "Value": "'#ECE6DA'"
                     }
                   }
                 }
@@ -183,7 +191,14 @@
             "bold": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Georgia'"
                 }
               }
             }
@@ -195,6 +210,17 @@
       "labels": [
         {
           "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#ECE6DA'"
+                    }
+                  }
+                }
+              }
+            },
             "show": {
               "expr": {
                 "Literal": {
@@ -212,7 +238,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "9D"
+                  "Value": "8D"
                 }
               }
             }
@@ -227,7 +253,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E07B39'"
+                      "Value": "'#C9A35B'"
                     }
                   }
                 }
@@ -243,6 +269,31 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#8E98A3'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "maxMarginFactor": {
+              "expr": {
+                "Literal": {
+                  "Value": "45D"
                 }
               }
             }
@@ -263,6 +314,42 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#8E98A3'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "gridlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#262F39'"
+                    }
+                  }
+                }
+              }
+            },
+            "gridlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'solid'"
                 }
               }
             }

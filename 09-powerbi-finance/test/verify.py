@@ -13,6 +13,7 @@
 Exit code 1 if anything differs.   Run:  python test/verify.py
 """
 import csv, json, re, sys, zipfile
+from decimal import Decimal, ROUND_HALF_EVEN
 from collections import defaultdict
 from datetime import date, datetime
 from pathlib import Path
@@ -167,11 +168,11 @@ check("Checking: books at 31 Oct = the bank's last running balance",
 # ====================================================================== 3. the project files
 tmdl = {p.stem: p.read_text(encoding="utf-8") for p in (SM / "tables").glob("*.tmdl")}
 model_txt = "\n".join(tmdl.values())
-check("Model has the 9 tables (fact, dimensions, budget, statements, checks)", sorted(tmdl) == sorted(exp["model"]["tables"]),
+check(f"Model has the {len(exp['model']['tables'])} tables (fact, dimensions, budget, statements, checks, insights, forecast)", sorted(tmdl) == sorted(exp["model"]["tables"]),
       str(sorted(tmdl)))
 rel_txt = (SM / "relationships.tmdl").read_text(encoding="utf-8")
 found = [(re.sub(r"'", "", f), re.sub(r"'", "", t)) for f, t in re.findall(r"fromColumn: (.+)\n\ttoColumn: (.+)", rel_txt)]
-check("7 star-schema relationships, many-to-one into Date, Account, Category",
+check(f"{len(exp['model']['relationships'])} relationships: star schema into Date, Account, Category, plus forecast weeks",
       sorted(found) == sorted(tuple(r) for r in exp["model"]["relationships"]), str(found))
 measures = set(re.sub(r"^'|'$", "", m) for m in re.findall(r"^\tmeasure (.+?) =", tmdl["_Measures"], re.M))
 missing = [m for m in exp["model"]["measures"] if m not in measures]
@@ -191,7 +192,7 @@ for t, txt in tmdl.items():
         cols[t].add(c.strip("'"))
 pages = [json.loads((RP / "pages" / p / "page.json").read_text(encoding="utf-8"))["displayName"]
          for p in json.loads((RP / "pages" / "pages.json").read_text(encoding="utf-8"))["pageOrder"]]
-check("Report has 4 pages: " + ", ".join(pages), pages == exp["model"]["pages"])
+check(f"Report has {len(pages)} pages: " + ", ".join(pages), pages == exp["model"]["pages"])
 bad, n_fields = [], 0
 for vf in RP.glob("pages/*/visuals/*/visual.json"):
     def walk(o):
@@ -202,7 +203,9 @@ for vf in RP.glob("pages/*/visuals/*/visual.json"):
                     ent = o[kind]["Expression"]["SourceRef"].get("Entity")
                     prop = o[kind]["Property"]
                     n_fields += 1
-                    ok = prop in measures if kind == "Measure" else prop in cols.get(ent, set())
+                    # slicer pre-selections refer to the table through an alias (Source), not by name
+                    known = cols.get(ent, set()) if ent else set().union(*cols.values())
+                    ok = prop in measures if kind == "Measure" else prop in known
                     if not ok:
                         bad.append(f"{vf.parent.name}: {ent}.{prop}")
             for v in o.values():
@@ -250,6 +253,120 @@ else:
           len(st) == 9 and all(near(r["Difference"], 0) and near(r["Books"], statements[(r["Account No"], r["Month No"])]) for r in st))
     cf_ok = all(near(cashflow.get((r["Cash Flow Line"], r["Month No"]), 0), r["Net"]) for r in snap["cashflow"])
     check(f"Power BI cash flow by month: {len(snap['cashflow'])} line-months = Python", cf_ok and len(snap["cashflow"]) == len([k for k in cashflow]))
+    # the KPI notes and the Key insights panel (whole period, no slicer)
+    inc, exp_ = sum(py[m]["revenue"] for m in months), sum(py[m]["cogs"] + py[m]["expenses"] for m in months)
+    inc_b = sum(v for (a, m), v in budget.items() if types[a] == "Revenue")
+    exp_b = -sum(v for (a, m), v in budget.items() if types[a] in ("COGS", "Expense"))
+    cash_change = py[months[-1]]["cash"] - sum(opening[a] for a in cash_accts)
+    var_acct = defaultdict(float)
+    for (a, m), v in net.items():
+        if types[a] in ("Revenue", "COGS", "Expense"):
+            var_acct[a] += -v
+    for (a, m), v in budget.items():
+        var_acct[a] -= v
+    worst, best = min(var_acct, key=var_acct.get), max(var_acct, key=var_acct.get)
+    label = lambda a: f"{a} {accounts[a]['Account']}"
+    k = snap["kpi"][0]
+    check(f"Power BI KPI notes: income {(inc - inc_b) / inc_b:+.1%} and costs {(exp_ - exp_b) / exp_b:+.1%} vs budget, "
+          f"cash change {cash_change:,.2f} = Python",
+          near(k["IncomeVsBudget"], (inc - inc_b) / inc_b, 1e-9) and near(k["ExpenseVsBudget"], (exp_ - exp_b) / exp_b, 1e-9)
+          and near(k["CashChange"], cash_change))
+    ins = {r["No"]: r["Text"] for r in snap["insights"]}
+    check(f"Power BI Key insights: biggest overrun {label(worst)} ({var_acct[worst]:+,.0f}), biggest saving {label(best)} ({var_acct[best]:+,.0f})",
+          ins.get(3) == f"{label(worst)}: {var_acct[worst]:+,.0f} vs budget"
+          and ins.get(4) == f"{label(best)}: {var_acct[best]:+,.0f} vs budget", json.dumps(ins))
+    # ---- 13-week cash forecast, recomputed from cash-plan.csv and the bank lines
+    import calendar
+    from datetime import timedelta
+
+    def add_months(d, k):
+        y, m = divmod(d.month - 1 + k, 12)
+        y, m = d.year + y, m + 1
+        return d.replace(year=y, month=m, day=min(d.day, calendar.monthrange(y, m)[1]))
+
+    def month_end(d):
+        return d.replace(day=calendar.monthrange(d.year, d.month)[1])
+
+    last = max(l["post"] for l in lines)
+    start, end = last + timedelta(days=1), last + timedelta(days=91)
+    fc = defaultdict(float)
+    for r in rows("cash-plan.csv"):
+        accts = {int(a) for a in r["Accounts"].split(";")}
+        hist = [l for l in lines if l["reg"] == int(r["Register No"]) and l["acct"] in accts]
+        lb = int(r["Lookback"]) if r["Lookback"] else 0
+        if r["Basis"] == "fixed":
+            per = float(r["Amount"])
+        elif r["Basis"] == "avg_week":
+            per = sum(l["amount"] for l in hist if l["post"] > last - timedelta(days=7 * lb)) / lb
+        elif r["Basis"] == "avg_month":
+            cut = month_end(add_months(last, -lb))
+            per = sum(l["amount"] for l in hist if l["post"] > cut) / lb
+        else:  # avg_event: the last N posting dates (pay runs), averaged
+            by_day = defaultdict(float)
+            for l in hist:
+                by_day[l["post"]] += l["amount"]
+            top = [by_day[k] for k in sorted(by_day, reverse=True)[:lb]]
+            per = sum(top) / len(top)
+        # Power Query's Number.Round rounds half to even (banker's rounding): -6530.185 -> -6530.18
+        per = float(Decimal(f"{per:.6f}").quantize(Decimal("0.01"), ROUND_HALF_EVEN))
+        first = datetime.strptime(r["First Date"], "%Y-%m-%d").date()
+        if r["Frequency"] == "weekly":
+            dates = [start + timedelta(days=7 * k) for k in range(13)]
+        elif r["Frequency"] == "biweekly":
+            dates = [first + timedelta(days=14 * k) for k in range(8)]
+        else:
+            dates = [add_months(first, k) for k in range(4)]
+        for dd in dates:
+            if start <= dd <= end:
+                fc[(dd - start).days // 7 + 1] += per
+    today = py[months[-1]]["cash"]
+    bal, run = {}, today
+    for w in range(1, 14):
+        run += fc[w]
+        bal[w] = run
+    sw = {r["Week No"]: r for r in snap["forecast"]}
+    check(f"Power BI 13-week forecast: every week's net and closing cash = Python (week 13: {bal[13]:,.2f})",
+          len(sw) == 13 and all(near(sw[w]["Net"] or 0, fc[w], 0.02) and near(sw[w]["Balance"], bal[w], 0.05) for w in range(1, 14)),
+          json.dumps({w: [round(fc[w], 2), round(bal[w], 2)] for w in bal}))
+    low = min(bal.values())
+    below = sum(b < 10000 for b in bal.values())
+    fk = snap["forecastKpi"][0]
+    check(f"Power BI forecast KPIs: cash today {today:,.2f}, lowest {low:,.2f}, headroom {low - 10000:+,.2f} over 10,000, "
+          f"{below} weeks below",
+          near(fk["Today"], today) and near(fk["Lowest"], low, 0.05) and near(fk["Headroom"], low - 10000, 0.05)
+          and fk["Below"] == below, json.dumps(fk))
+    # ---- revenue and costs page
+    rv = snap["revenue"][0]
+    inc_all = sum(py[m]["revenue"] for m in months)
+    cogs_all = sum(py[m]["cogs"] for m in months)
+    whole = -sum(v for (a, m), v in net.items() if a == 4100)
+    payroll = sum(v for (a, m), v in net.items() if a == 6000)
+    check(f"Power BI revenue page: gross margin {(inc_all - cogs_all) / inc_all:.1%}, wholesale {whole / inc_all:.1%}, "
+          f"payroll {payroll / inc_all:.1%} of income = Python",
+          near(rv["GM"], (inc_all - cogs_all) / inc_all, 1e-9) and near(rv["WS"], whole / inc_all, 1e-9)
+          and near(rv["Payroll"], payroll / inc_all, 1e-9), json.dumps(rv))
+    payee_of = {}
+    for r in sorted(rows("rules.csv"), key=lambda r: int(r["Priority"])):
+        payee_of.setdefault(norm(r["Keyword"]), r["Payee"])
+    spend = defaultdict(float)
+    for l in lines:
+        if types[l["acct"]] in ("COGS", "Expense"):
+            k = next((k for k, a in rules if k in norm(l["desc"])), None)
+            spend[payee_of[k] if k else l["desc"]] += -l["amount"]
+    sp = {r["Payee"]: r["Spend"] for r in snap["payees"] if r["Spend"] is not None}
+    top = max(spend, key=spend.get)
+    check(f"Power BI payees: {len(spend)} payees, top {top} {spend[top]:,.2f}, total {sum(spend.values()):,.2f} = Python",
+          set(sp) == set(spend) and all(near(sp[p], spend[p]) for p in spend), str(sorted(set(sp) ^ set(spend)))[:200])
+    # ---- ledger page: running balance of checking after every line
+    chk = sorted([l for l in lines if l["reg"] == 1000], key=lambda l: (l["post"], l["id"]))
+    run, want = opening[1000], {}
+    for l in chk:
+        run = round(run + l["amount"], 2)
+        want[l["id"] + "-R"] = run
+    got = {r["Line ID"]: r["Balance"] for r in snap["running"] if r["Line ID"].endswith("-R")}
+    check(f"Power BI ledger page: running balance after all {len(want)} checking lines = Python (last {run:,.2f})",
+          set(got) == set(want) and all(near(got[k], want[k]) for k in want),
+          str([k for k in want if not near(got.get(k), want[k])][:5]))
     statuses = {str(r["No"]): r["Status"] for r in snap["checks"]}
     check("Power BI Checks page: 8 PASS + 1 REVIEW (3 lines waiting for a rule), 0 FAIL", statuses == exp["checks"], str(statuses))
     by_id = {l["id"]: l for l in lines}

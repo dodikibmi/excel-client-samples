@@ -7,7 +7,7 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["DataFolder", "Norm", "Money", "Checking_Clean", "Savings_Clean", "Card_Clean", "Rules", "AccountsRaw", "Adjustments", "BankLines", "_Measures", "Ledger", "Account", "Category", "Date", "Budget", "Statements", "Source Files", "Checks"]
+annotation PBI_QueryOrder = ["DataFolder", "Norm", "Money", "Checking_Clean", "Savings_Clean", "Card_Clean", "Rules", "AccountsRaw", "Adjustments", "BankLines", "CashPlanCalc", "_Measures", "Ledger", "Account", "Category", "Date", "Budget", "Statements", "Source Files", "Checks", "Cash Plan", "Forecast", "Forecast Week", "Cash Buffer", "Insights"]
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
@@ -22,4 +22,9 @@ ref table Budget
 ref table Statements
 ref table 'Source Files'
 ref table Checks
+ref table 'Cash Plan'
+ref table Forecast
+ref table 'Forecast Week'
+ref table 'Cash Buffer'
+ref table Insights
 

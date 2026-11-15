@@ -1,0 +1,11 @@
+Order,Item,Cash Flow Line,Register No,Accounts,Basis,Lookback,Frequency,First Date,Amount,Note
+1,Customer receipts (counter and wholesale),Receipts from customers,1000,4000;4100,avg_week,8,weekly,2026-11-01,,Card takings and wholesale customers: the average week of the last 8 weeks
+2,Savings interest,Receipts from customers,1010,4900,avg_month,3,monthly,2026-11-30,,Paid on the last day of the month
+3,Payroll and payroll taxes,Payments to suppliers and staff,1000,6000,avg_event,6,biweekly,2026-11-13,,PayPilot every second Friday: net pay + tax impound; average of the last 6 pay runs
+4,Food suppliers (bank),Payments to suppliers and staff,1000,5000,avg_week,8,weekly,2026-11-01,,Northgate invoices paid from checking
+5,Rent,Payments to suppliers and staff,1000,6100,fixed,,monthly,2026-11-01,-4200,Lease: 4200 on the 1st
+6,Insurance,Payments to suppliers and staff,1000,6500,fixed,,monthly,2026-11-05,-385,Premium on the 5th
+7,Utilities (power and water),Payments to suppliers and staff,1000,6200,avg_month,3,monthly,2026-11-14,,Autopay mid-month
+8,Bank and processor fees,Payments to suppliers and staff,1000,6800,avg_month,3,monthly,2026-11-28,,TapPay monthly fee + bank service fee
+9,Card payment,Card payments,2000,5000;5100;6200;6400;6600;6700;6950;6990,avg_month,3,monthly,2026-11-12,,Pays the card spend: the average month of card purchases
+10,Owner's draws,Owner's draws,1000,3100,fixed,,monthly,2026-11-20,-3000,Owner pays themself 3000 on the 20th

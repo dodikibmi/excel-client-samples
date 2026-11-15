@@ -3,11 +3,11 @@
   "name": "pl_trend",
   "position": {
     "x": 686,
-    "y": 172,
-    "z": 6000,
+    "y": 170,
+    "z": 25000,
     "width": 572,
     "height": 256,
-    "tabOrder": 6000
+    "tabOrder": 25000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -101,7 +101,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FFFFFF'"
+                      "Value": "'#1A2129'"
                     }
                   }
                 }
@@ -132,7 +132,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#DCE1E7'"
+                      "Value": "'#2A333D'"
                     }
                   }
                 }
@@ -141,7 +141,14 @@
             "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "12D"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
                 }
               }
             }
@@ -183,7 +190,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1B2A3A'"
+                      "Value": "'#ECE6DA'"
                     }
                   }
                 }
@@ -199,7 +206,14 @@
             "bold": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Georgia'"
                 }
               }
             }
@@ -211,6 +225,17 @@
       "labels": [
         {
           "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#ECE6DA'"
+                    }
+                  }
+                }
+              }
+            },
             "show": {
               "expr": {
                 "Literal": {
@@ -228,7 +253,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "9D"
+                  "Value": "8D"
                 }
               }
             }
@@ -238,6 +263,17 @@
       "legend": [
         {
           "properties": {
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#ECE6DA'"
+                    }
+                  }
+                }
+              }
+            },
             "show": {
               "expr": {
                 "Literal": {
@@ -248,7 +284,14 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'Top'"
+                  "Value": "'TopRight'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
                 }
               }
             }
@@ -263,7 +306,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#00968A'"
+                      "Value": "'#C9A35B'"
                     }
                   }
                 }
@@ -281,7 +324,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#B8C2CC'"
+                      "Value": "'#4A5560'"
                     }
                   }
                 }
@@ -302,6 +345,24 @@
                   "Value": "false"
                 }
               }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#8E98A3'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
             }
           }
         }
@@ -320,6 +381,42 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#8E98A3'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "gridlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#262F39'"
+                    }
+                  }
+                }
+              }
+            },
+            "gridlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'solid'"
                 }
               }
             }

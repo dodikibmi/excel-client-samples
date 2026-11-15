@@ -1847,5 +1847,912 @@
                       "Account":  6400,
                       "Amount":  -137.61
                   }
-              ]
+              ],
+    "kpi":  [
+                {
+                    "IncomeVsBudget":  0.0057709462963836111,
+                    "ExpenseVsBudget":  0.088809140616940063,
+                    "CashChange":  -8007.17
+                }
+            ],
+    "insights":  [
+                     {
+                         "No":  1,
+                         "Text":  "Net profit 1,119 against a budget of 9,115 (-7,996)"
+                     },
+                     {
+                         "No":  2,
+                         "Text":  "Income +0.6% vs budget, costs +8.9%"
+                     },
+                     {
+                         "No":  3,
+                         "Text":  "6000 Payroll and payroll taxes: -6,506 vs budget"
+                     },
+                     {
+                         "No":  4,
+                         "Text":  "5100 Packaging: +995 vs budget"
+                     },
+                     {
+                         "No":  5,
+                         "Text":  "Cash down 8,007 to 35,413"
+                     },
+                     {
+                         "No":  6,
+                         "Text":  "Lowest cash 29,496 in W12 · 23 Jan, 19,496 above a buffer of 10,000"
+                     }
+                 ],
+    "forecast":  [
+                     {
+                         "Week No":  1,
+                         "Net":  1091.01,
+                         "Balance":  36504.39
+                     },
+                     {
+                         "Week No":  2,
+                         "Net":  -4234.9,
+                         "Balance":  32269.49
+                     },
+                     {
+                         "Week No":  3,
+                         "Net":  2676.01,
+                         "Balance":  34945.5
+                     },
+                     {
+                         "Week No":  4,
+                         "Net":  -1848.57,
+                         "Balance":  33096.93
+                     },
+                     {
+                         "Week No":  5,
+                         "Net":  1109.98,
+                         "Balance":  34206.91
+                     },
+                     {
+                         "Week No":  6,
+                         "Net":  -3427.88,
+                         "Balance":  30779.03
+                     },
+                     {
+                         "Week No":  7,
+                         "Net":  4868.99,
+                         "Balance":  35648.02
+                     },
+                     {
+                         "Week No":  8,
+                         "Net":  -3854.17,
+                         "Balance":  31793.85
+                     },
+                     {
+                         "Week No":  9,
+                         "Net":  500.58,
+                         "Balance":  32294.43
+                     },
+                     {
+                         "Week No":  10,
+                         "Net":  -1239.17,
+                         "Balance":  31055.26
+                     },
+                     {
+                         "Week No":  11,
+                         "Net":  2295.28,
+                         "Balance":  33350.54
+                     },
+                     {
+                         "Week No":  12,
+                         "Net":  -3854.17,
+                         "Balance":  29496.37
+                     },
+                     {
+                         "Week No":  13,
+                         "Net":  4700.58,
+                         "Balance":  34196.95
+                     }
+                 ],
+    "forecastKpi":  [
+                        {
+                            "Today":  35413.38,
+                            "Lowest":  29496.37,
+                            "Headroom":  19496.37,
+                            "Below":  0,
+                            "Closing":  34196.95
+                        }
+                    ],
+    "revenue":  [
+                    {
+                        "GM":  0.6552432855308673,
+                        "WS":  0.11053847577533135,
+                        "Payroll":  0.42666209000104821,
+                        "Spend":  104038.27,
+                        "CounterDay":  1030.5474
+                    }
+                ],
+    "payees":  [
+                   {
+                       "Payee":  "Maple St Properties",
+                       "Spend":  12600
+                   },
+                   {
+                       "Payee":  "Northgate Foodservice",
+                       "Spend":  26077.96
+                   },
+                   {
+                       "Payee":  "TapPay (processor fees)",
+                       "Spend":  2938.19
+                   },
+                   {
+                       "Payee":  "Shield Mutual",
+                       "Spend":  1155
+                   },
+                   {
+                       "Payee":  "PayPilot (payroll)",
+                       "Spend":  45506.49
+                   },
+                   {
+                       "Payee":  "Valley Flour Mill",
+                       "Spend":  5103.44
+                   },
+                   {
+                       "Payee":  "City Power \u0026 Light",
+                       "Spend":  1967.75
+                   },
+                   {
+                       "Payee":  "Metro Water",
+                       "Spend":  453.32
+                   },
+                   {
+                       "Payee":  "VENMO *JKELLY",
+                       "Spend":  120
+                   },
+                   {
+                       "Payee":  "Harbor Community Bank",
+                       "Spend":  45
+                   },
+                   {
+                       "Payee":  "CHECK #1043",
+                       "Spend":  350
+                   },
+                   {
+                       "Payee":  "PixelReach Ads",
+                       "Spend":  799.67
+                   },
+                   {
+                       "Payee":  "Paperclip Office",
+                       "Spend":  214.49
+                   },
+                   {
+                       "Payee":  "Costwise",
+                       "Spend":  3833.97
+                   },
+                   {
+                       "Payee":  "Brightwave Internet",
+                       "Spend":  269.97
+                   },
+                   {
+                       "Payee":  "CloudPOS",
+                       "Spend":  207
+                   },
+                   {
+                       "Payee":  "Ledgerly",
+                       "Spend":  90
+                   },
+                   {
+                       "Payee":  "PackRight",
+                       "Spend":  1755.34
+                   },
+                   {
+                       "Payee":  "Oven Doctor",
+                       "Spend":  486.5
+                   },
+                   {
+                       "Payee":  "POS PURCHASE 4471 MAIN ST",
+                       "Spend":  64.18
+                   }
+               ],
+    "running":  [
+                    {
+                        "Line ID":  "CHK-001-R",
+                        "Date":  "2026-08-01",
+                        "Balance":  20020.97
+                    },
+                    {
+                        "Line ID":  "CHK-006-R",
+                        "Date":  "2026-08-04",
+                        "Balance":  16092.33
+                    },
+                    {
+                        "Line ID":  "CHK-007-R",
+                        "Date":  "2026-08-05",
+                        "Balance":  17173.07
+                    },
+                    {
+                        "Line ID":  "CHK-009-R",
+                        "Date":  "2026-08-06",
+                        "Balance":  18138.73
+                    },
+                    {
+                        "Line ID":  "CHK-010-R",
+                        "Date":  "2026-08-07",
+                        "Balance":  19234.91
+                    },
+                    {
+                        "Line ID":  "CHK-013-R",
+                        "Date":  "2026-08-08",
+                        "Balance":  14479.44
+                    },
+                    {
+                        "Line ID":  "CHK-017-R",
+                        "Date":  "2026-08-11",
+                        "Balance":  14277.15
+                    },
+                    {
+                        "Line ID":  "CHK-018-R",
+                        "Date":  "2026-08-12",
+                        "Balance":  15356.62
+                    },
+                    {
+                        "Line ID":  "CHK-020-R",
+                        "Date":  "2026-08-13",
+                        "Balance":  14397.12
+                    },
+                    {
+                        "Line ID":  "CHK-021-R",
+                        "Date":  "2026-08-14",
+                        "Balance":  15579.57
+                    },
+                    {
+                        "Line ID":  "CHK-023-R",
+                        "Date":  "2026-08-15",
+                        "Balance":  16462.05
+                    },
+                    {
+                        "Line ID":  "CHK-026-R",
+                        "Date":  "2026-08-18",
+                        "Balance":  16963.65
+                    },
+                    {
+                        "Line ID":  "CHK-028-R",
+                        "Date":  "2026-08-19",
+                        "Balance":  17970.27
+                    },
+                    {
+                        "Line ID":  "CHK-030-R",
+                        "Date":  "2026-08-20",
+                        "Balance":  19027.02
+                    },
+                    {
+                        "Line ID":  "CHK-032-R",
+                        "Date":  "2026-08-21",
+                        "Balance":  17396.18
+                    },
+                    {
+                        "Line ID":  "CHK-036-R",
+                        "Date":  "2026-08-22",
+                        "Balance":  13417.02
+                    },
+                    {
+                        "Line ID":  "CHK-039-R",
+                        "Date":  "2026-08-25",
+                        "Balance":  12048.22
+                    },
+                    {
+                        "Line ID":  "CHK-040-R",
+                        "Date":  "2026-08-26",
+                        "Balance":  13418.97
+                    },
+                    {
+                        "Line ID":  "CHK-041-R",
+                        "Date":  "2026-08-27",
+                        "Balance":  14860.4
+                    },
+                    {
+                        "Line ID":  "CHK-042-R",
+                        "Date":  "2026-08-28",
+                        "Balance":  16319.67
+                    },
+                    {
+                        "Line ID":  "CHK-045-R",
+                        "Date":  "2026-08-29",
+                        "Balance":  15929.74
+                    },
+                    {
+                        "Line ID":  "CHK-046-R",
+                        "Date":  "2026-09-01",
+                        "Balance":  17511.25
+                    },
+                    {
+                        "Line ID":  "CHK-048-R",
+                        "Date":  "2026-09-02",
+                        "Balance":  14456.05
+                    },
+                    {
+                        "Line ID":  "CHK-050-R",
+                        "Date":  "2026-09-03",
+                        "Balance":  13678
+                    },
+                    {
+                        "Line ID":  "CHK-053-R",
+                        "Date":  "2026-09-04",
+                        "Balance":  15063.35
+                    },
+                    {
+                        "Line ID":  "CHK-056-R",
+                        "Date":  "2026-09-05",
+                        "Balance":  10034.39
+                    },
+                    {
+                        "Line ID":  "CHK-058-R",
+                        "Date":  "2026-09-08",
+                        "Balance":  11160.85
+                    },
+                    {
+                        "Line ID":  "CHK-059-R",
+                        "Date":  "2026-09-09",
+                        "Balance":  12464.32
+                    },
+                    {
+                        "Line ID":  "CHK-063-R",
+                        "Date":  "2026-09-10",
+                        "Balance":  11280.72
+                    },
+                    {
+                        "Line ID":  "CHK-064-R",
+                        "Date":  "2026-09-11",
+                        "Balance":  12577.44
+                    },
+                    {
+                        "Line ID":  "CHK-065-R",
+                        "Date":  "2026-09-12",
+                        "Balance":  14435.49
+                    },
+                    {
+                        "Line ID":  "CHK-068-R",
+                        "Date":  "2026-09-15",
+                        "Balance":  13045.76
+                    },
+                    {
+                        "Line ID":  "CHK-070-R",
+                        "Date":  "2026-09-16",
+                        "Balance":  15068.66
+                    },
+                    {
+                        "Line ID":  "CHK-072-R",
+                        "Date":  "2026-09-17",
+                        "Balance":  14116.77
+                    },
+                    {
+                        "Line ID":  "CHK-073-R",
+                        "Date":  "2026-09-18",
+                        "Balance":  15256.58
+                    },
+                    {
+                        "Line ID":  "CHK-077-R",
+                        "Date":  "2026-09-19",
+                        "Balance":  10156.81
+                    },
+                    {
+                        "Line ID":  "CHK-080-R",
+                        "Date":  "2026-09-22",
+                        "Balance":  9559.45
+                    },
+                    {
+                        "Line ID":  "CHK-081-R",
+                        "Date":  "2026-09-23",
+                        "Balance":  11024.91
+                    },
+                    {
+                        "Line ID":  "CHK-084-R",
+                        "Date":  "2026-09-24",
+                        "Balance":  9228.57
+                    },
+                    {
+                        "Line ID":  "CHK-086-R",
+                        "Date":  "2026-09-25",
+                        "Balance":  10096.51
+                    },
+                    {
+                        "Line ID":  "CHK-087-R",
+                        "Date":  "2026-09-26",
+                        "Balance":  12007.72
+                    },
+                    {
+                        "Line ID":  "CHK-089-R",
+                        "Date":  "2026-09-29",
+                        "Balance":  13932.13
+                    },
+                    {
+                        "Line ID":  "CHK-090-R",
+                        "Date":  "2026-09-30",
+                        "Balance":  15099.72
+                    },
+                    {
+                        "Line ID":  "CHK-092-R",
+                        "Date":  "2026-10-01",
+                        "Balance":  14528.16
+                    },
+                    {
+                        "Line ID":  "CHK-094-R",
+                        "Date":  "2026-10-02",
+                        "Balance":  11575.96
+                    },
+                    {
+                        "Line ID":  "CHK-098-R",
+                        "Date":  "2026-10-03",
+                        "Balance":  4485.05
+                    },
+                    {
+                        "Line ID":  "CHK-102-R",
+                        "Date":  "2026-10-06",
+                        "Balance":  5645.2
+                    },
+                    {
+                        "Line ID":  "CHK-103-R",
+                        "Date":  "2026-10-07",
+                        "Balance":  7117.93
+                    },
+                    {
+                        "Line ID":  "CHK-104-R",
+                        "Date":  "2026-10-08",
+                        "Balance":  8321.7
+                    },
+                    {
+                        "Line ID":  "CHK-105-R",
+                        "Date":  "2026-10-09",
+                        "Balance":  9488.24
+                    },
+                    {
+                        "Line ID":  "CHK-109-R",
+                        "Date":  "2026-10-10",
+                        "Balance":  8872.19
+                    },
+                    {
+                        "Line ID":  "CHK-111-R",
+                        "Date":  "2026-10-13",
+                        "Balance":  7487.63
+                    },
+                    {
+                        "Line ID":  "CHK-112-R",
+                        "Date":  "2026-10-14",
+                        "Balance":  8825.55
+                    },
+                    {
+                        "Line ID":  "CHK-114-R",
+                        "Date":  "2026-10-15",
+                        "Balance":  9343.86
+                    },
+                    {
+                        "Line ID":  "CHK-116-R",
+                        "Date":  "2026-10-16",
+                        "Balance":  11816.96
+                    },
+                    {
+                        "Line ID":  "CHK-120-R",
+                        "Date":  "2026-10-17",
+                        "Balance":  4757.32
+                    },
+                    {
+                        "Line ID":  "CHK-122-R",
+                        "Date":  "2026-10-20",
+                        "Balance":  6084.08
+                    },
+                    {
+                        "Line ID":  "CHK-124-R",
+                        "Date":  "2026-10-21",
+                        "Balance":  4426.57
+                    },
+                    {
+                        "Line ID":  "CHK-126-R",
+                        "Date":  "2026-10-22",
+                        "Balance":  6514.04
+                    },
+                    {
+                        "Line ID":  "CHK-127-R",
+                        "Date":  "2026-10-23",
+                        "Balance":  7808.88
+                    },
+                    {
+                        "Line ID":  "CHK-130-R",
+                        "Date":  "2026-10-24",
+                        "Balance":  6802.56
+                    },
+                    {
+                        "Line ID":  "CHK-131-R",
+                        "Date":  "2026-10-27",
+                        "Balance":  8742.28
+                    },
+                    {
+                        "Line ID":  "CHK-133-R",
+                        "Date":  "2026-10-28",
+                        "Balance":  10825.6
+                    },
+                    {
+                        "Line ID":  "CHK-135-R",
+                        "Date":  "2026-10-29",
+                        "Balance":  12125.14
+                    },
+                    {
+                        "Line ID":  "CHK-137-R",
+                        "Date":  "2026-10-30",
+                        "Balance":  11235.05
+                    },
+                    {
+                        "Line ID":  "CHK-141-R",
+                        "Date":  "2026-10-31",
+                        "Balance":  4356.46
+                    },
+                    {
+                        "Line ID":  "CHK-004-R",
+                        "Date":  "2026-08-03",
+                        "Balance":  15240.91
+                    },
+                    {
+                        "Line ID":  "CHK-014-R",
+                        "Date":  "2026-08-09",
+                        "Balance":  15571.62
+                    },
+                    {
+                        "Line ID":  "CHK-024-R",
+                        "Date":  "2026-08-15",
+                        "Balance":  17233.1
+                    },
+                    {
+                        "Line ID":  "CHK-033-R",
+                        "Date":  "2026-08-21",
+                        "Balance":  18277.54
+                    },
+                    {
+                        "Line ID":  "CHK-051-R",
+                        "Date":  "2026-09-03",
+                        "Balance":  14966.9
+                    },
+                    {
+                        "Line ID":  "CHK-060-R",
+                        "Date":  "2026-09-09",
+                        "Balance":  13170.69
+                    },
+                    {
+                        "Line ID":  "CHK-069-R",
+                        "Date":  "2026-09-15",
+                        "Balance":  13787.49
+                    },
+                    {
+                        "Line ID":  "CHK-079-R",
+                        "Date":  "2026-09-21",
+                        "Balance":  7830.14
+                    },
+                    {
+                        "Line ID":  "CHK-099-R",
+                        "Date":  "2026-10-03",
+                        "Balance":  5213.69
+                    },
+                    {
+                        "Line ID":  "CHK-106-R",
+                        "Date":  "2026-10-09",
+                        "Balance":  10527.93
+                    },
+                    {
+                        "Line ID":  "CHK-115-R",
+                        "Date":  "2026-10-15",
+                        "Balance":  10400.45
+                    },
+                    {
+                        "Line ID":  "CHK-125-R",
+                        "Date":  "2026-10-21",
+                        "Balance":  5287.41
+                    },
+                    {
+                        "Line ID":  "CHK-132-R",
+                        "Date":  "2026-10-27",
+                        "Balance":  9447.37
+                    },
+                    {
+                        "Line ID":  "CHK-002-R",
+                        "Date":  "2026-08-01",
+                        "Balance":  15820.97
+                    },
+                    {
+                        "Line ID":  "CHK-003-R",
+                        "Date":  "2026-08-02",
+                        "Balance":  13996.98
+                    },
+                    {
+                        "Line ID":  "CHK-005-R",
+                        "Date":  "2026-08-03",
+                        "Balance":  14259.2
+                    },
+                    {
+                        "Line ID":  "CHK-008-R",
+                        "Date":  "2026-08-05",
+                        "Balance":  16788.07
+                    },
+                    {
+                        "Line ID":  "CHK-011-R",
+                        "Date":  "2026-08-07",
+                        "Balance":  18065.41
+                    },
+                    {
+                        "Line ID":  "CHK-012-R",
+                        "Date":  "2026-08-07",
+                        "Balance":  12909.53
+                    },
+                    {
+                        "Line ID":  "CHK-015-R",
+                        "Date":  "2026-08-09",
+                        "Balance":  14650.81
+                    },
+                    {
+                        "Line ID":  "CHK-016-R",
+                        "Date":  "2026-08-09",
+                        "Balance":  12752.12
+                    },
+                    {
+                        "Line ID":  "CHK-019-R",
+                        "Date":  "2026-08-12",
+                        "Balance":  13041.22
+                    },
+                    {
+                        "Line ID":  "CHK-022-R",
+                        "Date":  "2026-08-14",
+                        "Balance":  14924.17
+                    },
+                    {
+                        "Line ID":  "CHK-025-R",
+                        "Date":  "2026-08-16",
+                        "Balance":  15301.59
+                    },
+                    {
+                        "Line ID":  "CHK-027-R",
+                        "Date":  "2026-08-18",
+                        "Balance":  16820.59
+                    },
+                    {
+                        "Line ID":  "CHK-029-R",
+                        "Date":  "2026-08-19",
+                        "Balance":  17850.27
+                    },
+                    {
+                        "Line ID":  "CHK-031-R",
+                        "Date":  "2026-08-20",
+                        "Balance":  16027.02
+                    },
+                    {
+                        "Line ID":  "CHK-034-R",
+                        "Date":  "2026-08-21",
+                        "Balance":  17111.68
+                    },
+                    {
+                        "Line ID":  "CHK-035-R",
+                        "Date":  "2026-08-21",
+                        "Balance":  11763.39
+                    },
+                    {
+                        "Line ID":  "CHK-037-R",
+                        "Date":  "2026-08-23",
+                        "Balance":  12525.58
+                    },
+                    {
+                        "Line ID":  "CHK-038-R",
+                        "Date":  "2026-08-23",
+                        "Balance":  10280.04
+                    },
+                    {
+                        "Line ID":  "CHK-043-R",
+                        "Date":  "2026-08-28",
+                        "Balance":  16304.67
+                    },
+                    {
+                        "Line ID":  "CHK-044-R",
+                        "Date":  "2026-08-28",
+                        "Balance":  14304.67
+                    },
+                    {
+                        "Line ID":  "CHK-047-R",
+                        "Date":  "2026-09-01",
+                        "Balance":  13311.25
+                    },
+                    {
+                        "Line ID":  "CHK-049-R",
+                        "Date":  "2026-09-02",
+                        "Balance":  12388.81
+                    },
+                    {
+                        "Line ID":  "CHK-052-R",
+                        "Date":  "2026-09-03",
+                        "Balance":  13986.31
+                    },
+                    {
+                        "Line ID":  "CHK-054-R",
+                        "Date":  "2026-09-04",
+                        "Balance":  13887.34
+                    },
+                    {
+                        "Line ID":  "CHK-055-R",
+                        "Date":  "2026-09-04",
+                        "Balance":  8502.31
+                    },
+                    {
+                        "Line ID":  "CHK-057-R",
+                        "Date":  "2026-09-05",
+                        "Balance":  9649.39
+                    },
+                    {
+                        "Line ID":  "CHK-061-R",
+                        "Date":  "2026-09-09",
+                        "Balance":  12342.87
+                    },
+                    {
+                        "Line ID":  "CHK-062-R",
+                        "Date":  "2026-09-09",
+                        "Balance":  9994.64
+                    },
+                    {
+                        "Line ID":  "CHK-066-R",
+                        "Date":  "2026-09-12",
+                        "Balance":  12156.87
+                    },
+                    {
+                        "Line ID":  "CHK-067-R",
+                        "Date":  "2026-09-14",
+                        "Balance":  11503.31
+                    },
+                    {
+                        "Line ID":  "CHK-071-R",
+                        "Date":  "2026-09-16",
+                        "Balance":  12674.74
+                    },
+                    {
+                        "Line ID":  "CHK-074-R",
+                        "Date":  "2026-09-18",
+                        "Balance":  15102.2
+                    },
+                    {
+                        "Line ID":  "CHK-075-R",
+                        "Date":  "2026-09-18",
+                        "Balance":  13826.72
+                    },
+                    {
+                        "Line ID":  "CHK-076-R",
+                        "Date":  "2026-09-18",
+                        "Balance":  8695.25
+                    },
+                    {
+                        "Line ID":  "CHK-078-R",
+                        "Date":  "2026-09-20",
+                        "Balance":  7156.81
+                    },
+                    {
+                        "Line ID":  "CHK-082-R",
+                        "Date":  "2026-09-23",
+                        "Balance":  10286.78
+                    },
+                    {
+                        "Line ID":  "CHK-083-R",
+                        "Date":  "2026-09-23",
+                        "Balance":  7926.47
+                    },
+                    {
+                        "Line ID":  "CHK-085-R",
+                        "Date":  "2026-09-24",
+                        "Balance":  8878.57
+                    },
+                    {
+                        "Line ID":  "CHK-088-R",
+                        "Date":  "2026-09-28",
+                        "Balance":  11992.72
+                    },
+                    {
+                        "Line ID":  "CHK-091-R",
+                        "Date":  "2026-09-30",
+                        "Balance":  13099.72
+                    },
+                    {
+                        "Line ID":  "CHK-093-R",
+                        "Date":  "2026-10-01",
+                        "Balance":  10328.16
+                    },
+                    {
+                        "Line ID":  "CHK-095-R",
+                        "Date":  "2026-10-02",
+                        "Balance":  10341.69
+                    },
+                    {
+                        "Line ID":  "CHK-096-R",
+                        "Date":  "2026-10-02",
+                        "Balance":  7962.9
+                    },
+                    {
+                        "Line ID":  "CHK-097-R",
+                        "Date":  "2026-10-02",
+                        "Balance":  2766.6
+                    },
+                    {
+                        "Line ID":  "CHK-100-R",
+                        "Date":  "2026-10-03",
+                        "Balance":  4237.8
+                    },
+                    {
+                        "Line ID":  "CHK-101-R",
+                        "Date":  "2026-10-05",
+                        "Balance":  3852.8
+                    },
+                    {
+                        "Line ID":  "CHK-107-R",
+                        "Date":  "2026-10-09",
+                        "Balance":  9607.66
+                    },
+                    {
+                        "Line ID":  "CHK-108-R",
+                        "Date":  "2026-10-09",
+                        "Balance":  7291.36
+                    },
+                    {
+                        "Line ID":  "CHK-110-R",
+                        "Date":  "2026-10-12",
+                        "Balance":  5919.21
+                    },
+                    {
+                        "Line ID":  "CHK-113-R",
+                        "Date":  "2026-10-14",
+                        "Balance":  8166.76
+                    },
+                    {
+                        "Line ID":  "CHK-117-R",
+                        "Date":  "2026-10-16",
+                        "Balance":  10571.12
+                    },
+                    {
+                        "Line ID":  "CHK-118-R",
+                        "Date":  "2026-10-16",
+                        "Balance":  8208.74
+                    },
+                    {
+                        "Line ID":  "CHK-119-R",
+                        "Date":  "2026-10-16",
+                        "Balance":  2867.9
+                    },
+                    {
+                        "Line ID":  "CHK-121-R",
+                        "Date":  "2026-10-18",
+                        "Balance":  4601.44
+                    },
+                    {
+                        "Line ID":  "CHK-123-R",
+                        "Date":  "2026-10-20",
+                        "Balance":  3084.08
+                    },
+                    {
+                        "Line ID":  "CHK-128-R",
+                        "Date":  "2026-10-23",
+                        "Balance":  7003.91
+                    },
+                    {
+                        "Line ID":  "CHK-129-R",
+                        "Date":  "2026-10-23",
+                        "Balance":  5052.85
+                    },
+                    {
+                        "Line ID":  "CHK-134-R",
+                        "Date":  "2026-10-28",
+                        "Balance":  10810.6
+                    },
+                    {
+                        "Line ID":  "CHK-136-R",
+                        "Date":  "2026-10-29",
+                        "Balance":  10125.14
+                    },
+                    {
+                        "Line ID":  "CHK-138-R",
+                        "Date":  "2026-10-30",
+                        "Balance":  9955.35
+                    },
+                    {
+                        "Line ID":  "CHK-139-R",
+                        "Date":  "2026-10-30",
+                        "Balance":  8155.35
+                    },
+                    {
+                        "Line ID":  "CHK-140-R",
+                        "Date":  "2026-10-30",
+                        "Balance":  2753.33
+                    }
+                ]
 }

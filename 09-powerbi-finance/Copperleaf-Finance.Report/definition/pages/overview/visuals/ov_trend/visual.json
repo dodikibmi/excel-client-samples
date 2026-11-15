@@ -3,14 +3,14 @@
   "name": "ov_trend",
   "position": {
     "x": 22,
-    "y": 284,
-    "z": 9000,
-    "width": 764,
-    "height": 416,
-    "tabOrder": 9000
+    "y": 258,
+    "z": 42000,
+    "width": 410,
+    "height": 236,
+    "tabOrder": 42000
   },
   "visual": {
-    "visualType": "lineClusteredColumnComboChart",
+    "visualType": "clusteredColumnChart",
     "query": {
       "queryState": {
         "Category": {
@@ -64,25 +64,6 @@
               "displayName": "Expenses"
             }
           ]
-        },
-        "Y2": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Net Profit"
-                }
-              },
-              "queryRef": "_Measures.Net Profit",
-              "nativeQueryRef": "Net Profit",
-              "displayName": "Net profit"
-            }
-          ]
         }
       },
       "sortDefinition": {
@@ -120,7 +101,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FFFFFF'"
+                      "Value": "'#1A2129'"
                     }
                   }
                 }
@@ -151,7 +132,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#DCE1E7'"
+                      "Value": "'#2A333D'"
                     }
                   }
                 }
@@ -160,7 +141,14 @@
             "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "12D"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
                 }
               }
             }
@@ -193,7 +181,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Income, expenses and net profit by month'"
+                  "Value": "'Income vs expenses by month'"
                 }
               }
             },
@@ -202,7 +190,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1B2A3A'"
+                      "Value": "'#ECE6DA'"
                     }
                   }
                 }
@@ -218,7 +206,14 @@
             "bold": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Georgia'"
                 }
               }
             }
@@ -230,6 +225,17 @@
       "labels": [
         {
           "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#ECE6DA'"
+                    }
+                  }
+                }
+              }
+            },
             "show": {
               "expr": {
                 "Literal": {
@@ -244,17 +250,17 @@
                 }
               }
             },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
             "labelPrecision": {
               "expr": {
                 "Literal": {
                   "Value": "1D"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
                 }
               }
             }
@@ -264,6 +270,17 @@
       "legend": [
         {
           "properties": {
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#ECE6DA'"
+                    }
+                  }
+                }
+              }
+            },
             "show": {
               "expr": {
                 "Literal": {
@@ -274,7 +291,14 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'Top'"
+                  "Value": "'TopRight'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
                 }
               }
             }
@@ -289,7 +313,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1F4E79'"
+                      "Value": "'#4FA38C'"
                     }
                   }
                 }
@@ -307,7 +331,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E07B39'"
+                      "Value": "'#B5754A'"
                     }
                   }
                 }
@@ -316,24 +340,6 @@
           },
           "selector": {
             "metadata": "_Measures.Total Expense"
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#00968A'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Net Profit"
           }
         }
       ],
@@ -344,6 +350,24 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#8E98A3'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
                 }
               }
             }
@@ -364,6 +388,42 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#8E98A3'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "gridlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#262F39'"
+                    }
+                  }
+                }
+              }
+            },
+            "gridlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'solid'"
                 }
               }
             }

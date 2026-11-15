@@ -97,7 +97,7 @@ expression Card_Clean =
 expression Rules =
 		let
 		    // keyword -> account, first match wins (rules.csv is in priority order)
-		    Source = Csv.Document(File.Contents(DataFolder & "rules.csv"), [Delimiter = ",", Columns = 4, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+		    Source = Csv.Document(File.Contents(DataFolder & "rules.csv"), [Delimiter = ",", Columns = 5, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
 		    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
 		    Typed = Table.TransformColumnTypes(Promoted, {{"Priority", Int64.Type}, {"Account No", Int64.Type}}, "en-US"),
 		    Sorted = Table.Sort(Typed, {{"Priority", Order.Ascending}}),
@@ -135,14 +135,61 @@ expression BankLines =
 		let
 		    // the three registers as one list; every line gets an account from the first rule whose keyword it contains
 		    Lines = Table.Combine({Checking_Clean, Savings_Clean, Card_Clean}),
-		    RuleList = Table.ToRecords(Table.SelectColumns(Rules, {"Clean Keyword", "Account No"})),
+		    RuleList = Table.ToRecords(Table.SelectColumns(Rules, {"Clean Keyword", "Account No", "Payee"})),
 		    WithClean = Table.AddColumn(Lines, "Clean Description", each Norm([Description]), type text),
 		    WithRule = Table.AddColumn(WithClean, "Rule", (r) => List.First(List.Select(RuleList, (k) => Text.Contains(r[Clean Description], k[Clean Keyword])), null)),
 		    WithAccount = Table.AddColumn(WithRule, "Offset Account No", each if [Rule] = null then 6990 else [Rule][Account No], Int64.Type),
-		    WithKeyword = Table.AddColumn(WithAccount, "Rule Keyword", each if [Rule] = null then "(no rule: to review)" else [Rule][Clean Keyword], type text)
+		    WithKeyword = Table.AddColumn(WithAccount, "Rule Keyword", each if [Rule] = null then "(no rule: to review)" else [Rule][Clean Keyword], type text),
+		    WithPayee = Table.AddColumn(WithKeyword, "Payee", each if [Rule] = null then [Description] else [Rule][Payee], type text)
 		in
-		    Table.RemoveColumns(WithKeyword, {"Rule"})
+		    Table.RemoveColumns(WithPayee, {"Rule"})
 	lineageTag: bd989826-d1b4-5a33-a026-c759af11836b
+
+	annotation PBI_ResultType = Table
+
+expression CashPlanCalc =
+		let
+		    // the owner's plan for the next 13 weeks: one row per regular receipt or payment (cash-plan.csv);
+		    // the amount comes from the history unless the plan types it (fixed)
+		    Source = Csv.Document(File.Contents(DataFolder & "cash-plan.csv"), [Delimiter = ",", Columns = 11, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+		    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+		    Typed = Table.TransformColumnTypes(Promoted, {{"Order", Int64.Type}, {"Register No", Int64.Type}, {"Lookback", Int64.Type},
+		        {"First Date", type date}, {"Amount", type number}}, "en-US"),
+		    LastDate = List.Max(BankLines[Post Date]),
+		    Start = Date.AddDays(LastDate, 1),
+		    End = Date.AddDays(Start, 13 * 7 - 1),
+		    Hist = Table.SelectColumns(BankLines, {"Register No", "Offset Account No", "Post Date", "Amount"}),
+		    Lines = (r) => let accts = List.Transform(Text.Split(r[Accounts], ";"), Number.From) in
+		        Table.SelectRows(Hist, each [Register No] = r[Register No] and List.Contains(accts, [Offset Account No])),
+		    PerTime = (r) =>
+		        if r[Basis] = "fixed" then r[Amount]
+		        else if r[Basis] = "avg_week" then
+		            List.Sum(Table.SelectRows(Lines(r), each [Post Date] > Date.AddDays(LastDate, -7 * r[Lookback]))[Amount]) / r[Lookback]
+		        else if r[Basis] = "avg_month" then
+		            List.Sum(Table.SelectRows(Lines(r), each [Post Date] > Date.EndOfMonth(Date.AddMonths(LastDate, -r[Lookback])))[Amount]) / r[Lookback]
+		        else
+		            // avg_event: the last N dates with a posting (pay runs), averaged
+		            let g = Table.Group(Lines(r), {"Post Date"}, {{"S", each List.Sum([Amount]), type number}}),
+		                top = Table.FirstN(Table.Sort(g, {{"Post Date", Order.Descending}}), r[Lookback])
+		            in List.Average(top[S]),
+		    Dates = (r) =>
+		        if r[Frequency] = "weekly" then List.Dates(Start, 13, #duration(7, 0, 0, 0))
+		        else if r[Frequency] = "biweekly" then List.Select(List.Dates(r[First Date], 8, #duration(14, 0, 0, 0)), each _ >= Start and _ <= End)
+		        else List.Select(List.Transform({0..3}, (k) => Date.AddMonths(r[First Date], k)), each _ >= Start and _ <= End),
+		    WithPer = Table.AddColumn(Typed, "Per Time", each Number.Round(PerTime(_), 2), type number),
+		    WithDates = Table.AddColumn(WithPer, "Dates", each Dates(_)),
+		    WithBasis = Table.AddColumn(WithDates, "How It Is Estimated", each
+		        if [Basis] = "fixed" then "Fixed amount"
+		        else if [Basis] = "avg_week" then "Average week, last " & Text.From([Lookback]) & " weeks"
+		        else if [Basis] = "avg_month" then "Average month, last " & Text.From([Lookback]) & " months"
+		        else "Average of the last " & Text.From([Lookback]) & " runs", type text),
+		    WithWhen = Table.AddColumn(WithBasis, "When", each
+		        if [Frequency] = "weekly" then "Every week"
+		        else if [Frequency] = "biweekly" then "Every 2nd week from " & Date.ToText([First Date], [Format = "d MMM", Culture = "en-US"])
+		        else "Monthly on day " & Text.From(Date.Day([First Date])), type text)
+		in
+		    WithWhen
+	lineageTag: 1a5cb1c9-0a44-5a48-853a-72cecd18c3af
 
 	annotation PBI_ResultType = Table
 

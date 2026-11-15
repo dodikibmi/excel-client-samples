@@ -11,13 +11,14 @@ from pathlib import Path
 ctypes.windll.shcore.SetProcessDpiAwareness(2)
 import win32api, win32con, win32gui, win32process, win32ui  # noqa: E402
 import win32com.client  # noqa: E402
-from PIL import Image  # noqa: E402
+from PIL import Image, ImageChops  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 PBIP = ROOT / "Copperleaf-Finance.pbip"
 DOCS = ROOT / "docs"
-PAGES = {"overview": 313, "pnl-vs-budget": 463, "cash-and-statements": 647, "checks": 803}  # page tab x, y = 1089
-CANVAS = (181, 228, 1653, 1052)  # report page inside the window, panes folded
+PAGES = ["overview", "pnl-vs-budget", "revenue-and-costs", "cash-and-statements", "cash-forecast", "ledger", "checks"]
+NAV_X, NAV_W, NAV_Y = 470, 790, 30   # the page buttons in the report header (page pixels, see build_pbip.py)
+HDR_RGB = (0x0B, 0x0F, 0x13)  # the dark header band at the top of every report page
 
 
 def exe_name(h):
@@ -117,6 +118,26 @@ def grab(h=None):
     return img
 
 
+def page_box(img):
+    """The report page inside the window: found from the dark header band (full page width, top of the page), so the
+    crop works at any screen size or zoom. Height follows the 1280x720 page."""
+    bands = [b.point(lambda v, t=t: 255 if abs(v - t) < 5 else 0) for b, t in zip(img.convert("RGB").split(), HDR_RGB)]
+    mask = ImageChops.multiply(ImageChops.multiply(bands[0], bands[1]), bands[2])
+    w, h = mask.size
+    for y in range(200, h):          # below the ribbon: the first row that is mostly header colour
+        row = mask.crop((0, y, w, y + 1))
+        if row.histogram()[255] > w * 0.4:
+            x0, _, x1, _ = row.getbbox()
+            return (x0, y, x1, y + round((x1 - x0) * 720 / 1280))
+    raise SystemExit("report page not found in the window")
+
+
+def deselect():
+    """Click the grey area right of the page so no visual stays selected."""
+    x0, y0, x1, y1 = page_box(grab())
+    click(x1 + 30, (y0 + y1) // 2, 1.5)
+
+
 def screen_to_window(box):
     l, t, _, _ = win32gui.GetWindowRect(main_window())
     return (box[0] - l, box[1] - t, box[2] - l, box[3] - t)
@@ -137,20 +158,107 @@ def open_report(target=PBIP, wait=70):
     time.sleep(2)
 
 
+def privacy_dialog():
+    """A fresh PBIP may ask for privacy levels before it combines the CSV files (all local, fictional): tick
+    "Ignore Privacy Levels checks for this file" and Save."""
+    for h in windows():
+        l, t, r, b = win32gui.GetWindowRect(h)
+        if exe_name(h) == "pbidesktop.exe" and not win32gui.GetWindowText(h) and abs(r - l - 914) < 30 and 400 < b - t < 800:
+            for x, y in ((48, 201), (722, b - t - 56)):   # the tick box, then Save (the list grows with the files)
+                keys_raw("%")
+                win32gui.SetForegroundWindow(h)
+                time.sleep(0.8)
+                win32api.SetCursorPos((l + x, t + y))
+                time.sleep(0.2)
+                win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0)
+                time.sleep(0.05)
+                win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0)
+                time.sleep(1.5)
+            return True
+    return False
+
+
+def viz_pane_open():
+    """The Visualizations pane is open when its blue visual icons show right of the page."""
+    img = grab().convert("RGB")
+    return any(img.getpixel((x, y))[2] > 170 and img.getpixel((x, y))[0] < 110
+               for x in range(1650, 1850, 3) for y in range(390, 470, 3))
+
+
+def data_bar_shown():
+    """The light "incomplete or no data" bar: a dark info icon at its left end, light grey behind the text."""
+    img = grab().convert("L")
+    icon = min(img.crop((86, 250, 108, 272)).getdata())
+    text_bg = list(img.crop((300, 250, 600, 270)).getdata())
+    return icon < 120 and sum(text_bg) / len(text_bg) > 200
+
+
+def page_width():
+    try:
+        x0, _, x1, _ = page_box(grab())
+        return x1 - x0
+    except SystemExit:
+        return 0
+
+
+def leave_focus_mode():
+    """Desktop's auto-recovery can reopen a visual in focus mode ("Back to report"): leave it."""
+    if page_width() == 0:
+        click(166, 293, 3)
+
+
+def refresh_now(wait=45):
+    """Home > Refresh (the ribbon icon, same place whatever the panes do) until the data is in."""
+    for _ in range(3):
+        if not data_bar_shown():
+            return
+        click(872, 138, 8)
+        privacy_dialog()
+        time.sleep(wait)
+    if data_bar_shown():
+        raise SystemExit("Refresh did not load the data")
+
+
+def fold_panes():
+    """Fold the Visualizations and Data panes: each chevron is clicked only if it makes the page wider."""
+    for x in (1651, 1859, 1909):
+        before = page_width()
+        if before >= 1460:          # folded: the page fills the window
+            return
+        click(x, 264, 2)
+        if page_width() < before:
+            click(x, 264, 2)         # that opened a pane instead: close it again
+
+
 def refresh_and_fold(refresh=True):
+    """Window positions for a 1938x1158 maximised window (Power BI Desktop, November 2026)."""
+    leave_focus_mode()
     if refresh:
-        click(1305, 259, 45)        # "Refresh now" on the yellow bar: a PBIP keeps no data
-    click(1909, 263)                # fold the Data pane
-    click(1859, 263)                # fold the Visualizations pane (the filter pane starts folded)
+        refresh_now()
+    fold_panes()
 
 
 def goto(page):
-    click(PAGES[page], 1089, 4)
+    """Ctrl+click the page button in the report header (in Desktop a plain click only selects the button)."""
+    x0, y0, x1, _ = page_box(grab())
+    k = (x1 - x0) / 1280
+    i = PAGES.index(page)
+    front()
+    win32api.keybd_event(win32con.VK_CONTROL, 0, 0, 0)
+    try:
+        click(x0 + round((NAV_X + (i + 0.5) * NAV_W / len(PAGES)) * k), y0 + round(NAV_Y * k), 0.5)
+    finally:
+        win32api.keybd_event(win32con.VK_CONTROL, 0, win32con.KEYEVENTF_KEYUP, 0)
+    time.sleep(4)
     if page == "pnl-vs-budget":     # right-click the matrix > Expand > All: show every account under its category
-        click(300, 503, 2, right=True)
-        click(300 + 95, 503 + 51, 2)
-        click(300 + 355, 503 + 119, 3)
-        click(1490, 377, 1.5)       # click the empty page so no visual stays selected
+        x0, y0, x1, _ = page_box(grab())
+        k = (x1 - x0) / 1280             # page pixels -> window pixels at the current zoom
+        x, y = x0 + round(76 * k), y0 + round(240 * k)   # the first category row of the matrix
+        click(x, y, 2, right=True)
+        click(x + 97, y + 53, 2)         # Expand >
+        click(x + 356, y + 120, 3)       # All
+        click(x0 + round(400 * k), y0 + round(690 * k), 2)   # empty part of the matrix: clears the row the menu selected
+        click(x0 + round(680 * k), y0 + round(300 * k), 1.5)  # the page between matrix and charts: nothing selected
     park_mouse()
 
 
@@ -161,10 +269,13 @@ def main():
     a = ap.parse_args()
     DOCS.mkdir(exist_ok=True)
     open_report()
+    time.sleep(5)
+    privacy_dialog()                 # first refresh on a new PC asks for privacy levels
     refresh_and_fold()
     for page in PAGES:
         goto(page)
-        grab().crop(screen_to_window(CANVAS)).save(DOCS / f"{page}.png")
+        img = grab()
+        img.crop(page_box(img)).save(DOCS / f"{page}.png")
         print(f"docs/{page}.png")
     click(39, 378, 6)                # model view: the star schema
     click(1909, 263)                 # fold the Data pane
@@ -172,7 +283,7 @@ def main():
     click(1887, 1131, 3)             # fit to screen
     win32api.SetCursorPos((1000, 1125))  # status bar: no tooltip on the diagram
     time.sleep(1.5)
-    grab().crop(screen_to_window((60, 228, 1190, 1045))).save(DOCS / "model-view.png")
+    grab().crop((125, 270, 1107, 1024)).save(DOCS / "model-view.png")  # window pixels, 1938x1158 window
     print("docs/model-view.png")
     click(39, 263, 3)                # back to the report view
     goto("overview")                 # the .pbix opens on the first page
