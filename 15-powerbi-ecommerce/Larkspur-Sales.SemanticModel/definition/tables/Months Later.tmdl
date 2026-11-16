@@ -1,0 +1,22 @@
+/// Columns of the cohort grid (0-12 months after the first order); not related, so the year slicer does not cut it.
+table 'Months Later'
+	lineageTag: b5d36d6d-3af5-5b37-a05b-6d2452b5e9ef
+
+	column 'Months Later'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7229c4d9-3839-5900-9f8b-2ee56e62e4f1
+		summarizeBy: none
+		sourceColumn: Months Later
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Months Later' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromList({0..12}, Splitter.SplitByNothing(), type table [#"Months Later" = Int64.Type])
+				in
+				    Source
+
+	annotation PBI_ResultType = Table

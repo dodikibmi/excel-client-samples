@@ -1,0 +1,91 @@
+/// The rates the report uses: live from the API, the saved copy for any day the API did not return.
+table 'FX Rate'
+	lineageTag: 30b2d3f5-102e-5a4e-a74d-d0cddb01cd57
+
+	column Date
+		dataType: dateTime
+		isNameInferred
+		formatString: d mmm yyyy
+		lineageTag: 3f5b9deb-ecee-52df-aa71-d7e5ac761555
+		summarizeBy: none
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Currency
+		dataType: string
+		isNameInferred
+		lineageTag: 8d345d7e-3268-5b41-b19c-4c11d9c4828e
+		summarizeBy: none
+		sourceColumn: [Currency]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Units per USD'
+		dataType: double
+		isNameInferred
+		formatString: 0.00000
+		lineageTag: 41cf03cc-e325-530e-b614-fa062b4f51b4
+		summarizeBy: none
+		sourceColumn: [Units per USD]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Source
+		dataType: string
+		isNameInferred
+		lineageTag: 94bc1a97-e825-5c39-b1fb-1c61c31cdaef
+		summarizeBy: none
+		sourceColumn: [Source]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		isNameInferred
+		formatString: 0
+		lineageTag: 69c96c0e-b17e-5657-b254-e0ae6656ceff
+		summarizeBy: none
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Of Year'
+		dataType: int64
+		isNameInferred
+		formatString: 0
+		lineageTag: f1e11700-55ea-5465-b162-349007cc7b5b
+		summarizeBy: none
+		sourceColumn: [Month Of Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'USD per Unit'
+		dataType: double
+		isNameInferred
+		formatString: 0.0000
+		lineageTag: 1898246f-575f-5e6c-92ef-e315cdbc2adb
+		summarizeBy: none
+		sourceColumn: [USD per Unit]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'FX Rate' = calculated
+		mode: import
+		source =
+				-- live rates first; the saved copy fills every day/currency the API did not return (all of them when it is down)
+				VAR api = SELECTCOLUMNS ( 'FX API', "Date", 'FX API'[Date], "Currency", 'FX API'[Currency], "Units per USD", 'FX API'[Units per USD], "Source", "API" )
+				VAR apiKeys = SELECTCOLUMNS ( 'FX API', "K", FORMAT ( 'FX API'[Date], "yyyymmdd" ) & 'FX API'[Currency] )
+				VAR saved =
+				    FILTER (
+				        SELECTCOLUMNS ( 'FX Saved', "Date", 'FX Saved'[Date], "Currency", 'FX Saved'[Currency], "Units per USD", 'FX Saved'[Units per USD], "Source", "Saved copy" ),
+				        NOT ( ( FORMAT ( [Date], "yyyymmdd" ) & [Currency] ) IN apiKeys )
+				    )
+				RETURN
+				    ADDCOLUMNS (
+				        UNION ( api, saved ),
+				        "Year", YEAR ( [Date] ),
+				        "Month Of Year", MONTH ( [Date] ),
+				        "USD per Unit", DIVIDE ( 1, [Units per USD] )
+				    )
+

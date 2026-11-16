@@ -1,0 +1,153 @@
+expression DataFolder = "C:\Larkspur\data\" meta [IsParameterQuery = true, Type = "Text", IsParameterQueryRequired = true]
+	lineageTag: cc3b7504-7db0-5b17-9ef6-19dfd8397717
+
+	annotation PBI_ResultType = Text
+
+expression FxStart = "2024-12-01" meta [IsParameterQuery = true, Type = "Text", IsParameterQueryRequired = true]
+	lineageTag: 11f08d6d-4233-505c-80d3-19227a29cc32
+
+	annotation PBI_ResultType = Text
+
+expression Num =
+		(t as nullable text) as number =>
+		    // "1250.00" / "" -> number (webshop export, US format)
+		    if t = null or Text.Trim(t) = "" then 0 else Number.FromText(Text.Trim(t), "en-US")
+	lineageTag: 8f641ab8-035f-5587-8946-7842a0579a2a
+
+	annotation PBI_ResultType = Function
+
+expression NumEU =
+		(t as nullable text) as number =>
+		    // "1.024,50" / "24,90" -> number (EU marketplace export: dot for thousands, comma for decimals)
+		    if t = null or Text.Trim(t) = "" then 0 else Number.FromText(Text.Replace(Text.Remove(Text.Trim(t), "."), ",", "."), "en-US")
+	lineageTag: c51fe386-5de5-5a91-91d6-5ba5a42232ae
+
+	annotation PBI_ResultType = Function
+
+expression ShopRaw =
+		let
+		    // webshop order export (Shopify layout): one row per order line
+		    Source = Csv.Document(File.Contents(DataFolder & "shop-orders-export.csv"), [Delimiter = ",", Columns = 19, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+		    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+		    Rows = Table.SelectRows(Promoted, each Text.Trim([Name]) <> ""),
+		    Indexed = Table.AddIndexColumn(Rows, "Row", 1, 1, Int64.Type)
+		in
+		    Table.Buffer(Indexed)
+	lineageTag: c3db6f71-a091-5961-934c-4f6f11dff310
+
+	annotation PBI_ResultType = Table
+
+expression ShopLines =
+		let
+		    // every line of every order; SKUs typed by hand ("lh-cn-001", "LH-CN-001 ") are trimmed and upper-cased
+		    Out = Table.FromRecords(Table.TransformRows(ShopRaw, (r) => [
+		        #"Line ID" = "S-" & Text.PadStart(Text.From(r[Row]), 5, "0"),
+		        #"Order ID" = r[Name],
+		        SKU = Text.Upper(Text.Trim(r[Lineitem sku])),
+		        #"SKU As Exported" = r[Lineitem sku],
+		        Qty = Number.From(r[Lineitem quantity]),
+		        #"Price Local" = Num(r[Lineitem price])
+		    ])),
+		    Gross = Table.AddColumn(Out, "Gross Local", each [Qty] * [Price Local], type number)
+		in
+		    Table.Buffer(Gross)
+	lineageTag: ff2f734e-cc82-5c0f-b52f-06830092da12
+
+	annotation PBI_ResultType = Table
+
+expression ShopOrders =
+		let
+		    // the order fields (status, currency, totals, discount, refund) are only on the FIRST line of each order
+		    Firsts = Table.SelectRows(ShopRaw, each Text.Trim([Financial Status]) <> ""),
+		    Out = Table.FromRecords(Table.TransformRows(Firsts, (r) => [
+		        #"Order ID" = r[Name],
+		        #"Order Seq" = Number.From(Text.AfterDelimiter(r[Name], "#")),
+		        Channel = "Webshop",
+		        // "2026-10-31 18:22:05 -0400": the store's own date
+		        Date = Date.FromText(Text.Start(r[Created at], 10), [Format = "yyyy-MM-dd", Culture = "en-US"]),
+		        #"Customer ID" = Text.Lower(Text.Trim(r[Email])),
+		        Currency = Text.Upper(Text.Trim(r[Currency])),
+		        Country = Text.Trim(r[Shipping Country]),
+		        Status = r[Financial Status],
+		        #"Discount Code" = r[Discount Code],
+		        #"Discount Local" = Num(r[Discount Amount]),
+		        #"Subtotal Local" = Num(r[Subtotal]),
+		        #"Shipping Local" = Num(r[Shipping]),
+		        #"Taxes Local" = Num(r[Taxes]),
+		        #"Total Local" = Num(r[Total]),
+		        #"Refunded Local" = Num(r[Refunded Amount])
+		    ])),
+		    PerOrder = Table.Group(ShopLines, {"Order ID"}, {{"Gross Local", each List.Sum([Gross Local]), type number}, {"Lines", each Table.RowCount(_), Int64.Type}}),
+		    Joined = Table.Join(Out, "Order ID", Table.RenameColumns(PerOrder, {{"Order ID", "Key"}}), "Key"),
+		    // refunds in net sales: a full refund returns the subtotal; a partial refund (tax included) is taken back to the amount before tax
+		    Returns = Table.AddColumn(Table.RemoveColumns(Joined, {"Key"}), "Returns Local", each
+		        if [Status] = "refunded" then [Subtotal Local]
+		        else if [Refunded Local] = 0 then 0
+		        else [Refunded Local] * [Subtotal Local] / ([Subtotal Local] + [Taxes Local]), type number)
+		in
+		    Table.Buffer(Returns)
+	lineageTag: b8372fb2-c9f6-56c0-8717-5dae2eccf89e
+
+	annotation PBI_ResultType = Table
+
+expression MarketLines =
+		let
+		    // EU marketplace export: semicolons, dd.mm.yyyy, decimal commas; monthly exports pasted together, so the header
+		    // line repeats and an export can start with the last row of the export before it
+		    Source = Csv.Document(File.Contents(DataFolder & "marketplace-orders-eu.csv"), [Delimiter = ";", Columns = 9, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+		    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+		    NoHeaders = Table.SelectRows(Promoted, each [Order ID] <> "Order ID" and Text.Trim([Order ID]) <> ""),
+		    Distinct = Table.Distinct(NoHeaders),
+		    Indexed = Table.AddIndexColumn(Distinct, "Row", 1, 1, Int64.Type),
+		    Out = Table.FromRecords(Table.TransformRows(Indexed, (r) => [
+		        #"Line ID" = "M-" & Text.PadStart(Text.From(r[Row]), 5, "0"),
+		        #"Order ID" = r[Order ID],
+		        Date = Date.FromText(r[Order date], [Format = "dd.MM.yyyy", Culture = "en-US"]),
+		        #"Customer ID" = r[Buyer ID],
+		        SKU = Text.Upper(Text.Trim(r[SKU])),
+		        #"SKU As Exported" = r[SKU],
+		        Qty = Number.From(r[Qty]),
+		        #"Price Local" = NumEU(r[Item price]),
+		        #"Gross Local" = NumEU(r[Line total]),
+		        Country = r[Country],
+		        #"Line Status" = r[Status]
+		    ]))
+		in
+		    Table.Buffer(Out)
+	lineageTag: f82c4cd6-11a4-53b3-835e-dc214d7ead92
+
+	annotation PBI_ResultType = Table
+
+expression MarketOrders =
+		let
+		    G = Table.Group(MarketLines, {"Order ID"}, {
+		        {"Date", each List.Min([Date]), type date}, {"Customer ID", each [Customer ID]{0}, type text},
+		        {"Country", each [Country]{0}, type text}, {"Gross Local", each List.Sum([Gross Local]), type number},
+		        {"Returns Local", each List.Sum(Table.SelectRows(_, each [Line Status] = "Returned")[Gross Local]) ?? 0, type number},
+		        {"Returned Lines", each Table.RowCount(Table.SelectRows(_, each [Line Status] = "Returned")), Int64.Type},
+		        {"Lines", each Table.RowCount(_), Int64.Type}}),
+		    Out = Table.FromRecords(Table.TransformRows(G, (r) => [
+		        #"Order ID" = r[Order ID], #"Order Seq" = Number.From(Text.AfterDelimiter(r[Order ID], "-")), Channel = "Marketplace EU",
+		        Date = r[Date], #"Customer ID" = r[Customer ID], Currency = "EUR", Country = r[Country],
+		        Status = if r[Returned Lines] = 0 then "paid" else if r[Returned Lines] = r[Lines] then "refunded" else "partially_refunded",
+		        #"Discount Code" = "", #"Discount Local" = 0, #"Subtotal Local" = r[Gross Local], #"Shipping Local" = 0, #"Taxes Local" = 0,
+		        #"Total Local" = r[Gross Local], #"Refunded Local" = r[Returns Local], #"Gross Local" = r[Gross Local], Lines = r[Lines],
+		        #"Returns Local" = r[Returns Local]]))
+		in
+		    Table.Buffer(Out)
+	lineageTag: c4fa3388-594a-5570-9b3b-aee1d18379ae
+
+	annotation PBI_ResultType = Table
+
+expression ProductsRaw =
+		let
+		    Source = Csv.Document(File.Contents(DataFolder & "products.csv"), [Delimiter = ",", Columns = 5, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+		    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+		    Typed = Table.TransformColumnTypes(Promoted, {{"List Price USD", Currency.Type}, {"Unit Cost USD", Currency.Type}}, "en-US"),
+		    Clean = Table.TransformColumns(Typed, {{"SKU", each Text.Upper(Text.Trim(_)), type text}})
+		in
+		    Clean
+	lineageTag: 9b3897ae-7495-5c0b-bad2-283fa5390833
+
+	annotation PBI_ResultType = Table
+

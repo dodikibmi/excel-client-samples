@@ -1,0 +1,32 @@
+relationship 89c929b1-078f-5476-a8d6-1306fb1dc53e
+	fromColumn: Sales.'Order ID'
+	toColumn: Orders.'Order ID'
+
+relationship 234e3ac0-c227-52fe-b93b-59f65a65f419
+	fromColumn: Sales.SKU
+	toColumn: Product.SKU
+
+relationship 5f69acfd-9109-5a8d-8a7d-2474d36b41a3
+	fromColumn: Orders.Date
+	toColumn: Date.Date
+
+relationship 29049df4-c6e2-575f-a9db-d30b3e71323f
+	fromColumn: Orders.'Customer ID'
+	toColumn: Customer.'Customer ID'
+
+relationship 46de7272-b550-5c99-957e-5e573399bdbf
+	fromColumn: Orders.Country
+	toColumn: Market.Country
+
+relationship 6b37cde9-f403-5b12-836a-dde37a344064
+	fromColumn: Orders.Currency
+	toColumn: Currency.Currency
+
+relationship 2f0f75ea-7a99-5e69-8d6c-d0fd08dbb2da
+	fromColumn: 'FX Rate'.Currency
+	toColumn: Currency.Currency
+
+relationship 5bacc495-b353-5c62-b9f3-2d261214968c
+	fromColumn: 'Ad Spend'.Month
+	toColumn: Date.Date
+

@@ -1,0 +1,47 @@
+/// Shipping country to sales market.
+table Market
+	lineageTag: ab27d216-bb66-50e1-a2a4-2a7f374c08c6
+
+	column Country
+		dataType: string
+		isKey
+		lineageTag: d0feacfc-3f63-5676-af0d-755a622e2a8c
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Market
+		dataType: string
+		sortByColumn: 'Market Sort'
+		lineageTag: 6fde9098-e6a2-5439-afd2-5f6901c13c50
+		summarizeBy: none
+		sourceColumn: Market
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Market Sort'
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: 08ca23d1-ed23-53b3-82a0-0776068069c6
+		summarizeBy: none
+		sourceColumn: Market Sort
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Market = m
+		mode: import
+		source =
+				let
+				    Source = #table(
+				        type table [Country = text, Market = text, #"Market Sort" = Int64.Type],
+				        {
+				            {"United States", "United States", 1}, {"Canada", "Canada", 2}, {"United Kingdom", "United Kingdom", 3},
+				            {"Germany", "Europe (EU)", 4}, {"France", "Europe (EU)", 4}, {"Netherlands", "Europe (EU)", 4}, {"Ireland", "Europe (EU)", 4},
+				            {"Italy", "Europe (EU)", 4}, {"Spain", "Europe (EU)", 4}, {"Austria", "Europe (EU)", 4}, {"Australia", "Australia", 5}
+				        })
+				in
+				    Source
+
+	annotation PBI_ResultType = Table

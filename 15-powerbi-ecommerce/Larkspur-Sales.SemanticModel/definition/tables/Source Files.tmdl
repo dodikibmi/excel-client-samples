@@ -1,0 +1,97 @@
+/// Control figures read straight from each export file.
+table 'Source Files'
+	lineageTag: bbd3144d-7c84-5ac7-923f-eb40402239fe
+
+	column Channel
+		dataType: string
+		lineageTag: 3e66cabc-96a7-596d-8c08-a0778bb328b0
+		summarizeBy: none
+		sourceColumn: Channel
+
+		annotation SummarizationSetBy = Automatic
+
+	column File
+		dataType: string
+		lineageTag: 24e55e83-b476-5122-9b6f-5d02a28b17aa
+		summarizeBy: none
+		sourceColumn: File
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Rows In File'
+		dataType: int64
+		formatString: #,0
+		lineageTag: 00aca586-528c-5fab-8b99-3f7f4bc06750
+		summarizeBy: sum
+		sourceColumn: Rows In File
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orders In File'
+		dataType: int64
+		formatString: #,0
+		lineageTag: 05ebe9b4-7d92-50c2-b41e-8c0f554b82fc
+		summarizeBy: sum
+		sourceColumn: Orders In File
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Voided Orders'
+		dataType: int64
+		formatString: 0
+		lineageTag: 71482dcf-14ff-5226-a751-0adbdc77454f
+		summarizeBy: sum
+		sourceColumn: Voided Orders
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Voided Lines'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5e786672-cf1e-55e8-be34-4ffe73ec84e9
+		summarizeBy: sum
+		sourceColumn: Voided Lines
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Header Repeats'
+		dataType: int64
+		formatString: 0
+		lineageTag: 78153204-72e0-55fb-b2da-a453542bf772
+		summarizeBy: sum
+		sourceColumn: Header Repeats
+
+		annotation SummarizationSetBy = Automatic
+
+	column Duplicates
+		dataType: int64
+		formatString: 0
+		lineageTag: 8c35182c-3e2d-5e61-bc5a-f98b51bbc259
+		summarizeBy: sum
+		sourceColumn: Duplicates
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Source Files' = m
+		mode: import
+		source =
+				let
+				    // control figures read straight from each export a second, independent way (column positions, no clean-up steps)
+				    Shop = Table.Buffer(Table.Skip(Csv.Document(File.Contents(DataFolder & "shop-orders-export.csv"), [Delimiter = ",", Columns = 19, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]), 1)),
+				    ShopOrd = Table.SelectRows(Shop, each [Column3] <> ""),
+				    VoidedIds = List.Buffer(Table.SelectRows(ShopOrd, each [Column3] = "voided")[Column1]),   // read once, not once per row
+				    VoidedLines = Table.RowCount(Table.SelectRows(Shop, each List.Contains(VoidedIds, [Column1]))),
+				    Mkt = Table.Skip(Csv.Document(File.Contents(DataFolder & "marketplace-orders-eu.csv"), [Delimiter = ";", Columns = 9, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]), 1),
+				    MktRows = Table.SelectRows(Mkt, each Text.Trim([Column1]) <> ""),
+				    Headers = Table.RowCount(Table.SelectRows(MktRows, each [Column1] = "Order ID")),
+				    MktData = Table.SelectRows(MktRows, each [Column1] <> "Order ID"),
+				    Dups = Table.RowCount(MktData) - Table.RowCount(Table.Distinct(MktData)),
+				    T = #table(type table [Channel = text, File = text, #"Rows In File" = Int64.Type, #"Orders In File" = Int64.Type,
+				                           #"Voided Orders" = Int64.Type, #"Voided Lines" = Int64.Type, #"Header Repeats" = Int64.Type, Duplicates = Int64.Type], {
+				        {"Webshop", "shop-orders-export.csv", Table.RowCount(Shop), Table.RowCount(ShopOrd), List.Count(VoidedIds), VoidedLines, 0, 0},
+				        {"Marketplace EU", "marketplace-orders-eu.csv", Table.RowCount(MktRows), List.Count(List.Distinct(MktData[Column1])), 0, 0, Headers, Dups}
+				    })
+				in
+				    T
+
+	annotation PBI_ResultType = Table

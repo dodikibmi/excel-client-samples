@@ -1,0 +1,32 @@
+/// The rows of the Key insights panel; the sentence itself is the Insight measure.
+table Insights
+	lineageTag: eff0c84c-01f0-5804-a54f-21f49aa8b949
+
+	column No
+		dataType: int64
+		formatString: 0
+		lineageTag: d57e14c2-eb46-5c73-8238-caa7f9081884
+		summarizeBy: none
+		sourceColumn: No
+
+		annotation SummarizationSetBy = Automatic
+
+	column Topic
+		dataType: string
+		sortByColumn: No
+		lineageTag: 409ac382-35c5-5679-8b9c-757dce53691d
+		summarizeBy: none
+		sourceColumn: Topic
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Insights = m
+		mode: import
+		source =
+				let
+				    Source = #table(type table [No = Int64.Type, Topic = text],
+				        {{1, "Sales"}, {2, "Exchange rates"}, {3, "Fastest growing market"}, {4, "Best seller"}, {5, "Customers"}, {6, "Refunds"}})
+				in
+				    Source
+
+	annotation PBI_ResultType = Table

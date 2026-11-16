@@ -1,0 +1,33 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["DataFolder", "FxStart", "Num", "NumEU", "ShopRaw", "ShopLines", "ShopOrders", "MarketLines", "MarketOrders", "ProductsRaw", "_Measures", "Sales", "Orders", "Product", "Customer", "Market", "Currency", "Date", "FX API", "FX Saved", "Ad Spend", "Source Files", "File Totals", "Checks", "Insights", "Months Later"]
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table _Measures
+ref table Sales
+ref table Orders
+ref table Product
+ref table Customer
+ref table Market
+ref table Currency
+ref table Date
+ref table 'FX API'
+ref table 'FX Saved'
+ref table 'FX Rate'
+ref table 'Ad Spend'
+ref table 'Source Files'
+ref table 'File Totals'
+ref table Checks
+ref table Insights
+ref table 'Months Later'
+

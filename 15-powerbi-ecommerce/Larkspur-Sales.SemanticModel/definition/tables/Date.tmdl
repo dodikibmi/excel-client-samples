@@ -1,0 +1,99 @@
+/// Calendar: one row per day of the months with orders.
+table Date
+	lineageTag: 002e75fa-bdc9-570e-b2a0-725e4e845950
+	dataCategory: Time
+
+	column Date
+		dataType: dateTime
+		formatString: d mmm yyyy
+		isKey
+		lineageTag: fef055b1-a71b-5a68-bf77-98e3448cfd1d
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: da2695b8-d7d7-5d32-868c-a02753527f20
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month No'
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: f47efe76-b95f-5f65-a462-cb10ec85651f
+		summarizeBy: none
+		sourceColumn: Month No
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: string
+		sortByColumn: 'Month No'
+		lineageTag: 3e43ea32-0440-5be3-90ae-72ed8098399e
+		summarizeBy: none
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Of Year'
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: 7b2d4ddc-ebc9-523d-ae82-8ddced051511
+		summarizeBy: none
+		sourceColumn: Month Of Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Name'
+		dataType: string
+		sortByColumn: 'Month Of Year'
+		lineageTag: 38bfb519-0271-51d4-85ac-7806913c3241
+		summarizeBy: none
+		sourceColumn: Month Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Start'
+		dataType: dateTime
+		formatString: d mmm yyyy
+		lineageTag: d2cbed89-c046-58c3-8d59-160ed23e6609
+		summarizeBy: none
+		sourceColumn: Month Start
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		dataType: string
+		lineageTag: 0119c218-fc3c-5725-8bdb-436a2341e08d
+		summarizeBy: none
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Date = m
+		mode: import
+		source =
+				let
+				    // one row per day, whole months, from the first to the last order
+				    Start = Date.StartOfMonth(List.Min(Orders[Date])),
+				    End = Date.EndOfMonth(List.Max(Orders[Date])),
+				    Days = List.Dates(Start, Duration.Days(End - Start) + 1, #duration(1, 0, 0, 0)),
+				    Base = Table.FromList(Days, Splitter.SplitByNothing(), type table [Date = date]),
+				    Year = Table.AddColumn(Base, "Year", each Date.Year([Date]), Int64.Type),
+				    MonthNo = Table.AddColumn(Year, "Month No", each Date.Year([Date]) * 100 + Date.Month([Date]), Int64.Type),
+				    Month = Table.AddColumn(MonthNo, "Month", each Date.ToText([Date], [Format = "MMM yyyy", Culture = "en-US"]), type text),
+				    MoY = Table.AddColumn(Month, "Month Of Year", each Date.Month([Date]), Int64.Type),
+				    MName = Table.AddColumn(MoY, "Month Name", each Date.ToText([Date], [Format = "MMM", Culture = "en-US"]), type text),
+				    MStart = Table.AddColumn(MName, "Month Start", each Date.StartOfMonth([Date]), type date),
+				    Quarter = Table.AddColumn(MStart, "Quarter", each "Q" & Text.From(Date.QuarterOfYear([Date])), type text)
+				in
+				    Quarter
+
+	annotation PBI_ResultType = Table

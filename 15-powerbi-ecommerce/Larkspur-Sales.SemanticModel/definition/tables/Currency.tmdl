@@ -1,0 +1,43 @@
+/// The five currencies the store sells in.
+table Currency
+	lineageTag: e459ca8c-5ad3-5aeb-a9d1-d443fe5d0381
+
+	column Currency
+		dataType: string
+		isKey
+		sortByColumn: Sort
+		lineageTag: 31edfd1f-bd94-54e5-bcec-8467e5bb1b9f
+		summarizeBy: none
+		sourceColumn: Currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Currency Name'
+		dataType: string
+		lineageTag: fa858a90-6662-5d3a-8d18-adede28eda8c
+		summarizeBy: none
+		sourceColumn: Currency Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sort
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: 2a807b09-8f6e-555f-98c0-768c1845aa70
+		summarizeBy: none
+		sourceColumn: Sort
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Currency = m
+		mode: import
+		source =
+				let
+				    Source = #table(
+				        type table [Currency = text, #"Currency Name" = text, Sort = Int64.Type],
+				        {{"USD", "US dollar", 1}, {"EUR", "Euro", 2}, {"GBP", "Pound sterling", 3}, {"CAD", "Canadian dollar", 4}, {"AUD", "Australian dollar", 5}})
+				in
+				    Source
+
+	annotation PBI_ResultType = Table

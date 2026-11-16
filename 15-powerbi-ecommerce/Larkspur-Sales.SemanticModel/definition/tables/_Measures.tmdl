@@ -1,0 +1,659 @@
+table _Measures
+	lineageTag: 9b29544b-75ec-5e1d-b2f9-596831924b70
+
+	measure 'Gross Sales' = SUM ( Sales[Gross USD] )
+		formatString: #,0
+		displayFolder: 1 Sales
+		lineageTag: 488d7508-b24a-5a7d-bd1f-f03933363cda
+
+	measure Discounts = SUM ( Sales[Discount USD] )
+		formatString: #,0
+		displayFolder: 1 Sales
+		lineageTag: 0edeb7ab-cc2a-5eeb-8686-36c85a462dc2
+
+	measure Returns =
+			-- refunds, in the month of the order
+			SUM ( Sales[Returns USD] )
+		formatString: #,0
+		displayFolder: 1 Sales
+		lineageTag: 0a6c796c-6d96-59fc-a3b1-349ef4d9b6f7
+
+	measure 'Net Sales' =
+			-- gross - discounts - refunds; without shipping and taxes
+			SUM ( Sales[Net USD] )
+		formatString: #,0
+		displayFolder: 1 Sales
+		lineageTag: df9da238-53ad-560a-80ea-0fe702d9a0e4
+
+	measure Orders = COUNTROWS ( Orders )
+		formatString: #,0
+		displayFolder: 1 Sales
+		lineageTag: bfc5d450-5c5c-59e1-9984-e85d8c31cec1
+
+	measure Units = SUM ( Sales[Qty] )
+		formatString: #,0
+		displayFolder: 1 Sales
+		lineageTag: c48baa2a-4b33-5594-81ae-fb3d5bb21a8c
+
+	measure 'Average Order Value' =
+			-- order value after discounts, before refunds
+			DIVIDE ( [Gross Sales] - [Discounts], [Orders] )
+		formatString: #,0.00
+		displayFolder: 1 Sales
+		lineageTag: 55a0e741-b113-5ebe-ba53-5517ba14f217
+
+	measure COGS = SUM ( Sales[COGS USD] )
+		formatString: #,0
+		displayFolder: 1 Sales
+		lineageTag: c7ff4349-9571-5632-a3fd-3064dc192054
+
+	measure 'Gross Profit' = [Net Sales] - [COGS]
+		formatString: #,0
+		displayFolder: 1 Sales
+		lineageTag: 6a4141d4-b316-58f2-9bc9-0fc3201a759c
+
+	measure 'Gross Margin %' = DIVIDE ( [Gross Profit], [Net Sales] )
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 1 Sales
+		lineageTag: cdccd965-4f73-53a2-bb98-ad2a79bd85bf
+
+	measure 'Refund Rate %' = DIVIDE ( [Returns], [Gross Sales] - [Discounts] )
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 1 Sales
+		lineageTag: af99f203-2fd6-5db5-b814-278159f95a0d
+
+	measure 'Shipping Charged' = SUM ( Orders[Shipping USD] )
+		formatString: #,0
+		displayFolder: 1 Sales
+		lineageTag: 1425ad99-159d-5d0c-94db-0e21ae489af8
+
+	measure 'Taxes Collected' = SUM ( Orders[Taxes USD] )
+		formatString: #,0
+		displayFolder: 1 Sales
+		lineageTag: 46671284-6884-5882-802c-ee6588116c55
+
+	measure 'Share of Net Sales %' = DIVIDE ( [Net Sales], CALCULATE ( [Net Sales], REMOVEFILTERS ( Product ) ) )
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 1 Sales
+		lineageTag: f804a975-81da-55f3-855a-d82415e0ecb5
+
+	measure 'Net Sales LY' = CALCULATE ( [Net Sales], SAMEPERIODLASTYEAR ( 'Date'[Date] ) )
+		formatString: #,0
+		displayFolder: 2 Time intelligence
+		lineageTag: 8e910079-5483-52ad-b7fb-cc8fd687bd1c
+
+	measure 'Net Sales YoY %' =
+			VAR ly = [Net Sales LY]
+			RETURN IF ( NOT ISBLANK ( ly ), DIVIDE ( [Net Sales] - ly, ly ) )
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: 2 Time intelligence
+		lineageTag: e1e7a401-15aa-5778-a8af-3a96f2d7f7d1
+
+	measure 'Orders LY' = CALCULATE ( [Orders], SAMEPERIODLASTYEAR ( 'Date'[Date] ) )
+		formatString: #,0
+		displayFolder: 2 Time intelligence
+		lineageTag: 0f787804-7567-5f2e-b2fc-676ddfb45ceb
+
+	measure 'Orders YoY %' =
+			VAR ly = [Orders LY]
+			RETURN IF ( NOT ISBLANK ( ly ), DIVIDE ( [Orders] - ly, ly ) )
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: 2 Time intelligence
+		lineageTag: cf7df5a4-0aa9-57ac-9055-be289bae20dc
+
+	measure 'AOV LY' = CALCULATE ( [Average Order Value], SAMEPERIODLASTYEAR ( 'Date'[Date] ) )
+		formatString: #,0.00
+		displayFolder: 2 Time intelligence
+		lineageTag: 264ea644-53d7-5a46-a645-94b50607d99c
+
+	measure 'Gross Margin LY %' = CALCULATE ( [Gross Margin %], SAMEPERIODLASTYEAR ( 'Date'[Date] ) )
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 2 Time intelligence
+		lineageTag: 4aca41fd-df2f-5b5b-81aa-a97c66d87639
+
+	measure 'Refund Rate LY %' = CALCULATE ( [Refund Rate %], SAMEPERIODLASTYEAR ( 'Date'[Date] ) )
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 2 Time intelligence
+		lineageTag: 32aceef7-c351-5234-a64c-707c5d83848c
+
+	measure 'Net Sales YTD' = TOTALYTD ( [Net Sales], 'Date'[Date] )
+		formatString: #,0
+		displayFolder: 2 Time intelligence
+		lineageTag: d306f2b4-ee25-5486-ae83-90c6ec50c33c
+
+	measure 'Net Sales LY YTD' = CALCULATE ( [Net Sales YTD], SAMEPERIODLASTYEAR ( 'Date'[Date] ) )
+		formatString: #,0
+		displayFolder: 2 Time intelligence
+		lineageTag: 1f3e4a75-e42b-52b9-9b1f-144ef13364e2
+
+	measure 'Net Sales Local' =
+			-- in the currency of the orders: only meaningful for one currency
+			SUM ( Sales[Net Local] )
+		formatString: #,0
+		displayFolder: 3 Currencies
+		lineageTag: 285f80a9-df83-51c1-956d-a9eac4bbbea5
+
+	measure 'Effective Rate' =
+			-- units per USD actually used, weighted by sales
+			DIVIDE ( [Net Sales Local], [Net Sales] )
+		formatString: 0.0000
+		displayFolder: 3 Currencies
+		lineageTag: 3178d3d9-00f9-5273-8e78-ac29fd1b1be3
+
+	measure 'Non-USD Share %' = DIVIDE ( CALCULATE ( [Net Sales], KEEPFILTERS ( Orders[Currency] <> "USD" ) ), [Net Sales] )
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 3 Currencies
+		lineageTag: 55855bcd-3803-521c-b083-932b1abb21fd
+
+	measure 'Net Sales CC' =
+			-- constant currency: this year's sales in local currency at last year's average rate for the same month
+			VAR firstYear = CALCULATE ( MIN ( 'Date'[Year] ), REMOVEFILTERS ( 'Date' ) )   -- the first year has no year before it
+			RETURN
+			SUMX (
+			    SUMMARIZE ( Sales, Orders[Currency], 'Date'[Year], 'Date'[Month Of Year] ),
+			    VAR c = Orders[Currency]
+			    VAR y = 'Date'[Year]
+			    VAR m = 'Date'[Month Of Year]
+			    VAR r = IF ( y - 1 < firstYear, BLANK (), IF ( c = "USD", 1,
+			        CALCULATE ( AVERAGE ( 'FX Rate'[Units per USD] ), REMOVEFILTERS ( 'FX Rate' ),
+			            'FX Rate'[Currency] = c, 'FX Rate'[Year] = y - 1, 'FX Rate'[Month Of Year] = m ) ) )
+			    RETURN IF ( NOT ISBLANK ( r ), DIVIDE ( CALCULATE ( SUM ( Sales[Net Local] ) ), r ) )
+			)
+		formatString: #,0
+		displayFolder: 3 Currencies
+		lineageTag: 4fefdcdd-8f3a-53f5-98b9-b59d5f8a052d
+
+	measure 'FX Effect' =
+			-- what exchange rates added to (or took from) USD sales compared with last year's rates
+			VAR firstYear = CALCULATE ( MIN ( 'Date'[Year] ), REMOVEFILTERS ( 'Date' ) )   -- the first year has no year before it
+			RETURN
+			SUMX (
+			    SUMMARIZE ( Sales, Orders[Currency], 'Date'[Year], 'Date'[Month Of Year] ),
+			    VAR c = Orders[Currency]
+			    VAR y = 'Date'[Year]
+			    VAR m = 'Date'[Month Of Year]
+			    VAR r = IF ( y - 1 < firstYear, BLANK (), IF ( c = "USD", 1,
+			        CALCULATE ( AVERAGE ( 'FX Rate'[Units per USD] ), REMOVEFILTERS ( 'FX Rate' ),
+			            'FX Rate'[Currency] = c, 'FX Rate'[Year] = y - 1, 'FX Rate'[Month Of Year] = m ) ) )
+			    RETURN IF ( NOT ISBLANK ( r ), CALCULATE ( SUM ( Sales[Net USD] ) ) - DIVIDE ( CALCULATE ( SUM ( Sales[Net Local] ) ), r ) )
+			)
+		formatString: +#,0;-#,0;0
+		displayFolder: 3 Currencies
+		lineageTag: 2f2ee667-3154-5f90-8fd4-4ecee4cf0940
+
+	measure 'CC Growth %' =
+			VAR ly = [Net Sales LY]
+			VAR cc = [Net Sales CC]
+			RETURN IF ( NOT ISBLANK ( ly ) && NOT ISBLANK ( cc ), DIVIDE ( cc - ly, ly ) )
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: 3 Currencies
+		lineageTag: 5b6fecaa-0b64-5c3d-b11d-7df33dcf3146
+
+	measure 'Latest Rate' =
+			VAR d = CALCULATE ( MAX ( 'FX Rate'[Date] ), REMOVEFILTERS ( 'FX Rate'[Date] ) )
+			RETURN IF ( HASONEVALUE ( 'Currency'[Currency] ), CALCULATE ( AVERAGE ( 'FX Rate'[Units per USD] ), 'FX Rate'[Date] = d ) )
+		formatString: 0.0000
+		displayFolder: 3 Currencies
+		lineageTag: cc5c141b-d095-5280-bc86-72b8f83c5299
+
+	measure 'USD per Unit' = AVERAGE ( 'FX Rate'[USD per Unit] )
+		formatString: 0.0000
+		displayFolder: 3 Currencies
+		lineageTag: f583b4b4-62e8-50c9-ab5a-e44ac9cca345
+
+	measure 'FX Index' =
+			-- value of one unit in USD, first day of the rates = 100
+			VAR d0 = CALCULATE ( MIN ( 'FX Rate'[Date] ), REMOVEFILTERS ( 'FX Rate'[Date] ) )
+			VAR v0 = CALCULATE ( AVERAGE ( 'FX Rate'[USD per Unit] ), REMOVEFILTERS ( 'FX Rate'[Date] ), 'FX Rate'[Date] = d0 )
+			RETURN DIVIDE ( [USD per Unit], v0 ) * 100
+		formatString: 0.0
+		displayFolder: 3 Currencies
+		lineageTag: 5660bc76-7fe3-597b-984b-74f6f59aef2a
+
+	measure 'Rates Latest Date' = CALCULATE ( MAX ( 'FX Rate'[Date] ), REMOVEFILTERS () )
+		formatString: d mmm yyyy
+		displayFolder: 3 Currencies
+		lineageTag: 7035ec33-5f34-5be0-9212-a003beebc081
+
+	measure 'API Rates' = CALCULATE ( COUNTROWS ( 'FX Rate' ), REMOVEFILTERS (), 'FX Rate'[Source] = "API" ) + 0
+		formatString: #,0
+		displayFolder: 3 Currencies
+		lineageTag: fde596d0-2c90-5112-b8cb-01029040b556
+
+	measure 'Rate Source' = IF ( [API Rates] > 0, "Live API", "Saved copy" )
+		displayFolder: 3 Currencies
+		lineageTag: 3ba64da9-7bb8-5897-a51a-25d714c7077d
+
+	measure 'Rate Source Note' = IF ( [API Rates] > 0, "Frankfurter (ECB): ", "API not reached: " ) & FORMAT ( CALCULATE ( COUNTROWS ( 'FX Rate' ), REMOVEFILTERS () ), "#,0" ) & " rates to " & FORMAT ( [Rates Latest Date], "d mmm yyyy" )
+		displayFolder: 3 Currencies
+		isHidden
+		lineageTag: f3d7bb77-d520-54d7-8d4b-5006f33fcc41
+
+	measure 'Rate Source Color' = IF ( [API Rates] > 0, "#3F8A4E", "#D9A441" )
+		displayFolder: 3 Currencies
+		isHidden
+		lineageTag: b89b1dd3-3b4b-59a7-88b5-b13fc34260a7
+
+	measure Customers = DISTINCTCOUNT ( Orders[Customer ID] )
+		formatString: #,0
+		displayFolder: 4 Customers
+		lineageTag: a9e4b58e-d60f-5d2c-bad5-55e97838c5d3
+
+	measure 'New Customers' = CALCULATE ( COUNTROWS ( Orders ), KEEPFILTERS ( Orders[Is New Customer] = TRUE () ) )
+		formatString: #,0
+		displayFolder: 4 Customers
+		lineageTag: 830eb2a6-6354-53ae-a30b-055bc5c078cc
+
+	measure 'Returning Orders' = CALCULATE ( COUNTROWS ( Orders ), KEEPFILTERS ( Orders[Is New Customer] = FALSE () ) )
+		formatString: #,0
+		displayFolder: 4 Customers
+		lineageTag: edd426cd-2f92-5434-85b5-ebaff05bedfc
+
+	measure 'New Customer Orders' = [New Customers]
+		formatString: #,0
+		displayFolder: 4 Customers
+		lineageTag: 76c51015-a48a-5a37-9247-ebe3277b5eab
+
+	measure 'Returning Share %' = DIVIDE ( [Returning Orders], [Orders] )
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 4 Customers
+		lineageTag: 494c26dd-7e62-5e9e-9d05-8f283d97fce4
+
+	measure 'Returning Share LY %' = CALCULATE ( [Returning Share %], SAMEPERIODLASTYEAR ( 'Date'[Date] ) )
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 4 Customers
+		lineageTag: a0ab9f90-7763-5913-87b5-12449320bfd1
+
+	measure 'Ad Spend' = SUM ( 'Ad Spend'[Spend USD] )
+		formatString: #,0
+		displayFolder: 4 Customers
+		lineageTag: 31138c06-e09b-56a0-b810-82e30c929231
+
+	measure MER =
+			-- marketing efficiency ratio: webshop net sales per dollar of ads (the marketplace does its own marketing)
+			DIVIDE ( CALCULATE ( [Net Sales], KEEPFILTERS ( Orders[Channel] = "Webshop" ) ), [Ad Spend] )
+		formatString: 0.0"x"
+		displayFolder: 4 Customers
+		lineageTag: 45502571-35b5-516b-8e90-ef44405b6a0f
+
+	measure CAC =
+			-- ad spend per new webshop customer
+			DIVIDE ( [Ad Spend], CALCULATE ( [New Customers], KEEPFILTERS ( Orders[Channel] = "Webshop" ) ) )
+		formatString: #,0.00
+		displayFolder: 4 Customers
+		lineageTag: 3b6325f6-238f-5ee4-8b60-3bc3f406108a
+
+	measure 'Cohort Customers' = CALCULATE ( [New Customers], REMOVEFILTERS ( 'Date' ), REMOVEFILTERS ( Orders[Months Since First] ) )
+		formatString: #,0
+		displayFolder: 4 Customers
+		lineageTag: 85517396-6111-5fde-920b-9dd2bbbfc45b
+
+	measure 'Cohort Retention %' =
+			-- share of a month's new customers who ordered again N months later (2025 cohorts, first 12 months)
+			VAR k = SELECTEDVALUE ( 'Months Later'[Months Later] )
+			VAR c = SELECTEDVALUE ( Customer[Cohort No] )
+			VAR active = CALCULATE ( DISTINCTCOUNT ( Orders[Customer ID] ), REMOVEFILTERS ( 'Date' ), Orders[Months Since First] = k )
+			RETURN IF ( NOT ISBLANK ( k ) && NOT ISBLANK ( c ) && c < 202601, DIVIDE ( active, [Cohort Customers] ) )
+		formatString: 0%
+		displayFolder: 4 Customers
+		lineageTag: 7622403d-4207-559d-bc4e-d9adfaf50a2c
+
+	measure 'Cohort Color' =
+			VAR p = [Cohort Retention %]
+			RETURN SWITCH ( TRUE (), ISBLANK ( p ), "#FFFFFF", p >= 0.99, "#E8DFD2", p >= 0.06, "#C2603D", p >= 0.04, "#D98B6A",
+			    p >= 0.025, "#E3A587", p >= 0.01, "#F1CDB9", "#FBF0E8" )
+		displayFolder: 4 Customers
+		isHidden
+		lineageTag: 9bf5432b-1f9d-57b8-bdce-59f674c193aa
+
+	measure 'Cohort Font' = IF ( [Cohort Retention %] >= 0.06 && [Cohort Retention %] < 0.99, "#FFFFFF", "#3B2F2A" )
+		displayFolder: 4 Customers
+		isHidden
+		lineageTag: abd5caab-42b3-556f-9f19-21aa227c65dd
+
+	measure 'Chk Shop Rows' = CALCULATE ( SUM ( 'Source Files'[Rows In File] ), REMOVEFILTERS (), 'Source Files'[Channel] = "Webshop" )
+		formatString: #,0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: ce43229e-cae6-5e24-bf89-999ec7ded44c
+
+	measure 'Chk Shop Voided Lines' = CALCULATE ( SUM ( 'Source Files'[Voided Lines] ), REMOVEFILTERS () )
+		formatString: #,0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: fe4d1df5-0b1b-5b34-a830-eccdf7111154
+
+	measure 'Chk Shop Voided Orders' = CALCULATE ( SUM ( 'Source Files'[Voided Orders] ), REMOVEFILTERS () )
+		formatString: #,0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: d9c9a14e-b1ea-5200-9347-aada5671382e
+
+	measure 'Chk Shop Lines' = CALCULATE ( COUNTROWS ( Sales ), REMOVEFILTERS (), Sales[Channel] = "Webshop" ) + 0
+		formatString: #,0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: 2d82fcb5-6523-5fc9-9c48-ebc85fdfd5f9
+
+	measure 'Chk Mkt Rows' = CALCULATE ( SUM ( 'Source Files'[Rows In File] ), REMOVEFILTERS (), 'Source Files'[Channel] = "Marketplace EU" )
+		formatString: #,0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: e6739735-0515-56ef-a06a-54dd782c1243
+
+	measure 'Chk Mkt Headers' = CALCULATE ( SUM ( 'Source Files'[Header Repeats] ), REMOVEFILTERS () )
+		formatString: #,0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: de211773-2cc0-58ec-bead-667dfc8b54c4
+
+	measure 'Chk Mkt Duplicates' = CALCULATE ( SUM ( 'Source Files'[Duplicates] ), REMOVEFILTERS () )
+		formatString: #,0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: 593b6199-a863-59ac-9b94-79fc61745ed5
+
+	measure 'Chk Mkt Lines' = CALCULATE ( COUNTROWS ( Sales ), REMOVEFILTERS (), Sales[Channel] = "Marketplace EU" ) + 0
+		formatString: #,0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: 05146307-e1f0-51fc-a8a8-bffd79d93d31
+
+	measure 'Chk Orders' = CALCULATE ( COUNTROWS ( Orders ), REMOVEFILTERS () )
+		formatString: #,0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: 4fc1c31f-fb59-5943-8e52-0d3be0d8715e
+
+	measure 'Chk Order IDs' = CALCULATE ( DISTINCTCOUNT ( Orders[Order ID] ), REMOVEFILTERS () )
+		formatString: #,0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: f3dbb88f-b18c-514b-adea-47abf536fcb6
+
+	measure 'Chk Lines Off' =
+			COUNTROWS ( FILTER ( CALCULATETABLE ( Orders, REMOVEFILTERS () ),
+			    ABS ( Orders[Gross Local] - Orders[Discount Local] - Orders[Subtotal Local] ) > 0.005 ) ) + 0
+		formatString: 0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: 81a7cc9c-3fe7-5ce4-ab50-844d9fe9f791
+
+	measure 'Chk Totals Off' =
+			COUNTROWS ( FILTER ( CALCULATETABLE ( Orders, REMOVEFILTERS () ),
+			    ABS ( Orders[Subtotal Local] + Orders[Shipping Local] + Orders[Taxes Local] - Orders[Total Local] ) > 0.005 ) ) + 0
+		formatString: 0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: 48e60f51-bcac-5303-896a-44ebf1b73c6f
+
+	measure 'Chk Currencies Off' =
+			COUNTROWS ( FILTER ( CALCULATETABLE ( 'File Totals', REMOVEFILTERS () ),
+			    VAR c = 'File Totals'[Currency]
+			    RETURN ABS ( CALCULATE ( SUM ( Orders[Total Local] ), REMOVEFILTERS (), Orders[Currency] = c ) - 'File Totals'[Total In File] ) > 0.005 ) ) + 0
+		formatString: 0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: 6dcb712f-17e2-554d-9a54-3e5b516f4f7c
+
+	measure 'Chk Currencies' = CALCULATE ( COUNTROWS ( 'File Totals' ), REMOVEFILTERS () ) + 0
+		formatString: 0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: f034bbfb-4743-55ed-aed2-6e020b75f84e
+
+	measure 'Chk Rate Missing' = COUNTROWS ( FILTER ( CALCULATETABLE ( Orders, REMOVEFILTERS () ), ISBLANK ( Orders[Rate] ) || Orders[Rate Age Days] > 5 ) ) + 0
+		formatString: 0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: 3a06cea3-500e-5802-9a84-3e9fe392ce26
+
+	measure 'Chk Rate Max Age' = CALCULATE ( MAX ( Orders[Rate Age Days] ), REMOVEFILTERS () )
+		formatString: 0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: e38db558-c678-5f9f-b746-ccfd82f850fb
+
+	measure 'Chk FX Compared' =
+			COUNTROWS ( FILTER ( CALCULATETABLE ( 'FX API', REMOVEFILTERS () ),
+			    NOT ISBLANK ( LOOKUPVALUE ( 'FX Saved'[Units per USD], 'FX Saved'[Date], 'FX API'[Date], 'FX Saved'[Currency], 'FX API'[Currency] ) ) ) ) + 0
+		formatString: #,0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: 0fd040d4-4a4d-57a6-9af6-603f667bff18
+
+	measure 'Chk FX Diff' =
+			COUNTROWS ( FILTER ( CALCULATETABLE ( 'FX API', REMOVEFILTERS () ),
+			    VAR s = LOOKUPVALUE ( 'FX Saved'[Units per USD], 'FX Saved'[Date], 'FX API'[Date], 'FX Saved'[Currency], 'FX API'[Currency] )
+			    RETURN NOT ISBLANK ( s ) && ABS ( s - 'FX API'[Units per USD] ) > 0.0000001 ) ) + 0
+		formatString: 0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: 9870820a-6f78-5ec1-ac85-4c96c17a6c96
+
+	measure 'Chk FX New' = [API Rates] - [Chk FX Compared]
+		formatString: 0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: bc03d644-937f-5609-a023-66c84c6fb04f
+
+	measure 'Chk Refund Over' = COUNTROWS ( FILTER ( CALCULATETABLE ( Orders, REMOVEFILTERS () ), Orders[Refunded Local] > Orders[Total Local] + 0.005 ) ) + 0
+		formatString: 0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: 62bb8aee-433a-5866-b502-4245c38d5553
+
+	measure 'Chk Unknown SKU' = COUNTROWS ( FILTER ( CALCULATETABLE ( Sales, REMOVEFILTERS () ), RELATED ( Product[In Product List] ) = FALSE () ) ) + 0
+		formatString: 0
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: affbdaed-ff79-5385-bafb-8feeb12a4026
+
+	measure 'Unknown SKU Lines' = COUNTROWS ( FILTER ( Sales, RELATED ( Product[In Product List] ) = FALSE () ) )
+		formatString: 0
+		displayFolder: 5 Checks
+		lineageTag: 8c1eec57-3885-5fd5-8dd7-fa5ed0e24b89
+
+	measure 'Check Status' =
+			VAR n = SELECTEDVALUE ( Checks[No] )
+			VAR ok = SWITCH ( n,
+			    1, [Chk Shop Rows] = [Chk Shop Lines] + [Chk Shop Voided Lines],
+			    2, [Chk Mkt Rows] - [Chk Mkt Headers] - [Chk Mkt Duplicates] = [Chk Mkt Lines],
+			    3, [Chk Orders] = [Chk Order IDs],
+			    4, [Chk Lines Off] = 0,
+			    5, [Chk Totals Off] = 0,
+			    6, [Chk Currencies Off] = 0 && [Chk Currencies] > 0,
+			    7, [Chk Rate Missing] = 0,
+			    8, [Chk FX Diff] = 0 && [API Rates] > 0,
+			    9, [Chk Refund Over] = 0,
+			    10, [Chk Unknown SKU] = 0
+			)
+			RETURN
+			    IF ( HASONEVALUE ( Checks[No] ),
+			        IF ( ok, "PASS", IF ( n = 10 || ( n = 8 && [API Rates] = 0 ), "REVIEW", "FAIL" ) ) )
+		displayFolder: 5 Checks
+		lineageTag: 3cfe0e24-c56e-5f65-8535-b2922ef1d473
+
+	measure 'Check Detail' =
+			SWITCH ( SELECTEDVALUE ( Checks[No] ),
+			    1, FORMAT ( [Chk Shop Rows], "#,0" ) & " lines in the file = " & FORMAT ( [Chk Shop Lines], "#,0" ) & " sold + "
+			        & FORMAT ( [Chk Shop Voided Lines], "#,0" ) & " on " & FORMAT ( [Chk Shop Voided Orders], "#,0" ) & " voided orders",
+			    2, FORMAT ( [Chk Mkt Rows], "#,0" ) & " rows: " & FORMAT ( [Chk Mkt Headers], "0" ) & " repeated headers and "
+			        & FORMAT ( [Chk Mkt Duplicates], "0" ) & " duplicates removed, " & FORMAT ( [Chk Mkt Lines], "#,0" ) & " lines",
+			    3, FORMAT ( [Chk Orders], "#,0" ) & " orders, " & FORMAT ( [Chk Order IDs], "#,0" ) & " different order numbers",
+			    4, FORMAT ( [Chk Lines Off], "0" ) & " orders differ",
+			    5, FORMAT ( [Chk Totals Off], "0" ) & " orders differ",
+			    6, FORMAT ( [Chk Currencies] - [Chk Currencies Off], "0" ) & " of " & FORMAT ( [Chk Currencies], "0" ) & " currencies agree to the cent",
+			    7, FORMAT ( [Chk Rate Missing], "0" ) & " orders without a rate; oldest rate used: " & FORMAT ( [Chk Rate Max Age], "0" ) & " days (weekends, holidays)",
+			    8, IF ( [API Rates] = 0, "API not reached: every rate comes from the saved copy",
+			        FORMAT ( [Chk FX Compared] - [Chk FX Diff], "#,0" ) & " of " & FORMAT ( [Chk FX Compared], "#,0" ) & " rates agree, "
+			        & FORMAT ( [Chk FX New], "0" ) & " newer than the copy" ),
+			    9, FORMAT ( [Chk Refund Over], "0" ) & " refunds larger than the order",
+			    10, FORMAT ( [Chk Unknown SKU], "0" ) & " lines with a SKU not in products.csv"
+			)
+		displayFolder: 5 Checks
+		lineageTag: bc59584b-f171-590a-b6ad-425a30a41414
+
+	measure 'Check Color' = SWITCH ( [Check Status], "PASS", "#3F8A4E", "FAIL", "#C0392B", "REVIEW", "#B7862B" )
+		displayFolder: 5 Checks
+		isHidden
+		lineageTag: 074d10db-bb4a-51a8-aaa5-32f419385245
+
+	measure 'Checks Passed' =
+			VAR t = ADDCOLUMNS ( ALL ( Checks[No] ), "@s", [Check Status] )
+			RETURN FORMAT ( COUNTROWS ( FILTER ( t, [@s] = "PASS" ) ), "0" ) & " of " & FORMAT ( COUNTROWS ( FILTER ( t, [@s] <> "REVIEW" ) ), "0" ) & " PASS"
+		displayFolder: 5 Checks
+		lineageTag: fccd623e-55ff-5df0-a44e-78facc56c381
+
+	measure 'Checks Failed' =
+			VAR t = ADDCOLUMNS ( ALL ( Checks[No] ), "@s", [Check Status] )
+			RETURN COUNTROWS ( FILTER ( t, [@s] = "FAIL" ) ) + 0
+		formatString: 0
+		displayFolder: 5 Checks
+		lineageTag: 30f2dee2-a77d-5a15-a25e-3b5fe3c99ea5
+
+	measure 'Sales Note' =
+			VAR p = [Net Sales YoY %]
+			RETURN IF ( ISBLANK ( p ), "no earlier year to compare", IF ( p >= 0, "▲ ", "▼ " ) & FORMAT ( ABS ( p ), "0.0%" ) & " vs last year" )
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: fcd4d3ac-148c-5783-b30d-62c78a04609b
+
+	measure 'Sales Note Color' = IF ( [Net Sales YoY %] < 0, "#C0392B", "#3F8A4E" )
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: 213a443f-ca51-51d3-91cb-51a776a426c7
+
+	measure 'Orders Note' =
+			VAR p = [Orders YoY %]
+			RETURN IF ( ISBLANK ( p ), "no earlier year to compare", IF ( p >= 0, "▲ ", "▼ " ) & FORMAT ( ABS ( p ), "0.0%" ) & " vs last year" )
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: 1dbdc1cd-7d5f-58d1-8aca-fc72ba097e2c
+
+	measure 'Orders Note Color' = IF ( [Orders YoY %] < 0, "#C0392B", "#3F8A4E" )
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: 0e3cd30c-d60a-550a-9490-2a8c5b11542a
+
+	measure 'AOV Note' = IF ( ISBLANK ( [AOV LY] ), "no earlier year to compare", "last year " & FORMAT ( [AOV LY], "#,0.00" ) )
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: bc16609c-a2c5-5f9f-89c4-aa5c290d0259
+
+	measure 'AOV Note Color' = IF ( [Average Order Value] < [AOV LY], "#C0392B", "#3F8A4E" )
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: 2daef18d-ddb9-5810-a90c-4e2cba7339a7
+
+	measure 'Margin Note' = IF ( ISBLANK ( [Gross Margin LY %] ), "no earlier year to compare", "last year " & FORMAT ( [Gross Margin LY %], "0.0%" ) )
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: dd8f1b78-66d7-576d-96f5-d1dc7849024d
+
+	measure 'Margin Note Color' = IF ( [Gross Margin %] < [Gross Margin LY %], "#C0392B", "#3F8A4E" )
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: 40c588ec-c552-5aab-9176-aec3cffe19d1
+
+	measure 'Returning Note' = IF ( ISBLANK ( [Returning Share LY %] ), "of orders", "last year " & FORMAT ( [Returning Share LY %], "0.0%" ) )
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: ca49cd09-5412-549b-a5e4-79946c27ed42
+
+	measure 'Returning Note Color' = IF ( [Returning Share %] < [Returning Share LY %], "#C0392B", "#3F8A4E" )
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: 2361af2f-5ae4-5085-8137-384d9a266274
+
+	measure 'Refund Note' = IF ( ISBLANK ( [Refund Rate LY %] ), "of sales", "last year " & FORMAT ( [Refund Rate LY %], "0.0%" ) )
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: 6d92e8aa-6e44-5dd1-8a02-bf7d37de805c
+
+	measure 'Refund Note Color' = IF ( [Refund Rate %] > [Refund Rate LY %], "#C0392B", "#3F8A4E" )
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: f3ac404d-7e5f-5442-a1b9-0f9b6a807279
+
+	measure 'CC Note' = IF ( ISBLANK ( [CC Growth %] ), "no earlier year to compare", "reported " & FORMAT ( [Net Sales YoY %], "+0.0%;-0.0%" ) )
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: c96b88ee-8170-53b8-a7ec-ea2483a329dd
+
+	measure 'FX Note' = "vs last year's rates"
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: aac1a4c2-6bb9-524e-bbd6-324378d19cbd
+
+	measure 'FX Color' = IF ( [FX Effect] < 0, "#C0392B", "#3F8A4E" )
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: 394f0c1d-5861-590d-9b35-ae9cd0af246f
+
+	measure 'Non-USD Note' = "of net sales in EUR, GBP, CAD, AUD"
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: e31870e8-ac95-5328-a734-e1cf69cdbac7
+
+	measure 'MER Note' = "webshop sales per $1 of ads"
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: ffb0cd4f-226a-51de-a228-c4088e21cd87
+
+	measure 'CAC Note' = "ads per new webshop customer"
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: 437acaf0-803c-570f-8f5e-661598954869
+
+	measure Insight =
+			-- one sentence per row of the Insights table, recalculated for the year, channel and market picked in the slicers
+			VAR markets = FILTER ( ADDCOLUMNS ( VALUES ( Market[Market] ), "@ly", [Net Sales LY], "@g", [Net Sales YoY %] ), [@ly] >= 1000 )
+			VAR fast = TOPN ( 1, markets, [@g], DESC )
+			VAR products = ADDCOLUMNS ( VALUES ( Product[Product] ), "@v", [Net Sales] )
+			VAR best = TOPN ( 1, products, [@v], DESC )
+			VAR cats = FILTER ( ADDCOLUMNS ( VALUES ( Product[Category] ), "@r", [Refund Rate %] ), NOT ISBLANK ( [@r] ) )
+			VAR worst = TOPN ( 1, cats, [@r], DESC )
+			VAR total = [Net Sales]   -- outside MAXX: inside it the row context would turn it into one product's sales
+			RETURN
+			    SWITCH ( SELECTEDVALUE ( Insights[No] ),
+			        1, "Net sales " & FORMAT ( [Net Sales], "#,0" ) & " USD" & IF ( ISBLANK ( [Net Sales YoY %] ), "",
+			            ", " & FORMAT ( [Net Sales YoY %], "+0.0%;-0.0%" ) & " on the same months last year" ),
+			        2, IF ( ISBLANK ( [CC Growth %] ), "No earlier year to compare rates with",
+			            "At last year's exchange rates " & FORMAT ( [CC Growth %], "+0.0%;-0.0%" ) & ": currency moves "
+			            & IF ( [FX Effect] >= 0, "added ", "took off " ) & FORMAT ( ABS ( [FX Effect] ), "#,0" ) & " USD" ),
+			        3, IF ( ISEMPTY ( fast ), "No earlier year to compare",
+			            MAXX ( fast, Market[Market] & " " & FORMAT ( [@g], "+0.0%;-0.0%" ) & " (" & FORMAT ( [@ly], "#,0" ) & " to "
+			            & FORMAT ( [@ly] * ( 1 + [@g] ), "#,0" ) & ")" ) ),
+			        4, MAXX ( best, Product[Product] & ": " & FORMAT ( [@v], "#,0" ) & " (" & FORMAT ( DIVIDE ( [@v], total ), "0.0%" ) & " of net sales)" ),
+			        5, "Returning customers placed " & FORMAT ( [Returning Share %], "0.0%" ) & " of orders; ads cost "
+			            & FORMAT ( [CAC], "#,0.00" ) & " per new webshop customer",
+			        6, "Refunds " & FORMAT ( [Refund Rate %], "0.0%" ) & " of sales; highest in "
+			            & MAXX ( worst, Product[Category] & " (" & FORMAT ( [@r], "0.0%" ) & ")" )
+			    )
+		displayFolder: 6 Report text
+		lineageTag: ba128a0a-c4f3-5f89-aba8-d3f479fa73f5
+
+	measure 'Insight Color' = SWITCH ( SELECTEDVALUE ( Insights[No] ), 1, [Sales Note Color], 2, [FX Color], 3, "#3F8A4E", 6, "#C0392B", "#3B2F2A" )
+		displayFolder: 6 Report text
+		isHidden
+		lineageTag: c3e08010-8ce0-595d-bc63-aa751ea4d876
+
+	column 'Measure Group'
+		dataType: string
+		isHidden
+		lineageTag: ca7092cb-b9a7-5bb8-9624-4778b612ca68
+		summarizeBy: none
+		sourceColumn: Measure Group
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Measures = m
+		mode: import
+		source =
+				let
+				    Source = #table(type table [#"Measure Group" = text], {})
+				in
+				    Source
+
+	annotation PBI_ResultType = Table

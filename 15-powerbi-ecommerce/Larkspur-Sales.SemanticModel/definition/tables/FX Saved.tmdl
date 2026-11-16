@@ -1,0 +1,46 @@
+/// Saved copy of the rates (data/fx-rates-saved.csv).
+table 'FX Saved'
+	isHidden
+	lineageTag: 8f99c61b-65c2-55c0-9668-0228530e7201
+
+	column Date
+		dataType: dateTime
+		formatString: d mmm yyyy
+		isHidden
+		lineageTag: 26272ba0-d47b-5303-ab03-3a49405eebaf
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Currency
+		dataType: string
+		isHidden
+		lineageTag: 041d0f70-7b70-58f7-aade-fdcaddcd8775
+		summarizeBy: none
+		sourceColumn: Currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Units per USD'
+		dataType: double
+		formatString: 0.00000
+		isHidden
+		lineageTag: 0f379571-8679-5e12-8b5a-e5a466cc34f7
+		summarizeBy: none
+		sourceColumn: Units per USD
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'FX Saved' = m
+		mode: import
+		source =
+				let
+				    // the copy saved by scripts/fetch_rates.py: used for any day the API did not return
+				    Source = Csv.Document(File.Contents(DataFolder & "fx-rates-saved.csv"), [Delimiter = ",", Columns = 3, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {{"Date", type date}, {"Currency", type text}, {"Units per USD", type number}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

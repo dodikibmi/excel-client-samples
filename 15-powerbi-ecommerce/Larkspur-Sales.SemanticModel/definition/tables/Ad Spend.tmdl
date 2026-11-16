@@ -1,0 +1,43 @@
+/// Monthly ad spend per ad channel (USD).
+table 'Ad Spend'
+	lineageTag: 6a106e52-3a29-577f-9bec-23d13a588d9a
+
+	column Month
+		dataType: dateTime
+		formatString: mmm yyyy
+		lineageTag: 151c94c1-5e94-5e80-aaf4-c2cf02289cb9
+		summarizeBy: none
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ad Channel'
+		dataType: string
+		lineageTag: b7e9dc5f-6039-5526-9ba5-9a64f5378363
+		summarizeBy: none
+		sourceColumn: Ad Channel
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Spend USD'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 9ac16034-e8ba-5b05-8d3e-e709f6bdc493
+		summarizeBy: sum
+		sourceColumn: Spend USD
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Ad Spend' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "ads-spend.csv"), [Delimiter = ",", Columns = 3, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Month = Table.TransformColumns(Promoted, {{"Month", each Date.FromText(_ & "-01", [Format = "yyyy-MM-dd", Culture = "en-US"]), type date}}),
+				    Typed = Table.TransformColumnTypes(Month, {{"Channel", type text}, {"Spend USD", type number}}, "en-US"),
+				    Out = Table.RenameColumns(Typed, {{"Channel", "Ad Channel"}})
+				in
+				    Out
+
+	annotation PBI_ResultType = Table

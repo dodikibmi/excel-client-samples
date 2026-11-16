@@ -1,0 +1,90 @@
+/// One row per customer; the cohort is the month of the first order.
+table Customer
+	lineageTag: 8e600373-ad21-5b3f-af55-011f552d33cd
+
+	column 'Customer ID'
+		dataType: string
+		isKey
+		lineageTag: 727bbe53-cc99-5518-a205-bfefb6f49e35
+		summarizeBy: none
+		sourceColumn: Customer ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'First Order Date'
+		dataType: dateTime
+		formatString: d mmm yyyy
+		lineageTag: eeef1148-7279-5c91-977b-74d57bd9c321
+		summarizeBy: none
+		sourceColumn: First Order Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Channel
+		dataType: string
+		lineageTag: e2274537-4e4f-5604-bcf1-17edf7d0adcd
+		summarizeBy: none
+		sourceColumn: Channel
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: a841c6f0-66fa-572e-9e01-be2b9bfc8449
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Orders
+		dataType: int64
+		formatString: 0
+		lineageTag: 20f05182-6555-5bf0-9a0b-9b6aff479415
+		summarizeBy: sum
+		sourceColumn: Orders
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cohort No'
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: bac1980b-f12a-5b7a-a2e1-af38f917d26f
+		summarizeBy: none
+		sourceColumn: Cohort No
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cohort
+		dataType: string
+		sortByColumn: 'Cohort No'
+		lineageTag: 6d901c50-bf5d-5ff3-a9d2-9a02daefe1de
+		summarizeBy: none
+		sourceColumn: Cohort
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Repeat Customer'
+		dataType: boolean
+		lineageTag: f2832087-1424-56b4-8072-9b4e3f0f91a6
+		summarizeBy: none
+		sourceColumn: Repeat Customer
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Customer = m
+		mode: import
+		source =
+				let
+				    // one row per customer: country and channel of the first order, the month they became a customer (cohort)
+				    Sorted = Table.Buffer(Table.Sort(Orders, {{"Date", Order.Ascending}, {"Order Seq", Order.Ascending}})),
+				    G = Table.Group(Sorted, {"Customer ID"}, {
+				        {"First Order Date", each List.Min([Date]), type date}, {"Channel", each [Channel]{0}, type text},
+				        {"Country", each [Country]{0}, type text}, {"Orders", each Table.RowCount(_), Int64.Type}}),
+				    No = Table.AddColumn(G, "Cohort No", each Date.Year([First Order Date]) * 100 + Date.Month([First Order Date]), Int64.Type),
+				    Cohort = Table.AddColumn(No, "Cohort", each Date.ToText([First Order Date], [Format = "MMM yyyy", Culture = "en-US"]), type text),
+				    Repeat = Table.AddColumn(Cohort, "Repeat Customer", each [Orders] > 1, type logical)
+				in
+				    Repeat
+
+	annotation PBI_ResultType = Table

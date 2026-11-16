@@ -1,0 +1,264 @@
+/// One row per order (webshop and marketplace), amounts in the order currency; voided orders left out.
+table Orders
+	lineageTag: 4d472891-c350-5fd3-b1e0-922074bb6dab
+
+	column 'Order ID'
+		dataType: string
+		isKey
+		lineageTag: f89c6db4-06e8-5cc4-9aec-bd27c44eb18c
+		summarizeBy: none
+		sourceColumn: Order ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Order Seq'
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: 2dee3ba7-5ed3-5166-af61-80c5fb522cb0
+		summarizeBy: none
+		sourceColumn: Order Seq
+
+		annotation SummarizationSetBy = Automatic
+
+	column Channel
+		dataType: string
+		lineageTag: 7621e14b-0dd2-541f-af27-fa7a620858c1
+		summarizeBy: none
+		sourceColumn: Channel
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: d mmm yyyy
+		lineageTag: dbec253b-5890-5fdf-b5c6-b7bdb927efff
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer ID'
+		dataType: string
+		lineageTag: 1187aa05-dab5-5ac4-8a16-16cfee51361c
+		summarizeBy: none
+		sourceColumn: Customer ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Currency
+		dataType: string
+		lineageTag: d660ab91-500b-592a-b8de-e18e1ebf14f4
+		summarizeBy: none
+		sourceColumn: Currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 0e5c1f70-9383-5af7-82b0-23ba4e5e7bf7
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: a69aa07a-d656-5b99-97ce-430061a1de4d
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Discount Code'
+		dataType: string
+		lineageTag: b03dd74b-267c-5cb1-aef0-75b8c46c1959
+		summarizeBy: none
+		sourceColumn: Discount Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Lines
+		dataType: int64
+		formatString: 0
+		lineageTag: 29eedca8-3dd4-5342-844c-196dcb1dcb62
+		summarizeBy: sum
+		sourceColumn: Lines
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gross Local'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: e9cbe9b4-3ac8-51b0-9d2d-9769bbcd3444
+		summarizeBy: sum
+		sourceColumn: Gross Local
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Discount Local'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 12012d93-d16e-55e0-8209-25b29ef1ef0e
+		summarizeBy: sum
+		sourceColumn: Discount Local
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Subtotal Local'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: a0dfc55c-a0d0-52b9-9f7d-30ad3ba96055
+		summarizeBy: sum
+		sourceColumn: Subtotal Local
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Shipping Local'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 51167c0e-7dce-5e57-95bc-130c74ea20b5
+		summarizeBy: sum
+		sourceColumn: Shipping Local
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Taxes Local'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 864d4a59-d380-5cab-a9e7-49c9173a5fd3
+		summarizeBy: sum
+		sourceColumn: Taxes Local
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Local'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 069e744e-0cd8-56e5-a0ff-39015ca78a8d
+		summarizeBy: sum
+		sourceColumn: Total Local
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Refunded Local'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 5245dff2-fc57-58bf-bcaf-c655a3a9483c
+		summarizeBy: sum
+		sourceColumn: Refunded Local
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Returns Local'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 9d5709dc-1778-5fa2-b60b-46cb1e767b10
+		summarizeBy: sum
+		sourceColumn: Returns Local
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Is New Customer'
+		dataType: boolean
+		lineageTag: aa5fe686-de86-54ec-8b37-b419b108b252
+		summarizeBy: none
+		sourceColumn: Is New Customer
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer Type'
+		dataType: string
+		lineageTag: dd180e04-99b1-5167-9f0b-01cc9aa17160
+		summarizeBy: none
+		sourceColumn: Customer Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Months Since First'
+		dataType: int64
+		formatString: 0
+		lineageTag: 709f5675-c56a-56f9-875f-528afd85f105
+		summarizeBy: none
+		sourceColumn: Months Since First
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rate =
+			-- units per USD on the order date, or the last rate before it (no ECB rate at weekends and holidays)
+			VAR c = Orders[Currency]
+			VAR d = Orders[Date]
+			RETURN
+			    IF ( c = "USD", 1,
+			        VAR last = MAXX ( FILTER ( 'FX Rate', 'FX Rate'[Currency] = c && 'FX Rate'[Date] <= d ), 'FX Rate'[Date] )
+			        RETURN MAXX ( FILTER ( 'FX Rate', 'FX Rate'[Currency] = c && 'FX Rate'[Date] = last ), 'FX Rate'[Units per USD] ) )
+		dataType: double
+		formatString: 0.0000
+		lineageTag: 41908456-83c6-524c-b733-669f5d478a3d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Rate Date' =
+			VAR c = Orders[Currency]
+			VAR d = Orders[Date]
+			RETURN
+			    IF ( c = "USD", d, MAXX ( FILTER ( 'FX Rate', 'FX Rate'[Currency] = c && 'FX Rate'[Date] <= d ), 'FX Rate'[Date] ) )
+		dataType: dateTime
+		formatString: d mmm yyyy
+		lineageTag: 06d19f74-c653-5c85-aa45-b8fd12d15a1a
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Rate Age Days' = INT ( Orders[Date] - Orders[Rate Date] )
+		dataType: int64
+		formatString: 0
+		lineageTag: c5c7e572-6e2d-53a1-8b0f-ec86e22ab977
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Shipping USD' = DIVIDE ( Orders[Shipping Local], Orders[Rate] )
+		dataType: double
+		formatString: #,0.00
+		lineageTag: d4706b4e-d01c-5f67-a1d0-e0c39e24976d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Taxes USD' = DIVIDE ( Orders[Taxes Local], Orders[Rate] )
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 1c344227-c7b2-5148-9f5e-d7ca52537408
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Orders = m
+		mode: import
+		source =
+				let
+				    // one row per order from both channels; voided webshop orders (payment never taken) are left out
+				    Cols = {"Order ID", "Order Seq", "Channel", "Date", "Customer ID", "Currency", "Country", "Status", "Discount Code", "Lines",
+				            "Gross Local", "Discount Local", "Subtotal Local", "Shipping Local", "Taxes Local", "Total Local", "Refunded Local", "Returns Local"},
+				    Shop = Table.SelectColumns(Table.SelectRows(ShopOrders, each [Status] <> "voided"), Cols),
+				    All = Table.Combine({Shop, Table.SelectColumns(MarketOrders, Cols)}),
+				    // the first order of each customer (date, then order number) makes a new customer; later orders are returning
+				    Keyed = Table.Buffer(Table.AddColumn(All, "Sort Key", each Number.From([Date]) * 10000000000 + [Order Seq], type number)),
+				    First = Table.Group(Keyed, {"Customer ID"}, {{"First Key", each List.Min([Sort Key]), type number}, {"First Date", each List.Min([Date]), type date}}),
+				    Joined = Table.Join(Keyed, "Customer ID", Table.RenameColumns(First, {{"Customer ID", "CK"}}), "CK"),
+				    IsNew = Table.AddColumn(Joined, "Is New Customer", each [Sort Key] = [First Key], type logical),
+				    CType = Table.AddColumn(IsNew, "Customer Type", each if [Is New Customer] then "New" else "Returning", type text),
+				    Since = Table.AddColumn(CType, "Months Since First", each
+				        (Date.Year([Date]) - Date.Year([First Date])) * 12 + Date.Month([Date]) - Date.Month([First Date]), Int64.Type),
+				    Out = Table.RemoveColumns(Since, {"CK", "Sort Key", "First Key", "First Date"}),
+				    Typed = Table.TransformColumnTypes(Out, {{"Order ID", type text}, {"Order Seq", Int64.Type}, {"Channel", type text}, {"Date", type date},
+				        {"Customer ID", type text}, {"Currency", type text}, {"Country", type text}, {"Status", type text}, {"Discount Code", type text},
+				        {"Lines", Int64.Type}, {"Gross Local", type number}, {"Discount Local", type number}, {"Subtotal Local", type number},
+				        {"Shipping Local", type number}, {"Taxes Local", type number}, {"Total Local", type number}, {"Refunded Local", type number},
+				        {"Returns Local", type number}})
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

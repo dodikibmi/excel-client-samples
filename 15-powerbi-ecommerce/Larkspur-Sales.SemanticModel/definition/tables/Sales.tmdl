@@ -1,0 +1,174 @@
+/// One row per sold order line from both channels; discounts and refunds spread over the lines of the order.
+table Sales
+	lineageTag: 15092302-353b-5e55-91d2-fb1e435178ba
+
+	column 'Line ID'
+		dataType: string
+		lineageTag: fa309487-22da-5f73-b9b9-746f765b71b2
+		summarizeBy: none
+		sourceColumn: Line ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Order ID'
+		dataType: string
+		lineageTag: 2bfb5c14-e3a7-5c19-91d3-c9dd7d8c82a5
+		summarizeBy: none
+		sourceColumn: Order ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Channel
+		dataType: string
+		lineageTag: 32faf41a-716b-5aed-98e4-6db200355b1b
+		summarizeBy: none
+		sourceColumn: Channel
+
+		annotation SummarizationSetBy = Automatic
+
+	column SKU
+		dataType: string
+		lineageTag: 42b02754-2c0f-5640-abac-291ee6b0515d
+		summarizeBy: none
+		sourceColumn: SKU
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SKU As Exported'
+		dataType: string
+		lineageTag: eb361f07-6838-5fc8-9d95-096bc39bf33f
+		summarizeBy: none
+		sourceColumn: SKU As Exported
+
+		annotation SummarizationSetBy = Automatic
+
+	column Qty
+		dataType: int64
+		formatString: #,0
+		lineageTag: b818b2df-27d6-5f8e-885d-6bef21b90bbc
+		summarizeBy: sum
+		sourceColumn: Qty
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Price Local'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 3025ceca-1e46-5591-8cae-b2a22131fc2b
+		summarizeBy: none
+		sourceColumn: Price Local
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gross Local'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 67de21bd-8932-52ce-833d-053e4e062ece
+		summarizeBy: sum
+		sourceColumn: Gross Local
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Discount Local'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 1903a83f-4a0f-57eb-b3ad-47d03bbb8ddf
+		summarizeBy: sum
+		sourceColumn: Discount Local
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Returns Local'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 05325477-0d1d-58f6-946b-ff4b3f45e2a1
+		summarizeBy: sum
+		sourceColumn: Returns Local
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Net Local'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 05430c38-8d3c-5b99-9d1b-48f35bdbc668
+		summarizeBy: sum
+		sourceColumn: Net Local
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'COGS USD'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 45a153bf-9bd3-5a32-99d2-a4f161055fa2
+		summarizeBy: sum
+		sourceColumn: COGS USD
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gross USD' = DIVIDE ( Sales[Gross Local], RELATED ( Orders[Rate] ) )
+		dataType: double
+		formatString: #,0.00
+		lineageTag: e96460af-2408-5d16-b5ed-d0a57526f2ff
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Discount USD' = DIVIDE ( Sales[Discount Local], RELATED ( Orders[Rate] ) )
+		dataType: double
+		formatString: #,0.00
+		lineageTag: e2ae36a9-bda6-5378-aa92-9ef97ab402b3
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Returns USD' = DIVIDE ( Sales[Returns Local], RELATED ( Orders[Rate] ) )
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 7dd7ff11-add0-55ad-8dda-010c623a4f11
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Net USD' =
+			-- in USD at the rate of the order date
+			DIVIDE ( Sales[Net Local], RELATED ( Orders[Rate] ) )
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 1f97fd3c-ac7c-5b03-99da-f96c30f283ea
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Sales = m
+		mode: import
+		source =
+				let
+				    // one row per sold line; order discounts and refunds are spread over the lines of the order by their value
+				    O = Table.Buffer(Table.SelectColumns(Orders, {"Order ID", "Channel", "Status", "Gross Local", "Discount Local", "Subtotal Local", "Returns Local"})),
+				    Ok = Table.RenameColumns(O, {{"Order ID", "OK"}, {"Status", "Order Status"}, {"Gross Local", "Order Gross"},
+				        {"Discount Local", "Order Discount"}, {"Subtotal Local", "Order Subtotal"}, {"Returns Local", "Order Returns"}}),
+				    ShopJ = Table.Join(ShopLines, "Order ID", Table.SelectRows(Ok, each [Channel] = "Webshop"), "OK"),
+				    ShopX = Table.AddColumn(ShopJ, "Discount Local", each if [Order Gross] = 0 then 0 else [Order Discount] * [Gross Local] / [Order Gross], type number),
+				    ShopR = Table.AddColumn(ShopX, "Returns Local", each if [Order Subtotal] = 0 then 0 else [Order Returns] * ([Gross Local] - [Discount Local]) / [Order Subtotal], type number),
+				    ShopB = Table.AddColumn(ShopR, "Goods Back", each [Order Status] = "refunded", type logical),
+				    MktJ = Table.Join(Table.SelectColumns(MarketLines, {"Line ID", "Order ID", "SKU", "SKU As Exported", "Qty", "Price Local", "Gross Local", "Line Status"}),
+				        "Order ID", Table.SelectRows(Ok, each [Channel] = "Marketplace EU"), "OK"),
+				    MktX = Table.AddColumn(MktJ, "Discount Local", each 0, type number),
+				    MktR = Table.AddColumn(MktX, "Returns Local", each if [Line Status] = "Returned" then [Gross Local] else 0, type number),
+				    MktB = Table.AddColumn(MktR, "Goods Back", each [Line Status] = "Returned", type logical),
+				    Cols = {"Line ID", "Order ID", "Channel", "SKU", "SKU As Exported", "Qty", "Price Local", "Gross Local", "Discount Local", "Returns Local", "Goods Back"},
+				    All = Table.Combine({Table.SelectColumns(ShopB, Cols), Table.SelectColumns(MktB, Cols)}),
+				    Net = Table.AddColumn(All, "Net Local", each [Gross Local] - [Discount Local] - [Returns Local], type number),
+				    // cost of goods in USD from the product list; returned goods go back to stock, an unknown SKU has no cost
+				    Costs = Table.Buffer(Table.SelectColumns(ProductsRaw, {"SKU", "Unit Cost USD"})),
+				    WithCost = Table.NestedJoin(Net, {"SKU"}, Costs, {"SKU"}, "P", JoinKind.LeftOuter),
+				    Cost = Table.ExpandTableColumn(WithCost, "P", {"Unit Cost USD"}),
+				    Cogs = Table.AddColumn(Cost, "COGS USD", each if [Goods Back] or [Unit Cost USD] = null then 0 else [Qty] * [Unit Cost USD], type number),
+				    Out = Table.RemoveColumns(Cogs, {"Unit Cost USD", "Goods Back"}),
+				    Typed = Table.TransformColumnTypes(Out, {{"Line ID", type text}, {"Order ID", type text}, {"Channel", type text}, {"SKU", type text},
+				        {"SKU As Exported", type text}, {"Qty", Int64.Type}, {"Price Local", type number}, {"Gross Local", type number},
+				        {"Discount Local", type number}, {"Returns Local", type number}, {"Net Local", type number}, {"COGS USD", type number}})
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

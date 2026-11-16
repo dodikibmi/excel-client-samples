@@ -1,0 +1,38 @@
+/// Order totals per currency read straight from the files.
+table 'File Totals'
+	lineageTag: 77a3d53c-1093-590f-b08a-3ef16cec5e34
+
+	column Currency
+		dataType: string
+		lineageTag: 05defed4-34b2-5267-83bf-6a85a3e1b001
+		summarizeBy: none
+		sourceColumn: Currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total In File'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: df1f49a0-e359-58d2-b890-7360cdc828a1
+		summarizeBy: sum
+		sourceColumn: Total In File
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'File Totals' = m
+		mode: import
+		source =
+				let
+				    // order totals per currency as typed in the files: webshop Total of every order that was not voided,
+				    // marketplace line totals (each row once)
+				    Shop = Table.SelectRows(Table.Skip(Csv.Document(File.Contents(DataFolder & "shop-orders-export.csv"), [Delimiter = ",", Columns = 19, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]), 1), each [Column3] <> "" and [Column3] <> "voided"),
+				    ShopT = Table.Group(Shop, {"Column6"}, {{"Total", each List.Sum(List.Transform([Column10], each Number.FromText(_, "en-US"))), type number}}),
+				    Mkt = Table.Distinct(Table.SelectRows(Table.Skip(Csv.Document(File.Contents(DataFolder & "marketplace-orders-eu.csv"), [Delimiter = ";", Columns = 9, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]), 1), each [Column1] <> "Order ID" and Text.Trim([Column1]) <> "")),
+				    MktTotal = List.Sum(List.Transform(Mkt[Column7], each Number.FromText(Text.Replace(Text.Remove(_, "."), ",", "."), "en-US"))),
+				    T = Table.FromRecords(List.Transform(Table.ToRecords(ShopT), (r) => [Currency = r[Column6],
+				        #"Total In File" = r[Total] + (if r[Column6] = "EUR" then MktTotal else 0)])),
+				    Typed = Table.TransformColumnTypes(T, {{"Currency", type text}, {"Total In File", type number}})
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

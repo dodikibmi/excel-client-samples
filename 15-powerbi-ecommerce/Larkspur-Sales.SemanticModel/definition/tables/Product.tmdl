@@ -1,0 +1,72 @@
+/// Product list with unit cost in USD.
+table Product
+	lineageTag: 7e6c46b6-7b3b-5b22-b4a0-e12fd85d7cc8
+
+	column SKU
+		dataType: string
+		isKey
+		lineageTag: 24f28013-8454-584d-8be4-a3ae6d9beab9
+		summarizeBy: none
+		sourceColumn: SKU
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product
+		dataType: string
+		lineageTag: a8e5787d-92c3-5b60-89d7-6b1b8134f103
+		summarizeBy: none
+		sourceColumn: Product
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: fee8ed5a-a116-54eb-b501-24ea3e02b70a
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'List Price USD'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 2be0c823-3e42-5238-81b7-8c7a3fff8a38
+		summarizeBy: none
+		sourceColumn: List Price USD
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unit Cost USD'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 8fd17338-4a72-5048-8327-f20fc1847154
+		summarizeBy: none
+		sourceColumn: Unit Cost USD
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'In Product List'
+		dataType: boolean
+		lineageTag: f794d231-64cb-5b7f-93d0-76ce3258ed83
+		summarizeBy: none
+		sourceColumn: In Product List
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Product = m
+		mode: import
+		source =
+				let
+				    // the product list, plus one row per SKU that appears in the exports but not in products.csv (shown, not hidden)
+				    Known = Table.AddColumn(ProductsRaw, "In Product List", each true, type logical),
+				    Used = List.Distinct(ShopLines[SKU] & MarketLines[SKU]),
+				    Missing = List.Difference(Used, Known[SKU]),
+				    Extra = Table.FromRecords(List.Transform(Missing, (s) => [SKU = s, Product = s & " (not in products.csv)",
+				        Category = "Not in product list", #"List Price USD" = null, #"Unit Cost USD" = null, #"In Product List" = false])),
+				    All = Table.Combine({Known, Extra}),
+				    Typed = Table.TransformColumnTypes(All, {{"SKU", type text}, {"Product", type text}, {"Category", type text},
+				        {"List Price USD", Currency.Type}, {"Unit Cost USD", Currency.Type}, {"In Product List", type logical}})
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

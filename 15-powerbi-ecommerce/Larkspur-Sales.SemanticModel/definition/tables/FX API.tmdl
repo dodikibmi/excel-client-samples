@@ -1,0 +1,52 @@
+/// Daily ECB rates from the Frankfurter API (1 USD = x units). Empty when the API cannot be reached.
+table 'FX API'
+	isHidden
+	lineageTag: 6ee19a7c-d7dc-5651-878f-c7416d650a6e
+
+	column Date
+		dataType: dateTime
+		formatString: d mmm yyyy
+		isHidden
+		lineageTag: 1c87c7dd-725e-57f4-b4f1-13724ffc4f73
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Currency
+		dataType: string
+		isHidden
+		lineageTag: 4469808f-daec-5570-9412-30343f2d3e32
+		summarizeBy: none
+		sourceColumn: Currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Units per USD'
+		dataType: double
+		formatString: 0.00000
+		isHidden
+		lineageTag: 44a53e4c-7dc4-54c4-a1bc-95329173e855
+		summarizeBy: none
+		sourceColumn: Units per USD
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'FX API' = m
+		mode: import
+		source =
+				let
+				    // daily ECB reference rates from the free Frankfurter API (no key): 1 USD = x units of each currency.
+				    // Static base URL + RelativePath/Query, so the query also refreshes in the Power BI service.
+				    // If the API cannot be reached, this table stays empty and the report falls back on data/fx-rates-saved.csv.
+				    Response = try Json.Document(Web.Contents("https://api.frankfurter.dev",
+				        [RelativePath = "v1/" & FxStart & "..", Query = [base = "USD", symbols = "EUR,GBP,CAD,AUD"], Timeout = #duration(0, 0, 0, 30)])) otherwise null,
+				    Rates = if Response = null then [] else Response[rates],
+				    Rows = List.Combine(List.Transform(Record.FieldNames(Rates), (d) =>
+				        let day = Record.Field(Rates, d) in
+				            List.Transform(Record.FieldNames(day), (c) => {Date.FromText(d, [Format = "yyyy-MM-dd", Culture = "en-US"]), c, Record.Field(day, c)}))),
+				    T = #table(type table [Date = date, Currency = text, #"Units per USD" = number], Rows)
+				in
+				    T
+
+	annotation PBI_ResultType = Table
