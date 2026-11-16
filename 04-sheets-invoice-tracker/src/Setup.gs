@@ -8,7 +8,7 @@
 const T = THEME;
 const CHIP = { Urgent: ['#4A1F1C', T.BAD], High: ['#3D2A1C', '#E39A6B'], Medium: ['#3A3220', T.AMBER], Low: ['#1E2D3A', T.SKY] };
 const HEAT = { 'Not due': ['#1F3A33', T.GOOD, T.JADE], '1-30': ['#3A3220', T.AMBER, T.AMBER], '31-60': ['#3D2A1C', '#E39A6B', T.COPPER],
-               '61-90': ['#4A1F1C', T.BAD, T.BAD], '90+': ['#5C1A17', '#FF8A75', '#C2452F'] };
+               '61-90': ['#4A1F1C', T.BAD, T.BAD], '91+': ['#5C1A17', '#FF8A75', '#C2452F'] };
 
 function menuRebuildDemo() {
   const ui = SpreadsheetApp.getUi();
@@ -192,7 +192,7 @@ function buildInvoices_(ss, sh, day) {
   sh.getRange('I1').setFormula('={"Balance";ARRAYFORMULA(IF(A2:A="",,ROUND(E2:E-F2:F,2)))}');
   sh.getRange('J1').setFormula('={"Status";ARRAYFORMULA(IF(A2:A="",,IF(I2:I<0,"Overpaid",IF(I2:I=0,"Paid",IF(D2:D<AsOf,"Overdue",IF(F2:F>0,"Part paid","Not due"))))))}');
   sh.getRange('K1').setFormula('={"Days overdue";ARRAYFORMULA(IF(A2:A="",,IF((I2:I>0)*(D2:D<AsOf),AsOf-D2:D,0)))}');
-  sh.getRange('L1').setFormula('={"Aging";ARRAYFORMULA(IF(A2:A="",,IF(I2:I<=0,"Paid",IF(K2:K=0,"Not due",IF(K2:K<=30,"1-30",IF(K2:K<=60,"31-60",IF(K2:K<=90,"61-90","90+")))))))}');
+  sh.getRange('L1').setFormula('={"Aging";ARRAYFORMULA(IF(A2:A="",,IF(I2:I<=0,"Paid",IF(K2:K=0,"Not due",IF(K2:K<=30,"1-30",IF(K2:K<=60,"31-60",IF(K2:K<=90,"61-90","91+")))))))}');
   sh.getRange('M1').setValue('Last reminder');
   sh.getRange('N1').setFormula('={"Paid late (days)";ARRAYFORMULA(IF(A2:A="",,IF((I2:I<=0)*(G2:G<>""),IF(G2:G-D2:D>0,G2:G-D2:D,0),)))}');
   const n = 499;
@@ -215,7 +215,7 @@ function buildInvoices_(ss, sh, day) {
   const dup = SpreadsheetApp.newConditionalFormatRule().whenFormulaSatisfied('=AND($A2<>"",COUNTIF($A$2:$A,$A2)>1)')
     .setBackground('#4A1F1C').setRanges([sh.getRange('A2:A500')]).build();
   const status = chips_(sh.getRange('J2:J500'), { Overdue: CHIP.Urgent, Paid: ['#1F3A33', T.GOOD], Overpaid: CHIP.Medium, 'Part paid': CHIP.Low, 'Not due': ['#22303A', '#B9C6D3'] });
-  const age = chips_(sh.getRange('L2:L500'), { '1-30': HEAT['1-30'], '31-60': HEAT['31-60'], '61-90': HEAT['61-90'], '90+': HEAT['90+'] });
+  const age = chips_(sh.getRange('L2:L500'), { '1-30': HEAT['1-30'], '31-60': HEAT['31-60'], '61-90': HEAT['61-90'], '91+': HEAT['91+'] });
   sh.setConditionalFormatRules(status.concat(age, [dup]));
   [95, 185, 92, 92, 92, 92, 92, 150, 92, 88, 92, 70, 140, 100, 16].forEach(function (w, i) { sh.setColumnWidth(i + 1, w); });
   sh.getRange('I:N').protect().setDescription('Calculated columns').setWarningOnly(true);
@@ -497,7 +497,7 @@ function buildStatement_(ss, sh) {
   sh.setConditionalFormatRules([SpreadsheetApp.newConditionalFormatRule().whenNumberGreaterThan(0).setFontColor('#B23A2A').setBold(true)
     .setRanges([sh.getRange('H11:H28')]).build()]);
   sh.getRange('B30').setValue('AGING OF THE BALANCE').setFontSize(8).setFontWeight('bold').setFontColor(T.COPPER);
-  sh.getRange('B31:F31').setNumberFormat('@').setValues([['Not due', '1-30', '31-60', '61-90', '90+']]).setFontWeight('bold').setHorizontalAlignment('center')
+  sh.getRange('B31:F31').setNumberFormat('@').setValues([['Not due', '1-30', '31-60', '61-90', '91+']]).setFontWeight('bold').setHorizontalAlignment('center')
     .setBackground('#F3ECDD');
   ['B', 'C', 'D', 'E', 'F'].forEach(function (c) {
     sh.getRange(c + '32').setFormula('=SUMIFS(Invoices!I2:I500,Invoices!B2:B500,$B$6,Invoices!L2:L500,' + c + '31,Invoices!I2:I500,">0")');

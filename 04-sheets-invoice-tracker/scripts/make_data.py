@@ -95,7 +95,7 @@ def state(inv):
         return dict(balance=0.0, status="Paid", days=0, aging="Paid")
     days = max(0, rel)
     status = "Overdue" if rel > 0 else ("Part paid" if inv["paid"] > 0 else "Not due")
-    aging = "Not due" if days == 0 else "1-30" if days <= 30 else "31-60" if days <= 60 else "61-90" if days <= 90 else "90+"
+    aging = "Not due" if days == 0 else "1-30" if days <= 30 else "31-60" if days <= 60 else "61-90" if days <= 90 else "91+"
     return dict(balance=bal, status=status, days=days, aging=aging)
 
 
@@ -200,7 +200,7 @@ summary = dict(outstanding=round2(sum(s["balance"] for s in states.values() if s
                overdue=round2(sum(s["balance"] for s in states.values() if s["status"] == "Overdue")),
                overdue_count=sum(1 for s in states.values() if s["status"] == "Overdue"),
                aging={b: round2(sum(s["balance"] for s in states.values() if s["aging"] == b and s["balance"] > 0))
-                      for b in ["Not due", "1-30", "31-60", "61-90", "90+"]})
+                      for b in ["Not due", "1-30", "31-60", "61-90", "91+"]})
 
 
 

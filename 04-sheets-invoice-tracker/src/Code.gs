@@ -19,7 +19,7 @@ const STATUSES = ['Active', 'On hold', 'Collections'];   // On hold / Collection
 const REPLY_TYPES = ['Reply', 'Promise to pay'];
 const PRIORITY = ['Urgent', 'High', 'Medium', 'Low'];
 const MODES = ['Preview only', 'Send to me (test)', 'Send to customers'];
-const AGING = ['Not due', '1-30', '31-60', '61-90', '90+'];
+const AGING = ['Not due', '1-30', '31-60', '61-90', '91+'];
 
 // ============================================================================================ pure logic
 
@@ -53,7 +53,7 @@ function agingBucket(days) {
   if (days <= 30) return '1-30';
   if (days <= 60) return '31-60';
   if (days <= 90) return '61-90';
-  return '90+';
+  return '91+';
 }
 
 /**

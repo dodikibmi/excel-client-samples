@@ -20,7 +20,7 @@ function runAllTests() {
   t('One day late', st(100, 0, d(2026, 11, 13)), { balance: 100, status: 'Overdue', days: 1, aging: '1-30' });
   t('30 days late is still 1-30', st(100, 0, d(2026, 10, 15)).aging, '1-30');
   t('31 days late moves to 31-60', st(100, 0, d(2026, 10, 14)).aging, '31-60');
-  t('90 days late is 61-90, 91 is 90+', [st(1, 0, d(2026, 8, 16)).aging, st(1, 0, d(2026, 8, 15)).aging], ['61-90', '90+']);
+  t('90 days late is 61-90, 91 is 91+', [st(1, 0, d(2026, 8, 16)).aging, st(1, 0, d(2026, 8, 15)).aging], ['61-90', '91+']);
   t('Part paid, not due', st(1000, 400, d(2026, 11, 30)), { balance: 600, status: 'Part paid', days: 0, aging: 'Not due' });
   t('Part paid and late counts as overdue', st(1000, 400, d(2026, 11, 1)).status, 'Overdue');
   t('Days are calendar days across a month end', daysBetween(d(2026, 10, 31), d(2026, 11, 1)), 1);
