@@ -8,7 +8,7 @@ No macros. Next month: drop in the new files, press **Refresh All**.
 
 ![Dashboard: KPI cards, bridge by discrepancy type, gap heatmap, status donut, 3-month trend, insights, 8/8 checks PASS](docs/dashboard.png)
 
-▶ **[Demo video (MP4)](docs/demo.mp4)**: raw HR export → Refresh All → dashboard → slicer picks (one fund center,
+▶ **[Demo video (73 s, MP4)](docs/demo.mp4)**: raw HR export → Refresh All → dashboard → slicer picks (one fund center,
 the month before) → pivots, discrepancies, data checks. Real screen recording, captions added.
 
 ## The problem this solves
@@ -33,7 +33,7 @@ view by fund center and functional area, then find out *why* they differ, every 
 | 2 | `fnHRClean`, `fnBudgetClean` | Drops repeated export rows, builds one employee key, normalises fund centers to `FC210`, FTE to decimals, functional areas to HR's spelling; terminated people are kept aside |
 | 3 | `fnCompare` → `Compare` | Full outer join on employee + fund center → 6 statuses (**Matched · FTE differs · Functional area differs · Fund center differs · Only in HR roster · Only in budget**), 8 discrepancy types (Only in budget split into vacant post / terminated / unknown to HR), the FTE difference and a plain-English **What to do** for every line |
 | 4 | `History` → `FTE_Long` | The same three functions run on every monthly pair in the folder (Aug, Sep, Oct 2026); one long table feeds every PivotTable, so nothing can disagree |
-| 5 | Dashboard + Pivots | One pivot cache: three PivotTables (HR, budget, budget minus HR) and the dashboard pivots, all driven by the same four slicers |
+| 5 | Dashboard + Pivot comparison | One pivot cache: three PivotTables (HR, budget, budget minus HR) and the dashboard pivots, all driven by the same four slicers |
 | 6 | Checks, Cleaning log | Eight PASS/FAIL data checks; every cleaning step counted |
 
 ## The Dashboard
@@ -41,7 +41,7 @@ view by fund center and functional area, then find out *why* they differ, every 
 - **Six KPI cards** with icons: HR FTE, budget FTE, gap, % budget lines matched, vacant FTE, terminated people still
   funded. Each has a green/red note (vs the month before, or what to do).
 - **Slicers**: Month, Fund center, Functional area, Discrepancy type. They drive every card, chart and sentence on the
-  dashboard and the three PivotTables on the Pivots tab (the same slicers sit there too). The trend follows every
+  dashboard and the three PivotTables on the Pivot comparison tab (the same slicers sit there too). The trend follows every
   slicer except Month.
 - **Bridge (waterfall)** from budget FTE to HR FTE, one bar per discrepancy type.
 - **Gap heatmap** fund center × functional area (red = more people than budget, blue = budget not filled).

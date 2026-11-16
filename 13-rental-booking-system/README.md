@@ -11,7 +11,7 @@ it is refused, with the reason, and the attempt is logged.
 
 ![Home](docs/home.png)
 
-▶ **[Demo video (MP4)](docs/demo.mp4)**: sign in (a wrong PIN first), a booking refused for 16 chairs when only 6 are
+▶ **[Demo video (93 s, MP4)](docs/demo.mp4)**: sign in (a wrong PIN first), a booking refused for 16 chairs when only 6 are
 free, the same booking confirmed with 6, Availability, check out, check in 3 days late with 2 lantern sets missing,
 invoice + PDF, a staff member trying to lock the month, the Log and the Checks. Real screen recording, captions added.
 
@@ -19,7 +19,7 @@ invoice + PDF, a staff member trying to lock the month, the Log and the Checks. 
 
 | | |
 |---|---|
-| **Sign in by role** | Each person picks their name and types a PIN; the workbook keeps only a hash of it. Staff: book, check out, check in, invoice, take payments. Manager: also cancel and lock a period. A wrong PIN is refused and logged |
+| **Sign in by role** | Each person picks their name and types a PIN; the workbook keeps only a hash of it (the sample PINs in `data/users.csv` are only for the build). Staff: book, check out, check in, invoice, take payments. Manager: also cancel and lock a period. A wrong PIN is refused and logged |
 | **New booking form** | Customer, event / out / back-by dates, category then item; while you type it shows **how many are free for those dates**, the hire, tax, total and deposit. *Save as enquiry* holds no stock; *Confirm* holds it, or is refused with the item, quantity and day that do not fit |
 | **Availability** | Free quantity of all 20 items for 21 days from any date: red = none left, amber = under a quarter |
 | **Check out / check in** | From Home. Late returns pay a fee per item per day after one grace day; damaged or missing items are charged at replacement cost and **leave the stock** from that day. A booking still out after its back-by date keeps holding its items |

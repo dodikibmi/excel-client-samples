@@ -102,7 +102,7 @@ marked Merge is one customer, and data quality after is at least as good as befo
 
 1. Save your exports into the `data` folder next to the workbook (CSV or .xlsx).
 2. On **Settings**, type the file names. On **Name rules**, add nicknames your customers use.
-3. **Data → Refresh All**. Check the nine data checks on the cockpit say PASS.
+3. **Data → Refresh All**. Check that the nine data checks on the cockpit say PASS.
    On **Needs review**, choose Merge or Keep separate in the Decision column, then Refresh All again.
 4. **CRM import** tab: *File → Save a Copy → CSV UTF-8* and upload to HubSpot, Pipedrive or Mailchimp
    ([`output/crm-import-2026-10.csv`](output/crm-import-2026-10.csv) is that file for the sample data).

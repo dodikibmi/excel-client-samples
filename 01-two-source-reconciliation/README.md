@@ -45,7 +45,7 @@ Statuses that need a person: **Amount differs · Duplicate in ledger · Duplicat
 | | |
 |---|---|
 | Bank lines matched by the 3 rules | **157 of 165 (95.2%)**: 154 on reference, 1 within ±1.00, 2 on amount + date |
-| Lines that need a person (October) | **13**, each with a next step; on the workbench **12 open, 3 resolved**, 2 open for more than 30 days |
+| Lines that need a person (October) | **13**, each with a next step; on the workbench (all months) **12 open, 3 resolved**, 2 open for more than 30 days |
 | Reconciliation statement | adjusted bank **166,720.77** = adjusted cash book **166,720.77** |
 | Unexplained difference | **0.00**, and 0.00 for **all 12 account-months** (2 accounts × May–Oct) |
 | Whole history (24 files, 891 bank rows, 886 cash book rows) | 836 matched on reference, 3 within tolerance, 37 on amount + date, 18 exceptions |

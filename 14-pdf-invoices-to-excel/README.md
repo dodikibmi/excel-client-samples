@@ -30,7 +30,7 @@ The 300 PDFs look the way an AP inbox really looks:
 - **30 invoices run over 2–3 pages**, with the table header repeated on each page.
 - **The same invoice sent twice** under another name (`Fwd …`, `scan_6433.pdf`).
 - **A supplier's own sums are wrong** on 3 invoices: the lines do not add up to the subtotal it printed.
-- **Scanned invoices** (a picture, no text), **a password-protected file**, and **two files cut off** half way.
+- **Scanned invoices** (a picture, no text), **a password-protected file**, and **two files cut off** halfway.
 
 ## What the workbook does
 
@@ -85,7 +85,7 @@ The 300 PDFs look the way an AP inbox really looks:
    invoices go to Needs attention as *Unknown supplier*, the payable total moves by exactly the right amount,
    and the checks still PASS.
 
-Result: **see [`test/last-result.txt`](test/last-result.txt)**.
+Result: **26/26 checks pass** (see [`test/last-result.txt`](test/last-result.txt)).
 
 ## Use it for your own invoices
 

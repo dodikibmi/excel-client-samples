@@ -21,10 +21,10 @@ pivots and charts, and still cannot answer the manager's follow-up questions ("a
 
 | Page | What it shows |
 |---|---|
-| **Overview** | Key insights banner (6 sentences written by formulas, green/red) · 6 KPI cards with icon, sparkline and ▲▼ vs budget, prior year and prior month · revenue vs budget vs prior year (12 months) · waterfall budget → actual by region · category donut with the total in the centre · heatmap region × month (% vs budget) · region table with red/green cells · data-check status |
+| **Overview** (Dashboard tab) | Key insights banner (6 sentences written by formulas, green/red) · 6 KPI cards with icon, sparkline and ▲▼ vs budget, prior year and prior month · revenue vs budget vs prior year (12 months) · waterfall budget → actual by region · category donut with the total in the centre · heatmap region × month (% vs budget) · region table with red/green cells · data-check status |
 | **Products** | One card per category with sparkline · category table (actual, budget, variance, vs prior year, margin vs budget margin, share) · waterfall by category · 12-month stacked revenue · margin vs budget margin |
 | **Customers** | Active customers, how many bring 80% of revenue, top-10 share, largest customer · Pareto chart (top 20 + cumulative line + 80% line) · top 10 table with share, cumulative share and vs prior year |
-| **Sales reps** | Six gauges (% of target) · scorecard ranked by % of target (revenue, target, vs PY, orders, average order, margin) · revenue vs target chart |
+| **Sales reps** (Reps tab) | Six gauges (% of target) · scorecard ranked by % of target (revenue, target, vs PY, orders, average order, margin) · revenue vs target chart |
 | **Forecast** | Year to date vs budget and prior year · year-end forecast (each month left = its budget × last 3 months' achievement) · straight run-rate for comparison · month-by-month chart and cumulative landing vs budget · the numbers behind it |
 | **Checks** | 12 data checks (rows loaded, budget coverage, totals tie out across every page, waterfall lands on actual, slicers not empty) |
 

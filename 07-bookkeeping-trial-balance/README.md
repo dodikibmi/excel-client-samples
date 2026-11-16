@@ -19,7 +19,7 @@ Done by hand it goes wrong in the same places every time:
 ![The raw checking export: title lines above the header, amounts stored as text with $ and commas, stray spaces](docs/before-raw-csv.png)
 
 - each bank exports differently: title lines above the header, `$1,250.00` as text, Debit/Credit columns vs one signed amount, US dates
-- the same supplier arrives as `TapPay Inc. Deposit`, `TAP PAY *DEPOSIT 72350`, `TAPPAY DEPOSIT 0804`
+- the same payee arrives as `TapPay Inc. Deposit`, `TAP PAY *DEPOSIT 72350`, `TAPPAY DEPOSIT 0804`
 - a transfer from checking to savings, or a card payment, appears in **two** registers and is easily counted twice
 - a card purchase on 31 Aug posts on 1 Sep, so the month never agrees with the card statement
 - nobody can prove the totals: does the trial balance balance, does each account agree with its statement?
