@@ -13,6 +13,19 @@
             "x": 40,
             "y": 40
           },
+          "nodeIndex": "Ad Spend",
+          "nodeLineageTag": "6a106e52-3a29-577f-9bec-23d13a588d9a",
+          "size": {
+            "height": 166,
+            "width": 260
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 420,
+            "y": 40
+          },
           "nodeIndex": "Date",
           "nodeLineageTag": "002e75fa-bdc9-570e-b2a0-725e4e845950",
           "size": {
@@ -23,47 +36,8 @@
         },
         {
           "location": {
-            "x": 420,
-            "y": 160
-          },
-          "nodeIndex": "Orders",
-          "nodeLineageTag": "4d472891-c350-5fd3-b1e0-922074bb6dab",
-          "size": {
-            "height": 420,
-            "width": 260
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
             "x": 800,
-            "y": 160
-          },
-          "nodeIndex": "Sales",
-          "nodeLineageTag": "15092302-353b-5e55-91d2-fb1e435178ba",
-          "size": {
-            "height": 420,
-            "width": 260
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 1180,
-            "y": 160
-          },
-          "nodeIndex": "Product",
-          "nodeLineageTag": "7e6c46b6-7b3b-5b22-b4a0-e12fd85d7cc8",
-          "size": {
-            "height": 268,
-            "width": 260
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 40,
-            "y": 420
+            "y": 40
           },
           "nodeIndex": "Customer",
           "nodeLineageTag": "8e600373-ad21-5b3f-af55-011f552d33cd",
@@ -76,7 +50,7 @@
         {
           "location": {
             "x": 40,
-            "y": 760
+            "y": 500
           },
           "nodeIndex": "Market",
           "nodeLineageTag": "ab27d216-bb66-50e1-a2a4-2a7f374c08c6",
@@ -89,7 +63,59 @@
         {
           "location": {
             "x": 420,
-            "y": 760
+            "y": 500
+          },
+          "nodeIndex": "Orders",
+          "nodeLineageTag": "4d472891-c350-5fd3-b1e0-922074bb6dab",
+          "size": {
+            "height": 420,
+            "width": 260
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 800,
+            "y": 500
+          },
+          "nodeIndex": "Sales",
+          "nodeLineageTag": "15092302-353b-5e55-91d2-fb1e435178ba",
+          "size": {
+            "height": 420,
+            "width": 260
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1180,
+            "y": 500
+          },
+          "nodeIndex": "Product",
+          "nodeLineageTag": "7e6c46b6-7b3b-5b22-b4a0-e12fd85d7cc8",
+          "size": {
+            "height": 268,
+            "width": 260
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1560,
+            "y": 500
+          },
+          "nodeIndex": "Months Later",
+          "nodeLineageTag": "b5d36d6d-3af5-5b37-a05b-6d2452b5e9ef",
+          "size": {
+            "height": 98,
+            "width": 260
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 420,
+            "y": 960
           },
           "nodeIndex": "Currency",
           "nodeLineageTag": "e459ca8c-5ad3-5aeb-a9d1-d443fe5d0381",
@@ -102,7 +128,7 @@
         {
           "location": {
             "x": 800,
-            "y": 640
+            "y": 960
           },
           "nodeIndex": "FX Rate",
           "nodeLineageTag": "30b2d3f5-102e-5a4e-a74d-d0cddb01cd57",
@@ -115,7 +141,7 @@
         {
           "location": {
             "x": 1180,
-            "y": 560
+            "y": 960
           },
           "nodeIndex": "FX API",
           "nodeLineageTag": "6ee19a7c-d7dc-5651-878f-c7416d650a6e",
@@ -127,8 +153,8 @@
         },
         {
           "location": {
-            "x": 1180,
-            "y": 820
+            "x": 1560,
+            "y": 960
           },
           "nodeIndex": "FX Saved",
           "nodeLineageTag": "8f99c61b-65c2-55c0-9668-0228530e7201",
@@ -140,21 +166,8 @@
         },
         {
           "location": {
-            "x": 1180,
-            "y": -160
-          },
-          "nodeIndex": "Ad Spend",
-          "nodeLineageTag": "6a106e52-3a29-577f-9bec-23d13a588d9a",
-          "size": {
-            "height": 166,
-            "width": 260
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
             "x": 40,
-            "y": 1040
+            "y": 1420
           },
           "nodeIndex": "_Measures",
           "nodeLineageTag": "9b29544b-75ec-5e1d-b2f9-596831924b70",
@@ -167,7 +180,7 @@
         {
           "location": {
             "x": 420,
-            "y": 1040
+            "y": 1420
           },
           "nodeIndex": "Source Files",
           "nodeLineageTag": "bbd3144d-7c84-5ac7-923f-eb40402239fe",
@@ -180,7 +193,7 @@
         {
           "location": {
             "x": 800,
-            "y": 1040
+            "y": 1420
           },
           "nodeIndex": "File Totals",
           "nodeLineageTag": "77a3d53c-1093-590f-b08a-3ef16cec5e34",
@@ -193,7 +206,7 @@
         {
           "location": {
             "x": 1180,
-            "y": 1040
+            "y": 1420
           },
           "nodeIndex": "Checks",
           "nodeLineageTag": "47cf97d1-b814-5e67-bc54-731735060611",
@@ -205,26 +218,13 @@
         },
         {
           "location": {
-            "x": 1180,
-            "y": 1300
+            "x": 1560,
+            "y": 1420
           },
           "nodeIndex": "Insights",
           "nodeLineageTag": "eff0c84c-01f0-5804-a54f-21f49aa8b949",
           "size": {
             "height": 132,
-            "width": 260
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 40,
-            "y": 1300
-          },
-          "nodeIndex": "Months Later",
-          "nodeLineageTag": "b5d36d6d-3af5-5b37-a05b-6d2452b5e9ef",
-          "size": {
-            "height": 98,
             "width": 260
           },
           "zIndex": 0

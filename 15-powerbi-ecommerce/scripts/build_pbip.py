@@ -834,10 +834,12 @@ def build_model(data_folder, fx_start):
         rel += [f"relationship {tag('r', ft, fc, tt)}", f"\tfromColumn: {q(ft)}.{q(fc)}", f"\ttoColumn: {q(tt)}.{q(tc)}", ""]
     (d / "relationships.tmdl").write_text("\n".join(rel) + "\n", encoding="utf-8")
     # model diagram: the two fact tables in the middle, dimensions around them, helper tables below
-    spots = {"Date": (40, 40), "Orders": (420, 160), "Sales": (800, 160), "Product": (1180, 160), "Customer": (40, 420),
-             "Market": (40, 760), "Currency": (420, 760), "FX Rate": (800, 640), "FX API": (1180, 560), "FX Saved": (1180, 820),
-             "Ad Spend": (1180, -160), "_Measures": (40, 1040), "Source Files": (420, 1040), "File Totals": (800, 1040),
-             "Checks": (1180, 1040), "Insights": (1180, 1300), "Months Later": (40, 1300)}
+    # rows 460 apart and columns 380 apart, so no box overlaps another (the tallest are capped at 420)
+    spots = {"Ad Spend": (40, 40), "Date": (420, 40), "Customer": (800, 40),
+             "Market": (40, 500), "Orders": (420, 500), "Sales": (800, 500), "Product": (1180, 500), "Months Later": (1560, 500),
+             "Currency": (420, 960), "FX Rate": (800, 960), "FX API": (1180, 960), "FX Saved": (1560, 960),
+             "_Measures": (40, 1420), "Source Files": (420, 1420), "File Totals": (800, 1420), "Checks": (1180, 1420),
+             "Insights": (1560, 1420)}
     nodes = [{"location": {"x": x, "y": y}, "nodeIndex": n, "nodeLineageTag": tag("t", n),
               "size": {"height": min(64 + 34 * (len(TABLES[n]["cols"]) + len(CALC_COLUMNS.get(n, []))), 420), "width": 260}, "zIndex": 0}
              for n, (x, y) in spots.items()]
