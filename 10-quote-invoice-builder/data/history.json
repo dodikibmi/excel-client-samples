@@ -1,0 +1,2187 @@
+{
+ "documents": [
+  {
+   "ref": "q01",
+   "customer": "C004",
+   "date": "2026-08-04",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "SRV-05",
+     1,
+     35.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q02",
+   "customer": "C004",
+   "date": "2026-08-06",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "SRV-04",
+     2,
+     55.0,
+     0.0
+    ],
+    [
+     "SGN-04",
+     4,
+     165.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q03",
+   "customer": "C001",
+   "date": "2026-08-12",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "PRT-03",
+     3,
+     260.0,
+     0.0
+    ],
+    [
+     "SRV-02",
+     1,
+     450.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q04",
+   "customer": "C004",
+   "date": "2026-08-13",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "PRT-04",
+     3,
+     85.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q05",
+   "customer": "C006",
+   "date": "2026-08-17",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "SRV-06",
+     1,
+     80.0,
+     0.0
+    ],
+    [
+     "PRT-04",
+     1,
+     85.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q06",
+   "customer": "C001",
+   "date": "2026-08-21",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "SGN-01",
+     4,
+     95.0,
+     0.0
+    ],
+    [
+     "SGN-03",
+     6,
+     55.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q07",
+   "customer": "C012",
+   "date": "2026-08-21",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "SRV-06",
+     1,
+     80.0,
+     0.0
+    ],
+    [
+     "PRT-06",
+     1,
+     75.0,
+     0.05
+    ],
+    [
+     "PRT-01",
+     1,
+     45.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q08",
+   "customer": "C004",
+   "date": "2026-08-21",
+   "doc_discount": 0.1,
+   "notes": "",
+   "lines": [
+    [
+     "LFP-05",
+     12,
+     65.0,
+     0.0
+    ],
+    [
+     "SRV-05",
+     2,
+     35.0,
+     0.0
+    ],
+    [
+     "LFP-02",
+     6,
+     18.0,
+     0.0
+    ],
+    [
+     "SGN-05",
+     1,
+     210.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q09",
+   "customer": "C002",
+   "date": "2026-08-21",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "SGN-06",
+     1,
+     180.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q10",
+   "customer": "C007",
+   "date": "2026-08-24",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "PRT-05",
+     2,
+     340.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q11",
+   "customer": "C010",
+   "date": "2026-08-25",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "LFP-04",
+     10,
+     32.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q12",
+   "customer": "C012",
+   "date": "2026-08-31",
+   "doc_discount": 0.05,
+   "notes": "",
+   "lines": [
+    [
+     "PRT-06",
+     1,
+     75.0,
+     0.1
+    ]
+   ]
+  },
+  {
+   "ref": "q13",
+   "customer": "C012",
+   "date": "2026-09-03",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "SRV-02",
+     1,
+     450.0,
+     0.0
+    ],
+    [
+     "LFP-03",
+     8,
+     34.0,
+     0.0
+    ],
+    [
+     "SGN-04",
+     20,
+     165.0,
+     0.0
+    ],
+    [
+     "SGN-01",
+     2,
+     95.0,
+     0.15
+    ],
+    [
+     "SRV-04",
+     3,
+     55.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q14",
+   "customer": "C010",
+   "date": "2026-09-07",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "SRV-02",
+     1,
+     437.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q15",
+   "customer": "C004",
+   "date": "2026-09-08",
+   "doc_discount": 0.1,
+   "notes": "",
+   "lines": [
+    [
+     "SRV-01",
+     2,
+     60.0,
+     0.0
+    ],
+    [
+     "PRT-05",
+     3,
+     340.0,
+     0.0
+    ],
+    [
+     "SGN-01",
+     2,
+     95.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q16",
+   "customer": "C011",
+   "date": "2026-09-17",
+   "doc_discount": 0.05,
+   "notes": "",
+   "lines": [
+    [
+     "PRT-06",
+     1,
+     75.0,
+     0.0
+    ],
+    [
+     "SGN-04",
+     4,
+     165.0,
+     0.0
+    ],
+    [
+     "SGN-03",
+     12,
+     55.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q17",
+   "customer": "C006",
+   "date": "2026-09-21",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "SGN-04",
+     20,
+     165.0,
+     0.0
+    ],
+    [
+     "PRT-02",
+     1,
+     120.0,
+     0.0
+    ],
+    [
+     "SGN-05",
+     6,
+     210.0,
+     0.0
+    ],
+    [
+     "LFP-05",
+     4.5,
+     65.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q18",
+   "customer": "C001",
+   "date": "2026-09-22",
+   "doc_discount": 0.1,
+   "notes": "",
+   "lines": [
+    [
+     "SGN-05",
+     10,
+     210.0,
+     0.05
+    ],
+    [
+     "SGN-06",
+     1,
+     173.5,
+     0.0
+    ],
+    [
+     "PRT-04",
+     1,
+     85.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q19",
+   "customer": "C010",
+   "date": "2026-09-24",
+   "doc_discount": 0.05,
+   "notes": "",
+   "lines": [
+    [
+     "PRT-02",
+     3,
+     117.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q20",
+   "customer": "C001",
+   "date": "2026-09-24",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "SGN-04",
+     1,
+     142.5,
+     0.15
+    ],
+    [
+     "PRT-02",
+     1,
+     120.0,
+     0.05
+    ]
+   ]
+  },
+  {
+   "ref": "q21",
+   "customer": "C003",
+   "date": "2026-09-28",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "PRT-03",
+     3,
+     260.0,
+     0.05
+    ],
+    [
+     "SGN-06",
+     2,
+     175.0,
+     0.05
+    ],
+    [
+     "SGN-01",
+     2,
+     95.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q22",
+   "customer": "C004",
+   "date": "2026-09-28",
+   "doc_discount": 0.1,
+   "notes": "",
+   "lines": [
+    [
+     "PRT-06",
+     1,
+     75.0,
+     0.0
+    ],
+    [
+     "SGN-06",
+     1,
+     180.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q23",
+   "customer": "C003",
+   "date": "2026-10-05",
+   "doc_discount": 0.1,
+   "notes": "",
+   "lines": [
+    [
+     "LFP-02",
+     2,
+     18.0,
+     0.0
+    ],
+    [
+     "SRV-02",
+     1,
+     417.0,
+     0.0
+    ],
+    [
+     "SGN-02",
+     2,
+     140.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q24",
+   "customer": "C005",
+   "date": "2026-10-06",
+   "doc_discount": 0.05,
+   "notes": "",
+   "lines": [
+    [
+     "SRV-02",
+     1,
+     450.0,
+     0.0
+    ],
+    [
+     "SGN-01",
+     6,
+     95.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q25",
+   "customer": "C012",
+   "date": "2026-10-06",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "SGN-04",
+     6,
+     165.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q26",
+   "customer": "C011",
+   "date": "2026-10-07",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "PRT-03",
+     2,
+     260.0,
+     0.05
+    ],
+    [
+     "SGN-04",
+     6,
+     165.0,
+     0.0
+    ],
+    [
+     "LFP-05",
+     8,
+     65.0,
+     0.0
+    ],
+    [
+     "SGN-02",
+     20,
+     140.0,
+     0.0
+    ],
+    [
+     "PRT-01",
+     1,
+     45.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q27",
+   "customer": "C008",
+   "date": "2026-10-08",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "SGN-05",
+     2,
+     210.0,
+     0.0
+    ],
+    [
+     "LFP-02",
+     6,
+     18.0,
+     0.0
+    ],
+    [
+     "SRV-01",
+     1,
+     60.0,
+     0.0
+    ],
+    [
+     "LFP-06",
+     6,
+     24.0,
+     0.05
+    ],
+    [
+     "SGN-06",
+     2,
+     180.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q28",
+   "customer": "C003",
+   "date": "2026-10-08",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "LFP-06",
+     20,
+     24.0,
+     0.0
+    ],
+    [
+     "PRT-06",
+     1,
+     75.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q29",
+   "customer": "C006",
+   "date": "2026-10-09",
+   "doc_discount": 0.1,
+   "notes": "",
+   "lines": [
+    [
+     "LFP-04",
+     20,
+     32.0,
+     0.0
+    ],
+    [
+     "LFP-02",
+     20,
+     16.5,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q30",
+   "customer": "C007",
+   "date": "2026-10-12",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "PRT-04",
+     3,
+     85.0,
+     0.0
+    ],
+    [
+     "SGN-06",
+     2,
+     180.0,
+     0.0
+    ],
+    [
+     "SRV-03",
+     2,
+     25.0,
+     0.0
+    ],
+    [
+     "PRT-05",
+     3,
+     340.0,
+     0.0
+    ],
+    [
+     "SRV-06",
+     1,
+     80.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q31",
+   "customer": "C002",
+   "date": "2026-10-12",
+   "doc_discount": 0.1,
+   "notes": "",
+   "lines": [
+    [
+     "PRT-03",
+     3,
+     260.0,
+     0.0
+    ],
+    [
+     "SRV-01",
+     3,
+     60.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q32",
+   "customer": "C005",
+   "date": "2026-10-15",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "LFP-05",
+     8,
+     65.0,
+     0.0
+    ],
+    [
+     "LFP-01",
+     8,
+     25.0,
+     0.0
+    ],
+    [
+     "PRT-04",
+     1,
+     85.0,
+     0.0
+    ],
+    [
+     "PRT-01",
+     2,
+     45.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q33",
+   "customer": "C010",
+   "date": "2026-10-19",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "SGN-06",
+     2,
+     168.5,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q34",
+   "customer": "C001",
+   "date": "2026-10-19",
+   "doc_discount": 0.1,
+   "notes": "",
+   "lines": [
+    [
+     "LFP-02",
+     4,
+     18.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q35",
+   "customer": "C007",
+   "date": "2026-10-26",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "PRT-04",
+     3,
+     85.0,
+     0.0
+    ],
+    [
+     "PRT-05",
+     2,
+     340.0,
+     0.0
+    ],
+    [
+     "SGN-01",
+     6,
+     95.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q36",
+   "customer": "C010",
+   "date": "2026-10-27",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "LFP-05",
+     8,
+     65.0,
+     0.0
+    ],
+    [
+     "SRV-03",
+     1,
+     25.0,
+     0.0
+    ],
+    [
+     "SGN-04",
+     2,
+     165.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q37",
+   "customer": "C008",
+   "date": "2026-10-30",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "SGN-01",
+     6,
+     95.0,
+     0.0
+    ],
+    [
+     "SRV-06",
+     1,
+     80.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q38",
+   "customer": "C012",
+   "date": "2026-11-02",
+   "doc_discount": 0.05,
+   "notes": "",
+   "lines": [
+    [
+     "LFP-04",
+     4,
+     32.0,
+     0.05
+    ],
+    [
+     "PRT-05",
+     1,
+     340.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q39",
+   "customer": "C003",
+   "date": "2026-11-04",
+   "doc_discount": 0.05,
+   "notes": "",
+   "lines": [
+    [
+     "LFP-06",
+     2,
+     24.0,
+     0.0
+    ],
+    [
+     "PRT-04",
+     1,
+     85.0,
+     0.1
+    ]
+   ]
+  },
+  {
+   "ref": "q40",
+   "customer": "C007",
+   "date": "2026-11-04",
+   "doc_discount": 0.05,
+   "notes": "",
+   "lines": [
+    [
+     "LFP-06",
+     4,
+     24.0,
+     0.0
+    ],
+    [
+     "PRT-01",
+     1,
+     45.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q41",
+   "customer": "C004",
+   "date": "2026-11-04",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "SRV-03",
+     4,
+     25.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q42",
+   "customer": "C004",
+   "date": "2026-11-04",
+   "doc_discount": 0.05,
+   "notes": "",
+   "lines": [
+    [
+     "SRV-02",
+     1,
+     450.0,
+     0.0
+    ],
+    [
+     "SRV-05",
+     2,
+     35.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q43",
+   "customer": "C004",
+   "date": "2026-11-06",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "SRV-04",
+     6,
+     51.5,
+     0.0
+    ],
+    [
+     "PRT-02",
+     3,
+     120.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q44",
+   "customer": "C006",
+   "date": "2026-11-06",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "SRV-01",
+     2,
+     55.5,
+     0.0
+    ],
+    [
+     "SRV-04",
+     1,
+     55.0,
+     0.0
+    ],
+    [
+     "PRT-06",
+     3,
+     75.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q45",
+   "customer": "C005",
+   "date": "2026-11-09",
+   "doc_discount": 0.1,
+   "notes": "",
+   "lines": [
+    [
+     "SRV-02",
+     1,
+     450.0,
+     0.0
+    ],
+    [
+     "SGN-03",
+     8,
+     55.0,
+     0.0
+    ],
+    [
+     "SRV-05",
+     2,
+     35.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "q46",
+   "customer": "C004",
+   "date": "2026-11-11",
+   "doc_discount": 0,
+   "notes": "",
+   "lines": [
+    [
+     "LFP-03",
+     6,
+     34.0,
+     0.0
+    ],
+    [
+     "SRV-01",
+     6,
+     60.0,
+     0.0
+    ],
+    [
+     "PRT-03",
+     2,
+     260.0,
+     0.0
+    ],
+    [
+     "SRV-06",
+     1,
+     80.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "ref": "d1",
+   "customer": "C009",
+   "date": "2026-11-13",
+   "doc_discount": 0,
+   "notes": "Shop front refresh",
+   "lines": [
+    [
+     "SGN-03",
+     6,
+     55.0,
+     0
+    ],
+    [
+     "LFP-02",
+     4,
+     18.0,
+     0
+    ]
+   ]
+  },
+  {
+   "ref": "d2",
+   "customer": "C002",
+   "date": "2026-11-13",
+   "doc_discount": 0.05,
+   "notes": "Spring promo",
+   "lines": [
+    [
+     "SGN-04",
+     3,
+     120.0,
+     0
+    ],
+    [
+     "PRT-02",
+     1,
+     120.0,
+     0
+    ]
+   ]
+  }
+ ],
+ "events": [
+  {
+   "date": "2026-08-04",
+   "action": "create",
+   "ref": "q01"
+  },
+  {
+   "date": "2026-08-04",
+   "action": "issue",
+   "ref": "q01"
+  },
+  {
+   "date": "2026-08-06",
+   "action": "create",
+   "ref": "q02"
+  },
+  {
+   "date": "2026-08-06",
+   "action": "issue",
+   "ref": "q02"
+  },
+  {
+   "date": "2026-08-06",
+   "action": "accept",
+   "ref": "q01"
+  },
+  {
+   "date": "2026-08-06",
+   "action": "convert",
+   "ref": "q01"
+  },
+  {
+   "date": "2026-08-06",
+   "action": "issue_invoice",
+   "ref": "q01"
+  },
+  {
+   "date": "2026-08-10",
+   "action": "accept",
+   "ref": "q02"
+  },
+  {
+   "date": "2026-08-12",
+   "action": "create",
+   "ref": "q03"
+  },
+  {
+   "date": "2026-08-12",
+   "action": "issue",
+   "ref": "q03"
+  },
+  {
+   "date": "2026-08-12",
+   "action": "convert",
+   "ref": "q02"
+  },
+  {
+   "date": "2026-08-12",
+   "action": "issue_invoice",
+   "ref": "q02"
+  },
+  {
+   "date": "2026-08-13",
+   "action": "create",
+   "ref": "q04"
+  },
+  {
+   "date": "2026-08-13",
+   "action": "issue",
+   "ref": "q04"
+  },
+  {
+   "date": "2026-08-17",
+   "action": "create",
+   "ref": "q05"
+  },
+  {
+   "date": "2026-08-17",
+   "action": "issue",
+   "ref": "q05"
+  },
+  {
+   "date": "2026-08-17",
+   "action": "accept",
+   "ref": "q03"
+  },
+  {
+   "date": "2026-08-18",
+   "action": "convert",
+   "ref": "q03"
+  },
+  {
+   "date": "2026-08-18",
+   "action": "issue_invoice",
+   "ref": "q03"
+  },
+  {
+   "date": "2026-08-20",
+   "action": "paid",
+   "ref": "q01"
+  },
+  {
+   "date": "2026-08-21",
+   "action": "create",
+   "ref": "q06"
+  },
+  {
+   "date": "2026-08-21",
+   "action": "create",
+   "ref": "q07"
+  },
+  {
+   "date": "2026-08-21",
+   "action": "create",
+   "ref": "q08"
+  },
+  {
+   "date": "2026-08-21",
+   "action": "create",
+   "ref": "q09"
+  },
+  {
+   "date": "2026-08-21",
+   "action": "issue",
+   "ref": "q06"
+  },
+  {
+   "date": "2026-08-21",
+   "action": "issue",
+   "ref": "q07"
+  },
+  {
+   "date": "2026-08-21",
+   "action": "issue",
+   "ref": "q08"
+  },
+  {
+   "date": "2026-08-21",
+   "action": "issue",
+   "ref": "q09"
+  },
+  {
+   "date": "2026-08-24",
+   "action": "create",
+   "ref": "q10"
+  },
+  {
+   "date": "2026-08-24",
+   "action": "issue",
+   "ref": "q10"
+  },
+  {
+   "date": "2026-08-24",
+   "action": "decline",
+   "ref": "q05"
+  },
+  {
+   "date": "2026-08-24",
+   "action": "accept",
+   "ref": "q06"
+  },
+  {
+   "date": "2026-08-24",
+   "action": "convert",
+   "ref": "q06"
+  },
+  {
+   "date": "2026-08-24",
+   "action": "issue_invoice",
+   "ref": "q06"
+  },
+  {
+   "date": "2026-08-25",
+   "action": "create",
+   "ref": "q11"
+  },
+  {
+   "date": "2026-08-25",
+   "action": "issue",
+   "ref": "q11"
+  },
+  {
+   "date": "2026-08-31",
+   "action": "create",
+   "ref": "q12"
+  },
+  {
+   "date": "2026-08-31",
+   "action": "issue",
+   "ref": "q12"
+  },
+  {
+   "date": "2026-08-31",
+   "action": "accept",
+   "ref": "q08"
+  },
+  {
+   "date": "2026-09-01",
+   "action": "paid",
+   "ref": "q02"
+  },
+  {
+   "date": "2026-09-02",
+   "action": "accept",
+   "ref": "q10"
+  },
+  {
+   "date": "2026-09-02",
+   "action": "convert",
+   "ref": "q08"
+  },
+  {
+   "date": "2026-09-02",
+   "action": "issue_invoice",
+   "ref": "q08"
+  },
+  {
+   "date": "2026-09-03",
+   "action": "create",
+   "ref": "q13"
+  },
+  {
+   "date": "2026-09-03",
+   "action": "issue",
+   "ref": "q13"
+  },
+  {
+   "date": "2026-09-03",
+   "action": "accept",
+   "ref": "q11"
+  },
+  {
+   "date": "2026-09-04",
+   "action": "convert",
+   "ref": "q10"
+  },
+  {
+   "date": "2026-09-04",
+   "action": "issue_invoice",
+   "ref": "q10"
+  },
+  {
+   "date": "2026-09-07",
+   "action": "create",
+   "ref": "q14"
+  },
+  {
+   "date": "2026-09-07",
+   "action": "issue",
+   "ref": "q14"
+  },
+  {
+   "date": "2026-09-07",
+   "action": "accept",
+   "ref": "q12"
+  },
+  {
+   "date": "2026-09-07",
+   "action": "decline",
+   "ref": "q13"
+  },
+  {
+   "date": "2026-09-07",
+   "action": "convert",
+   "ref": "q11"
+  },
+  {
+   "date": "2026-09-07",
+   "action": "issue_invoice",
+   "ref": "q11"
+  },
+  {
+   "date": "2026-09-08",
+   "action": "create",
+   "ref": "q15"
+  },
+  {
+   "date": "2026-09-08",
+   "action": "issue",
+   "ref": "q15"
+  },
+  {
+   "date": "2026-09-09",
+   "action": "convert",
+   "ref": "q12"
+  },
+  {
+   "date": "2026-09-09",
+   "action": "issue_invoice",
+   "ref": "q12"
+  },
+  {
+   "date": "2026-09-10",
+   "action": "accept",
+   "ref": "q15"
+  },
+  {
+   "date": "2026-09-10",
+   "action": "convert",
+   "ref": "q15"
+  },
+  {
+   "date": "2026-09-10",
+   "action": "issue_invoice",
+   "ref": "q15"
+  },
+  {
+   "date": "2026-09-17",
+   "action": "create",
+   "ref": "q16"
+  },
+  {
+   "date": "2026-09-17",
+   "action": "issue",
+   "ref": "q16"
+  },
+  {
+   "date": "2026-09-18",
+   "action": "paid",
+   "ref": "q08"
+  },
+  {
+   "date": "2026-09-21",
+   "action": "create",
+   "ref": "q17"
+  },
+  {
+   "date": "2026-09-21",
+   "action": "issue",
+   "ref": "q17"
+  },
+  {
+   "date": "2026-09-22",
+   "action": "create",
+   "ref": "q18"
+  },
+  {
+   "date": "2026-09-22",
+   "action": "issue",
+   "ref": "q18"
+  },
+  {
+   "date": "2026-09-22",
+   "action": "accept",
+   "ref": "q16"
+  },
+  {
+   "date": "2026-09-24",
+   "action": "create",
+   "ref": "q19"
+  },
+  {
+   "date": "2026-09-24",
+   "action": "create",
+   "ref": "q20"
+  },
+  {
+   "date": "2026-09-24",
+   "action": "issue",
+   "ref": "q19"
+  },
+  {
+   "date": "2026-09-24",
+   "action": "issue",
+   "ref": "q20"
+  },
+  {
+   "date": "2026-09-24",
+   "action": "convert",
+   "ref": "q16"
+  },
+  {
+   "date": "2026-09-24",
+   "action": "issue_invoice",
+   "ref": "q16"
+  },
+  {
+   "date": "2026-09-24",
+   "action": "paid",
+   "ref": "q12"
+  },
+  {
+   "date": "2026-09-28",
+   "action": "create",
+   "ref": "q21"
+  },
+  {
+   "date": "2026-09-28",
+   "action": "create",
+   "ref": "q22"
+  },
+  {
+   "date": "2026-09-28",
+   "action": "issue",
+   "ref": "q21"
+  },
+  {
+   "date": "2026-09-28",
+   "action": "issue",
+   "ref": "q22"
+  },
+  {
+   "date": "2026-09-28",
+   "action": "accept",
+   "ref": "q19"
+  },
+  {
+   "date": "2026-09-28",
+   "action": "convert",
+   "ref": "q19"
+  },
+  {
+   "date": "2026-09-28",
+   "action": "issue_invoice",
+   "ref": "q19"
+  },
+  {
+   "date": "2026-09-30",
+   "action": "decline",
+   "ref": "q18"
+  },
+  {
+   "date": "2026-09-30",
+   "action": "accept",
+   "ref": "q21"
+  },
+  {
+   "date": "2026-10-01",
+   "action": "convert",
+   "ref": "q21"
+  },
+  {
+   "date": "2026-10-01",
+   "action": "issue_invoice",
+   "ref": "q21"
+  },
+  {
+   "date": "2026-10-02",
+   "action": "accept",
+   "ref": "q20"
+  },
+  {
+   "date": "2026-10-02",
+   "action": "paid",
+   "ref": "q06"
+  },
+  {
+   "date": "2026-10-05",
+   "action": "create",
+   "ref": "q23"
+  },
+  {
+   "date": "2026-10-05",
+   "action": "issue",
+   "ref": "q23"
+  },
+  {
+   "date": "2026-10-05",
+   "action": "accept",
+   "ref": "q22"
+  },
+  {
+   "date": "2026-10-05",
+   "action": "convert",
+   "ref": "q20"
+  },
+  {
+   "date": "2026-10-05",
+   "action": "convert",
+   "ref": "q22"
+  },
+  {
+   "date": "2026-10-05",
+   "action": "issue_invoice",
+   "ref": "q20"
+  },
+  {
+   "date": "2026-10-05",
+   "action": "issue_invoice",
+   "ref": "q22"
+  },
+  {
+   "date": "2026-10-06",
+   "action": "create",
+   "ref": "q24"
+  },
+  {
+   "date": "2026-10-06",
+   "action": "create",
+   "ref": "q25"
+  },
+  {
+   "date": "2026-10-06",
+   "action": "issue",
+   "ref": "q24"
+  },
+  {
+   "date": "2026-10-06",
+   "action": "issue",
+   "ref": "q25"
+  },
+  {
+   "date": "2026-10-07",
+   "action": "create",
+   "ref": "q26"
+  },
+  {
+   "date": "2026-10-07",
+   "action": "issue",
+   "ref": "q26"
+  },
+  {
+   "date": "2026-10-08",
+   "action": "create",
+   "ref": "q27"
+  },
+  {
+   "date": "2026-10-08",
+   "action": "create",
+   "ref": "q28"
+  },
+  {
+   "date": "2026-10-08",
+   "action": "issue",
+   "ref": "q27"
+  },
+  {
+   "date": "2026-10-08",
+   "action": "issue",
+   "ref": "q28"
+  },
+  {
+   "date": "2026-10-09",
+   "action": "create",
+   "ref": "q29"
+  },
+  {
+   "date": "2026-10-09",
+   "action": "issue",
+   "ref": "q29"
+  },
+  {
+   "date": "2026-10-12",
+   "action": "create",
+   "ref": "q30"
+  },
+  {
+   "date": "2026-10-12",
+   "action": "create",
+   "ref": "q31"
+  },
+  {
+   "date": "2026-10-12",
+   "action": "issue",
+   "ref": "q30"
+  },
+  {
+   "date": "2026-10-12",
+   "action": "issue",
+   "ref": "q31"
+  },
+  {
+   "date": "2026-10-12",
+   "action": "decline",
+   "ref": "q23"
+  },
+  {
+   "date": "2026-10-12",
+   "action": "accept",
+   "ref": "q24"
+  },
+  {
+   "date": "2026-10-12",
+   "action": "accept",
+   "ref": "q26"
+  },
+  {
+   "date": "2026-10-13",
+   "action": "convert",
+   "ref": "q24"
+  },
+  {
+   "date": "2026-10-13",
+   "action": "convert",
+   "ref": "q26"
+  },
+  {
+   "date": "2026-10-13",
+   "action": "issue_invoice",
+   "ref": "q24"
+  },
+  {
+   "date": "2026-10-13",
+   "action": "issue_invoice",
+   "ref": "q26"
+  },
+  {
+   "date": "2026-10-13",
+   "action": "paid",
+   "ref": "q11"
+  },
+  {
+   "date": "2026-10-14",
+   "action": "accept",
+   "ref": "q25"
+  },
+  {
+   "date": "2026-10-14",
+   "action": "accept",
+   "ref": "q28"
+  },
+  {
+   "date": "2026-10-14",
+   "action": "accept",
+   "ref": "q31"
+  },
+  {
+   "date": "2026-10-14",
+   "action": "convert",
+   "ref": "q25"
+  },
+  {
+   "date": "2026-10-14",
+   "action": "issue_invoice",
+   "ref": "q25"
+  },
+  {
+   "date": "2026-10-15",
+   "action": "create",
+   "ref": "q32"
+  },
+  {
+   "date": "2026-10-15",
+   "action": "issue",
+   "ref": "q32"
+  },
+  {
+   "date": "2026-10-15",
+   "action": "decline",
+   "ref": "q27"
+  },
+  {
+   "date": "2026-10-15",
+   "action": "convert",
+   "ref": "q31"
+  },
+  {
+   "date": "2026-10-15",
+   "action": "issue_invoice",
+   "ref": "q31"
+  },
+  {
+   "date": "2026-10-16",
+   "action": "convert",
+   "ref": "q28"
+  },
+  {
+   "date": "2026-10-16",
+   "action": "issue_invoice",
+   "ref": "q28"
+  },
+  {
+   "date": "2026-10-18",
+   "action": "paid",
+   "ref": "q10"
+  },
+  {
+   "date": "2026-10-19",
+   "action": "create",
+   "ref": "q33"
+  },
+  {
+   "date": "2026-10-19",
+   "action": "create",
+   "ref": "q34"
+  },
+  {
+   "date": "2026-10-19",
+   "action": "issue",
+   "ref": "q33"
+  },
+  {
+   "date": "2026-10-19",
+   "action": "issue",
+   "ref": "q34"
+  },
+  {
+   "date": "2026-10-19",
+   "action": "accept",
+   "ref": "q29"
+  },
+  {
+   "date": "2026-10-19",
+   "action": "accept",
+   "ref": "q30"
+  },
+  {
+   "date": "2026-10-19",
+   "action": "convert",
+   "ref": "q29"
+  },
+  {
+   "date": "2026-10-19",
+   "action": "convert",
+   "ref": "q30"
+  },
+  {
+   "date": "2026-10-19",
+   "action": "issue_invoice",
+   "ref": "q29"
+  },
+  {
+   "date": "2026-10-19",
+   "action": "issue_invoice",
+   "ref": "q30"
+  },
+  {
+   "date": "2026-10-23",
+   "action": "paid",
+   "ref": "q25"
+  },
+  {
+   "date": "2026-10-24",
+   "action": "paid",
+   "ref": "q30"
+  },
+  {
+   "date": "2026-10-25",
+   "action": "paid",
+   "ref": "q31"
+  },
+  {
+   "date": "2026-10-26",
+   "action": "create",
+   "ref": "q35"
+  },
+  {
+   "date": "2026-10-26",
+   "action": "issue",
+   "ref": "q35"
+  },
+  {
+   "date": "2026-10-26",
+   "action": "accept",
+   "ref": "q32"
+  },
+  {
+   "date": "2026-10-26",
+   "action": "accept",
+   "ref": "q33"
+  },
+  {
+   "date": "2026-10-26",
+   "action": "accept",
+   "ref": "q34"
+  },
+  {
+   "date": "2026-10-26",
+   "action": "paid",
+   "ref": "q22"
+  },
+  {
+   "date": "2026-10-27",
+   "action": "create",
+   "ref": "q36"
+  },
+  {
+   "date": "2026-10-27",
+   "action": "issue",
+   "ref": "q36"
+  },
+  {
+   "date": "2026-10-27",
+   "action": "convert",
+   "ref": "q32"
+  },
+  {
+   "date": "2026-10-27",
+   "action": "convert",
+   "ref": "q33"
+  },
+  {
+   "date": "2026-10-27",
+   "action": "convert",
+   "ref": "q34"
+  },
+  {
+   "date": "2026-10-27",
+   "action": "issue_invoice",
+   "ref": "q32"
+  },
+  {
+   "date": "2026-10-27",
+   "action": "issue_invoice",
+   "ref": "q33"
+  },
+  {
+   "date": "2026-10-27",
+   "action": "issue_invoice",
+   "ref": "q34"
+  },
+  {
+   "date": "2026-10-27",
+   "action": "paid",
+   "ref": "q16"
+  },
+  {
+   "date": "2026-10-29",
+   "action": "paid",
+   "ref": "q29"
+  },
+  {
+   "date": "2026-10-30",
+   "action": "create",
+   "ref": "q37"
+  },
+  {
+   "date": "2026-10-30",
+   "action": "issue",
+   "ref": "q37"
+  },
+  {
+   "date": "2026-11-01",
+   "action": "paid",
+   "ref": "q21"
+  },
+  {
+   "date": "2026-11-02",
+   "action": "create",
+   "ref": "q38"
+  },
+  {
+   "date": "2026-11-02",
+   "action": "issue",
+   "ref": "q38"
+  },
+  {
+   "date": "2026-11-02",
+   "action": "accept",
+   "ref": "q35"
+  },
+  {
+   "date": "2026-11-02",
+   "action": "paid",
+   "ref": "q19"
+  },
+  {
+   "date": "2026-11-03",
+   "action": "accept",
+   "ref": "q36"
+  },
+  {
+   "date": "2026-11-03",
+   "action": "convert",
+   "ref": "q36"
+  },
+  {
+   "date": "2026-11-03",
+   "action": "issue_invoice",
+   "ref": "q36"
+  },
+  {
+   "date": "2026-11-04",
+   "action": "create",
+   "ref": "q39"
+  },
+  {
+   "date": "2026-11-04",
+   "action": "create",
+   "ref": "q40"
+  },
+  {
+   "date": "2026-11-04",
+   "action": "create",
+   "ref": "q41"
+  },
+  {
+   "date": "2026-11-04",
+   "action": "create",
+   "ref": "q42"
+  },
+  {
+   "date": "2026-11-04",
+   "action": "issue",
+   "ref": "q39"
+  },
+  {
+   "date": "2026-11-04",
+   "action": "issue",
+   "ref": "q40"
+  },
+  {
+   "date": "2026-11-04",
+   "action": "issue",
+   "ref": "q41"
+  },
+  {
+   "date": "2026-11-04",
+   "action": "issue",
+   "ref": "q42"
+  },
+  {
+   "date": "2026-11-04",
+   "action": "decline",
+   "ref": "q37"
+  },
+  {
+   "date": "2026-11-04",
+   "action": "convert",
+   "ref": "q35"
+  },
+  {
+   "date": "2026-11-04",
+   "action": "issue_invoice",
+   "ref": "q35"
+  },
+  {
+   "date": "2026-11-05",
+   "action": "paid",
+   "ref": "q33"
+  },
+  {
+   "date": "2026-11-06",
+   "action": "create",
+   "ref": "q43"
+  },
+  {
+   "date": "2026-11-06",
+   "action": "create",
+   "ref": "q44"
+  },
+  {
+   "date": "2026-11-06",
+   "action": "issue",
+   "ref": "q43"
+  },
+  {
+   "date": "2026-11-06",
+   "action": "issue",
+   "ref": "q44"
+  },
+  {
+   "date": "2026-11-09",
+   "action": "create",
+   "ref": "q45"
+  },
+  {
+   "date": "2026-11-09",
+   "action": "issue",
+   "ref": "q45"
+  },
+  {
+   "date": "2026-11-09",
+   "action": "accept",
+   "ref": "q38"
+  },
+  {
+   "date": "2026-11-09",
+   "action": "decline",
+   "ref": "q42"
+  },
+  {
+   "date": "2026-11-09",
+   "action": "convert",
+   "ref": "q38"
+  },
+  {
+   "date": "2026-11-09",
+   "action": "issue_invoice",
+   "ref": "q38"
+  },
+  {
+   "date": "2026-11-09",
+   "action": "paid",
+   "ref": "q24"
+  },
+  {
+   "date": "2026-11-10",
+   "action": "paid",
+   "ref": "q26"
+  },
+  {
+   "date": "2026-11-11",
+   "action": "create",
+   "ref": "q46"
+  },
+  {
+   "date": "2026-11-11",
+   "action": "issue",
+   "ref": "q46"
+  },
+  {
+   "date": "2026-11-11",
+   "action": "accept",
+   "ref": "q39"
+  },
+  {
+   "date": "2026-11-11",
+   "action": "accept",
+   "ref": "q43"
+  },
+  {
+   "date": "2026-11-11",
+   "action": "convert",
+   "ref": "q43"
+  },
+  {
+   "date": "2026-11-11",
+   "action": "issue_invoice",
+   "ref": "q43"
+  },
+  {
+   "date": "2026-11-13",
+   "action": "create",
+   "ref": "d1"
+  },
+  {
+   "date": "2026-11-13",
+   "action": "create",
+   "ref": "d2"
+  },
+  {
+   "date": "2026-11-13",
+   "action": "accept",
+   "ref": "q41"
+  },
+  {
+   "date": "2026-11-13",
+   "action": "accept",
+   "ref": "q44"
+  },
+  {
+   "date": "2026-11-13",
+   "action": "convert",
+   "ref": "q39"
+  },
+  {
+   "date": "2026-11-13",
+   "action": "convert",
+   "ref": "q41"
+  },
+  {
+   "date": "2026-11-13",
+   "action": "convert",
+   "ref": "q44"
+  },
+  {
+   "date": "2026-11-13",
+   "action": "issue_invoice",
+   "ref": "q39"
+  },
+  {
+   "date": "2026-11-13",
+   "action": "issue_invoice",
+   "ref": "q41"
+  },
+  {
+   "date": "2026-11-13",
+   "action": "issue_invoice",
+   "ref": "q44"
+  },
+  {
+   "date": "2026-11-15",
+   "action": "paid",
+   "ref": "q28"
+  }
+ ]
+}

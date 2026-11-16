@@ -1,0 +1,25 @@
+Code,Category,Description,Unit,List price,Min price,Max discount %
+PRT-01,Printing,"Business cards, 500, matt 400gsm",pack,45.0,38.0,10
+PRT-02,Printing,"Flyers A5, 1,000, gloss 150gsm",pack,120.0,95.0,10
+PRT-03,Printing,"Tri-fold brochures, 500",pack,260.0,210.0,10
+PRT-04,Printing,"Letterheads A4, 500",pack,85.0,70.0,10
+PRT-05,Printing,"Booklets A4 16 pages, 100",pack,340.0,280.0,10
+PRT-06,Printing,"Envelopes DL printed, 500",pack,75.0,60.0,10
+SGN-01,Signage,Aluminium sign 600 x 400 mm,each,95.0,80.0,15
+SGN-02,Signage,Acrylic office sign with stand-offs,each,140.0,115.0,15
+SGN-03,Signage,Window vinyl lettering,m2,55.0,45.0,15
+SGN-04,Signage,Pull-up banner 850 x 2000 mm,each,165.0,135.0,15
+SGN-05,Signage,A-frame pavement sign,each,210.0,175.0,10
+SGN-06,Signage,Vehicle door decals,pair,180.0,150.0,10
+LFP-01,Large format,PVC banner with eyelets,m2,28.0,22.0,20
+LFP-02,Large format,"Poster A1, satin",each,18.0,14.0,20
+LFP-03,Large format,Mesh banner,m2,34.0,27.0,20
+LFP-04,Large format,Foam board A1,each,32.0,26.0,20
+LFP-05,Large format,"Wall graphic, laminated",m2,65.0,52.0,15
+LFP-06,Large format,"Floor sticker, anti-slip",each,24.0,19.0,20
+SRV-01,Design & services,Design time,hour,60.0,50.0,0
+SRV-02,Design & services,Logo refresh,fixed,450.0,380.0,10
+SRV-03,Design & services,Proof and colour check,each,25.0,25.0,0
+SRV-04,Design & services,Installation,hour,55.0,45.0,0
+SRV-05,Design & services,Local delivery,trip,35.0,35.0,0
+SRV-06,Design & services,Rush fee (48 h),job,80.0,80.0,0

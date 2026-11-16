@@ -1,0 +1,3645 @@
+{
+ "bookings": [
+  {
+   "ref": "b1",
+   "customer": "C005",
+   "created": "2027-01-02",
+   "event": "2027-01-08",
+   "out": "2027-01-07",
+   "due": "2027-01-10",
+   "lines": [
+    [
+     "DF-PNL",
+     19
+    ],
+    [
+     "LT-UPL",
+     9
+    ],
+    [
+     "TB-CKT",
+     7
+    ],
+    [
+     "SG-EAS",
+     1
+    ]
+   ],
+   "by": "maya",
+   "delivery": 75
+  },
+  {
+   "ref": "b2",
+   "customer": "C010",
+   "created": "2027-01-03",
+   "event": "2027-01-07",
+   "out": "2027-01-06",
+   "due": "2027-01-08",
+   "lines": [
+    [
+     "TB-FRM",
+     6
+    ],
+    [
+     "LN-SGE",
+     12
+    ],
+    [
+     "AR-WOD",
+     1
+    ],
+    [
+     "CP-GLS",
+     83
+    ]
+   ],
+   "by": "rita",
+   "delivery": 180
+  },
+  {
+   "ref": "b3",
+   "customer": "C004",
+   "created": "2027-01-04",
+   "event": "2027-01-11",
+   "out": "2027-01-10",
+   "due": "2027-01-12",
+   "lines": [
+    [
+     "TB-FRM",
+     8
+    ],
+    [
+     "LN-SGE",
+     16
+    ],
+    [
+     "LT-FRY",
+     3
+    ],
+    [
+     "AR-WOD",
+     1
+    ],
+    [
+     "CP-GLS",
+     103
+    ]
+   ],
+   "by": "rita",
+   "delivery": 250
+  },
+  {
+   "ref": "b4",
+   "customer": "C010",
+   "created": "2027-01-06",
+   "event": "2027-01-12",
+   "out": "2027-01-11",
+   "due": "2027-01-14",
+   "lines": [
+    [
+     "CH-GLD",
+     82
+    ],
+    [
+     "TB-RND",
+     9
+    ],
+    [
+     "LN-WHT",
+     5
+    ],
+    [
+     "CP-GLD",
+     51
+    ]
+   ],
+   "by": "jon",
+   "delivery": 120
+  },
+  {
+   "ref": "b5",
+   "customer": "C003",
+   "created": "2027-01-08",
+   "event": "2027-01-13",
+   "out": "2027-01-12",
+   "due": "2027-01-14",
+   "lines": [
+    [
+     "DF-PNL",
+     26
+    ],
+    [
+     "LT-UPL",
+     13
+    ],
+    [
+     "TB-CKT",
+     9
+    ],
+    [
+     "SG-EAS",
+     1
+    ]
+   ],
+   "by": "jon",
+   "delivery": 120
+  },
+  {
+   "ref": "b6",
+   "customer": "C006",
+   "created": "2027-01-10",
+   "event": "2027-01-15",
+   "out": "2027-01-14",
+   "due": "2027-01-17",
+   "lines": [
+    [
+     "TB-FRM",
+     8
+    ],
+    [
+     "LN-SGE",
+     8
+    ],
+    [
+     "LT-FRY",
+     3
+    ],
+    [
+     "AR-WOD",
+     1
+    ],
+    [
+     "CP-GLS",
+     84
+    ]
+   ],
+   "by": "jon",
+   "delivery": 180
+  },
+  {
+   "ref": "b7",
+   "customer": "C007",
+   "created": "2027-01-12",
+   "event": "2027-01-19",
+   "out": "2027-01-18",
+   "due": "2027-01-20",
+   "lines": [
+    [
+     "CH-GLD",
+     110
+    ],
+    [
+     "TB-RND",
+     9
+    ],
+    [
+     "LN-WHT",
+     7
+    ],
+    [
+     "CT-VAS",
+     6
+    ],
+    [
+     "CP-GLD",
+     71
+    ]
+   ],
+   "by": "jon",
+   "delivery": 0
+  },
+  {
+   "ref": "b8",
+   "customer": "C011",
+   "created": "2027-01-14",
+   "event": "2027-01-20",
+   "out": "2027-01-19",
+   "due": "2027-01-22",
+   "lines": [
+    [
+     "DF-PNL",
+     26
+    ],
+    [
+     "LT-UPL",
+     20
+    ],
+    [
+     "TB-CKT",
+     7
+    ]
+   ],
+   "by": "maya",
+   "delivery": 0
+  },
+  {
+   "ref": "b9",
+   "customer": "C009",
+   "created": "2027-01-15",
+   "event": "2027-01-22",
+   "out": "2027-01-21",
+   "due": "2027-01-23",
+   "lines": [
+    [
+     "AR-FLR",
+     1
+    ],
+    [
+     "BD-GRN",
+     1
+    ],
+    [
+     "SF-VLV",
+     1
+    ],
+    [
+     "LT-CND",
+     11
+    ],
+    [
+     "CH-GLD",
+     42
+    ]
+   ],
+   "by": "maya",
+   "delivery": 75
+  },
+  {
+   "ref": "b10",
+   "customer": "C012",
+   "created": "2027-01-22",
+   "event": "2027-01-28",
+   "out": "2027-01-27",
+   "due": "2027-01-30",
+   "lines": [
+    [
+     "TB-FRM",
+     8
+    ],
+    [
+     "LN-SGE",
+     8
+    ],
+    [
+     "LT-FRY",
+     3
+    ],
+    [
+     "AR-WOD",
+     1
+    ],
+    [
+     "CP-GLS",
+     83
+    ]
+   ],
+   "by": "jon",
+   "delivery": 120
+  },
+  {
+   "ref": "b11",
+   "customer": "C001",
+   "created": "2027-01-23",
+   "event": "2027-01-30",
+   "out": "2027-01-29",
+   "due": "2027-01-31",
+   "lines": [
+    [
+     "AR-FLR",
+     1
+    ],
+    [
+     "BD-GRN",
+     1
+    ],
+    [
+     "SF-VLV",
+     2
+    ],
+    [
+     "LT-CND",
+     6
+    ],
+    [
+     "CH-GLD",
+     23
+    ]
+   ],
+   "by": "rita",
+   "delivery": 120
+  },
+  {
+   "ref": "b12",
+   "customer": "C014",
+   "created": "2027-01-12",
+   "event": "2027-01-28",
+   "out": "2027-01-27",
+   "due": "2027-01-29",
+   "lines": [
+    [
+     "CH-GLD",
+     91
+    ],
+    [
+     "TB-RND",
+     6
+    ],
+    [
+     "LN-WHT",
+     5
+    ],
+    [
+     "CT-VAS",
+     10
+    ],
+    [
+     "CP-GLD",
+     52
+    ]
+   ],
+   "by": "jon",
+   "delivery": 180
+  },
+  {
+   "ref": "b13",
+   "customer": "C005",
+   "created": "2027-01-06",
+   "event": "2027-02-01",
+   "out": "2027-01-31",
+   "due": "2027-02-03",
+   "lines": [
+    [
+     "TB-RND",
+     6
+    ],
+    [
+     "LN-WHT",
+     5
+    ],
+    [
+     "CT-VAS",
+     10
+    ],
+    [
+     "CP-GLD",
+     103
+    ]
+   ],
+   "by": "jon",
+   "delivery": 75
+  },
+  {
+   "ref": "b14",
+   "customer": "C007",
+   "created": "2027-01-15",
+   "event": "2027-02-03",
+   "out": "2027-02-02",
+   "due": "2027-02-05",
+   "lines": [
+    [
+     "DF-PNL",
+     29
+    ],
+    [
+     "LT-UPL",
+     16
+    ],
+    [
+     "TB-CKT",
+     7
+    ],
+    [
+     "SG-EAS",
+     1
+    ]
+   ],
+   "by": "rita",
+   "delivery": 250
+  },
+  {
+   "ref": "b15",
+   "customer": "C014",
+   "created": "2027-01-10",
+   "event": "2027-02-03",
+   "out": "2027-02-02",
+   "due": "2027-02-04",
+   "lines": [
+    [
+     "AR-FLR",
+     1
+    ],
+    [
+     "BD-GRN",
+     1
+    ],
+    [
+     "SF-VLV",
+     1
+    ],
+    [
+     "LT-CND",
+     6
+    ],
+    [
+     "CH-GLD",
+     55
+    ]
+   ],
+   "by": "jon",
+   "delivery": 120
+  },
+  {
+   "ref": "b16",
+   "customer": "C006",
+   "created": "2027-01-11",
+   "event": "2027-02-04",
+   "out": "2027-02-03",
+   "due": "2027-02-05",
+   "lines": [
+    [
+     "AR-FLR",
+     1
+    ],
+    [
+     "BD-GRN",
+     1
+    ],
+    [
+     "SF-VLV",
+     1
+    ],
+    [
+     "LT-CND",
+     13
+    ],
+    [
+     "CH-GLD",
+     42
+    ]
+   ],
+   "by": "maya",
+   "delivery": 180
+  },
+  {
+   "ref": "b17",
+   "customer": "C005",
+   "created": "2027-01-13",
+   "event": "2027-02-08",
+   "out": "2027-02-07",
+   "due": "2027-02-09",
+   "lines": [
+    [
+     "TB-FRM",
+     8
+    ],
+    [
+     "LN-SGE",
+     7
+    ],
+    [
+     "LT-FRY",
+     3
+    ]
+   ],
+   "by": "jon",
+   "delivery": 180
+  },
+  {
+   "ref": "b18",
+   "customer": "C002",
+   "created": "2027-01-26",
+   "event": "2027-02-07",
+   "out": "2027-02-06",
+   "due": "2027-02-09",
+   "lines": [
+    [
+     "CH-GLD",
+     82
+    ],
+    [
+     "TB-RND",
+     5
+    ],
+    [
+     "LN-WHT",
+     14
+    ],
+    [
+     "CT-VAS",
+     12
+    ],
+    [
+     "CP-GLD",
+     103
+    ]
+   ],
+   "by": "maya",
+   "delivery": 250
+  },
+  {
+   "ref": "b19",
+   "customer": "C009",
+   "created": "2027-01-18",
+   "event": "2027-02-13",
+   "out": "2027-02-12",
+   "due": "2027-02-14",
+   "lines": [
+    [
+     "DF-PNL",
+     20
+    ],
+    [
+     "LT-UPL",
+     11
+    ],
+    [
+     "TB-CKT",
+     11
+    ],
+    [
+     "SG-EAS",
+     1
+    ]
+   ],
+   "by": "maya",
+   "delivery": 0
+  },
+  {
+   "ref": "b20",
+   "customer": "C008",
+   "created": "2027-02-02",
+   "event": "2027-02-11",
+   "out": "2027-02-10",
+   "due": "2027-02-12",
+   "lines": [
+    [
+     "AR-FLR",
+     1
+    ],
+    [
+     "BD-GRN",
+     1
+    ],
+    [
+     "SF-VLV",
+     2
+    ],
+    [
+     "LT-CND",
+     6
+    ]
+   ],
+   "by": "jon",
+   "delivery": 75
+  },
+  {
+   "ref": "b21",
+   "customer": "C007",
+   "created": "2027-01-31",
+   "event": "2027-02-15",
+   "out": "2027-02-14",
+   "due": "2027-02-16",
+   "lines": [
+    [
+     "CH-GLD",
+     66
+    ],
+    [
+     "TB-RND",
+     13
+    ],
+    [
+     "LN-WHT",
+     11
+    ],
+    [
+     "CT-VAS",
+     7
+    ],
+    [
+     "CP-GLD",
+     54
+    ]
+   ],
+   "by": "rita",
+   "delivery": 75
+  },
+  {
+   "ref": "b22",
+   "customer": "C012",
+   "created": "2027-02-01",
+   "event": "2027-02-14",
+   "out": "2027-02-13",
+   "due": "2027-02-15",
+   "lines": [
+    [
+     "LN-SGE",
+     15
+    ],
+    [
+     "LT-FRY",
+     3
+    ],
+    [
+     "CP-GLS",
+     60
+    ]
+   ],
+   "by": "rita",
+   "delivery": 0
+  },
+  {
+   "ref": "b23",
+   "customer": "C009",
+   "created": "2027-02-06",
+   "event": "2027-02-17",
+   "out": "2027-02-16",
+   "due": "2027-02-19",
+   "lines": [
+    [
+     "CH-CLR",
+     20
+    ],
+    [
+     "TB-CKT",
+     8
+    ],
+    [
+     "LT-UPL",
+     10
+    ],
+    [
+     "BD-SEQ",
+     1
+    ]
+   ],
+   "by": "maya",
+   "delivery": 180
+  },
+  {
+   "ref": "b24",
+   "customer": "C001",
+   "created": "2027-02-03",
+   "event": "2027-02-16",
+   "out": "2027-02-15",
+   "due": "2027-02-17",
+   "lines": [
+    [
+     "AR-FLR",
+     1
+    ],
+    [
+     "BD-GRN",
+     1
+    ],
+    [
+     "LT-CND",
+     5
+    ],
+    [
+     "CH-GLD",
+     40
+    ]
+   ],
+   "by": "rita",
+   "delivery": 180
+  },
+  {
+   "ref": "b25",
+   "customer": "C010",
+   "created": "2027-02-08",
+   "event": "2027-02-17",
+   "out": "2027-02-16",
+   "due": "2027-02-18",
+   "lines": [
+    [
+     "TB-CKT",
+     7
+    ],
+    [
+     "LT-UPL",
+     10
+    ],
+    [
+     "BD-SEQ",
+     2
+    ],
+    [
+     "SG-EAS",
+     2
+    ]
+   ],
+   "by": "maya",
+   "delivery": 0
+  },
+  {
+   "ref": "b26",
+   "customer": "C004",
+   "created": "2027-02-06",
+   "event": "2027-02-20",
+   "out": "2027-02-19",
+   "due": "2027-02-21",
+   "lines": [
+    [
+     "AR-FLR",
+     1
+    ],
+    [
+     "BD-GRN",
+     1
+    ],
+    [
+     "SF-VLV",
+     1
+    ],
+    [
+     "LT-CND",
+     6
+    ],
+    [
+     "CH-GLD",
+     41
+    ]
+   ],
+   "by": "maya",
+   "delivery": 250
+  },
+  {
+   "ref": "b27",
+   "customer": "C013",
+   "created": "2027-02-09",
+   "event": "2027-02-22",
+   "out": "2027-02-21",
+   "due": "2027-02-24",
+   "lines": [
+    [
+     "DF-PNL",
+     26
+    ],
+    [
+     "TB-CKT",
+     11
+    ],
+    [
+     "SG-EAS",
+     1
+    ]
+   ],
+   "by": "jon",
+   "delivery": 180
+  },
+  {
+   "ref": "b28",
+   "customer": "C007",
+   "created": "2027-01-30",
+   "event": "2027-02-22",
+   "out": "2027-02-21",
+   "due": "2027-02-23",
+   "lines": [
+    [
+     "AR-FLR",
+     1
+    ],
+    [
+     "SF-VLV",
+     2
+    ],
+    [
+     "LT-CND",
+     7
+    ],
+    [
+     "CH-GLD",
+     34
+    ]
+   ],
+   "by": "maya",
+   "delivery": 120
+  },
+  {
+   "ref": "b29",
+   "customer": "C004",
+   "created": "2027-02-16",
+   "event": "2027-02-26",
+   "out": "2027-02-25",
+   "due": "2027-02-27",
+   "lines": [
+    [
+     "TB-RND",
+     12
+    ],
+    [
+     "LN-WHT",
+     6
+    ],
+    [
+     "CT-VAS",
+     6
+    ],
+    [
+     "CP-GLD",
+     71
+    ]
+   ],
+   "by": "maya",
+   "delivery": 180
+  },
+  {
+   "ref": "b30",
+   "customer": "C009",
+   "created": "2027-02-03",
+   "event": "2027-02-27",
+   "out": "2027-02-26",
+   "due": "2027-03-01",
+   "lines": [
+    [
+     "DF-PNL",
+     25
+    ],
+    [
+     "LT-UPL",
+     18
+    ],
+    [
+     "TB-CKT",
+     6
+    ]
+   ],
+   "by": "maya",
+   "delivery": 180
+  },
+  {
+   "ref": "b31",
+   "customer": "C004",
+   "created": "2027-02-19",
+   "event": "2027-03-02",
+   "out": "2027-03-01",
+   "due": "2027-03-04",
+   "lines": [
+    [
+     "CH-CLR",
+     51
+    ],
+    [
+     "BD-SEQ",
+     2
+    ],
+    [
+     "SG-EAS",
+     2
+    ]
+   ],
+   "by": "rita",
+   "delivery": 0
+  },
+  {
+   "ref": "b32",
+   "customer": "C004",
+   "created": "2027-02-16",
+   "event": "2027-03-02",
+   "out": "2027-03-01",
+   "due": "2027-03-03",
+   "lines": [
+    [
+     "CH-GLD",
+     74
+    ],
+    [
+     "TB-RND",
+     9
+    ],
+    [
+     "LN-WHT",
+     10
+    ],
+    [
+     "CP-GLD",
+     73
+    ]
+   ],
+   "by": "rita",
+   "delivery": 0
+  },
+  {
+   "ref": "b33",
+   "customer": "C005",
+   "created": "2027-02-14",
+   "event": "2027-03-05",
+   "out": "2027-03-04",
+   "due": "2027-03-07",
+   "lines": [
+    [
+     "CH-GLD",
+     41
+    ],
+    [
+     "TB-RND",
+     5
+    ],
+    [
+     "LN-WHT",
+     8
+    ],
+    [
+     "CT-VAS",
+     14
+    ],
+    [
+     "CP-GLD",
+     63
+    ]
+   ],
+   "by": "jon",
+   "delivery": 180
+  },
+  {
+   "ref": "b34",
+   "customer": "C009",
+   "created": "2027-02-21",
+   "event": "2027-03-05",
+   "out": "2027-03-04",
+   "due": "2027-03-06",
+   "lines": [
+    [
+     "TB-FRM",
+     6
+    ],
+    [
+     "LN-SGE",
+     10
+    ],
+    [
+     "LT-FRY",
+     4
+    ],
+    [
+     "AR-WOD",
+     1
+    ],
+    [
+     "CP-GLS",
+     102
+    ]
+   ],
+   "by": "rita",
+   "delivery": 0
+  },
+  {
+   "ref": "b35",
+   "customer": "C003",
+   "created": "2027-02-16",
+   "event": "2027-03-05",
+   "out": "2027-03-04",
+   "due": "2027-03-07",
+   "lines": [
+    [
+     "TB-RND",
+     8
+    ],
+    [
+     "LN-WHT",
+     5
+    ],
+    [
+     "CT-VAS",
+     10
+    ],
+    [
+     "CP-GLD",
+     103
+    ]
+   ],
+   "by": "maya",
+   "delivery": 0
+  },
+  {
+   "ref": "b36",
+   "customer": "C011",
+   "created": "2027-02-10",
+   "event": "2027-03-06",
+   "out": "2027-03-05",
+   "due": "2027-03-08",
+   "lines": [
+    [
+     "CH-CLR",
+     40
+    ],
+    [
+     "BD-SEQ",
+     1
+    ],
+    [
+     "SG-EAS",
+     1
+    ]
+   ],
+   "by": "maya",
+   "delivery": 180
+  },
+  {
+   "ref": "b37",
+   "customer": "C008",
+   "created": "2027-02-23",
+   "event": "2027-03-08",
+   "out": "2027-03-07",
+   "due": "2027-03-09",
+   "lines": [
+    [
+     "TB-CKT",
+     7
+    ],
+    [
+     "LT-UPL",
+     14
+    ],
+    [
+     "BD-SEQ",
+     1
+    ]
+   ],
+   "by": "maya",
+   "delivery": 75
+  },
+  {
+   "ref": "b38",
+   "customer": "C005",
+   "created": "2027-02-26",
+   "event": "2027-03-11",
+   "out": "2027-03-10",
+   "due": "2027-03-12",
+   "lines": [
+    [
+     "CH-CLR",
+     42
+    ],
+    [
+     "TB-CKT",
+     6
+    ],
+    [
+     "LT-UPL",
+     7
+    ],
+    [
+     "SG-EAS",
+     1
+    ]
+   ],
+   "by": "maya",
+   "delivery": 250
+  },
+  {
+   "ref": "b39",
+   "customer": "C006",
+   "created": "2027-02-16",
+   "event": "2027-03-12",
+   "out": "2027-03-11",
+   "due": "2027-03-14",
+   "lines": [
+    [
+     "AR-FLR",
+     1
+    ],
+    [
+     "BD-GRN",
+     1
+    ],
+    [
+     "LT-CND",
+     5
+    ],
+    [
+     "CH-GLD",
+     49
+    ]
+   ],
+   "by": "maya",
+   "delivery": 180
+  },
+  {
+   "ref": "b40",
+   "customer": "C003",
+   "created": "2027-02-26",
+   "event": "2027-03-16",
+   "out": "2027-03-15",
+   "due": "2027-03-17",
+   "lines": [
+    [
+     "CH-GLD",
+     68
+    ],
+    [
+     "TB-RND",
+     7
+    ],
+    [
+     "LN-WHT",
+     7
+    ],
+    [
+     "CT-VAS",
+     10
+    ],
+    [
+     "CP-GLD",
+     73
+    ]
+   ],
+   "by": "jon",
+   "delivery": 250
+  },
+  {
+   "ref": "b41",
+   "customer": "C014",
+   "created": "2027-02-27",
+   "event": "2027-03-15",
+   "out": "2027-03-14",
+   "due": "2027-03-16",
+   "lines": [
+    [
+     "CH-CLR",
+     33
+    ],
+    [
+     "LT-UPL",
+     9
+    ],
+    [
+     "BD-SEQ",
+     2
+    ],
+    [
+     "SG-EAS",
+     2
+    ]
+   ],
+   "by": "jon",
+   "delivery": 120
+  },
+  {
+   "ref": "b42",
+   "customer": "C007",
+   "created": "2027-02-27",
+   "event": "2027-03-18",
+   "out": "2027-03-17",
+   "due": "2027-03-19",
+   "lines": [
+    [
+     "TB-FRM",
+     5
+    ],
+    [
+     "LN-SGE",
+     6
+    ],
+    [
+     "LT-FRY",
+     4
+    ],
+    [
+     "AR-WOD",
+     1
+    ],
+    [
+     "CP-GLS",
+     102
+    ]
+   ],
+   "by": "maya",
+   "delivery": 0
+  },
+  {
+   "ref": "b43",
+   "customer": "C005",
+   "created": "2027-02-28",
+   "event": "2027-03-18",
+   "out": "2027-03-17",
+   "due": "2027-03-19",
+   "lines": [
+    [
+     "LT-UPL",
+     20
+    ],
+    [
+     "TB-CKT",
+     10
+    ],
+    [
+     "SG-EAS",
+     1
+    ]
+   ],
+   "by": "maya",
+   "delivery": 0
+  },
+  {
+   "ref": "b44",
+   "customer": "C014",
+   "created": "2027-03-05",
+   "event": "2027-03-19",
+   "out": "2027-03-18",
+   "due": "2027-03-20",
+   "lines": [
+    [
+     "CH-GLD",
+     98
+    ],
+    [
+     "TB-RND",
+     11
+    ],
+    [
+     "LN-WHT",
+     8
+    ],
+    [
+     "CT-VAS",
+     12
+    ]
+   ],
+   "by": "jon",
+   "delivery": 0
+  },
+  {
+   "ref": "b45",
+   "customer": "C007",
+   "created": "2027-03-06",
+   "event": "2027-03-21",
+   "out": "2027-03-20",
+   "due": "2027-03-23",
+   "lines": [
+    [
+     "LT-UPL",
+     12
+    ],
+    [
+     "TB-CKT",
+     11
+    ],
+    [
+     "SG-EAS",
+     1
+    ]
+   ],
+   "by": "rita",
+   "delivery": 180
+  },
+  {
+   "ref": "b46",
+   "customer": "C010",
+   "created": "2027-03-04",
+   "event": "2027-03-23",
+   "out": "2027-03-22",
+   "due": "2027-03-24",
+   "lines": [
+    [
+     "TB-FRM",
+     5
+    ],
+    [
+     "LN-SGE",
+     13
+    ],
+    [
+     "LT-FRY",
+     6
+    ],
+    [
+     "AR-WOD",
+     1
+    ],
+    [
+     "CP-GLS",
+     49
+    ]
+   ],
+   "by": "rita",
+   "delivery": 250
+  },
+  {
+   "ref": "b47",
+   "customer": "C002",
+   "created": "2027-03-12",
+   "event": "2027-03-23",
+   "out": "2027-03-22",
+   "due": "2027-03-25",
+   "lines": [
+    [
+     "CH-GLD",
+     107
+    ],
+    [
+     "TB-RND",
+     11
+    ],
+    [
+     "CT-VAS",
+     8
+    ],
+    [
+     "CP-GLD",
+     55
+    ]
+   ],
+   "by": "jon",
+   "delivery": 180
+  },
+  {
+   "ref": "b48",
+   "customer": "C007",
+   "created": "2027-03-06",
+   "event": "2027-03-22",
+   "out": "2027-03-21",
+   "due": "2027-03-24",
+   "lines": [
+    [
+     "TB-FRM",
+     4
+    ],
+    [
+     "LN-SGE",
+     16
+    ],
+    [
+     "LT-FRY",
+     6
+    ],
+    [
+     "CP-GLS",
+     42
+    ]
+   ],
+   "by": "maya",
+   "delivery": 120
+  },
+  {
+   "ref": "b49",
+   "customer": "C011",
+   "created": "2027-03-15",
+   "event": "2027-03-24",
+   "out": "2027-03-23",
+   "due": "2027-03-25",
+   "lines": [
+    [
+     "LT-UPL",
+     12
+    ],
+    [
+     "SG-EAS",
+     1
+    ]
+   ],
+   "by": "rita",
+   "delivery": 0
+  },
+  {
+   "ref": "b50",
+   "customer": "C014",
+   "created": "2027-03-12",
+   "event": "2027-03-27",
+   "out": "2027-03-26",
+   "due": "2027-03-29",
+   "lines": [
+    [
+     "LN-SGE",
+     12
+    ],
+    [
+     "LT-FRY",
+     5
+    ],
+    [
+     "AR-WOD",
+     1
+    ],
+    [
+     "CP-GLS",
+     85
+    ]
+   ],
+   "by": "jon",
+   "delivery": 0
+  },
+  {
+   "ref": "b51",
+   "customer": "C009",
+   "created": "2027-03-16",
+   "event": "2027-03-27",
+   "out": "2027-03-26",
+   "due": "2027-03-29",
+   "lines": [
+    [
+     "DF-PNL",
+     22
+    ],
+    [
+     "LT-UPL",
+     8
+    ],
+    [
+     "TB-CKT",
+     9
+    ]
+   ],
+   "by": "rita",
+   "delivery": 0
+  },
+  {
+   "ref": "b52",
+   "customer": "C010",
+   "created": "2027-03-10",
+   "event": "2027-03-28",
+   "out": "2027-03-27",
+   "due": "2027-03-30",
+   "lines": [
+    [
+     "AR-FLR",
+     1
+    ],
+    [
+     "BD-GRN",
+     1
+    ],
+    [
+     "SF-VLV",
+     1
+    ],
+    [
+     "LT-CND",
+     10
+    ],
+    [
+     "CH-GLD",
+     56
+    ]
+   ],
+   "by": "jon",
+   "delivery": 180
+  },
+  {
+   "ref": "b53",
+   "customer": "C002",
+   "created": "2027-03-11",
+   "event": "2027-03-30",
+   "out": "2027-03-29",
+   "due": "2027-03-31",
+   "lines": [
+    [
+     "TB-FRM",
+     8
+    ],
+    [
+     "LN-SGE",
+     9
+    ],
+    [
+     "LT-FRY",
+     5
+    ],
+    [
+     "AR-WOD",
+     1
+    ]
+   ],
+   "by": "maya",
+   "delivery": 180
+  },
+  {
+   "ref": "b54",
+   "customer": "C003",
+   "created": "2027-03-19",
+   "event": "2027-04-02",
+   "out": "2027-04-01",
+   "due": "2027-04-03",
+   "lines": [
+    [
+     "CH-CLR",
+     56
+    ],
+    [
+     "TB-CKT",
+     8
+    ],
+    [
+     "LT-UPL",
+     16
+    ],
+    [
+     "BD-SEQ",
+     1
+    ],
+    [
+     "SG-EAS",
+     1
+    ]
+   ],
+   "by": "maya",
+   "delivery": 0
+  },
+  {
+   "ref": "b55",
+   "customer": "C014",
+   "created": "2027-03-23",
+   "event": "2027-04-04",
+   "out": "2027-04-03",
+   "due": "2027-04-05",
+   "lines": [
+    [
+     "AR-FLR",
+     1
+    ],
+    [
+     "BD-GRN",
+     1
+    ],
+    [
+     "SF-VLV",
+     2
+    ],
+    [
+     "CH-GLD",
+     32
+    ]
+   ],
+   "by": "rita",
+   "delivery": 120
+  },
+  {
+   "ref": "b56",
+   "customer": "C011",
+   "created": "2027-03-22",
+   "event": "2027-04-05",
+   "out": "2027-04-04",
+   "due": "2027-04-07",
+   "lines": [
+    [
+     "TB-FRM",
+     6
+    ],
+    [
+     "LN-SGE",
+     15
+    ],
+    [
+     "LT-FRY",
+     4
+    ],
+    [
+     "AR-WOD",
+     1
+    ],
+    [
+     "CP-GLS",
+     90
+    ]
+   ],
+   "by": "jon",
+   "delivery": 250
+  },
+  {
+   "ref": "b57",
+   "customer": "C001",
+   "created": "2027-03-28",
+   "event": "2027-04-06",
+   "out": "2027-04-05",
+   "due": "2027-04-07",
+   "lines": [
+    [
+     "TB-FRM",
+     3
+    ],
+    [
+     "LT-FRY",
+     6
+    ],
+    [
+     "AR-WOD",
+     1
+    ],
+    [
+     "CP-GLS",
+     65
+    ]
+   ],
+   "by": "maya",
+   "delivery": 250
+  },
+  {
+   "ref": "b58",
+   "customer": "C004",
+   "created": "2027-03-15",
+   "event": "2027-04-08",
+   "out": "2027-04-07",
+   "due": "2027-04-09",
+   "lines": [
+    [
+     "DF-PNL",
+     30
+    ],
+    [
+     "LT-UPL",
+     16
+    ],
+    [
+     "TB-CKT",
+     7
+    ],
+    [
+     "SG-EAS",
+     1
+    ]
+   ],
+   "by": "maya",
+   "delivery": 0
+  },
+  {
+   "ref": "b59",
+   "customer": "C005",
+   "created": "2027-03-18",
+   "event": "2027-04-10",
+   "out": "2027-04-09",
+   "due": "2027-04-11",
+   "lines": [
+    [
+     "TB-FRM",
+     8
+    ],
+    [
+     "LN-SGE",
+     15
+    ],
+    [
+     "LT-FRY",
+     5
+    ],
+    [
+     "AR-WOD",
+     1
+    ],
+    [
+     "CP-GLS",
+     52
+    ]
+   ],
+   "by": "rita",
+   "delivery": 75
+  },
+  {
+   "ref": "b60",
+   "customer": "C014",
+   "created": "2027-03-29",
+   "event": "2027-04-12",
+   "out": "2027-04-11",
+   "due": "2027-04-13",
+   "lines": [
+    [
+     "CH-CLR",
+     22
+    ],
+    [
+     "LT-UPL",
+     10
+    ],
+    [
+     "BD-SEQ",
+     1
+    ]
+   ],
+   "by": "jon",
+   "delivery": 180
+  },
+  {
+   "ref": "b61",
+   "customer": "C013",
+   "created": "2027-03-19",
+   "event": "2027-04-13",
+   "out": "2027-04-12",
+   "due": "2027-04-15",
+   "lines": [
+    [
+     "TB-FRM",
+     4
+    ],
+    [
+     "LN-SGE",
+     14
+    ],
+    [
+     "LT-FRY",
+     5
+    ],
+    [
+     "CP-GLS",
+     60
+    ]
+   ],
+   "by": "maya",
+   "delivery": 120
+  },
+  {
+   "ref": "b62",
+   "customer": "C006",
+   "created": "2027-03-20",
+   "event": "2027-04-15",
+   "out": "2027-04-14",
+   "due": "2027-04-17",
+   "lines": [
+    [
+     "CH-CLR",
+     21
+    ],
+    [
+     "TB-CKT",
+     10
+    ],
+    [
+     "BD-SEQ",
+     2
+    ]
+   ],
+   "by": "jon",
+   "delivery": 120
+  },
+  {
+   "ref": "b63",
+   "customer": "C011",
+   "created": "2027-03-01",
+   "event": "2027-03-14",
+   "out": "2027-03-13",
+   "due": "2027-03-15",
+   "lines": [
+    [
+     "LT-CND",
+     6
+    ],
+    [
+     "SG-EAS",
+     1
+    ]
+   ],
+   "by": "maya",
+   "delivery": 0
+  }
+ ],
+ "events": [
+  {
+   "date": "2027-01-02",
+   "user": "maya",
+   "action": "create",
+   "ref": "b1",
+   "confirm": true
+  },
+  {
+   "date": "2027-01-03",
+   "user": "rita",
+   "action": "create",
+   "ref": "b2",
+   "confirm": true
+  },
+  {
+   "date": "2027-01-03",
+   "user": "jon",
+   "action": "deposit",
+   "ref": "b1"
+  },
+  {
+   "date": "2027-01-04",
+   "user": "rita",
+   "action": "create",
+   "ref": "b3",
+   "confirm": true
+  },
+  {
+   "date": "2027-01-04",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b2"
+  },
+  {
+   "date": "2027-01-06",
+   "user": "jon",
+   "action": "create",
+   "ref": "b4",
+   "confirm": true
+  },
+  {
+   "date": "2027-01-06",
+   "user": "jon",
+   "action": "create",
+   "ref": "b13",
+   "confirm": true
+  },
+  {
+   "date": "2027-01-06",
+   "user": "jon",
+   "action": "deposit",
+   "ref": "b3"
+  },
+  {
+   "date": "2027-01-06",
+   "user": "maya",
+   "action": "checkout",
+   "ref": "b2"
+  },
+  {
+   "date": "2027-01-07",
+   "user": "jon",
+   "action": "checkout",
+   "ref": "b1"
+  },
+  {
+   "date": "2027-01-08",
+   "user": "jon",
+   "action": "create",
+   "ref": "b5",
+   "confirm": true
+  },
+  {
+   "date": "2027-01-08",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b4"
+  },
+  {
+   "date": "2027-01-08",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b5"
+  },
+  {
+   "date": "2027-01-08",
+   "user": "jon",
+   "action": "deposit",
+   "ref": "b13"
+  },
+  {
+   "date": "2027-01-08",
+   "user": "maya",
+   "action": "checkin",
+   "ref": "b2",
+   "damaged": [
+    [
+     "CP-GLS",
+     2
+    ]
+   ]
+  },
+  {
+   "date": "2027-01-08",
+   "user": "jon",
+   "action": "invoice",
+   "ref": "b2"
+  },
+  {
+   "date": "2027-01-10",
+   "user": "jon",
+   "action": "create",
+   "ref": "b6",
+   "confirm": false
+  },
+  {
+   "date": "2027-01-10",
+   "user": "jon",
+   "action": "create",
+   "ref": "b15",
+   "confirm": true
+  },
+  {
+   "date": "2027-01-10",
+   "user": "jon",
+   "action": "checkout",
+   "ref": "b3"
+  },
+  {
+   "date": "2027-01-10",
+   "user": "maya",
+   "action": "checkin",
+   "ref": "b1",
+   "damaged": []
+  },
+  {
+   "date": "2027-01-10",
+   "user": "jon",
+   "action": "invoice",
+   "ref": "b1"
+  },
+  {
+   "date": "2027-01-11",
+   "user": "maya",
+   "action": "create",
+   "ref": "b16",
+   "confirm": true
+  },
+  {
+   "date": "2027-01-11",
+   "user": "jon",
+   "action": "deposit",
+   "ref": "b15"
+  },
+  {
+   "date": "2027-01-11",
+   "user": "jon",
+   "action": "checkout",
+   "ref": "b4"
+  },
+  {
+   "date": "2027-01-12",
+   "user": "jon",
+   "action": "create",
+   "ref": "b7",
+   "confirm": true
+  },
+  {
+   "date": "2027-01-12",
+   "user": "jon",
+   "action": "create",
+   "ref": "b12",
+   "confirm": false
+  },
+  {
+   "date": "2027-01-12",
+   "user": "jon",
+   "action": "deposit",
+   "ref": "b7"
+  },
+  {
+   "date": "2027-01-12",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b16"
+  },
+  {
+   "date": "2027-01-12",
+   "user": "maya",
+   "action": "checkout",
+   "ref": "b5"
+  },
+  {
+   "date": "2027-01-12",
+   "user": "jon",
+   "action": "pay",
+   "ref": "b1"
+  },
+  {
+   "date": "2027-01-13",
+   "user": "jon",
+   "action": "create",
+   "ref": "b17",
+   "confirm": true
+  },
+  {
+   "date": "2027-01-13",
+   "user": "jon",
+   "action": "confirm",
+   "ref": "b6"
+  },
+  {
+   "date": "2027-01-13",
+   "user": "jon",
+   "action": "pay",
+   "ref": "b2"
+  },
+  {
+   "date": "2027-01-14",
+   "user": "maya",
+   "action": "create",
+   "ref": "b8",
+   "confirm": true
+  },
+  {
+   "date": "2027-01-14",
+   "user": "jon",
+   "action": "checkout",
+   "ref": "b6"
+  },
+  {
+   "date": "2027-01-14",
+   "user": "jon",
+   "action": "checkin",
+   "ref": "b3",
+   "damaged": []
+  },
+  {
+   "date": "2027-01-14",
+   "user": "jon",
+   "action": "invoice",
+   "ref": "b3"
+  },
+  {
+   "date": "2027-01-15",
+   "user": "maya",
+   "action": "create",
+   "ref": "b9",
+   "confirm": true
+  },
+  {
+   "date": "2027-01-15",
+   "user": "rita",
+   "action": "create",
+   "ref": "b14",
+   "confirm": true
+  },
+  {
+   "date": "2027-01-15",
+   "user": "maya",
+   "action": "confirm",
+   "ref": "b12"
+  },
+  {
+   "date": "2027-01-15",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b8"
+  },
+  {
+   "date": "2027-01-15",
+   "user": "jon",
+   "action": "deposit",
+   "ref": "b14"
+  },
+  {
+   "date": "2027-01-15",
+   "user": "rita",
+   "action": "cancel",
+   "ref": "b17",
+   "reason": "Event postponed by the customer"
+  },
+  {
+   "date": "2027-01-15",
+   "user": "maya",
+   "action": "checkin",
+   "ref": "b4",
+   "damaged": []
+  },
+  {
+   "date": "2027-01-15",
+   "user": "jon",
+   "action": "invoice",
+   "ref": "b4"
+  },
+  {
+   "date": "2027-01-16",
+   "user": "jon",
+   "action": "deposit",
+   "ref": "b9"
+  },
+  {
+   "date": "2027-01-17",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b12"
+  },
+  {
+   "date": "2027-01-17",
+   "user": "jon",
+   "action": "checkin",
+   "ref": "b5",
+   "damaged": []
+  },
+  {
+   "date": "2027-01-17",
+   "user": "jon",
+   "action": "checkin",
+   "ref": "b6",
+   "damaged": [
+    [
+     "CP-GLS",
+     2
+    ]
+   ]
+  },
+  {
+   "date": "2027-01-17",
+   "user": "jon",
+   "action": "invoice",
+   "ref": "b5"
+  },
+  {
+   "date": "2027-01-17",
+   "user": "rita",
+   "action": "invoice",
+   "ref": "b6"
+  },
+  {
+   "date": "2027-01-17",
+   "user": "jon",
+   "action": "pay",
+   "ref": "b5"
+  },
+  {
+   "date": "2027-01-18",
+   "user": "maya",
+   "action": "create",
+   "ref": "b19",
+   "confirm": false
+  },
+  {
+   "date": "2027-01-18",
+   "user": "jon",
+   "action": "checkout",
+   "ref": "b7"
+  },
+  {
+   "date": "2027-01-19",
+   "user": "maya",
+   "action": "checkout",
+   "ref": "b8"
+  },
+  {
+   "date": "2027-01-21",
+   "user": "jon",
+   "action": "checkout",
+   "ref": "b9"
+  },
+  {
+   "date": "2027-01-22",
+   "user": "jon",
+   "action": "create",
+   "ref": "b10",
+   "confirm": true
+  },
+  {
+   "date": "2027-01-22",
+   "user": "jon",
+   "action": "confirm",
+   "ref": "b19"
+  },
+  {
+   "date": "2027-01-22",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b10"
+  },
+  {
+   "date": "2027-01-22",
+   "user": "maya",
+   "action": "checkin",
+   "ref": "b7",
+   "damaged": []
+  },
+  {
+   "date": "2027-01-22",
+   "user": "rita",
+   "action": "invoice",
+   "ref": "b7"
+  },
+  {
+   "date": "2027-01-22",
+   "user": "maya",
+   "action": "pay",
+   "ref": "b7"
+  },
+  {
+   "date": "2027-01-23",
+   "user": "rita",
+   "action": "create",
+   "ref": "b11",
+   "confirm": true
+  },
+  {
+   "date": "2027-01-23",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b11"
+  },
+  {
+   "date": "2027-01-23",
+   "user": "jon",
+   "action": "checkin",
+   "ref": "b8",
+   "damaged": [
+    [
+     "DF-PNL",
+     1
+    ]
+   ]
+  },
+  {
+   "date": "2027-01-23",
+   "user": "maya",
+   "action": "checkin",
+   "ref": "b9",
+   "damaged": []
+  },
+  {
+   "date": "2027-01-23",
+   "user": "jon",
+   "action": "invoice",
+   "ref": "b8"
+  },
+  {
+   "date": "2027-01-23",
+   "user": "rita",
+   "action": "invoice",
+   "ref": "b9"
+  },
+  {
+   "date": "2027-01-24",
+   "user": "jon",
+   "action": "deposit",
+   "ref": "b19"
+  },
+  {
+   "date": "2027-01-26",
+   "user": "maya",
+   "action": "create",
+   "ref": "b18",
+   "confirm": true
+  },
+  {
+   "date": "2027-01-27",
+   "user": "jon",
+   "action": "checkout",
+   "ref": "b10"
+  },
+  {
+   "date": "2027-01-27",
+   "user": "maya",
+   "action": "checkout",
+   "ref": "b12"
+  },
+  {
+   "date": "2027-01-28",
+   "user": "jon",
+   "action": "deposit",
+   "ref": "b18"
+  },
+  {
+   "date": "2027-01-29",
+   "user": "jon",
+   "action": "checkout",
+   "ref": "b11"
+  },
+  {
+   "date": "2027-01-29",
+   "user": "jon",
+   "action": "checkin",
+   "ref": "b12",
+   "damaged": [
+    [
+     "LN-WHT",
+     1
+    ]
+   ]
+  },
+  {
+   "date": "2027-01-29",
+   "user": "rita",
+   "action": "invoice",
+   "ref": "b12"
+  },
+  {
+   "date": "2027-01-29",
+   "user": "jon",
+   "action": "pay",
+   "ref": "b4"
+  },
+  {
+   "date": "2027-01-30",
+   "user": "maya",
+   "action": "create",
+   "ref": "b28",
+   "confirm": true
+  },
+  {
+   "date": "2027-01-31",
+   "user": "rita",
+   "action": "create",
+   "ref": "b21",
+   "confirm": true
+  },
+  {
+   "date": "2027-01-31",
+   "user": "maya",
+   "action": "checkout",
+   "ref": "b13"
+  },
+  {
+   "date": "2027-01-31",
+   "user": "jon",
+   "action": "checkin",
+   "ref": "b10",
+   "damaged": []
+  },
+  {
+   "date": "2027-01-31",
+   "user": "jon",
+   "action": "checkin",
+   "ref": "b11",
+   "damaged": [
+    [
+     "CH-GLD",
+     1
+    ]
+   ]
+  },
+  {
+   "date": "2027-01-31",
+   "user": "maya",
+   "action": "invoice",
+   "ref": "b10"
+  },
+  {
+   "date": "2027-01-31",
+   "user": "jon",
+   "action": "invoice",
+   "ref": "b11"
+  },
+  {
+   "date": "2027-01-31",
+   "user": "jon",
+   "action": "pay",
+   "ref": "b6"
+  },
+  {
+   "date": "2027-01-31",
+   "user": "jon",
+   "action": "pay",
+   "ref": "b12"
+  },
+  {
+   "date": "2027-02-01",
+   "user": "rita",
+   "action": "create",
+   "ref": "b22",
+   "confirm": true
+  },
+  {
+   "date": "2027-02-01",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b22"
+  },
+  {
+   "date": "2027-02-01",
+   "user": "jon",
+   "action": "deposit",
+   "ref": "b28"
+  },
+  {
+   "date": "2027-02-01",
+   "user": "jon",
+   "action": "pay",
+   "ref": "b8"
+  },
+  {
+   "date": "2027-02-01",
+   "user": "jon",
+   "action": "pay",
+   "ref": "b9"
+  },
+  {
+   "date": "2027-02-02",
+   "user": "jon",
+   "action": "create",
+   "ref": "b20",
+   "confirm": true
+  },
+  {
+   "date": "2027-02-02",
+   "user": "rita",
+   "action": "cancel",
+   "ref": "b21",
+   "reason": "Event postponed by the customer"
+  },
+  {
+   "date": "2027-02-02",
+   "user": "maya",
+   "action": "checkout",
+   "ref": "b14"
+  },
+  {
+   "date": "2027-02-02",
+   "user": "maya",
+   "action": "checkout",
+   "ref": "b15"
+  },
+  {
+   "date": "2027-02-03",
+   "user": "rita",
+   "action": "create",
+   "ref": "b24",
+   "confirm": true
+  },
+  {
+   "date": "2027-02-03",
+   "user": "maya",
+   "action": "create",
+   "ref": "b30",
+   "confirm": true
+  },
+  {
+   "date": "2027-02-03",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b20"
+  },
+  {
+   "date": "2027-02-03",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b24"
+  },
+  {
+   "date": "2027-02-03",
+   "user": "maya",
+   "action": "checkout",
+   "ref": "b16"
+  },
+  {
+   "date": "2027-02-03",
+   "user": "maya",
+   "action": "checkin",
+   "ref": "b13",
+   "damaged": []
+  },
+  {
+   "date": "2027-02-03",
+   "user": "jon",
+   "action": "invoice",
+   "ref": "b13"
+  },
+  {
+   "date": "2027-02-04",
+   "user": "jon",
+   "action": "checkin",
+   "ref": "b15",
+   "damaged": []
+  },
+  {
+   "date": "2027-02-04",
+   "user": "jon",
+   "action": "invoice",
+   "ref": "b15"
+  },
+  {
+   "date": "2027-02-05",
+   "user": "jon",
+   "action": "deposit",
+   "ref": "b30"
+  },
+  {
+   "date": "2027-02-06",
+   "user": "maya",
+   "action": "create",
+   "ref": "b23",
+   "confirm": true
+  },
+  {
+   "date": "2027-02-06",
+   "user": "maya",
+   "action": "create",
+   "ref": "b26",
+   "confirm": true
+  },
+  {
+   "date": "2027-02-06",
+   "user": "maya",
+   "action": "checkout",
+   "ref": "b18"
+  },
+  {
+   "date": "2027-02-06",
+   "user": "jon",
+   "action": "checkin",
+   "ref": "b14",
+   "damaged": []
+  },
+  {
+   "date": "2027-02-06",
+   "user": "jon",
+   "action": "checkin",
+   "ref": "b16",
+   "damaged": [
+    [
+     "LT-CND",
+     3
+    ]
+   ]
+  },
+  {
+   "date": "2027-02-06",
+   "user": "rita",
+   "action": "invoice",
+   "ref": "b14"
+  },
+  {
+   "date": "2027-02-06",
+   "user": "maya",
+   "action": "invoice",
+   "ref": "b16"
+  },
+  {
+   "date": "2027-02-06",
+   "user": "jon",
+   "action": "pay",
+   "ref": "b15"
+  },
+  {
+   "date": "2027-02-07",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b23"
+  },
+  {
+   "date": "2027-02-08",
+   "user": "maya",
+   "action": "create",
+   "ref": "b25",
+   "confirm": true
+  },
+  {
+   "date": "2027-02-08",
+   "user": "jon",
+   "action": "deposit",
+   "ref": "b25"
+  },
+  {
+   "date": "2027-02-08",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b26"
+  },
+  {
+   "date": "2027-02-09",
+   "user": "jon",
+   "action": "create",
+   "ref": "b27",
+   "confirm": true
+  },
+  {
+   "date": "2027-02-09",
+   "user": "jon",
+   "action": "checkin",
+   "ref": "b18",
+   "damaged": []
+  },
+  {
+   "date": "2027-02-09",
+   "user": "rita",
+   "action": "invoice",
+   "ref": "b18"
+  },
+  {
+   "date": "2027-02-09",
+   "user": "jon",
+   "action": "pay",
+   "ref": "b10"
+  },
+  {
+   "date": "2027-02-10",
+   "user": "maya",
+   "action": "create",
+   "ref": "b36",
+   "confirm": true
+  },
+  {
+   "date": "2027-02-10",
+   "user": "jon",
+   "action": "deposit",
+   "ref": "b27"
+  },
+  {
+   "date": "2027-02-10",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b36"
+  },
+  {
+   "date": "2027-02-10",
+   "user": "jon",
+   "action": "checkout",
+   "ref": "b20"
+  },
+  {
+   "date": "2027-02-12",
+   "user": "maya",
+   "action": "checkout",
+   "ref": "b19"
+  },
+  {
+   "date": "2027-02-12",
+   "user": "maya",
+   "action": "checkin",
+   "ref": "b20",
+   "damaged": []
+  },
+  {
+   "date": "2027-02-12",
+   "user": "jon",
+   "action": "invoice",
+   "ref": "b20"
+  },
+  {
+   "date": "2027-02-13",
+   "user": "maya",
+   "action": "checkout",
+   "ref": "b22"
+  },
+  {
+   "date": "2027-02-13",
+   "user": "jon",
+   "action": "pay",
+   "ref": "b3"
+  },
+  {
+   "date": "2027-02-14",
+   "user": "jon",
+   "action": "create",
+   "ref": "b33",
+   "confirm": true
+  },
+  {
+   "date": "2027-02-14",
+   "user": "maya",
+   "action": "checkin",
+   "ref": "b19",
+   "damaged": []
+  },
+  {
+   "date": "2027-02-14",
+   "user": "rita",
+   "action": "invoice",
+   "ref": "b19"
+  },
+  {
+   "date": "2027-02-14",
+   "user": "jon",
+   "action": "pay",
+   "ref": "b18"
+  },
+  {
+   "date": "2027-02-14",
+   "user": "maya",
+   "action": "pay",
+   "ref": "b20"
+  },
+  {
+   "date": "2027-02-15",
+   "user": "jon",
+   "action": "checkout",
+   "ref": "b24"
+  },
+  {
+   "date": "2027-02-15",
+   "user": "jon",
+   "action": "pay",
+   "ref": "b14"
+  },
+  {
+   "date": "2027-02-16",
+   "user": "maya",
+   "action": "create",
+   "ref": "b29",
+   "confirm": true
+  },
+  {
+   "date": "2027-02-16",
+   "user": "rita",
+   "action": "create",
+   "ref": "b32",
+   "confirm": true
+  },
+  {
+   "date": "2027-02-16",
+   "user": "maya",
+   "action": "create",
+   "ref": "b35",
+   "confirm": true
+  },
+  {
+   "date": "2027-02-16",
+   "user": "maya",
+   "action": "create",
+   "ref": "b39",
+   "confirm": true
+  },
+  {
+   "date": "2027-02-16",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b29"
+  },
+  {
+   "date": "2027-02-16",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b33"
+  },
+  {
+   "date": "2027-02-16",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b35"
+  },
+  {
+   "date": "2027-02-16",
+   "user": "maya",
+   "action": "checkout",
+   "ref": "b23"
+  },
+  {
+   "date": "2027-02-16",
+   "user": "maya",
+   "action": "checkout",
+   "ref": "b25"
+  },
+  {
+   "date": "2027-02-18",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b32"
+  },
+  {
+   "date": "2027-02-18",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b39"
+  },
+  {
+   "date": "2027-02-18",
+   "user": "maya",
+   "action": "checkin",
+   "ref": "b22",
+   "damaged": []
+  },
+  {
+   "date": "2027-02-18",
+   "user": "maya",
+   "action": "checkin",
+   "ref": "b24",
+   "damaged": [
+    [
+     "CH-GLD",
+     3
+    ]
+   ]
+  },
+  {
+   "date": "2027-02-18",
+   "user": "maya",
+   "action": "checkin",
+   "ref": "b25",
+   "damaged": []
+  },
+  {
+   "date": "2027-02-18",
+   "user": "maya",
+   "action": "invoice",
+   "ref": "b22"
+  },
+  {
+   "date": "2027-02-18",
+   "user": "maya",
+   "action": "invoice",
+   "ref": "b24"
+  },
+  {
+   "date": "2027-02-18",
+   "user": "rita",
+   "action": "invoice",
+   "ref": "b25"
+  },
+  {
+   "date": "2027-02-18",
+   "user": "maya",
+   "action": "pay",
+   "ref": "b25"
+  },
+  {
+   "date": "2027-02-19",
+   "user": "rita",
+   "action": "create",
+   "ref": "b31",
+   "confirm": true
+  },
+  {
+   "date": "2027-02-19",
+   "user": "jon",
+   "action": "deposit",
+   "ref": "b31"
+  },
+  {
+   "date": "2027-02-19",
+   "user": "maya",
+   "action": "checkout",
+   "ref": "b26"
+  },
+  {
+   "date": "2027-02-19",
+   "user": "jon",
+   "action": "checkin",
+   "ref": "b23",
+   "damaged": []
+  },
+  {
+   "date": "2027-02-19",
+   "user": "jon",
+   "action": "invoice",
+   "ref": "b23"
+  },
+  {
+   "date": "2027-02-20",
+   "user": "jon",
+   "action": "pay",
+   "ref": "b22"
+  },
+  {
+   "date": "2027-02-21",
+   "user": "rita",
+   "action": "create",
+   "ref": "b34",
+   "confirm": true
+  },
+  {
+   "date": "2027-02-21",
+   "user": "jon",
+   "action": "deposit",
+   "ref": "b34"
+  },
+  {
+   "date": "2027-02-21",
+   "user": "jon",
+   "action": "checkout",
+   "ref": "b27"
+  },
+  {
+   "date": "2027-02-21",
+   "user": "maya",
+   "action": "checkout",
+   "ref": "b28"
+  },
+  {
+   "date": "2027-02-23",
+   "user": "maya",
+   "action": "create",
+   "ref": "b37",
+   "confirm": true
+  },
+  {
+   "date": "2027-02-23",
+   "user": "maya",
+   "action": "checkin",
+   "ref": "b26",
+   "damaged": []
+  },
+  {
+   "date": "2027-02-23",
+   "user": "jon",
+   "action": "checkin",
+   "ref": "b28",
+   "damaged": [
+    [
+     "CH-GLD",
+     3
+    ]
+   ]
+  },
+  {
+   "date": "2027-02-23",
+   "user": "maya",
+   "action": "invoice",
+   "ref": "b26"
+  },
+  {
+   "date": "2027-02-23",
+   "user": "rita",
+   "action": "invoice",
+   "ref": "b28"
+  },
+  {
+   "date": "2027-02-23",
+   "user": "maya",
+   "action": "pay",
+   "ref": "b28"
+  },
+  {
+   "date": "2027-02-24",
+   "user": "maya",
+   "action": "checkin",
+   "ref": "b27",
+   "damaged": [
+    [
+     "DF-PNL",
+     3
+    ]
+   ]
+  },
+  {
+   "date": "2027-02-24",
+   "user": "rita",
+   "action": "invoice",
+   "ref": "b27"
+  },
+  {
+   "date": "2027-02-24",
+   "user": "jon",
+   "action": "pay",
+   "ref": "b23"
+  },
+  {
+   "date": "2027-02-25",
+   "user": "jon",
+   "action": "deposit",
+   "ref": "b37"
+  },
+  {
+   "date": "2027-02-25",
+   "user": "maya",
+   "action": "checkout",
+   "ref": "b29"
+  },
+  {
+   "date": "2027-02-26",
+   "user": "maya",
+   "action": "create",
+   "ref": "b38",
+   "confirm": true
+  },
+  {
+   "date": "2027-02-26",
+   "user": "jon",
+   "action": "create",
+   "ref": "b40",
+   "confirm": true
+  },
+  {
+   "date": "2027-02-26",
+   "user": "jon",
+   "action": "checkout",
+   "ref": "b30"
+  },
+  {
+   "date": "2027-02-27",
+   "user": "jon",
+   "action": "create",
+   "ref": "b41",
+   "confirm": true
+  },
+  {
+   "date": "2027-02-27",
+   "user": "maya",
+   "action": "create",
+   "ref": "b42",
+   "confirm": true
+  },
+  {
+   "date": "2027-02-27",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b38"
+  },
+  {
+   "date": "2027-02-27",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b41"
+  },
+  {
+   "date": "2027-02-27",
+   "user": "jon",
+   "action": "checkin",
+   "ref": "b29",
+   "damaged": []
+  },
+  {
+   "date": "2027-02-27",
+   "user": "jon",
+   "action": "invoice",
+   "ref": "b29"
+  },
+  {
+   "date": "2027-02-28",
+   "user": "maya",
+   "action": "create",
+   "ref": "b43",
+   "confirm": false
+  },
+  {
+   "date": "2027-02-28",
+   "user": "jon",
+   "action": "deposit",
+   "ref": "b40"
+  },
+  {
+   "date": "2027-02-28",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b42"
+  },
+  {
+   "date": "2027-02-28",
+   "user": "maya",
+   "action": "pay",
+   "ref": "b19"
+  },
+  {
+   "date": "2027-03-01",
+   "user": "maya",
+   "action": "create",
+   "ref": "b63",
+   "confirm": true
+  },
+  {
+   "date": "2027-03-01",
+   "user": "jon",
+   "action": "deposit",
+   "ref": "b63"
+  },
+  {
+   "date": "2027-03-01",
+   "user": "maya",
+   "action": "checkout",
+   "ref": "b31"
+  },
+  {
+   "date": "2027-03-01",
+   "user": "maya",
+   "action": "checkout",
+   "ref": "b32"
+  },
+  {
+   "date": "2027-03-01",
+   "user": "maya",
+   "action": "checkin",
+   "ref": "b30",
+   "damaged": [
+    [
+     "DF-PNL",
+     1
+    ]
+   ]
+  },
+  {
+   "date": "2027-03-01",
+   "user": "jon",
+   "action": "invoice",
+   "ref": "b30"
+  },
+  {
+   "date": "2027-03-02",
+   "user": "maya",
+   "action": "pay",
+   "ref": "b11"
+  },
+  {
+   "date": "2027-03-03",
+   "user": "maya",
+   "action": "lock",
+   "through": "2027-02-28",
+   "expect": "BLOCKED"
+  },
+  {
+   "date": "2027-03-03",
+   "user": "rita",
+   "action": "lock",
+   "through": "2027-02-28"
+  },
+  {
+   "date": "2027-03-03",
+   "user": "maya",
+   "action": "checkin",
+   "ref": "b32",
+   "damaged": []
+  },
+  {
+   "date": "2027-03-03",
+   "user": "maya",
+   "action": "invoice",
+   "ref": "b32"
+  },
+  {
+   "date": "2027-03-04",
+   "user": "rita",
+   "action": "create",
+   "ref": "b46",
+   "confirm": true
+  },
+  {
+   "date": "2027-03-04",
+   "user": "jon",
+   "action": "confirm",
+   "ref": "b43"
+  },
+  {
+   "date": "2027-03-04",
+   "user": "jon",
+   "action": "deposit",
+   "ref": "b46"
+  },
+  {
+   "date": "2027-03-04",
+   "user": "jon",
+   "action": "cancel",
+   "ref": "b46",
+   "reason": "Customer asked",
+   "expect": "BLOCKED"
+  },
+  {
+   "date": "2027-03-04",
+   "user": "maya",
+   "action": "checkout",
+   "ref": "b33"
+  },
+  {
+   "date": "2027-03-04",
+   "user": "jon",
+   "action": "checkout",
+   "ref": "b34"
+  },
+  {
+   "date": "2027-03-04",
+   "user": "maya",
+   "action": "checkout",
+   "ref": "b35"
+  },
+  {
+   "date": "2027-03-04",
+   "user": "maya",
+   "action": "checkin",
+   "ref": "b31",
+   "damaged": []
+  },
+  {
+   "date": "2027-03-04",
+   "user": "maya",
+   "action": "invoice",
+   "ref": "b31"
+  },
+  {
+   "date": "2027-03-04",
+   "user": "jon",
+   "action": "pay",
+   "ref": "b24"
+  },
+  {
+   "date": "2027-03-04",
+   "user": "maya",
+   "action": "pay",
+   "ref": "b31"
+  },
+  {
+   "date": "2027-03-05",
+   "user": "jon",
+   "action": "create",
+   "ref": "b44",
+   "confirm": true
+  },
+  {
+   "date": "2027-03-05",
+   "user": "jon",
+   "action": "deposit",
+   "ref": "b43"
+  },
+  {
+   "date": "2027-03-05",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b44"
+  },
+  {
+   "date": "2027-03-05",
+   "user": "jon",
+   "action": "checkout",
+   "ref": "b36"
+  },
+  {
+   "date": "2027-03-05",
+   "user": "maya",
+   "action": "pay",
+   "ref": "b13"
+  },
+  {
+   "date": "2027-03-06",
+   "user": "rita",
+   "action": "create",
+   "ref": "b45",
+   "confirm": true
+  },
+  {
+   "date": "2027-03-06",
+   "user": "maya",
+   "action": "create",
+   "ref": "b48",
+   "confirm": true
+  },
+  {
+   "date": "2027-03-06",
+   "user": "maya",
+   "action": "checkin",
+   "ref": "b34",
+   "damaged": []
+  },
+  {
+   "date": "2027-03-06",
+   "user": "rita",
+   "action": "invoice",
+   "ref": "b34"
+  },
+  {
+   "date": "2027-03-06",
+   "user": "jon",
+   "action": "pay",
+   "ref": "b30"
+  },
+  {
+   "date": "2027-03-07",
+   "user": "maya",
+   "action": "checkout",
+   "ref": "b37"
+  },
+  {
+   "date": "2027-03-08",
+   "user": "jon",
+   "action": "deposit",
+   "ref": "b45"
+  },
+  {
+   "date": "2027-03-08",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b48"
+  },
+  {
+   "date": "2027-03-08",
+   "user": "jon",
+   "action": "pay_backdated",
+   "ref": "b19",
+   "on": "2027-02-20",
+   "amount": 100,
+   "expect": "BLOCKED"
+  },
+  {
+   "date": "2027-03-08",
+   "user": "jon",
+   "action": "checkin",
+   "ref": "b35",
+   "damaged": []
+  },
+  {
+   "date": "2027-03-08",
+   "user": "maya",
+   "action": "checkin",
+   "ref": "b36",
+   "damaged": []
+  },
+  {
+   "date": "2027-03-08",
+   "user": "jon",
+   "action": "invoice",
+   "ref": "b35"
+  },
+  {
+   "date": "2027-03-08",
+   "user": "jon",
+   "action": "invoice",
+   "ref": "b36"
+  },
+  {
+   "date": "2027-03-08",
+   "user": "maya",
+   "action": "pay",
+   "ref": "b16"
+  },
+  {
+   "date": "2027-03-08",
+   "user": "jon",
+   "action": "pay",
+   "ref": "b29"
+  },
+  {
+   "date": "2027-03-08",
+   "user": "jon",
+   "action": "pay",
+   "ref": "b35"
+  },
+  {
+   "date": "2027-03-09",
+   "user": "maya",
+   "action": "checkin",
+   "ref": "b37",
+   "damaged": []
+  },
+  {
+   "date": "2027-03-09",
+   "user": "jon",
+   "action": "invoice",
+   "ref": "b37"
+  },
+  {
+   "date": "2027-03-09",
+   "user": "jon",
+   "action": "pay",
+   "ref": "b26"
+  },
+  {
+   "date": "2027-03-09",
+   "user": "jon",
+   "action": "pay",
+   "ref": "b37"
+  },
+  {
+   "date": "2027-03-10",
+   "user": "jon",
+   "action": "create",
+   "ref": "b52",
+   "confirm": true
+  },
+  {
+   "date": "2027-03-10",
+   "user": "maya",
+   "action": "checkout",
+   "ref": "b38"
+  },
+  {
+   "date": "2027-03-10",
+   "user": "jon",
+   "action": "checkin",
+   "ref": "b33",
+   "damaged": []
+  },
+  {
+   "date": "2027-03-10",
+   "user": "jon",
+   "action": "invoice",
+   "ref": "b33"
+  },
+  {
+   "date": "2027-03-10",
+   "user": "jon",
+   "action": "pay",
+   "ref": "b27"
+  },
+  {
+   "date": "2027-03-11",
+   "user": "maya",
+   "action": "create",
+   "ref": "b53",
+   "confirm": true
+  },
+  {
+   "date": "2027-03-11",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b52"
+  },
+  {
+   "date": "2027-03-11",
+   "user": "jon",
+   "action": "deposit",
+   "ref": "b53"
+  },
+  {
+   "date": "2027-03-11",
+   "user": "maya",
+   "action": "checkout",
+   "ref": "b39"
+  },
+  {
+   "date": "2027-03-12",
+   "user": "jon",
+   "action": "create",
+   "ref": "b47",
+   "confirm": true
+  },
+  {
+   "date": "2027-03-12",
+   "user": "jon",
+   "action": "create",
+   "ref": "b50",
+   "confirm": true
+  },
+  {
+   "date": "2027-03-12",
+   "user": "jon",
+   "action": "deposit",
+   "ref": "b50"
+  },
+  {
+   "date": "2027-03-12",
+   "user": "maya",
+   "action": "checkin",
+   "ref": "b38",
+   "damaged": []
+  },
+  {
+   "date": "2027-03-12",
+   "user": "rita",
+   "action": "invoice",
+   "ref": "b38"
+  },
+  {
+   "date": "2027-03-13",
+   "user": "jon",
+   "action": "deposit",
+   "ref": "b47"
+  },
+  {
+   "date": "2027-03-13",
+   "user": "maya",
+   "action": "checkout",
+   "ref": "b63"
+  },
+  {
+   "date": "2027-03-13",
+   "user": "maya",
+   "action": "pay",
+   "ref": "b36"
+  },
+  {
+   "date": "2027-03-14",
+   "user": "jon",
+   "action": "checkout",
+   "ref": "b41"
+  },
+  {
+   "date": "2027-03-14",
+   "user": "jon",
+   "action": "pay",
+   "ref": "b38"
+  },
+  {
+   "date": "2027-03-15",
+   "user": "rita",
+   "action": "create",
+   "ref": "b49",
+   "confirm": true
+  },
+  {
+   "date": "2027-03-15",
+   "user": "maya",
+   "action": "create",
+   "ref": "b58",
+   "confirm": true
+  },
+  {
+   "date": "2027-03-15",
+   "user": "maya",
+   "action": "checkout",
+   "ref": "b40"
+  },
+  {
+   "date": "2027-03-16",
+   "user": "rita",
+   "action": "create",
+   "ref": "b51",
+   "confirm": true
+  },
+  {
+   "date": "2027-03-16",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b58"
+  },
+  {
+   "date": "2027-03-16",
+   "user": "jon",
+   "action": "checkin",
+   "ref": "b39",
+   "damaged": []
+  },
+  {
+   "date": "2027-03-16",
+   "user": "maya",
+   "action": "checkin",
+   "ref": "b41",
+   "damaged": []
+  },
+  {
+   "date": "2027-03-16",
+   "user": "maya",
+   "action": "invoice",
+   "ref": "b39"
+  },
+  {
+   "date": "2027-03-16",
+   "user": "maya",
+   "action": "invoice",
+   "ref": "b41"
+  },
+  {
+   "date": "2027-03-17",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b49"
+  },
+  {
+   "date": "2027-03-17",
+   "user": "jon",
+   "action": "checkout",
+   "ref": "b42"
+  },
+  {
+   "date": "2027-03-17",
+   "user": "jon",
+   "action": "checkout",
+   "ref": "b43"
+  },
+  {
+   "date": "2027-03-17",
+   "user": "maya",
+   "action": "pay",
+   "ref": "b32"
+  },
+  {
+   "date": "2027-03-18",
+   "user": "rita",
+   "action": "create",
+   "ref": "b59",
+   "confirm": false
+  },
+  {
+   "date": "2027-03-18",
+   "user": "maya",
+   "action": "deposit",
+   "ref": "b51"
+  },
+  {
+   "date": "2027-03-18",
+   "user": "maya",
+   "action": "checkout",
+   "ref": "b44"
+  },
+  {
+   "date": "2027-03-18",
+   "user": "jon",
+   "action": "checkin",
+   "ref": "b40",
+   "damaged": []
+  },
+  {
+   "date": "2027-03-18",
+   "user": "rita",
+   "action": "invoice",
+   "ref": "b40"
+  },
+  {
+   "date": "2027-03-19",
+   "user": "jon",
+   "action": "login_bad",
+   "expect": "BLOCKED"
+  },
+  {
+   "date": "2027-03-19",
+   "user": "maya",
+   "action": "create",
+   "ref": "b54",
+   "confirm": true
+  },
+  {
+   "date": "2027-03-19",
+   "user": "maya",
+   "action": "create",
+   "ref": "b61",
+   "confirm": false
+  },
+  {
+   "date": "2027-03-19",
+   "user": "maya",
+   "action": "create_over",
+   "customer": "C006",
+   "event": "2027-03-21",
+   "out": "2027-03-20",
+   "due": "2027-03-23",
+   "lines": [
+    [
+     "TB-CKT",
+     11
+    ]
+   ],
+   "expect": "BLOCKED"
+  },
+  {
+   "date": "2027-03-19",
+   "user": "maya",
+   "action": "checkin",
+   "ref": "b42",
+   "damaged": []
+  },
+  {
+   "date": "2027-03-19",
+   "user": "jon",
+   "action": "checkin",
+   "ref": "b43",
+   "damaged": []
+  },
+  {
+   "date": "2027-03-19",
+   "user": "jon",
+   "action": "invoice",
+   "ref": "b42"
+  },
+  {
+   "date": "2027-03-19",
+   "user": "jon",
+   "action": "invoice",
+   "ref": "b43"
+  },
+  {
+   "date": "2027-03-19",
+   "user": "jon",
+   "action": "pay",
+   "ref": "b43"
+  }
+ ]
+}

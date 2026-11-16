@@ -1,0 +1,21 @@
+Code,Category,Item,Owned,Day rate,Late fee / day,Replacement cost
+CH-GLD,Seating,"Chiavari chair, gold",120,4.5,2.0,65
+CH-CLR,Seating,"Ghost chair, clear",80,5.0,2.0,90
+SF-VLV,Seating,"Velvet sofa, emerald",3,85.0,40.0,1400
+TB-RND,Tables,Round table 60 in,20,12.0,6.0,180
+TB-FRM,Tables,Farm table 8 ft,10,28.0,12.0,420
+TB-CKT,Tables,Cocktail table,16,10.0,5.0,150
+LN-WHT,Linens,"Tablecloth 120 in, white",60,9.0,4.0,45
+LN-SGE,Linens,"Table runner, sage",60,3.5,1.5,18
+LT-FRY,Lighting,Fairy light curtain,12,22.0,10.0,140
+LT-UPL,Lighting,LED uplight,24,15.0,7.0,160
+LT-CND,Lighting,Candle lantern set (6),30,8.0,3.0,60
+AR-WOD,Arches,Wooden hexagon arch,2,95.0,45.0,900
+AR-FLR,Arches,"Floral arch, blush",3,120.0,55.0,1500
+BD-SEQ,Backdrops,"Sequin backdrop, champagne",4,65.0,30.0,520
+BD-GRN,Backdrops,Greenery wall 8 x 8 ft,3,110.0,50.0,1100
+CP-GLD,Tableware,"Charger plate, gold",200,1.2,0.5,9
+CP-GLS,Tableware,Wine glass,240,0.9,0.4,6
+CT-VAS,Centerpieces,Glass vase centerpiece,40,6.0,2.5,35
+SG-EAS,Signage,Easel with welcome sign,6,18.0,8.0,120
+DF-PNL,Dance floor,"Dance floor panel, white",36,14.0,6.0,260

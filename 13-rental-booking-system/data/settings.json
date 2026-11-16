@@ -1,0 +1,12 @@
+{
+ "company": "Lumen & Linen Event Rentals",
+ "address": "41 Mill Street, Harbor City",
+ "email": "hello@lumenlinen.example",
+ "currency": "$",
+ "tax_rate": 0.08,
+ "deposit_pct": 0.25,
+ "grace_days": 1,
+ "max_days": 14,
+ "pdf_folder": "Invoices",
+ "as_of": "2027-03-19"
+}

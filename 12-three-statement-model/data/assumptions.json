@@ -1,0 +1,560 @@
+{
+ "company": "Harbor & Pine Coffee Roasters",
+ "start": "2027-01",
+ "drivers": [
+  [
+   "Revenue",
+   null
+  ],
+  [
+   "WS_KG0",
+   "Wholesale coffee sold, January 2027",
+   "kg / month",
+   "#,##0",
+   [
+    900,
+    950,
+    850
+   ],
+   "Caf\u00c3\u00a9s and offices, before seasonality"
+  ],
+  [
+   "WS_GROWTH",
+   "Wholesale growth",
+   "per month",
+   "0.0%",
+   [
+    0.02,
+    0.027,
+    0.015
+   ],
+   "Compounded monthly"
+  ],
+  [
+   "WS_PRICE",
+   "Wholesale price",
+   "$ / kg",
+   "#,##0.00",
+   [
+    24,
+    24.5,
+    23
+   ],
+   "2027 price"
+  ],
+  [
+   "ON_ORD0",
+   "Online orders, January 2027",
+   "orders / month",
+   "#,##0",
+   [
+    600,
+    620,
+    560
+   ],
+   "Web shop and subscriptions"
+  ],
+  [
+   "ON_GROWTH",
+   "Online growth",
+   "per month",
+   "0.0%",
+   [
+    0.025,
+    0.032,
+    0.018
+   ],
+   "Compounded monthly"
+  ],
+  [
+   "ON_AOV",
+   "Online average order",
+   "$ / order",
+   "#,##0.00",
+   [
+    32,
+    33,
+    31
+   ],
+   "2027 price"
+  ],
+  [
+   "PRICE_RISE",
+   "Price increase each January",
+   "per year",
+   "0.0%",
+   [
+    0.03,
+    0.04,
+    0.02
+   ],
+   "From 2028"
+  ],
+  [
+   "Costs",
+   null
+  ],
+  [
+   "WS_COGS",
+   "Wholesale cost of goods",
+   "% of revenue",
+   "0.0%",
+   [
+    0.46,
+    0.45,
+    0.48
+   ],
+   "Green coffee, packaging, roasting energy"
+  ],
+  [
+   "ON_COGS",
+   "Online cost of goods",
+   "% of revenue",
+   "0.0%",
+   [
+    0.34,
+    0.33,
+    0.36
+   ],
+   ""
+  ],
+  [
+   "ON_FEES",
+   "Card fees and free shipping",
+   "% of online revenue",
+   "0.0%",
+   [
+    0.06,
+    0.06,
+    0.06
+   ],
+   ""
+  ],
+  [
+   "MKT",
+   "Marketing",
+   "% of online revenue",
+   "0.0%",
+   [
+    0.12,
+    0.12,
+    0.13
+   ],
+   ""
+  ],
+  [
+   "HEAD_Y1",
+   "Headcount 2027",
+   "people",
+   "0",
+   [
+    4,
+    4,
+    4
+   ],
+   ""
+  ],
+  [
+   "HEAD_Y2",
+   "Headcount 2028",
+   "people",
+   "0",
+   [
+    5,
+    6,
+    4
+   ],
+   ""
+  ],
+  [
+   "HEAD_Y3",
+   "Headcount 2029",
+   "people",
+   "0",
+   [
+    6,
+    7,
+    5
+   ],
+   ""
+  ],
+  [
+   "PAY_HEAD",
+   "Cost per person",
+   "$ / month",
+   "#,##0",
+   [
+    3600,
+    3600,
+    3600
+   ],
+   "Salary, taxes and benefits, 2027"
+  ],
+  [
+   "PAY_RISE",
+   "Pay rise each January",
+   "per year",
+   "0.0%",
+   [
+    0.04,
+    0.04,
+    0.04
+   ],
+   "From 2028"
+  ],
+  [
+   "RENT",
+   "Rent, roastery and shop",
+   "$ / month",
+   "#,##0",
+   [
+    4500,
+    4500,
+    4500
+   ],
+   ""
+  ],
+  [
+   "OTHER_OPEX",
+   "Other overheads",
+   "$ / month",
+   "#,##0",
+   [
+    2800,
+    2800,
+    2800
+   ],
+   "Utilities, insurance, software, accountant"
+  ],
+  [
+   "COST_INFL",
+   "Overhead inflation",
+   "per year",
+   "0.0%",
+   [
+    0.03,
+    0.03,
+    0.03
+   ],
+   "From 2028"
+  ],
+  [
+   "Working capital",
+   null
+  ],
+  [
+   "DSO",
+   "Wholesale customers pay after",
+   "days",
+   "0",
+   [
+    30,
+    30,
+    35
+   ],
+   "Online is paid by card at once"
+  ],
+  [
+   "DIO",
+   "Stock held",
+   "days of cost of goods",
+   "0",
+   [
+    45,
+    40,
+    50
+   ],
+   ""
+  ],
+  [
+   "DPO",
+   "Suppliers paid after",
+   "days",
+   "0",
+   [
+    30,
+    30,
+    28
+   ],
+   ""
+  ],
+  [
+   "Capital spending",
+   null
+  ],
+  [
+   "CAPEX1_M",
+   "15 kg roaster: month bought",
+   "month 1-36",
+   "0",
+   [
+    1,
+    1,
+    1
+   ],
+   ""
+  ],
+  [
+   "CAPEX1_AMT",
+   "15 kg roaster: cost",
+   "$",
+   "#,##0",
+   [
+    85000,
+    85000,
+    85000
+   ],
+   ""
+  ],
+  [
+   "CAPEX1_LIFE",
+   "15 kg roaster: useful life",
+   "years",
+   "0",
+   [
+    10,
+    10,
+    10
+   ],
+   "Straight line"
+  ],
+  [
+   "CAPEX2_M",
+   "Packaging line: month bought",
+   "month 1-36",
+   "0",
+   [
+    13,
+    10,
+    19
+   ],
+   ""
+  ],
+  [
+   "CAPEX2_AMT",
+   "Packaging line: cost",
+   "$",
+   "#,##0",
+   [
+    30000,
+    30000,
+    30000
+   ],
+   ""
+  ],
+  [
+   "CAPEX2_LIFE",
+   "Packaging line: useful life",
+   "years",
+   "0",
+   [
+    7,
+    7,
+    7
+   ],
+   ""
+  ],
+  [
+   "CAPEX3_M",
+   "Delivery van: month bought",
+   "month 1-36",
+   "0",
+   [
+    25,
+    19,
+    25
+   ],
+   ""
+  ],
+  [
+   "CAPEX3_AMT",
+   "Delivery van: cost",
+   "$",
+   "#,##0",
+   [
+    36000,
+    36000,
+    36000
+   ],
+   ""
+  ],
+  [
+   "CAPEX3_LIFE",
+   "Delivery van: useful life",
+   "years",
+   "0",
+   [
+    5,
+    5,
+    5
+   ],
+   ""
+  ],
+  [
+   "Financing and tax",
+   null
+  ],
+  [
+   "LOAN_AMT",
+   "Bank loan",
+   "$",
+   "#,##0",
+   [
+    90000,
+    90000,
+    90000
+   ],
+   "Annuity: equal monthly payments"
+  ],
+  [
+   "LOAN_RATE",
+   "Loan interest rate",
+   "per year",
+   "0.00%",
+   [
+    0.075,
+    0.075,
+    0.075
+   ],
+   ""
+  ],
+  [
+   "LOAN_TERM",
+   "Loan term",
+   "months",
+   "0",
+   [
+    48,
+    48,
+    48
+   ],
+   ""
+  ],
+  [
+   "LOAN_M",
+   "Loan drawn in month",
+   "month 1-36",
+   "0",
+   [
+    1,
+    1,
+    1
+   ],
+   "First payment at the end of the same month"
+  ],
+  [
+   "EQUITY_AMT",
+   "New equity from owners",
+   "$",
+   "#,##0",
+   [
+    0,
+    0,
+    0
+   ],
+   "Type an amount to test a raise"
+  ],
+  [
+   "EQUITY_M",
+   "New equity in month",
+   "month 1-36",
+   "0",
+   [
+    12,
+    12,
+    12
+   ],
+   ""
+  ],
+  [
+   "TAX_RATE",
+   "Income tax rate",
+   "of profit",
+   "0.0%",
+   [
+    0.21,
+    0.21,
+    0.21
+   ],
+   "Losses carried forward; paid after each quarter"
+  ],
+  [
+   "MIN_CASH",
+   "Minimum cash to keep",
+   "$",
+   "#,##0",
+   [
+    25000,
+    25000,
+    25000
+   ],
+   "The bank's covenant"
+  ]
+ ],
+ "season": [
+  0.95,
+  0.9,
+  0.95,
+  1.0,
+  1.0,
+  0.95,
+  0.9,
+  0.9,
+  1.05,
+  1.1,
+  1.15,
+  1.25
+ ],
+ "opening": [
+  [
+   "OPEN_CASH",
+   "Cash",
+   85000
+  ],
+  [
+   "OPEN_AR",
+   "Customers owe us",
+   18000
+  ],
+  [
+   "OPEN_INV",
+   "Stock",
+   22000
+  ],
+  [
+   "OPEN_FA_COST",
+   "Equipment at cost",
+   40000
+  ],
+  [
+   "OPEN_ACCDEP",
+   "Depreciation so far",
+   12000
+  ],
+  [
+   "OPEN_DEP",
+   "Depreciation of that equipment, per month",
+   500
+  ],
+  [
+   "OPEN_AP",
+   "We owe suppliers",
+   15000
+  ],
+  [
+   "OPEN_TAX",
+   "Tax payable",
+   0
+  ],
+  [
+   "OPEN_SHARE",
+   "Share capital",
+   115000
+  ],
+  [
+   "OPEN_RE",
+   "Retained earnings",
+   23000
+  ]
+ ]
+}

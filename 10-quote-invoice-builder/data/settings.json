@@ -1,0 +1,20 @@
+{
+ "company": "Harbourline Print & Signs",
+ "address": "14 Quay Street, Port Ellis",
+ "phone": "+00 555 0140",
+ "email": "sales@harbourline.example",
+ "tax_label": "Sales tax",
+ "tax_rate": 0.1,
+ "quote_valid_days": 30,
+ "max_doc_discount": 0.15,
+ "quote_prefix": "Q-",
+ "invoice_prefix": "INV-",
+ "pdf_folder": "PDF",
+ "email_mode": ".eml file",
+ "outbox_folder": "Outbox",
+ "user": "Sales desk",
+ "currency": "$",
+ "as_of": "2026-11-16",
+ "bank": "Harbour Mutual Bank \u00b7 account 00-1234-5678901-00",
+ "terms_note": "Payment by bank transfer. Please quote the invoice number."
+}

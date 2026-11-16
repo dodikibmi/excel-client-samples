@@ -1,0 +1,13 @@
+Customer ID,Name,Contact,Email,City,Terms (days),Tax exempt
+C001,Alder & Finch Dental,Maya Alder,office@alderfinch.example,Port Ellis,30,No
+C002,Brookside Fitness,Owen Hart,owen@brooksidefit.example,Port Ellis,14,No
+C003,Calder Estate Agents,Nadia Calder,accounts@calderhomes.example,Westmere,30,No
+C004,Driftwood Cafe,Sam Ortega,hello@driftwoodcafe.example,Port Ellis,14,No
+C005,Evergreen Landscaping,Tom Reyes,tom@evergreenland.example,Ashby,30,No
+C006,Fairview Veterinary Clinic,Dr. Lena Brandt,admin@fairviewvet.example,Westmere,45,No
+C007,Granite Peak Builders,Marcus Webb,ap@granitepeak.example,Ashby,45,No
+C008,Harbour Lights Festival,Priya Shah,events@harbourlights.example,Port Ellis,30,No
+C009,Copperpot Bakery,Ana Lima,,Port Ellis,14,No
+C010,Ironbridge Motors,Dev Patel,service@ironbridgemotors.example,Ashby,30,No
+C011,Hillcrest Primary School,Ruth Okafor,office@hillcrest.example,Westmere,30,Yes
+C012,Juniper Yoga Studio,Elena Varga,elena@juniperyoga.example,Port Ellis,14,No

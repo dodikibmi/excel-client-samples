@@ -1,0 +1,695 @@
+Order ID,Date,Region,Category,Product,Units,Unit price,Revenue,Cost
+SO-50001,2025-01-02,South,Power tools,Leaf blower,1,95.0,95.0,61.41
+SO-50002,2025-01-03,East,Power tools,Leaf blower,2,95.0,190.0,121.74
+SO-50003,2025-01-04,South,Plants,Lavender pot,1,9.5,9.5,4.25
+SO-50004,2025-01-05,South,Plants,Fruit tree,2,45.0,90.0,50.17
+SO-50005,2025-01-05,East,Hand tools,Pruning shears,3,22.0,66.0,31.99
+SO-50006,2025-01-05,South,Hand tools,Hand trowel,1,8.0,8.0,3.16
+SO-50007,2025-01-07,South,Plants,Lavender pot,3,9.5,28.5,12.76
+SO-50008,2025-01-08,West,Watering,Watering can,2,11.0,22.0,8.83
+SO-50009,2025-01-09,South,Hand tools,Garden spade,2,29.0,58.0,29.03
+SO-50010,2025-01-10,South,Watering,Sprinkler,3,16.0,48.0,20.89
+SO-50011,2025-01-11,East,Plants,Rose bush,4,18.0,72.0,34.73
+SO-50012,2025-01-11,West,Seeds & bulbs,Lawn seed 5kg,3,34.0,102.0,54.97
+SO-50013,2025-01-12,South,Power tools,Leaf blower,1,95.0,95.0,59.09
+SO-50014,2025-01-12,South,Plants,Rose bush,1,18.0,18.0,8.7
+SO-50015,2025-01-13,East,Plants,Lavender pot,2,9.5,19.0,8.64
+SO-50016,2025-01-13,South,Power tools,Hedge trimmer,2,119.0,238.0,155.55
+SO-50017,2025-01-14,East,Hand tools,Garden spade,3,29.0,87.0,41.82
+SO-50018,2025-01-14,North,Power tools,Lawn mower,1,289.0,289.0,197.02
+SO-50019,2025-01-17,East,Hand tools,Garden spade,2,29.0,58.0,29.41
+SO-50020,2025-01-21,South,Watering,Watering can,3,11.0,33.0,13.71
+SO-50021,2025-01-22,North,Plants,Fruit tree,2,45.0,90.0,51.9
+SO-50022,2025-01-24,South,Plants,Fruit tree,1,45.0,45.0,25.7
+SO-50023,2025-01-25,West,Watering,Hose 25m,3,39.0,117.0,61.52
+SO-50024,2025-01-29,South,Soil & feed,Compost 50L,4,7.5,30.0,16.43
+SO-50025,2025-01-30,West,Plants,Fruit tree,3,45.0,135.0,76.96
+SO-50026,2025-01-30,South,Power tools,Leaf blower,2,95.0,190.0,122.97
+SO-50027,2025-02-01,West,Seeds & bulbs,Tomato seeds,1,3.5,3.5,1.24
+SO-50028,2025-02-01,East,Power tools,Leaf blower,1,95.0,95.0,61.75
+SO-50029,2025-02-02,East,Hand tools,Hand trowel,2,8.0,16.0,6.44
+SO-50030,2025-02-03,East,Power tools,Leaf blower,2,95.0,190.0,121.3
+SO-50031,2025-02-03,East,Seeds & bulbs,Lawn seed 5kg,2,34.0,68.0,36.14
+SO-50032,2025-02-04,East,Seeds & bulbs,Tomato seeds,10,3.5,35.0,11.92
+SO-50033,2025-02-04,West,Watering,Hose 25m,2,39.0,78.0,39.69
+SO-50034,2025-02-05,South,Soil & feed,Plant food 1L,2,9.0,18.0,7.88
+SO-50035,2025-02-05,North,Plants,Rose bush,4,18.0,72.0,35.38
+SO-50036,2025-02-06,South,Hand tools,Garden spade,1,29.0,29.0,14.71
+SO-50037,2025-02-06,East,Seeds & bulbs,Tulip bulbs (20),1,12.0,12.0,5.58
+SO-50038,2025-02-07,North,Watering,Watering can,2,11.0,22.0,9.17
+SO-50039,2025-02-07,South,Power tools,Lawn mower,1,289.0,289.0,203.2
+SO-50040,2025-02-07,East,Seeds & bulbs,Tulip bulbs (20),1,12.0,12.0,5.55
+SO-50041,2025-02-10,East,Plants,Lavender pot,2,9.5,19.0,8.5
+SO-50042,2025-02-10,West,Watering,Watering can,2,11.0,22.0,8.95
+SO-50043,2025-02-12,South,Watering,Sprinkler,2,16.0,32.0,13.75
+SO-50044,2025-02-13,West,Power tools,Hedge trimmer,1,119.0,119.0,75.38
+SO-50045,2025-02-13,West,Power tools,Lawn mower,1,289.0,289.0,211.34
+SO-50046,2025-02-15,East,Seeds & bulbs,Lawn seed 5kg,1,34.0,34.0,18.33
+SO-50047,2025-02-16,West,Hand tools,Hand trowel,4,8.0,32.0,13.14
+SO-50048,2025-02-16,West,Soil & feed,Bark mulch 70L,1,8.5,8.5,5.11
+SO-50049,2025-02-18,West,Plants,Rose bush,3,18.0,54.0,26.93
+SO-50050,2025-02-19,West,Power tools,Leaf blower,1,95.0,95.0,63.36
+SO-50051,2025-02-20,West,Hand tools,Garden spade,2,29.0,58.0,29.15
+SO-50052,2025-02-20,North,Soil & feed,Bark mulch 70L,3,8.5,25.5,14.59
+SO-50053,2025-02-20,North,Watering,Sprinkler,2,16.0,32.0,14.76
+SO-50054,2025-02-21,South,Power tools,Hedge trimmer,2,119.0,238.0,155.94
+SO-50055,2025-02-21,North,Power tools,Hedge trimmer,2,119.0,238.0,151.66
+SO-50056,2025-02-21,South,Seeds & bulbs,Tomato seeds,4,3.5,14.0,5.0
+SO-50057,2025-02-23,East,Hand tools,Garden spade,3,29.0,87.0,45.49
+SO-50058,2025-02-24,West,Seeds & bulbs,Tomato seeds,1,3.5,3.5,1.22
+SO-50059,2025-02-26,South,Plants,Rose bush,4,18.0,72.0,35.52
+SO-50060,2025-02-27,West,Watering,Hose 25m,3,39.0,117.0,62.98
+SO-50061,2025-02-27,South,Hand tools,Pruning shears,1,22.0,22.0,10.19
+SO-50062,2025-02-28,East,Plants,Lavender pot,6,9.5,57.0,25.73
+SO-50063,2025-03-01,South,Plants,Fruit tree,3,45.0,135.0,75.31
+SO-50064,2025-03-01,East,Soil & feed,Compost 50L,3,7.5,22.5,12.24
+SO-50065,2025-03-01,South,Hand tools,Pruning shears,1,22.0,22.0,10.83
+SO-50066,2025-03-01,West,Power tools,Lawn mower,2,289.0,578.0,423.48
+SO-50067,2025-03-02,North,Plants,Rose bush,2,18.0,36.0,18.25
+SO-50068,2025-03-02,North,Watering,Sprinkler,1,16.0,16.0,6.99
+SO-50069,2025-03-03,North,Seeds & bulbs,Tomato seeds,2,3.5,7.0,2.51
+SO-50070,2025-03-04,North,Plants,Lavender pot,4,9.5,38.0,17.35
+SO-50071,2025-03-04,North,Soil & feed,Plant food 1L,4,9.0,36.0,14.93
+SO-50072,2025-03-05,East,Hand tools,Hand trowel,6,8.0,48.0,20.09
+SO-50073,2025-03-05,North,Plants,Fruit tree,3,45.0,135.0,74.26
+SO-50074,2025-03-05,South,Watering,Watering can,6,11.0,66.0,26.1
+SO-50075,2025-03-05,East,Plants,Fruit tree,3,45.0,135.0,75.91
+SO-50076,2025-03-06,West,Hand tools,Garden spade,3,29.0,87.0,42.17
+SO-50077,2025-03-06,North,Plants,Lavender pot,10,9.5,95.0,44.38
+SO-50078,2025-03-07,South,Seeds & bulbs,Tomato seeds,2,3.5,7.0,2.39
+SO-50079,2025-03-08,North,Watering,Hose 25m,3,39.0,117.0,58.02
+SO-50080,2025-03-10,East,Plants,Rose bush,3,18.0,54.0,27.48
+SO-50081,2025-03-11,North,Watering,Watering can,10,11.0,110.0,42.48
+SO-50082,2025-03-11,South,Hand tools,Garden spade,3,29.0,87.0,44.92
+SO-50083,2025-03-12,East,Hand tools,Hand trowel,4,8.0,32.0,13.09
+SO-50084,2025-03-12,South,Plants,Lavender pot,1,9.5,9.5,4.14
+SO-50085,2025-03-14,East,Power tools,Leaf blower,1,95.0,95.0,58.54
+SO-50086,2025-03-14,West,Power tools,Hedge trimmer,2,119.0,238.0,153.85
+SO-50087,2025-03-16,South,Seeds & bulbs,Tomato seeds,10,3.5,35.0,12.47
+SO-50088,2025-03-16,West,Plants,Lavender pot,1,9.5,9.5,4.18
+SO-50089,2025-03-17,East,Hand tools,Hand trowel,4,8.0,32.0,13.07
+SO-50090,2025-03-17,North,Plants,Lavender pot,2,9.5,19.0,8.6
+SO-50091,2025-03-17,East,Hand tools,Pruning shears,2,22.0,44.0,20.31
+SO-50092,2025-03-17,South,Power tools,Hedge trimmer,1,119.0,119.0,75.03
+SO-50093,2025-03-18,West,Soil & feed,Bark mulch 70L,6,8.5,51.0,29.06
+SO-50094,2025-03-18,West,Seeds & bulbs,Lawn seed 5kg,3,34.0,102.0,54.93
+SO-50095,2025-03-18,East,Watering,Hose 25m,4,39.0,156.0,79.44
+SO-50096,2025-03-19,North,Power tools,Lawn mower,2,289.0,578.0,413.28
+SO-50097,2025-03-20,West,Power tools,Hedge trimmer,1,119.0,119.0,80.8
+SO-50098,2025-03-21,South,Watering,Watering can,3,11.0,33.0,12.64
+SO-50099,2025-03-21,South,Hand tools,Hand trowel,3,8.0,24.0,9.71
+SO-50100,2025-03-22,West,Plants,Fruit tree,2,45.0,90.0,49.55
+SO-50101,2025-03-22,North,Soil & feed,Bark mulch 70L,2,8.5,17.0,9.63
+SO-50102,2025-03-22,North,Seeds & bulbs,Tulip bulbs (20),3,12.0,36.0,15.47
+SO-50103,2025-03-23,South,Soil & feed,Compost 50L,6,7.5,45.0,24.15
+SO-50104,2025-03-23,South,Seeds & bulbs,Tulip bulbs (20),3,12.0,36.0,16.77
+SO-50105,2025-03-23,West,Power tools,Leaf blower,2,95.0,190.0,115.82
+SO-50106,2025-03-25,South,Watering,Hose 25m,3,39.0,117.0,59.41
+SO-50107,2025-03-26,West,Plants,Rose bush,3,18.0,54.0,27.02
+SO-50108,2025-03-26,East,Watering,Sprinkler,3,16.0,48.0,22.36
+SO-50109,2025-03-26,South,Watering,Hose 25m,3,39.0,117.0,62.92
+SO-50110,2025-03-26,West,Seeds & bulbs,Lawn seed 5kg,3,34.0,102.0,55.99
+SO-50111,2025-03-27,South,Power tools,Leaf blower,1,95.0,95.0,63.43
+SO-50112,2025-03-28,North,Watering,Hose 25m,1,39.0,39.0,20.32
+SO-50113,2025-03-30,South,Soil & feed,Bark mulch 70L,4,8.5,34.0,19.65
+SO-50114,2025-03-31,West,Soil & feed,Bark mulch 70L,4,8.5,34.0,19.82
+SO-50115,2025-03-31,North,Seeds & bulbs,Lawn seed 5kg,4,34.0,136.0,74.78
+SO-50116,2025-03-31,North,Seeds & bulbs,Lawn seed 5kg,4,34.0,136.0,71.59
+SO-50117,2025-04-01,North,Watering,Sprinkler,2,16.0,32.0,15.05
+SO-50118,2025-04-01,West,Watering,Sprinkler,4,16.0,64.0,28.88
+SO-50119,2025-04-01,North,Seeds & bulbs,Lawn seed 5kg,2,34.0,68.0,39.08
+SO-50120,2025-04-03,West,Watering,Sprinkler,2,16.0,32.0,14.98
+SO-50121,2025-04-03,East,Watering,Sprinkler,2,16.0,32.0,14.59
+SO-50122,2025-04-03,East,Plants,Lavender pot,10,9.5,95.0,42.03
+SO-50123,2025-04-03,South,Power tools,Leaf blower,2,95.0,190.0,116.64
+SO-50124,2025-04-03,South,Power tools,Lawn mower,1,289.0,289.0,195.28
+SO-50125,2025-04-05,South,Watering,Hose 25m,1,39.0,39.0,19.85
+SO-50126,2025-04-06,North,Hand tools,Garden spade,4,29.0,116.0,57.19
+SO-50127,2025-04-06,West,Seeds & bulbs,Lawn seed 5kg,2,34.0,68.0,35.72
+SO-50128,2025-04-06,South,Watering,Watering can,10,11.0,110.0,42.03
+SO-50129,2025-04-07,South,Soil & feed,Plant food 1L,1,9.0,9.0,3.84
+SO-50130,2025-04-07,North,Power tools,Leaf blower,1,95.0,95.0,62.3
+SO-50131,2025-04-08,West,Watering,Sprinkler,1,16.0,16.0,7.26
+SO-50132,2025-04-08,South,Soil & feed,Bark mulch 70L,10,8.5,85.0,50.71
+SO-50133,2025-04-08,North,Power tools,Leaf blower,1,95.0,95.0,61.48
+SO-50134,2025-04-08,East,Seeds & bulbs,Lawn seed 5kg,1,34.0,34.0,18.09
+SO-50135,2025-04-08,East,Watering,Watering can,1,11.0,11.0,4.42
+SO-50136,2025-04-08,West,Power tools,Hedge trimmer,1,119.0,119.0,77.92
+SO-50137,2025-04-08,West,Power tools,Lawn mower,1,289.0,289.0,200.72
+SO-50138,2025-04-09,South,Power tools,Lawn mower,1,289.0,289.0,208.37
+SO-50139,2025-04-09,West,Soil & feed,Compost 50L,4,7.5,30.0,16.89
+SO-50140,2025-04-09,East,Hand tools,Garden spade,4,29.0,116.0,60.5
+SO-50141,2025-04-10,East,Watering,Watering can,4,11.0,44.0,18.36
+SO-50142,2025-04-10,West,Watering,Sprinkler,4,16.0,64.0,28.46
+SO-50143,2025-04-10,West,Seeds & bulbs,Tulip bulbs (20),4,12.0,48.0,22.48
+SO-50144,2025-04-10,South,Soil & feed,Compost 50L,4,7.5,30.0,16.61
+SO-50145,2025-04-11,South,Plants,Fruit tree,2,45.0,90.0,47.76
+SO-50146,2025-04-11,East,Watering,Watering can,4,11.0,44.0,18.31
+SO-50147,2025-04-11,South,Plants,Rose bush,3,18.0,54.0,26.55
+SO-50148,2025-04-12,North,Soil & feed,Compost 50L,6,7.5,45.0,24.05
+SO-50149,2025-04-12,North,Hand tools,Garden spade,3,29.0,87.0,43.31
+SO-50150,2025-04-12,South,Seeds & bulbs,Tomato seeds,10,3.5,35.0,11.89
+SO-50151,2025-04-12,South,Hand tools,Pruning shears,3,22.0,66.0,32.07
+SO-50152,2025-04-12,South,Plants,Fruit tree,2,45.0,90.0,48.79
+SO-50153,2025-04-13,West,Power tools,Lawn mower,1,289.0,289.0,195.52
+SO-50154,2025-04-13,West,Power tools,Hedge trimmer,1,119.0,119.0,79.51
+SO-50155,2025-04-13,North,Seeds & bulbs,Tomato seeds,1,3.5,3.5,1.27
+SO-50156,2025-04-13,West,Seeds & bulbs,Tulip bulbs (20),4,12.0,48.0,21.31
+SO-50157,2025-04-15,North,Soil & feed,Plant food 1L,3,9.0,27.0,11.66
+SO-50158,2025-04-15,East,Watering,Hose 25m,2,39.0,78.0,38.83
+SO-50159,2025-04-16,North,Plants,Fruit tree,3,45.0,135.0,75.18
+SO-50160,2025-04-16,North,Seeds & bulbs,Tomato seeds,3,3.5,10.5,3.54
+SO-50161,2025-04-17,North,Hand tools,Garden spade,3,29.0,87.0,42.51
+SO-50162,2025-04-17,West,Power tools,Lawn mower,2,289.0,578.0,396.58
+SO-50163,2025-04-17,East,Soil & feed,Compost 50L,2,7.5,15.0,8.19
+SO-50164,2025-04-18,East,Hand tools,Pruning shears,3,22.0,66.0,32.04
+SO-50165,2025-04-18,East,Soil & feed,Bark mulch 70L,4,8.5,34.0,19.3
+SO-50166,2025-04-19,South,Seeds & bulbs,Tulip bulbs (20),10,12.0,120.0,53.78
+SO-50167,2025-04-19,East,Seeds & bulbs,Tulip bulbs (20),3,12.0,36.0,15.69
+SO-50168,2025-04-20,South,Seeds & bulbs,Tulip bulbs (20),10,12.0,120.0,55.6
+SO-50169,2025-04-20,South,Plants,Rose bush,4,18.0,72.0,37.39
+SO-50170,2025-04-20,North,Plants,Lavender pot,6,9.5,57.0,24.7
+SO-50171,2025-04-21,East,Hand tools,Garden spade,1,29.0,29.0,14.14
+SO-50172,2025-04-21,South,Soil & feed,Bark mulch 70L,10,8.5,85.0,49.11
+SO-50173,2025-04-21,East,Watering,Hose 25m,4,39.0,156.0,82.03
+SO-50174,2025-04-21,North,Power tools,Leaf blower,1,95.0,95.0,63.49
+SO-50175,2025-04-21,South,Watering,Watering can,3,11.0,33.0,12.86
+SO-50176,2025-04-22,North,Watering,Hose 25m,3,39.0,117.0,59.77
+SO-50177,2025-04-22,West,Soil & feed,Plant food 1L,1,9.0,9.0,3.61
+SO-50178,2025-04-23,West,Soil & feed,Compost 50L,4,7.5,30.0,16.88
+SO-50179,2025-04-23,South,Watering,Sprinkler,3,16.0,48.0,22.35
+SO-50180,2025-04-23,South,Power tools,Hedge trimmer,1,119.0,119.0,77.36
+SO-50181,2025-04-23,South,Soil & feed,Bark mulch 70L,10,8.5,85.0,49.46
+SO-50182,2025-04-23,South,Power tools,Lawn mower,2,289.0,578.0,406.59
+SO-50183,2025-04-23,West,Hand tools,Garden spade,2,29.0,58.0,28.93
+SO-50184,2025-04-24,East,Hand tools,Hand trowel,3,8.0,24.0,9.52
+SO-50185,2025-04-24,West,Hand tools,Garden spade,4,29.0,116.0,56.97
+SO-50186,2025-04-24,South,Plants,Lavender pot,1,9.5,9.5,4.38
+SO-50187,2025-04-24,West,Seeds & bulbs,Tulip bulbs (20),4,12.0,48.0,20.89
+SO-50188,2025-04-25,South,Watering,Sprinkler,3,16.0,48.0,22.04
+SO-50189,2025-04-25,East,Seeds & bulbs,Tulip bulbs (20),10,12.0,120.0,55.32
+SO-50190,2025-04-25,South,Soil & feed,Bark mulch 70L,6,8.5,51.0,28.98
+SO-50191,2025-04-25,West,Soil & feed,Plant food 1L,10,9.0,90.0,37.99
+SO-50192,2025-04-25,South,Soil & feed,Plant food 1L,2,9.0,18.0,7.85
+SO-50193,2025-04-26,West,Plants,Fruit tree,2,45.0,90.0,51.93
+SO-50194,2025-04-26,South,Hand tools,Pruning shears,1,22.0,22.0,11.03
+SO-50195,2025-04-27,South,Seeds & bulbs,Lawn seed 5kg,3,34.0,102.0,58.1
+SO-50196,2025-04-27,East,Plants,Fruit tree,2,45.0,90.0,51.39
+SO-50197,2025-04-28,West,Watering,Sprinkler,3,16.0,48.0,20.98
+SO-50198,2025-04-28,West,Watering,Watering can,6,11.0,66.0,25.73
+SO-50199,2025-04-28,West,Watering,Sprinkler,3,16.0,48.0,22.29
+SO-50200,2025-04-28,South,Watering,Sprinkler,2,16.0,32.0,15.04
+SO-50201,2025-04-29,South,Hand tools,Garden spade,3,29.0,87.0,45.55
+SO-50202,2025-04-29,West,Hand tools,Garden spade,3,29.0,87.0,41.57
+SO-50203,2025-04-29,East,Soil & feed,Bark mulch 70L,6,8.5,51.0,29.1
+SO-50204,2025-04-30,South,Watering,Hose 25m,4,39.0,156.0,81.83
+SO-50205,2025-05-01,East,Seeds & bulbs,Tulip bulbs (20),3,12.0,36.0,16.72
+SO-50206,2025-05-01,West,Power tools,Lawn mower,1,289.0,289.0,212.12
+SO-50207,2025-05-01,West,Watering,Hose 25m,3,39.0,117.0,60.16
+SO-50208,2025-05-02,South,Plants,Lavender pot,10,9.5,95.0,44.75
+SO-50209,2025-05-02,West,Seeds & bulbs,Tulip bulbs (20),4,12.0,48.0,20.79
+SO-50210,2025-05-02,North,Watering,Hose 25m,3,39.0,117.0,63.81
+SO-50211,2025-05-02,West,Power tools,Leaf blower,1,95.0,95.0,61.01
+SO-50212,2025-05-03,South,Hand tools,Hand trowel,3,8.0,24.0,9.73
+SO-50213,2025-05-03,North,Seeds & bulbs,Tomato seeds,6,3.5,21.0,7.49
+SO-50214,2025-05-03,West,Seeds & bulbs,Lawn seed 5kg,3,34.0,102.0,55.97
+SO-50215,2025-05-03,South,Hand tools,Hand trowel,2,8.0,16.0,6.54
+SO-50216,2025-05-03,South,Seeds & bulbs,Tulip bulbs (20),3,12.0,36.0,16.9
+SO-50217,2025-05-04,South,Watering,Sprinkler,3,16.0,48.0,21.58
+SO-50218,2025-05-04,East,Soil & feed,Bark mulch 70L,1,8.5,8.5,4.92
+SO-50219,2025-05-05,East,Power tools,Lawn mower,1,289.0,289.0,204.12
+SO-50220,2025-05-06,North,Soil & feed,Plant food 1L,4,9.0,36.0,14.93
+SO-50221,2025-05-06,South,Plants,Rose bush,2,18.0,36.0,17.2
+SO-50222,2025-05-06,North,Hand tools,Garden spade,3,29.0,87.0,44.16
+SO-50223,2025-05-07,North,Power tools,Hedge trimmer,1,119.0,119.0,78.41
+SO-50224,2025-05-07,South,Soil & feed,Plant food 1L,1,9.0,9.0,3.71
+SO-50225,2025-05-07,East,Power tools,Leaf blower,1,95.0,95.0,59.71
+SO-50226,2025-05-08,North,Plants,Rose bush,3,18.0,54.0,27.89
+SO-50227,2025-05-08,North,Watering,Watering can,4,11.0,44.0,17.28
+SO-50228,2025-05-08,North,Hand tools,Garden spade,1,29.0,29.0,14.73
+SO-50229,2025-05-08,South,Hand tools,Hand trowel,6,8.0,48.0,19.77
+SO-50230,2025-05-09,West,Power tools,Lawn mower,2,289.0,578.0,401.24
+SO-50231,2025-05-09,South,Soil & feed,Bark mulch 70L,3,8.5,25.5,15.2
+SO-50232,2025-05-10,East,Soil & feed,Plant food 1L,10,9.0,90.0,38.01
+SO-50233,2025-05-10,North,Soil & feed,Bark mulch 70L,3,8.5,25.5,14.57
+SO-50234,2025-05-10,South,Seeds & bulbs,Tulip bulbs (20),2,12.0,24.0,10.83
+SO-50235,2025-05-10,South,Seeds & bulbs,Tulip bulbs (20),10,12.0,120.0,52.95
+SO-50236,2025-05-10,South,Watering,Hose 25m,3,39.0,117.0,63.08
+SO-50237,2025-05-11,North,Soil & feed,Compost 50L,10,7.5,75.0,40.53
+SO-50238,2025-05-11,South,Hand tools,Pruning shears,2,22.0,44.0,20.83
+SO-50239,2025-05-11,South,Watering,Hose 25m,2,39.0,78.0,42.39
+SO-50240,2025-05-11,South,Plants,Fruit tree,1,45.0,45.0,25.05
+SO-50241,2025-05-11,North,Seeds & bulbs,Lawn seed 5kg,4,34.0,136.0,75.27
+SO-50242,2025-05-11,West,Watering,Hose 25m,4,39.0,156.0,81.23
+SO-50243,2025-05-12,South,Plants,Lavender pot,6,9.5,57.0,24.81
+SO-50244,2025-05-13,East,Power tools,Leaf blower,2,95.0,190.0,120.03
+SO-50245,2025-05-13,West,Seeds & bulbs,Tomato seeds,2,3.5,7.0,2.33
+SO-50246,2025-05-13,North,Hand tools,Hand trowel,6,8.0,48.0,18.52
+SO-50247,2025-05-14,South,Soil & feed,Plant food 1L,6,9.0,54.0,23.68
+SO-50248,2025-05-14,North,Power tools,Hedge trimmer,1,119.0,119.0,81.27
+SO-50249,2025-05-14,South,Soil & feed,Compost 50L,3,7.5,22.5,12.88
+SO-50250,2025-05-15,South,Watering,Hose 25m,1,39.0,39.0,19.51
+SO-50251,2025-05-15,North,Seeds & bulbs,Tomato seeds,6,3.5,21.0,7.26
+SO-50252,2025-05-16,West,Plants,Fruit tree,3,45.0,135.0,77.45
+SO-50253,2025-05-17,West,Hand tools,Garden spade,1,29.0,29.0,14.63
+SO-50254,2025-05-17,West,Seeds & bulbs,Tulip bulbs (20),1,12.0,12.0,5.19
+SO-50255,2025-05-18,West,Seeds & bulbs,Tulip bulbs (20),10,12.0,120.0,54.13
+SO-50256,2025-05-18,North,Watering,Sprinkler,2,16.0,32.0,14.07
+SO-50257,2025-05-18,South,Plants,Rose bush,4,18.0,72.0,37.5
+SO-50258,2025-05-18,South,Hand tools,Pruning shears,1,22.0,22.0,10.17
+SO-50259,2025-05-19,West,Power tools,Hedge trimmer,1,119.0,119.0,76.06
+SO-50260,2025-05-19,South,Hand tools,Pruning shears,4,22.0,88.0,44.26
+SO-50261,2025-05-19,West,Plants,Rose bush,3,18.0,54.0,26.16
+SO-50262,2025-05-19,South,Power tools,Hedge trimmer,1,119.0,119.0,78.36
+SO-50263,2025-05-20,North,Hand tools,Hand trowel,6,8.0,48.0,18.97
+SO-50264,2025-05-20,East,Hand tools,Pruning shears,2,22.0,44.0,20.59
+SO-50265,2025-05-21,North,Hand tools,Hand trowel,10,8.0,80.0,31.54
+SO-50266,2025-05-21,West,Soil & feed,Compost 50L,10,7.5,75.0,42.97
+SO-50267,2025-05-21,North,Seeds & bulbs,Tomato seeds,10,3.5,35.0,11.69
+SO-50268,2025-05-21,West,Hand tools,Garden spade,1,29.0,29.0,15.11
+SO-50269,2025-05-22,North,Soil & feed,Bark mulch 70L,10,8.5,85.0,49.83
+SO-50270,2025-05-22,East,Watering,Sprinkler,2,16.0,32.0,14.38
+SO-50271,2025-05-22,West,Seeds & bulbs,Tulip bulbs (20),4,12.0,48.0,22.23
+SO-50272,2025-05-22,North,Seeds & bulbs,Tulip bulbs (20),6,12.0,72.0,33.55
+SO-50273,2025-05-23,South,Plants,Lavender pot,10,9.5,95.0,43.8
+SO-50274,2025-05-23,West,Watering,Hose 25m,3,39.0,117.0,59.03
+SO-50275,2025-05-23,West,Seeds & bulbs,Tulip bulbs (20),1,12.0,12.0,5.45
+SO-50276,2025-05-23,North,Hand tools,Pruning shears,2,22.0,44.0,20.4
+SO-50277,2025-05-24,West,Power tools,Hedge trimmer,1,119.0,119.0,82.32
+SO-50278,2025-05-24,South,Plants,Rose bush,1,18.0,18.0,9.06
+SO-50279,2025-05-24,North,Power tools,Leaf blower,1,95.0,95.0,61.95
+SO-50280,2025-05-25,East,Power tools,Hedge trimmer,1,119.0,119.0,82.08
+SO-50281,2025-05-25,East,Seeds & bulbs,Lawn seed 5kg,2,34.0,68.0,38.84
+SO-50282,2025-05-26,West,Watering,Hose 25m,2,39.0,78.0,42.31
+SO-50283,2025-05-26,West,Power tools,Leaf blower,1,95.0,95.0,63.75
+SO-50284,2025-05-26,West,Soil & feed,Compost 50L,2,7.5,15.0,8.02
+SO-50285,2025-05-28,North,Seeds & bulbs,Tulip bulbs (20),3,12.0,36.0,17.01
+SO-50286,2025-05-28,North,Soil & feed,Plant food 1L,1,9.0,9.0,3.61
+SO-50287,2025-05-28,South,Soil & feed,Bark mulch 70L,6,8.5,51.0,30.56
+SO-50288,2025-05-29,West,Power tools,Hedge trimmer,1,119.0,119.0,80.63
+SO-50289,2025-05-29,South,Soil & feed,Plant food 1L,10,9.0,90.0,37.21
+SO-50290,2025-05-29,West,Soil & feed,Compost 50L,3,7.5,22.5,12.93
+SO-50291,2025-05-29,North,Plants,Rose bush,3,18.0,54.0,26.39
+SO-50292,2025-05-30,East,Soil & feed,Compost 50L,3,7.5,22.5,12.54
+SO-50293,2025-05-30,West,Plants,Fruit tree,1,45.0,45.0,24.73
+SO-50294,2025-05-31,North,Hand tools,Garden spade,3,29.0,87.0,42.02
+SO-50295,2025-05-31,North,Hand tools,Garden spade,2,29.0,58.0,29.12
+SO-50296,2025-05-31,North,Soil & feed,Compost 50L,10,7.5,75.0,40.23
+SO-50297,2025-05-31,North,Hand tools,Garden spade,4,29.0,116.0,56.8
+SO-50298,2025-05-31,North,Power tools,Lawn mower,2,289.0,578.0,403.91
+SO-50299,2025-05-31,East,Power tools,Hedge trimmer,1,119.0,119.0,78.1
+SO-50300,2025-06-01,West,Watering,Sprinkler,2,16.0,32.0,14.87
+SO-50301,2025-06-02,North,Soil & feed,Bark mulch 70L,10,8.5,85.0,48.02
+SO-50302,2025-06-02,East,Plants,Lavender pot,10,9.5,95.0,44.15
+SO-50303,2025-06-02,North,Watering,Sprinkler,4,16.0,64.0,28.2
+SO-50304,2025-06-02,East,Soil & feed,Compost 50L,2,7.5,15.0,8.56
+SO-50305,2025-06-04,East,Soil & feed,Compost 50L,2,7.5,15.0,8.56
+SO-50306,2025-06-04,South,Hand tools,Garden spade,4,29.0,116.0,55.62
+SO-50307,2025-06-06,West,Soil & feed,Plant food 1L,10,9.0,90.0,38.8
+SO-50308,2025-06-07,West,Watering,Sprinkler,1,16.0,16.0,7.27
+SO-50309,2025-06-09,South,Watering,Watering can,10,11.0,110.0,42.87
+SO-50310,2025-06-09,North,Seeds & bulbs,Lawn seed 5kg,2,34.0,68.0,36.74
+SO-50311,2025-06-09,South,Soil & feed,Plant food 1L,3,9.0,27.0,11.19
+SO-50312,2025-06-09,South,Power tools,Hedge trimmer,2,119.0,238.0,162.38
+SO-50313,2025-06-09,North,Watering,Watering can,6,11.0,66.0,27.03
+SO-50314,2025-06-09,North,Plants,Lavender pot,1,9.5,9.5,4.32
+SO-50315,2025-06-10,East,Plants,Fruit tree,1,45.0,45.0,25.52
+SO-50316,2025-06-10,West,Seeds & bulbs,Lawn seed 5kg,1,34.0,34.0,18.39
+SO-50317,2025-06-10,North,Watering,Watering can,1,11.0,11.0,4.21
+SO-50318,2025-06-10,West,Hand tools,Hand trowel,2,8.0,16.0,6.31
+SO-50319,2025-06-11,West,Plants,Rose bush,1,18.0,18.0,8.96
+SO-50320,2025-06-11,South,Watering,Watering can,10,11.0,110.0,44.01
+SO-50321,2025-06-12,South,Hand tools,Hand trowel,4,8.0,32.0,12.22
+SO-50322,2025-06-13,East,Power tools,Lawn mower,1,289.0,289.0,210.25
+SO-50323,2025-06-13,North,Hand tools,Pruning shears,1,22.0,22.0,10.84
+SO-50324,2025-06-14,West,Power tools,Hedge trimmer,1,119.0,119.0,81.64
+SO-50325,2025-06-14,South,Soil & feed,Compost 50L,6,7.5,45.0,24.03
+SO-50326,2025-06-14,South,Watering,Watering can,6,11.0,66.0,27.43
+SO-50327,2025-06-15,East,Plants,Rose bush,1,18.0,18.0,8.85
+SO-50328,2025-06-15,West,Watering,Hose 25m,4,39.0,156.0,81.61
+SO-50329,2025-06-16,West,Seeds & bulbs,Tulip bulbs (20),3,12.0,36.0,15.52
+SO-50330,2025-06-16,North,Soil & feed,Compost 50L,1,7.5,7.5,4.3
+SO-50331,2025-06-17,South,Hand tools,Garden spade,1,29.0,29.0,14.54
+SO-50332,2025-06-17,South,Watering,Hose 25m,1,39.0,39.0,20.95
+SO-50333,2025-06-17,South,Power tools,Lawn mower,2,289.0,578.0,422.29
+SO-50334,2025-06-18,West,Plants,Rose bush,4,18.0,72.0,35.18
+SO-50335,2025-06-19,East,Watering,Watering can,3,11.0,33.0,13.06
+SO-50336,2025-06-19,South,Soil & feed,Compost 50L,1,7.5,7.5,4.21
+SO-50337,2025-06-19,West,Seeds & bulbs,Tomato seeds,3,3.5,10.5,3.76
+SO-50338,2025-06-20,North,Plants,Fruit tree,2,45.0,90.0,49.3
+SO-50339,2025-06-20,North,Plants,Rose bush,2,18.0,36.0,17.62
+SO-50340,2025-06-20,North,Power tools,Lawn mower,2,289.0,578.0,394.18
+SO-50341,2025-06-21,South,Plants,Fruit tree,1,45.0,45.0,24.33
+SO-50342,2025-06-21,South,Soil & feed,Plant food 1L,6,9.0,54.0,23.5
+SO-50343,2025-06-22,South,Seeds & bulbs,Tomato seeds,4,3.5,14.0,4.79
+SO-50344,2025-06-22,South,Seeds & bulbs,Lawn seed 5kg,3,34.0,102.0,57.92
+SO-50345,2025-06-22,North,Power tools,Hedge trimmer,2,119.0,238.0,149.27
+SO-50346,2025-06-23,South,Plants,Rose bush,3,18.0,54.0,27.44
+SO-50347,2025-06-23,North,Hand tools,Pruning shears,2,22.0,44.0,21.68
+SO-50348,2025-06-23,South,Soil & feed,Compost 50L,2,7.5,15.0,8.36
+SO-50349,2025-06-23,South,Seeds & bulbs,Lawn seed 5kg,1,34.0,34.0,19.31
+SO-50350,2025-06-23,East,Plants,Rose bush,3,18.0,54.0,28.11
+SO-50351,2025-06-24,East,Soil & feed,Plant food 1L,2,9.0,18.0,7.23
+SO-50352,2025-06-24,West,Power tools,Hedge trimmer,1,119.0,119.0,75.9
+SO-50353,2025-06-24,South,Power tools,Lawn mower,1,289.0,289.0,196.05
+SO-50354,2025-06-24,South,Watering,Hose 25m,1,39.0,39.0,20.81
+SO-50355,2025-06-24,South,Soil & feed,Compost 50L,2,7.5,15.0,8.2
+SO-50356,2025-06-24,South,Hand tools,Pruning shears,3,22.0,66.0,31.95
+SO-50357,2025-06-25,South,Seeds & bulbs,Lawn seed 5kg,3,34.0,102.0,53.31
+SO-50358,2025-06-25,South,Power tools,Lawn mower,2,289.0,578.0,420.88
+SO-50359,2025-06-26,South,Seeds & bulbs,Tomato seeds,10,3.5,35.0,12.39
+SO-50360,2025-06-26,North,Seeds & bulbs,Tulip bulbs (20),2,12.0,24.0,10.34
+SO-50361,2025-06-27,South,Plants,Lavender pot,1,9.5,9.5,4.49
+SO-50362,2025-06-27,South,Seeds & bulbs,Lawn seed 5kg,3,34.0,102.0,53.94
+SO-50363,2025-06-27,East,Power tools,Leaf blower,1,95.0,95.0,62.27
+SO-50364,2025-06-27,North,Soil & feed,Compost 50L,10,7.5,75.0,41.51
+SO-50365,2025-06-27,West,Watering,Watering can,10,11.0,110.0,42.82
+SO-50366,2025-06-28,East,Soil & feed,Plant food 1L,1,9.0,9.0,3.83
+SO-50367,2025-06-28,South,Power tools,Hedge trimmer,2,119.0,238.0,152.37
+SO-50368,2025-06-28,West,Plants,Lavender pot,1,9.5,9.5,4.06
+SO-50369,2025-06-29,North,Plants,Rose bush,2,18.0,36.0,17.27
+SO-50370,2025-06-29,South,Power tools,Hedge trimmer,1,119.0,119.0,77.43
+SO-50371,2025-06-29,South,Seeds & bulbs,Lawn seed 5kg,3,34.0,102.0,55.09
+SO-50372,2025-06-30,South,Power tools,Lawn mower,1,289.0,289.0,209.56
+SO-50373,2025-06-30,West,Watering,Sprinkler,4,16.0,64.0,29.94
+SO-50374,2025-06-30,South,Watering,Watering can,4,11.0,44.0,18.18
+SO-50375,2025-06-30,East,Hand tools,Pruning shears,2,22.0,44.0,21.03
+SO-50376,2025-06-30,South,Hand tools,Pruning shears,1,22.0,22.0,10.91
+SO-50377,2025-06-30,East,Soil & feed,Plant food 1L,1,9.0,9.0,3.96
+SO-50378,2025-06-30,East,Soil & feed,Bark mulch 70L,6,8.5,51.0,29.04
+SO-50379,2025-07-01,North,Watering,Hose 25m,4,39.0,156.0,84.84
+SO-50380,2025-07-01,South,Seeds & bulbs,Tulip bulbs (20),6,12.0,72.0,32.67
+SO-50381,2025-07-02,North,Soil & feed,Plant food 1L,6,9.0,54.0,23.08
+SO-50382,2025-07-02,West,Power tools,Leaf blower,1,95.0,95.0,61.56
+SO-50383,2025-07-02,North,Hand tools,Hand trowel,2,8.0,16.0,6.51
+SO-50384,2025-07-04,North,Plants,Fruit tree,2,45.0,90.0,48.9
+SO-50385,2025-07-04,East,Plants,Rose bush,1,18.0,18.0,8.97
+SO-50386,2025-07-04,South,Plants,Lavender pot,1,9.5,9.5,4.31
+SO-50387,2025-07-05,North,Plants,Lavender pot,1,9.5,9.5,4.37
+SO-50388,2025-07-05,East,Watering,Sprinkler,2,16.0,32.0,13.71
+SO-50389,2025-07-05,North,Watering,Sprinkler,3,16.0,48.0,20.59
+SO-50390,2025-07-06,North,Hand tools,Garden spade,1,29.0,29.0,15.04
+SO-50391,2025-07-08,West,Seeds & bulbs,Lawn seed 5kg,2,34.0,68.0,35.65
+SO-50392,2025-07-08,South,Plants,Fruit tree,3,45.0,135.0,75.71
+SO-50393,2025-07-08,West,Soil & feed,Compost 50L,1,7.5,7.5,4.11
+SO-50394,2025-07-08,West,Watering,Watering can,3,11.0,33.0,12.58
+SO-50395,2025-07-09,South,Watering,Hose 25m,2,39.0,78.0,42.16
+SO-50396,2025-07-10,South,Seeds & bulbs,Lawn seed 5kg,1,34.0,34.0,17.95
+SO-50397,2025-07-10,South,Soil & feed,Bark mulch 70L,4,8.5,34.0,20.05
+SO-50398,2025-07-10,South,Hand tools,Garden spade,3,29.0,87.0,43.79
+SO-50399,2025-07-10,West,Soil & feed,Compost 50L,4,7.5,30.0,16.39
+SO-50400,2025-07-11,North,Plants,Fruit tree,3,45.0,135.0,76.2
+SO-50401,2025-07-12,West,Watering,Hose 25m,2,39.0,78.0,38.57
+SO-50402,2025-07-12,South,Power tools,Lawn mower,1,289.0,289.0,194.85
+SO-50403,2025-07-12,West,Soil & feed,Bark mulch 70L,10,8.5,85.0,47.87
+SO-50404,2025-07-13,North,Soil & feed,Plant food 1L,6,9.0,54.0,23.61
+SO-50405,2025-07-13,South,Plants,Lavender pot,4,9.5,38.0,16.48
+SO-50406,2025-07-13,West,Soil & feed,Compost 50L,10,7.5,75.0,42.75
+SO-50407,2025-07-13,West,Hand tools,Garden spade,1,29.0,29.0,14.54
+SO-50408,2025-07-13,North,Hand tools,Pruning shears,1,22.0,22.0,10.26
+SO-50409,2025-07-14,South,Plants,Lavender pot,1,9.5,9.5,4.43
+SO-50410,2025-07-14,West,Soil & feed,Plant food 1L,2,9.0,18.0,7.59
+SO-50411,2025-07-14,North,Plants,Rose bush,1,18.0,18.0,8.8
+SO-50412,2025-07-14,West,Hand tools,Hand trowel,10,8.0,80.0,31.37
+SO-50413,2025-07-16,East,Watering,Hose 25m,2,39.0,78.0,38.69
+SO-50414,2025-07-16,South,Watering,Sprinkler,3,16.0,48.0,21.65
+SO-50415,2025-07-16,South,Seeds & bulbs,Tomato seeds,1,3.5,3.5,1.19
+SO-50416,2025-07-16,South,Power tools,Hedge trimmer,2,119.0,238.0,152.43
+SO-50417,2025-07-18,East,Seeds & bulbs,Tomato seeds,3,3.5,10.5,3.62
+SO-50418,2025-07-18,South,Hand tools,Hand trowel,2,8.0,16.0,6.17
+SO-50419,2025-07-18,South,Soil & feed,Compost 50L,2,7.5,15.0,7.97
+SO-50420,2025-07-19,West,Seeds & bulbs,Lawn seed 5kg,2,34.0,68.0,38.91
+SO-50421,2025-07-19,East,Soil & feed,Bark mulch 70L,1,8.5,8.5,4.72
+SO-50422,2025-07-20,North,Seeds & bulbs,Tulip bulbs (20),1,12.0,12.0,5.35
+SO-50423,2025-07-20,West,Watering,Watering can,10,11.0,110.0,44.83
+SO-50424,2025-07-20,North,Seeds & bulbs,Tulip bulbs (20),6,12.0,72.0,33.3
+SO-50425,2025-07-21,South,Soil & feed,Bark mulch 70L,10,8.5,85.0,50.4
+SO-50426,2025-07-21,South,Hand tools,Garden spade,2,29.0,58.0,28.45
+SO-50427,2025-07-21,East,Watering,Sprinkler,2,16.0,32.0,13.82
+SO-50428,2025-07-21,North,Soil & feed,Compost 50L,3,7.5,22.5,11.95
+SO-50429,2025-07-22,West,Soil & feed,Plant food 1L,4,9.0,36.0,15.73
+SO-50430,2025-07-24,West,Watering,Watering can,2,11.0,22.0,8.56
+SO-50431,2025-07-24,North,Watering,Sprinkler,2,16.0,32.0,14.46
+SO-50432,2025-07-24,East,Hand tools,Pruning shears,2,22.0,44.0,21.25
+SO-50433,2025-07-25,West,Plants,Fruit tree,2,45.0,90.0,49.13
+SO-50434,2025-07-25,North,Watering,Watering can,4,11.0,44.0,17.99
+SO-50435,2025-07-25,East,Watering,Watering can,4,11.0,44.0,16.82
+SO-50436,2025-07-25,South,Hand tools,Pruning shears,4,22.0,88.0,41.15
+SO-50437,2025-07-25,North,Watering,Hose 25m,1,39.0,39.0,20.8
+SO-50438,2025-07-26,West,Hand tools,Pruning shears,4,22.0,88.0,43.98
+SO-50439,2025-07-26,West,Soil & feed,Bark mulch 70L,3,8.5,25.5,14.67
+SO-50440,2025-07-26,North,Power tools,Leaf blower,2,95.0,190.0,119.9
+SO-50441,2025-07-27,East,Plants,Lavender pot,3,9.5,28.5,12.73
+SO-50442,2025-07-27,South,Plants,Rose bush,3,18.0,54.0,26.85
+SO-50443,2025-07-28,North,Soil & feed,Bark mulch 70L,1,8.5,8.5,4.98
+SO-50444,2025-07-28,South,Plants,Rose bush,2,18.0,36.0,17.24
+SO-50445,2025-07-29,North,Power tools,Leaf blower,1,95.0,95.0,57.87
+SO-50446,2025-07-29,South,Power tools,Hedge trimmer,1,119.0,119.0,77.98
+SO-50447,2025-07-29,West,Power tools,Lawn mower,1,289.0,289.0,204.74
+SO-50448,2025-07-29,North,Hand tools,Pruning shears,1,22.0,22.0,10.59
+SO-50449,2025-07-30,North,Hand tools,Garden spade,2,29.0,58.0,30.26
+SO-50450,2025-07-31,South,Power tools,Leaf blower,2,95.0,190.0,124.59
+SO-50451,2025-07-31,South,Power tools,Lawn mower,1,289.0,289.0,192.94
+SO-50452,2025-07-31,North,Seeds & bulbs,Tulip bulbs (20),6,12.0,72.0,31.98
+SO-50453,2025-08-01,North,Watering,Watering can,10,11.0,110.0,45.94
+SO-50454,2025-08-01,West,Soil & feed,Compost 50L,2,7.5,15.0,8.44
+SO-50455,2025-08-03,South,Plants,Lavender pot,1,9.5,9.5,4.37
+SO-50456,2025-08-04,North,Plants,Rose bush,3,18.0,54.0,26.16
+SO-50457,2025-08-04,West,Seeds & bulbs,Lawn seed 5kg,3,34.0,102.0,57.45
+SO-50458,2025-08-04,West,Power tools,Hedge trimmer,1,119.0,119.0,81.57
+SO-50459,2025-08-04,North,Hand tools,Garden spade,2,29.0,58.0,29.96
+SO-50460,2025-08-05,West,Seeds & bulbs,Tomato seeds,2,3.5,7.0,2.43
+SO-50461,2025-08-05,West,Hand tools,Pruning shears,3,22.0,66.0,32.3
+SO-50462,2025-08-06,North,Plants,Rose bush,1,18.0,18.0,8.61
+SO-50463,2025-08-06,East,Watering,Watering can,10,11.0,110.0,42.37
+SO-50464,2025-08-07,West,Seeds & bulbs,Tomato seeds,6,3.5,21.0,7.14
+SO-50465,2025-08-07,West,Watering,Hose 25m,3,39.0,117.0,62.2
+SO-50466,2025-08-09,South,Hand tools,Garden spade,4,29.0,116.0,56.69
+SO-50467,2025-08-09,South,Plants,Fruit tree,4,45.0,180.0,99.64
+SO-50468,2025-08-09,East,Soil & feed,Compost 50L,4,7.5,30.0,15.95
+SO-50469,2025-08-09,East,Soil & feed,Plant food 1L,6,9.0,54.0,22.65
+SO-50470,2025-08-11,West,Plants,Fruit tree,1,45.0,45.0,24.38
+SO-50471,2025-08-11,South,Seeds & bulbs,Tulip bulbs (20),3,12.0,36.0,16.36
+SO-50472,2025-08-12,South,Seeds & bulbs,Tulip bulbs (20),3,12.0,36.0,15.85
+SO-50473,2025-08-13,North,Soil & feed,Bark mulch 70L,2,8.5,17.0,10.15
+SO-50474,2025-08-13,South,Seeds & bulbs,Lawn seed 5kg,1,34.0,34.0,19.15
+SO-50475,2025-08-13,East,Plants,Fruit tree,2,45.0,90.0,48.01
+SO-50476,2025-08-13,South,Seeds & bulbs,Tomato seeds,6,3.5,21.0,7.33
+SO-50477,2025-08-14,West,Seeds & bulbs,Tulip bulbs (20),4,12.0,48.0,22.27
+SO-50478,2025-08-15,West,Seeds & bulbs,Tomato seeds,4,3.5,14.0,5.06
+SO-50479,2025-08-16,North,Watering,Hose 25m,4,39.0,156.0,78.67
+SO-50480,2025-08-16,West,Power tools,Lawn mower,2,289.0,578.0,386.65
+SO-50481,2025-08-16,South,Hand tools,Hand trowel,2,8.0,16.0,6.1
+SO-50482,2025-08-17,East,Seeds & bulbs,Lawn seed 5kg,2,34.0,68.0,37.66
+SO-50483,2025-08-18,West,Hand tools,Hand trowel,3,8.0,24.0,9.34
+SO-50484,2025-08-19,West,Power tools,Hedge trimmer,1,119.0,119.0,82.21
+SO-50485,2025-08-19,East,Seeds & bulbs,Tomato seeds,1,3.5,3.5,1.24
+SO-50486,2025-08-19,West,Plants,Rose bush,3,18.0,54.0,28.12
+SO-50487,2025-08-19,West,Hand tools,Garden spade,4,29.0,116.0,59.71
+SO-50488,2025-08-20,South,Soil & feed,Plant food 1L,10,9.0,90.0,36.99
+SO-50489,2025-08-20,East,Seeds & bulbs,Lawn seed 5kg,3,34.0,102.0,53.84
+SO-50490,2025-08-21,East,Seeds & bulbs,Tomato seeds,1,3.5,3.5,1.25
+SO-50491,2025-08-22,South,Seeds & bulbs,Tomato seeds,1,3.5,3.5,1.17
+SO-50492,2025-08-23,West,Watering,Sprinkler,1,16.0,16.0,7.27
+SO-50493,2025-08-24,South,Watering,Hose 25m,1,39.0,39.0,20.06
+SO-50494,2025-08-26,South,Hand tools,Pruning shears,3,22.0,66.0,32.4
+SO-50495,2025-08-26,South,Watering,Hose 25m,1,39.0,39.0,19.71
+SO-50496,2025-08-27,East,Seeds & bulbs,Lawn seed 5kg,1,34.0,34.0,17.79
+SO-50497,2025-08-28,North,Soil & feed,Compost 50L,2,7.5,15.0,8.42
+SO-50498,2025-08-28,South,Watering,Watering can,4,11.0,44.0,17.67
+SO-50499,2025-08-28,North,Seeds & bulbs,Lawn seed 5kg,2,34.0,68.0,36.0
+SO-50500,2025-08-29,North,Soil & feed,Plant food 1L,1,9.0,9.0,3.92
+SO-50501,2025-08-30,West,Power tools,Lawn mower,1,289.0,289.0,202.54
+SO-50502,2025-08-30,North,Seeds & bulbs,Tomato seeds,3,3.5,10.5,3.76
+SO-50503,2025-08-30,South,Watering,Hose 25m,3,39.0,117.0,62.67
+SO-50504,2025-08-30,East,Power tools,Hedge trimmer,1,119.0,119.0,76.55
+SO-50505,2025-08-30,West,Watering,Hose 25m,3,39.0,117.0,61.71
+SO-50506,2025-08-31,East,Soil & feed,Compost 50L,4,7.5,30.0,16.97
+SO-50507,2025-08-31,East,Watering,Watering can,2,11.0,22.0,8.5
+SO-50508,2025-08-31,South,Hand tools,Hand trowel,3,8.0,24.0,9.82
+SO-50509,2025-08-31,South,Hand tools,Pruning shears,2,22.0,44.0,21.58
+SO-50510,2025-08-31,South,Soil & feed,Bark mulch 70L,3,8.5,25.5,14.9
+SO-50511,2025-09-02,North,Soil & feed,Bark mulch 70L,1,8.5,8.5,4.89
+SO-50512,2025-09-03,North,Power tools,Hedge trimmer,1,119.0,119.0,76.87
+SO-50513,2025-09-05,North,Plants,Fruit tree,1,45.0,45.0,25.14
+SO-50514,2025-09-05,West,Soil & feed,Plant food 1L,3,9.0,27.0,11.8
+SO-50515,2025-09-05,East,Power tools,Lawn mower,1,289.0,289.0,197.78
+SO-50516,2025-09-06,North,Soil & feed,Bark mulch 70L,4,8.5,34.0,20.36
+SO-50517,2025-09-07,East,Hand tools,Hand trowel,2,8.0,16.0,6.4
+SO-50518,2025-09-07,West,Power tools,Lawn mower,2,289.0,578.0,402.27
+SO-50519,2025-09-08,East,Soil & feed,Bark mulch 70L,10,8.5,85.0,50.62
+SO-50520,2025-09-08,South,Plants,Rose bush,2,18.0,36.0,18.12
+SO-50521,2025-09-09,West,Hand tools,Pruning shears,2,22.0,44.0,20.92
+SO-50522,2025-09-09,West,Power tools,Lawn mower,1,289.0,289.0,209.54
+SO-50523,2025-09-09,East,Power tools,Lawn mower,1,289.0,289.0,194.97
+SO-50524,2025-09-10,South,Seeds & bulbs,Lawn seed 5kg,2,34.0,68.0,38.74
+SO-50525,2025-09-10,West,Power tools,Leaf blower,2,95.0,190.0,123.82
+SO-50526,2025-09-11,North,Watering,Sprinkler,4,16.0,64.0,27.99
+SO-50527,2025-09-11,West,Plants,Rose bush,2,18.0,36.0,17.44
+SO-50528,2025-09-13,North,Seeds & bulbs,Lawn seed 5kg,4,34.0,136.0,78.27
+SO-50529,2025-09-14,South,Plants,Rose bush,1,18.0,18.0,9.34
+SO-50530,2025-09-14,East,Plants,Fruit tree,3,45.0,135.0,70.62
+SO-50531,2025-09-15,West,Soil & feed,Plant food 1L,2,9.0,18.0,7.36
+SO-50532,2025-09-15,East,Plants,Rose bush,2,18.0,36.0,17.15
+SO-50533,2025-09-16,West,Plants,Rose bush,2,18.0,36.0,18.67
+SO-50534,2025-09-16,West,Plants,Rose bush,3,18.0,54.0,27.85
+SO-50535,2025-09-16,East,Plants,Rose bush,2,18.0,36.0,17.42
+SO-50536,2025-09-17,West,Soil & feed,Plant food 1L,3,9.0,27.0,11.74
+SO-50537,2025-09-19,West,Seeds & bulbs,Tomato seeds,3,3.5,10.5,3.5
+SO-50538,2025-09-19,North,Plants,Lavender pot,10,9.5,95.0,41.21
+SO-50539,2025-09-20,West,Soil & feed,Plant food 1L,6,9.0,54.0,22.84
+SO-50540,2025-09-20,North,Soil & feed,Compost 50L,2,7.5,15.0,8.49
+SO-50541,2025-09-21,North,Power tools,Leaf blower,1,95.0,95.0,59.97
+SO-50542,2025-09-21,North,Soil & feed,Bark mulch 70L,10,8.5,85.0,47.66
+SO-50543,2025-09-21,West,Hand tools,Garden spade,3,29.0,87.0,44.62
+SO-50544,2025-09-21,West,Soil & feed,Bark mulch 70L,6,8.5,51.0,28.17
+SO-50545,2025-09-21,West,Soil & feed,Bark mulch 70L,1,8.5,8.5,4.81
+SO-50546,2025-09-22,East,Power tools,Lawn mower,1,289.0,289.0,203.39
+SO-50547,2025-09-22,East,Watering,Watering can,1,11.0,11.0,4.25
+SO-50548,2025-09-22,West,Plants,Fruit tree,1,45.0,45.0,25.98
+SO-50549,2025-09-22,North,Seeds & bulbs,Tomato seeds,1,3.5,3.5,1.25
+SO-50550,2025-09-22,West,Power tools,Leaf blower,1,95.0,95.0,63.11
+SO-50551,2025-09-23,East,Watering,Watering can,4,11.0,44.0,17.14
+SO-50552,2025-09-23,West,Soil & feed,Plant food 1L,10,9.0,90.0,37.38
+SO-50553,2025-09-23,East,Hand tools,Hand trowel,2,8.0,16.0,6.48
+SO-50554,2025-09-23,South,Plants,Rose bush,2,18.0,36.0,17.3
+SO-50555,2025-09-23,South,Watering,Sprinkler,3,16.0,48.0,21.44
+SO-50556,2025-09-24,South,Power tools,Lawn mower,1,289.0,289.0,206.59
+SO-50557,2025-09-24,South,Plants,Fruit tree,4,45.0,180.0,103.19
+SO-50558,2025-09-24,West,Watering,Sprinkler,4,16.0,64.0,27.9
+SO-50559,2025-09-26,East,Plants,Fruit tree,3,45.0,135.0,77.56
+SO-50560,2025-09-26,South,Soil & feed,Plant food 1L,3,9.0,27.0,11.59
+SO-50561,2025-09-27,South,Watering,Sprinkler,4,16.0,64.0,29.29
+SO-50562,2025-09-28,South,Soil & feed,Bark mulch 70L,10,8.5,85.0,46.95
+SO-50563,2025-09-30,North,Hand tools,Garden spade,3,29.0,87.0,44.51
+SO-50564,2025-09-30,South,Hand tools,Garden spade,4,29.0,116.0,55.45
+SO-50565,2025-09-30,West,Hand tools,Pruning shears,3,22.0,66.0,31.54
+SO-50566,2025-09-30,West,Hand tools,Garden spade,4,29.0,116.0,60.55
+SO-50567,2025-10-04,West,Seeds & bulbs,Tulip bulbs (20),10,12.0,120.0,54.48
+SO-50568,2025-10-04,West,Plants,Fruit tree,4,45.0,180.0,95.19
+SO-50569,2025-10-05,South,Seeds & bulbs,Lawn seed 5kg,1,34.0,34.0,19.01
+SO-50570,2025-10-05,North,Plants,Fruit tree,2,45.0,90.0,47.26
+SO-50571,2025-10-05,North,Seeds & bulbs,Tomato seeds,1,3.5,3.5,1.25
+SO-50572,2025-10-05,South,Plants,Rose bush,4,18.0,72.0,35.88
+SO-50573,2025-10-06,West,Power tools,Hedge trimmer,1,119.0,119.0,75.6
+SO-50574,2025-10-06,South,Seeds & bulbs,Lawn seed 5kg,4,34.0,136.0,78.02
+SO-50575,2025-10-07,North,Seeds & bulbs,Lawn seed 5kg,2,34.0,68.0,38.77
+SO-50576,2025-10-07,South,Hand tools,Garden spade,1,29.0,29.0,14.46
+SO-50577,2025-10-07,West,Hand tools,Hand trowel,4,8.0,32.0,12.78
+SO-50578,2025-10-07,East,Soil & feed,Compost 50L,4,7.5,30.0,17.18
+SO-50579,2025-10-08,South,Seeds & bulbs,Tulip bulbs (20),4,12.0,48.0,20.99
+SO-50580,2025-10-08,East,Hand tools,Garden spade,3,29.0,87.0,42.38
+SO-50581,2025-10-09,North,Hand tools,Garden spade,2,29.0,58.0,30.4
+SO-50582,2025-10-09,West,Watering,Watering can,6,11.0,66.0,27.7
+SO-50583,2025-10-09,East,Watering,Watering can,10,11.0,110.0,43.03
+SO-50584,2025-10-09,West,Hand tools,Garden spade,2,29.0,58.0,29.4
+SO-50585,2025-10-11,North,Watering,Sprinkler,4,16.0,64.0,28.78
+SO-50586,2025-10-12,South,Soil & feed,Compost 50L,3,7.5,22.5,12.23
+SO-50587,2025-10-12,North,Seeds & bulbs,Lawn seed 5kg,4,34.0,136.0,71.76
+SO-50588,2025-10-12,North,Soil & feed,Compost 50L,6,7.5,45.0,24.27
+SO-50589,2025-10-13,East,Hand tools,Garden spade,3,29.0,87.0,41.86
+SO-50590,2025-10-13,North,Hand tools,Pruning shears,1,22.0,22.0,10.53
+SO-50591,2025-10-14,East,Hand tools,Hand trowel,10,8.0,80.0,31.01
+SO-50592,2025-10-14,East,Soil & feed,Plant food 1L,3,9.0,27.0,10.83
+SO-50593,2025-10-15,South,Plants,Fruit tree,2,45.0,90.0,51.01
+SO-50594,2025-10-15,West,Watering,Hose 25m,1,39.0,39.0,19.29
+SO-50595,2025-10-17,North,Hand tools,Garden spade,3,29.0,87.0,43.05
+SO-50596,2025-10-19,West,Watering,Watering can,10,11.0,110.0,44.25
+SO-50597,2025-10-19,East,Power tools,Hedge trimmer,2,119.0,238.0,150.9
+SO-50598,2025-10-19,East,Seeds & bulbs,Lawn seed 5kg,3,34.0,102.0,57.06
+SO-50599,2025-10-19,South,Soil & feed,Compost 50L,1,7.5,7.5,4.16
+SO-50600,2025-10-21,East,Soil & feed,Bark mulch 70L,10,8.5,85.0,50.56
+SO-50601,2025-10-21,East,Power tools,Lawn mower,2,289.0,578.0,396.77
+SO-50602,2025-10-21,North,Seeds & bulbs,Lawn seed 5kg,4,34.0,136.0,76.48
+SO-50603,2025-10-21,West,Soil & feed,Plant food 1L,2,9.0,18.0,7.37
+SO-50604,2025-10-21,North,Watering,Hose 25m,3,39.0,117.0,61.41
+SO-50605,2025-10-21,North,Watering,Sprinkler,2,16.0,32.0,15.01
+SO-50606,2025-10-21,East,Hand tools,Pruning shears,3,22.0,66.0,30.48
+SO-50607,2025-10-21,South,Power tools,Leaf blower,2,95.0,190.0,126.14
+SO-50608,2025-10-21,West,Watering,Watering can,6,11.0,66.0,27.04
+SO-50609,2025-10-23,West,Hand tools,Pruning shears,1,22.0,22.0,10.14
+SO-50610,2025-10-23,East,Watering,Hose 25m,1,39.0,39.0,19.63
+SO-50611,2025-10-26,North,Seeds & bulbs,Tulip bulbs (20),10,12.0,120.0,54.15
+SO-50612,2025-10-27,South,Hand tools,Pruning shears,2,22.0,44.0,21.72
+SO-50613,2025-10-27,South,Plants,Lavender pot,10,9.5,95.0,42.33
+SO-50614,2025-10-28,South,Hand tools,Pruning shears,3,22.0,66.0,30.52
+SO-50615,2025-10-29,South,Hand tools,Hand trowel,2,8.0,16.0,6.71
+SO-50616,2025-10-30,North,Power tools,Hedge trimmer,1,119.0,119.0,79.8
+SO-50617,2025-10-30,West,Watering,Sprinkler,4,16.0,64.0,27.78
+SO-50618,2025-10-31,West,Soil & feed,Compost 50L,1,7.5,7.5,3.94
+SO-50619,2025-10-31,South,Plants,Lavender pot,4,9.5,38.0,16.91
+SO-50620,2025-11-01,West,Soil & feed,Plant food 1L,6,9.0,54.0,23.5
+SO-50621,2025-11-03,East,Watering,Sprinkler,1,16.0,16.0,7.22
+SO-50622,2025-11-03,West,Hand tools,Garden spade,2,29.0,58.0,30.24
+SO-50623,2025-11-03,North,Hand tools,Garden spade,1,29.0,29.0,14.61
+SO-50624,2025-11-04,North,Hand tools,Garden spade,3,29.0,87.0,41.33
+SO-50625,2025-11-04,West,Hand tools,Garden spade,2,29.0,58.0,30.12
+SO-50626,2025-11-05,South,Soil & feed,Compost 50L,3,7.5,22.5,12.17
+SO-50627,2025-11-06,South,Soil & feed,Bark mulch 70L,10,8.5,85.0,47.75
+SO-50628,2025-11-06,East,Hand tools,Pruning shears,3,22.0,66.0,30.99
+SO-50629,2025-11-08,East,Power tools,Lawn mower,1,289.0,289.0,208.0
+SO-50630,2025-11-08,South,Power tools,Lawn mower,1,289.0,289.0,195.71
+SO-50631,2025-11-08,South,Seeds & bulbs,Tulip bulbs (20),4,12.0,48.0,22.06
+SO-50632,2025-11-10,West,Seeds & bulbs,Lawn seed 5kg,2,34.0,68.0,38.64
+SO-50633,2025-11-11,South,Power tools,Hedge trimmer,2,119.0,238.0,149.35
+SO-50634,2025-11-11,West,Watering,Watering can,10,11.0,110.0,41.94
+SO-50635,2025-11-13,East,Power tools,Hedge trimmer,1,119.0,119.0,77.83
+SO-50636,2025-11-14,North,Watering,Sprinkler,2,16.0,32.0,14.19
+SO-50637,2025-11-14,East,Seeds & bulbs,Lawn seed 5kg,3,34.0,102.0,54.32
+SO-50638,2025-11-14,North,Hand tools,Hand trowel,3,8.0,24.0,9.22
+SO-50639,2025-11-14,North,Seeds & bulbs,Lawn seed 5kg,1,34.0,34.0,17.77
+SO-50640,2025-11-14,North,Seeds & bulbs,Tomato seeds,10,3.5,35.0,11.72
+SO-50641,2025-11-15,South,Plants,Lavender pot,4,9.5,38.0,17.03
+SO-50642,2025-11-16,East,Seeds & bulbs,Tulip bulbs (20),3,12.0,36.0,15.7
+SO-50643,2025-11-16,North,Soil & feed,Bark mulch 70L,10,8.5,85.0,49.9
+SO-50644,2025-11-17,South,Watering,Sprinkler,4,16.0,64.0,30.17
+SO-50645,2025-11-18,North,Power tools,Leaf blower,2,95.0,190.0,118.0
+SO-50646,2025-11-20,East,Soil & feed,Compost 50L,4,7.5,30.0,16.86
+SO-50647,2025-11-20,South,Hand tools,Garden spade,4,29.0,116.0,59.52
+SO-50648,2025-11-20,South,Plants,Rose bush,3,18.0,54.0,26.89
+SO-50649,2025-11-21,West,Seeds & bulbs,Tomato seeds,3,3.5,10.5,3.83
+SO-50650,2025-11-22,South,Plants,Fruit tree,4,45.0,180.0,102.74
+SO-50651,2025-11-27,East,Hand tools,Hand trowel,1,8.0,8.0,3.14
+SO-50652,2025-11-29,South,Plants,Fruit tree,4,45.0,180.0,99.45
+SO-50653,2025-11-30,South,Plants,Rose bush,2,18.0,36.0,18.35
+SO-50654,2025-12-01,North,Seeds & bulbs,Tulip bulbs (20),3,12.0,36.0,15.78
+SO-50655,2025-12-01,North,Soil & feed,Compost 50L,3,7.5,22.5,12.65
+SO-50656,2025-12-02,South,Plants,Fruit tree,3,45.0,135.0,75.48
+SO-50657,2025-12-03,South,Power tools,Hedge trimmer,2,119.0,238.0,156.47
+SO-50658,2025-12-04,North,Power tools,Leaf blower,1,95.0,95.0,61.57
+SO-50659,2025-12-05,West,Plants,Lavender pot,1,9.5,9.5,4.11
+SO-50660,2025-12-06,West,Plants,Fruit tree,4,45.0,180.0,98.51
+SO-50661,2025-12-06,West,Soil & feed,Bark mulch 70L,2,8.5,17.0,10.05
+SO-50662,2025-12-07,West,Power tools,Lawn mower,2,289.0,578.0,398.73
+SO-50663,2025-12-07,South,Watering,Hose 25m,3,39.0,117.0,60.43
+SO-50664,2025-12-09,East,Power tools,Hedge trimmer,1,119.0,119.0,80.32
+SO-50665,2025-12-09,North,Plants,Lavender pot,4,9.5,38.0,17.11
+SO-50666,2025-12-09,North,Power tools,Lawn mower,1,289.0,289.0,201.23
+SO-50667,2025-12-10,South,Hand tools,Garden spade,3,29.0,87.0,44.59
+SO-50668,2025-12-12,West,Soil & feed,Bark mulch 70L,1,8.5,8.5,4.76
+SO-50669,2025-12-12,North,Seeds & bulbs,Tomato seeds,4,3.5,14.0,4.71
+SO-50670,2025-12-12,North,Plants,Rose bush,4,18.0,72.0,35.75
+SO-50671,2025-12-13,South,Plants,Rose bush,2,18.0,36.0,18.55
+SO-50672,2025-12-13,North,Seeds & bulbs,Tulip bulbs (20),6,12.0,72.0,31.21
+SO-50673,2025-12-15,South,Plants,Fruit tree,1,45.0,45.0,24.9
+SO-50674,2025-12-16,South,Hand tools,Garden spade,3,29.0,87.0,45.2
+SO-50675,2025-12-17,West,Seeds & bulbs,Tulip bulbs (20),3,12.0,36.0,16.83
+SO-50676,2025-12-18,South,Plants,Rose bush,3,18.0,54.0,28.06
+SO-50677,2025-12-18,North,Watering,Watering can,3,11.0,33.0,13.47
+SO-50678,2025-12-19,South,Power tools,Leaf blower,1,95.0,95.0,59.94
+SO-50679,2025-12-20,South,Watering,Watering can,6,11.0,66.0,25.13
+SO-50680,2025-12-21,South,Power tools,Hedge trimmer,1,119.0,119.0,77.57
+SO-50681,2025-12-21,North,Power tools,Leaf blower,2,95.0,190.0,118.77
+SO-50682,2025-12-22,South,Watering,Watering can,2,11.0,22.0,8.47
+SO-50683,2025-12-24,North,Seeds & bulbs,Lawn seed 5kg,4,34.0,136.0,75.45
+SO-50684,2025-12-24,East,Plants,Rose bush,3,18.0,54.0,27.03
+SO-50685,2025-12-26,West,Seeds & bulbs,Tomato seeds,2,3.5,7.0,2.46
+SO-50686,2025-12-26,West,Seeds & bulbs,Tulip bulbs (20),1,12.0,12.0,5.16
+SO-50687,2025-12-26,East,Plants,Lavender pot,6,9.5,57.0,26.4
+SO-50688,2025-12-26,North,Soil & feed,Plant food 1L,4,9.0,36.0,14.61
+SO-50689,2025-12-27,West,Power tools,Lawn mower,2,289.0,578.0,388.94
+SO-50690,2025-12-27,South,Hand tools,Garden spade,2,29.0,58.0,29.29
+SO-50691,2025-12-29,South,Watering,Sprinkler,2,16.0,32.0,15.04
+SO-50692,2025-12-30,South,Watering,Watering can,10,11.0,110.0,42.01
+SO-50693,2025-12-31,North,Hand tools,Pruning shears,4,22.0,88.0,42.82
+SO-50694,2025-12-31,South,Plants,Rose bush,3,18.0,54.0,27.92
